@@ -44,7 +44,8 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 ## Roadmap
 
 - ~~Add WvW map, scores and timers~~
-- Add PvP maps
-- Add Friends Tracker
-- Add Live Dynamic Events on map
-- Add TaCo Routes overlayed on map
+- PvP maps
+- Live Dynamic Events on map
+- ~~Add TaCo Routes overlayed on map~~ abandoned this idea
+- Weekly Clear Dashboard
+- Smart Crafting Profitability
