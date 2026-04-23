@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            ::-webkit-scrollbar { width: 6px; }
+            ::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+            ::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+            * { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+            body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+
+            .header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+            .section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; margin: 0; }
+
+            .loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+            .loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
+
+            .clear-cat { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+            .cat-header { background: #1a1510; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #2a2015; }
+            .cat-header:hover { background: #251d16; }
+            .cat-title { font-size: 12px; letter-spacing: 1px; color: #e2c07d; font-weight: bold; }
+            .cat-content { padding: 10px; display: flex; flex-direction: column; gap: 5px; }
+
+            .sub-cat { margin-bottom: 5px; border: 1px solid #332a1e; background: rgba(0,0,0,0.2); }
+            .sub-header { background: rgba(20,15,10,0.8); padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.2s; }
+            .sub-header:hover { background: #251d16; }
+            .sub-title { font-size: 11px; color: #e2c07d; font-weight: bold; text-transform: uppercase; }
+            .progress-text { font-size: 11px; color: #8a7a5f; font-weight: bold; }
+            .progress-done { color: #1A9306; font-size: 14px; line-height: 1; }
+
+            .clear-item { display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(10,8,5,0.4); border-top: 1px solid #2a2015; align-items: center; cursor: pointer; transition: 0.2s; }
+            .clear-item:first-child { border-top: none; }
+            .clear-item:hover { background: rgba(226, 192, 125, 0.1); }
+            .clear-name { font-size: 11px; color: #e2c07d; transition: 0.2s; }
+            .clear-item:hover .clear-name { color: #fff; }
+            
+            .clear-status { font-size: 10px; font-weight: bold; }
+            .status-done { color: #1A9306; }
+            .status-uncleared { color: #ff4a4a; }
+
+            /* Large UI Scaling Overrides */
+            body.ui-large .section-title { font-size: 20px; }
+            body.ui-large .cat-title { font-size: 14px; }
+            body.ui-large .sub-title { font-size: 13px; }
+            body.ui-large .clear-name { font-size: 14px; }
+            body.ui-large .clear-status { font-size: 12px; }
+            body.ui-large .progress-text { font-size: 13px; }
+            body.ui-large .progress-done { font-size: 16px; }
+        </style>
+    </head>
+    <body>
+        <div id="ui-root" style="display:none; height:100%; flex-direction: column;">
+            <div class="header-row">
+                <div class="section-title">Weekly Clears</div>
+                <button style="background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='#e2c07d'; this.style.color='#e2c07d';" onmouseout="this.style.borderColor='#4a3b2a'; this.style.color='#8a7a5f';" onclick="init()">Refresh</button>
+            </div>
+            <div id="clears-container" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
+        </div>
+
+        <div id="loader" class="loading">
+            <img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
+            <div>SYNCING CLEARS DATA...</div>
+        </div>
+
+        <script>
+            /*<![CDATA[*/
+            let activeKey = localStorage.getItem('gw2_active_key');
+
+            async function fetchJSON(url) {
+                try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+            }
+
+            function formatName(str) {
+                return str.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            }
+
+            async function init() {
+                const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+                if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+                
+                if (!activeKey) return;
+
+                document.getElementById('loader').style.display = 'flex';
+                document.getElementById('ui-root').style.display = 'none';
+
+                const [allRaids, accRaids, accStrikes, allDungeons, accDungeons] = await Promise.all([
+                    fetchJSON('https://api.guildwars2.com/v2/raids?ids=all'),
+                    fetchJSON(`https://api.guildwars2.com/v2/account/raids?access_token=${activeKey}`),
+                    fetchJSON(`https://api.guildwars2.com/v2/account/strikes?access_token=${activeKey}`),
+                    fetchJSON('https://api.guildwars2.com/v2/dungeons?ids=all'),
+                    fetchJSON(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`)
+                ]);
+
+                const container = document.getElementById('clears-container');
+                container.innerHTML = '';
+
+                // RAIDS
+                let raidsHtml = '';
+                let wingNum = 1;
+                if (allRaids) {
+                    allRaids.forEach(r => {
+                        r.wings.forEach(w => {
+                            let wingCleared = 0;
+                            let wingTotal = w.events.length;
+                            let eventsHtml = '';
+                            
+                            w.events.forEach(e => {
+                                const isDone = accRaids && accRaids.includes(e.id);
+                                if (isDone) wingCleared++;
+                                eventsHtml += `
+                                <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${formatName(e.id)}'), '_blank')">
+                                    <span class="clear-name">${formatName(e.id)}</span>
+                                    <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                                </div>`;
+                            });
+
+                            let progressHtml = wingCleared === wingTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${wingCleared}/${wingTotal}</span>`;
+
+                            raidsHtml += `
+                            <div class="sub-cat">
+                                <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                                    <span class="sub-title">Wing ${wingNum}: ${formatName(w.id)}</span>
+                                    ${progressHtml}
+                                </div>
+                                <div class="cat-content" style="display:none; padding:0; gap:0;">
+                                    ${eventsHtml}
+                                </div>
+                            </div>`;
+                            wingNum++;
+                        });
+                    });
+                }
+                
+                container.innerHTML += `
+                <div class="clear-cat">
+                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">RAIDS</span></div>
+                    <div class="cat-content" style="padding:10px;">${raidsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load raids.</div>'}</div>
+                </div>`;
+
+                // STRIKES
+                const strikeCats = {
+                    "Icebrood Saga": ["shiverpeaks_pass", "voice_and_claw", "fraenir_of_jormag", "boneskinner", "whisper_of_jormag", "cold_war"],
+                    "End of Dragons": ["aetherblade_hideout", "xunlai_jade_junkyard", "kaineng_overlook", "harvest_temple", "old_lions_court"],
+                    "Secrets of the Obscure": ["cosmic_observatory", "temple_of_febe"]
+                };
+                
+                let strikesHtml = '';
+                for (const [catName, strikes] of Object.entries(strikeCats)) {
+                    let catCleared = 0;
+                    let catTotal = strikes.length;
+                    let sHtml = '';
+                    
+                    strikes.forEach(s => {
+                        const isDone = accStrikes && accStrikes.includes(s);
+                        if (isDone) catCleared++;
+                        sHtml += `
+                        <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${formatName(s)}'), '_blank')">
+                            <span class="clear-name">${formatName(s)}</span>
+                            <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                        </div>`;
+                    });
+
+                    let progressHtml = catCleared === catTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${catCleared}/${catTotal}</span>`;
+
+                    strikesHtml += `
+                    <div class="sub-cat">
+                        <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                            <span class="sub-title">${catName}</span>
+                            ${progressHtml}
+                        </div>
+                        <div class="cat-content" style="display:none; padding:0; gap:0;">
+                            ${sHtml}
+                        </div>
+                    </div>`;
+                }
+
+                container.innerHTML += `
+                <div class="clear-cat">
+                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">STRIKE MISSIONS</span></div>
+                    <div class="cat-content" style="padding:10px;">${strikesHtml}</div>
+                </div>`;
+
+                // DUNGEONS
+                let dungeonsHtml = '';
+                if (allDungeons) {
+                    allDungeons.forEach(d => {
+                        let dCleared = 0;
+                        let dTotal = d.paths.length;
+                        let pHtml = '';
+
+                        d.paths.forEach(p => {
+                            const isDone = accDungeons && accDungeons.includes(p.id);
+                            if (isDone) dCleared++;
+                            
+                            let pathName = '';
+                            let dName = formatName(d.id);
+                            if (p.type === 'Story') pathName = dName + ' Story';
+                            else {
+                                let pNum = p.id.match(/\d+$/);
+                                if (pNum) pathName = dName + ' Path ' + pNum[0];
+                                else pathName = formatName(p.id);
+                            }
+
+                            pHtml += `
+                            <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${pathName}'), '_blank')">
+                                <span class="clear-name">${pathName}</span>
+                                <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                            </div>`;
+                        });
+
+                        let progressHtml = dCleared === dTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${dCleared}/${dTotal}</span>`;
+
+                        dungeonsHtml += `
+                        <div class="sub-cat">
+                            <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                                <span class="sub-title">${formatName(d.id)}</span>
+                                ${progressHtml}
+                            </div>
+                            <div class="cat-content" style="display:none; padding:0; gap:0;">
+                                ${pHtml}
+                            </div>
+                        </div>`;
+                    });
+                }
+
+                container.innerHTML += `
+                <div class="clear-cat">
+                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">DUNGEONS</span></div>
+                    <div class="cat-content" style="padding:10px;">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
+                </div>`;
+
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('ui-root').style.display = 'flex';
+            }
+
+            window.addEventListener('message', (e) => { 
+                if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+            });
+
+            init();
+            /*]]>*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body, html { height: 100%; width: 100%; background: transparent; overflow: hidden; }
+			#navbar { display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 10px; background: transparent; transition: padding 0.3s ease; }
+			.nav-group { display: flex; align-items: center; gap: 4px; transition: gap 0.3s ease; }
+			.nav-item { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: 0.2s; }
+			.nav-item:hover { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 5px #e2c07d); }
+			.nav-item img { width: 24px; height: 24px; transition: width 0.3s ease, height 0.3s ease; object-fit: contain; }
+
+			/* Adjust specific thinner icons to match visual weight */
+			.v-align { width: 28px !important; height: 28px !important; }
+
+			.separator { width: 1px; height: 18px; background: #4a3b2a; margin: 0 3px; transition: margin 0.3s ease; }
+
+			.active-glow { filter: drop-shadow(0 0 8px #1A9306) !important; opacity: 1 !important; }
+
+			/* Large UI Overrides */
+			body.ui-large #navbar { padding: 0 15px; }
+			body.ui-large .nav-group { gap: 8px; }
+			body.ui-large .nav-item { width: 38px; height: 38px; }
+			body.ui-large .nav-item img { width: 30px; height: 30px; }
+			body.ui-large .v-align { width: 34px !important; height: 34px !important; }
+			body.ui-large .separator { margin: 0 6px; height: 24px; }
+		</style>
+	</head>
+	<body>
+		<div id="navbar">
+			<div class="nav-group">
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Map Options'}, '*')" onmouseover="showTip('Map Options', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_map.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'switchMap', map:'map'}, '*')" onmouseover="showTip('Tyria Map', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_tyria.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'switchMap', map:'wvw_map'}, '*')" onmouseover="showTip('WvW Map', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_wvw.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Timers'}, '*')" onmouseover="showTip('Timers', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_timers.png" />
+				</div>
+				<div class="separator"></div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Hero'}, '*')" onmouseover="showTip('Hero Panel', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_hero.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Characters'}, '*')" onmouseover="showTip('Characters', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_chars.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Inventory'}, '*')" onmouseover="showTip('Inventory', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_bag.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Bank'}, '*')" onmouseover="showTip('Account Bank', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_bank.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Material Storage'}, '*')" onmouseover="showTip('Material Storage', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_material.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Wardrobe'}, '*')" onmouseover="showTip('Wardrobe', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_wardrobe.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'recipes'}, '*')" onmouseover="showTip('Crafting', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_recipes.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Achievements'}, '*')" onmouseover="showTip('Achievements', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_achieve.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Clears'}, '*')" onmouseover="showTip('Weekly Clears', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_clears.png" class="v-align" style="transform: scale(1.3);" />
+				</div>
+				<div class="separator"></div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Currencies'}, '*')" onmouseover="showTip('Currencies', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_wallet.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Trading'}, '*')" onmouseover="showTip('Trading Post', event)" onmouseout="hideTip()">
+					<img id="nav-tp-icon" src="https://gw2ps.local/Assets/MenuIcons/nav_tp.png" />
+				</div>
+				<div id="nav-farming" class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Farming'}, '*')" onmouseover="showTip('Farming Tracker', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_farming.png" />
+				</div>
+			</div>
+			<div class="nav-group" style="margin-left: auto;">
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Help & Support'}, '*')" onmouseover="showTip('Help', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_help.png" class="v-align" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Account Search'}, '*')" onmouseover="showTip('Account Search', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_account_search.png" class="v-align" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'API Settings'}, '*')" onmouseover="showTip('API Keys', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_api.png" />
+				</div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Settings'}, '*')" onmouseover="showTip('Settings', event)" onmouseout="hideTip()">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_settings.png" class="v-align" />
+				</div>
+				<div class="separator"></div>
+			</div>
+		</div>
+		<script>
+			/*<![CDATA[*/
+			function formatCoinMenu(copper) {
+				if (!copper) return '';
+				let g = Math.floor(copper / 10000), s = Math.floor((copper % 10000) / 100), c = copper % 100;
+				let res = '';
+				if (g>0) res += g + '<img src="https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png" style="width:12px;vertical-align:middle;margin:0 2px;">';
+				if (s>0) res += s + '<img src="https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png" style="width:12px;vertical-align:middle;margin:0 2px;">';
+				if (c>0 || copper === 0) res += c + '<img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" style="width:12px;vertical-align:middle;margin:0 2px;">';
+				return res;
+			}
+
+			window.addEventListener('message', function(event) {
+				const data = event.data;
+				if (data.action === 'updateTPIndicator') {
+					const icon = document.getElementById('nav-tp-icon');
+					if (icon) {
+						icon.src = data.active ? "https://gw2ps.local/Assets/MenuIcons/nav_tp_delivered.png" : "https://gw2ps.local/Assets/MenuIcons/nav_tp.png";
+						if (data.active) {
+							let tipText = 'Items: ' + (data.items || 0);
+							if (data.coins > 0) tipText += '<br>Funds: ' + formatCoinMenu(data.coins);
+							icon.parentElement.onmouseover = function(e) { showTip(tipText, e); };
+						} else {
+							icon.parentElement.onmouseover = function(e) { showTip('Trading Post', e); };
+						}
+					}
+				}
+				else if (data.action === 'updateFarmingIndicator') {
+					const item = document.getElementById('nav-farming');
+					if (item) {
+						if (data.active) item.classList.add('active-glow');
+						else item.classList.remove('active-glow');
+					}
+				}
+				else if (data.action === 'uiScaleChanged') {
+					if (data.value === 'large') document.body.classList.add('ui-large');
+					else document.body.classList.remove('ui-large');
+				}
+			});
+
+			document.addEventListener('mousedown', function(e) {
+				if (e.button === 0 && !e.target.closest('.nav-item')) {
+					window.parent.postMessage({ action: 'drag' }, '*');
+				}
+			});
+
+			function showTip(t, e) { window.parent.postMessage({ action: 'showTooltip', text: t, x: e.clientX, y: e.clientY, offsetTop: 0 }, '*'); }
+			function hideTip() { window.parent.postMessage({ action: 'hideTooltip' }, '*'); }
+			
+			// Initial check
+			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+			/*]]>*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
+
+			.controls { display: flex; gap: 10px; align-items: center; }
+			button { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 11px; font-weight: bold; transition: 0.2s; letter-spacing: 1px; }
+			button:hover { background: rgba(226, 192, 125, 0.1); border-color: #e2c07d; }
+			button.active { background: #1A9306; color: #fff; border-color: #1A9306; }
+			button.stop { background: #721c24; color: #fff; border-color: #f5c6cb; }
+
+			.tabs { display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid #2a2015; padding-bottom: 5px; }
+			.tab-btn { background: transparent; border: none; color: #8a7a5f; padding: 5px 10px; cursor: pointer; border-bottom: 2px solid transparent; }
+			.tab-btn.active { color: #e2c07d; border-bottom-color: #e2c07d; }
+
+			.tab-content { flex: 1; overflow-y: auto; display: none; flex-direction: column; gap: 15px; padding-right: 5px; }
+			.tab-content.active { display: flex; }
+
+			.panel-box { background: rgba(20,15,10,0.8); border: 1px solid #332a1e; padding: 10px; }
+			.box-title { font-size: 11px; color: #8a7a5f; border-bottom: 1px solid #2a2015; padding-bottom: 5px; margin-bottom: 10px; }
+
+			.item-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; justify-content: center; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; }
+			.item-icon { width: 100%; height: 100%; object-fit: cover; }
+			.item-count { position: absolute; bottom: 2px; right: 4px; font-size: 10px; font-weight: bold; color: #fff; text-shadow: 1px 1px 1px #000; }
+			.item-count.negative { color: #ff6b6b; }
+
+			.currency-list { display: flex; flex-direction: column; gap: 5px; }
+			.currency-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 6px; background: rgba(0,0,0,0.3); border: 1px solid #2a2015; }
+			.currency-name { display: flex; align-items: center; gap: 8px; }
+			.currency-icon { width: 16px; height: 16px; object-fit: cover; }
+			.val-pos { color: #1A9306; font-weight: bold; }
+			.val-neg { color: #ff6b6b; font-weight: bold; }
+
+			.coin-icon { height: 12px; width: 12px; vertical-align: baseline; margin: 0 1px; }
+			#session-timer { font-family: monospace; font-size: 14px; color: #e2c07d; }
+
+			/* Simple Flex Graph */
+			.graph-controls { display: flex; gap: 10px; margin-bottom: 10px; }
+			.graph-area { height: 200px; display: flex; align-items: flex-end; gap: 8px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-top: 15px; border-left: 1px solid #4a3b2a; padding-left: 5px; }
+			.bar-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 5px; position: relative; }
+			.bar { width: 100%; background: #e2c07d; transition: height 0.5s ease; min-height: 1px; }
+			.bar:hover { background: #fff; filter: drop-shadow(0 0 5px #e2c07d); }
+			.bar-label { font-size: 9px; color: #8a7a5f; text-align: center; }
+
+			.history-list { display: flex; flex-direction: column; gap: 5px; margin-top: 15px; }
+			.history-row { background: rgba(20,15,10,0.5); border: 1px solid #2a2015; padding: 10px; font-size: 11px; display: flex; justify-content: space-between; transition: 0.2s; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large #session-timer { font-size: 18px; }
+			body.ui-large button { font-size: 14px; padding: 10px 20px; }
+			body.ui-large .tab-btn { font-size: 14px; padding: 8px 15px; }
+			body.ui-large .box-title { font-size: 14px; }
+			body.ui-large .item-grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
+			body.ui-large .item-slot { width: 50px; height: 50px; }
+			body.ui-large .item-count { font-size: 12px; }
+			body.ui-large .currency-row { font-size: 15px; padding: 10px; }
+			body.ui-large .currency-icon { width: 22px; height: 22px; }
+			body.ui-large .coin-icon { height: 16px; width: 16px; }
+			body.ui-large .history-row { font-size: 14px; padding: 14px; }
+			body.ui-large .bar-label { font-size: 12px; }
+		</style>
+	</head>
+	<body>
+		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position:relative;">
+			<div class="header-row">
+				<div class="section-title">FARMING TRACKER</div>
+				<div class="controls">
+					<div id="session-timer">00:00:00</div>
+					<button id="btn-save" onclick="saveSession(true)" style="display:none; background:#1e4c7a; border-color:#2a6ba1;">SAVE</button>
+					<button id="btn-start" onclick="toggleSession()">START SESSION</button>
+				</div>
+			</div>
+
+			<div class="tabs">
+				<button class="tab-btn active" onclick="switchTab('tab-current', this)">CURRENT SESSION</button>
+				<button class="tab-btn" onclick="switchTab('tab-history', this)">HISTORY & GRAPHS</button>
+			</div>
+
+			<div id="tab-current" class="tab-content active">
+				<div class="panel-box">
+					<div class="box-title">CURRENCIES GAINED</div>
+					<div id="currency-container" class="currency-list">
+						<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">NO ACTIVE SESSION</div>
+					</div>
+				</div>
+				<div class="panel-box" style="flex:1;">
+					<div class="box-title">ITEMS GAINED</div>
+					<div id="item-container" class="item-grid"></div>
+				</div>
+			</div>
+
+			<div id="tab-history" class="tab-content">
+				<div class="panel-box">
+					<div class="box-title">CURRENCY GAINS OVER TIME</div>
+					<div class="graph-controls">
+						<button onclick="renderGraph('day')">DAY</button>
+						<button onclick="renderGraph('week')">WEEK</button>
+						<button onclick="renderGraph('month')">MONTH</button>
+						<button onclick="renderGraph('year')">YEAR</button>
+					</div>
+					<div id="graph-toggles" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; border-bottom: 1px solid #2a2015; padding-bottom: 10px;"></div>
+					<div id="graph-container" class="graph-area"></div>
+				</div>
+				<div class="panel-box" style="flex:1;">
+					<div class="box-title">SESSION LOG</div>
+					<div id="history-container" class="history-list"></div>
+				</div>
+			</div>
+
+			<div id="session-details-modal" style="display:none; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(10,8,5,0.98); z-index:100; flex-direction:column; padding:15px; overflow-y:auto;">
+				<div class="header-row" style="margin-bottom:15px; border-bottom:1px solid #4a3b2a; padding-bottom:10px;">
+					<div class="section-title" style="margin:0; border:none; padding:0;">SESSION DETAILS</div>
+					<button onclick="closeSessionDetails()">CLOSE</button>
+				</div>
+				<div class="panel-box" style="margin-bottom:15px;">
+					<div class="box-title">CURRENCIES GAINED</div>
+					<div id="sd-currencies" class="currency-list"></div>
+				</div>
+				<div class="panel-box" style="flex:1;">
+					<div class="box-title">ITEMS GAINED</div>
+					<div id="sd-items" class="item-grid"></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+            let activeKey = localStorage.getItem('gw2_active_key') || null;
+            let sessionActive = false;
+            let sessionStartTime = 0;
+            let timerInterval = null;
+            let pollInterval = null;
+            
+            let startSnapshot = { wallet: {}, items: {} };
+            let currentDiff = { wallet: {}, items: {} };
+            let sessionHistory = JSON.parse(localStorage.getItem('gw2_farming_history') || '[]');
+
+            const currencyIndex = {}; 
+            const itemIndex = {}; 
+
+            let activeGraphCurrencies = new Set(['1']); 
+            let graphColors = {};
+            let currentGraphPeriod = 'week';
+
+            // Apply UI scale on load
+            const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+            if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+            window.addEventListener('message', (e) => {
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+            });
+
+            function formatCoin(copper) {
+                const isNeg = copper < 0;
+                copper = Math.abs(copper);
+                let g = Math.floor(copper / 10000), s = Math.floor((copper % 10000) / 100), c = copper % 100;
+                let res = isNeg ? '-' : '+';
+                if (g>0) res += `${g}<img src="https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png" class="coin-icon">`;
+                if (s>0) res += `${s}<img src="https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png" class="coin-icon">`;
+                res += `${c}<img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" class="coin-icon">`;
+                return res;
+            }
+
+            function switchTab(tabId, btn) {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+                if(tabId === 'tab-history') {
+                    ensureCurrencyCache().then(() => renderHistory());
+                }
+            }
+
+            async function fetchJSON(url) {
+                try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+            }
+
+            async function getAPIData() {
+                if (!activeKey) return null;
+                const [wallet, mats, inv, bank, chars] = await Promise.all([
+                    fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey)
+                ]);
+                
+                const wMap = {}; const iMap = {};
+                if (wallet) wallet.forEach(w => { wMap[w.id] = w.value; });
+                if (mats) mats.forEach(m => { iMap[m.id] = (iMap[m.id] || 0) + m.count; });
+                if (inv) inv.forEach(item => {
+                    if (item) iMap[item.id] = (iMap[item.id] || 0) + item.count;
+                });
+                if (bank) bank.forEach(item => {
+                    if (item) iMap[item.id] = (iMap[item.id] || 0) + item.count;
+                });
+                if (chars && Array.isArray(chars)) {
+                    chars.forEach(c => {
+                        if (c.bags) {
+                            c.bags.forEach(bag => {
+                                if (bag && bag.inventory) {
+                                    bag.inventory.forEach(item => {
+                                        if (item) iMap[item.id] = (iMap[item.id] || 0) + item.count;
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+                return { wallet: wMap, items: iMap };
+            }
+
+            async function ensureCurrencyCache() {
+                if (Object.keys(currencyIndex).length === 0) {
+                    const cData = await fetchJSON("https://api.guildwars2.com/v2/currencies?ids=all");
+                    if (cData) cData.forEach(c => currencyIndex[c.id] = c);
+                }
+            }
+
+            async function cacheItems(ids) {
+                const missing = ids.filter(id => !itemIndex[id]);
+                if (missing.length > 0) {
+                    for(let i=0; i<missing.length; i+=200) {
+                        const batch = missing.slice(i, i+200);
+                        const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(','));
+                        if (iData) iData.forEach(it => itemIndex[it.id] = it);
+                    }
+                }
+            }
+
+            async function toggleSession() {
+                const btn = document.getElementById('btn-start');
+                const saveBtn = document.getElementById('btn-save');
+                if (!sessionActive) {
+                    window.parent.postMessage({ action: 'toast', msg: 'FETCHING SNAPSHOT...' }, '*');
+                    const snap = await getAPIData();
+                    if (!snap) { window.parent.postMessage({ action: 'toast', msg: 'API ERROR' }, '*'); return; }
+                    
+                    startSnapshot = snap;
+                    sessionActive = true;
+                    sessionStartTime = Date.now();
+                    
+                    btn.innerText = "STOP SESSION";
+                    btn.className = "stop";
+                    saveBtn.style.display = 'block';
+                    
+                    window.parent.postMessage({ action: 'updateFarmingIndicator', active: true }, '*');
+                    
+                    timerInterval = setInterval(updateTimer, 1000);
+                    pollInterval = setInterval(async () => {
+                        await pollData();
+                        
+                        // Push an auto-point for the timeline graph
+                        sessionHistory.push({
+                            date: Date.now(),
+                            duration: Math.floor((Date.now() - sessionStartTime) / 1000),
+                            goldDiff: currentDiff.wallet[1] || 0,
+                            walletDiff: JSON.parse(JSON.stringify(currentDiff.wallet || {})),
+                            itemsDiff: JSON.parse(JSON.stringify(currentDiff.items || {})),
+                            isAutoPoint: true
+                        });
+                        
+                        if (sessionHistory.length > 5000) sessionHistory = sessionHistory.slice(-5000);
+                        localStorage.setItem('gw2_farming_history', JSON.stringify(sessionHistory));
+                        if(document.getElementById('tab-history').classList.contains('active')) renderGraph(currentGraphPeriod);
+                        
+                    }, 60000); 
+                    
+                    document.getElementById('currency-container').innerHTML = '<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">TRACKING STARTED...</div>';
+                    document.getElementById('item-container').innerHTML = '';
+                    await ensureCurrencyCache();
+                } else {
+                    clearInterval(timerInterval);
+                    clearInterval(pollInterval);
+                    
+                    await saveSession(false);
+                    
+                    sessionActive = false;
+                    btn.innerText = "START SESSION";
+                    btn.className = "active";
+                    saveBtn.style.display = 'none';
+                    
+                    window.parent.postMessage({ action: 'updateFarmingIndicator', active: false }, '*');
+                    window.parent.postMessage({ action: 'toast', msg: 'SESSION ENDED' }, '*');
+                }
+            }
+
+            function updateTimer() {
+                const diff = Math.floor((Date.now() - sessionStartTime) / 1000);
+                const h = Math.floor(diff / 3600).toString().padStart(2, '0');
+                const m = Math.floor((diff % 3600) / 60).toString().padStart(2, '0');
+                const s = (diff % 60).toString().padStart(2, '0');
+                document.getElementById('session-timer').innerText = `${h}:${m}:${s}`;
+            }
+
+            async function pollData() {
+                if (!sessionActive && !startSnapshot.wallet) return;
+                const current = await getAPIData();
+                if (!current) return;
+
+                currentDiff = { wallet: {}, items: {} };
+                let itemIdsToCache = [];
+
+                // Calculate Wallet Diffs
+                Object.keys(current.wallet).forEach(id => {
+                    const diff = current.wallet[id] - (startSnapshot.wallet[id] || 0);
+                    if (diff !== 0) currentDiff.wallet[id] = diff;
+                });
+
+                // Calculate Item Diffs (All inventories combined)
+                const allItemIds = new Set([
+                    ...Object.keys(current.items), 
+                    ...Object.keys(startSnapshot.items || {})
+                ]);
+
+                allItemIds.forEach(id => {
+                    const diff = (current.items[id] || 0) - (startSnapshot.items[id] || 0);
+                    if (diff !== 0) {
+                        currentDiff.items[id] = diff;
+                        itemIdsToCache.push(id);
+                    }
+                });
+
+                await cacheItems(itemIdsToCache);
+                renderCurrentSession();
+            }
+
+            function renderCurrentSession() {
+                const cCont = document.getElementById('currency-container');
+                const iCont = document.getElementById('item-container');
+                
+                // Render Currencies
+                let cHtml = '';
+                Object.keys(currentDiff.wallet).forEach(id => {
+                    const diff = currentDiff.wallet[id];
+                    const info = currencyIndex[id];
+                    if (!info) return;
+                    
+                    let valHtml = '';
+                    if (id == 1) valHtml = formatCoin(diff);
+                    else valHtml = (diff > 0 ? '+' : '') + diff;
+                    
+                    const cls = diff > 0 ? 'val-pos' : 'val-neg';
+                    cHtml += `<div class="currency-row">
+                        <div class="currency-name"><img src="${info.icon}" class="currency-icon"> ${info.name}</div>
+                        <div class="${cls}">${valHtml}</div>
+                    </div>`;
+                });
+                cCont.innerHTML = cHtml || '<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">NO CURRENCY CHANGES YET</div>';
+
+                // Render Items
+                let iHtml = '';
+                Object.keys(currentDiff.items).forEach(id => {
+                    const diff = currentDiff.items[id];
+                    const info = itemIndex[id];
+                    if (!info) return;
+                    
+                    const sign = diff > 0 ? '+' : '';
+                    const cls = diff > 0 ? '' : 'negative';
+                    iHtml += `<div class="item-slot" onmouseover="window.parent.postMessage({action:'showTooltip', text:'${info.name.replace(/'/g, "\\'")}', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+                        <img src="${info.icon}" class="item-icon">
+                        <div class="item-count ${cls}">${sign}${diff}</div>
+                    </div>`;
+                });
+                iCont.innerHTML = iHtml;
+            }
+
+            async function saveSession(isMidSession = false) {
+                if(!sessionActive) return;
+                const duration = Math.floor((Date.now() - sessionStartTime) / 1000);
+                if (duration < 10) return;
+                
+                await pollData(); 
+                
+                const session = {
+                    date: Date.now(),
+                    duration: duration,
+                    goldDiff: currentDiff.wallet[1] || 0,
+                    walletDiff: JSON.parse(JSON.stringify(currentDiff.wallet || {})),
+                    itemsDiff: JSON.parse(JSON.stringify(currentDiff.items || {})),
+                    isAutoPoint: false
+                };
+                sessionHistory.push(session);
+                if (sessionHistory.length > 5000) sessionHistory = sessionHistory.slice(-5000);
+                localStorage.setItem('gw2_farming_history', JSON.stringify(sessionHistory));
+                
+                if(document.getElementById('tab-history').classList.contains('active')) renderHistory();
+
+                if (isMidSession) {
+                    window.parent.postMessage({ action: 'toast', msg: 'SESSION SAVED' }, '*');
+                    startSnapshot = await getAPIData();
+                    sessionStartTime = Date.now();
+                    currentDiff = { wallet: {}, items: {} };
+                    renderCurrentSession();
+                }
+            }
+
+            function renderHistory() {
+                const hCont = document.getElementById('history-container');
+                let html = '';
+                
+                const manualSessions = sessionHistory.filter(s => !s.isAutoPoint);
+                const sorted = [...manualSessions].sort((a,b) => b.date - a.date).slice(0, 10);
+                
+                sorted.forEach(s => {
+                    const d = new Date(s.date).toLocaleString();
+                    const m = Math.floor(s.duration / 60);
+                    const val = formatCoin(s.goldDiff);
+                    const cls = s.goldDiff >= 0 ? 'val-pos' : 'val-neg';
+                    html += `<div class="history-row" style="cursor:pointer;" onclick="viewSessionDetails(${s.date})" onmouseover="this.style.background='rgba(226, 192, 125, 0.1)'" onmouseout="this.style.background='rgba(20,15,10,0.5)'">
+                        <span style="color:#8a7a5f;">${d} <span style="color:#e2c07d;">(${m} mins)</span></span>
+                        <span class="${cls}">${val}</span>
+                    </div>`;
+                });
+                hCont.innerHTML = html || '<div style="padding:10px; color:#8a7a5f; text-align:center;">NO MANUAL HISTORY SAVED</div>';
+                renderGraph(currentGraphPeriod);
+            }
+
+            function getRandomColor(id) {
+                if (id == 1) return '#e2c07d';
+                if (!graphColors[id]) {
+                    const hue = Math.floor(Math.random() * 360);
+                    graphColors[id] = `hsl(${hue}, 70%, 60%)`;
+                }
+                return graphColors[id];
+            }
+
+            window.toggleGraphCurrency = function(id, isChecked) {
+                if (isChecked) activeGraphCurrencies.add(id);
+                else activeGraphCurrencies.delete(id);
+                renderGraph(currentGraphPeriod);
+            };
+
+            function renderGraph(period) {
+                currentGraphPeriod = period;
+                const gCont = document.getElementById('graph-container');
+                const tCont = document.getElementById('graph-toggles');
+                
+                if (sessionHistory.length === 0) { 
+                    gCont.innerHTML = ''; 
+                    tCont.innerHTML = '';
+                    return; 
+                }
+
+                // Identify all unique currencies
+                const allCurrencies = new Set();
+                sessionHistory.forEach(s => {
+                    const wDiff = s.walletDiff || { '1': s.goldDiff || 0 };
+                    Object.keys(wDiff).forEach(id => allCurrencies.add(id));
+                });
+
+                // Render Toggles
+                let togglesHtml = '';
+                allCurrencies.forEach(id => {
+                    const info = currencyIndex[id] || { name: 'Currency ' + id, icon: '' };
+                    const isChecked = activeGraphCurrencies.has(id) ? 'checked' : '';
+                    const color = getRandomColor(id);
+                    togglesHtml += `<label style="display:flex; align-items:center; gap:5px; font-size:11px; color:${color}; cursor:pointer; background: rgba(0,0,0,0.4); padding: 4px 8px; border: 1px solid #2a2015;">
+                        <input type="checkbox" ${isChecked} onchange="toggleGraphCurrency('${id}', this.checked)">
+                        <img src="${info.icon}" style="width:14px; height:14px;"> ${info.name}
+                    </label>`;
+                });
+                tCont.innerHTML = togglesHtml;
+
+                // Process Time Range
+                const now = Date.now();
+                let start = 0;
+                if (period === 'day') start = now - 86400000;
+                else if (period === 'week') start = now - 604800000;
+                else if (period === 'month') start = now - 2592000000;
+
+                let pointsData = sessionHistory.filter(s => s.date >= start && s.date <= now).sort((a,b) => a.date - b.date);
+
+                // Downsample extreme quantities to prevent browser crash, while maintaining timeline flow
+                if (pointsData.length > 400) {
+                    let step = Math.ceil(pointsData.length / 400);
+                    pointsData = pointsData.filter((_, i) => i % step === 0 || i === pointsData.length - 1);
+                }
+
+                if (pointsData.length === 0) {
+                    gCont.style.display = 'flex';
+                    gCont.style.alignItems = 'flex-end';
+                    gCont.style.paddingBottom = '5px';
+                    gCont.style.borderBottom = '1px solid #4a3b2a';
+                    gCont.style.borderLeft = '1px solid #4a3b2a';
+                    gCont.style.paddingLeft = '5px';
+                    gCont.innerHTML = '<div style="color:#8a7a5f; font-size:11px; width:100%; text-align:center;">NO DATA FOR THIS PERIOD</div>';
+                    return;
+                }
+
+                // Determine local scaling max PER CURRENCY to ensure normalization
+                let maxVals = {};
+                activeGraphCurrencies.forEach(id => maxVals[id] = 1);
+                pointsData.forEach(p => {
+                    const wDiff = p.walletDiff || { '1': p.goldDiff || 0 };
+                    activeGraphCurrencies.forEach(id => {
+                        if ((wDiff[id] || 0) > maxVals[id]) maxVals[id] = wDiff[id];
+                    });
+                });
+
+                // Generate SVG layout
+                const width = Math.max(600, pointsData.length * 20); 
+                const height = 180; 
+                
+                let svgHtml = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="overflow:visible;">`;
+                
+                activeGraphCurrencies.forEach(id => {
+                    const color = getRandomColor(id);
+                    let points = [];
+                    let offset = (Array.from(activeGraphCurrencies).indexOf(id) - (activeGraphCurrencies.size / 2)) * 3; 
+
+                    pointsData.forEach((p, idx) => {
+                        const x = (idx / Math.max(1, pointsData.length - 1)) * (width - 20) + 10; 
+                        const wDiff = p.walletDiff || { '1': p.goldDiff || 0 };
+                        const val = wDiff[id] || 0;
+                        
+                        let y = height - ((val / maxVals[id]) * (height - 30)) - 15 + offset;
+                        y = Math.max(5, Math.min(height - 5, y)); 
+
+                        points.push(`${x},${y}`);
+                        
+                        let tipVal = val;
+                        if (id == 1) tipVal = formatCoin(val).replace(/"/g, '&quot;');
+                        
+                        let timeStr = new Date(p.date).toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+                        
+                        svgHtml += `<circle cx="${x}" cy="${y}" r="2" fill="${color}" style="cursor:pointer;" onmouseover="window.parent.postMessage({action:'showTooltip', text:'${currencyIndex[id]?.name?.replace(/'/g, "\\'") || 'Currency'}: ${tipVal}<br><span style=\\'font-size:9px; color:#8a7a5f;\\'>${timeStr}</span>', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"/>`;
+                    });
+                    svgHtml += `<polyline points="${points.join(' ')}" fill="none" stroke="${color}" stroke-width="1.2" opacity="0.8" />`;
+                });
+
+                svgHtml += `</svg>`;
+
+                // Draw X-axis System Clock labels
+                let labelsHtml = '';
+                pointsData.forEach((p, idx) => {
+                    if (idx % Math.max(1, Math.ceil(pointsData.length / 10)) === 0 || idx === pointsData.length - 1) {
+                        const x = (idx / Math.max(1, pointsData.length - 1)) * (width - 20) + 10;
+                        let d = new Date(p.date);
+                        let timeStr = (period === 'day') ? 
+                            d.getHours() + ':' + d.getMinutes().toString().padStart(2, '0') : 
+                            d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
+                        labelsHtml += `<div style="position:absolute; left:${x}px; bottom:-20px; font-size:10px; color:#8a7a5f; transform:translateX(-50%); white-space:nowrap;">${timeStr}</div>`;
+                    }
+                });
+
+                // Override simple flex box styles to act as an auto-scrolling container
+                gCont.style.display = 'block';
+                gCont.style.alignItems = 'stretch';
+                gCont.style.paddingBottom = '0';
+                gCont.style.borderBottom = 'none';
+                gCont.style.borderLeft = 'none';
+                gCont.style.paddingLeft = '0';
+
+                gCont.innerHTML = `
+                <div style="width:100%; overflow-x:auto; overflow-y:hidden; padding-bottom: 25px;">
+                    <div style="width:${width}px; height:${height}px; position:relative; border-bottom:1px solid #4a3b2a; border-left:1px solid #4a3b2a;">
+                        ${svgHtml}
+                        ${labelsHtml}
+                    </div>
+                </div>`;
+            }
+
+            async function viewSessionDetails(dateStr) {
+                const session = sessionHistory.find(s => s.date === dateStr);
+                if(!session) return;
+
+                document.getElementById('sd-currencies').innerHTML = '<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">LOADING...</div>';
+                document.getElementById('sd-items').innerHTML = '';
+                document.getElementById('session-details-modal').style.display = 'flex';
+
+                await ensureCurrencyCache();
+
+                const itemDiffs = session.itemsDiff || session.matsDiff || {};
+                const itemIds = Object.keys(itemDiffs);
+                if(itemIds.length > 0) {
+                    await cacheItems(itemIds);
+                }
+
+                // Render Currencies
+                let cHtml = '';
+                const wDiff = session.walletDiff || { '1': session.goldDiff || 0 };
+                Object.keys(wDiff).forEach(id => {
+                    const diff = wDiff[id];
+                    const info = currencyIndex[id];
+                    if (!info) return;
+
+                    let valHtml = '';
+                    if (id == 1) valHtml = formatCoin(diff);
+                    else valHtml = (diff > 0 ? '+' : '') + diff;
+
+                    const cls = diff > 0 ? 'val-pos' : 'val-neg';
+                    cHtml += `<div class="currency-row">
+                        <div class="currency-name"><img src="${info.icon}" class="currency-icon"> ${info.name}</div>
+                        <div class="${cls}">${valHtml}</div>
+                    </div>`;
+                });
+                document.getElementById('sd-currencies').innerHTML = cHtml || '<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">NO CURRENCIES RECORDED</div>';
+
+                // Render Items
+                let iHtml = '';
+                Object.keys(itemDiffs).forEach(id => {
+                    const diff = itemDiffs[id];
+                    const info = itemIndex[id];
+                    if (!info) return;
+
+                    const sign = diff > 0 ? '+' : '';
+                    const cls = diff > 0 ? '' : 'negative';
+                    iHtml += `<div class="item-slot" onmouseover="window.parent.postMessage({action:'showTooltip', text:'${info.name.replace(/'/g, "\\'")}', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+                        <img src="${info.icon}" class="item-icon">
+                        <div class="item-count ${cls}">${sign}${diff}</div>
+                    </div>`;
+                });
+                document.getElementById('sd-items').innerHTML = iHtml || '<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">NO ITEMS RECORDED</div>';
+            }
+
+            function closeSessionDetails() {
+                document.getElementById('session-details-modal').style.display = 'none';
+            }
+			/*]]>*/
+		</script>
+	</body>
+</html>

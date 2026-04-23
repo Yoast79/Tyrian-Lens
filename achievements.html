@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; flex-shrink: 0; font-weight: bold; }
+			.ap-stats { text-align: right; font-size: 10px; color: #8a7a5f; }
+			.ap-stats .total { font-size: 18px; color: #e2c07d; font-weight: bold; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; }
+			.nav-panel { width: 240px; flex-shrink: 0; background: rgba(0,0,0,0.3); border: 1px solid #2a2015; padding: 5px; display: flex; flex-direction: column; gap: 5px; overflow: hidden; }
+			.group-btn { width: 100%; background: #1a1510; border: none; color: #e2c07d; padding: 10px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; border-bottom: 1px solid #2a2015; display: flex; justify-content: space-between; }
+			.group-btn:hover { background: #251d16; }
+			.group-btn::after { content: '▼'; font-size: 8px; transition: 0.3s; color: #4a3b2a; }
+			.group-btn.active::after { transform: rotate(180deg); color: #e2c07d; }
+			.cats-container { display: none; background: rgba(20,15,10,0.4); }
+			.cat-btn { width: 100%; background: transparent; border: none; color: #8a7a5f; padding: 8px 10px 8px 25px; text-align: left; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(42, 32, 21, 0.5); }
+			.cat-btn:hover, .cat-btn.active { color: #e2c07d; background: rgba(226, 192, 125, 0.05); }
+			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 5px; }
+			.ach-card { background: rgba(20,15,10,0.8); border: 1px solid #332a1e; display: flex; padding: 10px; padding-right: 40px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
+			.ach-card:hover { border-color: #8a7a5f; background: rgba(30,22,15,0.9); }
+			.ach-card.done { border-color: #1A9306; background: rgba(26, 147, 6, 0.05); }
+			.ach-icon-wrap { width: 44px; height: 44px; flex-shrink: 0; pointer-events: none; }
+			.ach-icon { width: 100%; height: 100%; border: 1px solid #4a3b2a; background: #000; }
+			.ach-info { flex: 1; display: flex; flex-direction: column; justify-content: center; pointer-events: none; }
+			.ach-title { font-size: 11px; font-weight: bold; color: #e2c07d; margin-bottom: 2px; }
+			.ach-req { font-size: 9px; color: #8a7a5f; text-transform: none; margin-bottom: 6px; line-height: 1.2; }
+			.prog-container { display: flex; align-items: center; gap: 10px; }
+			.prog-bg { flex: 1; height: 6px; background: #111; border: 1px solid #4a3b2a; position: relative; }
+			.prog-fill { height: 100%; background: linear-gradient(90deg, #4a3b2a, #e2c07d); width: 0%; transition: width 0.5s ease; }
+			.prog-text { font-size: 9px; font-weight: bold; width: 60px; text-align: right; color: #e2c07d; }
+			.star-btn { cursor: pointer; width: 20px; height: 20px; opacity: 0.3; transition: 0.2s; position: absolute; top: 10px; right: 10px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+			.top-actions { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; gap: 10px; }
+			button.main-action { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; transition: 0.2s; }
+			.fancy-toggle { position: relative; display: inline-block; width: 44px; height: 22px; vertical-align: middle; margin-left: 8px; }
+			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 22px; }
+			.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
+			input:checked + .slider:before { transform: translateX(22px); background-color: #000; }
+			#ach-modal { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); z-index:100; align-items:center; justify-content:center; padding:20px; }
+			.modal-content { background:rgba(20,15,10,0.98); border:1px solid #e2c07d; width:100%; max-width:450px; max-height:100%; overflow-y:auto; padding:25px; position:relative; box-shadow: 0 0 20px #000; }
+			.close-modal { position:absolute; top:10px; right:15px; cursor:pointer; color:#8a7a5f; font-size:18px; transition:0.2s; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .group-btn { font-size: 13px; }
+			body.ui-large .cat-btn { font-size: 12px; padding: 10px 10px 10px 25px; }
+			body.ui-large .ach-card { padding: 12px; padding-right: 50px; }
+			body.ui-large .ach-icon-wrap { width: 52px; height: 52px; }
+			body.ui-large .ach-title { font-size: 13px; }
+			body.ui-large .ach-req { font-size: 11px; }
+			body.ui-large .prog-text { font-size: 11px; width: 70px; }
+			body.ui-large .main-action { font-size: 12px; padding: 8px 16px; }
+			body.ui-large .nav-panel { width: 280px; }
+			body.ui-large .ap-stats .total { font-size: 22px; }
+			body.ui-large .ap-stats { font-size: 12px; }
+
+			/* Super Adventure Box Easter Egg */
+			.sab-glitch { image-rendering: pixelated; box-shadow: inset 0 0 0 2px #39ff14 !important; background: repeating-linear-gradient(0deg, rgba(57,255,20,0.05), rgba(57,255,20,0.05) 1px, transparent 1px, transparent 3px), rgba(20,15,10,0.8) !important; animation: sabGlitchAnim 4s infinite; }
+			.sab-glitch:hover { box-shadow: inset 0 0 0 2px #ff00ff !important; background: repeating-linear-gradient(0deg, rgba(255,0,255,0.05), rgba(255,0,255,0.05) 1px, transparent 1px, transparent 3px), rgba(30,22,15,0.9) !important; }
+			.sab-glitch .ach-title { color: #39ff14 !important; text-shadow: 1px 1px 0px #ff00ff; }
+			.sab-glitch .ach-icon { image-rendering: pixelated; }
+			@keyframes sabGlitchAnim {
+			0% { transform: translate(0) }
+			10% { transform: translate(-2px, 1px) }
+			11% { transform: translate(0) }
+			50% { transform: translate(2px, -1px); filter: hue-rotate(90deg); }
+			51% { transform: translate(0); filter: hue-rotate(0deg); }
+			90% { transform: translate(-1px, 2px) }
+			91% { transform: translate(0) }
+			100% { transform: translate(0) }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ui-root" style="display:flex; height:100%; flex-direction: column;">
+			<div class="header">
+				<div style="display:flex; align-items:center;">
+					<div class="section-title">Account Achievements</div>
+				</div>
+				<div id="ap-stats" class="ap-stats"></div>
+			</div>
+			<div class="top-actions">
+				<div style="display:flex; gap:10px; align-items:center;">
+					<button class="main-action" onclick="loadDailies()">DAILY</button>
+					<button class="main-action" onclick="loadWatchlistView()">WATCHLIST</button>
+				</div>
+				<div style="display:flex; align-items:center;">
+					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST OVERLAY</span>
+					<label class="fancy-toggle">
+						<input type="checkbox" id="overlay-toggle" onchange="if(Object.keys(tracked).length === 0) { this.checked = false; window.parent.postMessage({action:'toast', msg:'WATCHLIST IS EMPTY'}, '*'); return; } window.parent.postMessage({action:'toggleTracker'}, '*')" />
+						<span class="slider"></span>
+					</label>
+				</div>
+			</div>
+			<div class="main-layout">
+				<div class="nav-panel" id="nav-panel-container">
+					<div style="position: relative;">
+						<input type="text" id="ach-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+							<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
+						</div>
+					<div id="nav-panel" style="display: flex; flex-direction: column; overflow-y: auto; flex: 1; min-height: 0;"></div>
+				</div>
+				<div class="content-panel" id="content-panel"></div>
+			</div>
+		</div>
+		<div id="ach-modal">
+			<div class="modal-content">
+				<div class="close-modal" onclick="document.getElementById('ach-modal').style.display='none'">&#10006;</div>
+				<div id="modal-title" style="font-size:14px; font-weight:bold; color:#e2c07d; margin-bottom:10px; border-bottom:1px solid #4a3b2a; padding-bottom:5px;"></div>
+				<div id="modal-desc" style="font-size:11px; color:#8a7a5f; text-transform:none; line-height:1.4; margin-bottom:15px;"></div>
+				<div id="modal-bits"></div>
+				<button id="modal-wiki-btn" class="main-action" style="margin-top:20px; width:100%;">OPEN WIKI</button>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			const activeKey = localStorage.getItem('gw2_active_key');
+            let indexData = null, accountProg = [], tracked = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
+            let currentView = 'dailies';
+            let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_achievements') || '{}');
+            let searchQuery = '';
+
+			async function fetchJSON(url) { 
+                try { const r = await fetch(url); return r.ok ? await r.json() : null; } 
+                catch(e) { return null; } 
+            }
+
+			async function init() {
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+                if (!activeKey) return;
+                document.getElementById('overlay-toggle').checked = localStorage.getItem('gw2_tracker_visible') === 'true';
+
+                const [prog, acc] = await Promise.all([
+                    fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/account?access_token=" + activeKey)
+                ]);
+                if (prog) accountProg = prog;
+                try {
+                    const res = await fetch('https://gw2ps.local/achievement_index.json', { cache: "no-store" });
+                    if (res.ok) { 
+                        indexData = await res.json(); 
+						indexData.categories = indexData.categories.filter(c => !c.n.includes("Character Adventure Guide"));
+						indexData.groups.forEach(g => {
+							g.cats = g.cats.filter(cid => indexData.categories.some(c => c.id === cid));
+						});
+
+                        if (acc) {
+                            let earnedAP = 0;
+                            accountProg.forEach(p => {
+                                const ach = indexData.achievements[p.id];
+                                if (ach && ach.t) {
+                                    let totalForThisAch = 0;
+                                    ach.t.forEach(tier => { if (p.done || p.current >= tier.count) totalForThisAch += (tier.points || 0); });
+                                    if (p.repeated && p.repeated > 0) {
+                                        let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
+                                        totalForThisAch += (p.repeated * ptsPerRep);
+                                    }
+                                    if (ach.p > 0 && totalForThisAch > ach.p) totalForThisAch = ach.p;
+                                    earnedAP += totalForThisAch;
+                                }
+                            });
+                            const legacyAP = Math.min(15000, (acc.daily_ap || 0) + (acc.monthly_ap || 0));
+                            const totalAP = legacyAP + earnedAP; 
+                            const nextChest = 500 - (totalAP % 500); 
+                            document.getElementById('ap-stats').innerHTML = 
+                                "<div style='font-size:18px; color:#e2c07d; font-weight:bold; display:flex; align-items:center; justify-content:flex-end; gap:8px;'>" +
+                                totalAP.toLocaleString() + " <img src='https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png' style='width:16px;' alt='AP' />" +
+                                "</div>" +
+                                "<div style='font-size:10px; color:#8a7a5f; margin-top:4px;'>NEXT CHEST IN: <span style='color:#e2c07d; font-weight:bold;'>" + nextChest + " AP</span></div>";
+                        }
+                        filterFestivals(); buildNav(); loadDailies(); 
+                    }
+                } catch(e) { console.error("Index load fail"); }
+			}
+
+            function filterFestivals() {
+                const festivalKeywords = ['Halloween', 'Wintersday', 'Super Adventure', 'Dragon Bash', 'Lunar', 'Four Winds', 'Festival'];
+                let festGrp = indexData.groups.find(g => g.n === 'Festivals');
+                if (!festGrp) { festGrp = { id: 'festivals', n: 'Festivals', order: 1.5, cats: [] }; indexData.groups.push(festGrp); }
+                indexData.groups.forEach(g => {
+                    if (g.n === 'Festivals') return;
+                    let remainingCats = [];
+                    g.cats.forEach(cid => {
+                        const c = indexData.categories.find(cat => cat.id === cid);
+                        if (c && festivalKeywords.some(kw => c.n.includes(kw))) { if (!festGrp.cats.includes(cid)) festGrp.cats.push(cid); } 
+                        else remainingCats.push(cid);
+                    });
+                    g.cats = remainingCats;
+                });
+            }
+
+            function getProg(id) {
+                return accountProg.find(p => p.id === parseInt(id)) || { current: 0, done: false };
+            }
+
+            function sortAchs(ids) {
+                return ids.sort((a, b) => {
+                    const pA = getProg(a).done || false;
+                    const pB = getProg(b).done || false;
+                    return pA === pB ? 0 : pA ? 1 : -1;
+                });
+            }
+
+            window.handleSearch = function(val) {
+                searchQuery = val.toLowerCase();
+                if (searchQuery) {
+                    currentView = 'search';
+                    renderSearchResults();
+                } else {
+                    currentView = 'dailies';
+                    loadDailies();
+                }
+            };
+
+            function renderSearchResults() {
+                const content = document.getElementById('content-panel');
+                let results = [];
+                Object.keys(indexData.achievements).forEach(id => {
+                    const ach = indexData.achievements[id];
+                    if (ach.n.toLowerCase().includes(searchQuery) || (ach.d && ach.d.toLowerCase().includes(searchQuery))) {
+                        results.push(id);
+                    }
+                });
+                
+                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>SEARCH RESULTS</div>";
+                if (results.length === 0) {
+                    html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO RESULTS FOUND</div>";
+                } else {
+                    let sortedIds = sortAchs(results);
+                    sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); });
+                }
+                content.innerHTML = html;
+                document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
+            }
+
+            function buildNav() {
+                const nav = document.getElementById('nav-panel'); nav.innerHTML = '';
+                indexData.groups.sort((a,b) => a.order - b.order).forEach(g => {
+                    const isOpen = harmonicaState[g.id] === true;
+                    const gBtn = document.createElement('button'); 
+                    gBtn.className = 'group-btn master-btn' + (isOpen ? ' active' : ''); 
+                    gBtn.innerText = g.n;
+                    gBtn.onclick = function() {
+                        this.classList.toggle('active');
+                        const nowOpen = this.classList.contains('active');
+                        this.nextElementSibling.style.display = nowOpen ? 'block' : 'none';
+                        harmonicaState[g.id] = nowOpen;
+                        localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
+                    };
+                    const catContainer = document.createElement('div'); 
+                    catContainer.className = 'cats-container';
+                    catContainer.style.display = isOpen ? 'block' : 'none';
+                    g.cats.forEach(cid => {
+                        const c = indexData.categories.find(cat => cat.id === cid);
+                        if (c) {
+                            const cBtn = document.createElement('button'); cBtn.className = 'cat-btn sub-btn';
+                            cBtn.innerHTML = "<img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:14px;' alt='icon' /> " + c.n;
+                            cBtn.onclick = function() { document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); renderCategory(c); };
+                            catContainer.appendChild(cBtn);
+                        }
+                    });
+                    nav.appendChild(gBtn); nav.appendChild(catContainer);
+                });
+            }
+
+            function loadDailies() {
+                currentView = 'dailies';
+                document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
+                const content = document.getElementById('content-panel');
+                let dailyGrp = indexData.groups.find(g => g.n === 'Daily');
+                if (!dailyGrp) return;
+                let html = '<div style="font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;">DAILY OBJECTIVES</div>';
+                dailyGrp.cats.forEach((cid) => {
+                    const c = indexData.categories.find(cat => cat.id === cid);
+                    if (c && c.achs.length > 0) {
+                        const isOpen = harmonicaState['daily_' + cid] === true;
+                        html += `<button class='group-btn ${isOpen ? 'active' : ''}' style='background:rgba(30,22,15,0.9); margin-top:8px; border:1px solid #332a1e;' onclick='this.classList.toggle("active"); const open = this.classList.contains("active"); this.nextElementSibling.style.display = open ? "flex" : "none"; harmonicaState["daily_${cid}"] = open; localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));'>` +
+                            "<div style='display:flex; align-items:center; gap:8px;'><img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:16px;' alt='icon' />" + c.n + "</div>" +
+                        "</button>" +
+                        `<div style='display:${isOpen ? 'flex' : 'none'}; flex-direction:column; gap:8px; padding: 10px 5px; background:rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top:none;'>`;
+                        let sortedIds = sortAchs(c.achs);
+                        sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (ach) html += generateCard(aid, ach); });
+                        html += "</div>";
+                    }
+                });
+                content.innerHTML = html;
+            }
+
+            function loadWatchlistView() {
+                currentView = 'watchlist';
+                const content = document.getElementById('content-panel');
+                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>YOUR WATCHLIST</div>";
+                const ids = Object.keys(tracked);
+                if (ids.length === 0) html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO ITEMS TRACKED</div>";
+                else { let sortedIds = sortAchs(ids); sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); }); }
+                content.innerHTML = html;
+            }
+
+            function renderCategory(c) {
+                currentView = 'category';
+                const content = document.getElementById('content-panel');
+                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>" + c.n + "</div>";
+                let sortedIds = sortAchs(c.achs);
+                sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (ach) html += generateCard(aid, ach); });
+                content.innerHTML = html;
+            }
+
+            function generateCard(id, ach) {
+                const prog = getProg(id);
+                let currentMax = 1;
+                if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
+                const percent = prog.done ? 100 : Math.min(100, (prog.current / currentMax) * 100);
+                const isTracked = !!tracked[id];
+
+				let isSAB = false;
+				const sabCatNames = ["Daily Super Adventure Festival", "Super Adventure Box: World 1", "Super Adventure Box: World 2", "Super Adventure Box: Tribulation Mode", "Super Adventure Box: Nostalgia", "Super Adventure Box: Quality Testing"];
+				if (indexData && indexData.categories) {
+					isSAB = indexData.categories.some(c => sabCatNames.includes(c.n) && c.achs && c.achs.includes(parseInt(id)));
+				}
+
+                return "<div class='ach-card " + (prog.done ? "done" : "") + (isSAB ? " sab-glitch" : "") + "' onclick='openModal(" + id + ")'>" +
+                    "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
+                    "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
+                    "<div class='ach-icon-wrap'><img src='" + (ach.i || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' class='ach-icon' alt='icon' /></div>" +
+                    "<div class='ach-info'><div class='ach-title'>" + ach.n + "</div><div class='ach-req'>" + (ach.r || ach.d || "") + "</div>" +
+                    "<div class='prog-container'><div class='prog-bg'><div class='prog-fill' style='width:" + percent + "%'></div></div>" +
+                    "<div class='prog-text'>" + prog.current + " / " + currentMax + "</div></div></div></div>";
+            }
+
+            window.openModal = function(id) {
+                const ach = indexData.achievements[id]; if (!ach) return;
+                const prog = getProg(id);
+                let currentMax = 1; if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
+                const absoluteMax = ach.t && ach.t.length > 0 ? ach.t[ach.t.length-1].count : 1;
+                const isFullyDone = prog.done || prog.current >= absoluteMax;
+                let bitsHtml = '';
+                if (ach.b && ach.b.length > 0) {
+                    bitsHtml = "<div style='margin-top:15px; font-size:11px; border-top:1px solid #4a3b2a; padding-top:10px;'>";
+                    const progBits = prog.bits || [];
+                    ach.b.forEach((bit, i) => {
+                        const isDone = isFullyDone || progBits.includes(i);
+                        const color = isDone ? '#1A9306' : '#8a7a5f';
+                        const deco = isDone ? 'line-through' : 'none';
+                        bitsHtml += "<div style='color:" + color + "; text-decoration:" + deco + "; margin-bottom:6px; text-transform:none;'>• " + (bit.text || 'Secret Objective') + "</div>";
+                    });
+                    bitsHtml += "</div>";
+                }
+                document.getElementById('modal-title').innerText = ach.n;
+                document.getElementById('modal-desc').innerHTML = (ach.r || '') + '<br><br>' + (ach.d || '');
+                document.getElementById('modal-bits').innerHTML = bitsHtml;
+                document.getElementById('modal-wiki-btn').onclick = () => window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(ach.n), '_blank');
+                document.getElementById('ach-modal').style.display = 'flex';
+            };
+
+            window.toggleTrack = function(id, name, el, event) {
+                event.stopPropagation();
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active'); delete tracked[id];
+                    window.parent.postMessage({ action: 'untrackAchievement', id: id }, '*');
+                    if (Object.keys(tracked).length === 0) {
+                        document.getElementById('overlay-toggle').checked = false;
+                    }
+                    if (currentView === 'watchlist') loadWatchlistView();
+                } else {
+                    el.classList.add('active'); const ach = indexData.achievements[id];
+                    const max = ach.t && ach.t.length > 0 ? ach.t[ach.t.length-1].count : 1;
+                    const payload = { n: name, id: id, max: max, bits: ach.b };
+                    tracked[id] = payload;
+                    window.parent.postMessage({ action: 'trackAchievement', id: id, payload: payload }, '*');
+                }
+                localStorage.setItem('gw2_tracked_achievements', JSON.stringify(tracked));
+            };
+
+			window.addEventListener('message', (e) => { 
+                if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+            });
+
+			init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

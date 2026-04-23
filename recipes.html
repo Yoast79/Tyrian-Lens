@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+
+			body {
+			background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px;
+			overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase;
+			}
+
+			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-bottom: 10px; color: #8a7a5f; flex-shrink: 0; }
+
+			#recipes-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; min-height: 0; }
+
+			.recipe-section { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+
+			.dropdown-btn {
+			width: 100%; background: #1a1510; border: none; color: #e2c07d;
+			padding: 10px 15px; text-transform: uppercase; font-size: 13px; cursor: pointer;
+			display: flex; align-items: center; justify-content: flex-start; gap: 10px; transition: 0.2s;
+			position: relative; border-bottom: 1px solid #2a2015;
+			}
+			.dropdown-btn:hover { background: #251d16; }
+
+			.dropdown-btn::after {
+			content: '▼'; position: absolute; right: 15px; font-size: 10px; transition: 0.3s; color: #4a3b2a;
+			}
+			.dropdown-btn.active::after { transform: rotate(180deg); color: #e2c07d; }
+
+			.sub-btn {
+			background: rgba(20,15,10,0.4); padding: 8px 20px; font-size: 11px; color: #8a7a5f; border-bottom: 1px solid #2a2015;
+			}
+
+			.dropdown-content { display: none; }
+
+			.recipe-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; min-height: 0; }
+
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; cursor: pointer; transition: 0.2s; position: relative; }
+			.item-slot:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
+			.recipe-icon { width: 100%; height: 100%; object-fit: cover; }
+			.recipe-icon.locked { filter: grayscale(1) contrast(0.5); opacity: 0.4; }
+
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
+
+			.rarity-Legendary { border-color: #4C139D; }
+			.rarity-Ascended { border-color: #FB3E8D; }
+			.rarity-Exotic { border-color: #FFA405; }
+			.rarity-Rare { border-color: #FCD00B; }
+			.rarity-Masterwork { border-color: #1A9306; }
+			.rarity-Fine { border-color: #62A4DA; }
+
+			/* Calculator Specific Styles */
+			.tabs-header { display: flex; gap: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.tab-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 8px 15px; font-family: "Crimson Text", serif; font-size: 14px; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.tab-btn.active { background: #2a221a; color: #e2c07d; border-color: #e2c07d; }
+			.tab-btn:hover:not(.active) { color: #e2c07d; background: #251d16; }
+
+			#calculator-container { display: none; flex: 1 1 auto; overflow-y: auto; padding-right: 5px; flex-direction: column; }
+
+			.search-container { position: relative; width: 100%; margin-bottom: 15px; flex-shrink: 0; display: flex; gap: 10px; }
+			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 10px 30px 10px 10px; font-size: 13px; outline: none; width: 100%; font-family: "Crimson Text", serif; text-transform: uppercase; }
+			.search-box:focus { border-color: #e2c07d; }
+
+			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #4a3b2a; cursor: pointer; font-size: 18px; line-height: 1; display: none; z-index: 10; }
+			.clear-btn:hover { color: #e2c07d; }
+
+			.autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: #1a1510; border: 1px solid #e2c07d; border-top: none; max-height: 250px; overflow-y: auto; z-index: 100; display: none; }
+			.autocomplete-item { padding: 8px 10px; cursor: pointer; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #2a2015; font-size: 13px; color: #e2c07d; }
+			.autocomplete-item:hover { background: #251d16; color: #fff; }
+			.autocomplete-item img { width: 28px; height: 28px; border: 1px solid #332a1e; }
+
+			.toggle-container { display: flex; align-items: center; gap: 10px; font-size: 11px; color: #8a7a5f; cursor: pointer; user-select: none; letter-spacing: 1px; }
+			.toggle-switch { position: relative; width: 34px; height: 18px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 9px; transition: 0.2s; }
+			.toggle-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; background: #4a3b2a; border-radius: 50%; transition: 0.2s; }
+			.active .toggle-switch { border-color: #e2c07d; }
+			.active .toggle-switch::after { left: 18px; background: #e2c07d; }
+
+			#calc-results { flex: 1; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); padding: 15px; overflow-y: auto; display: flex; flex-direction: column; }
+
+			.shopping-list-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed #332a1e; font-size: 12px; }
+			.shopping-list-item:last-child { border-bottom: none; }
+
+			.coin-icon { height: 12px; width: 12px; vertical-align: text-bottom; margin: 0 2px; }
+
+			.calc-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+			.calc-breakdown-item { display: flex; flex-direction: column; }
+			.calc-bd-title { color: #8a7a5f; font-size: 11px; margin-bottom: 3px; font-weight: bold; }
+			.calc-bd-val { font-size: 14px; font-weight: bold; display: flex; align-items: center; }
+			.calc-bd-sub { font-size: 10px; color: #8a7a5f; margin-top: 2px; display: flex; align-items: center; }
+
+			.target-block { background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0; margin-bottom: 10px; }
+			.target-header { padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; }
+			.target-content { padding: 15px; display: none; flex-direction: column; align-items: stretch; gap: 10px; border-top: 1px solid #2a2015; }
+			.target-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+			.target-remove-btn { background: #3a1515; border: 1px solid #ff4a4a; color: #ff4a4a; padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-size: 11px; font-weight: bold; transition: 0.2s; }
+			.target-remove-btn:hover { background: #ff4a4a; color: #fff; }
+			input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+			input[type=number] { -moz-appearance: textfield; }
+
+			.step-container { padding: 10px 0; border-bottom: 1px dashed #332a1e; font-size: 12px; transition: 0.2s; }
+			.completed-step { filter: grayscale(1); opacity: 0.4; }
+			.completed-step .step-header-content span { text-decoration: line-through; }
+			.completed-step .step-ingredients { display: none !important; }
+		</style>
+	</head>
+	<body>
+		<div id="recipe-ui" style="display:none; height:100%; flex-direction: column;">
+			<div class="tabs-header">
+				<button class="tab-btn active" onclick="switchTab('account')">Account Unlocks</button>
+				<button class="tab-btn" onclick="switchTab('calculator')">Crafting Calculator</button>
+			</div>
+
+			<div id="recipes-container"></div>
+
+			<div id="calculator-container">
+				<div class="search-container">
+					<div style="position:relative; flex:1;">
+						<input type="text" class="search-box" id="calc-search" placeholder="SEARCH ITEM TO ADD TO CRAFTING QUEUE..." autocomplete="off">
+							<span class="clear-btn" id="calc-clear-search" onclick="clearCalcSearch()">&#10006;</span>
+							<div id="calc-autocomplete" class="autocomplete-list"></div>
+						</div>
+				</div>
+
+				<div style="display:flex; gap:20px; margin-bottom: 15px; flex-shrink:0; align-items: center;">
+					<div class="toggle-container" id="mat-toggle" onclick="toggleMats()">
+						<div class="toggle-switch"></div>
+						<span>USE OWN MATERIALS</span>
+					</div>
+					<div class="toggle-container" id="auto-update-toggle" onclick="toggleAutoUpdate()" style="display:none;">
+						<div class="toggle-switch"></div>
+						<span>UPDATE OWNED MATERIALS EVERY MINUTE</span>
+					</div>
+				</div>
+
+				<div id="calc-results">
+					<div style="padding: 60px 20px; text-align: center; color: #8a7a5f; font-style: italic; letter-spacing: 1px;">
+						SELECT AN ITEM TO GENERATE SHOPPING LIST
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="loader" class="loading">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
+			<div id="loader-text">SYNCING RECIPE DATA...</div>
+			<div id="loader-subtext" style="font-size: 10px; margin-top: 10px; opacity: 0.6; letter-spacing: 1px;">THIS MAY TAKE A MINUTE</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			const discIcons = {
+				"Armorsmith": "https://gw2ps.local/Assets/Icons/craft_armorsmith.png",
+				"Artificer": "https://gw2ps.local/Assets/Icons/craft_artificer.png",
+				"Chef": "https://gw2ps.local/Assets/Icons/craft_chef.png",
+				"Huntsman": "https://gw2ps.local/Assets/Icons/craft_huntsman.png",
+				"Jeweler": "https://gw2ps.local/Assets/Icons/craft_jeweler.png",
+				"Leatherworker": "https://gw2ps.local/Assets/Icons/craft_leatherworker.png",
+				"Scribe": "https://gw2ps.local/Assets/Icons/craft_scribe.png",
+				"Tailor": "https://gw2ps.local/Assets/Icons/craft_tailor.png",
+				"Weaponsmith": "https://gw2ps.local/Assets/Icons/craft_weaponsmith.png",
+				"Handiworker": "https://gw2ps.local/Assets/Icons/craft_handiworker.png",
+				"Mystic Forge": "https://gw2ps.local/Assets/Icons/craft_mystic_forge.png"
+			};
+
+			const categoryMapping = {
+				"RefinementEctoplasm": "Ectoplasm Refinement",
+				"RefinementObsidian": "Obsidian Refinement",
+				"LegendaryComponent": "Legendary Component",
+				"IngredientCooking": "Cooking Ingredient",
+				"LongBow": "Longbow",
+				"ShortBow": "Shortbow",
+				"HarpoonGun": "Harpoon Gun"
+			};
+
+			let activeKey = localStorage.getItem('gw2_active_key') || null;
+			let recipeDatabase = [];
+			let unlockedIds = new Set();
+			let itemIconCache = JSON.parse(localStorage.getItem('recipe_icon_cache') || '{}');
+			
+			let useOwnMats = localStorage.getItem('gw2_calc_own_mats') === 'true';
+			let autoUpdateMats = localStorage.getItem('gw2_calc_auto_update') === 'true';
+			let autoUpdateInterval = null;
+
+			let searchIndex = [];
+			let tpPrices = {};
+			let forgeRecipes = {};
+			let isEngineReady = false;
+			let accountInventory = {}; 
+			let detailedRecipeCache = {};
+			
+			let activeCraftTargets = JSON.parse(localStorage.getItem('gw2_calc_targets')) || [];
+
+			function toTitleCase(str) {
+				if (!str) return '';
+				return str.replace(/\w\S*/g, function(txt) {
+					return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+				});
+			}
+
+			function formatQty(qty, prefix = '') {
+				let formattedQty = qty.toLocaleString('de-DE');
+				let numStr = prefix ? `${prefix} ${formattedQty}x` : `${formattedQty}x`;
+				if (qty >= 250) {
+					let stacks = Math.floor(qty / 250);
+					let rem = qty % 250;
+					let sub = rem > 0 ? `${stacks.toLocaleString('de-DE')} st. + ${rem.toLocaleString('de-DE')}` : `${stacks.toLocaleString('de-DE')} st.`;
+					return `<div style="display:flex; flex-direction:column; line-height:1.2; align-items:flex-end;">
+								<span style="color:#fff; font-size:12px; font-weight:bold; pointer-events:none;">${numStr}</span>
+								<span style="color:#8a7a5f; font-size:10px; font-weight:normal; pointer-events:none;">${sub}</span>
+							</div>`;
+				}
+				return `<div style="display:flex; flex-direction:column; line-height:1; align-items:flex-end; justify-content:center; height:100%;">
+							<span style="color:#fff; font-size:12px; font-weight:bold; pointer-events:none;">${numStr}</span>
+						</div>`;
+			}
+
+			async function fetchJSON(url) {
+				try { 
+					const r = await fetch(url); 
+					if (!r.ok && r.status !== 206) return null;
+					return await r.json(); 
+				} catch(e) { return null; }
+			}
+
+			function formatCoin(copper, align = false) {
+				if (copper === undefined || copper === null || isNaN(copper)) copper = 0;
+				let isNeg = copper < 0;
+				copper = Math.abs(Math.round(copper));
+				let g = Math.floor(copper / 10000), s = Math.floor((copper % 10000) / 100), c = copper % 100;
+				
+				if (align) {
+					let res = isNeg ? '- ' : '';
+					res += `<span style="display:inline-block; width:45px; text-align:right;">${g}</span><img src="https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png" class="coin-icon" />`;
+					res += `<span style="display:inline-block; width:20px; text-align:right;">${s.toString().padStart(2, '0')}</span><img src="https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png" class="coin-icon" />`;
+					res += `<span style="display:inline-block; width:20px; text-align:right;">${c.toString().padStart(2, '0')}</span><img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" class="coin-icon" />`;
+					return res;
+				} else {
+					if (copper === 0) return '0<img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" class="coin-icon" />';
+					let res = isNeg ? '-' : '';
+					if (g > 0) res += g + '<img src="https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png" class="coin-icon" />';
+					if (s > 0 || g > 0) res += s + '<img src="https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png" class="coin-icon" />';
+					res += c + '<img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" class="coin-icon" />';
+					return res;
+				}
+			}
+
+			async function loadPhase2Data() {
+				const loaderText = document.getElementById('loader-text');
+				
+				loaderText.innerText = "LOADING MASTER INDEX...";
+				try {
+					const masterData = await fetchJSON('gw2_master_index.json') || await fetchJSON('https://gw2ps.local/gw2_master_index.json');
+					if (masterData) searchIndex = masterData;
+				} catch(e) { console.error("Master index load failed"); }
+
+				loaderText.innerText = "LOADING MYSTIC FORGE DATABANKS...";
+				try {
+					const cachedForge = sessionStorage.getItem('gw2profits_forge');
+					if (cachedForge) {
+						forgeRecipes = JSON.parse(cachedForge);
+					} else {
+						const forgeData = await fetchJSON('mystic_forge_recipes.json') || await fetchJSON('https://gw2ps.local/mystic_forge_recipes.json');
+						if (forgeData) {
+							forgeRecipes = {};
+							if (Array.isArray(forgeData)) {
+								forgeData.forEach(r => {
+									let finalOutId = r.output_item_id || r.output || r.id;
+									if (!finalOutId && r.output_name) {
+										let searchName = r.output_name.toLowerCase();
+										let matches = searchIndex.filter(i => i.n && i.n.toLowerCase() === searchName);
+										if (matches.length > 0) {
+											matches.forEach(match => {
+												let outId = String(match.id);
+												if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
+												if (!forgeRecipes[outId].includes(r)) forgeRecipes[outId].push(r);
+											});
+										}
+										return;
+									}
+									let outId = String(finalOutId);
+									if (outId && outId !== 'undefined' && outId !== 'null') {
+										if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
+										forgeRecipes[outId].push(r);
+									}
+								});
+							} else {
+								for (let key in forgeData) {
+									let outId = String(key);
+									if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
+									if (Array.isArray(forgeData[key])) {
+										forgeRecipes[outId].push(...forgeData[key]);
+									} else {
+										forgeRecipes[outId].push(forgeData[key]);
+									}
+								}
+							}
+							sessionStorage.setItem('gw2profits_forge', JSON.stringify(forgeRecipes));
+						}
+					}
+				} catch (e) { console.error("Failed to load Forge recipes", e); }
+				
+				isEngineReady = true;
+			}
+
+			async function syncInventory() {
+				if (!activeKey) return;
+				accountInventory = {};
+				
+				const mats = await fetchJSON(`https://api.guildwars2.com/v2/account/materials?access_token=${activeKey}`);
+				if (mats && !mats.error) {
+					mats.forEach(m => { accountInventory[m.id] = (accountInventory[m.id] || 0) + m.count; });
+				}
+				
+				const bank = await fetchJSON(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
+				if (bank && !bank.error) {
+					bank.forEach(b => { 
+						if (b) accountInventory[b.id] = (accountInventory[b.id] || 0) + b.count; 
+					});
+				}
+
+				const shared = await fetchJSON(`https://api.guildwars2.com/v2/account/inventory?access_token=${activeKey}`);
+				if (shared && !shared.error) {
+					shared.forEach(s => { 
+						if (s) accountInventory[s.id] = (accountInventory[s.id] || 0) + s.count; 
+					});
+				}
+
+				const wallet = await fetchJSON(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
+				if (wallet && !wallet.error) {
+					wallet.forEach(w => { 
+						accountInventory[-w.id] = (accountInventory[-w.id] || 0) + w.value;
+						if (w.id === 1) accountInventory[1] = (accountInventory[1] || 0) + w.value;
+					});
+				}
+			}
+
+			function manageAutoUpdate() {
+				if (useOwnMats && autoUpdateMats) {
+					if (!autoUpdateInterval) {
+						autoUpdateInterval = setInterval(async () => {
+							if (activeKey) {
+								await syncInventory();
+								if (activeCraftTargets.length > 0) {
+									triggerGlobalCalculation();
+								}
+							}
+						}, 60000);
+					}
+				} else {
+					if (autoUpdateInterval) {
+						clearInterval(autoUpdateInterval);
+						autoUpdateInterval = null;
+					}
+				}
+			}
+
+			async function init() {
+				if (!activeKey) return;
+				const loaderText = document.getElementById('loader-text');
+				document.getElementById('loader').style.display = 'flex';
+				
+				document.getElementById('mat-toggle').classList.toggle('active', useOwnMats);
+				document.getElementById('auto-update-toggle').classList.toggle('active', autoUpdateMats);
+				document.getElementById('auto-update-toggle').style.display = useOwnMats ? 'flex' : 'none';
+
+				const cached = localStorage.getItem(`recipe_struct_${activeKey}`);
+				if (cached) {
+					const parsed = JSON.parse(cached);
+					recipeDatabase = parsed.data;
+					unlockedIds = new Set(parsed.unlocks);
+				} else {
+					loaderText.innerText = "FETCHING UNLOCKS...";
+					const unlocks = await fetchJSON(`https://api.guildwars2.com/v2/account/recipes?access_token=${activeKey}`);
+					unlockedIds = new Set(unlocks || []);
+
+					loaderText.innerText = "CATALOGING RECIPES...";
+					const allIds = await fetchJSON('https://api.guildwars2.com/v2/recipes');
+					
+					if (allIds && !allIds.error) {
+						const recipeChunks = [];
+						for (let i = 0; i < allIds.length; i += 200) recipeChunks.push(allIds.slice(i, i + 200));
+						
+						for (let i = 0; i < recipeChunks.length; i++) {
+							loaderText.innerText = `INDEXING DATA (${Math.round((i/recipeChunks.length)*100)}%)`;
+							const data = await fetchJSON(`https://api.guildwars2.com/v2/recipes?ids=${recipeChunks[i].join(',')}`);
+							if (data && !data.error) {
+								data.forEach(r => {
+									recipeDatabase.push({
+										id: r.id,
+										type: r.type || "OTHER",
+										discs: r.disciplines,
+										outId: r.output_item_id
+									});
+								});
+							}
+							await new Promise(r => setTimeout(r, 10));
+						}
+						localStorage.setItem(`recipe_struct_${activeKey}`, JSON.stringify({ data: recipeDatabase, unlocks: Array.from(unlockedIds) }));
+					}
+				}
+
+				await loadPhase2Data();
+
+				renderStructure();
+				finishInitSequence();
+			}
+
+			function finishInitSequence() {
+				document.getElementById('loader').style.display = 'none';
+				document.getElementById('recipe-ui').style.display = 'flex';
+
+				manageAutoUpdate();
+
+				let savedTab = localStorage.getItem('gw2_calc_tab') || 'account';
+				switchTab(savedTab, true);
+
+				if (activeCraftTargets.length > 0 && savedTab === 'calculator') {
+					triggerGlobalCalculation();
+				}
+			}
+
+			function renderStructure() {
+				const container = document.getElementById('recipes-container');
+				const structure = {};
+				Object.keys(discIcons).forEach(d => structure[d] = {});
+
+				recipeDatabase.forEach(r => {
+					r.discs.forEach(disc => {
+						if (structure[disc]) {
+							if (!structure[disc][r.type]) structure[disc][r.type] = [];
+							structure[disc][r.type].push(r);
+						}
+					});
+				});
+
+				let html = '';
+				for (const disc in structure) {
+					const categories = structure[disc];
+					const catKeys = Object.keys(categories).sort();
+					if (catKeys.length === 0 && disc !== "Handiworker") continue;
+
+					html += `<div class="recipe-section">
+								<div class="dropdown-btn master-btn" onclick="toggleMaster(this)">
+									<img src="${discIcons[disc]}" style="width:22px; height:22px;" />
+									<span>${disc}</span>
+								</div>
+								<div class="dropdown-content">`;
+
+					if (disc === "Handiworker" && catKeys.length === 0) {
+						html += `<div style="padding:15px; font-size:10px; color:#4a3b2a; text-align:center;">API DATA CURRENTLY UNAVAILABLE</div>`;
+					}
+
+					catKeys.forEach(cat => {
+						const items = categories[cat];
+						const outIdsAttr = items.map(i => i.outId).join(',');
+						const recipeIdsAttr = items.map(i => i.id).join(',');
+						const friendlyName = categoryMapping[cat] || cat.replace(/([A-Z])/g, ' $1').trim();
+
+						html += `<div class="dropdown-btn sub-btn" 
+									 data-out-ids="${outIdsAttr}" 
+									 data-recipe-ids="${recipeIdsAttr}"
+									 onclick="toggleLazySub(this)">
+									<span>${friendlyName} (${items.length})</span>
+								 </div>
+								 <div class="dropdown-content recipe-grid"></div>`;
+					});
+					html += `</div></div>`;
+				}
+				container.innerHTML = html;
+			}
+
+			async function toggleLazySub(btn) {
+				const grid = btn.nextElementSibling;
+				const isActive = !btn.classList.contains("active");
+
+				const siblingBtns = btn.parentElement.querySelectorAll('.sub-btn');
+				siblingBtns.forEach(s => {
+					if (s !== btn) {
+						s.classList.remove("active");
+						s.nextElementSibling.style.display = "none";
+					}
+				});
+
+				btn.classList.toggle("active", isActive);
+				grid.style.display = isActive ? "grid" : "none";
+
+				if (isActive && !btn.dataset.loaded) {
+					const outIds = btn.dataset.outIds.split(',');
+					const recipeIds = btn.dataset.recipeIds.split(',');
+					
+					let html = '';
+					outIds.forEach((id, idx) => {
+						const it = searchIndex.find(item => Number(item.id) === Number(id));
+						if (!it) return;
+						const isUnlocked = unlockedIds.has(parseInt(recipeIds[idx]));
+						const titleName = toTitleCase(it.n);
+						const displayIcon = it.i || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+						
+						html += `<div class="item-slot rarity-${it.r}" 
+									onmouseover="window.parent.postMessage({action:'showTooltip', text: '${titleName.replace(/'/g, "\\'")}${isUnlocked ? '' : ' (LOCKED)'}', x: event.clientX, y: event.clientY}, '*')" 
+									onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"
+									onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(titleName)}', '_blank')">
+									<img src="${displayIcon}" class="recipe-icon ${isUnlocked ? '' : 'locked'}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'" />
+								</div>`;
+					});
+
+					grid.innerHTML = html;
+					btn.dataset.loaded = "true";
+				}
+			}
+
+			function toggleMaster(btn) {
+				const content = btn.nextElementSibling;
+				const isActive = !btn.classList.contains("active");
+
+				const allMasterBtns = document.querySelectorAll('.master-btn');
+				allMasterBtns.forEach(m => {
+					if (m !== btn) {
+						m.classList.remove("active");
+						m.nextElementSibling.style.display = "none";
+					}
+				});
+
+				btn.classList.toggle("active", isActive);
+				content.style.display = isActive ? "block" : "none";
+			}
+
+			// --- Phase 3 Calculator Engine ---
+
+			function switchTab(tab, skipSave) {
+				document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+				if (tab === 'account') {
+					document.querySelector('.tab-btn:nth-child(1)').classList.add('active');
+					document.getElementById('recipes-container').style.display = 'block';
+					document.getElementById('calculator-container').style.display = 'none';
+				} else {
+					document.querySelector('.tab-btn:nth-child(2)').classList.add('active');
+					document.getElementById('recipes-container').style.display = 'none';
+					document.getElementById('calculator-container').style.display = 'flex';
+				}
+				if (!skipSave) {
+					localStorage.setItem('gw2_calc_tab', tab);
+				}
+			}
+
+			async function toggleMats() {
+				useOwnMats = !useOwnMats;
+				localStorage.setItem('gw2_calc_own_mats', useOwnMats);
+				document.getElementById('mat-toggle').classList.toggle('active', useOwnMats);
+				
+				const autoBtn = document.getElementById('auto-update-toggle');
+				autoBtn.style.display = useOwnMats ? 'flex' : 'none';
+				manageAutoUpdate();
+				
+				if (useOwnMats && Object.keys(accountInventory).length === 0) {
+					document.getElementById('calc-results').innerHTML = '<div style="padding: 20px; text-align: center; color: #8a7a5f;">SYNCING INVENTORY...</div>';
+					await syncInventory();
+				}
+				
+				if (activeCraftTargets.length > 0) {
+					triggerGlobalCalculation();
+				}
+			}
+
+			function toggleAutoUpdate() {
+				autoUpdateMats = !autoUpdateMats;
+				localStorage.setItem('gw2_calc_auto_update', autoUpdateMats);
+				document.getElementById('auto-update-toggle').classList.toggle('active', autoUpdateMats);
+				manageAutoUpdate();
+			}
+
+			function toggleTarget(idx) {
+				let content = document.getElementById(`target-content-${idx}`);
+				let icon = document.getElementById(`target-icon-${idx}`);
+				let isOpen = content.style.display !== 'none';
+				if (isOpen) {
+					content.style.display = 'none';
+					icon.innerHTML = '&#9660;';
+					localStorage.setItem(`gw2_calc_target_${idx}_open`, 'false');
+				} else {
+					content.style.display = 'flex';
+					icon.innerHTML = '&#9650;';
+					localStorage.setItem(`gw2_calc_target_${idx}_open`, 'true');
+				}
+			}
+
+			function toggleSection(type, idx) {
+				let el = document.getElementById(`calc-${type}-content-${idx}`);
+				let icon = document.getElementById(`calc-${type}-icon-${idx}`);
+				let isOpen = el.style.display !== 'none';
+				if (isOpen) {
+					el.style.display = 'none';
+					icon.innerHTML = '&#9660;';
+					localStorage.setItem(`gw2_calc_${type}_${idx}`, 'false');
+				} else {
+					el.style.display = type === 'bd' ? 'grid' : 'block';
+					icon.innerHTML = '&#9650;';
+					localStorage.setItem(`gw2_calc_${type}_${idx}`, 'true');
+				}
+			}
+
+			function removeTarget(idx) {
+				activeCraftTargets.splice(idx, 1);
+				localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
+				triggerGlobalCalculation();
+			}
+
+			function updateTargetAmount(idx, val) {
+				let amt = parseInt(val);
+				if (isNaN(amt) || amt < 1) amt = 1;
+				activeCraftTargets[idx].requestedAmount = amt;
+				localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
+				triggerGlobalCalculation();
+			}
+
+			function clearCalcSearch() {
+				document.getElementById('calc-search').value = '';
+				document.getElementById('calc-clear-search').style.display = 'none';
+				document.getElementById('calc-autocomplete').style.display = 'none';
+			}
+
+			document.getElementById('calc-search').addEventListener('input', function(e) {
+				const val = this.value.toLowerCase().trim();
+				const list = document.getElementById('calc-autocomplete');
+				const clearBtn = document.getElementById('calc-clear-search');
+				list.innerHTML = '';
+				
+				clearBtn.style.display = val === "" ? "none" : "block";
+
+				if (val.length < 3) {
+					list.style.display = 'none';
+					return;
+				}
+
+				if (!isEngineReady) {
+					list.innerHTML = '<div style="padding:10px; color:#8a7a5f; font-size:11px; text-align:center;">ENGINE BOOTING...</div>';
+					list.style.display = 'block';
+					return;
+				}
+
+				let matches = searchIndex
+					.filter(item => item.n && item.n.toLowerCase().includes(val))
+					.slice(0, 30);
+				
+				if (matches.length > 0) {
+					matches.forEach(item => {
+						let div = document.createElement('div');
+						div.className = 'autocomplete-item';
+						let titleName = toTitleCase(item.n);
+						let displayIcon = item.i || item.icon || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+						div.innerHTML = `<img src="${displayIcon}" class="rarity-${item.r}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'"> <span>${titleName}</span>`;
+						div.onclick = function() {
+							document.getElementById('calc-search').value = '';
+							clearBtn.style.display = 'none';
+							list.style.display = 'none';
+
+							activeCraftTargets.push({ item: item, requestedAmount: 1 });
+							localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
+							triggerGlobalCalculation();
+						};
+						list.appendChild(div);
+					});
+					list.style.display = 'block';
+				} else {
+					list.style.display = 'none';
+				}
+			});
+
+			document.addEventListener("click", function (e) {
+				if (e.target.id !== "calc-search" && e.target.id !== "calc-clear-search") {
+					document.getElementById("calc-autocomplete").style.display = "none";
+				}
+			});
+
+			// --- Recursive Math & Rendering ---
+
+			async function collectRecipeIds(itemId, neededIds) {
+				let recipes = await getRecipeInfo(itemId);
+				if (recipes.length > 0) {
+					for (let ing of recipes[0].ingredients) {
+						if (!neededIds.has(Number(ing.item_id))) {
+							neededIds.add(Number(ing.item_id));
+							await collectRecipeIds(Number(ing.item_id), neededIds);
+						}
+					}
+				}
+			}
+
+			async function triggerGlobalCalculation() {
+				const resultsDiv = document.getElementById('calc-results');
+
+				if (activeCraftTargets.length === 0) {
+					resultsDiv.innerHTML = `<div style="padding: 60px 20px; text-align: center; color: #8a7a5f; font-style: italic; letter-spacing: 1px;">SELECT AN ITEM TO GENERATE SHOPPING LIST</div>`;
+					return;
+				}
+
+				resultsDiv.innerHTML = `
+					<div style="text-align: center; color: #8a7a5f; padding: 40px 10px;">
+						<div style="font-size: 14px; font-weight: bold; color: #fff; margin-bottom: 10px;">
+							CALCULATING CRAFTING QUEUE...
+						</div>
+						<div style="font-size: 11px; letter-spacing: 1px;">ANALYZING CHEAPEST PATHS & MARKET PRICES...</div>
+					</div>
+				`;
+
+				let globalMissingIds = new Set();
+				for (let target of activeCraftTargets) {
+					globalMissingIds.add(Number(target.item.id));
+					await collectRecipeIds(Number(target.item.id), globalMissingIds);
+				}
+
+				let idArr = Array.from(globalMissingIds);
+				let missingPrices = idArr.filter(id => !tpPrices[id] && id > 0);
+				
+				for (let i = 0; i < missingPrices.length; i += 200) {
+					let chunk = missingPrices.slice(i, i + 200).join(',');
+					let priceData = await fetchJSON(`https://api.guildwars2.com/v2/commerce/prices?ids=${chunk}`);
+					if (priceData && !priceData.error) {
+						priceData.forEach(p => { tpPrices[Number(p.id)] = p; });
+					}
+				}
+
+				let localInventory = useOwnMats ? JSON.parse(JSON.stringify(accountInventory)) : {};
+				let targetsData = [];
+
+				for (let target of activeCraftTargets) {
+					let shoppingList = {}; 
+					let craftingSteps = {};
+					let vendorPurchases = {};
+					await recurseItem(Number(target.item.id), target.requestedAmount, localInventory, shoppingList, craftingSteps, vendorPurchases, true);
+					targetsData.push({ target, shoppingList, craftingSteps, vendorPurchases });
+				}
+
+				renderGlobalList(targetsData);
+			}
+
+			async function getRecipeInfo(outId) {
+				let strId = String(outId);
+				if (detailedRecipeCache[strId]) return detailedRecipeCache[strId];
+
+				let possibleRecipes = [];
+
+				const search = await fetchJSON(`https://api.guildwars2.com/v2/recipes/search?output=${strId}`);
+				if (search && search.length > 0 && !search.error) {
+					const rDetails = await fetchJSON(`https://api.guildwars2.com/v2/recipes/${search[0]}`);
+					if (rDetails && !rDetails.error) {
+						let ing = rDetails.ingredients.map(i => ({ item_id: i.item_id, count: i.count }));
+						if (ing.length <= 4) {
+							possibleRecipes.push({ type: 'crafting', ingredients: ing, output_item_count: rDetails.output_item_count || 1, disciplines: rDetails.disciplines || [], min_rating: rDetails.min_rating || 0 });
+						}
+					}
+				}
+
+				if (forgeRecipes[strId]) {
+					forgeRecipes[strId].forEach(fRec => {
+						let ingList = (fRec.ingredients || []).map(i => {
+							let finalItemId = i.item_id || i.item || i.id;
+							if (!finalItemId && i.item_name) {
+								let searchName = i.item_name.toLowerCase();
+								let match = searchIndex.find(idx => idx.n && idx.n.toLowerCase() === searchName);
+								if (match) finalItemId = match.id;
+							}
+							return { item_id: finalItemId, count: i.count };
+						});
+						
+						if (strId !== "19675") {
+							if (ingList.length > 4) return;
+							if (ingList.some(ing => [20796, 20799, 70842].includes(Number(ing.item_id)))) return;
+						}
+
+						possibleRecipes.push({ type: 'forge', ingredients: ingList, output_item_count: fRec.output_item_count || fRec.count || 1, disciplines: fRec.disciplines || ['Mystic Forge'], min_rating: 0 });
+					});
+				}
+
+				possibleRecipes.sort((a, b) => {
+					function score(r) {
+						let s = 0;
+						r.ingredients.forEach(i => {
+							let id = Number(i.item_id);
+							if (id === 1 || id === -1) s += 0;
+							else if (id === 2 || id === -2) s += 1;
+							else if (id === 32 || id === -32) s += 2;
+							else if (id === 45 || id === -45) s += 3;
+							else if (id < 0) s += 4;
+							else s += 10;
+						});
+						return s;
+					}
+					return score(a) - score(b);
+				});
+
+				detailedRecipeCache[strId] = possibleRecipes;
+				return possibleRecipes;
+			}
+
+			async function recurseItem(itemId, neededQty, localInv, shoppingList, craftingSteps, vendorPurchases, isTopLevel = false, path = new Set(), depth = 0) {
+				if (useOwnMats && localInv[itemId] > 0) {
+					let taking = Math.min(localInv[itemId], neededQty);
+					localInv[itemId] -= taking;
+					neededQty -= taking;
+					if (neededQty <= 0) return; 
+				}
+
+				let tpPrice = tpPrices[itemId] ? (tpPrices[itemId].sells?.unit_price || 0) : 0;
+				let recipes = await getRecipeInfo(itemId);
+				recipes = recipes.filter(r => !r.ingredients.some(ing => path.has(Number(ing.item_id))));
+				let isBaseMaterial = recipes.length === 0;
+				
+				let craftCost = Infinity;
+				if (!isBaseMaterial) {
+					craftCost = recipes[0].ingredients.reduce((acc, ing) => {
+						let ip = tpPrices[Number(ing.item_id)]?.sells?.unit_price || 0;
+						return acc + (ip * ing.count);
+					}, 0) / (recipes[0].output_item_count || 1);
+				}
+				
+				let isVendor = !isBaseMaterial && (recipes[0].disciplines.includes('Merchant') || recipes[0].ingredients.some(ing => Number(ing.item_id) < 0));
+				if (itemId === 19675) isVendor = false;
+
+				let shouldBuy = isBaseMaterial || (!isTopLevel && tpPrice > 0 && tpPrice <= craftCost) || path.has(itemId);
+
+				if (isVendor) {
+					if (!vendorPurchases[itemId]) {
+						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
+						vendorPurchases[itemId] = { 
+							id: itemId, 
+							qty: 0, 
+							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`, 
+							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
+							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
+							recipeInfo: recipes[0]
+						};
+					}
+					vendorPurchases[itemId].qty += neededQty;
+
+					path.add(itemId);
+					let bestRecipe = recipes[0];
+					let outputMultiplier = bestRecipe.output_item_count || 1;
+					let craftsNeeded = neededQty / outputMultiplier;
+
+					for (let i = 0; i < bestRecipe.ingredients.length; i++) {
+						let ing = bestRecipe.ingredients[i];
+						await recurseItem(Number(ing.item_id), Math.ceil(ing.count * craftsNeeded), localInv, shoppingList, craftingSteps, vendorPurchases, false, path, depth + 1);
+					}
+					path.delete(itemId);
+
+				} else if (shouldBuy) {
+					if (!shoppingList[itemId]) {
+						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
+						shoppingList[itemId] = { 
+							id: itemId, 
+							qty: 0, 
+							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`, 
+							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
+							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
+							unitPrice: tpPrice 
+						};
+					}
+					shoppingList[itemId].qty += neededQty;
+				} else {
+					path.add(itemId);
+					let bestRecipe = recipes[0];
+					let outputMultiplier = bestRecipe.output_item_count || 1;
+					let craftsNeeded = neededQty / outputMultiplier;
+
+					if (!craftingSteps[itemId]) {
+						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
+						craftingSteps[itemId] = {
+							id: itemId,
+							crafts: 0,
+							yields: 0,
+							depth: depth,
+							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`,
+							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
+							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
+							recipeInfo: bestRecipe
+						};
+					} else {
+						craftingSteps[itemId].depth = Math.max(craftingSteps[itemId].depth, depth);
+					}
+					craftingSteps[itemId].crafts += craftsNeeded;
+					craftingSteps[itemId].yields += (craftsNeeded * outputMultiplier);
+
+					for (let i = 0; i < bestRecipe.ingredients.length; i++) {
+						let ing = bestRecipe.ingredients[i];
+						await recurseItem(Number(ing.item_id), Math.ceil(ing.count * craftsNeeded), localInv, shoppingList, craftingSteps, vendorPurchases, false, path, depth + 1);
+					}
+					path.delete(itemId);
+				}
+			}
+
+			function renderGlobalList(targetsData) {
+				const resultsDiv = document.getElementById('calc-results');
+				
+				let html = `<div style="font-size: 12px; color: #8a7a5f; margin-bottom: 10px; font-weight:bold; flex-shrink:0;">CRAFTING QUEUE</div>
+							<div style="flex-shrink:0; margin-bottom: 15px; display:flex; flex-direction:column; gap:10px;">`;
+
+				targetsData.forEach((data, idx) => {
+					let target = data.target;
+					let shoppingList = data.shoppingList;
+					let craftingSteps = data.craftingSteps;
+					let vendorPurchases = data.vendorPurchases;
+					
+					let displayIcon = target.item.i || target.item.icon || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+					let tName = toTitleCase(target.item.n || target.item.name);
+					let rawTargetName = target.item.n || target.item.name;
+					let isOpen = localStorage.getItem(`gw2_calc_target_${idx}_open`) !== 'false';
+					
+					let totalCost = 0;
+					let rawGoldTotal = 0;
+					let buyableHtml = '';
+					let untradableHtml = '';
+					let vendorPurchasesHtml = '';
+
+					let sortedItems = Object.values(shoppingList).sort((a, b) => b.unitPrice * b.qty - a.unitPrice * a.qty);
+
+					if (sortedItems.length > 0) {
+						sortedItems.forEach(item => {
+							if (item.id === 1 || item.id === -1 || item.id < 0) return;
+							
+							let rawItemName = searchIndex.find(i => Number(i.id) === Number(item.id))?.n || item.name;
+
+							if (item.unitPrice > 0) {
+								let lineCost = item.unitPrice * item.qty;
+								totalCost += lineCost;
+								
+								buyableHtml += `
+								<div class="shopping-list-item">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawItemName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
+										<img src="${item.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${item.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+										<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${item.name}</span>
+									</div>
+									<span style="white-space:nowrap; color:#8a7a5f; text-align:right; flex-shrink:0; margin-left:auto;">${formatCoin(item.unitPrice, false)} / ${formatCoin(lineCost, false)}</span>
+								</div>`;
+							} else if (item.unitPrice === 0) {
+								untradableHtml += `
+								<div class="shopping-list-item">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawItemName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
+										<img src="${item.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${item.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+										<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${item.name}</span>
+									</div>
+								</div>`;
+							}
+						});
+					}
+
+					Object.values(vendorPurchases).forEach(vItem => {
+						let rawVName = searchIndex.find(i => Number(i.id) === Number(vItem.id))?.n || vItem.name;
+
+						let costHtml = (vItem.recipeInfo.ingredients || []).map(ing => {
+							let ingId = Number(ing.item_id);
+							let totalIngNeeded = Math.ceil(ing.count * (vItem.qty / (vItem.recipeInfo.output_item_count || 1)));
+							
+							if (ingId === 1 || ingId === -1) {
+								rawGoldTotal += totalIngNeeded;
+								return formatCoin(totalIngNeeded, false);
+							}
+
+							let ingIdx = searchIndex.find(i => Number(i.id) === ingId);
+							let ingName = ingIdx ? toTitleCase(ingIdx.n || ingIdx.name) : `Currency`;
+							let ingIcon = ingIdx ? (ingIdx.i || ingIdx.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+							return `${totalIngNeeded.toLocaleString('de-DE')} <img src="${ingIcon}" style="width:14px; vertical-align:middle; border:1px solid #332a1e;">`;
+						}).join(' <span style="color:#4a3b2a;">+</span> ');
+
+						vendorPurchasesHtml += `
+						<div class="shopping-list-item">
+							<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawVName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${vItem.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+								<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(vItem.qty)}</div>
+								<img src="${vItem.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${vItem.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+								<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${vItem.name}</span>
+							</div>
+							<span style="white-space:nowrap; color:#8a7a5f; text-align:right; flex-shrink:0; margin-left:auto;">${costHtml}</span>
+						</div>`;
+					});
+
+					let stepsHtml = '';
+					let stepValues = Object.values(craftingSteps).sort((a, b) => {
+						if (a.id === 19675) return -1;
+						if (b.id === 19675) return 1;
+						return b.depth - a.depth;
+					});
+
+					if (stepValues.length === 0) {
+						stepsHtml = `<div style="text-align:center; color:#8a7a5f; padding:20px; font-style:italic;">NO CRAFTING STEPS REQUIRED</div>`;
+					} else {
+						stepValues.forEach(step => {
+							let rawStepName = searchIndex.find(i => Number(i.id) === Number(step.id))?.n || step.name;
+							let hasCurrency = (step.recipeInfo.ingredients || []).some(i => Number(i.item_id) < 0);
+							let isMerchant = (step.recipeInfo.disciplines || []).includes('Merchant');
+							let isSingleItemMF = (step.recipeInfo.disciplines || []).includes('Mystic Forge') && (step.recipeInfo.ingredients || []).length === 1;
+							let verb = (hasCurrency || isMerchant || isSingleItemMF) ? 'Buy' : 'Craft';
+							let connector = verb === 'Buy' ? 'with' : 'out of';
+							
+							let stepChecked = localStorage.getItem(`gw2_calc_target_${idx}_step_${step.id}_checked`) === 'true';
+
+							stepsHtml += `
+							<div class="step-container ${stepChecked ? 'completed-step' : ''}">
+								<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
+									<div style="display: flex; align-items: center; flex-grow:1; overflow:hidden;">
+										<input type="checkbox" ${stepChecked ? 'checked' : ''} onchange="this.closest('.step-container').classList.toggle('completed-step', this.checked); localStorage.setItem('gw2_calc_target_${idx}_step_${step.id}_checked', this.checked);" style="margin-right:10px; cursor:pointer; flex-shrink:0;">
+										<div class="step-header-content" style="display: flex; align-items: center; gap: 10px; cursor: pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawStepName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${step.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(Math.ceil(step.yields), verb)}</div>
+											<img src="${step.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${step.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+											<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">
+												<span>${step.name}</span> <span style="color:#8a7a5f; margin-left:4px; margin-right:4px; text-decoration:none !important;">${connector}</span>
+											</span>
+										</div>
+									</div>
+									<div style="display: flex; align-items: center; gap: 4px; flex-shrink: 0;">
+										${(step.recipeInfo.disciplines || []).map(d => `<img src="${discIcons[d] || discIcons['Mystic Forge']}" style="width:16px;" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${d} ${step.recipeInfo.min_rating > 0 ? step.recipeInfo.min_rating : ''}'.trim(), x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">`).join('')}
+									</div>
+								</div>
+								<div class="step-ingredients">
+									${(step.recipeInfo.ingredients || []).map(ing => {
+										let ingId = Number(ing.item_id);
+										let totalIngNeeded = Math.ceil(ing.count * step.crafts);
+
+										if (ingId === 1 || ingId === -1) {
+											rawGoldTotal += totalIngNeeded;
+											return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
+												<div style="width: 85px; flex-shrink:0;"></div>
+												<span style="color:#e2c07d; font-weight:bold;">${formatCoin(totalIngNeeded, false)}</span>
+											</div>`;
+										}
+
+										let ingIdx = searchIndex.find(i => Number(i.id) === ingId);
+										let rawIngName = ingIdx ? (ingIdx.n || ingIdx.name) : `Item #${ingId}`;
+										let ingName = ingIdx ? toTitleCase(rawIngName) : `Item #${ingId}`;
+										let ingIcon = ingIdx ? (ingIdx.i || ingIdx.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+										let ingRarity = ingIdx ? (ingIdx.r || ingIdx.rarity) : 'Basic';
+										
+										return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
+											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(totalIngNeeded)}</div>
+											<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawIngName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${ingName.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+												<img src="${ingIcon}" style="width:20px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${ingRarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+												<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${ingName}</span>
+											</div>
+										</div>`;
+									}).join('')}
+								</div>
+							</div>`;
+						});
+					}
+					
+					let tpB = tpPrices[Number(target.item.id)]?.buys?.unit_price || 0;
+					let tpS = tpPrices[Number(target.item.id)]?.sells?.unit_price || 0;
+					
+					let targetTpBuyTotal = tpB * target.requestedAmount;
+					let targetTpSellTotal = tpS * target.requestedAmount;
+					
+					let totalExpense = totalCost + rawGoldTotal;
+					let isAccountBound = targetTpSellTotal === 0;
+					
+					let savings = targetTpSellTotal - totalExpense;
+					let profitBuy = (targetTpBuyTotal * 0.85) - totalExpense;
+					let profitSell = (targetTpSellTotal * 0.85) - totalExpense;
+
+					let breakdownOpen = localStorage.getItem(`gw2_calc_bd_${idx}`) !== 'false';
+					let shoppingOpen = localStorage.getItem(`gw2_calc_sl_${idx}`) !== 'false';
+					let stepsOpen = localStorage.getItem(`gw2_calc_st_${idx}`) !== 'false';
+					
+					html += `
+					<div class="target-block">
+						<div class="target-header" onclick="toggleTarget(${idx})">
+							<div style="display:flex; align-items:center; gap:10px; color:#fff; font-weight:bold;">
+								<img src="${displayIcon}" style="width:24px;" class="rarity-${target.item.r}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+								${target.requestedAmount.toLocaleString('de-DE')}x ${tName}
+							</div>
+							<div style="display:flex; align-items:center; gap:15px;">
+								<span id="target-icon-${idx}" style="color:#8a7a5f; font-size:10px;">${isOpen ? '&#9650;' : '&#9660;'}</span>
+							</div>
+						</div>
+						<div id="target-content-${idx}" class="target-content" style="display: ${isOpen ? 'flex' : 'none'};" onclick="event.stopPropagation();">
+							<div class="target-actions">
+								<div>
+									<span style="color:#8a7a5f; font-size:11px; font-weight:bold;">AMOUNT:</span>
+									<input type="number" value="${target.requestedAmount}" min="1" onchange="updateTargetAmount(${idx}, this.value)" style="background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 5px 10px; width: 60px; outline:none; font-family: 'Crimson Text', serif; text-align:center;">
+								</div>
+								<button class="target-remove-btn" onclick="removeTarget(${idx})">REMOVE</button>
+							</div>
+							
+							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
+								<div onclick="toggleSection('bd', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+									FINANCIAL BREAKDOWN <span id="calc-bd-icon-${idx}">${breakdownOpen ? '&#9650;' : '&#9660;'}</span>
+								</div>
+								<div id="calc-bd-content-${idx}" class="calc-breakdown" style="display: ${breakdownOpen ? 'grid' : 'none'};">
+									<div class="calc-breakdown-item">
+										<span class="calc-bd-title">Cost (Trading Post)</span>
+										<span class="calc-bd-val" style="color:#e2c07d;">${formatCoin(totalCost, true)}</span>
+										<span class="calc-bd-sub">${formatCoin(totalCost / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>
+									</div>
+									<div class="calc-breakdown-item">
+										<span class="calc-bd-title">Raw Gold Needed</span>
+										<span class="calc-bd-val" style="color:#e2c07d;">${formatCoin(rawGoldTotal, true)}</span>
+										<span class="calc-bd-sub">${formatCoin(rawGoldTotal / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>
+									</div>
+									<div class="calc-breakdown-item">
+										<span class="calc-bd-title">Savings compared to buying</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (savings >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A (ACCOUNT BOUND)' : formatCoin(savings, true)}</span>
+										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(savings / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
+									</div>
+									<div class="calc-breakdown-item">
+										<span class="calc-bd-title">Profit (buy price)</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (profitBuy >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitBuy, true)}</span>
+										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(profitBuy / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
+									</div>
+									<div class="calc-breakdown-item" style="grid-column: 1 / -1;">
+										<span class="calc-bd-title">Profit (sell price)</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (profitSell >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitSell, true)}</span>
+										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(profitSell / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
+									</div>
+								</div>
+							</div>
+
+							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
+								<div onclick="toggleSection('sl', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+									SHOPPING LIST <span id="calc-sl-icon-${idx}">${shoppingOpen ? '&#9650;' : '&#9660;'}</span>
+								</div>
+								<div id="calc-sl-content-${idx}" style="display: ${shoppingOpen ? 'block' : 'none'}; max-height: 280px; overflow-y: auto; padding-right: 5px;">
+									${buyableHtml || (vendorPurchasesHtml ? '' : (untradableHtml ? '' : '<div style="padding:10px; color:#8a7a5f; text-align:center; font-style:italic;">NO TRADABLE ITEMS REQUIRED</div>'))}
+									${vendorPurchasesHtml ? `<div style="padding: 10px 15px; background: #1a1510; border-top: 1px dashed #4a3b2a; border-bottom: 1px dashed #4a3b2a; color: #8a7a5f; font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">VENDOR PURCHASES</div>${vendorPurchasesHtml}` : ''}
+									${untradableHtml ? `<div style="padding: 10px 15px; background: #1a1510; border-top: 1px dashed #4a3b2a; border-bottom: 1px dashed #4a3b2a; color: #8a7a5f; font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">ACCOUNT BOUND</div>${untradableHtml}` : ''}
+								</div>
+							</div>
+
+							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
+								<div onclick="toggleSection('st', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+									CRAFTING STEPS <span id="calc-st-icon-${idx}">${stepsOpen ? '&#9650;' : '&#9660;'}</span>
+								</div>
+								<div id="calc-st-content-${idx}" style="display: ${stepsOpen ? 'block' : 'none'}; max-height: 350px; overflow-y: auto; padding-right: 5px;">
+									${stepsHtml}
+								</div>
+							</div>
+
+						</div>
+					</div>`;
+				});
+
+				resultsDiv.innerHTML = html + `</div>`;
+			}
+
+			window.addEventListener('message', (e) => { if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } });
+			init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

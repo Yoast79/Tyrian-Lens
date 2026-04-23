@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Tyrian Lens</title>
+		<link rel="manifest" href="manifest.json" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; user-select: none; -webkit-user-select: none; }
+			body, html { height: 100%; width: 100%; background: #000; overflow: hidden; font-family: "Crimson Text", serif; }
+
+			#menu-container {
+			position: absolute; top: 0; left: 0; right: 0; height: 45px; z-index: 100;
+			background: #000; border-bottom: 1px solid #4a3b2a;
+			display: flex; align-items: center;
+			transition: height 0.3s ease;
+			}
+			#menu-container.ui-large { height: 55px; }
+
+			#system-controls {
+			display: flex; height: 100%; align-items: center; padding-right: 5px; -webkit-app-region: no-drag;
+			}
+			.sys-btn {
+			width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; color: #8a7a5f; font-size: 18px; transition: 0.2s; user-select: none;
+			}
+			.sys-btn:hover { color: #e2c07d; text-shadow: 0 0 8px #e2c07d; background: rgba(226, 192, 125, 0.05); }
+			.sys-btn.close:hover { color: #ff4444; text-shadow: 0 0 8px #ff4444; background: rgba(255, 68, 68, 0.05); }
+
+			#map-container { position: absolute; top: 45px; bottom: 0; left: 0; right: 0; z-index: 1; background: #000; }
+			#menu-container.ui-large ~ #map-container { top: 55px; }
+			iframe { width: 100%; height: 100%; border: none; }
+
+			#side-panel { position: fixed; top: 45px; left: -700px; width: 320px; bottom: 0; background: rgba(10, 8, 5, 0.98); border-right: 1px solid #4a3b2a; z-index: 90; transition: left 0.3s ease, width 0.3s ease, top 0.3s ease; }
+			#menu-container.ui-large ~ #side-panel { top: 55px; }
+			#side-panel.open { left: 0; }
+			#side-panel.wide { width: 580px; }
+			#side-panel.ui-large { width: 400px; }
+			#side-panel.wide.ui-large { width: 700px; }
+
+			#side-panel-right { position: fixed; top: 45px; right: -700px; width: 320px; bottom: 0; background: rgba(10, 8, 5, 0.98); border-left: 1px solid #4a3b2a; z-index: 95; transition: right 0.3s ease, width 0.3s ease, top 0.3s ease; }
+			#menu-container.ui-large ~ #side-panel-right { top: 55px; }
+			#side-panel-right.open { right: 0; }
+			#side-panel-right.wide { width: 580px; }
+			#side-panel-right.ui-large { width: 400px; }
+			#side-panel-right.wide.ui-large { width: 700px; }
+
+			#side-panel-right.wiki-mode { right: -100vw; width: 100vw; }
+			#side-panel-right.wiki-mode.open { right: 0; }
+			#side-panel.open ~ #side-panel-right.wiki-mode { width: calc(100vw - 320px); }
+			#side-panel.open.wide ~ #side-panel-right.wiki-mode { width: calc(100vw - 580px); }
+			#side-panel.open.ui-large ~ #side-panel-right.wiki-mode { width: calc(100vw - 400px); }
+			#side-panel.open.wide.ui-large ~ #side-panel-right.wiki-mode { width: calc(100vw - 700px); }
+
+			#global-tooltip { position: fixed; display: none; background: rgba(15, 12, 10, 0.98); border: 1px solid #e2c07d; color: #e2c07d; padding: 12px; font-size: 13px; z-index: 100000; pointer-events: none; white-space: normal; max-width: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); line-height: 1.4; }
+			#toast-message { position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%); background: rgba(10, 8, 5, 0.95); border: 1px solid #e2c07d; color: #e2c07d; padding: 10px 20px; font-size: 14px; z-index: 100001; pointer-events: none; white-space: nowrap; box-shadow: 0 0 15px rgba(0,0,0,0.9); text-transform: uppercase; letter-spacing: 1px; opacity: 0; transition: opacity 0.3s ease; display: none; }
+
+			#notification-stack { position: fixed; top: 60px; left: 50%; transform: translateX(-50%); z-index: 100002; display: flex; flex-direction: column; gap: 10px; pointer-events: none; width: 400px; }
+			.event-toast { background: rgba(10, 8, 5, 0.98); border: 1px solid #e2c07d; color: #e2c07d; padding: 12px 25px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 0 20px rgba(0,0,0,0.9); text-align: center; animation: fadeIn 0.3s ease; border-radius: 2px; }
+			@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+			#achievement-tracker { position: fixed; top: 60px; right: 20px; width: 320px; background: rgba(10, 8, 5, 0.95); border: 1px solid #4a3b2a; z-index: 85; color: #e2c07d; padding: 10px; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.8); max-height: calc(100vh - 80px); overflow-y: auto; }
+			#achievement-tracker::-webkit-scrollbar { width: 4px; }
+			#achievement-tracker::-webkit-scrollbar-thumb { background: #4a3b2a; }
+			.track-item { border-bottom: 3px solid #2a2015; padding: 12px 0; }
+			.track-item:last-child { border-bottom: none; }
+			.track-title { font-size: 12px; font-weight: bold; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+			.track-bar-bg { background: #111; border: 1px solid #332a1e; height: 8px; width: 100%; position: relative; }
+			.track-bar-fill { background: #e2c07d; height: 100%; transition: width 0.3s; }
+			.track-step { font-size: 11px; color: #dcb36b; margin-top: 6px; font-style: italic; white-space: normal; word-wrap: break-word; line-height: 1.3; }
+
+			#splash-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 999999; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 0.8s ease; }
+			#splash-content { animation: splashFadeIn 0.8s ease forwards; display: flex; flex-direction: column; align-items: center; }
+			@keyframes splashFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+			.splash-logo { width: 220px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(226, 192, 125, 0.2)); }
+			.splash-text { color: #e2c07d; font-size: 26px; font-weight: bold; letter-spacing: 5px; text-transform: uppercase; text-shadow: 0 0 10px rgba(226, 192, 125, 0.5); }
+			#resize-handle { position: fixed; bottom: 0; right: 0; width: 15px; height: 15px; cursor: nwse-resize; z-index: 1000000; background: linear-gradient(135deg, transparent 50%, #e2c07d 50%); border-left: 1px solid #1a1510; border-top: 1px solid #1a1510; }
+
+			#map-switch-popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 8, 5, 0.98); border: 1px solid #e2c07d; color: #e2c07d; padding: 20px 30px; z-index: 100005; text-align: center; display: none; box-shadow: 0 0 20px rgba(0,0,0,0.9); font-family: "Crimson Text", serif; letter-spacing: 1px; }
+			.popup-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 20px; margin: 15px 10px 0; cursor: pointer; text-transform: uppercase; transition: 0.2s; font-family: "Crimson Text", serif; font-size: 14px; font-weight: bold; }
+			.popup-btn:hover { background: #2a221a; border-color: #e2c07d; }
+		</style>
+	</head>
+	<body>
+		<div id="splash-screen">
+			<div id="splash-content">
+				<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="splash-logo" alt="Tyrian Lens" />
+				<div class="splash-text">Tyrian Lens</div>
+			</div>
+		</div>
+
+		<div id="global-tooltip"></div>
+		<div id="toast-message"></div>
+		<div id="notification-stack"></div>
+
+		<div id="click-catcher" style="position: fixed; top: 45px; left: 0; right: 0; bottom: 0; z-index: 80; display: none;" onclick="window.closeAllPanels()"></div>
+
+		<div id="map-switch-popup">
+			<div id="map-switch-text" style="margin-bottom: 5px; font-size: 16px;"></div>
+			<button class="popup-btn" onclick="confirmMapSwitch()">Yes</button>
+			<button class="popup-btn" onclick="cancelMapSwitch()">No</button>
+		</div>
+
+		<div id="achievement-tracker">
+			<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:5px;">
+				<span style="font-size:11px; font-weight:bold; letter-spacing:1px;">ACHIEVEMENT WATCHLIST</span>
+				<span style="cursor:pointer; color:#8a7a5f; font-size:14px;" onclick="toggleTrackerOverlay(false)">&#10006;</span>
+			</div>
+			<div id="tracker-list"></div>
+		</div>
+
+		<div id="side-panel">
+			<iframe id="panel-frame"></iframe>
+			<iframe id="farming-frame" src="farming.html" style="display:none; width:100%; height:100%; border:none;"></iframe>
+		</div>
+		<div id="side-panel-right">
+			<div id="wiki-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:100; transition:0.2s; border-radius:3px;" onclick="closeWiki()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
+			<iframe id="panel-frame-right"></iframe>
+		</div>
+
+		<div id="menu-container" onmousedown="if(event.target === this) window.postToHost('drag')">
+			<iframe id="menu-frame" src="menu.html" style="flex-grow: 1; border: none; height: 100%; background: transparent;"></iframe>
+			<div id="system-controls">
+				<div class="sys-btn" onclick="postToHost('minimize')">&#8212;</div>
+				<div class="sys-btn" onclick="postToHost('fullscreen')">&#9633;</div>
+				<div class="sys-btn close" onclick="postToHost('close')">&#10006;</div>
+			</div>
+		</div>
+
+		<div id="map-container">
+			<iframe src="map.html" id="map-frame"></iframe>
+		</div>
+
+		<div id="resize-handle" onmousedown="window.postToHost('resize')"></div>
+
+		<script>
+			/*<![CDATA[*/
+			window.activeMap = 'map'; 
+			window.pendingMapSwitch = null;
+			window.manualSwitchActive = false;
+			window.lastPlayerCoords = {x: 0, y: 0};
+			window.currentPlayerZone = 'map'; 
+			window.isFirstLocationUpdate = true;
+
+			window.addEventListener('DOMContentLoaded', () => {
+				setTimeout(() => {
+					const splash = document.getElementById('splash-screen');
+					if (splash) {
+						splash.style.opacity = '0';
+						setTimeout(() => splash.style.display = 'none', 800);
+					}
+				}, 2000);
+				
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) {
+					document.getElementById('side-panel').classList.add('ui-large');
+					document.getElementById('side-panel-right').classList.add('ui-large');
+					document.getElementById('menu-container').classList.add('ui-large');
+					const menuFrame = document.getElementById('menu-frame');
+					if(menuFrame) menuFrame.addEventListener('load', () => menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'large'}, '*'));
+				}
+			});
+
+			if (window.chrome && window.chrome.webview) {
+				window.chrome.webview.addEventListener('message', function(event) {
+					if (typeof event.data === 'string' && event.data.startsWith('openWiki:')) {
+						const url = event.data.substring(9);
+						const rightPanel = document.getElementById('side-panel-right');
+						const rightFrame = document.getElementById('panel-frame-right');
+						
+						rightFrame.src = url;
+						rightPanel.classList.add('wiki-mode', 'open');
+						document.getElementById('wiki-close-btn').style.display = 'flex';
+						document.getElementById('click-catcher').style.display = 'block';
+					}
+				});
+			}
+
+			window.closeWiki = function() {
+				const rightPanel = document.getElementById('side-panel-right');
+				rightPanel.classList.remove('open', 'wiki-mode');
+				document.getElementById('wiki-close-btn').style.display = 'none';
+				if (!document.getElementById('side-panel').classList.contains('open')) {
+					document.getElementById('click-catcher').style.display = 'none';
+				}
+			};
+
+			window.showMapSwitchPopup = function(targetMap) {
+				const popup = document.getElementById("map-switch-popup");
+				const text = document.getElementById("map-switch-text");
+				const mapName = targetMap === 'wvw_map' ? 'WvW Map' : 'Tyria Map';
+				text.innerText = "Location detected in " + mapName + ".\nSwitch view?";
+				popup.style.display = "block";
+			};
+
+			window.confirmMapSwitch = function() {
+				if (window.pendingMapSwitch) {
+					window.postMessage({action: 'switchMap', map: window.pendingMapSwitch, confirmed: true}, '*');
+				}
+				document.getElementById("map-switch-popup").style.display = "none";
+				window.pendingMapSwitch = null;
+			};
+
+			window.cancelMapSwitch = function() {
+				document.getElementById("map-switch-popup").style.display = "none";
+				window.pendingMapSwitch = null;
+				
+				const frame = document.getElementById('map-frame');
+				try {
+					if (frame && frame.contentWindow && typeof frame.contentWindow.setTracking === 'function') {
+						frame.contentWindow.setTracking(false);
+					}
+				} catch(e) {}
+			};
+
+			let trackedAchievements = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
+			let isTrackerVisible = localStorage.getItem('gw2_tracker_visible') === 'true';
+
+			window.postToHost = function(action) {
+				if (window.chrome && window.chrome.webview) {
+					window.chrome.webview.postMessage(action);
+				}
+			};
+
+			window.closeAllPanels = function() {
+				document.getElementById('side-panel').classList.remove('open', 'wide');
+				const rightPanel = document.getElementById('side-panel-right');
+				rightPanel.classList.remove('open', 'wide', 'wiki-mode');
+				document.getElementById('wiki-close-btn').style.display = 'none';
+				document.getElementById('click-catcher').style.display = 'none';
+			};
+
+			window.toggleSidePanel = function(module, isRight) {
+				const panel = document.getElementById(isRight ? 'side-panel-right' : 'side-panel');
+				const frame = document.getElementById(isRight ? 'panel-frame-right' : 'panel-frame');
+				const farmingFrame = document.getElementById('farming-frame');
+				const newSrc = `${module}.html`; 
+				
+				const rightModules = ['settings', 'api_management', 'help'];
+				const sideIsRight = rightModules.includes(module);
+
+				let isCurrentlyOpen = panel.classList.contains('open');
+				let isSameModule = false;
+
+				if (!isRight) {
+					if (module === 'farming') {
+						isSameModule = (farmingFrame.style.display === 'block');
+					} else {
+						isSameModule = frame.src.includes(newSrc) && (farmingFrame.style.display !== 'block');
+					}
+				} else {
+					isSameModule = frame.src.includes(newSrc);
+				}
+
+				if (isCurrentlyOpen && isSameModule) {
+					panel.classList.remove('open');
+					if (!isRight) panel.classList.remove('wide');
+					if (isRight) {
+						panel.classList.remove('wide', 'wiki-mode');
+						document.getElementById('wiki-close-btn').style.display = 'none';
+					}
+					const otherPanel = document.getElementById(isRight ? 'side-panel' : 'side-panel-right');
+					if (!otherPanel.classList.contains('open')) {
+						document.getElementById('click-catcher').style.display = 'none';
+					}
+				} else {
+					if (!isRight) {
+						if (module === 'farming') {
+							frame.style.display = 'none';
+							farmingFrame.style.display = 'block';
+						} else {
+							frame.style.display = 'block';
+							farmingFrame.style.display = 'none';
+							frame.src = newSrc;
+						}
+						if (['bank', 'material_storage', 'wardrobe', 'characters', 'hero', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears'].includes(module)) {
+							panel.classList.add('wide');
+						} else {
+							panel.classList.remove('wide');
+						}
+					} else {
+						frame.src = newSrc;
+						panel.classList.remove('wide', 'wiki-mode');
+						document.getElementById('wiki-close-btn').style.display = 'none';
+					}
+
+					panel.classList.add('open');
+					document.getElementById('click-catcher').style.display = 'block';
+				}
+			};
+
+			window.showTooltip = function(t, x, y, offsetTop, isRight) {
+				var tip = document.getElementById("global-tooltip");
+				tip.innerHTML = t; 
+				tip.style.display = "block";
+
+				var baseOffset = isRight ? (window.innerWidth - 320) : 0;
+				var finalX = x + baseOffset;
+				
+				if (finalX + tip.offsetWidth > window.innerWidth) {
+					finalX = finalX - tip.offsetWidth - 20;
+				} else {
+					finalX = finalX + 10;
+				}
+
+				var finalY = y + (offsetTop || 0);
+				
+				if (finalY + tip.offsetHeight > window.innerHeight) {
+					finalY = window.innerHeight - tip.offsetHeight - 10;
+				}
+
+				tip.style.left = Math.max(5, finalX) + "px"; 
+				tip.style.top = Math.max(5, finalY) + "px";
+			};
+
+			window.showToast = function(msg) {
+				var toast = document.getElementById("toast-message");
+				toast.innerText = msg; toast.style.display = "block";
+				setTimeout(() => { toast.style.opacity = "1"; }, 10);
+				setTimeout(() => { toast.style.opacity = "0"; setTimeout(() => { toast.style.display = "none"; }, 300); }, 2500);
+			};
+
+			window.showEventPop = function(msg) {
+				if (localStorage.getItem('gw2_timer_tracker_visible') !== 'true') return;
+				const stack = document.getElementById('notification-stack');
+				const toast = document.createElement('div');
+				toast.className = 'event-toast';
+				toast.innerText = msg;
+				stack.appendChild(toast);
+				setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = '0.5s'; setTimeout(() => toast.remove(), 500); }, 8000);
+			};
+
+			window.toggleTrackerOverlay = function(show) {
+				if (show === undefined) show = !isTrackerVisible;
+				if (Object.keys(trackedAchievements).length === 0) show = false;
+				isTrackerVisible = show;
+				localStorage.setItem('gw2_tracker_visible', show);
+				document.getElementById('achievement-tracker').style.display = show ? 'block' : 'none';
+				if(show) pollTrackerProgress();
+			};
+
+			async function pollTrackerProgress() {
+				const keys = Object.keys(trackedAchievements);
+				if (keys.length === 0) { toggleTrackerOverlay(false); return; }
+				if (!isTrackerVisible) return;
+				const key = localStorage.getItem('gw2_active_key');
+				if (!key) return;
+				try {
+					const res = await fetch("https://api.guildwars2.com/v2/account/achievements?access_token=" + key);
+					if (!res.ok) return;
+					const accountProg = await res.json();
+					const container = document.getElementById('tracker-list');
+					let html = '';
+					Object.values(trackedAchievements).slice(0, 5).forEach(ach => {
+						const prog = accountProg.find(p => p.id === parseInt(ach.id)) || { current: 0, done: false, bits: [] };
+						const max = ach.max || 1;
+						const percent = prog.done ? 100 : Math.min(100, (prog.current / max) * 100);
+						let nextStepText = "";
+						if (!prog.done && ach.bits && ach.bits.length > 0) {
+							const progBits = prog.bits || [];
+							for (let i=0; i<ach.bits.length; i++) {
+								if (!progBits.includes(i)) { nextStepText = "NEXT STEP:<br>" + (ach.bits[i].text || 'Item ' + (i+1)); break; }
+							}
+						}
+						html += "<div class='track-item'><div class='track-title'>" + ach.n + " <span style='float:right; font-weight:normal; color:#8a7a5f; font-size:10px;'>" + prog.current + "/" + max + "</span></div><div class='track-bar-bg'><div class='track-bar-fill' style='width:" + percent + "%;'></div></div>" + (nextStepText ? "<div class='track-step'>" + nextStepText + "</div>" : "") + "</div>";
+					});
+					container.innerHTML = html;
+				} catch(e) {}
+			}
+
+			async function checkDeliveries() {
+				const key = localStorage.getItem('gw2_active_key');
+				if (!key) return;
+				try {
+					const r = await fetch("https://api.guildwars2.com/v2/commerce/delivery?access_token=" + key);
+					if (r.ok) {
+						const data = await r.json();
+						const hasDelivery = data && (data.coins > 0 || (data.items && data.items.length > 0));
+						const menu = document.querySelector('iframe[src="menu.html"]');
+						if (menu && menu.contentWindow) {
+							menu.contentWindow.postMessage({ 
+								action: 'updateTPIndicator', 
+								active: hasDelivery, 
+								coins: data.coins || 0, 
+								items: data.items ? data.items.length : 0 
+							}, '*');
+						}
+					}
+				} catch(e) {}
+			}
+
+			window.addEventListener("message", function(event) {
+				var data = event.data;
+				if (typeof data === 'object') {
+					if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
+					else if (data.action === 'hideTooltip') document.getElementById("global-tooltip").style.display = "none";
+					else if (data.action === 'toast') window.showToast(data.msg);
+					else if (data.action === 'eventPop') window.showEventPop(data.msg);
+					else if (data.action === 'updateTPIndicator' || data.action === 'updateFarmingIndicator') {
+						const menu = document.querySelector('iframe[src="menu.html"]');
+						if (menu && menu.contentWindow) menu.contentWindow.postMessage(data, '*');
+					}
+					else if (data.action === 'switchAccount') {
+						localStorage.setItem('gw2_active_key', data.apiKey);
+						const leftFrame = document.getElementById('panel-frame');
+						const farmingFrame = document.getElementById('farming-frame');
+						if (leftFrame && leftFrame.contentWindow) leftFrame.contentWindow.postMessage(data, '*');
+						if (farmingFrame && farmingFrame.contentWindow) farmingFrame.contentWindow.postMessage(data, '*');
+						pollTrackerProgress();
+						checkDeliveries();
+					}
+					else if (data.action === 'trackAchievement') {
+						trackedAchievements[data.id] = data.payload;
+						localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements));
+						pollTrackerProgress();
+					}
+					else if (data.action === 'untrackAchievement') {
+						delete trackedAchievements[data.id];
+						localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements));
+						pollTrackerProgress();
+					}
+					else if (data.action === 'toggleTracker') window.toggleTrackerOverlay();
+					else if (data.action === 'toggleMapLayer') {
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*');
+					}
+					else if (data.action === 'copy') {
+						navigator.clipboard.writeText(data.code);
+						window.showToast("Copied Link");
+					}
+					else if (data.action === 'drag') {
+						window.postToHost('drag');
+					}
+					else if (data.action === 'resize') {
+						window.postToHost('resize');
+					}
+					else if (data.action === 'reloadMap') {
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame) {
+							mapFrame.src = window.activeMap + '.html';
+						}
+					}
+					else if (data.action === 'switchMap') {
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame) {
+							let isManual = !data.confirmed;
+							let isConfirmed = data.confirmed;
+							
+							if (isManual) {
+								window.manualSwitchActive = true;
+								window.pendingMapSwitch = null;
+								document.getElementById("map-switch-popup").style.display = "none";
+							}
+
+							mapFrame.onload = function() {
+								if (isManual) {
+									try {
+										if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') {
+											if (data.map === window.currentPlayerZone) {
+												mapFrame.contentWindow.setTracking(true);
+											} else {
+												mapFrame.contentWindow.setTracking(false);
+												if (typeof mapFrame.contentWindow.map !== 'undefined') {
+													let jumpCoords = (data.map === 'wvw_map') ? [12500, 10500] : [31384, 49071];
+													mapFrame.contentWindow.map.setView(jumpCoords, 4);
+												}
+											}
+										}
+									} catch(e) {}
+								} else if (isConfirmed) {
+									try {
+										if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') {
+											mapFrame.contentWindow.setTracking(true);
+										}
+									} catch(e) {}
+								}
+							};
+
+							mapFrame.src = data.map + '.html';
+							window.activeMap = data.map;
+							
+							const panel = document.getElementById('side-panel');
+							const frame = document.getElementById('panel-frame');
+							if (panel.classList.contains('open') && (frame.src.includes('map_options.html') || frame.src.includes('wvw_map_options.html'))) {
+								window.closeAllPanels();
+							}
+						}
+					}
+					else if (data.action === 'uiScaleChanged') {
+						const panels = [document.getElementById('side-panel'), document.getElementById('side-panel-right')];
+						panels.forEach(p => {
+							if (data.value === 'large') p.classList.add('ui-large');
+							else p.classList.remove('ui-large');
+						});
+                        
+                        const menuContainer = document.getElementById('menu-container');
+                        const menuFrame = document.getElementById('menu-frame');
+                        if (data.value === 'large') {
+                            menuContainer.classList.add('ui-large');
+                            if(menuFrame && menuFrame.contentWindow) menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'large'}, '*');
+                        } else {
+                            menuContainer.classList.remove('ui-large');
+                            if(menuFrame && menuFrame.contentWindow) menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'default'}, '*');
+                        }
+					}
+					else if (data.action === 'toggleMenu') {
+						if (data.menu === 'Help & Support') {
+							window.toggleSidePanel('help', true);
+						} else if (data.menu === 'Settings') {
+							window.toggleSidePanel('settings', true);
+						} else if (data.menu === 'API Settings') {
+							window.toggleSidePanel('api_management', true);
+						} else {
+							let mod = data.menu.toLowerCase().replace(/ /g, '_');
+							
+							if (mod === 'map_options' && window.activeMap === 'wvw_map') {
+								mod = 'wvw_map_options';
+							}
+							
+							window.toggleSidePanel(mod, false);
+						}
+					}
+				}
+			});
+
+			setInterval(() => {
+				const frame = document.getElementById('map-frame');
+				if (frame && frame.contentWindow && typeof frame.contentWindow.updatePlayerLocation === 'function' && !frame.contentWindow._locHooked) {
+					const originalUpdate = frame.contentWindow.updatePlayerLocation;
+					
+					frame.contentWindow.updatePlayerLocation = function(x, y, cx, cz, mapId, continentId) {
+						let px = parseFloat(x);
+						let py = parseFloat(y);
+						
+						if (window.manualSwitchActive) {
+							if (Math.abs(px - window.lastPlayerCoords.x) > 5 || Math.abs(py - window.lastPlayerCoords.y) > 5) {
+								window.manualSwitchActive = false;
+							}
+						}
+						
+						window.lastPlayerCoords = {x: px, y: py};
+
+						let isWvWLoc = (px >= 5000 && px <= 16000 && py >= 8600 && py <= 16000) || (mapId && parseInt(mapId) === 968);
+						let targetMap = isWvWLoc ? 'wvw_map' : 'map';
+						window.currentPlayerZone = targetMap; 
+						
+						if (window.isFirstLocationUpdate) {
+							window.isFirstLocationUpdate = false;
+							if (targetMap !== window.activeMap) {
+								window.activeMap = targetMap;
+								window.postMessage({action: 'switchMap', map: targetMap, confirmed: true}, '*');
+							}
+						} else if (!window.manualSwitchActive) {
+							let isTrackingOn = false;
+							try { isTrackingOn = frame.contentWindow.isTracking === true; } catch(e) {}
+
+							if (targetMap !== window.activeMap) {
+								if (isTrackingOn) {
+									if (targetMap !== window.pendingMapSwitch) {
+										window.pendingMapSwitch = targetMap;
+										window.showMapSwitchPopup(targetMap);
+									}
+								} else { window.pendingMapSwitch = null; }
+							} else { window.pendingMapSwitch = null; }
+						}
+						
+						return originalUpdate.apply(this, arguments);
+					};
+					frame.contentWindow._locHooked = true;
+				}
+			}, 1000);
+
+			if (isTrackerVisible) window.toggleTrackerOverlay(true);
+			setInterval(pollTrackerProgress, 30000);
+			setInterval(checkDeliveries, 60000);
+			setTimeout(checkDeliveries, 1500); 
+			document.addEventListener('contextmenu', e => e.preventDefault());
+			/*]]>*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 8px; margin-bottom: 8px; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
+			.server-time { font-size: 20px; color: #e2c07d; font-weight: bold; font-family: monospace; letter-spacing: 2px; }
+
+			.sub-header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 8px; margin-bottom: 15px; }
+			.tyria-time { font-size: 12px; color: #dcb36b; font-weight: bold; letter-spacing: 1px; }
+			.local-time { font-size: 10px; color: #8a7a5f; }
+
+			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; }
+			.nav-panel { width: 200px; flex-shrink: 0; overflow-y: auto; background: rgba(0,0,0,0.3); border: 1px solid #2a2015; padding: 5px; }
+			.cat-btn { width: 100%; background: #1a1510; border: none; color: #8a7a5f; padding: 10px; text-align: left; font-size: 10px; font-weight: bold; cursor: pointer; border-bottom: 1px solid #2a2015; transition: 0.2s; border-left: 2px solid transparent; }
+			.cat-btn:hover { background: #251d16; color: #e2c07d; }
+			.cat-btn.active { background: rgba(226,192,125,0.1); color: #e2c07d; border-left-color: #e2c07d; }
+			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 5px; padding-right: 5px; }
+
+			.fancy-toggle { position: relative; display: inline-block; width: 40px; height: 20px; vertical-align: middle; margin-left: 8px; }
+			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 20px; }
+			.slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
+			input:checked + .slider:before { transform: translateX(20px); background-color: #000; }
+
+			.sub-grp-btn { width: 100%; background: rgba(30,22,15,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 12px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; margin-top: 5px; }
+			.sub-grp-btn:after { content: '▼'; font-size: 8px; color: #8a7a5f; transition: 0.3s; }
+			.sub-grp-btn.active:after { transform: rotate(180deg); }
+			.sub-content { display: none; flex-direction: column; gap: 8px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top: none; }
+
+			.event-card { background: rgba(20,15,10,0.8); border: 1px solid #332a1e; display: flex; padding: 8px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
+			.event-card:hover { border-color: #8a7a5f; background: rgba(30,22,15,0.9); }
+			.event-card.active-state { border-color: #1A9306; background: rgba(26, 147, 6, 0.1); }
+			.event-card.imminent-state { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
+			.event-icon-wrap { width: 32px; height: 32px; flex-shrink: 0; background: #000; border: 1px solid #4a3b2a; padding: 2px; }
+			.event-icon { width: 100%; height: 100%; object-fit: contain; }
+			.event-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+			.event-title { font-size: 10px; font-weight: bold; color: #e2c07d; margin-bottom: 2px; padding-right: 65px; }
+			.event-status { font-size: 8px; color: #8a7a5f; font-weight: bold; }
+			.active-text { color: #1A9306; }
+			.imminent-text { color: #e2c07d; }
+			.prog-container { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+			.prog-bg { flex: 1; height: 4px; background: #111; border: 1px solid #4a3b2a; position: relative; }
+			.prog-fill { height: 100%; background: #4a3b2a; width: 0%; transition: width 0.3s ease; }
+			.time-text { font-size: 10px; font-weight: bold; width: 45px; text-align: right; color: #e2c07d; font-family: monospace; }
+
+			.star-btn { cursor: pointer; width: 16px; height: 16px; opacity: 0.3; transition: 0.2s; position: absolute; top: 8px; right: 8px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+			.wp-btn { position: absolute; top: 8px; right: 30px; font-size: 8px; background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 2px 4px; cursor: pointer; transition: 0.2s; z-index: 10; font-weight: bold; }
+			.wp-btn:hover { color: #e2c07d; border-color: #e2c07d; background: #251d16; }
+
+			input[type=number]::-webkit-inner-spin-button,
+			input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+			input[type=number] { -moz-appearance: textfield; }
+
+			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 100; border: 1px solid #4a3b2a; padding: 20px; text-align: center; }
+			.confirm-btn-row { display: flex; gap: 10px; margin-top: 15px; }
+			.confirm-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.confirm-btn:hover { background: #251d16; border-color: #e2c07d; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 18px; }
+			body.ui-large .server-time { font-size: 24px; }
+			body.ui-large .tyria-time { font-size: 14px; }
+			body.ui-large .local-time { font-size: 12px; }
+			body.ui-large .nav-panel { width: 240px; }
+			body.ui-large .cat-btn { font-size: 13px; padding: 12px; }
+			body.ui-large .sub-grp-btn { font-size: 14px; padding: 10px 15px; }
+			body.ui-large .event-title { font-size: 13px; }
+			body.ui-large .event-status { font-size: 11px; }
+			body.ui-large .time-text { font-size: 13px; width: 60px; }
+			body.ui-large .event-icon-wrap { width: 40px; height: 40px; }
+			body.ui-large .wp-btn { font-size: 10px; padding: 4px 6px; }
+			body.ui-large .star-btn { width: 20px; height: 20px; }
+			body.ui-large .slider { width: 50px; height: 25px; }
+			body.ui-large .slider:before { height: 17px; width: 17px; left: 4px; bottom: 4px; }
+			body.ui-large input:checked + .slider:before { transform: translateX(25px); }
+
+			/* Super Adventure Box Easter Egg */
+			.sab-glitch { image-rendering: pixelated; box-shadow: inset 0 0 0 2px #39ff14 !important; background: repeating-linear-gradient(0deg, rgba(57,255,20,0.05), rgba(57,255,20,0.05) 1px, transparent 1px, transparent 3px), rgba(20,15,10,0.8) !important; animation: sabGlitchAnim 4s infinite; }
+			.sab-glitch:hover { box-shadow: inset 0 0 0 2px #ff00ff !important; background: repeating-linear-gradient(0deg, rgba(255,0,255,0.05), rgba(255,0,255,0.05) 1px, transparent 1px, transparent 3px), rgba(30,22,15,0.9) !important; }
+			.sab-glitch .event-title { color: #39ff14 !important; text-shadow: 1px 1px 0px #ff00ff; }
+			.sab-glitch .event-icon { image-rendering: pixelated; }
+			@keyframes sabGlitchAnim {
+			0% { transform: translate(0) }
+			10% { transform: translate(-2px, 1px) }
+			11% { transform: translate(0) }
+			50% { transform: translate(2px, -1px); filter: hue-rotate(90deg); }
+			51% { transform: translate(0); filter: hue-rotate(0deg); }
+			90% { transform: translate(-1px, 2px) }
+			91% { transform: translate(0) }
+			100% { transform: translate(0) }
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position: relative;">
+			<div class="header-row">
+				<div class="section-title">EVENT TIMERS</div>
+				<div id="local-time" class="server-time">LOCAL TIME: 00:00:00</div>
+			</div>
+			<div class="sub-header-row">
+				<div style="display:flex; align-items:center;">
+					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST POPUPS</span>
+					<label class="fancy-toggle">
+						<input type="checkbox" id="timer-overlay-toggle" onchange="localStorage.setItem('gw2_timer_tracker_visible', this.checked)" />
+						<span class="slider"></span>
+					</label>
+					<span style="font-size:10px; font-weight:bold; color:#8a7a5f; margin-left: 15px; margin-right: 5px;">SOUND:</span>
+					<select id="timer-sound-select" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 2px 5px; cursor: pointer; text-transform: uppercase;" onchange="previewTimerSound(this.value)">
+						<option value="none">NONE</option>
+						<option value="https://gw2ps.local/Assets/Sounds/timers_notification_boopboop.mp3">BOOPBOOP</option>
+						<option value="https://gw2ps.local/Assets/Sounds/timers_notification_prrring.mp3">PRRRING</option>
+						<option value="https://gw2ps.local/Assets/Sounds/timers_noticication_papling.mp3">PAPLING</option>
+						<option value="https://gw2ps.local/Assets/Sounds/timers_notification_babloop.mp3">BABLOOP</option>
+						<option value="tts_male">TTS MALE</option>
+						<option value="tts_female">TTS FEMALE</option>
+					</select>
+				</div>
+				<div style="display:flex; flex-direction:column; align-items:flex-end;">
+					<div id="tyria-time" class="tyria-time">TYRIA: NIGHT</div>
+					<div id="server-time" class="local-time">00:00:00</div>
+				</div>
+			</div>
+
+			<div class="main-layout">
+				<div id="nav-panel" class="nav-panel">
+					<div style="position: relative;">
+						<input type="text" id="event-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+							<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('event-search').value=''; handleSearch('');">X</span>
+						</div>
+				</div>
+				<div id="content-panel" class="content-panel"></div>
+			</div>
+
+			<div id="delete-confirm-modal" class="confirm-modal">
+				<div style="font-size: 14px; font-weight: bold; color: #e2c07d; margin-bottom: 5px;">DELETE TIMER?</div>
+				<div style="font-size: 12px; color: #8a7a5f;">ARE YOU SURE YOU WANT TO REMOVE THIS CUSTOM TIMER?</div>
+				<div class="confirm-btn-row">
+					<button class="confirm-btn" onclick="confirmDelete()">YES</button>
+					<button class="confirm-btn" onclick="cancelDelete()">NO</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			/*<![CDATA[*/
+            const ICON_DRAGON = "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png";
+            const ICON_BOSS = "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png";
+            const ICON_WRENCH = "https://wiki.guildwars2.com/images/e/e2/Event_wrench_%28map_icon%29.png";
+
+            const schedule = [
+                { cat: "WATCHLIST", sub: [] },
+                { cat: "Core Tyria", sub: [
+                    { n: "World bosses", evs: [
+                        { n: "Svanir Shaman", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BMIDAAA=]", desc: "Svanir Shaman Chief meta in Wayfarer Foothills." },
+                        { n: "Fire Elemental", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "[&BE4AAAA=]", desc: "Metrica construct meta." },
+                        { n: "Jungle Wurm", i: ICON_BOSS, r: 120, o: 75, d: 15, wp: "[&BEEBAAA=]", desc: "Great Jungle Wurm meta in Caledon Forest." },
+                        { n: "Shadow Behemoth", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BPcAAAA=]", desc: "Queensdale demon meta." },
+                        { n: "Admiral Covington", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "[&BKgBAAA=]", desc: "Bloodtide Coast pirate meta." },
+                        { n: "Megadestroyer", i: ICON_BOSS, r: 180, o: 30, d: 15, wp: "[&BM0CAAA=]", desc: "Mount Maelstrom destroyer meta." },
+                        { n: "The Shatterer", i: ICON_DRAGON, r: 180, o: 60, d: 15, wp: "[&BE4DAAA=]", desc: "Kralkatorrik champion meta." },
+                        { n: "Modniir Ulgoth", i: ICON_BOSS, r: 180, o: 90, d: 15, wp: "[&BLAAAAA=]", desc: "Centaur King meta." },
+                        { n: "Golem Mark II", i: ICON_BOSS, r: 180, o: 120, d: 15, wp: "[&BNQCAAA=]", desc: "Inquest golem meta." },
+                        { n: "Claw of Jormag", i: ICON_DRAGON, r: 180, o: 150, d: 15, wp: "[&BHoCAAA=]", desc: "Jormag lieutenant meta." }
+                    ]},
+                    { n: "Hard world bosses", evs: [
+                        { n: "Tequatl the Sunless", i: ICON_DRAGON, exact: [0, 180, 270, 480, 690, 960, 1140], d: 15, wp: "[&BNABAAA=]", desc: "A dragon lieutenant of Zhaitan invading Sparkfly Fen." },
+                        { n: "Karka Queen", i: ICON_BOSS, exact: [120, 360, 630, 900, 1080, 1380], d: 15, wp: "[&BNUGAAA=]", desc: "Massive Karka attacking Southsun Cove." },
+                        { n: "Triple Trouble", i: ICON_BOSS, exact: [60, 240, 480, 720, 930, 1200], d: 15, wp: "[&BKoBAAA=]", desc: "Three legendary jungle wurms in Bloodtide Coast." }
+                    ]},
+                    { n: "Orr Metas", evs: [
+                        { n: "Temple of Balthazar", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BPICAAA=]", desc: "Capture the Cathedral of Glorious Victory." },
+                        { n: "Temple of Melandru", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BB8DAAA=]", desc: "Capture the Cathedral of Verdance." },
+                        { n: "Temple of Lyssa", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BK0CAAA=]", desc: "Capture the Cathedral of Zephyrs." },
+                        { n: "Temple of Grenth", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "[&BCIDAAA=]", desc: "Capture the Cathedral of Silence." }
+                    ]},
+                    { n: "Zone Cycles", evs: [
+                        { n: "Dredge Assault", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "[&BMIDAAA=]", desc: "Diessa Plateau dredge meta." },
+                        { n: "Ogre Wars", i: ICON_BOSS, r: 120, o: 75, d: 15, wp: "[&BE4AAAA=]", desc: "Fields of Ruin ogre meta." }
+                    ]},
+                    { n: "Ley-Line Anomaly", evs: [ { n: "Ley-Line Anomaly", i: ICON_BOSS, r: 120, o: 20, d: 20, wp: "[&BOcAAAA=]", desc: "Rogue anomaly run meta." } ]},
+                    { n: "Invasions", evs: [ { n: "Awakened / Forged", i: ICON_BOSS, r: 60, o: 30, d: 15, wp: "", desc: "Map-wide incursion meta." } ]},
+                    { n: "Fractal Incursions", evs: [ { n: "Fractal Incursion", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "", desc: "Tyria fractal meta." } ]},
+                    { n: "EU PvP Tournaments", evs: [ { n: "EU Tournament", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "", desc: "Automated EU PvP." } ]},
+                    { n: "NA PvP Tournaments", evs: [ { n: "NA Tournament", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "", desc: "Automated NA PvP." } ]}
+                ]},
+                { cat: "Living World Season 2", sub: [ { n: "Dry Top", evs: [ { n: "Sandstorm", i: ICON_BOSS, r: 60, o: 40, d: 20, wp: "[&BIAHAAA=]", desc: "Dry Top sandstorm meta." } ]} ]},
+                { cat: "Living World Season 3", sub: [
+                    { n: "Lake Doric", evs: [
+                        { n: "Saidra's Haven", i: ICON_BOSS, r: 120, o: 20, d: 15, wp: "[&BK0JAAA=]", desc: "Saidra's Haven takes place every 120 minutes." },
+                        { n: "New Loamhurst", i: ICON_BOSS, r: 120, o: 40, d: 15, wp: "[&BLkJAAA=]", desc: "New Loamhurst takes place every 120 minutes." },
+                        { n: "Noran's Homestead", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BK8JAAA=]", desc: "Noran's Homestead takes place every 120 minutes." }
+                    ]}
+                ]},
+                { cat: "Heart of Thorns", sub: [
+                    { n: "Verdant Brink", evs: [ 
+                        { n: "Securing Outposts", i: ICON_BOSS, r: 120, o: 10, d: 35, wp: "[&BN4HAAA=]", desc: "Daytime preparation." },
+                        { n: "Night Bosses", i: ICON_BOSS, r: 120, o: 45, d: 45, wp: "[&BN4HAAA=]", desc: "Verdant Brink night meta." } 
+                    ]},
+                    { n: "Auric Basin", evs: [ 
+                        { n: "Defending Tarir", i: ICON_BOSS, r: 120, o: 45, d: 60, wp: "[&BAIIAAA=]", desc: "Preparation for Octovine." },
+                        { n: "Octovine", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BAIIAAA=]", desc: "Tarir Octovine meta." } 
+                    ]},
+                    { n: "Tangled Depths", evs: [ 
+                        { n: "Outpost Prep", i: ICON_BOSS, r: 120, o: 0, d: 30, wp: "[&BPUHAAA=]", desc: "Outpost event chains." },
+                        { n: "Chak Gerent", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BPUHAAA=]", desc: "Chak Gerent meta in Tangled Depths." } 
+                    ]},
+                    { n: "Dragon's Stand", evs: [ { n: "Mouth of Mordremoth", i: ICON_DRAGON, r: 120, o: 90, d: 60, wp: "[&BBAIAAA=]", desc: "Final push meta." } ]}
+                ]},
+                { cat: "Path of Fire", sub: [
+                    { n: "Crystal Oasis", evs: [ { n: "Casino Blitz", i: ICON_BOSS, r: 120, o: 5, d: 25, wp: "[&BLsKAAA=]", desc: "Pinata meta." } ]},
+                    { n: "Desert Highlands", evs: [ { n: "Buried Treasure", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BNEKAAA=]", desc: "Treasure hunt meta." } ]},
+                    { n: "Elon Riverlands", evs: [ { n: "Doppelganger", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BFMKAAA=]", desc: "Mirror meta." } ]},
+                    { n: "The Desolation", evs: [
+                        { n: "Forged with Fire", i: ICON_BOSS, r: 60, o: 0, d: 20, wp: "[&BMEKAAA=]", desc: "Maw of Torment meta." },
+                        { n: "Junundu Rising", i: ICON_BOSS, r: 60, o: 30, d: 15, wp: "[&BMEKAAA=]", desc: "Junundu wurm meta." }
+                    ]},
+                    { n: "Domain of Vabbi", evs: [ { n: "Serpents' Ire", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BH0KAAA=]", desc: "Branded Zealot meta." } ]}
+                ]},
+                { cat: "Living World Season 4", sub: [
+                    { n: "Domain of Istan", evs: [
+                        { n: "Sunspear Uprising", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BBAKAAA=]", desc: "Champion Awakened Warden." },
+                        { n: "Palawadan", i: ICON_BOSS, r: 120, o: 105, d: 30, wp: "[&BAkLAAA=]", desc: "Palawadan Jewel of Istan meta." }
+                    ]},
+                    { n: "Sandswept Isles", evs: [
+                        { n: "Specimen Chamber", i: ICON_BOSS, r: 120, o: 5, d: 20, wp: "[&BEMLAAA=]", desc: "Inquest facility meta." },
+                        { n: "Gathering Storms", i: ICON_BOSS, r: 120, o: 65, d: 20, wp: "[&BEMLAAA=]", desc: "Zohaqan meta." }
+                    ]},
+                    { n: "Jahai Bluffs", evs: [ { n: "Death-Branded Shatterer", i: ICON_DRAGON, r: 120, o: 60, d: 15, wp: "[&BJMLAAA=]", desc: "Shatterer 2.0 meta." } ]},
+                    { n: "Thunderhead Peaks", evs: [
+                        { n: "Thunderhead Keep", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BLsLAAA=]", desc: "Keep defense meta." },
+                        { n: "Oil Floes", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BLkLAAA=]", desc: "Peaks oil defense meta." }
+                    ]},
+                    { n: "Dragonfall", evs: [ { n: "Battle of Dragonfall", i: ICON_DRAGON, r: 120, o: 0, d: 120, wp: "[&BN4LAAA=]", desc: "Kralkatorrik meta." } ]}
+                ]},
+                { cat: "The Icebrood Saga", sub: [
+                    { n: "Grothmar Valley", evs: [
+                        { n: "Doomlore Shrine", i: ICON_BOSS, r: 120, o: 10, d: 15, wp: "[&BP8LAAA=]", desc: "Doomlore shrine defense." },
+                        { n: "Ooze Pit", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BP8LAAA=]", desc: "Ooze Pit trial." },
+                        { n: "Metal Legion", i: ICON_BOSS, r: 120, o: 60, d: 30, wp: "[&BPMLAAA=]", desc: "Concert meta." },
+                        { n: "Sacred Flame", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BP8LAAA=]", desc: "Sacred Flame ceremony." }
+                    ]},
+                    { n: "Bjora Marches", evs: [
+                        { n: "Drakkar", i: ICON_DRAGON, r: 120, o: 5, d: 25, wp: "[&BIsMAAA=]", desc: "Drakkar meta." },
+                        { n: "Storms of Winter", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BCcMAAA=]", desc: "Raven Shrine defense." }
+                    ]},
+                    { n: "Drizzlewood Coast", evs: [ { n: "Assault on Frost Citadel", i: ICON_BOSS, r: 120, o: 0, d: 120, wp: "[&BIEHAAA=]", desc: "Drizzlewood Citadel meta." } ]}
+                ]},
+                { cat: "End of Dragons", sub: [
+                    { n: "Cantha Cycle", evs: [ { n: "Cantha Cycle", i: ICON_BOSS, r: 120, o: 0, d: 80, wp: "", desc: "Expansion global cycle." } ]},
+                    { n: "Seitung Province", evs: [ { n: "Assault", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BOMMAAA=]", desc: "Province meta." } ]},
+                    { n: "New Kaineng City", evs: [ { n: "Blackout", i: ICON_BOSS, r: 120, o: 60, d: 45, wp: "[&BPUMAAA=]", desc: "Grid meta." } ]},
+                    { n: "The Echovald Wilds", evs: [ { n: "Gang War", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BMMMAAA=]", desc: "Faction meta." } ]},
+                    { n: "Dragon's End", evs: [ { n: "Soo-Won", i: ICON_DRAGON, r: 120, o: 0, d: 120, wp: "[&BKIMAAA=]", desc: "Final SO battle." } ]},
+                    { n: "Fishing Tournaments", evs: [
+                        { n: "Seitung Fishing", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BOMMAAA=]", desc: "Seitung Province fishing." },
+                        { n: "Kaineng Fishing", i: ICON_BOSS, r: 120, o: 30, d: 15, wp: "[&BPUMAAA=]", desc: "New Kaineng fishing." },
+                        { n: "Echovald Fishing", i: ICON_BOSS, r: 120, o: 60, d: 15, wp: "[&BMMMAAA=]", desc: "Echovald Wilds fishing." },
+                        { n: "Dragon's End Fishing", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BKIMAAA=]", desc: "Dragon's End fishing." }
+                    ]}
+                ]},
+                { cat: "Secrets of the Obscure", sub: [
+                    { n: "Skywatch Archipelago", evs: [ { n: "Wizard's Tower Access", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BL8NAAA=]", desc: "Skywatch meta." } ]},
+                    { n: "Wizard's Tower", evs: [ { n: "Tower Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BB8OAAA=]", desc: "Hub meta." } ]},
+                    { n: "Amnytas", evs: [ { n: "Defense of Amnytas", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BD8OAAA=]", desc: "Bastion meta." } ]},
+                    { n: "Inner Nayos", evs: [
+                        { n: "Road to Heitor", i: ICON_BOSS, r: 120, o: 15, d: 20, wp: "[&BBoPAAA=]", desc: "Heitor meta." },
+                        { n: "The Fangs That Gnash", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BBoPAAA=]", desc: "Kryptis meta." },
+                        { n: "Into the Spider's Web", i: ICON_BOSS, r: 120, o: 105, d: 20, wp: "[&BBoPAAA=]", desc: "Eparch meta." }
+                    ]}
+                ]},
+                { cat: "Janthir Wilds", sub: [
+                    { n: "Lowland Shore", evs: [ { n: "Moon Camp", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BGUOAAA=]", desc: "Lowland Shore meta." } ]},
+                    { n: "Janthir Syntri", evs: [ { n: "Syntri Meta", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BC0PAAA=]", desc: "Syntri meta." } ]},
+                    { n: "Bava Nisos", evs: [ { n: "Bava Nisos Meta", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BDEPAAA=]", desc: "Bava Nisos meta." } ]}
+                ]},
+                { cat: "Visions of Eternity", sub: [
+                    { n: "Castora Cycle", evs: [ { n: "Castora Cycle", i: ICON_BOSS, r: 120, o: 0, d: 60, wp: "", desc: "Local cycle." } ]},
+                    { n: "Shipwreck Strand", evs: [ { n: "Strand Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Strand meta." } ]},
+                    { n: "Starlit Weald", evs: [ { n: "Weald Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Weald meta." } ]}
+                ]},
+                { cat: "Public Instances", sub: [
+                    { n: "Eye of the North", evs: [
+                        { n: "Twisted Marionette", i: ICON_BOSS, exact: [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080, 1200, 1320], d: 15, wp: "[&BAoMAAA=]", desc: "Scarlet weapon." },
+                        { n: "Dragonstorm", i: ICON_DRAGON, r: 120, o: 0, d: 20, wp: "[&BAoMAAA=]", desc: "Two dragons." },
+                        { n: "Battle For Lion's Arch", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BCoAAAA=]", desc: "City reclaim." },
+                        { n: "Tower of Nightmares", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "[&BDIBAAA=]", desc: "Toxic tower." }
+                    ]},
+                    { n: "Convergence", evs: [ { n: "Convergence", i: ICON_BOSS, exact: [90, 270, 450, 630, 810, 990, 1170, 1350], d: 45, wp: "[&BB8OAAA=]", desc: "Legendary Kryptis." } ]}
+                ]},
+                { cat: "Festivals", sub: [
+                    { n: "Halloween", evs: [ { n: "Mad King Says", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BCAEAAA=]", desc: "Lion's Arch Halloween event." } ]},
+                    { n: "Wintersday", evs: [ { n: "Winter Wonderland", i: ICON_BOSS, r: 30, o: 0, d: 10, wp: "[&BCEEAAA=]", desc: "DR Wintersday event." } ]},
+                    { n: "Lunar New Year", evs: [ { n: "Dragonball", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BCEEAAA=]", desc: "DR Lunar New Year event." } ]},
+                    { n: "Super Adventure Box", evs: [ { n: "Super Adventure Festival", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BLkEAAA=]", desc: "Rata Sum SAB event." } ]},
+                    { n: "Dragon Bash", evs: [ { n: "Pinata Bashing", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BHsEAAA=]", desc: "Hoelbrak Dragon Bash event." } ]},
+                    { n: "Four Winds", evs: [
+                        { n: "Flying Dolyak", i: ICON_BOSS, r: 120, o: 30, d: 15, wp: "[&BMgHAAA=]", desc: "Labyrinthine Cliffs." },
+                        { n: "Boss Blitz", i: ICON_BOSS, r: 120, o: 60, d: 15, wp: "[&BMgHAAA=]", desc: "Crown Pavilion." }
+                    ]}
+                ]}
+            ];
+
+			let currentMainCat = 1, syncCounter = 0;
+			let trackedTimers = JSON.parse(localStorage.getItem('gw2_tracked_timers') || '{}');
+			let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_timers') || '{}');
+            let customTimers = JSON.parse(localStorage.getItem('gw2_custom_timers') || '[]');
+			let alertHistory = {};
+			let searchQuery = '';
+            
+            schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
+			
+			if ('speechSynthesis' in window) {
+				window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); };
+			}
+
+			window.playTimerNotification = function(val, textMsg) {
+				if (!val || val === 'none') return;
+				
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				const vol = settings.masterVolume !== undefined ? (settings.masterVolume / 100) : 1.0;
+
+				if (val === 'tts_male' || val === 'tts_female') {
+					if ('speechSynthesis' in window) {
+						let msg = new SpeechSynthesisUtterance(textMsg);
+						let voices = window.speechSynthesis.getVoices();
+						let voice = null;
+						if (val === 'tts_male') {
+							voice = voices.find(v => v.name.toLowerCase().includes('male') || v.name.includes('David') || v.name.includes('Mark') || v.name.includes('Arthur'));
+						} else {
+							voice = voices.find(v => v.name.toLowerCase().includes('female') || v.name.includes('Zira') || v.name.includes('Hazel') || v.name.includes('Samantha'));
+						}
+						if (voice) msg.voice = voice;
+						msg.pitch = 1;
+						msg.rate = 1;
+						msg.volume = vol;
+						window.speechSynthesis.speak(msg);
+					}
+				} else {
+					let audio = new Audio(val);
+					audio.volume = vol;
+					audio.play().catch(e => console.log('Audio play failed', e));
+				}
+			};
+
+			window.previewTimerSound = function(val) {
+				localStorage.setItem('gw2_timer_sound', val);
+				playTimerNotification(val, "This is what I sound like");
+			};
+
+			window.handleSearch = function(val) {
+				searchQuery = val.toLowerCase();
+				if (searchQuery) harmonicaState["SEARCH RESULTS"] = true;
+				renderView(true);
+			};
+
+            window.toggleCtTimeMode = function() {
+                let type = document.getElementById('ct-type').value;
+                let isIn = type.startsWith('in');
+                document.getElementById('ct-time-in').style.display = isIn ? 'inline-block' : 'none';
+                
+                let ph = 'MINS';
+                if (type === 'in_hours') ph = 'HRS';
+                else if (type === 'in_days') ph = 'DAYS';
+                else if (type === 'in_weeks') ph = 'WKS';
+                else if (type === 'in_months') ph = 'MTHS';
+                document.getElementById('ct-time-in').placeholder = ph;
+                
+                document.getElementById('ct-time-at').style.display = type === 'at' ? 'inline-block' : 'none';
+            };
+
+            window.toggleCtRepeat = function() {
+                let rep = document.getElementById('ct-repeat').checked;
+                document.getElementById('ct-repeat-opts').style.display = rep ? 'flex' : 'none';
+            };
+
+            window.saveCustomTimer = function() {
+                let title = document.getElementById('ct-title').value.trim();
+                if (!title) return alert("Title is required");
+                let type = document.getElementById('ct-type').value;
+                
+                let targetMs = Date.now();
+                if (type.startsWith('in')) {
+                    let amt = parseInt(document.getElementById('ct-time-in').value);
+                    if (isNaN(amt) || amt <= 0) return alert("Invalid value");
+                    let mult = 60000;
+                    if (type === 'in_hours') mult = 3600000;
+                    else if (type === 'in_days') mult = 86400000;
+                    else if (type === 'in_weeks') mult = 604800000;
+                    else if (type === 'in_months') mult = 2592000000;
+                    targetMs += amt * mult;
+                } else {
+                    let time = document.getElementById('ct-time-at').value;
+                    if (!time) return alert("Invalid time");
+                    let [h, m] = time.split(':');
+                    let d = new Date();
+                    d.setHours(parseInt(h), parseInt(m), 0, 0);
+                    if (d.getTime() <= Date.now()) d.setDate(d.getDate() + 1);
+                    targetMs = d.getTime();
+                }
+
+                let repeat = document.getElementById('ct-repeat').checked;
+                let repVal = parseInt(document.getElementById('ct-rep-val').value) || 1;
+                let repUnit = document.getElementById('ct-rep-unit').value;
+
+                let newTimer = {
+                    n: title,
+                    i: ICON_WRENCH,
+                    d: 1, 
+                    isCustom: true,
+                    targetTime: targetMs,
+                    repeat: repeat,
+                    repeatVal: repVal,
+                    repeatUnit: repUnit,
+                    id: 'ct_' + Date.now()
+                };
+
+                customTimers.push(newTimer);
+                localStorage.setItem('gw2_custom_timers', JSON.stringify(customTimers));
+                
+                document.getElementById('ct-title').value = '';
+                renderView(true);
+            };
+
+            let timerToDelete = null;
+            window.promptDelete = function(id) {
+                timerToDelete = id;
+                document.getElementById('delete-confirm-modal').style.display = 'flex';
+            };
+
+            window.cancelDelete = function() {
+                timerToDelete = null;
+                document.getElementById('delete-confirm-modal').style.display = 'none';
+            };
+
+            window.confirmDelete = function() {
+                if(timerToDelete) {
+                    customTimers = customTimers.filter(t => t.id !== timerToDelete);
+                    localStorage.setItem('gw2_custom_timers', JSON.stringify(customTimers));
+                    let ctCat = schedule.find(c => c.cat === "Custom Timers");
+                    if(ctCat) ctCat.sub[0].evs = customTimers;
+                    renderView(true);
+                }
+                cancelDelete();
+            };
+
+			function init() {
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+				const toggle = document.getElementById('timer-overlay-toggle');
+				toggle.checked = localStorage.getItem('gw2_timer_tracker_visible') === 'true';
+
+				const soundSelect = document.getElementById('timer-sound-select');
+				if (soundSelect) {
+					soundSelect.value = localStorage.getItem('gw2_timer_sound') || 'none';
+				}
+
+				const nav = document.getElementById('nav-panel');
+				schedule.forEach((c, idx) => {
+					const btn = document.createElement('button');
+					btn.className = 'cat-btn' + (idx === currentMainCat ? ' active' : '');
+					btn.innerText = c.cat;
+					btn.onclick = () => {
+						document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+						btn.classList.add('active');
+						currentMainCat = idx;
+						searchQuery = '';
+						document.getElementById('event-search').value = '';
+						renderView(true);
+					};
+					nav.appendChild(btn);
+				});
+				setInterval(engineTick, 1000); engineTick();
+			}
+
+			function formatCountdown(secs) {
+				if (secs < 0) secs = 0;
+				const h = Math.floor(secs / 3600);
+				const m = Math.floor((secs % 3600) / 60);
+				const s = Math.floor(secs % 60);
+				if (h > 0) return h + "h " + m.toString().padStart(2, '0') + "m";
+				return m.toString().padStart(2, '0') + ":" + s.toString().padStart(2, '0');
+			}
+
+			function getEventState(ev, currentTotalMin) {
+                if (ev.isCustom) {
+                    const nowMs = Date.now();
+                    let target = ev.targetTime;
+                    const durMs = (ev.d || 1) * 60000;
+                    
+                    if (nowMs > target + durMs) {
+                        if (ev.repeat) {
+                            while(target + durMs < nowMs) {
+                                let d = new Date(target);
+                                if (ev.repeatUnit === 'minutes') d.setMinutes(d.getMinutes() + ev.repeatVal);
+                                else if (ev.repeatUnit === 'hours') d.setHours(d.getHours() + ev.repeatVal);
+                                else if (ev.repeatUnit === 'days') d.setDate(d.getDate() + ev.repeatVal);
+                                else if (ev.repeatUnit === 'weeks') d.setDate(d.getDate() + (ev.repeatVal * 7));
+                                else if (ev.repeatUnit === 'months') d.setMonth(d.getMonth() + ev.repeatVal);
+                                target = d.getTime();
+                            }
+                            ev.targetTime = target;
+                            localStorage.setItem('gw2_custom_timers', JSON.stringify(customTimers));
+                        }
+                    }
+                    
+                    let isActive = (nowMs >= target && nowMs < target + durMs);
+                    let remainMs = isActive ? (target + durMs - nowMs) : (target - nowMs);
+                    
+                    if (!ev.repeat && nowMs > target + durMs) {
+                        return { active: false, remain: 0, total: 1, next: 0, expired: true };
+                    }
+                    
+                    let totalSecs = 3600; 
+                    if (ev.repeatUnit === 'minutes') totalSecs = ev.repeatVal * 60;
+                    else if (ev.repeatUnit === 'hours') totalSecs = ev.repeatVal * 3600;
+                    else if (ev.repeatUnit === 'days') totalSecs = ev.repeatVal * 86400;
+                    else if (ev.repeatUnit === 'weeks') totalSecs = ev.repeatVal * 604800;
+                    else if (ev.repeatUnit === 'months') totalSecs = ev.repeatVal * 2592000;
+                    
+                    let totalReturn = isActive ? ((ev.d || 1) * 60) : totalSecs;
+                    return { active: isActive, remain: remainMs / 1000, total: totalReturn, next: target / 1000 };
+                }
+
+				let startMins = ev.exact ? ev.exact : [];
+				if (!ev.exact) {
+					const offset = ev.o;
+					for (let i = offset; i < 1440; i += ev.r) startMins.push(i);
+				}
+				let isActive = false, activeEnd = 0, nextStart = 3000;
+				for (let start of startMins) {
+					const end = start + ev.d;
+					if (currentTotalMin >= start && currentTotalMin < end) { isActive = true; activeEnd = end; break; }
+					if (start > currentTotalMin && start < nextStart) nextStart = start;
+				}
+				if (!isActive && nextStart > 1440) nextStart = startMins[0] + 1440;
+				if (isActive) return { active: true, remain: (activeEnd - currentTotalMin) * 60, total: ev.d * 60, next: nextStart };
+				return { active: false, remain: (nextStart - currentTotalMin) * 60, total: (ev.r || 120) * 60, next: nextStart };
+			}
+
+			function getWatchlistEvents() {
+				const watchSub = { n: "TRACKED EVENTS", evs: [] };
+				Object.keys(trackedTimers).forEach(name => {
+					schedule.forEach(cat => {
+						if (cat.cat === "WATCHLIST") return;
+						cat.sub.forEach(s => { s.evs.forEach(e => { if (e.n === name) watchSub.evs.push(e); }); });
+					});
+				});
+				return [watchSub];
+			}
+
+			function renderView(forceRedraw) {
+				const content = document.getElementById('content-panel');
+				const now = new Date();
+				const totalMin = now.getUTCHours() * 60 + now.getUTCMinutes() + (now.getUTCSeconds() / 60);
+				
+				let activeSubs = [];
+				if (searchQuery) {
+					let results = [];
+					schedule.forEach(cat => {
+						if (cat.cat === "WATCHLIST") return;
+						cat.sub.forEach(s => {
+							s.evs.forEach(e => {
+								if (e.n.toLowerCase().includes(searchQuery) || (e.desc && e.desc.toLowerCase().includes(searchQuery))) {
+									if (!results.find(r => r.n === e.n)) results.push(e);
+								}
+							});
+						});
+					});
+					activeSubs = [{ n: "SEARCH RESULTS", evs: results }];
+					document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+				} else {
+					const mainCat = schedule[currentMainCat];
+					activeSubs = (mainCat.cat === "WATCHLIST") ? getWatchlistEvents() : mainCat.sub;
+					document.querySelectorAll('.cat-btn').forEach((b, idx) => {
+						if (idx === currentMainCat) b.classList.add('active');
+						else b.classList.remove('active');
+					});
+				}
+
+				if (forceRedraw || !content.children.length) {
+					let html = '';
+
+                    if (schedule[currentMainCat] && schedule[currentMainCat].cat === "Custom Timers" && !searchQuery) {
+                        html += `<div id="custom-timer-form" style="background: rgba(0,0,0,0.3); border: 1px solid #2a2015; padding: 10px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px;">
+                            <div style="font-size: 12px; font-weight: bold; color: #8a7a5f; margin-bottom: 5px;">ADD CUSTOM TIMER</div>
+                            <div style="display:flex; gap:5px;">
+                                <input type="text" id="ct-title" placeholder="TITLE" style="flex:1; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;">
+                            </div>
+                            <div style="display: flex; gap: 5px; align-items: center;">
+                                <select id="ct-type" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;" onchange="toggleCtTimeMode()">
+                                    <option value="in_minutes">IN (MINUTES)</option>
+                                    <option value="in_hours">IN (HOURS)</option>
+                                    <option value="in_days">IN (DAYS)</option>
+                                    <option value="in_weeks">IN (WEEKS)</option>
+                                    <option value="in_months">IN (MONTHS)</option>
+                                    <option value="at">AT (LOCAL TIME)</option>
+                                </select>
+                                <input type="number" id="ct-time-in" placeholder="MINS" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; width: 60px;">
+                                <input type="time" id="ct-time-at" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; display: none;">
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 5px; margin-top: 5px;">
+                                <span style="font-size: 10px; color: #8a7a5f; font-weight: bold;">REPEAT</span>
+                                <label class="fancy-toggle">
+                                    <input type="checkbox" id="ct-repeat" onchange="toggleCtRepeat()">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div id="ct-repeat-opts" style="display: none; gap: 5px; align-items: center;">
+                                <span style="font-size: 10px; color: #8a7a5f; font-weight: bold;">EVERY</span>
+                                <input type="number" id="ct-rep-val" value="1" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; width: 50px;">
+                                <select id="ct-rep-unit" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;">
+                                    <option value="minutes">MINUTES</option>
+                                    <option value="hours">HOURS</option>
+                                    <option value="days">DAYS</option>
+                                    <option value="weeks">WEEKS</option>
+                                    <option value="months">MONTHS</option>
+                                </select>
+                            </div>
+                            <button onclick="saveCustomTimer()" style="background: #251d16; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px; cursor: pointer; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; margin-top: 5px;">ADD TIMER</button>
+                        </div>`;
+                    }
+
+					activeSubs.forEach((sub, sIdx) => {
+						const isOpen = harmonicaState[sub.n] === true;
+						html += `<button class="sub-grp-btn ${isOpen ? 'active' : ''}" onclick="toggleSub(this, '${sub.n.replace(/'/g, "\\'")}')">${sub.n}</button>`;
+						html += `<div class="sub-content" style="display:${isOpen ? 'flex' : 'none'}">`;
+						
+						let sorted = sub.evs.map(ev => ({ ev, st: getEventState(ev, totalMin) })).filter(item => !item.st.expired);
+						sorted.sort((a,b) => (a.st.active && !b.st.active) ? -1 : (!a.st.active && b.st.active) ? 1 : a.st.remain - b.st.remain);
+
+						sorted.forEach((item, eIdx) => {
+							const id = `ev-${sIdx}-${item.ev.n.replace(/\s+/g, '-')}`;
+                            let deleteBtn = item.ev.isCustom ? `<button class="wp-btn" style="right: 30px;" onclick="event.stopPropagation(); promptDelete('${item.ev.id}')">DEL</button>` : '';
+                            let copyBtn = item.ev.isCustom ? '' : `<button class="wp-btn" onclick="event.stopPropagation(); window.parent.postMessage({action:'copy', code:'${item.ev.wp || ''}'}, '*')">COPY WP</button>`;
+                            let clickAction = item.ev.isCustom ? '' : `onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${item.ev.n}'), '_blank')"`;
+                            let tooltipDesc = (item.ev.desc || item.ev.n).replace(/'/g, "\\'");
+							let isSAB = item.ev.n === "Super Adventure Festival";
+
+							html += `<div class="event-card ${isSAB ? 'sab-glitch' : ''}" id="${id}" ${clickAction} onmouseover="window.parent.postMessage({action:'showTooltip', text:'${tooltipDesc}', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+								${deleteBtn}
+                                ${copyBtn}
+								<div class="star-btn ${!!trackedTimers[item.ev.n]?'active':''}" onclick="toggleTrackTimer('${item.ev.n.replace(/'/g, "\\'")}', this, event)"></div>
+								<div class="event-icon-wrap"><img src="${item.ev.i}" class="event-icon" /></div>
+								<div class="event-info"><div class="event-title">${item.ev.n}</div><div class="event-status" id="${id}-stat">-</div>
+								<div class="prog-container"><div class="prog-bg"><div class="prog-fill" id="${id}-fill" style="width:0%"></div></div><div class="time-text" id="${id}-time">00:00</div></div></div></div>`;
+						});
+						html += `</div>`;
+					});
+					content.innerHTML = html;
+				}
+
+				activeSubs.forEach((sub, sIdx) => {
+					sub.evs.forEach((ev) => {
+						const id = `ev-${sIdx}-${ev.n.replace(/\s+/g, '-')}`;
+						const state = getEventState(ev, totalMin);
+                        if (state.expired) return;
+						const card = document.getElementById(id);
+						if(!card) return;
+						let isSAB = ev.n === "Super Adventure Festival";
+						card.className = "event-card" + (state.active ? " active-state" : (state.remain <= 900 ? " imminent-state" : "")) + (isSAB ? " sab-glitch" : "");
+						document.getElementById(id+'-stat').innerText = state.active ? "ACTIVE" : "STARTS IN " + formatCountdown(state.remain);
+						document.getElementById(id+'-stat').className = "event-status" + (state.active ? " active-text" : (state.remain <= 900 ? " imminent-text" : ""));
+						document.getElementById(id+'-time').innerText = formatCountdown(state.remain);
+						if (syncCounter % 10 === 0) document.getElementById(id+'-fill').style.width = (100 - ((state.remain / state.total) * 100)) + "%";
+					});
+				});
+            }
+
+            window.toggleSub = function(btn, subName) {
+                btn.classList.toggle('active');
+                const isOpen = btn.classList.contains('active');
+                btn.nextElementSibling.style.display = isOpen ? 'flex' : 'none';
+                
+                harmonicaState[subName] = isOpen;
+                localStorage.setItem('gw2_harmonica_timers', JSON.stringify(harmonicaState));
+            };
+
+            window.toggleTrackTimer = function(name, el, event) {
+                event.stopPropagation();
+                if (el.classList.contains('active')) { delete trackedTimers[name]; el.classList.remove('active'); }
+                else { trackedTimers[name] = true; el.classList.add('active'); }
+                localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
+                if (schedule[currentMainCat].cat === "WATCHLIST") renderView(true);
+            };
+
+            function updateTyriaTime(m) {
+                const c = m % 120; let s = "NIGHT";
+                if (c >= 25 && c < 30) s = "DAWN"; else if (c >= 30 && c < 100) s = "DAY"; else if (c >= 100 && c < 105) s = "DUSK";
+                document.getElementById('tyria-time').innerText = "TYRIA: " + s;
+            }
+
+            function engineTick() {
+                const now = new Date();
+                const prefTz = localStorage.getItem('gw2_pref_timezone') || 'local';
+                const opt = { hour: '2-digit', minute:'2-digit', second:'2-digit' };
+                if (prefTz !== 'local') opt.timeZone = prefTz;
+                document.getElementById('local-time').innerText = "LOCAL TIME: " + now.toLocaleTimeString([], opt);
+                document.getElementById('server-time').innerText = now.toISOString().substr(11, 8);
+                const totalMin = now.getUTCHours() * 60 + now.getUTCMinutes() + (now.getUTCSeconds() / 60);
+                
+                if (localStorage.getItem('gw2_timer_tracker_visible') === 'true') {
+                    Object.keys(trackedTimers).forEach(name => {
+                        schedule.forEach(cat => {
+                            if (cat.cat === "WATCHLIST") return;
+                            cat.sub.forEach(s => {
+                                s.evs.forEach(ev => {
+                                    if (ev.n === name) {
+                                        const state = getEventState(ev, totalMin);
+                                        const rem = Math.round(state.remain);
+                                        if (!state.active) {
+                                            if (rem === 900 && !alertHistory[name + '-15']) {
+                                                window.parent.postMessage({action:'eventPop', msg: name + " IN 15 MIN"}, '*');
+                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in 15 minutes");
+                                                alertHistory[name + '-15'] = true;
+                                                setTimeout(()=> delete alertHistory[name + '-15'], 5000);
+                                            } else if (rem === 300 && !alertHistory[name + '-5']) {
+                                                window.parent.postMessage({action:'eventPop', msg: name + " IN 5 MIN"}, '*');
+                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in 5 minutes");
+                                                alertHistory[name + '-5'] = true;
+                                                setTimeout(()=> delete alertHistory[name + '-5'], 5000);
+                                            }
+                                        } else {
+                                            const elapsed = Math.round(state.total - state.remain);
+                                            if (elapsed === 0 && !alertHistory[name + '-0']) {
+                                                window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
+                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active");
+                                                alertHistory[name + '-0'] = true;
+                                                setTimeout(()=> delete alertHistory[name + '-0'], 5000);
+                                            }
+                                        }
+                                    }
+                                });
+                            });
+                        });
+                    });
+                }
+
+                updateTyriaTime(totalMin); renderView(false); syncCounter++; if (syncCounter >= 300) { syncCounter = 0; renderView(true); }
+            }
+            init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

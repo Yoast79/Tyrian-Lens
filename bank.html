@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body {
+			margin: 0; background: transparent; padding: 20px;
+			color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase;
+			display: flex; flex-direction: column; height: 100vh; overflow: hidden;
+			}
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; letter-spacing: 1px; }
+
+			.search-container { position: relative; width: 100%; margin-bottom: 15px; }
+			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 8px 30px 8px 8px; font-size: 12px; outline: none; width: 100%; }
+			.search-box:focus { border-color: #e2c07d; }
+			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #4a3b2a; cursor: pointer; font-size: 18px; line-height: 1; display: none; }
+			.clear-btn:hover { color: #e2c07d; }
+
+			#bank-container { flex: 1; overflow-y: auto; padding-right: 10px; }
+			.bank-tab { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+			.tab-header { background: #1a1510; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #2a2015; }
+			.tab-header:hover { background: #251d16; }
+			.tab-title { font-size: 12px; letter-spacing: 1px; color: #e2c07d; }
+			.arrow { font-size: 10px; transition: transform 0.2s; }
+			.collapsed .arrow { transform: rotate(-90deg); }
+			.collapsed .tab-grid { display: none; }
+
+			.tab-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; cursor: pointer; }
+			.item-slot:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
+			.item-slot.hidden { visibility: hidden; pointer-events: none; }
+			.item-icon { width: 100%; height: 100%; object-fit: contain; }
+			.item-count { position: absolute; top: 1px; right: 2px; font-size: 11px; font-family: Arial, sans-serif; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000, -1px -1px 2px #000; pointer-events: none; }
+
+			#bank-container::-webkit-scrollbar { width: 4px; }
+			#bank-container::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+			#bank-container::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 2px; }
+
+			.loading {
+			display: flex; flex-direction: column; align-items: center; justify-content: center;
+			color: #8a7a5f; font-style: italic; padding: 40px; text-transform: uppercase; letter-spacing: 2px;
+			}
+			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
+
+			/* Large UI Scaling Overrides (~20% increase) */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .search-box { font-size: 15px; padding: 10px 35px 10px 10px; }
+			body.ui-large .tab-title { font-size: 15px; }
+			body.ui-large .tab-grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
+			body.ui-large .item-slot { width: 50px; height: 50px; }
+			body.ui-large .item-count { font-size: 13px; }
+		</style>
+	</head>
+	<body>
+		<div class="section-title">Account Bank</div>
+		<div class="search-container">
+			<input type="text" class="search-box" id="bank-search" placeholder="SEARCH VAULT..." oninput="filterBank()">
+				<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
+			</div>
+		<div id="bank-container">
+			<div class="loading">
+				<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png">
+					<div>Accessing Vault...</div>
+				</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let itemCache = {};
+			let bankDataGlobal = [];
+
+			async function initBank() {
+				// Apply UI scale on load
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+				const activeKey = localStorage.getItem('gw2_active_key');
+				if (!activeKey) return;
+				try {
+					const res = await fetch(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
+					bankDataGlobal = await res.json();
+					const itemIds = [...new Set(bankDataGlobal.filter(i => i !== null).map(i => i.id))];
+					await fetchItemDetails(itemIds);
+					renderBank();
+				} catch (err) { console.error(err); }
+			}
+
+			async function fetchItemDetails(ids) {
+			const chunks = [];
+			for (let i = 0; i < ids.length; i += 200) chunks.push(ids.slice(i, i + 200));
+				for (const chunk of chunks) {
+					const res = await fetch(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+					const data = await res.json();
+					data.forEach(item => itemCache[item.id] = item);
+				}
+			}
+
+			function clearSearch() {
+				const input = document.getElementById('bank-search');
+				input.value = '';
+				filterBank();
+			}
+
+			function renderBank() {
+				const container = document.getElementById('bank-container');
+				container.innerHTML = '';
+				const itemsPerTab = 30; 
+				for (let t = 0; t < bankDataGlobal.length / itemsPerTab; t++) {
+					const tabDiv = document.createElement('div');
+					tabDiv.className = 'bank-tab';
+					const header = document.createElement('div');
+					header.className = 'tab-header';
+					header.onclick = () => tabDiv.classList.toggle('collapsed');
+					header.innerHTML = `<span class="tab-title">Bank Tab ${t + 1}</span><span class=\"arrow\">▼</span>`;
+			const grid = document.createElement('div');
+			grid.className = 'tab-grid';
+			bankDataGlobal.slice(t * itemsPerTab, (t + 1) * itemsPerTab).forEach(slot => {
+			const slotDiv = document.createElement('div');
+			slotDiv.className = 'item-slot';
+			if (slot && itemCache[slot.id]) {
+			const item = itemCache[slot.id];
+			slotDiv.dataset.name = item.name.toLowerCase();
+			slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
+			slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: item.name, x: e.clientX, y: e.clientY}, '*');
+			slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+			slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">
+				`;
+				if (slot.count > 1) slotDiv.innerHTML += `<div class="item-count">${slot.count}</div>`;
+				} else { slotDiv.dataset.name = ""; }
+				grid.appendChild(slotDiv);
+				});
+				tabDiv.appendChild(header);
+				tabDiv.appendChild(grid);
+				container.appendChild(tabDiv);
+				}
+				}
+
+				function filterBank() {
+				const query = document.getElementById('bank-search').value.toLowerCase();
+				document.getElementById('clear-search').style.display = query === "" ? "none" : "block";
+				document.querySelectorAll('.bank-tab').forEach(tab => {
+				const slots = tab.querySelectorAll('.item-slot');
+				let hasMatch = false;
+				slots.forEach(slot => {
+				const match = query === "" || (slot.dataset.name && slot.dataset.name.includes(query));
+				slot.classList.toggle('hidden', !match);
+				if (match && slot.dataset.name !== "") hasMatch = true;
+				});
+				tab.classList.toggle('collapsed', query !== "" && !hasMatch);
+				});
+				}
+				initBank();
+				/*]]>*/
+		</script>
+	</body>
+</html>

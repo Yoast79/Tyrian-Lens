@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; margin: 0; }
+
+			.search-container { position: relative; width: 100%; margin-bottom: 15px; flex-shrink: 0; }
+			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 10px 30px 10px 10px; font-size: 14px; outline: none; width: 100%; font-family: "Crimson Text", serif; text-transform: uppercase; }
+			.search-box:focus { border-color: #e2c07d; }
+			.clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #8a7a5f; cursor: pointer; font-size: 18px; line-height: 1; display: none; transition: 0.2s; }
+			.clear-btn:hover { color: #e2c07d; }
+
+			#results-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+			
+			.result-row { background: rgba(20,15,10,0.6); border: 1px solid #2a2015; display: flex; padding: 10px; gap: 15px; align-items: center; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; flex-shrink: 0; position: relative; cursor: pointer; transition: 0.2s; }
+			.item-slot:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
+			.item-icon { width: 100%; height: 100%; object-fit: cover; }
+			
+			.item-info { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+			.item-name { font-size: 14px; color: #e2c07d; font-weight: bold; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: capitalize; }
+			
+			.location-list { display: flex; flex-wrap: wrap; gap: 8px; }
+			.location-tag { background: rgba(0,0,0,0.5); border: 1px solid #4a3b2a; padding: 4px 8px; font-size: 10px; color: #8a7a5f; border-radius: 2px; }
+			.location-count { color: #fff; font-weight: bold; margin-left: 4px; }
+
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
+
+			.rarity-Legendary { border-color: #4C139D !important; }
+			.rarity-Ascended { border-color: #FB3E8D !important; }
+			.rarity-Exotic { border-color: #FFA405 !important; }
+			.rarity-Rare { border-color: #FCD00B !important; }
+			.rarity-Masterwork { border-color: #1A9306 !important; }
+			.rarity-Fine { border-color: #62A4DA !important; }
+            .rarity-Currency { border-color: #e2c07d !important; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .search-box { font-size: 16px; padding: 12px 35px 12px 12px; }
+			body.ui-large .item-slot { width: 50px; height: 50px; }
+			body.ui-large .item-name { font-size: 16px; }
+			body.ui-large .location-tag { font-size: 12px; padding: 5px 10px; }
+		</style>
+	</head>
+	<body>
+		<div id="ui-root" style="display:none; height:100%; flex-direction: column;">
+			<div class="header-row">
+				<div class="section-title">Account Search</div>
+			</div>
+
+			<div class="search-container">
+				<input type="text" class="search-box" id="global-search" placeholder="SEARCH ITEMS & CURRENCIES..." oninput="filterSearch()">
+				<span class="clear-btn" id="clear-search" onclick="document.getElementById('global-search').value=''; filterSearch();">&times;</span>
+			</div>
+
+			<div id="results-container">
+                <div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS ACROSS YOUR ACCOUNT</div>
+            </div>
+		</div>
+
+		<div id="loader" class="loading">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
+			<div id="loader-text">SCANNING ACCOUNT...</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let activeKey = localStorage.getItem('gw2_active_key');
+			let itemCache = {};
+            let itemLocations = {}; // { itemId: { "Bank": count } }
+
+			async function fetchJSON(url) {
+				try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+			}
+
+            function addLoc(id, locName, count) {
+                if (!id) return;
+                if (!itemLocations[id]) itemLocations[id] = {};
+                itemLocations[id][locName] = (itemLocations[id][locName] || 0) + (count || 1);
+            }
+
+			async function init() {
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+				if (!activeKey) return;
+
+				document.getElementById('loader').style.display = 'flex';
+				document.getElementById('ui-root').style.display = 'none';
+				itemLocations = {};
+
+				const [bank, mats, inv, wallet, chars] = await Promise.all([
+					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
+					fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
+					fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
+                    fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
+					fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey)
+				]);
+
+                if(bank) bank.forEach(i => { if(i) addLoc(i.id, "Bank", i.count); });
+                if(mats) mats.forEach(i => { if(i) addLoc(i.id, "Material Storage", i.count); });
+                if(inv) inv.forEach(i => { if(i) addLoc(i.id, "Shared Inventory", i.count); });
+                if(wallet) wallet.forEach(i => { if(i) addLoc('curr_' + i.id, "Wallet", i.value); });
+                
+                if(chars) {
+                    chars.forEach(c => {
+                        if(c.bags) {
+                            c.bags.forEach((bag, i) => {
+                                if(bag) {
+                                    bag.inventory.forEach(item => { if(item) addLoc(item.id, `Char: ${c.name} (Bag ${i+1})`, item.count); });
+                                }
+                            });
+                        }
+                        if(c.equipment) {
+                            c.equipment.forEach(item => { if(item) addLoc(item.id, `Char: ${c.name} (Equipped)`, 1); });
+                        }
+                    });
+                }
+
+                const keys = Object.keys(itemLocations);
+                const itemIds = keys.filter(k => !k.toString().startsWith('curr_'));
+                const currIds = keys.filter(k => k.toString().startsWith('curr_')).map(k => k.replace('curr_', ''));
+
+                // Fetch Items
+                for (let i = 0; i < itemIds.length; i += 200) {
+                    document.getElementById('loader-text').innerText = `INDEXING ITEMS (${Math.round((i/itemIds.length)*100)}%)...`;
+                    const chunk = itemIds.slice(i, i+200);
+                    const data = await fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+                    if(data) data.forEach(it => itemCache[it.id] = it);
+                }
+
+                // Fetch Currencies
+                if (currIds.length > 0) {
+                    const cData = await fetchJSON(`https://api.guildwars2.com/v2/currencies?ids=${currIds.join(',')}`);
+                    if(cData) cData.forEach(c => {
+                        itemCache['curr_' + c.id] = { name: c.name, icon: c.icon, rarity: 'Currency', isCurrency: true };
+                    });
+                }
+
+				document.getElementById('loader').style.display = 'none';
+				document.getElementById('ui-root').style.display = 'flex';
+			}
+
+            window.showItemTip = function(id, e) {
+                const item = itemCache[id];
+                if (!item) return;
+                const desc = item.description ? "<br><span style='color:#8a7a5f; font-size:11px; font-style:italic;'>" + item.description.replace(/<[^>]*>?/gm, '') + "</span>" : '';
+                window.parent.postMessage({action:'showTooltip', text: "<b>" + item.name + "</b>" + desc, x: e.clientX, y: e.clientY}, '*');
+            };
+
+            window.formatCount = function(id, count) {
+                if (id === 'curr_1') { // Gold (Copper)
+                    const g = Math.floor(count / 10000), s = Math.floor((count % 10000) / 100), c = count % 100;
+                    let res = '';
+                    if (g>0) res += `${g}G `;
+                    if (s>0) res += `${s}S `;
+                    res += `${c}C`;
+                    return res;
+                }
+                return `x${count.toLocaleString()}`;
+            }
+
+            window.filterSearch = function() {
+                const q = document.getElementById('global-search').value.toLowerCase().trim();
+                const res = document.getElementById('results-container');
+                document.getElementById('clear-search').style.display = q === "" ? "none" : "block";
+
+                if (q.length < 2) {
+                    res.innerHTML = '<div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS ACROSS YOUR ACCOUNT</div>';
+                    return;
+                }
+
+                const matches = Object.keys(itemLocations).filter(id => {
+                    const item = itemCache[id];
+                    return item && item.name.toLowerCase().includes(q);
+                }).sort((a,b) => itemCache[a].name.localeCompare(itemCache[b].name)).slice(0, 50);
+
+                if (matches.length === 0) {
+                    res.innerHTML = '<div style="padding:20px; text-align:center; color:#ff4a4a; font-size:11px;">NO MATCHING ASSETS FOUND</div>';
+                    return;
+                }
+
+                let html = '';
+                matches.forEach(id => {
+                    const item = itemCache[id];
+                    const locs = itemLocations[id];
+                    
+                    let locHtml = '';
+                    Object.entries(locs).forEach(([locName, count]) => {
+                        locHtml += `<div class="location-tag">${locName} <span class="location-count">${formatCount(id, count)}</span></div>`;
+                    });
+
+                    html += `
+                    <div class="result-row">
+                        <div class="item-slot rarity-${item.rarity || 'Basic'}" 
+                             onmouseover="showItemTip('${id}', event)" 
+                             onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"
+                             onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${item.name}'), '_blank')">
+                            <img src="${item.icon}" class="item-icon" />
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name">${item.name}</div>
+                            <div class="location-list">${locHtml}</div>
+                        </div>
+                    </div>`;
+                });
+
+                res.innerHTML = html;
+            };
+
+			window.addEventListener('message', (e) => { 
+				if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
+				if (e.data.action === 'uiScaleChanged') {
+					if (e.data.value === 'large') document.body.classList.add('ui-large');
+					else document.body.classList.remove('ui-large');
+				}
+			});
+
+			init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

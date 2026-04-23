@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Leaflet/leaflet.css" />
+		<script src="https://gw2ps.local/Leaflet/leaflet.js"></script>
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; }
+			.leaflet-interactive { pointer-events: auto !important; cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; }
+			body, html, #map { margin: 0; padding: 0; height: 100%; width: 100%; background: #000; overflow: hidden; font-family: "Crimson Text", serif; }
+
+			.map-label {
+			font-family: serif; color: #e2c07d; font-weight: bold; text-transform: uppercase;
+			white-space: nowrap; background: none !important; border: none !important;
+			pointer-events: none !important; text-align: center;
+			-webkit-text-stroke: 2px black; paint-order: stroke fill;
+			text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+			}
+			.region-label { font-size: 18px; letter-spacing: 5px; }
+			.sector-label { font-size: 12px; letter-spacing: 1px; text-transform: none; }
+			.wvw-objective-icon { background: none !important; border: none !important; }
+
+			#coord-hud {
+			position: fixed; bottom: 20px; left: 20px; z-index: 10000;
+			background: rgba(10, 8, 5, 0.85); border: 1px solid #4a3b2a; padding: 10px 15px;
+			color: #e2c07d; font-family: monospace; font-size: 12px; pointer-events: none; line-height: 1.6;
+			}
+			.coord-val { color: #ffffff; font-weight: bold; }
+
+			.compass-container {
+			position: fixed; bottom: 30px; right: 30px; z-index: 9000; width: 130px; height: 130px;
+			background: url("https://gw2ps.local/Assets/Icons/wvw_map_navigation_compass.png") center/contain no-repeat; pointer-events: none;
+			}
+			#compass-glow {
+			position: absolute; top: 48px; left: 48px; width: 34px; height: 34px; border-radius: 50%;
+			background: rgba(0, 150, 255, 0.4); box-shadow: 0 0 15px 8px rgba(0, 130, 255, 0.8);
+			opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+			}
+			.tracking-active #compass-glow { opacity: 1; animation: pulseGlow 1.2s infinite ease-in-out; }
+			@keyframes pulseGlow { 0% { transform: scale(0.9); opacity: 0.5; } 50% { transform: scale(1.05); opacity: 0.9; } 100% { transform: scale(0.9); opacity: 0.5; } }
+			.nav-hitbox { position: absolute; width: 34px; height: 34px; background: rgba(0,0,0,0); z-index: 9001; pointer-events: auto; }
+
+			#scoreboard {
+			position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10000;
+			background: rgba(10, 8, 5, 0.8); border: 1px solid #4a3b2a; padding: 10px 20px;
+			display: flex; gap: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; pointer-events: none;
+			}
+			.team-red { color: #ff4444; text-align: center; }
+			.team-blue { color: #44aaff; text-align: center; }
+			.team-green { color: #44ff44; text-align: center; }
+			.score-val { color: #ffffff; margin-left: 5px; }
+			.player-icon-container { background: none !important; border: none !important; }
+
+			/* Custom Marker UI Styles */
+			#marker-picker { display: none; position: absolute; z-index: 20000; background: rgba(10, 8, 5, 0.95); border: 1px solid #4a3b2a; padding: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.8); }
+			.marker-row { display: flex; }
+			.marker-icon-btn { width: 24px; height: 24px; cursor: pointer; margin: 2px; border: 1px solid transparent; transition: 0.2s; }
+			.marker-icon-btn:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.2); }
+			.prompt-overlay { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 8, 5, 0.98); border: 1px solid #e2c07d; padding: 20px; z-index: 20001; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.9); }
+			.prompt-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-weight: bold; margin: 0 5px; text-transform: uppercase; transition: 0.2s; }
+			.prompt-btn:hover { background: #2a221a; border-color: #e2c07d; }
+			.prompt-btn.danger { color: #ff4a4a; }
+		</style>
+	</head>
+	<body class="tracking-active">
+		<div id="map"></div>
+
+		<div id="marker-picker"></div>
+
+		<div id="marker-label-prompt" class="prompt-overlay">
+			<div style="color: #e2c07d; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Label Marker</div>
+			<input type="text" id="marker-label-input" style="background: #1a1510; border: 1px solid #4a3b2a; color: #fff; padding: 5px; width: 200px; margin-bottom: 15px; font-family: 'Crimson Text', serif;" />
+			<br>
+				<button class="prompt-btn" onclick="saveMarkerLabel()">Save</button>
+				<button class="prompt-btn" onclick="cancelMarkerLabel()">Cancel</button>
+			</div>
+
+		<div id="marker-remove-prompt" class="prompt-overlay">
+			<div style="color: #e2c07d; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Remove Marker?</div>
+			<button class="prompt-btn danger" onclick="confirmRemoveMarker()">Remove</button>
+			<button class="prompt-btn" onclick="cancelRemoveMarker()">Cancel</button>
+		</div>
+		<div id="coord-hud">
+			<div>
+				PLAYER: <span id="p-x" class="coord-val">0</span>, <span id="p-y" class="coord-val">0</span>
+			</div>
+			<div>
+				CURSOR: <span id="c-x" class="coord-val">0</span>, <span id="c-y" class="coord-val">0</span>
+			</div>
+			<div style="font-size: 10px; color: #888; margin-top: 4px; text-transform: uppercase;">
+				TRACKING: <span id="track-status" style="color:#00ff00;">ON</span>
+			</div>
+		</div>
+
+		<div id="scoreboard">
+			<div class="team-red">
+				<span id="name-red">RED</span>
+				<span id="score-red" class="score-val">0</span>
+				<div id="skirmish-red" style="font-size: 10px; color: #ff4a4a; margin-top: -2px;">+ 0</div>
+			</div>
+			<div class="team-green">
+				<span id="name-green">GREEN</span>
+				<span id="score-green" class="score-val">0</span>
+				<div id="skirmish-green" style="font-size: 10px; color: #4ae25b; margin-top: -2px;">+ 0</div>
+			</div>
+			<div class="team-blue">
+				<span id="name-blue">BLUE</span>
+				<span id="score-blue" class="score-val">0</span>
+				<div id="skirmish-blue" style="font-size: 10px; color: #4a90e2; margin-top: -2px;">+ 0</div>
+			</div>
+		</div>
+
+		<div class="compass-container">
+			<div id="compass-glow"></div>
+			<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)" onmouseover="showTip('Track Player', event)" onmouseout="hideTip()"></div>
+			<div id="nav-eotm" class="nav-hitbox" style="top:0px; left:0px;" onclick="jump('Edge of the Mists')" onmouseover="showTip('Edge of the Mists', event)" onmouseout="hideTip()"></div>
+			<div id="nav-green" class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Green Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
+			<div id="nav-blue" class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Blue Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
+			<div id="nav-eb" class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Eternal Battlegrounds')" onmouseover="showTip('Eternal Battlegrounds', event)" onmouseout="hideTip()"></div>
+			<div id="nav-red" class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Red Desert Borderlands')" onmouseover="showTip(this.dataset.name || 'Desert Borderlands', event)" onmouseout="hideTip()"></div>
+			<div id="nav-pvp" class="nav-hitbox" style="bottom:0px; right:0px;" onclick="jump('Heart of the Mists')" onmouseover="showTip('Heart of the Mists', event)" onmouseout="hideTip()"></div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			var isTracking = true;
+			var layerToggles = { 'poi': true, 'waypoint': true, 'vista': true, 'heropoint': true, 'sector': true, 'borders': true, 'overlay': true, 'map_text': true, 'camps': true, 'towers': true, 'keeps': true, 'castles': true, 'ruins': true, 'scoreboard': true, 'personal_markers': true };
+			var subLayers = { 'poi': L.layerGroup(), 'waypoint': L.layerGroup(), 'vista': L.layerGroup(), 'heropoint': L.layerGroup(), 'sector': L.layerGroup(), 'borders': L.layerGroup(), 'overlay': L.layerGroup(), 'map_text': L.layerGroup(), 'camps': L.layerGroup(), 'towers': L.layerGroup(), 'keeps': L.layerGroup(), 'castles': L.layerGroup(), 'ruins': L.layerGroup() };
+
+			var map = L.map("map", { crs: L.extend({}, L.CRS.Simple, { transformation: new L.Transformation(1/128, 0, 1/128, 0) }), minZoom: 1, maxZoom: 7, zoomControl: false, attributionControl: false, doubleClickZoom: false });
+			map.createPane('staticPane').style.zIndex = 640;
+			map.createPane('iconPane').style.zIndex = 650;
+			map.createPane('textPane').style.zIndex = 700; map.getPane('textPane').style.pointerEvents = 'none';
+			map.createPane('playerPane').style.zIndex = 800; map.getPane('playerPane').style.pointerEvents = 'none';
+			
+			// NEW PANE & LAYER FOR CUSTOM MARKERS
+			map.createPane('customMarkerPane').style.zIndex = 850;
+			var customMarkersLayer = L.layerGroup().addTo(map);
+
+			L.tileLayer("https://tiles.guildwars2.com/2/1/{z}/{x}/{y}.jpg", { noWrap: true }).addTo(map);
+			map.setView([10605, 14580], 4);
+			Object.values(subLayers).forEach(l => l.addTo(map));
+
+			var pMarker = L.marker([0, 0], { interactive: false, pane: 'playerPane', icon: L.divIcon({ className: 'player-icon-container', html: '<img id="pImg" src="https://gw2ps.local/Assets/Icons/player_icon.png" style="width:32px;height:32px;" />', iconSize: [32, 32], iconAnchor: [16, 16] }) }).addTo(map);
+
+			function showTip(txt, e) { window.parent.postMessage({action:'showTooltip', text:txt, x:e.clientX, y:e.clientY, offsetTop:45}, '*'); }
+			function hideTip() { window.parent.postMessage({action:'hideTooltip'}, '*'); }
+
+			window.toggleMapLayer = function(name, isVisible) {
+				layerToggles[name] = isVisible;
+				if (name === 'scoreboard') {
+					document.getElementById('scoreboard').style.display = isVisible ? 'flex' : 'none';
+				}
+				updateZoomVisibility();
+			};
+
+			function updateZoomVisibility() {
+				var z = map.getZoom();
+				if (z >= 5) {
+					if (layerToggles['sector']) map.addLayer(subLayers['sector']); else map.removeLayer(subLayers['sector']);
+					map.removeLayer(subLayers['map_text']);
+				} else {
+					map.removeLayer(subLayers['sector']);
+					if (layerToggles['map_text']) map.addLayer(subLayers['map_text']); else map.removeLayer(subLayers['map_text']);
+				}
+				if (layerToggles['borders']) map.addLayer(subLayers['borders']); else map.removeLayer(subLayers['borders']);
+				if (layerToggles['overlay']) map.addLayer(subLayers['overlay']); else map.removeLayer(subLayers['overlay']);
+				if (layerToggles['personal_markers']) map.addLayer(customMarkersLayer); else map.removeLayer(customMarkersLayer);
+
+				['poi', 'waypoint', 'vista', 'heropoint', 'camps', 'towers', 'keeps', 'castles', 'ruins'].forEach(key => {
+					if (layerToggles[key]) map.addLayer(subLayers[key]); else map.removeLayer(subLayers[key]);
+				});
+			}
+
+			// --- CUSTOM MARKER LOGIC ---
+			var mapStorageKey = 'gw2_custom_markers_wvw';
+			var mSettings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			var mScale = mSettings.markerScale !== undefined ? (mSettings.markerScale / 100) : 1.0;
+			var mSize = 24 * mScale;
+			var mAnchor = 12 * mScale;
+
+			window.pendingMarkerLatLng = null;
+			window.pendingMarkerIcon = '';
+			window.markerToRemoveId = null;
+			window.markerToRemoveLayer = null;
+
+			const customIconsGrid = [
+				['marker_achie_blue.png', 'marker_achie_green.png', 'marker_achie_pink.png', 'marker_achie_red.png', 'marker_achie_yellow.png'],
+				['marker_castle_blue.png', 'marker_castle_green.png', 'marker_castle_pink.png', 'marker_castle_red.png', 'marker_castle_yellow.png'],
+				['marker_chest_blue.png', 'marker_chest_green.png', 'marker_chest_pink.png', 'marker_chest_red.png', 'marker_chest_yellow.png'],
+				['marker_shield_blue.png', 'marker_shield_green.png', 'marker_shield_pink.png', 'marker_shield_red.png', 'marker_shield_yellow.png'],
+				['marker_star_blue.png', 'marker_star_green.png', 'marker_star_pink.png', 'marker_star_red.png', 'marker_star_yellow.png'],
+				['marker_swords_blue.png', 'marker_swords_green.png', 'marker_swords_pink.png', 'marker_swords_red.png', 'marker_swords_yellow.png']
+			];
+
+			// Build the UI Picker Grid
+			let pickerHtml = '';
+			customIconsGrid.forEach(row => {
+				pickerHtml += '<div class="marker-row">';
+				row.forEach(icon => {
+					pickerHtml += `<img src="https://gw2ps.local/Assets/MarkerIcons/${icon}" class="marker-icon-btn" onclick="selectMarkerIcon('${icon}')" />`;
+				});
+				pickerHtml += '</div>';
+			});
+			document.getElementById('marker-picker').innerHTML = pickerHtml;
+
+			map.on('click', function(e) {
+				if (e.originalEvent.altKey) {
+					window.pendingMarkerLatLng = e.latlng;
+					let picker = document.getElementById('marker-picker');
+					let px = e.containerPoint.x;
+					let py = e.containerPoint.y;
+					
+					// Adjust if too close to edge to prevent clipping
+					if (px + 160 > window.innerWidth) px = window.innerWidth - 160;
+					if (py + 180 > window.innerHeight) py = window.innerHeight - 180;
+					
+					picker.style.left = px + 'px';
+					picker.style.top = py + 'px';
+					picker.style.display = 'block';
+				} else {
+					document.getElementById('marker-picker').style.display = 'none';
+				}
+			});
+
+			window.selectMarkerIcon = function(iconFile) {
+				document.getElementById('marker-picker').style.display = 'none';
+				window.pendingMarkerIcon = iconFile;
+				document.getElementById('marker-label-input').value = "";
+				document.getElementById('marker-label-prompt').style.display = 'block';
+				document.getElementById('marker-label-input').focus();
+			};
+
+			window.saveMarkerLabel = function() {
+				let label = document.getElementById('marker-label-input').value;
+				document.getElementById('marker-label-prompt').style.display = 'none';
+				addCustomMarker(window.pendingMarkerLatLng.lat, window.pendingMarkerLatLng.lng, window.pendingMarkerIcon, label, true);
+			};
+
+			window.cancelMarkerLabel = function() {
+				document.getElementById('marker-label-prompt').style.display = 'none';
+			};
+
+			window.promptRemoveMarker = function(id, layer) {
+				window.markerToRemoveId = id;
+				window.markerToRemoveLayer = layer;
+				document.getElementById('marker-remove-prompt').style.display = 'block';
+			};
+
+			window.confirmRemoveMarker = function() {
+				if(window.markerToRemoveLayer) {
+					customMarkersLayer.removeLayer(window.markerToRemoveLayer);
+					let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
+					markers = markers.filter(m => m.id !== window.markerToRemoveId);
+					localStorage.setItem(mapStorageKey, JSON.stringify(markers));
+				}
+				document.getElementById('marker-remove-prompt').style.display = 'none';
+				hideTip();
+			};
+
+			window.cancelRemoveMarker = function() {
+				document.getElementById('marker-remove-prompt').style.display = 'none';
+			};
+
+			function addCustomMarker(lat, lng, iconFile, label, save, existingId) {
+				let id = existingId ? existingId : (lat + '_' + lng + '_' + Date.now());
+				let m = L.marker([lat, lng], {
+					pane: 'customMarkerPane',
+					icon: L.icon({ iconUrl: "https://gw2ps.local/Assets/MarkerIcons/" + iconFile, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] })
+				});
+				if (label) {
+					m.on('mouseover', e => showTip(label, e.originalEvent));
+					m.on('mouseout', hideTip);
+				}
+				m.on('click', function(e) {
+					L.DomEvent.stopPropagation(e);
+					window.promptRemoveMarker(id, m);
+				});
+				customMarkersLayer.addLayer(m);
+
+				if (save) {
+					let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
+					markers.push({ id: id, lat: lat, lng: lng, icon: iconFile, label: label });
+					localStorage.setItem(mapStorageKey, JSON.stringify(markers));
+				}
+			}
+
+			function loadCustomMarkers() {
+				let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
+				markers.forEach(m => addCustomMarker(m.lat, m.lng, m.icon, m.label, false, m.id));
+			}
+			// --- END CUSTOM MARKER LOGIC ---
+
+			map.on("dragstart", function() { if (isTracking) window.setTracking(false); });
+			map.on('mousemove', function(e) { document.getElementById('c-x').innerText = Math.round(e.latlng.lng); document.getElementById('c-y').innerText = Math.round(e.latlng.lat); });
+			map.on("zoomend", updateZoomVisibility);
+
+			window.setTracking = function(v) {
+				isTracking = v; document.body.classList.toggle("tracking-active", v);
+				document.getElementById("track-status").innerText = v ? "ON" : "OFF";
+				document.getElementById("track-status").style.color = v ? "#00ff00" : "#ff0000";
+				if(v) map.setView(pMarker.getLatLng(), map.getZoom(), { animate: true });
+			};
+
+			window.updatePlayerLocation = function(x, y, cx, cz) {
+				var pos = [parseFloat(y), parseFloat(x)]; pMarker.setLatLng(pos);
+				document.getElementById("p-x").innerText = Math.round(x); document.getElementById("p-y").innerText = Math.round(y);
+				if (isTracking) map.setView(pos, map.getZoom(), { animate: false });
+				var el = document.getElementById("pImg");
+				if (el) { var angle = (Math.atan2(cx, cz) * (180 / Math.PI)) + 180; el.style.transform = "rotate(" + angle + "deg)"; }
+			};
+
+			window.jump = function(l) {
+				var coords = { 'Red Desert Borderlands': [12516, 6918], 'Green Alpine Borderlands': [10119, 10774], 'Blue Alpine Borderlands': [11884, 14086], 'Eternal Battlegrounds': [14580, 10605], 'Edge of the Mists': [10000, 7545], 'Heart of the Mists': [15525, 12695] };
+				if(coords[l]) { window.setTracking(false); map.flyTo(coords[l], 4); }
+			};
+
+			async function initWvW() {
+				loadCustomMarkers(); // Load saved custom markers
+				await loadStaticMapData();
+				var key = localStorage.getItem('gw2_active_key');
+				if(!key) return;
+				try {
+					const accRes = await fetch("https://api.guildwars2.com/v2/account?access_token=" + key);
+					if(!accRes.ok) return;
+					const accData = await accRes.json();
+					const lookupId = accData.wvw_team || accData.world; 
+					const matchEndpoint = accData.wvw_team ? `wvw_team=${lookupId}` : `world=${lookupId}`;
+					const fetchMatch = async () => {
+						const matchRes = await fetch(`https://api.guildwars2.com/v2/wvw/matches?${matchEndpoint}`);
+						if(matchRes.ok) {
+							const matchData = await matchRes.json();
+							updateScoreboard(matchData);
+							loadDynamicObjectives(matchData);
+						}
+					};
+					await fetchMatch();
+					setInterval(fetchMatch, 30000);
+				} catch(e) {}
+			}
+
+			async function updateScoreboard(matchData) {
+				document.getElementById('score-red').innerText = matchData.scores.red;
+				document.getElementById('score-blue').innerText = matchData.scores.blue;
+				document.getElementById('score-green').innerText = matchData.scores.green;
+				
+				if (matchData.skirmishes && matchData.skirmishes.length > 0) {
+					let currentSkirmish = matchData.skirmishes[matchData.skirmishes.length - 1];
+					document.getElementById('skirmish-red').innerText = "+ " + currentSkirmish.scores.red;
+					document.getElementById('skirmish-blue').innerText = "+ " + currentSkirmish.scores.blue;
+					document.getElementById('skirmish-green').innerText = "+ " + currentSkirmish.scores.green;
+				}
+
+				document.getElementById('name-red').innerText = "RED";
+				document.getElementById('name-blue').innerText = "BLUE";
+				document.getElementById('name-green').innerText = "GREEN";
+				
+				document.getElementById('nav-red').dataset.name = "Desert Borderlands";
+				document.getElementById('nav-blue').dataset.name = "Alpine Borderlands";
+				document.getElementById('nav-green').dataset.name = "Alpine Borderlands";
+			}
+
+			async function loadDynamicObjectives(matchData) {
+				if(!window.objDetails) {
+					const objRes = await fetch("https://api.guildwars2.com/v2/wvw/objectives?ids=all");
+					if(objRes.ok) {
+						const allObjs = await objRes.json();
+						window.objDetails = {};
+						allObjs.forEach(o => { window.objDetails[o.id] = o; });
+					} else return;
+				}
+				['camps', 'towers', 'keeps', 'castles', 'ruins'].forEach(k => subLayers[k].clearLayers());
+				matchData.maps.forEach(m => {
+					m.objectives.forEach(obj => {
+						const details = window.objDetails[obj.id];
+						if(!details) return;
+						
+						const rawCoord = details.coord || details.label_coord;
+						if(!rawCoord || rawCoord.length < 2) return;
+						
+						const pos = [rawCoord[1], rawCoord[0]];
+						const owner = (obj.owner || 'Neutral').toLowerCase();
+						let colorHex = owner === 'red' ? '#ff4a4a' : owner === 'blue' ? '#4a90e2' : owner === 'green' ? '#4ae25b' : '#aaaaaa';
+						if (details.sector_id) {
+							if (window.sectorBorders && window.sectorBorders[details.sector_id]) window.sectorBorders[details.sector_id].setStyle({ color: colorHex });
+							if (window.sectorPolygons && window.sectorPolygons[details.sector_id]) window.sectorPolygons[details.sector_id].setStyle({ fillColor: colorHex, fillOpacity: 0.15 });
+						}
+						
+						let size = 20 * mScale;
+						let layerKey = 'ruins';
+						let defaultIcon = "https://wiki.guildwars2.com/images/9/94/Supply.png";
+						
+						if (details.type === 'Castle') { layerKey = 'castles'; size = 36 * mScale; defaultIcon = "https://render.guildwars2.com/file/A26E7E91823B5CBE63E5104BD660B95701ACDCC2/358412.png"; }
+						else if (details.type === 'Keep') { layerKey = 'keeps'; size = 30 * mScale; defaultIcon = "https://render.guildwars2.com/file/9986FAAA0F9DFF1FC016912E3B13C6DDB8A4621A/358413.png"; }
+						else if (details.type === 'Tower') { layerKey = 'towers'; size = 24 * mScale; defaultIcon = "https://render.guildwars2.com/file/B2724D41A2BC4A5DECE76BBA346DF3DBBC42EF45/358416.png"; }
+						else if (details.type === 'Camp') { layerKey = 'camps'; size = 20 * mScale; defaultIcon = "https://render.guildwars2.com/file/015D365A08AAE105287A100A6D1E1FA4BDBB6358/358414.png"; }
+						else if (details.type === 'Mercenary') { layerKey = 'camps'; size = 20 * mScale; defaultIcon = "https://wiki.guildwars2.com/images/4/40/Event_poleaxes.png"; }
+						else if (details.type === 'Ruins') { layerKey = 'ruins'; size = 18 * mScale; defaultIcon = "https://wiki.guildwars2.com/images/9/94/Supply.png"; }
+						
+						let finalMarker = details.marker || defaultIcon;
+						let iconHtml = `<div style="background-color: ${colorHex}; border-radius: 50%; width: ${size}px; height: ${size}px; border: 2px solid #000; box-shadow: 0 0 5px rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center;"><img src="${finalMarker}" style="width: 80%; height: 80%;" /></div>`;
+						let mkr = L.marker(pos, { pane: 'iconPane', icon: L.divIcon({ className: 'wvw-objective-icon', html: iconHtml, iconSize: [size, size], iconAnchor: [size/2, size/2] }) });
+						mkr.on('mouseover', e => showTip(details.name + " (" + obj.owner + ")", e.originalEvent));
+						mkr.on('mouseout', hideTip);
+						if (details.chat_link) mkr.on('click', () => { navigator.clipboard.writeText(details.chat_link); window.parent.postMessage({action:'toast', msg:'CHATLINK COPIED'}, '*'); });
+						mkr.addTo(subLayers[layerKey]);
+					});
+				});
+				updateZoomVisibility();
+			}
+
+			async function loadStaticMapData() {
+				const wvwMaps = [38, 95, 96, 1099, 968, 350];
+				window.sectorPolygons = {}; window.sectorBorders = {};
+				const mapLabels = [
+					{ name: "Desert Borderlands", coords: [12516, 6918] }, 
+					{ name: "Alpine Borderlands", coords: [10119, 10774] }, 
+					{ name: "Alpine Borderlands", coords: [11884, 14086] }, 
+					{ name: "Eternal Battlegrounds", coords: [14580, 10605] },
+					{ name: "Edge of the Mists", coords: [10000, 7545] },
+					{ name: "Heart of the Mists", coords: [15525, 12695] }
+				];
+				mapLabels.forEach(ml => {
+					let m = L.marker(ml.coords, { pane: 'textPane', interactive: false, icon: L.divIcon({ className: 'map-label region-label', html: ml.name, iconSize: [400, 40] }) });
+					m.addTo(subLayers['map_text']);
+				});
+				for (let mapId of wvwMaps) {
+					try {
+						const mapRes = await fetch(`https://api.guildwars2.com/v2/maps/${mapId}`);
+						if(!mapRes.ok) continue;
+						const mapDef = await mapRes.json();
+						const res = await fetch(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapId}`);
+						if(!res.ok) continue;
+						const data = await res.json();
+						
+						Object.values(data.points_of_interest || {}).forEach(p => {
+							if (p.name && p.name.includes("Emergency Waypoint")) return;
+							let type = p.type ? p.type.toLowerCase() : 'landmark';
+							let iconUrl = "https://gw2ps.local/Assets/Icons/poi_discovered.png";
+							let layerTarget = 'poi';
+							
+							if(type === 'unlock' || type === 'skill' || type === 'heropoint') {
+								iconUrl = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
+								layerTarget = 'heropoint';
+							} else if(type === 'waypoint') {
+								iconUrl = "https://gw2ps.local/Assets/Icons/waypoint_discovered.png";
+								layerTarget = 'waypoint';
+							} else if(type === 'vista') {
+								iconUrl = "https://gw2ps.local/Assets/Icons/vista_discovered.png";
+								layerTarget = 'vista';
+							}
+							
+							let m = L.marker([p.coord[1], p.coord[0]], { pane: 'staticPane', icon: L.icon({ iconUrl: iconUrl, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
+							m.on('mouseover', e => showTip(p.name || type, e.originalEvent));
+							m.on('mouseout', hideTip);
+							if (p.chat_link) m.on('click', () => { navigator.clipboard.writeText(p.chat_link); window.parent.postMessage({action:'toast', msg:'CHATLINK COPIED'}, '*'); });
+							subLayers[layerTarget].addLayer(m);
+						});
+
+						(data.skill_challenges || []).forEach(p => {
+							let iconUrl = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
+							let m = L.marker([p.coord[1], p.coord[0]], { pane: 'staticPane', icon: L.icon({ iconUrl: iconUrl, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
+							m.on('mouseover', e => showTip("Hero Point", e.originalEvent));
+							m.on('mouseout', hideTip);
+							subLayers['heropoint'].addLayer(m);
+						});
+
+						Object.values(data.sectors || {}).forEach(s => {
+							if (s.coord) {
+								let m = L.marker([s.coord[1], s.coord[0]], { pane: 'textPane', interactive: false, icon: L.divIcon({ className: 'map-label sector-label', html: s.name, iconSize: [200, 40] }) });
+								m.addTo(subLayers['sector']);
+							}
+							if (s.bounds && s.bounds.length > 0) {
+								let latlngs = s.bounds.map(b => [b[1], b[0]]);
+								let border = L.polygon(latlngs, { color: '#4a3b2a', weight: 2, fillOpacity: 0, interactive: false, pane: 'iconPane' });
+								border.addTo(subLayers['borders']);
+								window.sectorBorders[s.id] = border;
+								let overlay = L.polygon(latlngs, { weight: 0, fillColor: '#000', fillOpacity: 0, interactive: false, pane: 'iconPane' });
+								overlay.addTo(subLayers['overlay']);
+								window.sectorPolygons[s.id] = overlay;
+							}
+						});
+					} catch(e) {}
+				}
+				let savedWvW = JSON.parse(localStorage.getItem('gw2_wvw_settings') || '{}');
+				Object.keys(savedWvW).forEach(layer => { layerToggles[layer] = savedWvW[layer]; });
+				if (layerToggles['scoreboard'] === false) document.getElementById('scoreboard').style.display = 'none';
+				updateZoomVisibility();
+			}
+			window.addEventListener("message", function(event) { if (event.data && event.data.action === 'toggleMapLayer') window.toggleMapLayer(event.data.name, event.data.isVisible); });
+			initWvW();
+			/*]]>*/
+		</script>
+	</body>
+</html>

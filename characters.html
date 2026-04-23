@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10, 8, 5, 0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-thumb:hover { background: #e2c07d; }
+
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body {
+			background: transparent; color: #e2c07d; font-family: "Crimson Text", serif;
+			padding: 20px; overflow-x: hidden; height: 100vh; display: flex;
+			flex-direction: column; margin: 0; text-transform: uppercase;
+			}
+
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; letter-spacing: 1px; color: #8a7a5f; }
+
+			.account-summary { background: rgba(20, 15, 10, 0.9); border: 1px solid #4a3b2a; padding: 10px; margin-bottom: 20px; text-align: center; }
+			.total-playtime { font-size: 14px; color: #f0dca5; font-family: monospace; letter-spacing: 1px; }
+
+			#char-list { flex-grow: 1; overflow-y: auto; padding-right: 5px; display: flex; flex-direction: column; gap: 10px; }
+
+			.char-card { background: rgba(20, 15, 10, 0.8); border: 1px solid #3d3125; display: flex; flex-direction: column; padding: 12px; gap: 8px; transition: 0.2s; }
+			.char-card:hover { border-color: #e2c07d; background: rgba(30, 25, 20, 0.9); }
+
+			.char-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dotted #4a3b2a; padding-bottom: 6px; }
+			.char-identity { display: flex; align-items: center; gap: 8px; }
+
+			.char-race-img { height: 22px; width: 22px; object-fit: contain; flex-shrink: 0; filter: drop-shadow(0 0 2px #000); }
+			.char-name { font-size: 18px; font-weight: bold; color: #f0dca5; letter-spacing: 1px; line-height: 1; }
+			.char-meta { font-size: 13px; color: #8a7a5f; line-height: 1; }
+
+			.char-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 20px; margin-top: 6px; }
+			.stat-item { font-size: 12px; display: flex; justify-content: space-between; font-family: monospace; border-bottom: 1px solid rgba(74, 59, 42, 0.3); }
+			.stat-label { color: #8a7a5f; }
+			.stat-val { color: #e2c07d; }
+
+			.char-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+
+			.crafting-list, .unlocks-list { display: flex; gap: 10px; flex-wrap: wrap; }
+
+			.badge {
+			display: flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.4);
+			padding: 4px 8px; border: 1px solid #2a2015; border-radius: 3px; font-size: 12px;
+			transition: border-color 0.1s;
+			}
+			.badge:hover { border-color: #e2c07d; }
+			.badge img { width: 18px; height: 18px; object-fit: contain; pointer-events: none; }
+			.badge span { pointer-events: none; }
+			.craft-max { color: #00ff00; }
+			.unlock-val { color: #f0dca5; font-family: monospace; }
+
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .char-name { font-size: 22px; }
+			body.ui-large .char-meta { font-size: 15px; }
+			body.ui-large .char-race-img { height: 26px; width: 26px; }
+			body.ui-large .stat-item { font-size: 14px; }
+			body.ui-large .badge { font-size: 14px; padding: 6px 12px; }
+			body.ui-large .badge img { width: 24px; height: 24px; }
+			body.ui-large .total-playtime { font-size: 18px; }
+		</style>
+	</head>
+	<body>
+
+		<div class="account-summary">
+			<div class="total-playtime" id="acc-total-time">Total Playtime: 0 HRS</div>
+		</div>
+
+		<div class="section-title">Character Roster</div>
+		<div id="char-list">
+			<div class="loading">
+				<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
+				<div>SYNCING ROSTER DATA...</div>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			const guildCache = {};
+
+			function formatBirthDate(dateStr) {
+				const d = new Date(dateStr);
+				const day = d.getDate();
+				const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+				return `${day} ${monthNames[d.getMonth()]} ${d.getFullYear()}, ${String(d.getHours()).padStart(2, '0')}.${String(d.getMinutes()).padStart(2, '0')}`;
+			}
+
+			function formatLastLogin(dateStr) {
+				if (!dateStr) return "NEVER";
+				const d = new Date(dateStr);
+				return d.toLocaleDateString() + " " + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+			}
+
+			function getDaysUntilBirthday(dateStr) {
+				const birth = new Date(dateStr);
+				const now = new Date();
+				let next = new Date(now.getFullYear(), birth.getMonth(), birth.getDate());
+				if (now > next) next.setFullYear(now.getFullYear() + 1);
+				return Math.ceil((next - now) / (1000 * 60 * 60 * 24));
+			}
+
+			async function getGuildName(guildId) {
+				if (!guildId) return "NONE";
+				if (guildCache[guildId]) return guildCache[guildId];
+				try {
+					const r = await fetch(`https://api.guildwars2.com/v2/guild/${guildId}`);
+					if (r.ok) {
+						const data = await r.json();
+						guildCache[guildId] = `[${data.tag}] ${data.name}`;
+						return guildCache[guildId];
+					}
+				} catch (e) {}
+				return "UNKNOWN";
+			}
+
+			function showTip(text, event) {
+				window.parent.postMessage({ action: 'showTooltip', text: text, x: event.clientX, y: event.clientY, offsetTop: 0 }, '*');
+			}
+
+			function hideTip() {
+				window.parent.postMessage({ action: 'hideTooltip' }, '*');
+			}
+
+			async function init() {
+				// Apply UI scale on load
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+				const list = document.getElementById('char-list');
+				const timeDisplay = document.getElementById('acc-total-time');
+				const activeKey = localStorage.getItem('gw2_active_key');
+
+				if (!activeKey) {
+					list.innerHTML = `
+					<div class="loading">
+						<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;">
+							<div>No API Key detected.</div>
+						</div>`;
+					return;
+				}
+
+				try {
+					const response = await fetch(`https://api.guildwars2.com/v2/characters?page=0&page_size=200&v=latest&access_token=${activeKey}`);
+					if (!response.ok) throw new Error("Unauthorized");
+
+					const chars = await response.json();
+					let totalSeconds = 0;
+					chars.forEach(c => totalSeconds += c.age);
+					timeDisplay.innerText = `Total Playtime: ${Math.floor(totalSeconds / 3600)} HRS`;
+
+					list.innerHTML = '';
+					
+					// Sort and render
+					for (const c of chars.sort((a,b) => a.name.localeCompare(b.name))) {
+						const card = document.createElement('div');
+						card.className = 'char-card';
+
+						const hoursPlayed = Math.floor(c.age / 3600);
+						const guildName = await getGuildName(c.guild);
+
+						let craftHtml = '';
+						let activeLicenses = 0;
+						if (c.crafting) {
+							c.crafting.forEach(cr => {
+								if (cr.active) activeLicenses++;
+								const icon = `https://gw2ps.local/Assets/Icons/craft_${cr.discipline.toLowerCase()}.png`;
+								craftHtml += `<div class="badge" onmouseover="showTip('${cr.discipline} (${cr.rating})', event)" onmouseout="hideTip()">
+									<img src="${icon}" onerror="this.style.display='none'">
+										<span class="${cr.rating >= 400 ? 'craft-max' : ''}">${cr.rating}</span>
+									</div>`;
+							});
+						}
+
+						const bagExpansions = Math.max(0, (c.bags ? c.bags.length : 0) - 5);
+						const buildTabs = c.build_tabs_unlocked || 3;
+						const equipTabs = c.equipment_tabs_unlocked || 2;
+
+						let unlockHtml = `
+						<div class="badge" onmouseover="showTip('Bag Slot Expansions', event)" onmouseout="hideTip()">
+							<img src="https://render.guildwars2.com/file/6AECEE0A0704F069B3776BC66516EB2F0E0DE644/66588.png">
+								<span class="unlock-val">${bagExpansions}</span>
+							</div>
+						<div class="badge" onmouseover="showTip('Active Crafting Licenses', event)" onmouseout="hideTip()">
+							<img src="https://render.guildwars2.com/file/F23275B76B74B907D8A0BE9F3BA066094CAE90FD/819619.png">
+								<span class="unlock-val">${activeLicenses}</span>
+							</div>
+						<div class="badge" onmouseover="showTip('Build Template Tabs', event)" onmouseout="hideTip()">
+							<img src="https://render.guildwars2.com/file/DA2B54C2B7F9F1804DAEB0F4A8E44A4459A20B04/2215700.png">
+								<span class="unlock-val">${buildTabs}</span>
+							</div>
+						<div class="badge" onmouseover="showTip('Equipment Template Tabs', event)" onmouseout="hideTip()">
+							<img src="https://render.guildwars2.com/file/A615CE6395B4345715EEFA5BD242F54CE3E72EAA/2215701.png">
+								<span class="unlock-val">${equipTabs}</span>
+							</div>
+						`;
+
+						card.innerHTML = `
+						<div class="char-header">
+							<div class="char-identity">
+								<img src="https://gw2ps.local/Assets/Icons/race_${c.race.toLowerCase()}.png" class="char-race-img" onerror="this.src='https://gw2ps.local/Assets/Icons/mouse_cursor.png'">
+									<span class="char-name">${c.name}</span>
+								</div>
+							<span class="char-meta">LVL ${c.level} ${c.profession}</span>
+						</div>
+						<div class="char-stats-grid">
+							<div class="stat-item">
+								<span class="stat-label">BORN:</span>
+								<span class="stat-val">${formatBirthDate(c.created)}</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-label">NEXT BIRTHDAY:</span>
+								<span class="stat-val">${getDaysUntilBirthday(c.created)} DAYS</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-label">PLAYTIME:</span>
+								<span class="stat-val">${hoursPlayed} HRS</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-label">DEATHS:</span>
+								<span class="stat-val">${c.deaths}</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-label">LAST LOGIN:</span>
+								<span class="stat-val">${formatLastLogin(c.last_modified)}</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-label">ACTIVE GUILD:</span>
+								<span class="stat-val" style="font-size: 10px;">${guildName}</span>
+							</div>
+						</div>
+						<div class="char-footer">
+							<div class="crafting-list">${craftHtml}</div>
+							<div class="unlocks-list">${unlockHtml}</div>
+						</div>
+						`;
+						list.appendChild(card);
+					}
+				} catch (err) {
+					list.innerHTML = `
+					<div class="loading" style="color:#f44;">
+						<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;">
+							<div>Error Syncing Roster</div>
+						</div>`;
+				}
+			}
+
+			window.addEventListener('message', (e) => {
+				if (e.data.action === 'switchAccount') init();
+			});
+
+			init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

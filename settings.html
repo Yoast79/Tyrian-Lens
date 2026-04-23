@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 25px; overflow-x: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.section-title { font-size: 16px; letter-spacing: 2px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin: 20px 0 10px 0; color: #8a7a5f; }
+			.section-title:first-child { margin-top: 0; }
+			.btn { width: 100%; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 12px; text-transform: uppercase; font-size: 11px; transition: 0.2s; cursor: pointer; margin-bottom: 8px; font-family: inherit; }
+			.btn:hover { background: #e2c07d; color: #1a1510; border-color: #e2c07d; }
+			.setting-control { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+			.label { font-size: 13px; color: #e2c07d; letter-spacing: 1px; }
+			select { background: #000; color: #e2c07d; border: 1px solid #4a3b2a; padding: 5px; font-family: inherit; text-transform: uppercase; }
+
+			/* Toggle Switch Styling */
+			.toggle-switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+			.toggle-switch input { opacity: 0; width: 0; height: 0; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .4s; border-radius: 20px; }
+			.slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: #8a7a5f; transition: .4s; border-radius: 50%; }
+			input:checked + .slider { background-color: #4a3b2a; border-color: #e2c07d; }
+			input:checked + .slider:before { transform: translateX(20px); background-color: #e2c07d; }
+
+			/* Range Slider Styling */
+			input[type="range"] { -webkit-appearance: none; background: transparent; outline: none; }
+			input[type="range"]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 10px; cursor: pointer; }
+			input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%; background: #8a7a5f; margin-top: -5px; cursor: pointer; transition: 0.2s; }
+			input[type="range"]::-webkit-slider-thumb:hover { background: #e2c07d; }
+
+			.btn.dimmed { opacity: 0.3; pointer-events: none; border-color: #4a3b2a; color: #8a7a5f; }
+			.btn.lit-up { opacity: 1; pointer-events: auto; border-color: #4ae25b; color: #4ae25b; text-shadow: 0 0 5px rgba(74, 226, 91, 0.5); box-shadow: 0 0 10px rgba(74, 226, 91, 0.2); }
+
+			/* Custom Modal Styles */
+			#confirm-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; }
+			.modal-content { background: #0a0805; border: 1px solid #e2c07d; padding: 25px; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.9); max-width: 300px; }
+			.modal-text { font-size: 16px; margin-bottom: 20px; color: #e2c07d; letter-spacing: 1px; line-height: 1.4; }
+			.modal-btns { display: flex; gap: 10px; }
+			.modal-btns button { flex: 1; padding: 10px; cursor: pointer; font-family: inherit; text-transform: uppercase; font-weight: bold; border: 1px solid #4a3b2a; background: #1a1510; color: #e2c07d; transition: 0.2s; }
+			.modal-btns button:hover { border-color: #e2c07d; background: #2a221a; }
+			.modal-btns .btn-danger:hover { border-color: #ff4a4a; color: #ff4a4a; }
+		</style>
+	</head>
+	<body>
+		<div class="section-title">Window & Display</div>
+
+		<div class="setting-control">
+			<span class="label">Always on Top</span>
+			<label class="toggle-switch">
+				<input type="checkbox" id="pref-ontop" onchange="updateSetting('onTop', this.checked)">
+					<span class="slider"></span>
+				</label>
+		</div>
+
+		<div class="setting-control">
+			<span class="label">Large UI Scale</span>
+			<label class="toggle-switch">
+				<input type="checkbox" id="pref-scale" onchange="updateSetting('uiScaleLarge', this.checked)">
+					<span class="slider"></span>
+				</label>
+		</div>
+
+		<div class="setting-control">
+			<span class="label">Integrated Wiki View</span>
+			<label class="toggle-switch">
+				<input type="checkbox" id="pref-wiki" onchange="updateSetting('wikiIntegrated', this.checked)">
+					<span class="slider"></span>
+				</label>
+		</div>
+
+		<div class="section-title">Time Zone</div>
+		<div class="setting-control">
+			<select id="pref-tz" style="width: 100%;" onchange="updateTimezone(this.value)">
+				<option value="local">Local Time</option>
+				<option value="UTC">UTC</option>
+				<option value="America/Los_Angeles">Pacific Time (US)</option>
+				<option value="America/New_York">Eastern Time (US)</option>
+				<option value="Europe/London">London (UK)</option>
+				<option value="Europe/Berlin">Central Europe</option>
+				<option value="Australia/Sydney">Sydney (AU)</option>
+			</select>
+		</div>
+
+		<div class="section-title">Preferred Character</div>
+		<div class="setting-control">
+			<select id="pref-char" style="width: 100%;" onchange="updateSetting('defaultChar', this.value)">
+				<option value="">No Preference</option>
+			</select>
+		</div>
+
+		<div class="section-title">Audio & Markers</div>
+		<div class="setting-control">
+			<span class="label">Master Volume</span>
+			<input type="range" id="pref-vol" min="0" max="100" style="width: 150px;" onchange="updateSetting('masterVolume', this.value)">
+		</div>
+		<div class="setting-control">
+			<span class="label">Marker Scale (%)</span>
+			<input type="range" id="pref-mscale" min="50" max="200" style="width: 150px;" oninput="checkScaleChange()" onchange="updateSetting('markerScale', this.value)">
+		</div>
+		<button id="reload-map-btn" class="btn dimmed" onclick="triggerMapReload()">Reload Map</button>
+
+		<div class="section-title">Data Management</div>
+		<button class="btn" onclick="handleRebuild('rebuildRecipes', this)">Rebuild Recipe Index</button>
+		<button class="btn" onclick="handleRebuild('rebuildTrading', this)">Rebuild Trading Index</button>
+		<button class="btn" style="color: #ff4a4a; border-color: #ff4a4a;" onclick="showConfirmModal()">Clear Application Data</button>
+
+		<div id="confirm-modal">
+			<div class="modal-content">
+				<div class="modal-text">DANGER: THIS WILL RESET ALL SETTINGS, API KEYS, AND SAVED TRACKERS. CONTINUE?</div>
+				<div class="modal-btns">
+					<button class="btn-danger" onclick="confirmClearData()">Yes, Reset</button>
+					<button onclick="hideConfirmModal()">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			const activeKey = localStorage.getItem('gw2_active_key');
+			let settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+
+			function sendAction(a, p) { window.parent.postMessage({action: a, ...(typeof p === 'object' ? p : {value: p})}, '*'); }
+            
+			function updateSetting(key, val) {
+				settings[key] = val;
+				localStorage.setItem('gw2_settings', JSON.stringify(settings));
+				
+				if (key === 'onTop') sendAction('setAlwaysOnTop', val);
+				if (key === 'uiScaleLarge') sendAction('uiScaleChanged', val ? 'large' : 'default');
+				if (key === 'wikiIntegrated') sendAction('wikiPreferenceChanged', val);
+				if (key === 'defaultChar') sendAction('preferredCharChanged', val);
+			}
+
+			function updateTimezone(val) {
+				localStorage.setItem('gw2_pref_timezone', val);
+			}
+
+			function showConfirmModal() {
+				document.getElementById('confirm-modal').style.display = 'flex';
+			}
+
+			function hideConfirmModal() {
+				document.getElementById('confirm-modal').style.display = 'none';
+			}
+
+			function confirmClearData() {
+				localStorage.clear();
+				window.parent.location.reload();
+			}
+
+			function checkScaleChange() {
+				let currentScale = document.getElementById('pref-mscale').value;
+				let btn = document.getElementById('reload-map-btn');
+				if (currentScale !== initialMarkerScale) {
+					btn.classList.remove('dimmed');
+					btn.classList.add('lit-up');
+				} else {
+					btn.classList.add('dimmed');
+					btn.classList.remove('lit-up');
+				}
+			}
+
+			function triggerMapReload() {
+				initialMarkerScale = document.getElementById('pref-mscale').value;
+				checkScaleChange();
+				sendAction('reloadMap');
+			}
+
+			function handleRebuild(action, btn) {
+				const originalText = btn.innerText;
+				btn.innerText = "REBUILDING...";
+				btn.classList.add('dimmed');
+				sendAction(action);
+				setTimeout(() => {
+					btn.innerText = originalText;
+					btn.classList.remove('dimmed');
+				}, 2500);
+			}
+
+            async function loadSettingsData() {
+                if(!activeKey) return;
+                try {
+                    const charData = await fetch(`https://api.guildwars2.com/v2/characters?access_token=${activeKey}`).then(r => r.json());
+                    
+                    if(Array.isArray(charData)) {
+                        const sel = document.getElementById('pref-char');
+                        charData.sort().forEach(c => {
+                            const opt = document.createElement('option');
+                            opt.value = c; opt.innerText = c;
+                            sel.appendChild(opt);
+                        });
+                        sel.value = settings.defaultChar || "";
+                    }
+                } catch(e) {
+                    console.error("Failed to load characters for settings");
+                }
+            }
+
+			// Initialize Toggles and Settings
+			document.getElementById('pref-ontop').checked = settings.onTop || false;
+			document.getElementById('pref-scale').checked = settings.uiScaleLarge || false;
+			document.getElementById('pref-wiki').checked = settings.wikiIntegrated ?? true;
+			document.getElementById('pref-tz').value = localStorage.getItem('gw2_pref_timezone') || 'local';
+			document.getElementById('pref-vol').value = settings.masterVolume !== undefined ? settings.masterVolume : 100;
+			document.getElementById('pref-mscale').value = settings.markerScale !== undefined ? settings.markerScale : 100;
+            
+			let initialMarkerScale = document.getElementById('pref-mscale').value;
+            loadSettingsData();
+            /*]]>*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="data:,">
+			<style>
+				* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+				body { margin: 0; background: transparent; padding: 20px; width: 580px; color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+				.section-title { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 1px; }
+				.tab-container { display: flex; gap: 2px; margin-bottom: 15px; }
+				.tab-btn { flex: 1; padding: 6px; background: rgba(74, 59, 42, 0.3); border: 1px solid #4a3b2a; color: #888; text-align: center; cursor: pointer; font-size: 11px; transition: 0.2s; }
+				.tab-btn:hover { background: rgba(226, 192, 125, 0.1); color: #fff; }
+				.tab-btn.active { background: #4a3b2a; color: #e2c07d; border-color: #e2c07d; }
+				#wardrobe-container::-webkit-scrollbar { width: 4px; }
+				#wardrobe-container::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 2px; }
+				#wardrobe-container { flex: 1; overflow-y: auto; padding-right: 12px; position: relative; }
+				.main-cat { margin-bottom: 8px; border: 1px solid #4a3b2a; background: rgba(26, 21, 16, 0.9); }
+				.sub-cat { margin: 4px 6px 4px 10px; border: 1px solid #332a1e; background: rgba(0,0,0,0.2); }
+				.weight-cat { margin: 2px 4px 4px 12px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+				.header { padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+				.header:hover { background: rgba(226, 192, 125, 0.05); }
+				.title { font-size: 12px; letter-spacing: 1px; color: #e2c07d; font-weight: bold; }
+				.sub-title { font-size: 11px; color: #e2c07d; font-weight: normal; }
+				.weight-title { font-size: 10px; color: #e2c07d; font-weight: normal; }
+				.arrow { font-size: 8px; transition: transform 0.2s; color: #4a3b2a; }
+				.collapsed .arrow { transform: rotate(-90deg); }
+				.collapsed .content { display: none; }
+				.grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; width: 100%; }
+				.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; cursor: pointer; }
+				.item-icon { width: 100%; height: 100%; object-fit: contain; }
+				.count-badge { position: absolute; top: 1px; right: 2px; font-size: 10px; color: #fff; text-shadow: 1px 1px 1px #000; font-family: sans-serif; font-weight: bold; pointer-events: none; }
+				.loading-text { text-align: center; font-size: 10px; color: #e2c07d; padding: 15px; }
+
+				/* Large UI Scaling Overrides */
+				body.ui-large { width: 700px; }
+				body.ui-large .grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
+				body.ui-large .item-slot { width: 50px; height: 50px; }
+				body.ui-large .count-badge { font-size: 12px; }
+				body.ui-large .section-title { font-size: 16px; }
+				body.ui-large .tab-btn { font-size: 13px; padding: 8px; }
+				body.ui-large .title { font-size: 14px; }
+				body.ui-large .sub-title { font-size: 13px; }
+				body.ui-large .weight-title { font-size: 12px; }
+				body.ui-large .loading-text { font-size: 12px; }
+				body.ui-large .dye-square { width: 100% !important; height: 100% !important; }
+				body.ui-large .custom-scroll-container div { font-size: 14px !important; padding: 5px 10px !important; }
+			</style>
+		</head>
+	<body>
+		<div class="section-title">Wardrobe</div>
+		<div class="tab-container">
+			<div class="tab-btn active" id="btn-unlocked">Unlocked</div>
+			<div class="tab-btn" id="btn-locked">Locked</div>
+		</div>
+		<div id="wardrobe-container"></div>
+
+		<script>
+			var armorHierarchy = {};
+			var indexes = { gear: null, appearance: null, home: null, dyes: null };
+			var accountData = {};
+
+			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+			window.addEventListener('message', (e) => {
+			if (e.data.action === 'uiScaleChanged') {
+			if (e.data.value === 'large') document.body.classList.add('ui-large');
+			else document.body.classList.remove('ui-large');
+			}
+			});
+		</script>
+
+		<script src="modules/armor.js"></script>
+		<script src="modules/weapons.js"></script>
+		<script src="modules/armory.js"></script>
+		<script src="modules/appearance.js"></script>
+		<script src="modules/collectibles.js"></script>
+		<script src="modules/home.js"></script>
+		<script src="modules/dyes.js"></script>
+		<script src="modules/core.js"></script>
+	</body>
+</html>

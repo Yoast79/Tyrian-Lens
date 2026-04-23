@@ -1,0 +1,1030 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>app_icon.ico</ApplicationIcon>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="account_search.html" />
+		<None Remove="achievements.html" />
+		<None Remove="achievement_index.json" />
+		<None Remove="api_management.html" />
+		<None Remove="appearance_index.json" />
+		<None Remove="Assets\CurrencyIcons\1010697.png" />
+		<None Remove="Assets\CurrencyIcons\1010699.png" />
+		<None Remove="Assets\CurrencyIcons\1010701.png" />
+		<None Remove="Assets\CurrencyIcons\1010702.png" />
+		<None Remove="Assets\CurrencyIcons\1029833.png" />
+		<None Remove="Assets\CurrencyIcons\1202328.png" />
+		<None Remove="Assets\CurrencyIcons\1203022.png" />
+		<None Remove="Assets\CurrencyIcons\1203046.png" />
+		<None Remove="Assets\CurrencyIcons\1203080.png" />
+		<None Remove="Assets\CurrencyIcons\1203099.png" />
+		<None Remove="Assets\CurrencyIcons\1206836.png" />
+		<None Remove="Assets\CurrencyIcons\1206837.png" />
+		<None Remove="Assets\CurrencyIcons\1207142.png" />
+		<None Remove="Assets\CurrencyIcons\1302741.png" />
+		<None Remove="Assets\CurrencyIcons\1302744.png" />
+		<None Remove="Assets\CurrencyIcons\1302745.png" />
+		<None Remove="Assets\CurrencyIcons\1313248.png" />
+		<None Remove="Assets\CurrencyIcons\1465799.png" />
+		<None Remove="Assets\CurrencyIcons\155026.png" />
+		<None Remove="Assets\CurrencyIcons\1614710.png" />
+		<None Remove="Assets\CurrencyIcons\1766338.png" />
+		<None Remove="Assets\CurrencyIcons\1767459.png" />
+		<None Remove="Assets\CurrencyIcons\1822313.png" />
+		<None Remove="Assets\CurrencyIcons\1894697.png" />
+		<None Remove="Assets\CurrencyIcons\1896039.png" />
+		<None Remove="Assets\CurrencyIcons\2010217.png" />
+		<None Remove="Assets\CurrencyIcons\2069367.png" />
+		<None Remove="Assets\CurrencyIcons\2140520.png" />
+		<None Remove="Assets\CurrencyIcons\2270830.png" />
+		<None Remove="Assets\CurrencyIcons\2270831.png" />
+		<None Remove="Assets\CurrencyIcons\2270832.png" />
+		<None Remove="Assets\CurrencyIcons\2270833.png" />
+		<None Remove="Assets\CurrencyIcons\2270834.png" />
+		<None Remove="Assets\CurrencyIcons\2270835.png" />
+		<None Remove="Assets\CurrencyIcons\2292743.png" />
+		<None Remove="Assets\CurrencyIcons\2293273.png" />
+		<None Remove="Assets\CurrencyIcons\2351816.png" />
+		<None Remove="Assets\CurrencyIcons\2596973.png" />
+		<None Remove="Assets\CurrencyIcons\2596974.png" />
+		<None Remove="Assets\CurrencyIcons\2596975.png" />
+		<None Remove="Assets\CurrencyIcons\2596976.png" />
+		<None Remove="Assets\CurrencyIcons\2596977.png" />
+		<None Remove="Assets\CurrencyIcons\2597023.png" />
+		<None Remove="Assets\CurrencyIcons\3004443.png" />
+		<None Remove="Assets\CurrencyIcons\3123700.png" />
+		<None Remove="Assets\CurrencyIcons\3123701.png" />
+		<None Remove="Assets\CurrencyIcons\3123702.png" />
+		<None Remove="Assets\CurrencyIcons\3124964.png" />
+		<None Remove="Assets\CurrencyIcons\3188140.png" />
+		<None Remove="Assets\CurrencyIcons\3442797.png" />
+		<None Remove="Assets\CurrencyIcons\3593176.png" />
+		<None Remove="Assets\CurrencyIcons\3630022.png" />
+		<None Remove="Assets\CurrencyIcons\3630023.png" />
+		<None Remove="Assets\CurrencyIcons\3630024.png" />
+		<None Remove="Assets\CurrencyIcons\3710050.png" />
+		<None Remove="Assets\CurrencyIcons\3710051.png" />
+		<None Remove="Assets\CurrencyIcons\3710074.png" />
+		<None Remove="Assets\CurrencyIcons\502065.png" />
+		<None Remove="Assets\CurrencyIcons\619316.png" />
+		<None Remove="Assets\CurrencyIcons\619317.png" />
+		<None Remove="Assets\CurrencyIcons\619318.png" />
+		<None Remove="Assets\CurrencyIcons\619319.png" />
+		<None Remove="Assets\CurrencyIcons\619320.png" />
+		<None Remove="Assets\CurrencyIcons\619321.png" />
+		<None Remove="Assets\CurrencyIcons\619322.png" />
+		<None Remove="Assets\CurrencyIcons\619323.png" />
+		<None Remove="Assets\CurrencyIcons\619324.png" />
+		<None Remove="Assets\CurrencyIcons\619325.png" />
+		<None Remove="Assets\CurrencyIcons\619326.png" />
+		<None Remove="Assets\CurrencyIcons\619327.png" />
+		<None Remove="Assets\CurrencyIcons\65724.png" />
+		<None Remove="Assets\CurrencyIcons\69116.png" />
+		<None Remove="Assets\CurrencyIcons\699004.png" />
+		<None Remove="Assets\CurrencyIcons\699005.png" />
+		<None Remove="Assets\CurrencyIcons\779571.png" />
+		<None Remove="Assets\CurrencyIcons\797790.png" />
+		<None Remove="Assets\CurrencyIcons\831466.png" />
+		<None Remove="Assets\CurrencyIcons\copper_coin.png" />
+		<None Remove="Assets\CurrencyIcons\gold_coin.png" />
+		<None Remove="Assets\CurrencyIcons\silver_coin.png" />
+		<None Remove="Assets\Icons\att_agony_resistance.png" />
+		<None Remove="Assets\Icons\att_armor.png" />
+		<None Remove="Assets\Icons\att_boon_duration.png" />
+		<None Remove="Assets\Icons\att_concentration.png" />
+		<None Remove="Assets\Icons\att_condition_damage.png" />
+		<None Remove="Assets\Icons\att_critical_chance.png" />
+		<None Remove="Assets\Icons\att_critical_damage.png" />
+		<None Remove="Assets\Icons\att_expertise.png" />
+		<None Remove="Assets\Icons\att_ferocity.png" />
+		<None Remove="Assets\Icons\att_healing_power.png" />
+		<None Remove="Assets\Icons\att_health.png" />
+		<None Remove="Assets\Icons\att_magic_find.png" />
+		<None Remove="Assets\Icons\att_power.png" />
+		<None Remove="Assets\Icons\att_precision.png" />
+		<None Remove="Assets\Icons\att_toughness.png" />
+		<None Remove="Assets\Icons\att_vitality.png" />
+		<None Remove="Assets\Icons\condition_duration.png" />
+		<None Remove="Assets\Icons\craft_armorsmith.png" />
+		<None Remove="Assets\Icons\craft_artificer.png" />
+		<None Remove="Assets\Icons\craft_chef.png" />
+		<None Remove="Assets\Icons\craft_handiworker.png" />
+		<None Remove="Assets\Icons\craft_huntsman.png" />
+		<None Remove="Assets\Icons\craft_jeweler.png" />
+		<None Remove="Assets\Icons\craft_leatherworker.png" />
+		<None Remove="Assets\Icons\craft_scribe.png" />
+		<None Remove="Assets\Icons\craft_tailor.png" />
+		<None Remove="Assets\Icons\craft_weaponsmith.png" />
+		<None Remove="Assets\Icons\heart_discovered.png" />
+		<None Remove="Assets\Icons\heropoint_discovered.png" />
+		<None Remove="Assets\Icons\Map_navigation_compass.png" />
+		<None Remove="Assets\Icons\mastery_icon.png" />
+		<None Remove="Assets\Icons\mouse_cursor.png" />
+		<None Remove="Assets\Icons\player_icon.png" />
+		<None Remove="Assets\Icons\poi_discovered.png" />
+		<None Remove="Assets\Icons\race_asura.png" />
+		<None Remove="Assets\Icons\race_charr.png" />
+		<None Remove="Assets\Icons\race_human.png" />
+		<None Remove="Assets\Icons\race_norn.png" />
+		<None Remove="Assets\Icons\race_sylvari.png" />
+		<None Remove="Assets\Icons\Tyrian_Lens.png" />
+		<None Remove="Assets\Icons\Tyrian_Lens_transparent.png" />
+		<None Remove="Assets\Icons\vista_discovered.png" />
+		<None Remove="Assets\Icons\waypoint_discovered.png" />
+		<None Remove="Assets\MarkerIcons\marker_achie_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_achie_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_achie_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_achie_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_achie_yellow.png" />
+		<None Remove="Assets\MarkerIcons\marker_castle_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_castle_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_castle_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_castle_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_castle_yellow.png" />
+		<None Remove="Assets\MarkerIcons\marker_chest_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_chest_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_chest_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_chest_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_chest_yellow.png" />
+		<None Remove="Assets\MarkerIcons\marker_shield_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_shield_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_shield_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_shield_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_shield_yellow.png" />
+		<None Remove="Assets\MarkerIcons\marker_star_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_star_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_star_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_star_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_star_yellow.png" />
+		<None Remove="Assets\MarkerIcons\marker_swords_blue.png" />
+		<None Remove="Assets\MarkerIcons\marker_swords_green.png" />
+		<None Remove="Assets\MarkerIcons\marker_swords_pink.png" />
+		<None Remove="Assets\MarkerIcons\marker_swords_red.png" />
+		<None Remove="Assets\MarkerIcons\marker_swords_yellow.png" />
+		<None Remove="Assets\MenuIcons\nav_achieve.png" />
+		<None Remove="Assets\MenuIcons\nav_api.png" />
+		<None Remove="Assets\MenuIcons\nav_bag.png" />
+		<None Remove="Assets\MenuIcons\nav_bank.png" />
+		<None Remove="Assets\MenuIcons\nav_chars.png" />
+		<None Remove="Assets\MenuIcons\nav_clears.png" />
+		<None Remove="Assets\MenuIcons\nav_farming.png" />
+		<None Remove="Assets\MenuIcons\nav_guild.png" />
+		<None Remove="Assets\MenuIcons\nav_help.png" />
+		<None Remove="Assets\MenuIcons\nav_hero.png" />
+		<None Remove="Assets\MenuIcons\nav_map.png" />
+		<None Remove="Assets\MenuIcons\nav_material.png" />
+		<None Remove="Assets\MenuIcons\nav_recipes.png" />
+		<None Remove="Assets\MenuIcons\nav_routes.png" />
+		<None Remove="Assets\MenuIcons\nav_search.png" />
+		<None Remove="Assets\MenuIcons\nav_settings.png" />
+		<None Remove="Assets\MenuIcons\nav_timers.png" />
+		<None Remove="Assets\MenuIcons\nav_tp.png" />
+		<None Remove="Assets\MenuIcons\nav_tp_delivered.png" />
+		<None Remove="Assets\MenuIcons\nav_wallet.png" />
+		<None Remove="Assets\MenuIcons\nav_wardrobe.png" />
+		<None Remove="Assets\MenuIcons\nav_wvw.png" />
+		<None Remove="Assets\Sounds\timers_noticication_papling.mp3" />
+		<None Remove="Assets\Sounds\timers_notification_babloop.mp3" />
+		<None Remove="Assets\Sounds\timers_notification_boopboop.mp3" />
+		<None Remove="Assets\Sounds\timers_notification_prrring.mp3" />
+		<None Remove="bank.html" />
+		<None Remove="characters.html" />
+		<None Remove="clears.html" />
+		<None Remove="crafting_data.js" />
+		<None Remove="currencies.html" />
+		<None Remove="CurrencyIcons\1010697.png" />
+		<None Remove="CurrencyIcons\1010699.png" />
+		<None Remove="CurrencyIcons\1010701.png" />
+		<None Remove="CurrencyIcons\1010702.png" />
+		<None Remove="CurrencyIcons\1029833.png" />
+		<None Remove="CurrencyIcons\1202328.png" />
+		<None Remove="CurrencyIcons\1203022.png" />
+		<None Remove="CurrencyIcons\1203046.png" />
+		<None Remove="CurrencyIcons\1203080.png" />
+		<None Remove="CurrencyIcons\1203099.png" />
+		<None Remove="CurrencyIcons\1206836.png" />
+		<None Remove="CurrencyIcons\1206837.png" />
+		<None Remove="CurrencyIcons\1207142.png" />
+		<None Remove="CurrencyIcons\1302741.png" />
+		<None Remove="CurrencyIcons\1302744.png" />
+		<None Remove="CurrencyIcons\1302745.png" />
+		<None Remove="CurrencyIcons\1313248.png" />
+		<None Remove="CurrencyIcons\1465799.png" />
+		<None Remove="CurrencyIcons\155026.png" />
+		<None Remove="CurrencyIcons\1614710.png" />
+		<None Remove="CurrencyIcons\1766338.png" />
+		<None Remove="CurrencyIcons\1767459.png" />
+		<None Remove="CurrencyIcons\1822313.png" />
+		<None Remove="CurrencyIcons\1894697.png" />
+		<None Remove="CurrencyIcons\1896039.png" />
+		<None Remove="CurrencyIcons\2010217.png" />
+		<None Remove="CurrencyIcons\2069367.png" />
+		<None Remove="CurrencyIcons\2140520.png" />
+		<None Remove="CurrencyIcons\2270830.png" />
+		<None Remove="CurrencyIcons\2270831.png" />
+		<None Remove="CurrencyIcons\2270832.png" />
+		<None Remove="CurrencyIcons\2270833.png" />
+		<None Remove="CurrencyIcons\2270834.png" />
+		<None Remove="CurrencyIcons\2270835.png" />
+		<None Remove="CurrencyIcons\2292743.png" />
+		<None Remove="CurrencyIcons\2293273.png" />
+		<None Remove="CurrencyIcons\2351816.png" />
+		<None Remove="CurrencyIcons\2596973.png" />
+		<None Remove="CurrencyIcons\2596974.png" />
+		<None Remove="CurrencyIcons\2596975.png" />
+		<None Remove="CurrencyIcons\2596976.png" />
+		<None Remove="CurrencyIcons\2596977.png" />
+		<None Remove="CurrencyIcons\2597023.png" />
+		<None Remove="CurrencyIcons\3004443.png" />
+		<None Remove="CurrencyIcons\3123700.png" />
+		<None Remove="CurrencyIcons\3123701.png" />
+		<None Remove="CurrencyIcons\3123702.png" />
+		<None Remove="CurrencyIcons\3124964.png" />
+		<None Remove="CurrencyIcons\3188140.png" />
+		<None Remove="CurrencyIcons\3442797.png" />
+		<None Remove="CurrencyIcons\3593176.png" />
+		<None Remove="CurrencyIcons\3630022.png" />
+		<None Remove="CurrencyIcons\3630023.png" />
+		<None Remove="CurrencyIcons\3630024.png" />
+		<None Remove="CurrencyIcons\3710050.png" />
+		<None Remove="CurrencyIcons\3710051.png" />
+		<None Remove="CurrencyIcons\3710074.png" />
+		<None Remove="CurrencyIcons\502065.png" />
+		<None Remove="CurrencyIcons\619316.png" />
+		<None Remove="CurrencyIcons\619317.png" />
+		<None Remove="CurrencyIcons\619318.png" />
+		<None Remove="CurrencyIcons\619319.png" />
+		<None Remove="CurrencyIcons\619320.png" />
+		<None Remove="CurrencyIcons\619321.png" />
+		<None Remove="CurrencyIcons\619322.png" />
+		<None Remove="CurrencyIcons\619323.png" />
+		<None Remove="CurrencyIcons\619324.png" />
+		<None Remove="CurrencyIcons\619325.png" />
+		<None Remove="CurrencyIcons\619326.png" />
+		<None Remove="CurrencyIcons\619327.png" />
+		<None Remove="CurrencyIcons\65724.png" />
+		<None Remove="CurrencyIcons\69116.png" />
+		<None Remove="CurrencyIcons\699004.png" />
+		<None Remove="CurrencyIcons\699005.png" />
+		<None Remove="CurrencyIcons\779571.png" />
+		<None Remove="CurrencyIcons\797790.png" />
+		<None Remove="CurrencyIcons\831466.png" />
+		<None Remove="CurrencyIcons\copper_coin.png" />
+		<None Remove="CurrencyIcons\gold_coin.png" />
+		<None Remove="CurrencyIcons\silver_coin.png" />
+		<None Remove="dyes_index.json" />
+		<None Remove="engine.html" />
+		<None Remove="farming.html" />
+		<None Remove="gear_index.json" />
+		<None Remove="gw2_master_index.json" />
+		<None Remove="help.html" />
+		<None Remove="hero.html" />
+		<None Remove="home_index.json" />
+		<None Remove="index.html" />
+		<None Remove="inventory.html" />
+		<None Remove="manifest.json" />
+		<None Remove="map.html" />
+		<None Remove="map_data.json" />
+		<None Remove="map_options.html" />
+		<None Remove="mastery_insights.json" />
+		<None Remove="master_index.json" />
+		<None Remove="material_storage.html" />
+		<None Remove="menu.html" />
+		<None Remove="modules\appearance.js" />
+		<None Remove="modules\armor.js" />
+		<None Remove="modules\armory.js" />
+		<None Remove="modules\collectibles.js" />
+		<None Remove="modules\core.js" />
+		<None Remove="modules\dyes.js" />
+		<None Remove="modules\home.js" />
+		<None Remove="modules\weapons.js" />
+		<None Remove="mystic_forge_recipes.json" />
+		<None Remove="pwa-setup.js" />
+		<None Remove="recipes.html" />
+		<None Remove="recipe_index.json" />
+		<None Remove="settings.html" />
+		<None Remove="timers.html" />
+		<None Remove="trading.html" />
+		<None Remove="trading_index.json" />
+		<None Remove="wardrobe.html" />
+		<None Remove="wvw_map.html" />
+		<None Remove="wvw_map_options.html" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="account_search.html">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="achievements.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="achievement_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="api_management.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="appearance_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="app_icon.ico" />
+		<Content Include="Assets\CurrencyIcons\502065.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\CurrencyIcons\619316.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_agony_resistance.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_armor.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_boon_duration.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_concentration.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_condition_damage.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_critical_chance.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_critical_damage.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_expertise.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_ferocity.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_healing_power.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_health.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_magic_find.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_power.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_precision.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_toughness.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\att_vitality.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\condition_duration.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_armorsmith.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_artificer.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_chef.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_handiworker.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_huntsman.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_jeweler.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_leatherworker.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_scribe.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_tailor.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\craft_weaponsmith.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\heart_discovered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\heropoint_discovered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\Map_navigation_compass.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\mastery_icon.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\mouse_cursor.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\player_icon.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\poi_discovered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\race_asura.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\race_charr.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\race_human.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\race_norn.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\race_sylvari.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\Tyrian_Lens.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\Tyrian_Lens_transparent.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\vista_discovered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Icons\waypoint_discovered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_achie_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_achie_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_achie_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_achie_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_achie_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_castle_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_castle_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_castle_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_castle_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_castle_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_chest_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_chest_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_chest_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_chest_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_chest_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_shield_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_shield_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_shield_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_shield_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_shield_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_star_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_star_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_star_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_star_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_star_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_swords_blue.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_swords_green.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_swords_pink.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_swords_red.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MarkerIcons\marker_swords_yellow.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_achieve.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_api.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_bag.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_bank.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_chars.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_clears.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_farming.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_guild.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_help.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_hero.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_map.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_material.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_recipes.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_search.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_settings.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_timers.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_tp.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_tp_delivered.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_wallet.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_wardrobe.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\MenuIcons\nav_wvw.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\timers_noticication_papling.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\timers_notification_babloop.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\timers_notification_boopboop.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\timers_notification_prrring.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="bank.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="characters.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="clears.html">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="currencies.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1010697.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1010699.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1010701.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1010702.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1029833.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1202328.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1203022.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1203046.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1203080.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1203099.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1206836.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1206837.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1207142.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1302741.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1302744.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1302745.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1313248.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1465799.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\155026.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1614710.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1766338.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1767459.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1822313.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1894697.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\1896039.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2010217.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2069367.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2140520.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270830.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270831.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270832.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270833.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270834.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2270835.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2292743.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2293273.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2351816.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2596973.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2596974.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2596975.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2596976.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2596977.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\2597023.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3004443.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3123700.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3123701.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3123702.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3124964.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3188140.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3442797.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3593176.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3630022.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3630023.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3630024.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3710050.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3710051.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\3710074.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\502065.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619316.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619317.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619318.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619319.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619320.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619321.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619322.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619323.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619324.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619325.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619326.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\619327.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\65724.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\69116.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\699004.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\699005.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\779571.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\797790.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\831466.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\copper_coin.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\gold_coin.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="CurrencyIcons\silver_coin.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="dyes_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="engine.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="farming.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="gear_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="gw2_master_index.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="help.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="hero.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="home_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="index.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="inventory.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="manifest.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="map.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="map_data.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="map_options.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="mastery_insights.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="master_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="material_storage.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="menu.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\appearance.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\armor.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\armory.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\collectibles.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\core.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\dyes.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\home.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="modules\weapons.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="mystic_forge_recipes.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="pwa-setup.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="recipes.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="recipe_index.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="settings.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="timers.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="trading.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="trading_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="wardrobe.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="wvw_map.html">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Gw2Sharp" Version="1.7.4" />
+		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3856.49" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="wvw_map_options.html">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Assets\**\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Leaflet\**\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<Compile Update="Form1.cs">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Compile>
+		<None Update="desktop.ini">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="hero_utils.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="misc_index.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

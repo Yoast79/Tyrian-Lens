@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10, 8, 5, 0.3); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-thumb:hover { background: #e2c07d; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 20px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; margin: 0; text-transform: uppercase; }
+
+			.branding-wrap { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #4a3b2a; flex-shrink: 0; }
+			.branding-icon { width: 120px; height: auto; filter: drop-shadow(0 0 15px rgba(226, 192, 125, 0.2)); }
+			.version-tag { font-size: 11px; color: #8a7a5f; letter-spacing: 3px; margin-top: 10px; font-weight: bold; }
+
+			#help-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; }
+
+			.help-cat { margin-bottom: 10px; border: 1px solid #2a2015; background: rgba(0,0,0,0.4); }
+			.cat-header { background: #1a1510; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #2a2015; transition: 0.2s; }
+			.cat-header:hover { background: #251d16; }
+			.cat-title { font-size: 13px; letter-spacing: 1px; color: #e2c07d; font-weight: bold; }
+			.cat-icon { font-size: 12px; color: #4a3b2a; transition: 0.3s; }
+			.cat-header.active .cat-icon { transform: rotate(180deg); color: #e2c07d; }
+
+			.cat-content { padding: 15px; display: none; background: rgba(15,12,10,0.6); font-size: 12px; color: #dcb36b; text-transform: none; line-height: 1.5; }
+			.cat-content h4 { color: #e2c07d; margin: 0 0 5px 0; font-size: 13px; text-transform: uppercase; border-bottom: 1px dashed #332a1e; padding-bottom: 3px; }
+			.cat-content p { margin: 0 0 12px 0; }
+			.cat-content p:last-child { margin-bottom: 0; }
+			.cat-content ul { margin: 0 0 10px 0; padding-left: 20px; }
+			.cat-content li { margin-bottom: 4px; }
+			.highlight { color: #fff; font-weight: bold; }
+
+			.shortcut-grid { display: grid; grid-template-columns: 1fr auto; gap: 8px; background: rgba(0,0,0,0.3); border: 1px solid #332a1e; padding: 10px; margin-bottom: 10px; }
+			.shortcut-row { font-size: 11px; color: #8a7a5f; text-transform: uppercase; letter-spacing: 1px; }
+			.shortcut-key { font-size: 11px; color: #e2c07d; font-weight: bold; background: rgba(226, 192, 125, 0.1); padding: 2px 6px; border: 1px solid #4a3b2a; border-radius: 2px; }
+
+			.donation-box { margin-top: 15px; background: rgba(20, 15, 10, 0.8); border: 1px solid #e2c07d; padding: 15px; text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.5); flex-shrink: 0; }
+			.donation-text { font-size: 11px; color: #dcb36b; margin-bottom: 10px; font-style: italic; text-transform: none; line-height: 1.4; }
+			.donation-acc { font-size: 14px; font-weight: bold; color: #fff; letter-spacing: 2px; background: rgba(226, 192, 125, 0.1); padding: 5px 10px; display: inline-block; border: 1px solid #4a3b2a; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .cat-title { font-size: 15px; }
+			body.ui-large .cat-content { font-size: 14px; }
+			body.ui-large .cat-content h4 { font-size: 15px; }
+			body.ui-large .shortcut-row, body.ui-large .shortcut-key { font-size: 13px; }
+			body.ui-large .donation-text { font-size: 13px; }
+			body.ui-large .donation-acc { font-size: 16px; }
+		</style>
+	</head>
+	<body>
+		<div class="branding-wrap">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="branding-icon" alt="Tyrian Lens Logo" />
+			<div class="version-tag">TYRIAN LENS - v0.9.4</div>
+		</div>
+
+		<div id="help-container">
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">GETTING STARTED & SETTINGS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>API Keys</h4>
+					<p>
+						Tyrian Lens relies on the official Guild Wars 2 API to display your account data securely. Go to the <span class="highlight">API Keys</span> module to add your key. We recommend selecting <b>all permissions</b> when generating your key on the ArenaNet website to ensure all modules (like Account Search and Clears) function correctly.
+					</p>
+					<h4>Settings</h4>
+					<p>In the <span class="highlight">Settings</span>, you can adjust the UI scale, toggle the overlay's "Always on Top" behavior, adjust the volume of timer notifications, and select a default character to load in the Hero Panel.</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">MAP & TIMERS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Map Options</h4>
+					<p>Tyrian Lens automatically detects if you are in Tyria or WvW and switches the map accordingly. You can toggle map layers (Regions, Sectors, Names) via <span class="highlight">Map Options</span>. Most map icons can be clicked to copy the chat-link directly to your clipboard.</p>
+					<h4>Timers & Notifications</h4>
+					<p>
+						The <span class="highlight">Timers</span> module tracks World Bosses, Meta Events, and Day/Night cycles. Click the <img src="https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png" alt="X-Ray Vision toggle" style="height: 1.2em; vertical-align: middle; margin: 0 2px;"> next to any event to add it to your Watchlist. You will receive an on-screen popup and an audio chime before the event starts, and exactly when it begins.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">ACCOUNT SEARCH & STORAGE</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Account Search</h4>
+					<p>Lost an item? Type at least two letters in the <span class="highlight">Account Search</span> module to scan your entire account. It locates items in your Bank, Material Storage, Shared Inventory, and specific Character Bags. It also searches your Wallet for currencies!</p>
+					<h4>Bank, Materials & Wardrobe</h4>
+					<p>
+						Browse your account-wide storage. You can hover over any item to see its description and stats, or click the item to open its official Guild Wars 2 Wiki page in your browser.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">CHARACTERS & HERO PANEL</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Hero Panel</h4>
+					<p>View the equipped gear, weapons, and build of any character. Hovering over traits and skills will generate a detailed tooltip just like in the game. Items display their applied runes, sigils, and infusions. The attributes update automatically to the selected weapons.
+				</p>
+					<h4>Character Roster & Inventory</h4>
+					<p>The <span class="highlight">Characters</span> module gives you an overview of your entire roster, including total playtime, deaths, and next birthdays. Use the <span class="highlight">Inventory</span> module to quickly check the specific bag contents of any character without logging into them.</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">TRADING & ECONOMY</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Trading Post & Deliveries</h4>
+					<p>
+						Track your current Buy/Sell orders and transaction history. The TP icon in the main menu will show a <img src="https://wiki.guildwars2.com/images/c/cd/Trading_Post_Pickup.png" alt="X-Ray Vision toggle" style="height: 1.2em; vertical-align: middle; margin: 0 2px;"> if you have items or coins waiting in your Delivery Box.
+					</p>
+					<h4>Smart Crafting</h4>
+					<p>
+						This tool analyzes your actual Material Storage and compares it to live market prices. It calculates the exact cost to buy missing materials and shows you your <b>True Net Profit<b> for crafting time-gated items (like Deldrimor Steel). You can add custom items to this list via the Market Search.
+					</p>
+					<h4>Market Search & Investments</h4>
+					<p>
+						Search for any item on the TP. Click it to view current Buy/Sell spreads. Click <b>Track Investment</b> to log a purchase. Tyrian Lens will monitor the item's value over time, factor in the 15% TP tax, and draw a profit graph for your portfolio.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">PROGRESSION & TRACKING</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Achievements</h4>
+					<p>
+						Search the massive GW2 achievement database. Click an achievement to add it to your <b>Watchlist Overlay</b>. This creates a permanent, auto-updating tracker on the right side of your screen while you play.
+					</p>
+					<h4>Weekly Clears</h4>
+					<p>A visual dashboard tracking your progress in Raids, Strike Missions, and Dungeons. It automatically syncs with the Guild Wars 2 weekly reset, changing from "Cleared" back to "Uncleared" when the week rolls over.</p>
+					<h4>Farming Tracker</h4>
+					<p>Start a session before doing a meta train or farming run. The tracker takes a snapshot of your wallet and inventory. When you stop the session, it calculates your exact gains in gold, karma, currencies, and loot. The tracker icon will glow green when it is actively tracking your gains. (Note: It normalizes data, so moving an item from your bag to your bank isn't counted as "new loot").</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">KEYBOARD COMMANDS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content" style="padding: 10px;">
+					<div class="shortcut-grid">
+						<div class="shortcut-row">REFRESH APPN</div>
+						<div class="shortcut-key">F5</div>
+						<div class="shortcut-row">MOVE WINDOW</div>
+						<div class="shortcut-key">DRAG MENU BAR</div>
+						<div class="shortcut-row">RESIZE WINDOW</div>
+						<div class="shortcut-key">DRAG BOTTOM RIGHT</div>
+						<div class="shortcut-row">PLACE PERSONAL MARKER</div>
+						<div class="shortcut-key">ALT + LEFT CLICK</div>
+						<div class="shortcut-row">REMOVE MARKER</div>
+						<div class="shortcut-key">LEFT CLICK MARKER</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="donation-box">
+			<div class="donation-text">If Tyrian Lens has enhanced your journey through Tyria, show your appreciation by donating some items or gold.</div>
+			<div class="donation-acc">Yoast.8572</div>
+		</div>
+
+		<script>
+			function toggleHelp(btn) {
+			const content = btn.nextElementSibling;
+			const isActive = btn.classList.contains('active');
+
+			// Optional: Close others
+			// document.querySelectorAll('.cat-content').forEach(c => c.style.display = 'none');
+			// document.querySelectorAll('.cat-header').forEach(h => h.classList.remove('active'));
+
+			if (!isActive) {
+			btn.classList.add('active');
+			content.style.display = 'block';
+			} else {
+			btn.classList.remove('active');
+			content.style.display = 'none';
+			}
+			}
+
+			window.addEventListener('message', (e) => {
+			if (e.data.action === 'uiScaleChanged') {
+			if (e.data.value === 'large') document.body.classList.add('ui-large');
+			else document.body.classList.remove('ui-large');
+			}
+			});
+
+			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+		</script>
+	</body>
+</html>

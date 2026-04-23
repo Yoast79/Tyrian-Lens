@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body {
+			margin: 0; background: transparent; padding: 20px;
+			color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase;
+			display: flex; flex-direction: column; height: 100vh;
+			}
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; letter-spacing: 1px; }
+
+			.search-container { position: relative; width: 100%; margin-bottom: 15px; }
+			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 8px 30px 8px 8px; font-size: 12px; outline: none; width: 100%; }
+			.search-box:focus { border-color: #e2c07d; }
+			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #4a3b2a; cursor: pointer; font-size: 18px; line-height: 1; display: none; }
+			.clear-btn:hover { color: #e2c07d; }
+
+			.currency-list { flex: 1; overflow-y: auto; padding-right: 5px; }
+			.currency-item { display: flex; align-items: center; justify-content: space-between; padding: 8px; border-bottom: 1px solid rgba(74, 59, 42, 0.3); transition: background 0.2s; }
+			.currency-item:hover { background: rgba(226, 192, 125, 0.05); }
+			.currency-item.zero-val { opacity: 0.4; }
+
+			.curr-info { display: flex; align-items: center; gap: 12px; }
+			.curr-icon { width: 20px; height: 20px; object-fit: contain; }
+			.curr-name { font-size: 11px; color: #e2c07d; letter-spacing: 0.5px; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+			.curr-amount { font-size: 13px; font-weight: bold; color: #fff; font-family: monospace; display: flex; align-items: center; gap: 4px; }
+			.coin-unit { display: flex; align-items: center; gap: 2px; margin-left: 4px; color: #fff; }
+			.coin-unit img { width: 16px; height: 16px; vertical-align: middle; }
+
+			.currency-list::-webkit-scrollbar { width: 4px; }
+			.currency-list::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+			.currency-list::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 2px; }
+
+			.panel-footer { margin-top: auto; padding-top: 15px; text-align: center; }
+			.fancy-divider { height: 1px; background: linear-gradient(90deg, transparent, #4a3b2a, transparent); margin-bottom: 10px; }
+			.footer-text { font-size: 10px; color: #666; letter-spacing: 2px; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .search-box { font-size: 15px; padding: 10px 35px 10px 10px; }
+			body.ui-large .curr-icon { width: 26px; height: 26px; }
+			body.ui-large .curr-name { font-size: 14px; max-width: 220px; }
+			body.ui-large .curr-amount { font-size: 16px; }
+			body.ui-large .coin-unit img { width: 20px; height: 20px; }
+			body.ui-large .footer-text { font-size: 12px; }
+		</style>
+	</head>
+	<body>
+		<div class="section-title">Account Wallet</div>
+		<div class="search-container">
+			<input type="text" class="search-box" id="curr-search" placeholder="SEARCH ALL CURRENCIES..." oninput="filterCurrencies()">
+				<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
+			</div>
+		<div id="wallet-container" class="currency-list">
+			<div style="text-align:center; padding:20px; color:#888;">Synchronizing Assets...</div>
+		</div>
+		<div class="panel-footer">
+			<div class="fancy-divider"></div>
+			<div class="footer-text">Currency & Asset Tracker</div>
+		</div>
+
+		<script>
+			let masterCurrencyList = [];
+			let accountBalances = {};
+
+			async function initWallet() {
+			// Apply UI scale on load
+			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+			const activeKey = localStorage.getItem('gw2_active_key');
+			try {
+			const allRes = await fetch('https://api.guildwars2.com/v2/currencies?ids=all');
+			masterCurrencyList = await allRes.json();
+
+			if (activeKey) {
+			const accRes = await fetch(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
+			if (accRes.ok) {
+			const wallet = await accRes.json();
+			wallet.forEach(item => accountBalances[item.id] = item.value);
+			}
+			}
+			renderWallet();
+			} catch (err) { console.error(err); }
+			}
+
+			function clearSearch() {
+			const input = document.getElementById('curr-search');
+			input.value = '';
+			filterCurrencies();
+			}
+
+			function formatCoin(totalCopper) {
+			const gold = Math.floor(totalCopper / 10000);
+			const silver = Math.floor((totalCopper % 10000) / 100);
+			const copper = totalCopper % 100;
+			let html = '';
+			if (gold > 0) html += `${gold}<span class="coin-unit">
+				<img src="https://wiki.guildwars2.com/images/d/d1/Gold_coin.png">
+			</span> `;
+			if (silver > 0 || gold > 0) html += `${silver}<span class="coin-unit">
+				<img src="https://wiki.guildwars2.com/images/3/3c/Silver_coin.png">
+			</span> `;
+			html += `${copper}<span class="coin-unit">
+				<img src="https://wiki.guildwars2.com/images/e/eb/Copper_coin.png">
+			</span>`;
+			return html;
+			}
+
+			function renderWallet(filter = "") {
+			const container = document.getElementById('wallet-container');
+			container.innerHTML = '';
+			const sortedList = [...masterCurrencyList].sort((a, b) => {
+			if (a.id === 1) return -1; if (b.id === 1) return 1;
+			const valA = accountBalances[a.id] || 0; const valB = accountBalances[b.id] || 0;
+			if ((valA > 0 && valB > 0) || (valA === 0 && valB === 0)) return a.name.localeCompare(b.name);
+			return valB - valA;
+			});
+			sortedList.filter(curr => {
+			let displayName = curr.id === 1 ? "Gold" : curr.name;
+			return displayName.toLowerCase().includes(filter.toLowerCase());
+			}).forEach(curr => {
+			const amount = accountBalances[curr.id] || 0;
+			const row = document.createElement('div');
+			row.className = 'currency-item' + (amount === 0 ? ' zero-val' : '');
+			let displayName = curr.id === 1 ? "Gold" : curr.name;
+			let displayAmount = amount.toLocaleString();
+			let iconPath = curr.icon;
+
+			if (curr.id === 1) {
+			displayAmount = formatCoin(amount);
+			// iconPath automatically remains curr.icon from the API
+			}
+
+			row.innerHTML = `<div class="curr-info">
+				<img class="curr-icon" src="${iconPath}" onerror="this.onerror=null; this.src='https://gw2ps.local/Assets/Icons/poi_discovered.png';">
+					<div class="curr-name">${displayName}</div>
+			</div><div class="curr-amount">${displayAmount}</div>`;
+			container.appendChild(row);
+			});
+			}
+
+			function filterCurrencies() {
+			const query = document.getElementById('curr-search').value;
+			document.getElementById('clear-search').style.display = query === "" ? "none" : "block";
+			renderWallet(query);
+			}
+
+			window.addEventListener('message', (e) => {
+			if (e.data.action === 'uiScaleChanged') {
+			if (e.data.value === 'large') document.body.classList.add('ui-large');
+			else document.body.classList.remove('ui-large');
+			}
+			});
+
+			initWallet();
+		</script>
+	</body>
+</html>

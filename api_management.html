@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 4px; }
+			::-webkit-scrollbar-track { background: rgba(10, 8, 5, 0.3); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 2px; }
+			::-webkit-scrollbar-thumb:hover { background: #e2c07d; }
+
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+
+			body {
+			background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px;
+			overflow: hidden; height: 100vh; display: flex; flex-direction: column; margin: 0;
+			}
+
+			#api-list { flex-grow: 1; overflow-y: auto; margin-bottom: 10px; padding-right: 5px; }
+
+			.api-entry {
+			display: flex; align-items: center; justify-content: space-between; padding: 6px 10px;
+			border: 1px solid #2a2015; margin-bottom: 5px; background: rgba(15, 12, 10, 0.6);
+			transition: 0.2s;
+			}
+			.api-entry.active { border-color: #e2c07d; background: rgba(45, 35, 25, 0.8); box-shadow: inset 0 0 5px rgba(226, 192, 125, 0.1); }
+
+			.api-info { display: flex; align-items: center; gap: 10px; flex: 1; overflow: hidden; }
+
+			.checkbox-custom { width: 14px; height: 14px; accent-color: #e2c07d; cursor: pointer; flex-shrink: 0; opacity: 0.7; }
+			.checkbox-custom:hover { opacity: 1; }
+
+			.acc-names { display: flex; flex-direction: column; overflow: hidden; }
+			.nickname { font-size: 11px; color: #f0dca5; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+			.realname { font-size: 9px; color: #665c49; font-family: monospace; line-height: 1; }
+
+			.btn-sm { background: transparent; border: 1px solid #3d3125; color: #662222; padding: 2px 6px; font-size: 9px; cursor: pointer; transition: 0.2s; }
+			.btn-sm:hover { border-color: #ff4444; color: #ff4444; background: rgba(255, 68, 68, 0.05); }
+
+			.edit-box { border-top: 1px solid #4a3b2a; padding-top: 10px; flex-shrink: 0; }
+			.text-input {
+			width: 100%; background: rgba(5, 4, 3, 0.6); border: 1px solid #2a2015; color: #e2c07d;
+			padding: 6px 8px; font-size: 11px; margin-bottom: 6px; outline: none;
+			}
+			.text-input:focus { border-color: #e2c07d; background: rgba(10, 8, 5, 0.8); }
+
+			.btn-save {
+			width: 100%; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d;
+			padding: 8px; font-size: 10px; text-transform: uppercase; cursor: pointer; transition: 0.2s;
+			}
+			.btn-save:hover { background: #e2c07d; color: #1a1510; border-color: #e2c07d; }
+
+			.footer-links { text-align: center; margin-top: 12px; }
+
+			.external-link {
+			color: #8a7a5f; text-decoration: none; font-size: 10px; display: block;
+			margin-bottom: 4px; transition: 0.2s; cursor: pointer;
+			}
+			.external-link:hover { color: #e2c07d; text-decoration: underline; }
+
+			.hover-trigger { font-size: 10px; color: #665c49; cursor: help; border-bottom: 1px dotted #4a3b2a; display: inline-block; padding-bottom: 1px; }
+			.hover-trigger:hover { color: #8a7a5f; border-color: #8a7a5f; }
+
+			#confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; border: 1px solid #4a3b2a; padding: 20px; text-align: center; }
+			.confirm-btn-row { display: flex; gap: 10px; margin-top: 15px; }
+			.confirm-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.confirm-btn:hover { background: #251d16; border-color: #e2c07d; }
+		</style>
+	</head>
+	<body>
+
+		<div id="api-list"></div>
+
+		<div class="edit-box">
+			<input type="text" class="text-input" id="api-nickname" placeholder="NICKNAME (E.G. MAIN)">
+				<input type="text" class="text-input" style="font-family: monospace;" id="api-input" placeholder="PASTE API KEY...">
+					<button class="btn-save" id="save-btn" onclick="addKey()">Add Account</button>
+
+					<div class="footer-links">
+						<span onclick="window.open('https://account.arena.net/applications', '_blank')" class="external-link">https://account.arena.net/applications</span>
+						<span class="hover-trigger" onmouseover="showTip(event)" onmouseout="hideTip()">How to set up an API key</span>
+					</div>
+				</div>
+
+		<div id="confirm-modal">
+			<div style="font-size: 14px; font-weight: bold; color: #e2c07d; margin-bottom: 5px;">REMOVE ACCOUNT?</div>
+			<div style="font-size: 12px; color: #8a7a5f;">
+				PURGE ACCESS FOR <b id="del-name"></b>?
+			</div>
+			<div class="confirm-btn-row">
+				<button class="confirm-btn" onclick="confirmDelete()">YES</button>
+				<button class="confirm-btn" onclick="closeModal()">NO</button>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let apiAccounts = [];
+			try {
+			let rawData = localStorage.getItem('gw2_api_accounts');
+			if (rawData) {
+			let parsed = JSON.parse(rawData);
+			if (Array.isArray(parsed)) apiAccounts = parsed;
+			}
+			} catch(e) {}
+
+			let activeKey = localStorage.getItem('gw2_active_key') || null;
+			let deleteTargetKey = null;
+
+			function render() {
+			const list = document.getElementById('api-list');
+			list.innerHTML = '';
+			apiAccounts.forEach((acc) => {
+			const isActive = acc.key === activeKey;
+			const div = document.createElement('div');
+			div.className = 'api-entry ' + (isActive ? 'active' : '');
+			const safeName = (acc.nickname || acc.accountName || 'Unknown').replace(/'/g, "\\\\'");
+			div.innerHTML = `
+			<div class="api-info">
+				<input type="checkbox" class="checkbox-custom" ` + (isActive ? 'checked' : '') + ` onclick="setActive('` + acc.key + `')">
+					<div class="acc-names">
+						<div class="nickname">` + (acc.nickname || 'Unnamed') + `</div>
+						<div class="realname">` + (acc.accountName || 'Unknown ID') + `</div>
+					</div>
+				</div>
+			<button class="btn-sm" onclick="askDelete('` + acc.key + `', '` + safeName + `')">×</button>`;
+			list.appendChild(div);
+			});
+			}
+
+			async function addKey() {
+			const keyInput = document.getElementById('api-input');
+			const nickInput = document.getElementById('api-nickname');
+			const k = keyInput.value.trim();
+			const n = nickInput.value.trim();
+
+			if (!k) return;
+
+			if (apiAccounts.some(acc => acc.key === k)) {
+			window.parent.postMessage({action:'toast', msg:'API Key already stored!'}, '*');
+			return;
+			}
+
+			const btn = document.getElementById('save-btn');
+			btn.innerText = "VERIFYING...";
+			try {
+			const resp = await fetch('https://api.guildwars2.com/v2/account?access_token=' + k);
+			if (!resp.ok) throw new Error();
+			const data = await resp.json();
+			apiAccounts.push({ key: k, nickname: n || data.name, accountName: data.name });
+			if (!activeKey) activeKey = k;
+			save(); render();
+			keyInput.value = ''; nickInput.value = '';
+			window.parent.postMessage({action:'toast', msg:'Account Linked'}, '*');
+			window.parent.postMessage({action:'switchAccount', apiKey: activeKey}, '*');
+			} catch(e) {
+			window.parent.postMessage({action:'toast', msg:'Invalid API Key'}, '*');
+			}
+			btn.innerText = "ADD ACCOUNT";
+			}
+
+			function setActive(k) {
+			activeKey = k; save(); render();
+			window.parent.postMessage({action:'switchAccount', apiKey: k}, '*');
+			window.parent.postMessage({action:'toast', msg:'Lens View Synced'}, '*');
+			}
+
+			function askDelete(key, name) {
+			deleteTargetKey = key;
+			document.getElementById('del-name').innerText = name;
+			document.getElementById('confirm-modal').style.display = 'flex';
+			}
+
+			function confirmDelete() {
+			apiAccounts = apiAccounts.filter(a => a.key !== deleteTargetKey);
+			if (activeKey === deleteTargetKey) {
+			activeKey = apiAccounts.length > 0 ? apiAccounts[0].key : null;
+			window.parent.postMessage({action:'switchAccount', apiKey: activeKey || ''}, '*');
+			}
+			save(); closeModal(); render();
+			window.parent.postMessage({action:'toast', msg:'Access Revoked'}, '*');
+			}
+
+			function closeModal() { document.getElementById('confirm-modal').style.display = 'none'; }
+
+			function save() {
+			localStorage.setItem('gw2_api_accounts', JSON.stringify(apiAccounts));
+			localStorage.setItem('gw2_active_key', activeKey || '');
+			}
+
+			function showTip(e) {
+			const helpText = "API keys grant Tyrian Lens read-only access to your Guild Wars 2 account. To begin, create a key at the official ArenaNet portal with your desired permissions, then paste it here. You can revoke this lens' access at any time by deleting the key.";
+			
+			let absoluteX = e.clientX;
+			try {
+				if (window.parent.innerWidth) {
+					absoluteX += (window.parent.innerWidth - 320);
+				}
+			} catch(err) {}
+
+			window.parent.postMessage({ action:'showTooltip', text: helpText, x: absoluteX, y: e.clientY }, '*');
+			}
+			
+			function hideTip() { window.parent.postMessage({action:'hideTooltip'}, '*'); }
+			render();
+			/*]]>*/
+		</script>
+	</body>
+</html>

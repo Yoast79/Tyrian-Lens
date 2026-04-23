@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; color: #8a7a5f; margin: 0; }
+			.rebuild-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; }
+			.rebuild-btn:hover { border-color: #e2c07d; color: #e2c07d; }
+			#tp-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; min-height: 0; }
+			.tp-section { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+			.dropdown-btn { width: 100%; background: #1a1510; border: none; color: #e2c07d; padding: 10px 15px; text-transform: uppercase; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.2s; border-bottom: 1px solid #2a2015; }
+			.dropdown-btn:hover { background: #251d16; }
+			.dropdown-btn::after { content: '▼'; font-size: 10px; transition: 0.3s; color: #4a3b2a; }
+			.dropdown-btn.active::after { transform: rotate(180deg); color: #e2c07d; }
+			.sub-btn { background: rgba(20,15,10,0.4); font-size: 11px; padding: 8px 20px; color: #8a7a5f; border-bottom: 1px solid #2a2015; }
+			.dropdown-content { display: none; }
+			.item-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; cursor: pointer; position: relative; }
+			.item-icon { width: 100%; height: 100%; object-fit: cover; }
+			.search-res-row { display: flex; align-items: center; padding: 8px 15px; border-bottom: 1px solid #2a2015; font-size: 12px; gap: 10px; cursor: pointer; position: relative; }
+			.star-btn { cursor: pointer; width: 20px; height: 20px; opacity: 0.3; transition: 0.2s; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; flex-shrink: 0; }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+			.exchange-row { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
+			.exchange-result { min-width: 120px; text-align: center; font-size: 14px; font-weight: bold; color: #f0dca5; }
+			.quick-view { background: rgba(20,15,10,0.6); border: 1px solid #4a3b2a; margin-bottom: 10px; display: none; }
+			.rarity-Legendary { border-color: #4C139D !important; }
+			.rarity-Ascended { border-color: #FB3E8D !important; }
+			.rarity-Exotic { border-color: #FFA405 !important; }
+			.rarity-Rare { border-color: #FCD00B !important; }
+			.rarity-Masterwork { border-color: #1A9306 !important; }
+			.rarity-Fine { border-color: #62A4DA !important; }
+			.coin-icon { height: 14px; width: 14px; vertical-align: text-bottom; margin: 0 2px; }
+			.search-clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: #8a7a5f; cursor: pointer; transition: 0.2s; }
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+			.watch-row { display: flex; align-items: center; gap: 10px; padding: 10px 15px; border-bottom: 1px solid #2a2015; font-size: 11px; position: relative; }
+			.watch-prices { display: flex; flex-direction: column; gap: 2px; min-width: 140px; }
+			.watch-price-item { display: flex; align-items: center; justify-content: flex-end; gap: 8px; font-size: 10px; color: #8a7a5f; white-space: nowrap; }
+			.watch-price-item .label { width: 35px; text-align: left; }
+			.watch-price-item span { color: #e2c07d; font-weight: bold; flex: 1; text-align: right; }
+
+			/* Investment UI */
+			.invest-row { background: rgba(20,15,10,0.6); border: 1px solid #2a2015; padding: 10px; margin-bottom: 10px; position: relative; }
+			.invest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-bottom: 1px solid #332a1e; padding-bottom: 5px; }
+			.invest-stats { font-size: 11px; color: #8a7a5f; display: flex; justify-content: space-between; align-items: center; }
+			.invest-graph { height: 40px; border-bottom: 1px solid #4a3b2a; margin-top: 10px; position: relative; overflow: visible; }
+
+			input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+			input[type=number] { -moz-appearance: textfield; }
+
+			input[type=text], input[type=number] {
+			background:rgba(10,8,5,0.9); border:1px solid #4a3b2a; color:#e2c07d;
+			padding:8px; outline:none; font-family:"Crimson Text", serif; text-transform:uppercase; font-size: 14px;
+			text-align: center;
+			}
+			input[type=text]:focus, input[type=number]:focus { border-color: #e2c07d; }
+
+			button {
+			background:rgba(20,15,10,0.9); border:1px solid #4a3b2a; color:#e2c07d;
+			padding:8px 15px; cursor:pointer; font-family:"Crimson Text", serif;
+			text-transform:uppercase; transition:0.2s; font-size: 11px; letter-spacing: 1px;
+			}
+			button:hover { border-color:#e2c07d; background:rgba(226, 192, 125, 0.15); }
+
+			/* Custom confirmation popup */
+			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 300; border: 1px solid #4a3b2a; padding: 20px; text-align: center; }
+			.confirm-btn-row { display: flex; gap: 10px; margin-top: 15px; }
+			.confirm-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.confirm-btn:hover { background: #251d16; border-color: #e2c07d; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .dropdown-btn { font-size: 15px; }
+			body.ui-large .item-grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
+			body.ui-large .item-slot { width: 50px; height: 50px; }
+			body.ui-large .search-res-row { font-size: 14px; }
+			body.ui-large .exchange-result { font-size: 16px; }
+			body.ui-large button { font-size: 13px; }
+			body.ui-large .watch-row { font-size: 13px; }
+			body.ui-large .watch-price-item { font-size: 11px; }
+			body.ui-large .invest-stats { font-size: 13px; }
+			body.ui-large input[type=text], body.ui-large input[type=number] { font-size: 16px; }
+		</style>
+	</head>
+	<body>
+		<div id="tp-ui" style="display:flex; height:100%; flex-direction: column;">
+			<div class="header-row">
+				<div style="display:flex; align-items:center; gap: 15px;">
+					<div class="section-title">Trading Post</div>
+					<button id="rebuild-btn" class="rebuild-btn" onclick="syncDelta()">Sync Market</button>
+				</div>
+				<div id="wallet-display" style="display:flex; gap:15px; font-size:14px; align-items:center;"></div>
+			</div>
+
+			<div id="tp-container">
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="exchange" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/0/01/Black_Lion_Trading_Company_currency_exchange_icon.png" style="width:20px;" /> CURRENCY EXCHANGE
+						</span>
+					</div>
+					<div class="dropdown-content" style="padding:20px;">
+						<div class="exchange-row">
+							<img src="https://wiki.guildwars2.com/images/d/d7/Gold_coin_%28highres%29.png" style="width:24px;" />
+							<input type="number" id="ex-gold" value="3000" style="width:80px;" />
+							<img src="https://wiki.guildwars2.com/images/5/5a/Game_menu_return_icon.png" style="width:16px; opacity:0.5; transform:rotate(180deg);" />
+							<div class="exchange-result" id="res-gem">---</div>
+							<img src="https://wiki.guildwars2.com/images/a/aa/Gem.png" style="width:18px;" />
+							<button onclick="calcGold()">CALCULATE</button>
+						</div>
+						<div class="exchange-row">
+							<img src="https://wiki.guildwars2.com/images/a/aa/Gem.png" style="width:24px;" />
+							<input type="number" id="ex-gem" value="400" style="width:80px;" />
+							<img src="https://wiki.guildwars2.com/images/5/5a/Game_menu_return_icon.png" style="width:16px; opacity:0.5; transform:rotate(180deg);" />
+							<div class="exchange-result" id="res-gold">---</div>
+							<img src="https://wiki.guildwars2.com/images/d/d7/Gold_coin_%28highres%29.png" style="width:24px;" />
+							<button onclick="calcGem()">CALCULATE</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="delivery" onclick="toggleMaster(this, 'delivery')">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/d/de/Black_Lion_Trading_Company_trading_post_free.png" style="width:20px;" /> DELIVERY BOX
+						</span>
+					</div>
+					<div class="dropdown-content" id="delivery-content"></div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="transactions" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/b/be/Black_Lion_Trading_Company_trading_post_icon.png" style="width:20px;" /> MY TRANSACTIONS
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div class="dropdown-btn sub-btn" data-id="transactions_sells" onclick="toggleSub(this, 'current', 'sells')">SELL ORDERS</div>
+						<div class="dropdown-content"></div>
+						<div class="dropdown-btn sub-btn" data-id="transactions_buys" onclick="toggleSub(this, 'current', 'buys')">BUY ORDERS</div>
+						<div class="dropdown-content"></div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="history" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/4/46/Guild_panel_storage_icon.png" style="width:20px;" /> TRANSACTION HISTORY
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div class="dropdown-btn sub-btn" data-id="history_sells" onclick="toggleSub(this, 'history', 'sells')">SOLD ITEMS</div>
+						<div class="dropdown-content"></div>
+						<div class="dropdown-btn sub-btn" data-id="history_buys" onclick="toggleSub(this, 'history', 'buys')">BOUGHT ITEMS</div>
+						<div class="dropdown-content"></div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="watchlist" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png" style="width:20px;" /> WATCHLIST
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div id="watchlist-container" style="padding:15px;">
+							<div style="margin-bottom:10px; display:flex; align-items:baseline; gap:10px;">
+								<span style="font-size:12px; color:#e2c07d;">WATCHLIST</span>
+								<span style="font-size:9px; color:#8a7a5f; text-transform: none;">Toggle the icon to track market pricing and availability</span>
+							</div>
+							<div id="watchlist-items"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="investments" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://gw2ps.local/Assets/MenuIcons/nav_wallet.png" style="width:20px;" /> INVESTMENTS
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div id="investments-container" style="padding:15px; display:flex; flex-direction:column;">
+							<div style="padding:10px; font-size:10px; color:#8a7a5f; text-align:center;">LOADING INVESTMENTS...</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="smartcrafting" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://gw2ps.local/Assets/MenuIcons/nav_recipes.png" style="width:20px;" /> SMART CRAFTING
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div class="dropdown-btn sub-btn" data-id="crafting_timegated" onclick="toggleSimpleSub(this)">TIME GATED CRAFTS</div>
+						<div class="dropdown-content">
+							<div style="padding:15px; display:flex; flex-direction:column; gap:10px;">
+								<div style="display:flex; justify-content:space-between; align-items:center;">
+									<span style="font-size:11px; color:#8a7a5f; text-transform:none;">Analyze material storage vs market prices</span>
+									<button onclick="calcSmartCrafting('timegated')">RUN ANALYSIS</button>
+								</div>
+								<div id="crafting-timegated-results" style="display:flex; flex-direction:column; gap:10px;"></div>
+							</div>
+						</div>
+
+						<div class="dropdown-btn sub-btn" data-id="crafting_custom" onclick="toggleSimpleSub(this)">CUSTOM WATCHLIST</div>
+						<div class="dropdown-content">
+							<div style="padding:15px; display:flex; flex-direction:column; gap:10px;">
+								<div style="display:flex; justify-content:space-between; align-items:center;">
+									<span style="font-size:11px; color:#8a7a5f; text-transform:none;">Add items via Market Search</span>
+									<button onclick="calcSmartCrafting('custom')">RUN ANALYSIS</button>
+								</div>
+								<div id="crafting-custom-results" style="display:flex; flex-direction:column; gap:10px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tp-section">
+					<div class="dropdown-btn master-btn" data-id="search" onclick="toggleMaster(this)">
+						<span style="display:flex; align-items:center; gap:10px;">
+							<img src="https://wiki.guildwars2.com/images/7/72/Inspect.png" style="width:20px;" /> MARKET SEARCH
+						</span>
+					</div>
+					<div class="dropdown-content">
+						<div style="padding:15px; display:flex; flex-direction:column; gap:10px;">
+							<div style="display:flex; gap:10px;">
+								<div style="position:relative; flex:1;">
+									<input type="text" id="market-search" autocomplete="off" placeholder="SEARCH ITEM NAME..." style="width:100%; text-align:left; padding-right:25px;" onkeyup="if(event.key==='Enter') searchMarket()" />
+									<span class="search-clear-btn" onclick="document.getElementById('market-search').value=''; document.getElementById('market-results').innerHTML='';">✖</span>
+								</div>
+								<button onclick="searchMarket()">SEARCH</button>
+							</div>
+
+							<div id="quick-view" class="quick-view"></div>
+
+							<div id="market-results" style="max-height: 250px; overflow-y: auto; border: 1px solid #2a2015;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="invest-prompt" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(10,8,5,0.98); border:1px solid #e2c07d; padding:20px; z-index:200; box-shadow:0 0 20px rgba(0,0,0,0.9); flex-direction:column; gap:10px;">
+			<div style="font-weight:bold; color:#e2c07d; margin-bottom:10px;">TRACK INVESTMENT</div>
+			<div id="invest-item-name" style="font-size:12px; color:#8a7a5f; margin-bottom:10px; text-transform:capitalize;"></div>
+			<input type="hidden" id="invest-item-id" />
+			<input type="number" id="invest-qty" placeholder="QUANTITY PURCHASED" />
+			<input type="number" id="invest-price" placeholder="TOTAL COST (COPPER)" />
+			<div style="display:flex; gap:10px; margin-top:10px;">
+				<button onclick="saveInvestment()" style="flex:1; background:#1A9306; border-color:#1A9306; color:#fff;">SAVE</button>
+				<button onclick="document.getElementById('invest-prompt').style.display='none'" style="flex:1;">CANCEL</button>
+			</div>
+		</div>
+
+		<div id="delete-confirm-modal" class="confirm-modal">
+			<div style="font-size: 14px; font-weight: bold; color: #e2c07d; margin-bottom: 5px;">REMOVE INVESTMENT?</div>
+			<div style="font-size: 12px; color: #8a7a5f;">ARE YOU SURE YOU WANT TO REMOVE THIS INVESTMENT TRACKING?</div>
+			<div class="confirm-btn-row">
+				<button class="confirm-btn" onclick="confirmDelete()">YES</button>
+				<button class="confirm-btn" onclick="cancelDelete()">NO</button>
+			</div>
+		</div>
+
+		<div id="loader" class="loading" style="display:none;">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width:400px;" />
+			<div id="loader-text">SYNCING MARKET DELTA...</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let activeKey = localStorage.getItem('gw2_active_key');
+			let tradingIndex = [], deltaIndex = [];
+			let itemCache = {};
+			
+			let watchlist = [];
+			try { watchlist = JSON.parse(localStorage.getItem('tp_watchlist') || '[]'); } 
+			catch(e) { localStorage.removeItem('tp_watchlist'); }
+
+			let investments = [];
+			try { investments = JSON.parse(localStorage.getItem('tp_investments') || '[]'); }
+			catch(e) { localStorage.removeItem('tp_investments'); }
+
+			let customCrafts = [];
+			try { customCrafts = JSON.parse(localStorage.getItem('gw2_custom_crafts') || '[]'); }
+			catch(e) { localStorage.removeItem('gw2_custom_crafts'); }
+
+			let tpState = JSON.parse(localStorage.getItem('gw2_tp_harmonica') || '{}');
+
+            let investToDelete = null;
+
+			const smartCrafts = [
+				{ id: 46738, name: "Deldrimor Steel Ingot", mats: [ {id:19700, count:50}, {id:19721, count:1}, {id:62064, count:10}, {id:19699, count:20}, {id:19702, count:10}, {id:19701, count:20} ] },
+				{ id: 46739, name: "Elonian Leather Square", mats: [ {id:19729, count:50}, {id:19721, count:1}, {id:62064, count:10}, {id:19728, count:20}, {id:19730, count:10}, {id:19731, count:20} ] },
+				{ id: 46736, name: "Spiritwood Plank", mats: [ {id:19722, count:50}, {id:19721, count:1}, {id:62064, count:10}, {id:19724, count:20}, {id:19726, count:10}, {id:19727, count:20} ] },
+				{ id: 46741, name: "Bolt of Damask", mats: [ {id:19748, count:100}, {id:19721, count:1}, {id:62064, count:10}, {id:19741, count:20}, {id:19743, count:10}, {id:19745, count:20} ] },
+				{ id: 95962, name: "Xunlai Electrum Ingot", mats: [ {id:19700, count:100}, {id:19697, count:25}, {id:19698, count:50}, {id:19703, count:10} ] },
+				{ id: 66993, name: "Grow Lamp", mats: [ {id:43772, count:10}, {id:19746, count:10}, {id:24504, count:25}, {id:44926, count:25} ] },
+				{ id: 66913, name: "Clay Pot", mats: [ {id:24275, count:15}, {id:62064, count:25}, {id:19721, count:5}, {id:43355, count:25} ] },
+				{ id: 67015, name: "Heat Stone", mats: [ {id:24313, count:10}, {id:24320, count:10}, {id:62064, count:15} ] }
+			];
+
+			function formatCoin(copper) {
+				if (copper === undefined || copper === null || isNaN(copper)) return '---';
+				let isNeg = copper < 0;
+				copper = Math.abs(Math.round(copper));
+				let g = Math.floor(copper / 10000), s = Math.floor((copper % 10000) / 100), c = copper % 100;
+				let res = isNeg ? '-' : '';
+				if (g>0) res += g + '<img src="https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png" class="coin-icon" />';
+				if (s>0) res += s + '<img src="https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png" class="coin-icon" />';
+				if (c>0 || copper === 0) res += c + '<img src="https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png" class="coin-icon" />';
+				return res;
+			}
+
+			async function fetchJSON(url) { try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; } }
+
+			async function init() {
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+				try {
+					const res = await fetch('https://gw2ps.local/trading_index.json');
+					const data = await res.json();
+					tradingIndex = data.items || data || [];
+				} catch(e) { console.error("Core index load failed"); }
+
+				try {
+					deltaIndex = JSON.parse(localStorage.getItem('tp_delta_index') || '[]');
+				} catch(e) { deltaIndex = []; }
+
+				if (!activeKey) return;
+				
+				renderWatchlist();
+				pollInvestments();
+				updateWallet();
+				checkDeliveries();
+				
+				setInterval(checkDeliveries, 60000);
+				setInterval(pollInvestments, 300000);
+
+				document.querySelectorAll('.master-btn, .sub-btn').forEach(btn => {
+					const id = btn.getAttribute('data-id');
+					if (tpState[id]) {
+						if (btn.classList.contains('sub-btn')) {
+							if (id.startsWith('crafting_')) {
+								toggleSimpleSub(btn, true);
+							} else {
+								const parts = id.split('_');
+								toggleSub(btn, parts[0], parts[1], true);
+							}
+						} else {
+							toggleMaster(btn, id === 'delivery' ? 'delivery' : null, true);
+						}
+					}
+				});
+			}
+
+			function toggleSimpleSub(btn, skipSave) {
+				const content = btn.nextElementSibling;
+				const isActive = !btn.classList.contains("active");
+				btn.classList.toggle("active", isActive);
+				content.style.display = isActive ? "block" : "none";
+				if (!skipSave) {
+					tpState[btn.getAttribute('data-id')] = isActive;
+					localStorage.setItem('gw2_tp_harmonica', JSON.stringify(tpState));
+				}
+			}
+
+			async function syncDelta() {
+				document.getElementById('tp-ui').style.display = 'none';
+				document.getElementById('loader').style.display = 'flex';
+				const loaderText = document.getElementById('loader-text');
+				
+				const prices = await fetchJSON('https://api.guildwars2.com/v2/commerce/prices');
+				if (!prices) {
+					document.getElementById('loader').style.display = 'none';
+					document.getElementById('tp-ui').style.display = 'flex';
+					return;
+				}
+
+				const knownIds = new Set([...tradingIndex.map(i => Number(i.id)), ...deltaIndex.map(i => Number(i.id))]);
+				const missingIds = prices.map(p => Number(p.id)).filter(id => id && !knownIds.has(id));
+				
+				if (missingIds.length > 0) {
+					for (let i = 0; i < missingIds.length; i += 200) {
+						const chunk = missingIds.slice(i, i + 200).filter(id => id);
+						if (chunk.length === 0) continue;
+
+						loaderText.innerText = `SYNCING NEW ITEMS (${Math.round((i/missingIds.length)*100)}%)`;
+						const batch = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + chunk.join(','));
+						if (batch) {
+							batch.forEach(it => {
+								if (it && it.id) deltaIndex.push({ id: Number(it.id), n: it.name.toLowerCase(), i: it.icon, r: it.rarity });
+							});
+						}
+					}
+					localStorage.setItem('tp_delta_index', JSON.stringify(deltaIndex));
+				}
+				
+				document.getElementById('loader').style.display = 'none';
+				document.getElementById('tp-ui').style.display = 'flex';
+				const btn = document.getElementById('rebuild-btn');
+				btn.innerText = "SYNC MARKET"; btn.style.color = ""; btn.style.borderColor = "";
+			}
+
+			async function searchMarket() {
+				const q = document.getElementById('market-search').value.toLowerCase().trim();
+				const res = document.getElementById('market-results');
+				if (q.length < 3) return;
+				
+				const allItems = [...tradingIndex, ...deltaIndex];
+				const matches = allItems.filter(it => it.n && it.n.includes(q)).slice(0, 50);
+				
+				res.innerHTML = matches.map(m => {
+					let nameAttr = (m.n || '').replace(/"/g, '&quot;');
+					return `<div class="search-res-row" data-name="${nameAttr}" onclick="showQuickView(${m.id})" onmouseover="showItemTip(${m.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+						<span class="star-btn ${watchlist.includes(m.id)?'active':''}" onclick="event.stopPropagation(); toggleWatchlist(${m.id})"></span>
+						<img src="${m.i}" style="width:18px; border:1px solid #332a1e; cursor:help;" class="rarity-${m.r}" onclick="event.stopPropagation(); window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.parentElement.dataset.name.replace(/ /g, '_')), '_blank')" />
+						<span style="flex:1; text-transform:capitalize;">${m.n}</span>
+					</div>`;
+				}).join('');
+			}
+
+			async function showQuickView(id) {
+				const qv = document.getElementById('quick-view');
+				qv.style.display = 'block';
+				qv.innerHTML = '<div style="padding:10px; font-size:10px; color:#8a7a5f; text-align:center;">LOADING...</div>';
+				
+				const [price, recipe] = await Promise.all([
+					fetchJSON("https://api.guildwars2.com/v2/commerce/prices/" + id),
+					fetchRecipeForOutput(id)
+				]);
+				
+				const allItems = [...tradingIndex, ...deltaIndex];
+				const item = allItems.find(i => Number(i.id) === Number(id));
+				
+				if (!item) { qv.innerHTML = '<div style="padding:10px; font-size:10px; color:#f44; text-align:center;">ITEM NOT FOUND</div>'; return; }
+
+				let nameAttr = (item.n || '').replace(/"/g, '&quot;');
+				
+				let craftBtnHtml = '';
+				if (recipe) {
+					let alreadyWatching = customCrafts.includes(Number(id));
+					if (alreadyWatching) {
+						craftBtnHtml = `<button style="width:100%; background:rgba(26,147,6,0.2); border-color:#1A9306; color:#1A9306;" onclick="removeCustomCraft(${item.id}); this.style.display='none';">✔ IN CRAFTING WATCHLIST</button>`;
+					} else {
+						craftBtnHtml = `<button style="width:100%;" onclick="addCustomCraft(${item.id}, this)">ADD TO CRAFTING WATCHLIST</button>`;
+					}
+				}
+
+				qv.innerHTML = `
+					<div style="padding:10px; display:flex; flex-direction:column; gap:10px;">
+						<div style="display:flex; align-items:center; gap:10px; cursor:pointer;" data-name="${nameAttr}" onmouseover="showItemTip(${item.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.dataset.name.replace(/ /g, '_')), '_blank')">
+							<img src="${item.i}" style="width:32px;" class="rarity-${item.r}" />
+							<div style="flex:1;">
+								<div style="color:#e2c07d; font-size:12px; text-transform:capitalize;">${item.n}</div>
+								<div style="font-size:10px;">BUY: ${formatCoin(price?.buys?.unit_price)} | SELL: ${formatCoin(price?.sells?.unit_price)}</div>
+							</div>
+						</div>
+						<div style="display:flex; flex-direction:column; gap:5px;">
+							<button style="width:100%;" onclick="openInvestPrompt(${item.id}, '${nameAttr}')">TRACK INVESTMENT</button>
+							${craftBtnHtml}
+						</div>
+					</div>
+				`;
+			}
+
+			function openInvestPrompt(id, name) {
+				document.getElementById('invest-item-id').value = id;
+				document.getElementById('invest-item-name').innerText = name;
+				document.getElementById('invest-qty').value = '';
+				document.getElementById('invest-price').value = '';
+				document.getElementById('invest-prompt').style.display = 'flex';
+			}
+
+			function saveInvestment() {
+				const id = document.getElementById('invest-item-id').value;
+				const name = document.getElementById('invest-item-name').innerText;
+				const qty = parseInt(document.getElementById('invest-qty').value);
+				const totalCost = parseInt(document.getElementById('invest-price').value);
+				
+				if (!id || isNaN(qty) || isNaN(totalCost)) return;
+
+				const investObj = {
+					uuid: Date.now().toString(),
+					id: Number(id),
+					name: name,
+					qty: qty,
+					buyCost: totalCost,
+					history: []
+				};
+				
+				investments.push(investObj);
+				localStorage.setItem('tp_investments', JSON.stringify(investments));
+				
+				document.getElementById('invest-prompt').style.display = 'none';
+				pollInvestments();
+				window.parent.postMessage({ action: 'toast', msg: 'INVESTMENT SAVED' }, '*');
+			}
+
+			function removeInvestment(uuid) {
+                investToDelete = uuid;
+                document.getElementById('delete-confirm-modal').style.display = 'flex';
+			}
+
+            function cancelDelete() {
+                investToDelete = null;
+                document.getElementById('delete-confirm-modal').style.display = 'none';
+            }
+
+            function confirmDelete() {
+                if (investToDelete) {
+                    investments = investments.filter(i => i.uuid !== investToDelete);
+                    localStorage.setItem('tp_investments', JSON.stringify(investments));
+                    pollInvestments();
+                }
+                cancelDelete();
+            }
+
+			async function pollInvestments() {
+				const container = document.getElementById('investments-container');
+				if (investments.length === 0) {
+					container.innerHTML = '<div style="padding:10px; font-size:10px; color:#4a3b2a; text-align:center;">NO ACTIVE INVESTMENTS</div>';
+					return;
+				}
+
+				const ids = [...new Set(investments.map(i => i.id))];
+				let prices = [];
+				for(let i=0; i<ids.length; i+=200) {
+					const batch = await fetchJSON("https://api.guildwars2.com/v2/commerce/prices?ids=" + ids.slice(i, i+200).join(','));
+					if (batch) prices = prices.concat(batch);
+				}
+
+				const now = Date.now();
+				let html = '';
+
+				investments.forEach(inv => {
+					const pData = prices.find(p => p.id === inv.id);
+					const currentSell = pData ? pData.sells.unit_price : 0;
+					
+					if (currentSell > 0) {
+						if (inv.history.length === 0 || (now - inv.history[inv.history.length-1].ts > 3600000)) {
+							inv.history.push({ ts: now, price: currentSell });
+							if (inv.history.length > 50) inv.history.shift();
+						}
+					}
+
+					const grossValue = currentSell * inv.qty;
+					const netValue = grossValue * 0.85; 
+					const profit = netValue - inv.buyCost;
+					const roiPercent = ((profit / inv.buyCost) * 100).toFixed(1);
+					
+					const colorClass = profit >= 0 ? 'val-pos' : 'val-neg';
+					const sign = profit > 0 ? '+' : '';
+
+					let svgHtml = '';
+					if (inv.history.length > 1) {
+						const w = 280, h = 40;
+						const minP = Math.min(...inv.history.map(h => h.price)) * 0.95;
+						const maxP = Math.max(...inv.history.map(h => h.price)) * 1.05;
+						let points = [];
+						inv.history.forEach((hist, idx) => {
+							const x = (idx / (inv.history.length - 1)) * w;
+							const y = h - ((hist.price - minP) / (maxP - minP)) * h;
+							points.push(`${x},${y}`);
+						});
+						const strokeColor = profit >= 0 ? '#1A9306' : '#ff6b6b';
+						svgHtml = `<svg width="100%" height="100%" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${points.join(' ')}" fill="none" stroke="${strokeColor}" stroke-width="1.5"/></svg>`;
+					} else {
+						svgHtml = '<div style="font-size:9px; color:#4a3b2a; text-align:center; margin-top:15px;">WAITING FOR PRICE DATA...</div>';
+					}
+
+					html += `
+					<div class="invest-row">
+						<div class="invest-header">
+							<span style="font-size:12px; color:#e2c07d; text-transform:capitalize; padding-right:20px;">${inv.qty}x ${inv.name}</span>
+							<span class="${colorClass}" style="font-size:12px;">${sign}${roiPercent}%</span>
+						</div>
+						<div class="invest-stats">
+							<div>COST: <span style="color:#fff;">${formatCoin(inv.buyCost)}</span></div>
+							<div>PROFIT: <span class="${colorClass}">${formatCoin(profit)}</span></div>
+						</div>
+						<div class="invest-graph">${svgHtml}</div>
+						<button style="width: 100%; border-color: #ff4a4a; color: #ff4a4a; margin-top: 10px;" onclick="removeInvestment('${inv.uuid}')">REMOVE FROM TRACKER</button>
+					</div>`;
+				});
+
+				container.innerHTML = html;
+				localStorage.setItem('tp_investments', JSON.stringify(investments));
+			}
+
+			async function fetchRecipeForOutput(itemId) {
+				let recIds = await fetchJSON("https://api.guildwars2.com/v2/recipes/search?output=" + itemId);
+				if (!recIds || recIds.length === 0) return null;
+				return await fetchJSON("https://api.guildwars2.com/v2/recipes/" + recIds[0]);
+			}
+
+			async function calcSmartCrafting(type) {
+				const resDiv = document.getElementById(type === 'timegated' ? 'crafting-timegated-results' : 'crafting-custom-results');
+				resDiv.innerHTML = '<div style="padding:10px; font-size:10px; color:#8a7a5f; text-align:center;">FETCHING PRICES & INVENTORY...</div>';
+				
+				let targetItems = [];
+				if (type === 'timegated') {
+					targetItems = smartCrafts;
+				} else {
+					if (customCrafts.length === 0) {
+						resDiv.innerHTML = '<div style="padding:10px; font-size:10px; color:#8a7a5f; text-align:center;">NO CUSTOM ITEMS ADDED</div>';
+						return;
+					}
+					for (let id of customCrafts) {
+						let rec = await fetchRecipeForOutput(id);
+						if (rec) {
+							let mats = rec.ingredients.map(ing => ({ id: ing.item_id, count: ing.count }));
+							targetItems.push({ id: id, name: "Item #" + id, mats: mats, isCustom: true });
+						} else {
+							targetItems.push({ id: id, name: "Item #" + id, mats: [], noRecipe: true, isCustom: true });
+						}
+					}
+				}
+				
+				let allIds = new Set();
+				targetItems.forEach(c => {
+					allIds.add(c.id);
+					if(c.mats) c.mats.forEach(m => allIds.add(m.id));
+				});
+				
+				let allIdsArray = Array.from(allIds);
+				let prices = [], itemDetails = [];
+				
+				for(let i=0; i<allIdsArray.length; i+=200) {
+					let chunk = allIdsArray.slice(i, i+200).join(',');
+					let [pBatch, iBatch] = await Promise.all([
+						fetchJSON("https://api.guildwars2.com/v2/commerce/prices?ids=" + chunk),
+						fetchJSON("https://api.guildwars2.com/v2/items?ids=" + chunk)
+					]);
+					if(pBatch) prices = prices.concat(pBatch);
+					if(iBatch) itemDetails = itemDetails.concat(iBatch);
+				}
+				
+				const inventory = await fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey);
+				
+				if (!prices || !inventory) {
+					resDiv.innerHTML = '<div style="padding:10px; font-size:10px; color:#f44; text-align:center;">API ERROR. CHECK KEY PERMISSIONS.</div>';
+					return;
+				}
+				
+				const invMap = {};
+				inventory.forEach(i => { if (i) invMap[i.id] = i.count; });
+				
+				let html = '';
+				targetItems.forEach(craft => {
+					const outItem = itemDetails ? itemDetails.find(i => i.id === craft.id) : null;
+					let displayName = outItem ? outItem.name : craft.name;
+					
+					let removeBtn = craft.isCustom ? `<button style="background:transparent; border:none; color:#f44; padding:0; font-size:14px; margin-left:10px;" onclick="event.stopPropagation(); removeCustomCraft(${craft.id})">✖</button>` : '';
+
+					if (craft.noRecipe) {
+						html += `<div class="invest-row"><div class="invest-header"><span style="font-size:12px; color:#f44;">${displayName} (No Standard Recipe Found)</span>${removeBtn}</div></div>`;
+						return;
+					}
+
+					const pDataOut = prices.find(p => p.id === craft.id);
+					const outPrice = pDataOut && pDataOut.sells ? pDataOut.sells.unit_price : 0;
+					
+					let craftCost = 0;
+					let missingMatsCost = 0;
+					
+					craft.mats.forEach(m => {
+						const pData = prices.find(p => p.id === m.id);
+						let mPrice = (m.id === 62064 || m.id === 46747) ? 149 : (pData && pData.buys ? pData.buys.unit_price : 0); 
+						craftCost += mPrice * m.count;
+						
+						const have = invMap[m.id] || 0;
+						const missing = Math.max(0, m.count - have);
+						missingMatsCost += mPrice * missing;
+					});
+					
+					const revenue = outPrice * 0.85;
+					const profit = revenue - craftCost;
+					const actualCost = missingMatsCost; 
+					const actualProfit = revenue - actualCost; 
+					
+					const profitColor = profit >= 0 ? '#1A9306' : '#ff4a4a';
+					const actualColor = actualProfit >= 0 ? '#1A9306' : '#ff4a4a';
+					const sign = profit >= 0 ? '+' : '';
+					const actualSign = actualProfit >= 0 ? '+' : '';
+
+					let iconHtml = outItem ? `<img src="${outItem.icon}" style="width:20px; border:1px solid #332a1e;" class="rarity-${outItem.rarity}" />` : '';
+
+					html += `
+					<div class="invest-row" style="cursor:pointer;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${displayName}'), '_blank')">
+						<div class="invest-header">
+							<div style="display:flex; align-items:center; gap:8px;">
+								${iconHtml}
+								<span style="font-size:12px; color:#e2c07d;">${displayName}</span>
+							</div>
+							<div style="display:flex; align-items:center;">
+								<span style="font-size:12px; font-weight:bold; color:${profitColor};">${sign}${formatCoin(profit)}</span>
+								${removeBtn}
+							</div>
+						</div>
+						<div class="invest-stats" style="border-bottom:1px dashed #332a1e; padding-bottom:5px; margin-bottom:5px;">
+							<div>SELL: <span style="color:#fff;">${formatCoin(outPrice)}</span></div>
+							<div>MATS COST: <span style="color:#fff;">${formatCoin(craftCost)}</span></div>
+						</div>
+						<div class="invest-stats">
+							<div>BUY MISSING MATS: <span style="color:#fff;">${formatCoin(actualCost)}</span></div>
+							<div>ACTUAL NET: <span style="font-weight:bold; color:${actualColor};">${actualSign}${formatCoin(actualProfit)}</span></div>
+						</div>
+					</div>`;
+				});
+				
+				resDiv.innerHTML = html;
+			}
+
+			function addCustomCraft(id, btn) {
+				let val = parseInt(id);
+				if (!val || isNaN(val)) return;
+				if (!customCrafts.includes(val)) {
+					customCrafts.push(val);
+					localStorage.setItem('gw2_custom_crafts', JSON.stringify(customCrafts));
+				}
+				if (btn) {
+					btn.innerHTML = '✔ IN CRAFTING WATCHLIST';
+					btn.style.background = 'rgba(26,147,6,0.2)';
+					btn.style.borderColor = '#1A9306';
+					btn.style.color = '#1A9306';
+					btn.onclick = () => removeCustomCraft(val);
+				}
+				calcSmartCrafting('custom');
+			}
+
+			function removeCustomCraft(id) {
+				customCrafts = customCrafts.filter(c => c !== id);
+				localStorage.setItem('gw2_custom_crafts', JSON.stringify(customCrafts));
+				
+				const resDiv = document.getElementById('crafting-custom-results');
+				if (resDiv.style.display !== 'none') {
+					calcSmartCrafting('custom');
+				}
+			}
+
+			function toggleWatchlist(id) {
+				watchlist = watchlist.includes(id) ? watchlist.filter(w => w !== id) : [...watchlist, id];
+				localStorage.setItem('tp_watchlist', JSON.stringify(watchlist));
+				renderWatchlist();
+			}
+
+			async function renderWatchlist() {
+				let container = document.getElementById('watchlist-items');
+				if (watchlist.length === 0) { container.innerHTML = '<div style="padding:10px; font-size:10px; color:#4a3b2a; text-align:center;">WATCHLIST EMPTY</div>'; return; }
+				let html = '';
+				for (let id of watchlist) {
+					let [info, price] = await Promise.all([itemCache[id] ? Promise.resolve(itemCache[id]) : fetchJSON("https://api.guildwars2.com/v2/items/" + id), fetchJSON("https://api.guildwars2.com/v2/commerce/prices/" + id)]);
+					if (info) {
+						itemCache[id] = info;
+						let name = info.name || info.n || '';
+						let nameAttr = name.replace(/"/g, '&quot;');
+						html += `<div class="watch-row" style="cursor:pointer;" data-name="${nameAttr}" onmouseover="showItemTip(${id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.dataset.name.replace(/ /g, '_')), '_blank')">
+                                <span class="star-btn active" onclick="event.stopPropagation(); toggleWatchlist(${id})"></span>
+                                <img src="${info.icon || info.i}" style="width:24px; border:1px solid #332a1e;" class="rarity-${info.rarity || info.r}" />
+                                <div style="color:#e2c07d; font-size:11px; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-transform:capitalize;">${name}</div>
+                                <div class="watch-prices">
+                                <div class="watch-price-item"><span>${formatCoin(price?.buys?.unit_price)}</span> <div class="label">- BUY</div></div>
+                                <div class="watch-price-item"><span>${formatCoin(price?.sells?.unit_price)}</span> <div class="label">- SELL</div></div>
+                                </div></div>`;
+					}
+				}
+				container.innerHTML = html;
+				
+				document.querySelectorAll('.sub-btn').forEach(btn => {
+					const id = btn.getAttribute('data-id');
+					if (tpState[id]) {
+						if (!id.startsWith('crafting_')) {
+							const parts = id.split('_');
+							toggleSub(btn, parts[0], parts[1], true);
+						}
+					}
+				});
+			}
+
+			function toggleMaster(btn, type, skipSave) {
+				const content = btn.nextElementSibling;
+				const isActive = !btn.classList.contains("active");
+				btn.classList.toggle("active", isActive);
+				content.style.display = isActive ? "block" : "none";
+				if (isActive && type === 'delivery') loadDelivery(content);
+				
+				if (!skipSave) {
+					tpState[btn.getAttribute('data-id')] = isActive;
+					localStorage.setItem('gw2_tp_harmonica', JSON.stringify(tpState));
+				}
+			}
+
+			async function toggleSub(btn, type, side, skipSave) {
+				const content = btn.nextElementSibling;
+				const isActive = !btn.classList.contains("active");
+				btn.classList.toggle("active", isActive);
+				content.style.display = isActive ? "block" : "none";
+				
+				if (!skipSave) {
+					tpState[btn.getAttribute('data-id')] = isActive;
+					localStorage.setItem('gw2_tp_harmonica', JSON.stringify(tpState));
+				}
+
+				if (isActive) {
+					content.innerHTML = '<div style="padding:15px; font-size:10px; color:#8a7a5f; text-align:center;">LOADING...</div>';
+					let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/transactions/" + type + "/" + side + "?access_token=" + activeKey);
+					if (data && data.length > 0) {
+						let ids = [...new Set(data.map(t => Number(t.item_id)))];
+						for(let i=0; i<ids.length; i+=100) {
+							let batchIds = ids.slice(i, i+100);
+							let missing = batchIds.filter(id => !itemCache[id]);
+							if (missing.length > 0) {
+								missing.forEach(mid => {
+									const idxItem = tradingIndex.find(idx => Number(idx.id) === mid) || deltaIndex.find(idx => Number(idx.id) === mid);
+									if(idxItem) itemCache[mid] = { name: idxItem.n, icon: idxItem.i, rarity: idxItem.r };
+								});
+								let stillMissing = missing.filter(id => !itemCache[id]);
+								if (stillMissing.length > 0) {
+									let batchData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + stillMissing.join(','));
+									if(batchData) batchData.forEach(it => { if(it) itemCache[it.id] = it; });
+								}
+							}
+						}
+						content.innerHTML = data.map(tx => {
+							let it = itemCache[tx.item_id];
+							let name = it?.name || it?.n || 'ITEM#'+tx.item_id;
+							let nameAttr = name.replace(/"/g, '&quot;');
+							return `<div style="display:flex; align-items:center; gap:10px; padding:8px 15px; border-bottom:1px solid #2a2015; font-size:11px; cursor:pointer;" data-name="${nameAttr}" onmouseover="showItemTip(${tx.item_id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.dataset.name.replace(/ /g, '_')), '_blank')"><img src="${it?.icon || it?.i}" style="width:22px; border:1px solid #332a1e;" class="rarity-${it?.rarity || it?.r}" /><div style="flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${tx.quantity}x ${name}</div><div>${formatCoin(tx.price * (tx.quantity || 1))}</div></div>`;
+						}).join('');
+					} else content.innerHTML = '<div style="padding:15px; font-size:10px; color:#4a3b2a; text-align:center;">NO DATA</div>';
+				}
+			}
+
+			async function loadDelivery(container) {
+				let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/delivery?access_token=" + activeKey);
+				if (!data) return;
+				let html = '<div style="padding:15px; font-size:12px; border-bottom:1px solid #2a2015;">ITEMS: ' + data.items.length + '<br>FUNDS: ' + formatCoin(data.coins) + '</div><div class="item-grid">';
+				const ids = data.items.map(i => Number(i.id));
+				if (ids.length > 0) {
+					const itemData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + ids.join(','));
+					if (itemData) itemData.forEach(it => { if(it) itemCache[it.id] = it; });
+				}
+				for (let it of data.items) {
+					let info = itemCache[it.id];
+					if (info) { 
+						let nameAttr = (info.name || '').replace(/"/g, '&quot;');
+						html += `<div class="item-slot rarity-${info.rarity}" data-name="${nameAttr}" onmouseover="showItemTip(${it.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.dataset.name.replace(/ /g, '_')), '_blank')"><img src="${info.icon}" class="item-icon" /><div style="position:absolute; bottom:1px; right:2px; font-size:10px; font-weight:bold; color:#fff; text-shadow:1px 1px 1px #000;">${it.count}</div></div>`; 
+					}
+				}
+				container.innerHTML = html + "</div>";
+			}
+
+			async function showItemTip(id, e) {
+				const info = itemCache[id] || await fetchJSON("https://api.guildwars2.com/v2/items/" + id);
+				if (info) {
+					itemCache[id] = info;
+					const desc = info.description ? "<br><span style='color:#8a7a5f; font-size:11px; font-style:italic;'>" + info.description.replace(/<[^>]*>?/gm, '') + "</span>" : '';
+					window.parent.postMessage({action:'showTooltip', text: "<b>" + info.name + "</b>" + desc, x: e.clientX, y: e.clientY}, '*');
+				}
+			}
+
+			async function calcGold() {
+				let val = document.getElementById('ex-gold').value;
+				let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=" + ((val||0)*10000));
+				document.getElementById('res-gem').innerHTML = data ? data.quantity.toLocaleString() : 'ERR';
+			}
+
+			async function calcGem() {
+				let val = document.getElementById('ex-gem').value;
+				let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=" + (val||0));
+				document.getElementById('res-gold').innerHTML = data ? formatCoin(data.quantity) : 'ERR';
+			}
+
+			async function updateWallet() {
+				if (!activeKey) return;
+				const wallet = await fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey);
+				if (wallet) {
+					const gold = (wallet.find(w => w.id === 1) || {value:0}).value;
+					const gems = (wallet.find(w => w.id === 4) || {value:0}).value;
+					document.getElementById('wallet-display').innerHTML = `<div>${formatCoin(gold)}</div><div>${gems.toLocaleString()} <img src='https://wiki.guildwars2.com/images/a/aa/Gem.png' style='width:14px;' /></div>`;
+				}
+			}
+
+			async function checkDeliveries() {
+				let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/delivery?access_token=" + activeKey);
+				const hasDelivery = data && (data.coins > 0 || data.items.length > 0);
+				window.parent.postMessage({ 
+					action: 'updateTPIndicator', 
+					active: hasDelivery, 
+					coins: data?.coins || 0, 
+					items: data?.items?.length || 0 
+				}, '*');
+			}
+
+			init();
+			/*]]>*/
+		</script>
+	</body>
+</html>
