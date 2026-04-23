@@ -30,6 +30,7 @@ To unlock the full potential of the app's functionality:
 * **Data & Assets:** All Guild Wars 2 assets and API data are property of ArenaNet.
 * **Built With:** C#, .NET 9, WebView2, and Leaflet.
 * **Mumble Link:** Powered by the [Gw2Sharp](https://github.com/Archomeda/Gw2Sharp) library.
+* **gw2efficiency:** Took massive inspiration from their site.
 
 ## Appreciation
 
@@ -44,8 +45,8 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 ## Roadmap
 
 - ~~Add WvW map, scores and timers~~
-- PvP maps
+- ~~PvP maps~~
 - Live Dynamic Events on map
 - ~~Add TaCo Routes overlayed on map~~ abandoned this idea
-- Weekly Clear Dashboard
-- Smart Crafting Profitability
+- ~~Weekly Clear Dashboard~~
+- ~~Smart Crafting Profitability~~
