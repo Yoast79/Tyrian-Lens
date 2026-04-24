@@ -47,6 +47,7 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 - ~~Add WvW map, scores and timers~~
 - ~~PvP maps~~
 - Live Dynamic Events on map
-- ~~Add TaCo Routes overlayed on map~~ abandoned this idea
+- Add TaCo Routes overlayed on map
 - ~~Weekly Clear Dashboard~~
 - ~~Smart Crafting Profitability~~
+- Build Planner
