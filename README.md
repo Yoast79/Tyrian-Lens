@@ -51,3 +51,4 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 - ~~Weekly Clear Dashboard~~
 - ~~Smart Crafting Profitability~~
 - ~~Build Planner~~
+- Add more recipes to the Crafting Calculator
