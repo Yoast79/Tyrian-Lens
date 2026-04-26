@@ -189,6 +189,8 @@
 		<None Remove="Assets\MenuIcons\nav_wallet.png" />
 		<None Remove="Assets\MenuIcons\nav_wardrobe.png" />
 		<None Remove="Assets\MenuIcons\nav_wvw.png" />
+		<None Remove="Assets\Sounds\choya_pop.mp3" />
+		<None Remove="Assets\Sounds\something_in_the_water.mp3" />
 		<None Remove="Assets\Sounds\timers_noticication_papling.mp3" />
 		<None Remove="Assets\Sounds\timers_notification_babloop.mp3" />
 		<None Remove="Assets\Sounds\timers_notification_boopboop.mp3" />
@@ -293,6 +295,7 @@
 		<None Remove="map_data.json" />
 		<None Remove="map_options.html" />
 		<None Remove="mastery_insights.json" />
+		<None Remove="mastery_insights_index.json" />
 		<None Remove="master_index.json" />
 		<None Remove="material_storage.html" />
 		<None Remove="menu.html" />
@@ -305,6 +308,8 @@
 		<None Remove="modules\home.js" />
 		<None Remove="modules\weapons.js" />
 		<None Remove="mystic_forge_recipes.json" />
+		<None Remove="planner.html" />
+		<None Remove="planner_db.json" />
 		<None Remove="pwa-setup.js" />
 		<None Remove="recipes.html" />
 		<None Remove="recipe_index.json" />
@@ -597,6 +602,9 @@
 		<Content Include="Assets\MenuIcons\nav_recipes.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+		<Content Include="Assets\MenuIcons\nav_routes.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
 		<Content Include="Assets\MenuIcons\nav_search.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
@@ -620,6 +628,12 @@
 		</Content>
 		<Content Include="Assets\MenuIcons\nav_wvw.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\choya_pop.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Sounds\something_in_the_water.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 		<Content Include="Assets\Sounds\timers_noticication_papling.mp3">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -964,6 +978,12 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 		<Content Include="mystic_forge_recipes.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="planner.html">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="planner_db.json">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 		<Content Include="pwa-setup.js">

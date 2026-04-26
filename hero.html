@@ -13,23 +13,23 @@
 			.char-name { font-size: 18px; font-weight: bold; color: #f0dca5; }
 			.char-level { font-size: 14px; color: #e2c07d; margin-left: 8px; font-family: monospace; }
 			.char-class { font-size: 14px; font-weight: normal; text-transform: capitalize; color: #8a7a5f; margin-left: 8px; }
-			.char-select { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; outline: none; }
+			.char-select { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; outline: none; font-family: "Crimson Text", serif; }
 
 			.template-row { display: flex; gap: 6px; justify-content: flex-start; margin-bottom: 20px; }
 			.template-box {
 			width: 28px; height: 28px; border: 1px solid #332a1e; background: rgba(20,15,10,0.8);
 			display: flex; align-items: center; justify-content: center; font-size: 13px;
-			color: #4a3b2a; transition: 0.2s; cursor: default;
+			color: #4a3b2a; transition: 0.2s; cursor: default; font-family: "Crimson Text", serif;
 			}
 
 			.template-box.unlocked { color: #e2c07d; cursor: pointer; }
 			.template-box.has-gear { border: 1px solid #e2c07d; color: #f0dca5; }
 			.template-box.active { background: #e2c07d !important; color: #1a1510 !important; border-color: #e2c07d !important; font-weight: bold; }
 
-			.main-layout { display: flex; justify-content: space-between; gap: 15px; max-width: 600px; margin: 0 auto; }
+			.main-layout { display: flex; justify-content: space-between; gap: 15px; max-width: 600px; margin: 0 auto; transition: box-shadow 0.3s ease; }
 			.equip-column { display: flex; flex-direction: column; gap: 12px; align-items: center; width: 220px; }
 			.equip-row { display: flex; gap: 12px; justify-content: center; width: 100%; min-height: 48px; transition: opacity 0.3s ease; }
-			.item-slot { width: 48px; height: 48px; border: 2px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; }
+			.item-slot { width: 48px; height: 48px; border: 2px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; cursor: pointer; }
 			.item-slot img { width: 100%; height: 100%; object-fit: cover; }
 			.separator { height: 1px; background: rgba(74, 59, 42, 0.4); width: 100%; margin: 5px 0; }
 
@@ -43,6 +43,9 @@
 			.skill-row { display: flex; gap: 6px; align-items: center; }
 			.skill-slot { width: 34px; height: 34px; border: 1px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; }
 			.skill-slot img { width: 100%; height: 100%; object-fit: cover; }
+
+			.btn { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; height: 34px; padding: 0 15px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; -webkit-appearance: none; appearance: none; }
+			.btn:hover { border-color: #f0dca5; color: #f0dca5; background: rgba(226, 192, 125, 0.1); }
 
 			.swap-btn { width: 36px; height: 36px; cursor: pointer; border: 1px solid #4a3b2a; background: rgba(20,15,10,0.9); border-radius: 3px; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
 			.swap-btn:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.15); }
@@ -80,7 +83,10 @@
 				</div>
 				<select id="char-select" class="char-select"></select>
 			</div>
-			<div class="template-row" id="template-tabs"></div>
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+				<div class="template-row" id="template-tabs" style="margin-bottom: 0;"></div>
+				<button class="btn" onclick="exportToPlanner()">Save to Planner</button>
+			</div>
 			<div class="main-layout">
 				<div class="equip-column">
 					<div class="equip-row" id="row-head"></div>
@@ -155,6 +161,18 @@
 			</div>
 		</div>
 
+		<div id="save-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#1a1510; border:2px solid #4a3b2a; padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:350px; font-family: 'Crimson Text', serif;">
+			<div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">SAVE TO PLANNER</div>
+			<div style="color:#ccc; font-size:14px; margin-bottom:10px;">Enter build name:</div>
+			<input type="text" id="save-build-name" style="width: 100%; background: #0a0805; color: #e2c07d; border: 1px solid #332a1e; padding: 8px; margin-bottom: 20px; outline: none; font-family: 'Crimson Text', serif; font-size: 14px; box-sizing: border-box;" />
+			<div style="display:flex; justify-content:space-between;">
+				<button class="btn" onclick="document.getElementById('save-modal').style.display='none'">Cancel</button>
+				<button class="btn" onclick="confirmExport()">Save</button>
+			</div>
+		</div>
+
+		<div id="toast-msg" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#1a1510; border:1px solid #e2c07d; color:#e2c07d; padding:10px 20px; z-index:1001; box-shadow:0 0 10px rgba(0,0,0,0.8); text-transform:uppercase; font-family: 'Crimson Text', serif;"></div>
+
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
 			<div>SYNCING HERO DATA...</div>
@@ -163,6 +181,262 @@
 		<script>
 			/*<![CDATA[*/
         let CURRENT_ENV = 'land', CURRENT_TERRA_WSET = 1, CURRENT_AQUA_WSET = 1, CURRENT_TAB_DATA = [], fullData = null;
+        window.PLANNER_DB = null;
+
+        window.exportToPlanner = function() {
+            if (!fullData) return;
+            const defaultName = document.getElementById('display-name').innerText + " - Exported";
+            document.getElementById('save-build-name').value = defaultName;
+            document.getElementById('save-modal').style.display = 'block';
+        };
+
+        window.confirmExport = function() {
+            if (!fullData) return;
+            const buildName = document.getElementById('save-build-name').value.trim() || "New Build";
+            const profession = fullData.profession;
+            let equipObj = {};
+            
+            const plannerWeps = {
+                "axe": 30682, "dagger": 30690, "mace": 30694, "pistol": 30695, "scepter": 30698, "sword": 30699,
+                "focus": 30696, "shield": 30697, "torch": 30693, "warhorn": 30692,
+                "greatsword": 30689, "hammer": 30687, "longbow": 30684, "rifle": 30685, "shortbow": 30686, "staff": 30688,
+                "speargun": 30700, "harpoongun": 30700, "spear": 30691, "harpoon": 30691, "trident": 30702
+            };
+
+            const prefixToStat = {
+                "zojja": "Berserker's", "yassith": "Viper's", "saphir": "Assassin's", "soros": "Assassin's",
+                "veldrunner": "Marauder", "svaard": "Marauder", "ahamid": "Trailblazer's", "chorben": "Trailblazer's",
+                "maklain": "Minstrel's", "zehtuka": "Harrier's", "wupwup": "Celestial", "hronk": "Magi's",
+                "tate": "Cleric's", "theodosus": "Dire", "morbach": "Dire", "mathilde": "Diviner's", "ossa": "Dragon's",
+                "zintl": "Shaman's", "laranthir": "Vigilant", "leftpaw": "Settler's", "eir": "Sinister",
+                "ferratus": "Rabid", "acastus": "Nomad's", "occam": "Carrion", "weling": "Sentinel's",
+                "ruka": "Vander's", "tizlak": "Giver's", "stonecleaver": "Crusader", "angchu": "Cavalier's",
+                "grizzlemouth": "Cavalier's", "beigarth": "Knight's", "gobrech": "Valkyrie", "wei qi": "Valkyrie",
+                "ventari": "Plaguedoctor's", "bringer": "Bringer's", "wanderer": "Wanderer's", "suun": "Dragon's", "togo": "Ritualist's"
+            };
+            const commonStats = ["Berserker's", "Viper's", "Celestial", "Marauder", "Trailblazer's", "Diviner's", "Ritualist's", "Harrier's", "Minstrel's", "Commander's", "Dragon's", "Assassin's", "Cleric's", "Magi's", "Sinister", "Grieving", "Valkyrie", "Knight's", "Cavalier's", "Dire", "Rabid", "Carrion", "Shaman's", "Plaguedoctor's", "Bringer's", "Wanderer's", "Zealot's", "Crusader", "Seraph", "Giver's", "Marshal's", "Apothecary's", "Captain's", "Settler's", "Sentinel's", "Nomad's"];
+
+            function inferStat(attrs) {
+                if (!attrs || attrs.length === 0) return null;
+                let keys = attrs.map(a => a.attribute);
+                let has = (k) => keys.includes(k);
+                let val = (k) => { let x = attrs.find(a=>a.attribute===k); return x ? x.modifier : 0; };
+                
+                let statKeys = keys.filter(k => k !== 'AgonyResistance');
+                if (statKeys.length >= 7) return "Celestial";
+                
+                // 4-stat combinations
+                if (has('ConditionDamage') && has('Power') && has('Precision') && has('ConditionDuration')) return "Viper's";
+                if (has('Toughness') && has('ConditionDamage') && has('Vitality') && has('ConditionDuration')) return "Trailblazer's";
+                if (has('Power') && has('Precision') && has('Vitality') && has('CritDamage')) {
+                    if (val('Power') === val('CritDamage') || val('CritDamage') > val('Precision')) return "Dragon's";
+                    return "Marauder";
+                }
+                if (has('Power') && has('BoonDuration') && has('Precision') && has('CritDamage')) return "Diviner's";
+                if (has('ConditionDamage') && has('Vitality') && has('BoonDuration') && has('ConditionDuration')) return "Ritualist's";
+                if (has('Toughness') && has('Healing') && has('Vitality') && has('BoonDuration')) return "Minstrel's";
+                if (has('Power') && has('ConditionDamage') && has('Precision') && has('CritDamage')) return "Grieving";
+                if (has('Toughness') && has('Healing') && has('Vitality') && has('ConditionDamage')) return "Plaguedoctor's";
+
+                // 3-stat combinations
+                if (has('Power') && has('Precision') && has('CritDamage')) {
+                    if (val('Power') >= val('Precision')) return "Berserker's";
+                    return "Assassin's";
+                }
+                if (has('Power') && has('Healing') && has('BoonDuration')) return "Harrier's";
+                if (has('Healing') && has('Power') && has('Toughness')) return "Cleric's";
+                if (has('ConditionDamage') && has('Toughness') && has('Vitality')) return "Dire";
+                if (has('ConditionDamage') && has('Precision') && has('Toughness')) return "Rabid";
+                if (has('ConditionDamage') && has('Power') && has('Vitality')) return "Carrion";
+                if (has('Power') && has('Toughness') && has('Vitality')) return "Soldier's";
+                if (has('Power') && has('Toughness') && has('CritDamage')) return "Cavalier's";
+                if (has('Toughness') && has('Power') && has('Precision')) return "Knight's";
+                if (has('Power') && has('Vitality') && has('CritDamage')) return "Valkyrie";
+                if (has('ConditionDamage') && has('Power') && has('Precision')) return "Sinister";
+                if (has('Healing') && has('Vitality') && has('ConditionDamage')) return "Shaman's";
+                if (has('Healing') && has('Precision') && has('Vitality')) return "Magi's";
+                if (has('Toughness') && has('Healing') && has('ConditionDamage')) return "Apothecary's";
+                if (has('Power') && has('Healing') && has('Precision')) return "Zealot's";
+                
+                return null;
+            }
+
+            const getPlannerId = (apiId, type) => {
+                let itm = UTILS.itemCache[apiId];
+                if (!itm || !window.PLANNER_DB || !window.PLANNER_DB[type]) return apiId;
+                let name = itm.name;
+                let match = window.PLANNER_DB[type].find(x => x.n === name);
+                return match ? match.id : apiId;
+            };
+
+            const plannerSlots = ['Helm','Shoulders','Coat','Gloves','Leggings','Boots','Backpack','Accessory1','Accessory2','Amulet','Ring1','Ring2','Relic','HelmAquatic','WeaponA1','WeaponA2','WeaponB1','WeaponB2','WeaponAquaticA','WeaponAquaticB'];
+            
+            plannerSlots.forEach(slot => {
+                equipObj[slot] = { id: null, stat: null, rune: null, rune2: null, infusion1: null, infusion2: null, infusion3: null };
+            });
+
+            plannerSlots.forEach(slot => {
+                let d = CURRENT_TAB_DATA.find(x => x.slot === slot);
+                if (d) {
+                    let it = UTILS.itemCache[d.id];
+                    
+                    if (slot.startsWith('Weapon') && it) {
+                        let wType = "";
+                        if (it.details && it.details.type) wType = it.details.type;
+                        else if (it.type) wType = it.type;
+                        wType = wType.toLowerCase().replace(/ /g, '');
+                        equipObj[slot].id = plannerWeps[wType] || null;
+                    }
+                    
+                    // --- STATS EXTRACTION ---
+                    let statName = null;
+                    let attrsToAnalyze = [];
+
+                    if (d.stats && d.stats.attributes) {
+                        attrsToAnalyze = Object.entries(d.stats.attributes).map(([k,v]) => ({ attribute: k, modifier: v }));
+                    } else if (it && it.details && it.details.infix_upgrade && it.details.infix_upgrade.attributes) {
+                        attrsToAnalyze = it.details.infix_upgrade.attributes;
+                    }
+                    
+                    statName = inferStat(attrsToAnalyze);
+
+                    if (!statName && it) {
+                        let lowerName = it.name.toLowerCase();
+                        for (let prefix in prefixToStat) {
+                            if (lowerName.includes(prefix)) { statName = prefixToStat[prefix]; break; }
+                        }
+                        if (!statName) {
+                            for (let s of commonStats) {
+                                if (lowerName.includes(s.toLowerCase())) { statName = s; break; }
+                            }
+                        }
+                    }
+                    equipObj[slot].stat = statName;
+                    
+                    // --- UPGRADES EXTRACTION (Runes/Sigils) ---
+                    let upgrades = d.upgrades ? [...d.upgrades] : [];
+                    if (upgrades.length === 0 && it && it.details && it.details.suffix_item_id) {
+                        upgrades.push(it.details.suffix_item_id);
+                        if (it.details.secondary_suffix_item_id) upgrades.push(it.details.secondary_suffix_item_id);
+                    }
+
+                    if (upgrades.length > 0) {
+                        let type1 = slot.startsWith('Weapon') ? 'sigils' : 'runes';
+                        equipObj[slot].rune = getPlannerId(upgrades[0], type1);
+                        
+                        if (upgrades.length > 1) {
+                            equipObj[slot].rune2 = getPlannerId(upgrades[1], type1);
+                        }
+                    }
+                    
+                    // --- INFUSIONS EXTRACTION ---
+                    if (d.infusions) {
+                        for(let i=0; i<d.infusions.length && i<3; i++) {
+                            let infItem = UTILS.itemCache[d.infusions[i]];
+                            let infName = null;
+                            if (infItem) {
+                                let attrs = infItem.details?.infix_upgrade?.attributes || [];
+                                let buff = infItem.details?.infix_upgrade?.buff?.description || infItem.description || "";
+                                
+                                let mainAttr = attrs.find(a => a.attribute !== 'AgonyResistance' && a.modifier > 0);
+                                if (mainAttr) {
+                                    let a = mainAttr.attribute;
+                                    if (a === 'Healing') infName = 'HealingPower';
+                                    else if (a === 'ConditionDuration') infName = 'Expertise';
+                                    else if (a === 'BoonDuration') infName = 'Concentration';
+                                    else if (a === 'CritDamage') infName = 'Ferocity';
+                                    else infName = a;
+                                }
+                                
+                                if (!infName && buff) {
+                                    let b = buff.toLowerCase();
+                                    if (b.includes('power')) infName = 'Power';
+                                    else if (b.includes('precision')) infName = 'Precision';
+                                    else if (b.includes('condition damage')) infName = 'ConditionDamage';
+                                    else if (b.includes('toughness')) infName = 'Toughness';
+                                    else if (b.includes('vitality')) infName = 'Vitality';
+                                    else if (b.includes('healing')) infName = 'HealingPower';
+                                    else if (b.includes('expertise') || b.includes('condition duration')) infName = 'Expertise';
+                                    else if (b.includes('concentration') || b.includes('boon duration')) infName = 'Concentration';
+                                    else if (b.includes('ferocity') || b.includes('critical damage')) infName = 'Ferocity';
+                                }
+                            }
+                            equipObj[slot]['infusion' + (i+1)] = infName;
+                        }
+                    }
+                }
+            });
+
+            const plannerJadeCores = [
+                { n: "Tier 10", id: 96613, vit: 235 },
+                { n: "Tier 9", id: 96070, vit: 211 },
+                { n: "Tier 8", id: 96299, vit: 188 },
+                { n: "Tier 7", id: 97020, vit: 165 },
+                { n: "Tier 6", id: 96467, vit: 141 },
+                { n: "Tier 5", id: 95864, vit: 118 },
+                { n: "Tier 4", id: 96628, vit: 94 },
+                { n: "Tier 3", id: 97284, vit: 70 },
+                { n: "Tier 2", id: 97041, vit: 47 },
+                { n: "Tier 1", id: 97339, vit: 23 }
+            ];
+            
+            let pc = CURRENT_TAB_DATA.find(x => x.slot === 'PowerCore');
+            let jId = null; let jVit = 0;
+            if (pc && UTILS.itemCache[pc.id]) {
+                let jName = UTILS.itemCache[pc.id].name;
+                let jMatch = plannerJadeCores.find(c => jName.includes(c.n));
+                if (jMatch) { jId = jMatch.id; jVit = jMatch.vit; }
+            }
+            equipObj['JadeBot'] = { id: jId, vit: jVit };
+            
+            let relicData = CURRENT_TAB_DATA.find(x => x.slot === 'Relic');
+            let relicId = null;
+            if (relicData) relicId = getPlannerId(relicData.id, 'relics');
+            equipObj['Relic'] = { id: null, stat: null, rune: relicId };
+
+            let traitsObj = [{spec:null, traits:[null,null,null]}, {spec:null, traits:[null,null,null]}, {spec:null, traits:[null,null,null]}];
+            let skillsObj = { land: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null }, water: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null } };
+            
+            let activeBuildEl = document.querySelector('#build-tabs .template-box.active');
+            let bTabId = activeBuildEl ? parseInt(activeBuildEl.innerText) : (fullData.active_build_tab || 1);
+            const bTab = fullData.build_tabs.find(t => t.tab === bTabId);
+
+            if (bTab && bTab.build) {
+                if (bTab.build.specializations) {
+                    bTab.build.specializations.forEach((sp, i) => {
+                        if (sp && sp.id && i < 3) {
+                            traitsObj[i].spec = sp.id;
+                            traitsObj[i].traits = [ sp.traits[0] || null, sp.traits[1] || null, sp.traits[2] || null ];
+                        }
+                    });
+                }
+                const mapSkills = (source, target) => {
+                    if (!source) return;
+                    target.Heal = source.heal || null;
+                    target.Utility1 = (source.utilities && source.utilities.length > 0) ? source.utilities[0] : null;
+                    target.Utility2 = (source.utilities && source.utilities.length > 1) ? source.utilities[1] : null;
+                    target.Utility3 = (source.utilities && source.utilities.length > 2) ? source.utilities[2] : null;
+                    target.Elite = source.elite || null;
+                };
+                mapSkills(bTab.build.skills, skillsObj.land);
+                mapSkills(bTab.build.aquatic_skills, skillsObj.water);
+            }
+
+            let plannerState = { name: buildName, profession: profession, equipment: equipObj, traits: traitsObj, skills: skillsObj };
+            let savedBuilds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}');
+            savedBuilds[buildName] = plannerState;
+            localStorage.setItem('gw2_planner_builds', JSON.stringify(savedBuilds));
+            
+            document.getElementById('save-modal').style.display = 'none';
+            window.showToast('Build saved to Planner!');
+        };
+
+        window.showToast = function(msg) {
+            const t = document.getElementById('toast-msg');
+            t.innerText = msg;
+            t.style.display = 'block';
+            setTimeout(() => { t.style.display = 'none'; }, 3000);
+        };
 
         window.toggleEnv = function(env) {
             if (env === 'land') CURRENT_TERRA_WSET = (CURRENT_TERRA_WSET === 1 ? 2 : 1);
@@ -237,6 +511,9 @@
             // Apply UI scale on load
             const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
             if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+            // Pre-load planner db for translation
+            window.PLANNER_DB = await UTILS.fetchSafe('planner_db.json');
 
             const activeKey = localStorage.getItem('gw2_active_key'); if (!activeKey) return;
             const res = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?access_token=${activeKey}`);
@@ -337,10 +614,39 @@
             CURRENT_TAB_DATA = t ? [...(t.equipment || [])] : [];
             const shared = ['Sickle','Axe','Pick','JadeBot','PowerCore','SensoryArray','ServiceChip','Relic'];
             (fullData.equipment || []).forEach(b => { if (shared.includes(b.slot) && !CURRENT_TAB_DATA.find(a => a.slot === b.slot)) CURRENT_TAB_DATA.push(b); });
+            
+            const emptyWiki = {
+                Amulet: "https://wiki.guildwars2.com/images/4/40/Amulet_slot.png",
+                WeaponAquaticA: "https://wiki.guildwars2.com/images/3/3f/Aquatic_weapon_slot.png",
+                WeaponAquaticB: "https://wiki.guildwars2.com/images/3/3f/Aquatic_weapon_slot.png",
+                Backpack: "https://wiki.guildwars2.com/images/8/89/Back_slot.png",
+                HelmAquatic: "https://wiki.guildwars2.com/images/8/88/Breathing_apparatus_slot.png",
+                Coat: "https://wiki.guildwars2.com/images/2/2c/Chest_slot.png",
+                Boots: "https://wiki.guildwars2.com/images/8/84/Feet_slot.png",
+                Sickle: "https://wiki.guildwars2.com/images/f/f1/Foraging_slot.png",
+                Gloves: "https://wiki.guildwars2.com/images/4/45/Hand_slot.png",
+                Helm: "https://wiki.guildwars2.com/images/3/35/Head_slot.png",
+                Ring1: "https://wiki.guildwars2.com/images/8/89/Left_ring_slot.png",
+                Ring2: "https://wiki.guildwars2.com/images/d/de/Right_ring_slot.png",
+                Leggings: "https://wiki.guildwars2.com/images/0/0c/Leg_slot.png",
+                Axe: "https://wiki.guildwars2.com/images/b/bb/Logging_slot.png",
+                Pick: "https://wiki.guildwars2.com/images/1/1c/Mining_slot.png",
+                PowerCore: "https://wiki.guildwars2.com/images/9/99/Power_Core_slot.png",
+                Relic: "https://wiki.guildwars2.com/images/4/46/Relic_slot.png",
+                SensoryArray: "https://wiki.guildwars2.com/images/6/6e/Sensory_Array_slot.png",
+                ServiceChip: "https://wiki.guildwars2.com/images/f/f7/Service_Chip_slot.png",
+                WeaponA2: "https://wiki.guildwars2.com/images/d/d9/Shield_slot.png",
+                WeaponB2: "https://wiki.guildwars2.com/images/d/d9/Shield_slot.png",
+                Shoulders: "https://wiki.guildwars2.com/images/c/c5/Shoulder_slot.png",
+                WeaponA1: "https://wiki.guildwars2.com/images/d/de/Sword_slot.png",
+                WeaponB1: "https://wiki.guildwars2.com/images/d/de/Sword_slot.png"
+            };
+
             const draw = (id, slots) => {
                 const el = document.getElementById(id); el.innerHTML = '';
                 slots.forEach(s => {
                     const b = document.createElement('div'); b.className = 'item-slot';
+                    b.setAttribute('data-slot', s); // For Planner interception
                     if (s === 'JadeBot') { const img = document.createElement('img'); img.src = 'https://wiki.guildwars2.com/images/b/bf/Jade_Bot_%28skin%29.png'; img.style.opacity = "1"; b.appendChild(img); el.appendChild(b); return; }
                     const d = CURRENT_TAB_DATA.find(x => x.slot === s);
                     if (d && UTILS.itemCache[d.id]) {
@@ -350,7 +656,16 @@
                         img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
                         img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(it.name)}`, '_blank');
                         b.appendChild(img);
-                    } else b.style.opacity = "0.1";
+                    } else {
+                        if (emptyWiki[s]) {
+                            const img = document.createElement('img'); 
+                            img.src = emptyWiki[s];
+                            img.style.opacity = "0.5";
+                            b.appendChild(img);
+                        } else {
+                            b.style.opacity = "0.1";
+                        }
+                    }
                     el.appendChild(b);
                 });
             };
@@ -534,5 +849,6 @@
         init();
         /*]]>*/
 		</script>
+		<script src="modules/build_planner.js"></script>
 	</body>
 </html>

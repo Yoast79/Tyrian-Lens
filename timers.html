@@ -24,12 +24,12 @@
 			.cat-btn.active { background: rgba(226,192,125,0.1); color: #e2c07d; border-left-color: #e2c07d; }
 			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 5px; padding-right: 5px; }
 
-			.fancy-toggle { position: relative; display: inline-block; width: 40px; height: 20px; vertical-align: middle; margin-left: 8px; }
+			.fancy-toggle { position: relative; display: inline-block; width: 34px; height: 18px; vertical-align: middle; margin-left: 8px; }
 			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
 			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 20px; }
-			.slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
+			.slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 2px; bottom: 2px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
 			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
-			input:checked + .slider:before { transform: translateX(20px); background-color: #000; }
+			input:checked + .slider:before { transform: translateX(16px); background-color: #000; }
 
 			.sub-grp-btn { width: 100%; background: rgba(30,22,15,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 12px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; margin-top: 5px; }
 			.sub-grp-btn:after { content: '▼'; font-size: 8px; color: #8a7a5f; transition: 0.3s; }
@@ -80,9 +80,9 @@
 			body.ui-large .event-icon-wrap { width: 40px; height: 40px; }
 			body.ui-large .wp-btn { font-size: 10px; padding: 4px 6px; }
 			body.ui-large .star-btn { width: 20px; height: 20px; }
-			body.ui-large .slider { width: 50px; height: 25px; }
-			body.ui-large .slider:before { height: 17px; width: 17px; left: 4px; bottom: 4px; }
-			body.ui-large input:checked + .slider:before { transform: translateX(25px); }
+			body.ui-large .slider { width: 44px; height: 22px; }
+			body.ui-large .slider:before { height: 16px; width: 16px; left: 3px; bottom: 3px; }
+			body.ui-large input:checked + .slider:before { transform: translateX(22px); }
 
 			/* Super Adventure Box Easter Egg */
 			.sab-glitch { image-rendering: pixelated; box-shadow: inset 0 0 0 2px #39ff14 !important; background: repeating-linear-gradient(0deg, rgba(57,255,20,0.05), rgba(57,255,20,0.05) 1px, transparent 1px, transparent 3px), rgba(20,15,10,0.8) !important; animation: sabGlitchAnim 4s infinite; }
@@ -99,9 +99,12 @@
 			91% { transform: translate(0) }
 			100% { transform: translate(0) }
 			}
+
+			#confetti-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
 		</style>
 	</head>
 	<body>
+		<canvas id="confetti-canvas"></canvas>
 		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position: relative;">
 			<div class="header-row">
 				<div class="section-title">EVENT TIMERS</div>
@@ -109,12 +112,12 @@
 			</div>
 			<div class="sub-header-row">
 				<div style="display:flex; align-items:center;">
-					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST POPUPS</span>
+					<span style="font-size:11px; font-weight:bold; color:#8a7a5f;">WATCHLIST POPUPS</span>
 					<label class="fancy-toggle">
 						<input type="checkbox" id="timer-overlay-toggle" onchange="localStorage.setItem('gw2_timer_tracker_visible', this.checked)" />
 						<span class="slider"></span>
 					</label>
-					<span style="font-size:10px; font-weight:bold; color:#8a7a5f; margin-left: 15px; margin-right: 5px;">SOUND:</span>
+					<span style="font-size:11px; font-weight:bold; color:#8a7a5f; margin-left: 20px; margin-right: 5px;">SOUND:</span>
 					<select id="timer-sound-select" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 2px 5px; cursor: pointer; text-transform: uppercase;" onchange="previewTimerSound(this.value)">
 						<option value="none">NONE</option>
 						<option value="https://gw2ps.local/Assets/Sounds/timers_notification_boopboop.mp3">BOOPBOOP</option>
@@ -123,6 +126,13 @@
 						<option value="https://gw2ps.local/Assets/Sounds/timers_notification_babloop.mp3">BABLOOP</option>
 						<option value="tts_male">TTS MALE</option>
 						<option value="tts_female">TTS FEMALE</option>
+					</select>
+					<span style="font-size:10px; font-weight:bold; color:#8a7a5f; margin-left: 15px; margin-right: 5px;">FREQUENCY:</span>
+					<select id="popup-frequency-select" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 2px 5px; cursor: pointer; text-transform: uppercase;" onchange="localStorage.setItem('gw2_timer_frequency', this.value)">
+						<option value="15,10,5,0">15M - 10M - 5M - START</option>
+						<option value="10,5,0">10M - 5M - START</option>
+						<option value="5,0">5M - START</option>
+						<option value="0">START</option>
 					</select>
 				</div>
 				<div style="display:flex; flex-direction:column; align-items:flex-end;">
@@ -159,8 +169,11 @@
             const schedule = [
                 { cat: "WATCHLIST", sub: [] },
                 { cat: "Core Tyria", sub: [
+					{ n: "General", evs: [
+						{ n: "Daily Reset", i: ICON_WRENCH, exact: [0], d: 1, wp: "", desc: "Server reset and daily achievements cycle." }
+					]},
                     { n: "World bosses", evs: [
-                        { n: "Svanir Shaman", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BMIDAAA=]", desc: "Svanir Shaman Chief meta in Wayfarer Foothills." },
+                        { n: "Frozen Maw", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BMIDAAA=]", desc: "Frozen Maw meta in Wayfarer Foothills." },
                         { n: "Fire Elemental", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "[&BE4AAAA=]", desc: "Metrica construct meta." },
                         { n: "Jungle Wurm", i: ICON_BOSS, r: 120, o: 75, d: 15, wp: "[&BEEBAAA=]", desc: "Great Jungle Wurm meta in Caledon Forest." },
                         { n: "Shadow Behemoth", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BPcAAAA=]", desc: "Queensdale demon meta." },
@@ -216,7 +229,10 @@
                     { n: "Dragon's Stand", evs: [ { n: "Mouth of Mordremoth", i: ICON_DRAGON, r: 120, o: 90, d: 60, wp: "[&BBAIAAA=]", desc: "Final push meta." } ]}
                 ]},
                 { cat: "Path of Fire", sub: [
-                    { n: "Crystal Oasis", evs: [ { n: "Casino Blitz", i: ICON_BOSS, r: 120, o: 5, d: 25, wp: "[&BLsKAAA=]", desc: "Pinata meta." } ]},
+                    { n: "Crystal Oasis", evs: [ 
+						{ n: "Casino Blitz", i: ICON_BOSS, r: 120, o: 5, d: 20, wp: "[&BLsKAAA=]", desc: "Pinata meta preparation." },
+						{ n: "Choya Pinata", i: ICON_BOSS, r: 120, o: 25, d: 5, wp: "[&BLsKAAA=]", desc: "Choya Pinata boss fight." } 
+					]},
                     { n: "Desert Highlands", evs: [ { n: "Buried Treasure", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BNEKAAA=]", desc: "Treasure hunt meta." } ]},
                     { n: "Elon Riverlands", evs: [ { n: "Doppelganger", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BFMKAAA=]", desc: "Mirror meta." } ]},
                     { n: "The Desolation", evs: [
@@ -255,7 +271,7 @@
                     { n: "Drizzlewood Coast", evs: [ { n: "Assault on Frost Citadel", i: ICON_BOSS, r: 120, o: 0, d: 120, wp: "[&BIEHAAA=]", desc: "Drizzlewood Citadel meta." } ]}
                 ]},
                 { cat: "End of Dragons", sub: [
-                    { n: "Cantha Cycle", evs: [ { n: "Cantha Cycle", i: ICON_BOSS, r: 120, o: 0, d: 80, wp: "", desc: "Expansion global cycle." } ]},
+                    { n: "Day/Night Cycle", evs: [ { n: "Day/Night Cycle", i: ICON_BOSS, r: 120, o: 0, d: 80, wp: "", desc: "Expansion global cycle." } ]},
                     { n: "Seitung Province", evs: [ { n: "Assault", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BOMMAAA=]", desc: "Province meta." } ]},
                     { n: "New Kaineng City", evs: [ { n: "Blackout", i: ICON_BOSS, r: 120, o: 60, d: 45, wp: "[&BPUMAAA=]", desc: "Grid meta." } ]},
                     { n: "The Echovald Wilds", evs: [ { n: "Gang War", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BMMMAAA=]", desc: "Faction meta." } ]},
@@ -280,10 +296,11 @@
                 { cat: "Janthir Wilds", sub: [
                     { n: "Lowland Shore", evs: [ { n: "Moon Camp", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BGUOAAA=]", desc: "Lowland Shore meta." } ]},
                     { n: "Janthir Syntri", evs: [ { n: "Syntri Meta", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BC0PAAA=]", desc: "Syntri meta." } ]},
-                    { n: "Bava Nisos", evs: [ { n: "Bava Nisos Meta", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BDEPAAA=]", desc: "Bava Nisos meta." } ]}
+                    { n: "Bava Nisos", evs: [ { n: "Bava Nisos Meta", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BDEPAAA=]", desc: "Bava Nisos meta." } ]},
+					{ n: "Mistburned Barrens", evs: [ { n: "Mistburned Meta", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "", desc: "Mistburned Barrens meta." } ]}
                 ]},
                 { cat: "Visions of Eternity", sub: [
-                    { n: "Castora Cycle", evs: [ { n: "Castora Cycle", i: ICON_BOSS, r: 120, o: 0, d: 60, wp: "", desc: "Local cycle." } ]},
+                    { n: "Day/Night Cycle", evs: [ { n: "Day/Night Cycle", i: ICON_BOSS, r: 120, o: 0, d: 60, wp: "", desc: "Local cycle." } ]},
                     { n: "Shipwreck Strand", evs: [ { n: "Strand Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Strand meta." } ]},
                     { n: "Starlit Weald", evs: [ { n: "Weald Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Weald meta." } ]}
                 ]},
@@ -315,6 +332,11 @@
             let customTimers = JSON.parse(localStorage.getItem('gw2_custom_timers') || '[]');
 			let alertHistory = {};
 			let searchQuery = '';
+			let choyaCooldown = false;
+
+			const canvas = document.getElementById('confetti-canvas');
+			const ctx = canvas.getContext('2d');
+			let particles = [];
             
             schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
 			
@@ -322,18 +344,20 @@
 				window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); };
 			}
 
-			window.playTimerNotification = function(val, textMsg) {
+			window.playTimerNotification = function(val, textMsg, forceSound = null) {
 				if (!val || val === 'none') return;
 				
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				const vol = settings.masterVolume !== undefined ? (settings.masterVolume / 100) : 1.0;
 
-				if (val === 'tts_male' || val === 'tts_female') {
+				let soundToPlay = forceSound || val;
+
+				if (soundToPlay === 'tts_male' || soundToPlay === 'tts_female') {
 					if ('speechSynthesis' in window) {
 						let msg = new SpeechSynthesisUtterance(textMsg);
 						let voices = window.speechSynthesis.getVoices();
 						let voice = null;
-						if (val === 'tts_male') {
+						if (soundToPlay === 'tts_male') {
 							voice = voices.find(v => v.name.toLowerCase().includes('male') || v.name.includes('David') || v.name.includes('Mark') || v.name.includes('Arthur'));
 						} else {
 							voice = voices.find(v => v.name.toLowerCase().includes('female') || v.name.includes('Zira') || v.name.includes('Hazel') || v.name.includes('Samantha'));
@@ -345,7 +369,7 @@
 						window.speechSynthesis.speak(msg);
 					}
 				} else {
-					let audio = new Audio(val);
+					let audio = new Audio(soundToPlay);
 					audio.volume = vol;
 					audio.play().catch(e => console.log('Audio play failed', e));
 				}
@@ -452,7 +476,37 @@
                 cancelDelete();
             };
 
+			function triggerConfetti() {
+				particles = [];
+				for(let i=0; i<100; i++) {
+					particles.push({
+						x: canvas.width/2,
+						y: canvas.height/2,
+						vx: (Math.random()-0.5)*10,
+						vy: (Math.random()-0.5)*10,
+						size: Math.random()*5+2,
+						color: `hsl(${Math.random()*360}, 100%, 50%)`,
+						life: 100
+					});
+				}
+				function anim() {
+					ctx.clearRect(0,0,canvas.width,canvas.height);
+					particles.forEach((p,i) => {
+						p.x += p.vx; p.y += p.vy; p.vy += 0.1; p.life--;
+						ctx.fillStyle = p.color;
+						ctx.fillRect(p.x, p.y, p.size, p.size);
+						if(p.life <= 0) particles.splice(i,1);
+					});
+					if(particles.length > 0) requestAnimationFrame(anim);
+				}
+				anim();
+			}
+
 			function init() {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				window.onresize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
@@ -462,6 +516,11 @@
 				const soundSelect = document.getElementById('timer-sound-select');
 				if (soundSelect) {
 					soundSelect.value = localStorage.getItem('gw2_timer_sound') || 'none';
+				}
+
+				const freqSelect = document.getElementById('popup-frequency-select');
+				if (freqSelect) {
+					freqSelect.value = localStorage.getItem('gw2_timer_frequency') || '15,10,5,0';
 				}
 
 				const nav = document.getElementById('nav-panel');
@@ -641,8 +700,11 @@
 						sorted.forEach((item, eIdx) => {
 							const id = `ev-${sIdx}-${item.ev.n.replace(/\s+/g, '-')}`;
                             let deleteBtn = item.ev.isCustom ? `<button class="wp-btn" style="right: 30px;" onclick="event.stopPropagation(); promptDelete('${item.ev.id}')">DEL</button>` : '';
-                            let copyBtn = item.ev.isCustom ? '' : `<button class="wp-btn" onclick="event.stopPropagation(); window.parent.postMessage({action:'copy', code:'${item.ev.wp || ''}'}, '*')">COPY WP</button>`;
-                            let clickAction = item.ev.isCustom ? '' : `onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${item.ev.n}'), '_blank')"`;
+                            
+							let showWp = item.ev.wp && item.ev.n !== "Daily Reset" && item.ev.n !== "Day/Night Cycle";
+							let copyBtn = (item.ev.isCustom || !showWp) ? '' : `<button class="wp-btn" onclick="event.stopPropagation(); window.parent.postMessage({action:'copy', code:'${item.ev.wp || ''}'}, '*')">COPY WP</button>`;
+                            
+							let clickAction = item.ev.isCustom ? '' : `onclick="handleEventClick('${item.ev.n.replace(/'/g, "\\'")}')"`;
                             let tooltipDesc = (item.ev.desc || item.ev.n).replace(/'/g, "\\'");
 							let isSAB = item.ev.n === "Super Adventure Festival";
 
@@ -675,6 +737,21 @@
 					});
 				});
             }
+
+			window.handleEventClick = function(name) {
+				if(name === "Choya Pinata") {
+					if(!choyaCooldown) {
+						triggerConfetti();
+						playTimerNotification(localStorage.getItem('gw2_timer_sound'), "", "\\Assets\\Sounds\\choya_pop.mp3");
+						choyaCooldown = true;
+						setTimeout(() => { choyaCooldown = false; }, 3000);
+					} else {
+						window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(name), '_blank');
+					}
+				} else {
+					window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(name), '_blank');
+				}
+			};
 
             window.toggleSub = function(btn, subName) {
                 btn.classList.toggle('active');
@@ -709,6 +786,7 @@
                 const totalMin = now.getUTCHours() * 60 + now.getUTCMinutes() + (now.getUTCSeconds() / 60);
                 
                 if (localStorage.getItem('gw2_timer_tracker_visible') === 'true') {
+					const freq = (localStorage.getItem('gw2_timer_frequency') || '15,10,5,0').split(',').map(Number);
                     Object.keys(trackedTimers).forEach(name => {
                         schedule.forEach(cat => {
                             if (cat.cat === "WATCHLIST") return;
@@ -717,23 +795,23 @@
                                     if (ev.n === name) {
                                         const state = getEventState(ev, totalMin);
                                         const rem = Math.round(state.remain);
+										const remMin = Math.floor(rem / 60);
+
                                         if (!state.active) {
-                                            if (rem === 900 && !alertHistory[name + '-15']) {
-                                                window.parent.postMessage({action:'eventPop', msg: name + " IN 15 MIN"}, '*');
-                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in 15 minutes");
-                                                alertHistory[name + '-15'] = true;
-                                                setTimeout(()=> delete alertHistory[name + '-15'], 5000);
-                                            } else if (rem === 300 && !alertHistory[name + '-5']) {
-                                                window.parent.postMessage({action:'eventPop', msg: name + " IN 5 MIN"}, '*');
-                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in 5 minutes");
-                                                alertHistory[name + '-5'] = true;
-                                                setTimeout(()=> delete alertHistory[name + '-5'], 5000);
-                                            }
+											freq.forEach(f => {
+												if(f > 0 && remMin === f && !alertHistory[name + '-' + f]) {
+													window.parent.postMessage({action:'eventPop', msg: name + " IN " + f + " MIN"}, '*');
+													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
+													alertHistory[name + '-' + f] = true;
+													setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
+												}
+											});
                                         } else {
                                             const elapsed = Math.round(state.total - state.remain);
-                                            if (elapsed === 0 && !alertHistory[name + '-0']) {
+                                            if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
                                                 window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
-                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active");
+												let soundOverride = (name === "Tequatl the Sunless") ? "\\Assets\\Sounds\\something_in_the_water.mp3" : null;
+                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
                                                 alertHistory[name + '-0'] = true;
                                                 setTimeout(()=> delete alertHistory[name + '-0'], 5000);
                                             }

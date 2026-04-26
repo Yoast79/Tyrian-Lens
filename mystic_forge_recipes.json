@@ -1746,5 +1746,224 @@
             { "item_id": -99905, "item_name": "Memory of the Bearkin's Victories", "count": 1 }
         ],
         "disciplines": ["Mystic Forge"]
-    }
-	]
+    },
+	{
+    "output_name": "Legendary Rune",
+    "type": "UpgradeComponent",
+    "output_item_id": 91536,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        {"item_id": 89218, "count": 1},
+        {"item_id": 77451, "count": 1},
+        {"item_id": 70867, "count": 1},
+        {"item_id": 76530, "count": 1}
+    ]
+},
+{
+    "output_name": "Legendary Sigil",
+    "type": "UpgradeComponent",
+    "output_item_id": 91505,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        {"item_id": 91530, "count": 1},
+        {"item_id": 19675, "count": 1},
+        {"item_id": 81216, "count": 1},
+        {"item_id": 81140, "count": 1}
+    ]
+},
+{
+    "output_name": "Orrax Manifested",
+    "type": "BackItem",
+    "output_item_id": 104857,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        {"item_id": 104962, "count": 1},
+        {"item_id": 104846, "count": 1},
+        {"item_id": 104872, "count": 1},
+        {"item_id": 104690, "count": 1}
+    ]
+},
+{
+    "output_name": "Gift of Runes",
+    "output_item_id": 89218,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 89105, "count": 50 },
+        { "item_id": 19675, "count": 20 },
+        { "item_id": 19721, "count": 100 },
+        { "item_id": 19925, "count": 50 }
+    ]
+},
+{
+    "output_name": "Gift of Sigils",
+    "output_item_id": 91449,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 89133, "count": 75 },
+        { "item_id": 19675, "count": 30 },
+        { "item_id": 19721, "count": 150 },
+        { "item_id": 19925, "count": 75 }
+    ]
+},
+{
+    "output_name": "Mystic Mote",
+    "output_item_id": 91541,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 81071, "count": 10 },
+        { "item_id": 24340, "count": 1 },
+        { "item_id": 24277, "count": 1 },
+        { "item_id": 20796, "count": 1 }
+    ]
+},
+{
+    "output_name": "Gift of the Mistburned Isles",
+    "output_item_id": 104962,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 104763, "count": 1 },
+        { "item_id": 104699, "count": 1 },
+        { "item_id": 103351, "count": 250 },
+        { "item_id": 79418, "count": 250 }
+    ]
+},	
+{
+    "output_name": "Gift of Janthir Wanderlust",
+    "output_item_id": 104699,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 102929, "count": 1 },
+        { "item_id": 102958, "count": 1 },
+        { "item_id": 104313, "count": 1 },
+        { "item_id": 104896, "count": 1 }
+    ]
+},
+{
+    "output_name": "Gift of the Mursaat Ruins",
+    "output_item_id": 104763,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 104229, "count": 100 },
+        { "item_id": 105004, "count": 50 },
+        { "item_id": 104282, "count": 100 },
+        { "item_id": 104855, "count": 100 }
+    ]
+},
+{
+    "output_name": "Gift of Shadows",
+    "output_item_id": 104763,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 19631, "count": 1 },
+        { "item_id": 75299, "count": 1 },
+        { "item_id": 104791, "count": 1 },
+        { "item_id": 20797, "count": 1 }
+    ]
+},
+{
+    "output_name": "Gift of the Entrée",
+    "output_item_id": 104763,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 12468, "count": 200 },
+        { "item_id": 12467, "count": 100 },
+        { "item_id": 41567, "count": 50 },
+        { "item_id": 104844, "count": 5 }
+    ]
+},
+{
+    "output_name": "Gift of the Side Course",
+    "output_item_id": 104839,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 95942, "count": 200 },
+        { "item_id": 66529, "count": 100 },
+        { "item_id": 19675, "count": 30 },
+        { "item_id": 104844, "count": 5 }
+    ]
+},
+{
+    "output_name": "Gift of the Dessert",
+    "output_item_id": 104717,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 66539, "count": 200 },
+        { "item_id": 71826, "count": 50 },
+        { "item_id": 100930, "count": 2 },
+        { "item_id": 104844, "count": 5 }
+    ]
+},
+{
+    "output_name": "Gift of the Feast",
+    "output_item_id": 104872,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 104965, "count": 1 },
+        { "item_id": 104932, "count": 1 },
+        { "item_id": 104839, "count": 1 },
+        { "item_id": 104717, "count": 1 }
+    ]
+},
+{
+    "output_name": "Gift of the Appetizer",
+    "output_item_id": 104965,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 87076, "count": 200 },
+        { "item_id": 84550, "count": 100 },
+        { "item_id": 41563, "count": 50 },
+        { "item_id": 104844, "count": 5 }
+    ]
+},
+{
+    "output_name": "Draconic Tribute",
+    "output_item_id": 96137,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 70867, "count": 1 },
+        { "item_id": 76530, "count": 1 },
+        { "item_id": 19675, "count": 38 },
+        { "item_id": 92687, "count": 5 }
+    ]
+},
+{
+    "output_name": "Orrax Contained",
+    "output_item_id": 104690,
+    "output_item_count": 1,
+    "disciplines": ["Mystic Forge"],
+    "ingredients": [
+        { "item_id": 104777, "count": 1 },
+        { "item_id": 96137, "count": 1 },
+        { "item_id": 102367, "count": 1 },
+        { "item_id": 104704, "count": 1 }
+    ]
+},
+{
+    "output_name": "Amalgamated Rift Essence",
+    "output_item_id": 100930,
+    "output_item_count": 1,
+    "disciplines": ["Artificer", "Armorsmith", "Huntsman", "Leatherworker", "Tailor", "Weaponsmith", "Chef", "Jeweler", "Scribe"],
+    "ingredients": [
+        { "item_id": 104747, "count": 250 }, 
+        { "item_id": 104773, "count": 100 }, 
+        { "item_id": 105009, "count": 50 },  
+        { "item_id": 19721, "count": 50 }    
+    ]
+}
+]

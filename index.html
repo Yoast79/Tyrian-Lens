@@ -161,8 +161,9 @@
 
 			if (window.chrome && window.chrome.webview) {
 				window.chrome.webview.addEventListener('message', function(event) {
-					if (typeof event.data === 'string' && event.data.startsWith('openWiki:')) {
-						const url = event.data.substring(9);
+                    const data = event.data;
+					if (typeof data === 'string' && data.startsWith('openWiki:')) {
+						const url = data.substring(9);
 						const rightPanel = document.getElementById('side-panel-right');
 						const rightFrame = document.getElementById('panel-frame-right');
 						
@@ -226,6 +227,12 @@
 				rightPanel.classList.remove('open', 'wide', 'wiki-mode');
 				document.getElementById('wiki-close-btn').style.display = 'none';
 				document.getElementById('click-catcher').style.display = 'none';
+
+				// Notify map that panels are closed for tracking offset
+				const mapFrame = document.getElementById('map-frame');
+				if (mapFrame && mapFrame.contentWindow) {
+					mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: false }, '*');
+				}
 			};
 
 			window.toggleSidePanel = function(module, isRight) {
@@ -233,6 +240,7 @@
 				const frame = document.getElementById(isRight ? 'panel-frame-right' : 'panel-frame');
 				const farmingFrame = document.getElementById('farming-frame');
 				const newSrc = `${module}.html`; 
+				const mapFrame = document.getElementById('map-frame'); // Get map frame
 				
 				const rightModules = ['settings', 'api_management', 'help'];
 				const sideIsRight = rightModules.includes(module);
@@ -257,6 +265,12 @@
 						panel.classList.remove('wide', 'wiki-mode');
 						document.getElementById('wiki-close-btn').style.display = 'none';
 					}
+
+					// Notify map panel closed
+					if (mapFrame && mapFrame.contentWindow) {
+						mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: false }, '*');
+					}
+
 					const otherPanel = document.getElementById(isRight ? 'side-panel' : 'side-panel-right');
 					if (!otherPanel.classList.contains('open')) {
 						document.getElementById('click-catcher').style.display = 'none';
@@ -271,7 +285,7 @@
 							farmingFrame.style.display = 'none';
 							frame.src = newSrc;
 						}
-						if (['bank', 'material_storage', 'wardrobe', 'characters', 'hero', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears'].includes(module)) {
+						if (['bank', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears'].includes(module)) {
 							panel.classList.add('wide');
 						} else {
 							panel.classList.remove('wide');
@@ -283,6 +297,13 @@
 					}
 
 					panel.classList.add('open');
+
+					// Notify map panel opened
+					if (mapFrame && mapFrame.contentWindow) {
+						let isWide = panel.classList.contains('wide');
+						mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: isWide }, '*');
+					}
+
 					document.getElementById('click-catcher').style.display = 'block';
 				}
 			};

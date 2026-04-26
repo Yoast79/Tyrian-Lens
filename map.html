@@ -27,7 +27,7 @@
 			#coord-hud { position: fixed; bottom: 20px; left: 20px; z-index: 10000; background: rgba(10, 8, 5, 0.85); border: 1px solid #4a3b2a; padding: 10px 15px; color: #e2c07d; font-family: monospace; font-size: 12px; pointer-events: none; line-height: 1.6; }
 			.coord-val { color: #ffffff; font-weight: bold; }
 
-			/* Custom Marker UI Styles */
+			/* Personal Marker UI Styles */
 			#marker-picker { display: none; position: absolute; z-index: 20000; background: rgba(10, 8, 5, 0.95); border: 1px solid #4a3b2a; padding: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.8); }
 			.marker-row { display: flex; }
 			.marker-icon-btn { width: 24px; height: 24px; cursor: pointer; margin: 2px; border: 1px solid transparent; transition: 0.2s; }
@@ -42,7 +42,6 @@
 		<div id="map"></div>
 
 		<div id="marker-picker"></div>
-
 		<div id="marker-label-prompt" class="prompt-overlay">
 			<div style="color: #e2c07d; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Label Marker</div>
 			<input type="text" id="marker-label-input" style="background: #1a1510; border: 1px solid #4a3b2a; color: #fff; padding: 5px; width: 200px; margin-bottom: 15px; font-family: 'Crimson Text', serif;" />
@@ -50,12 +49,12 @@
 				<button class="prompt-btn" onclick="saveMarkerLabel()">Save</button>
 				<button class="prompt-btn" onclick="cancelMarkerLabel()">Cancel</button>
 			</div>
-
 		<div id="marker-remove-prompt" class="prompt-overlay">
 			<div style="color: #e2c07d; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Remove Marker?</div>
 			<button class="prompt-btn danger" onclick="confirmRemoveMarker()">Remove</button>
 			<button class="prompt-btn" onclick="cancelRemoveMarker()">Cancel</button>
 		</div>
+
 		<div id="coord-hud">
 			<div>
 				PLAYER: <span id="p-x" class="coord-val">0</span>, <span id="p-y" class="coord-val">0</span>
@@ -67,20 +66,15 @@
 				TRACKING: <span id="track-status" style="color:#00ff00;">ON</span>
 			</div>
 		</div>
+
 		<div class="compass-container">
 			<div id="compass-glow"></div>
 			<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Track Player', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Central Tyria')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Central Tyria', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Crystal Desert')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Crystal Desert', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Cantha')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Cantha', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Heart of Maguuma')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Heart of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="bottom:10px; left:10px;" onclick="jump('Castora')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Castora', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-
 			<div class="nav-hitbox" style="top:10px; left:10px;" onclick="jump('Horn of Maguuma')" onmouseover="window.parent.postMessage({action:'showTooltip', text:'Horn of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 		</div>
 
@@ -98,10 +92,15 @@
 			map.getPane('textPane').style.pointerEvents = 'none';
 			map.createPane('playerPane').style.zIndex = 800;
 			map.getPane('playerPane').style.pointerEvents = 'none';
-
-			// NEW PANE & LAYER FOR CUSTOM MARKERS
 			map.createPane('customMarkerPane').style.zIndex = 850;
+
 			var customMarkersLayer = L.layerGroup().addTo(map);
+			var mapStorageKey = 'gw2_custom_markers_tyria';
+			
+			var mSettings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			var mScale = mSettings.markerScale !== undefined ? (mSettings.markerScale / 100) : 1.0;
+			var mSize = 24 * mScale;
+			var mAnchor = 12 * mScale;
 
 			L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true }).addTo(map);
 			map.setView([31384, 49071], 4);
@@ -124,13 +123,7 @@
 				}
 			};
 
-			// --- CUSTOM MARKER LOGIC ---
-			var mapStorageKey = 'gw2_custom_markers_tyria';
-			var mSettings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
-			var mScale = mSettings.markerScale !== undefined ? (mSettings.markerScale / 100) : 1.0;
-			var mSize = 24 * mScale;
-			var mAnchor = 12 * mScale;
-
+			// --- PERSONAL MARKER LOGIC ---
 			window.pendingMarkerLatLng = null;
 			window.pendingMarkerIcon = '';
 			window.markerToRemoveId = null;
@@ -161,10 +154,8 @@
 					let picker = document.getElementById('marker-picker');
 					let px = e.containerPoint.x;
 					let py = e.containerPoint.y;
-					
 					if (px + 160 > window.innerWidth) px = window.innerWidth - 160;
 					if (py + 180 > window.innerHeight) py = window.innerHeight - 180;
-					
 					picker.style.left = px + 'px';
 					picker.style.top = py + 'px';
 					picker.style.display = 'block';
@@ -230,7 +221,6 @@
 					window.promptRemoveMarker(id, m);
 				});
 				customMarkersLayer.addLayer(m);
-
 				if (save) {
 					let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
 					markers.push({ id: id, lat: lat, lng: lng, icon: iconFile, label: label });
@@ -242,87 +232,128 @@
 				let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
 				markers.forEach(m => addCustomMarker(m.lat, m.lng, m.icon, m.label, false, m.id));
 			}
-			// --- END CUSTOM MARKER LOGIC ---
 
+			// --- TRACKING & HUD ---
 			map.on("dragstart", function() { if (isTracking) window.setTracking(false); });
 			map.on('mousemove', function(e) { document.getElementById('c-x').innerText = Math.round(e.latlng.lng); document.getElementById('c-y').innerText = Math.round(e.latlng.lat); });
 
 			window.setTracking = function(v) {
-			isTracking = v;
-			document.body.classList.toggle("tracking-active", v);
-			document.getElementById("track-status").innerText = v ? "ON" : "OFF";
-			document.getElementById("track-status").style.color = v ? "#00ff00" : "#ff0000";
-			if(v) map.setView(pMarker.getLatLng(), map.getZoom(), { animate: true });
+				isTracking = v;
+				document.body.classList.toggle("tracking-active", v);
+				document.getElementById("track-status").innerText = v ? "ON" : "OFF";
+				document.getElementById("track-status").style.color = v ? "#00ff00" : "#ff0000";
+				if(v) {
+					let pos = pMarker.getLatLng();
+					window.updatePlayerLocation(pos.lng, pos.lat, 0, 0);
+				}
 			};
 
 			window.updatePlayerLocation = function(x, y, cx, cz) {
-			var pos = [parseFloat(y), parseFloat(x)];
-			pMarker.setLatLng(pos);
-			document.getElementById("p-x").innerText = Math.round(x);
-			document.getElementById("p-y").innerText = Math.round(y);
-			if (isTracking) map.setView(pos, map.getZoom(), { animate: false });
-			var el = document.getElementById("pImg");
-			if (el) { var angle = (Math.atan2(cx, cz) * (180 / Math.PI)) + 180; el.style.transform = "rotate(" + angle + "deg)"; }
+				var pos = [parseFloat(y), parseFloat(x)];
+				pMarker.setLatLng(pos);
+				document.getElementById("p-x").innerText = Math.round(x);
+				document.getElementById("p-y").innerText = Math.round(y);
+				
+				if (isTracking) {
+					// Apply 290px offset (half of 580px) if menu is open
+					let isMenuOpen = document.body.classList.contains('menu-open');
+					let offsetX = isMenuOpen ? -290 : 0; 
+					
+					let targetPoint = map.latLngToContainerPoint(pos).add([offsetX, 0]);
+					let targetLatLng = map.containerPointToLatLng(targetPoint);
+					map.setView(targetLatLng, map.getZoom(), { animate: false });
+				}
+				
+				var el = document.getElementById("pImg");
+				if (el) { 
+					var angle = (Math.atan2(cx, cz) * (180 / Math.PI)) + 180; 
+					el.style.transform = "rotate(" + angle + "deg)"; 
+				}
 			};
 
 			window.jump = function(l) {
-			var coords = { 
-				'Central Tyria': [31384, 49071], 
-				'Crystal Desert': [43793, 59960], 
-				'Cantha': [101891, 23320], 
-				'Heart of Maguuma': [32034, 35067], 
-				'Castora': [58955, 10694], 
-				'Horn of Maguuma': [23666, 25359] 
-			};
-			if(coords[l]) { window.setTracking(false); map.flyTo(coords[l], 4); }
+				var coords = { 'Central Tyria': [31384, 49071], 'Crystal Desert': [43793, 59960], 'Cantha': [101891, 23320], 'Heart of Maguuma': [32034, 35067], 'Castora': [58955, 10694], 'Horn of Maguuma': [23666, 25359] };
+				if(coords[l]) { window.setTracking(false); map.flyTo(coords[l], 4); }
 			};
 
 			function refreshLabels() {
-			var z = map.getZoom();
-			if (layerToggles['region'] && z <= 2) map.addLayer(layerMap['region']); else map.removeLayer(layerMap['region']);
-			if (layerToggles['map_text'] && z >= 3 && z <= 5) map.addLayer(layerMap['map_text']); else map.removeLayer(layerMap['map_text']);
-			if (layerToggles['sector'] && z >= 6) map.addLayer(layerMap['sector']); else map.removeLayer(layerMap['sector']);
+				var z = map.getZoom();
+				if (layerToggles['region'] && z <= 2) map.addLayer(layerMap['region']); else map.removeLayer(layerMap['region']);
+				if (layerToggles['map_text'] && z >= 3 && z <= 5) map.addLayer(layerMap['map_text']); else map.removeLayer(layerMap['map_text']);
+				if (layerToggles['sector'] && z >= 6) map.addLayer(layerMap['sector']); else map.removeLayer(layerMap['sector']);
 			}
 			map.on("zoomend", refreshLabels);
 
 			async function init() {
-			loadCustomMarkers();
-			try {
-			const [mRes, iRes] = await Promise.all([fetch("https://gw2ps.local/map_data.json"), fetch("https://gw2ps.local/mastery_insights.json")]);
-			if (mRes.ok) {
-			const data = await mRes.json();
-			data.points.forEach(p => {
-			let type = p.type.toLowerCase();
-			let isLabel = ['region','map','sector'].includes(type);
-			let m = L.marker([p.pos[1], p.pos[0]], { pane: isLabel ? 'textPane' : 'iconPane', interactive: !isLabel, icon: isLabel ? L.divIcon({ className: 'map-label ' + (type === 'region' ? 'region-label' : type === 'map' ? 'map-title-label' : 'sector-label'), html: p.name, iconSize: [400, 40] }) : L.icon({ iconUrl: "https://gw2ps.local/Assets/Icons/" + (type==="waypoint"?"waypoint_discovered.png":type==="vista"?"vista_discovered.png":type==="heart"?"heart_discovered.png":(type==="skill"||type==="heropoint"||type==="landmark")? (type==="landmark"?"poi_discovered.png":"heropoint_discovered.png") :"poi_discovered.png"), iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
-			if (!isLabel) {
-			m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Vista", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
-			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
-			if (p.chat_code && p.chat_code.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(p.chat_code); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
-			let subType = (type === 'landmark') ? 'poi' : (type === 'skill' || type === 'heropoint') ? 'heropoint' : type;
-			m.addTo(subLayers[subType] || subLayers['poi']);
-			} else layerMap[type === 'map' ? 'map_text' : type].addLayer(m);
-			});
-			}
-			if (iRes.ok) {
-			const iData = await iRes.json();
-			iData.points.forEach(p => {
-			let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: "https://gw2ps.local/Assets/Icons/mastery_icon.png", iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
-			m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Mastery Insight", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
-			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
-			if (p.chat_code && p.chat_code.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(p.chat_code); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
-			m.addTo(subLayers['mastery']);
-			});
-			}
-			refreshLabels();
-			} catch (e) { console.error(e); }
+				loadCustomMarkers();
+				try {
+					let settings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+					Object.keys(settings).forEach(key => { layerToggles[key] = settings[key]; });
+
+					const [mRes, iRes] = await Promise.all([fetch("https://gw2ps.local/map_data.json"), fetch("https://gw2ps.local/mastery_insights.json")]);
+					
+					if (mRes.ok) {
+						const data = await mRes.json();
+						data.points.forEach(p => {
+							let type = p.type.toLowerCase();
+							let isLabel = ['region','map','sector'].includes(type);
+							let m = L.marker([p.pos[1], p.pos[0]], { 
+								pane: isLabel ? 'textPane' : 'iconPane', 
+								interactive: !isLabel, 
+								icon: isLabel ? L.divIcon({ className: 'map-label ' + (type === 'region' ? 'region-label' : type === 'map' ? 'map-title-label' : 'sector-label'), html: p.name, iconSize: [400, 40] }) : L.icon({ iconUrl: "https://gw2ps.local/Assets/Icons/" + (type==="waypoint"?"waypoint_discovered.png":type==="vista"?"vista_discovered.png":type==="heart"?"heart_discovered.png":(type==="skill"||type==="heropoint"||type==="landmark")? (type==="landmark"?"poi_discovered.png":"heropoint_discovered.png") :"poi_discovered.png"), iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) 
+							});
+							if (!isLabel) {
+								m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Vista", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
+								m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+								if (p.chat_code && p.chat_code.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(p.chat_code); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
+								let subType = (type === 'landmark') ? 'poi' : (type === 'skill' || type === 'heropoint') ? 'heropoint' : type;
+								m.addTo(subLayers[subType] || subLayers['poi']);
+							} else layerMap[type === 'map' ? 'map_text' : type].addLayer(m);
+						});
+					}
+
+					if (iRes.ok) {
+						const iData = await iRes.json();
+						iData.points.forEach(p => {
+							let iconPath = "https://gw2ps.local/Assets/Icons/mastery_icon.png";
+							if (p.name.includes("(PoF)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_pof.png";
+							else if (p.name.includes("(HoT)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_hot.png";
+							else if (p.name.includes("(IBS)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_ibs.png";
+							else if (p.name.includes("(VoE)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_voe.png";
+							else if (p.name.includes("(EoD)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_eod.png";
+							else if (p.name.includes("(JW)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_jw.png";
+							else if (p.name.includes("(SotO)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_soto.png";
+							else if (p.name.includes("(Tyria)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_tyria.png";
+
+							let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
+							m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Mastery Insight", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
+							m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+							if (p.chat_code && p.chat_code.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(p.chat_code); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
+							m.addTo(subLayers['mastery']);
+						});
+					}
+
+					Object.keys(subLayers).forEach(key => { if (layerToggles[key] === false) map.removeLayer(subLayers[key]); });
+					if (layerToggles['personal_markers'] === false) map.removeLayer(customMarkersLayer);
+
+					refreshLabels();
+				} catch (e) { console.error(e); }
 			}
 			init();
 
 			window.addEventListener("message", function(event) {
-			if (event.data && event.data.action === 'toggleMapLayer') {
-			window.toggleMapLayer(event.data.name, event.data.isVisible);
-			}
+				if (event.data && event.data.action === 'toggleMapLayer') {
+					window.toggleMapLayer(event.data.name, event.data.isVisible);
+				}
+				// Force a re-center when menu toggles
+				if (event.data && event.data.action === 'toggleMenuState') {
+					if (event.data.isOpen) document.body.classList.add('menu-open');
+					else document.body.classList.remove('menu-open');
+					if (isTracking) {
+						let lastPos = pMarker.getLatLng();
+						window.updatePlayerLocation(lastPos.lng, lastPos.lat, 0, 0); 
+					}
+				}
 			});
 			/*]]>*/
 		</script>

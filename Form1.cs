@@ -91,56 +91,6 @@ namespace GW2PS
             string localFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) ?? AppDomain.CurrentDomain.BaseDirectory;
             mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", localFolder, CoreWebView2HostResourceAccessKind.Allow);
 
-            // Handle the "In-Style" Welcome Overlay logic
-            mapView.NavigationCompleted += async (s, e) =>
-            {
-                if (File.Exists(dontShowFilePath)) return;
-
-                string checkKeysScript = @"(function() {
-                    try {
-                        const keys = JSON.parse(localStorage.getItem('gw2_api_accounts') || '[]');
-                        return keys.length > 0;
-                    } catch(e) { return false; }
-                })()";
-
-                string hasKeysStr = await mapView.CoreWebView2.ExecuteScriptAsync(checkKeysScript);
-                if (hasKeysStr == "true") return;
-
-                string injectPopupScript = @"
-                    (function() {
-                        if (document.getElementById('welcome-overlay')) return;
-                        const overlay = document.createElement('div');
-                        overlay.id = 'welcome-overlay';
-                        overlay.style = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; z-index:9999; font-family: ""Crimson Text"", serif; color: #e2c07d;';
-                        
-                        overlay.innerHTML = `
-                            <div style='background: #1a1510; border: 1px solid #4a3b2a; padding: 30px; width: 420px; text-align: center; box-shadow: 0 0 30px #000;'>
-                                <h2 style='text-transform: uppercase; letter-spacing: 2px; margin-top:0; color: #f0dca5;'>Tyrian Lens Setup</h2>
-                                <p style='font-size: 14px; line-height: 1.6; color: #e2c07d;'>
-                                    Welcome! Thank you for downloading Tyrian Lens! 
-                                    <br>
-                                    Please note that most features (Inventory, Bank, and Characters) require an API Key to function.
-                                    <br><br>
-                                    To begin, click on <b>API Management <img src=""https://wiki.guildwars2.com/images/0/0e/Game_menu_edit_account_icon.png"" style=""height: 1em; vertical-align: middle;""></b> and add an api key from <a href=""https://account.arena.net"" target=""_blank"" rel=""noopener noreferrer"" style=""color: #f0dca5; text-decoration: underline;"">account.arena.net</a>.
-                                </p>
-                                <div style='margin-top: 25px; display: flex; gap: 15px;'>
-                                    <button id='btn-ok' style='flex:1; background:#e2c07d; color:#1a1510; border:none; padding:12px; cursor:pointer; font-weight:bold; font-family: inherit; text-transform: uppercase;'>Got it</button>
-                                    <button id='btn-never' style='flex:1; background:transparent; border:1px solid #4a3b2a; color:#8a7a5f; padding:12px; cursor:pointer; font-size: 11px; font-family: inherit; text-transform: uppercase;'>Don't show again</button>
-                                </div>
-                            </div>
-                        `;
-                        document.body.appendChild(overlay);
-
-                        document.getElementById('btn-ok').onclick = () => overlay.remove();
-                        document.getElementById('btn-never').onclick = () => {
-                            window.chrome.webview.postMessage('hide_welcome_forever');
-                            overlay.remove();
-                        };
-                    })()";
-
-                await mapView.CoreWebView2.ExecuteScriptAsync(injectPopupScript);
-            };
-
             mapView.CoreWebView2.WebMessageReceived += (s, e) => {
                 string msg = e.TryGetWebMessageAsString();
                 if (msg == null) return;
@@ -153,6 +103,16 @@ namespace GW2PS
                 {
                     if (!Directory.Exists(userDataFolder)) Directory.CreateDirectory(userDataFolder);
                     File.WriteAllText(dontShowFilePath, "hidden");
+                }
+                else if (msg == "wipe_all_data")
+                {
+                    try
+                    {
+                        if (Directory.Exists(userDataFolder)) Directory.Delete(userDataFolder, true);
+                        Application.Restart();
+                        Environment.Exit(0);
+                    }
+                    catch (Exception ex) { MessageBox.Show("Error wiping data: " + ex.Message); }
                 }
                 else if (msg == "close") this.Invoke((MethodInvoker)delegate { this.Close(); });
                 else if (msg == "minimize") this.Invoke((MethodInvoker)delegate { this.WindowState = FormWindowState.Minimized; });
@@ -176,7 +136,7 @@ namespace GW2PS
             gpsTimer.Start();
         }
 
-        private void GpsTimer_Tick(object sender, EventArgs e)
+        private void GpsTimer_Tick(object? sender, EventArgs e)
         {
             try
             {

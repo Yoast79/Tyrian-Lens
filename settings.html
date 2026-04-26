@@ -46,25 +46,25 @@
 		<div class="setting-control">
 			<span class="label">Always on Top</span>
 			<label class="toggle-switch">
-				<input type="checkbox" id="pref-ontop" onchange="updateSetting('onTop', this.checked)">
-					<span class="slider"></span>
-				</label>
+				<input type="checkbox" id="pref-ontop" onchange="updateSetting('onTop', this.checked)" />
+				<span class="slider"></span>
+			</label>
 		</div>
 
 		<div class="setting-control">
 			<span class="label">Large UI Scale</span>
 			<label class="toggle-switch">
-				<input type="checkbox" id="pref-scale" onchange="updateSetting('uiScaleLarge', this.checked)">
-					<span class="slider"></span>
-				</label>
+				<input type="checkbox" id="pref-scale" onchange="updateSetting('uiScaleLarge', this.checked)" />
+				<span class="slider"></span>
+			</label>
 		</div>
 
 		<div class="setting-control">
 			<span class="label">Integrated Wiki View</span>
 			<label class="toggle-switch">
-				<input type="checkbox" id="pref-wiki" onchange="updateSetting('wikiIntegrated', this.checked)">
-					<span class="slider"></span>
-				</label>
+				<input type="checkbox" id="pref-wiki" onchange="updateSetting('wikiIntegrated', this.checked)" />
+				<span class="slider"></span>
+			</label>
 		</div>
 
 		<div class="section-title">Time Zone</div>
@@ -89,18 +89,16 @@
 
 		<div class="section-title">Audio & Markers</div>
 		<div class="setting-control">
-			<span class="label">Master Volume</span>
-			<input type="range" id="pref-vol" min="0" max="100" style="width: 150px;" onchange="updateSetting('masterVolume', this.value)">
+			<span class="label" id="label-vol">Master Volume (100%)</span>
+			<input type="range" id="pref-vol" min="0" max="100" style="width: 150px;" oninput="updateLabel('vol', this.value)" onchange="updateSetting('masterVolume', this.value)" />
 		</div>
 		<div class="setting-control">
-			<span class="label">Marker Scale (%)</span>
-			<input type="range" id="pref-mscale" min="50" max="200" style="width: 150px;" oninput="checkScaleChange()" onchange="updateSetting('markerScale', this.value)">
+			<span class="label" id="label-mscale">Marker Scale (100%)</span>
+			<input type="range" id="pref-mscale" min="50" max="200" style="width: 150px;" oninput="updateLabel('mscale', this.value); checkScaleChange()" onchange="updateSetting('markerScale', this.value)" />
 		</div>
 		<button id="reload-map-btn" class="btn dimmed" onclick="triggerMapReload()">Reload Map</button>
 
 		<div class="section-title">Data Management</div>
-		<button class="btn" onclick="handleRebuild('rebuildRecipes', this)">Rebuild Recipe Index</button>
-		<button class="btn" onclick="handleRebuild('rebuildTrading', this)">Rebuild Trading Index</button>
 		<button class="btn" style="color: #ff4a4a; border-color: #ff4a4a;" onclick="showConfirmModal()">Clear Application Data</button>
 
 		<div id="confirm-modal">
@@ -128,6 +126,11 @@
 				if (key === 'uiScaleLarge') sendAction('uiScaleChanged', val ? 'large' : 'default');
 				if (key === 'wikiIntegrated') sendAction('wikiPreferenceChanged', val);
 				if (key === 'defaultChar') sendAction('preferredCharChanged', val);
+			}
+
+			function updateLabel(type, val) {
+				const text = type === 'vol' ? 'Master Volume' : 'Marker Scale';
+				document.getElementById('label-' + type).innerText = `${text} (${val}%)`;
 			}
 
 			function updateTimezone(val) {
@@ -165,17 +168,6 @@
 				sendAction('reloadMap');
 			}
 
-			function handleRebuild(action, btn) {
-				const originalText = btn.innerText;
-				btn.innerText = "REBUILDING...";
-				btn.classList.add('dimmed');
-				sendAction(action);
-				setTimeout(() => {
-					btn.innerText = originalText;
-					btn.classList.remove('dimmed');
-				}, 2500);
-			}
-
             async function loadSettingsData() {
                 if(!activeKey) return;
                 try {
@@ -200,8 +192,14 @@
 			document.getElementById('pref-scale').checked = settings.uiScaleLarge || false;
 			document.getElementById('pref-wiki').checked = settings.wikiIntegrated ?? true;
 			document.getElementById('pref-tz').value = localStorage.getItem('gw2_pref_timezone') || 'local';
-			document.getElementById('pref-vol').value = settings.masterVolume !== undefined ? settings.masterVolume : 100;
-			document.getElementById('pref-mscale').value = settings.markerScale !== undefined ? settings.markerScale : 100;
+			
+			const volVal = settings.masterVolume !== undefined ? settings.masterVolume : 100;
+			document.getElementById('pref-vol').value = volVal;
+			updateLabel('vol', volVal);
+
+			const mScaleVal = settings.markerScale !== undefined ? settings.markerScale : 100;
+			document.getElementById('pref-mscale').value = mScaleVal;
+			updateLabel('mscale', mScaleVal);
             
 			let initialMarkerScale = document.getElementById('pref-mscale').value;
             loadSettingsData();

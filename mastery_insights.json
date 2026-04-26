@@ -10,6 +10,15 @@
       "chat_link": ""
     },
     {
+      "name": "Mastery Insight (Tyria)",
+      "type": "mastery",
+      "pos": [
+        53466.1,
+        35256.2
+      ],
+      "chat_link": ""
+    },
+    {
       "name": "Mastery Insight (HoT)",
       "type": "mastery",
       "pos": [
@@ -82,6 +91,69 @@
       "chat_link": ""
     },
     {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        58509,
+        18771.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        58986.1,
+        17810.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        57625,
+        17241.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        57809,
+        18843.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        55455.3,
+        18694
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        56666.7,
+        17061.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        56370.3,
+        17973.1
+      ],
+      "chat_link": ""
+    },
+    {
       "name": "Mastery Insight (Tyria)",
       "type": "mastery",
       "pos": [
@@ -100,7 +172,7 @@
       "chat_link": ""
     },
     {
-      "name": "Mastery Insight (Tundra)",
+      "name": "Mastery Insight (IBS)",
       "type": "mastery",
       "pos": [
         62101.9,
@@ -109,7 +181,7 @@
       "chat_link": ""
     },
     {
-      "name": "Mastery Insight (Tundra)",
+      "name": "Mastery Insight (IBS)",
       "type": "mastery",
       "pos": [
         61386.5,
@@ -222,6 +294,15 @@
       "pos": [
         46037.1,
         27931.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (Tyria)",
+      "type": "mastery",
+      "pos": [
+        52075.4,
+        39509.6
       ],
       "chat_link": ""
     },
@@ -1525,7 +1606,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        9261.74,
+        9261.7,
         59231.3
       ],
       "chat_link": ""
@@ -1534,7 +1615,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        8299.99,
+        8300,
         59575.6
       ],
       "chat_link": ""
@@ -1543,7 +1624,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        7474.52,
+        7474.5,
         59719.2
       ],
       "chat_link": ""
@@ -1552,7 +1633,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        6937.85,
+        6937.9,
         59408.9
       ],
       "chat_link": ""
@@ -1561,7 +1642,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        6614.27,
+        6614.3,
         58714
       ],
       "chat_link": ""
@@ -1570,7 +1651,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        7095.37,
+        7095.4,
         57887.5
       ],
       "chat_link": ""
@@ -1579,7 +1660,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        7558.65,
+        7558.6,
         57633.3
       ],
       "chat_link": ""
@@ -1588,7 +1669,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        7541.81,
+        7541.8,
         58616
       ],
       "chat_link": ""
@@ -1678,7 +1759,7 @@
       "name": "Mastery Insight (VoE)",
       "type": "mastery",
       "pos": [
-        9958.88,
+        9958.9,
         58768.2
       ],
       "chat_link": ""
@@ -1692,410 +1773,868 @@
       ],
       "chat_link": ""
     },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59018.6,
-      43615.5
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59443.8,
-      42554.3
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57698.9,
-      43793.3
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      62054.7,
-      44292.9
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61063.2,
-      44706
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58282.7,
-      43518.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57730,
-      44515.4
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60065.1,
-      42703.9
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60728.5,
-      42115.5
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61296.8,
-      40765.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60704,
-      39992.5
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59549.3,
-      40287.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58792.4,
-      40904
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58309.9,
-      40223.4
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57688.8,
-      40277
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57839.1,
-      41291.6
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      62102.4,
-      41107.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60071.1,
-      42019.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58971.9,
-      42227.9
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61963.3,
-      40338.6
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57714.1,
-      40877.9
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59760.9,
-      41380.6
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      57589.8,
-      41805.7
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58411,
-      44886.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59745.5,
-      45890.2
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60928.2,
-      48123.6
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59603.9,
-      46498.2
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60720.4,
-      47320.5
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59013.5,
-      46844.2
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58979.6,
-      47980.7
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59870.9,
-      45370.3
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58663.6,
-      45066.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60175.3,
-      44936.9
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58319.4,
-      45956.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58824.3,
-      45981.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60703.6,
-      50816.4
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61759.6,
-      51839.3
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60699.3,
-      49380.3
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61241.9,
-      48457.1
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      61750.9,
-      52336.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59323,
-      52874
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      60060.1,
-      51808.8
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59081.9,
-      51508.6
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      59443.8,
-      50373.4
-    ],
-    "chat_link": ""
-  },
-  {
-    "name": "Mastery Insight (PoF)",
-    "type": "mastery",
-    "pos": [
-      58992,
-      50279.8
-    ],
-    "chat_link": ""
-  }
+    {
+      "name": "Mastery Insight (VoE)",
+      "type": "mastery",
+      "pos": [
+        10492.8,
+        59527.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59018.6,
+        43615.5
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59443.8,
+        42554.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57698.9,
+        43793.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        62054.7,
+        44292.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61063.2,
+        44706
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58282.7,
+        43518.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57730,
+        44515.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60065.1,
+        42703.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60728.5,
+        42115.5
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61296.8,
+        40765.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60704,
+        39992.5
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59549.3,
+        40287.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58792.4,
+        40904
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58309.9,
+        40223.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57688.8,
+        40277
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57839.1,
+        41291.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        62102.4,
+        41107.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60071.1,
+        42019.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58971.9,
+        42227.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61963.3,
+        40338.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57714.1,
+        40877.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59760.9,
+        41380.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        57589.8,
+        41805.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60703.6,
+        50816.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61759.6,
+        51839.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60699.3,
+        49380.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61241.9,
+        48457.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        61750.9,
+        52336.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59323,
+        52874
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60060.1,
+        51808.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59081.9,
+        51508.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59443.8,
+        50373.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58992,
+        50279.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58411,
+        44886.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59745.5,
+        45890.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60928.2,
+        48123.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59603.9,
+        46498.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60720.4,
+        47320.5
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59013.5,
+        46844.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58979.6,
+        47980.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        59870.9,
+        45370.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58663.6,
+        45066.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        60175.3,
+        44936.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58319.4,
+        45956.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        58824.3,
+        45981.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        66736,
+        52511.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        67076.3,
+        55457.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        63771.6,
+        54902.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        66273.8,
+        52447.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65596.7,
+        55471.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        67564,
+        52747.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        67226.5,
+        53441.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65997.3,
+        54005.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        67649.8,
+        53728.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        68154.6,
+        53174.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        68099.7,
+        55074.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        52336.8,
+        56479.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        53004.4,
+        55936.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        53694,
+        57863.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        54633.8,
+        59133.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65365.1,
+        61670.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65500.7,
+        59808
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        64666.3,
+        61711.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        64105.2,
+        60575.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65776.7,
+        63069.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        64655.2,
+        57738.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        66632.7,
+        57314.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        66031.8,
+        57018.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        66594.2,
+        58845.6
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        65276,
+        58424.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        46106.6,
+        49514.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        44298,
+        51037.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        44198.8,
+        48803.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        45597.3,
+        49717.8
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        45014.1,
+        51043.3
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (PoF)",
+      "type": "mastery",
+      "pos": [
+        45503.6,
+        49026.2
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        40300,
+        36735.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        42965,
+        33978.5
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        41182.5,
+        32057.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        54170.7,
+        29296.4
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        56569.9,
+        35153.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        48740.8,
+        32617.1
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        45377.4,
+        27180
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        48063.7,
+        30159.9
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        59229.1,
+        25125.7
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+        62018.8,
+        35249.7
+      ],
+      "chat_link": ""
+	},
+	{
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    50780, 
+		18345
+	  ],
+      "chat_link": ""  
+	},
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    50413, 
+		19609
+      ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    50951, 
+		21794
+	  ],
+      "chat_link": ""  },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    51708, 
+		20052
+	  ],
+      "chat_link": ""  
+	},
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    50514, 
+		21084
+	  ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    51656, 
+		19124
+	  ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    51429, 
+		18393
+	  ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    51279, 
+		20539
+	  ],
+      "chat_link": ""
+    },
+    {
+      "name": "Mastery Insight (IBS)",
+      "type": "mastery",
+      "pos": [
+	    50934, 
+		20889
+	  ],
+      "chat_link": ""
+    }
 ]
 }
