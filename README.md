@@ -52,3 +52,6 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 - ~~Smart Crafting Profitability~~
 - ~~Build Planner~~
 - Add more recipes to the Crafting Calculator
+- PvP Equipment tab in the Hero Panel
+- PvP Equipment tab in the Build Planner
+- Fashion tab in the Hero Panel
