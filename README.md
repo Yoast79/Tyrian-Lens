@@ -23,7 +23,7 @@ Tyrian Lens bridges the gap between the game and your browser, offering real-tim
 To unlock the full potential of the app's functionality:
 1.  Open the app and click the **Key Icon** - **API Management**.
 3.  Add an API key from [account.arena.net/applications](https://account.arena.net/applications). 
-    * *Recommended permissions: ALL THE THINGS!.*
+    * *Recommended permissions: ALL THE THINGS!*
 
 ##  Credits & Legal
 
@@ -44,13 +44,7 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 
 ## Roadmap
 
-- ~~Add WvW map, scores and timers~~
-- ~~PvP maps~~
 - Live Dynamic Events on map
-- ~~Add TaCo Routes overlayed on map~~ It is not fun seeing a menu with over 750 options. Use Blish ;)
-- ~~Weekly Clear Dashboard~~
-- ~~Smart Crafting Profitability~~
-- ~~Build Planner~~
 - Add more recipes to the Crafting Calculator
 - PvP Equipment tab in the Hero Panel
 - PvP Equipment tab in the Build Planner
