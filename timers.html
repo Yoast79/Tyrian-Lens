@@ -105,7 +105,7 @@
 	</head>
 	<body>
 		<canvas id="confetti-canvas"></canvas>
-		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position: relative;">
+		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position: relative;" onclick="resumeAudioContext()">
 			<div class="header-row">
 				<div class="section-title">EVENT TIMERS</div>
 				<div id="local-time" class="server-time">LOCAL TIME: 00:00:00</div>
@@ -333,6 +333,7 @@
 			let alertHistory = {};
 			let searchQuery = '';
 			let choyaCooldown = false;
+			let audioInitialized = false;
 
 			const canvas = document.getElementById('confetti-canvas');
 			const ctx = canvas.getContext('2d');
@@ -343,6 +344,14 @@
 			if ('speechSynthesis' in window) {
 				window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); };
 			}
+
+			// New function to ensure audio context is active after user interaction
+			window.resumeAudioContext = function() {
+				if (!audioInitialized) {
+					console.log("Audio Context initialized via interaction.");
+					audioInitialized = true;
+				}
+			};
 
 			window.playTimerNotification = function(val, textMsg, forceSound = null) {
 				if (!val || val === 'none') return;
@@ -357,11 +366,14 @@
 						let msg = new SpeechSynthesisUtterance(textMsg);
 						let voices = window.speechSynthesis.getVoices();
 						let voice = null;
+						
+						// Priority matching for voices
 						if (soundToPlay === 'tts_male') {
 							voice = voices.find(v => v.name.toLowerCase().includes('male') || v.name.includes('David') || v.name.includes('Mark') || v.name.includes('Arthur'));
 						} else {
 							voice = voices.find(v => v.name.toLowerCase().includes('female') || v.name.includes('Zira') || v.name.includes('Hazel') || v.name.includes('Samantha'));
 						}
+						
 						if (voice) msg.voice = voice;
 						msg.pitch = 1;
 						msg.rate = 1;
@@ -369,9 +381,11 @@
 						window.speechSynthesis.speak(msg);
 					}
 				} else {
-					let audio = new Audio(soundToPlay);
+					// Use forward slashes for URLs to prevent escape character issues
+					const cleanUrl = soundToPlay.replace(/\\/g, '/');
+					let audio = new Audio(cleanUrl);
 					audio.volume = vol;
-					audio.play().catch(e => console.log('Audio play failed', e));
+					audio.play().catch(e => console.error('Audio play failed for:', cleanUrl, e));
 				}
 			};
 
@@ -742,7 +756,8 @@
 				if(name === "Choya Pinata") {
 					if(!choyaCooldown) {
 						triggerConfetti();
-						playTimerNotification(localStorage.getItem('gw2_timer_sound'), "", "\\Assets\\Sounds\\choya_pop.mp3");
+						// Use forward slashes for the sound path override
+						playTimerNotification(localStorage.getItem('gw2_timer_sound'), "", "/Assets/Sounds/choya_pop.mp3");
 						choyaCooldown = true;
 						setTimeout(() => { choyaCooldown = false; }, 3000);
 					} else {
@@ -810,7 +825,8 @@
                                             const elapsed = Math.round(state.total - state.remain);
                                             if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
                                                 window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
-												let soundOverride = (name === "Tequatl the Sunless") ? "\\Assets\\Sounds\\something_in_the_water.mp3" : null;
+												// Forward slashes for Tequatl sound
+												let soundOverride = (name === "Tequatl the Sunless") ? "/Assets/Sounds/something_in_the_water.mp3" : null;
                                                 playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
                                                 alertHistory[name + '-0'] = true;
                                                 setTimeout(()=> delete alertHistory[name + '-0'], 5000);

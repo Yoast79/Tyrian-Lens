@@ -49,12 +49,25 @@
 			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
 			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
 
-			.rarity-Legendary { border-color: #4C139D; }
-			.rarity-Ascended { border-color: #FB3E8D; }
-			.rarity-Exotic { border-color: #FFA405; }
-			.rarity-Rare { border-color: #FCD00B; }
-			.rarity-Masterwork { border-color: #1A9306; }
-			.rarity-Fine { border-color: #62A4DA; }
+			/* Explicit fix for currency boxes */
+			.rarity-Currency { border-color: transparent !important; background: transparent !important; }
+			.text-Currency { color: #e2c07d !important; }
+
+			.rarity-Legendary { border: 1px solid #4C139D; }
+			.rarity-Ascended { border: 1px solid #FB3E8D; }
+			.rarity-Exotic { border: 1px solid #FFA405; }
+			.rarity-Rare { border: 1px solid #FCD00B; }
+			.rarity-Masterwork { border: 1px solid #1A9306; }
+			.rarity-Fine { border: 1px solid #62A4DA; }
+			.rarity-Basic { border: 1px solid #fdfdfd; }
+
+			.text-Legendary { color: #4C139D; }
+			.text-Ascended { color: #FB3E8D; }
+			.text-Exotic { color: #FFA405; }
+			.text-Rare { color: #FCD00B; }
+			.text-Masterwork { color: #1A9306; }
+			.text-Fine { color: #62A4DA; }
+			.text-Basic { color: #fdfdfd; }
 
 			/* Calculator Specific Styles */
 			.tabs-header { display: flex; gap: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
@@ -128,7 +141,7 @@
 						</div>
 				</div>
 
-				<div style="display:flex; gap:20px; margin-bottom: 15px; flex-shrink:0; align-items: center;">
+				<div style="display:flex; flex-wrap:wrap; gap:20px; margin-bottom: 15px; flex-shrink:0; align-items: center;">
 					<div class="toggle-container" id="mat-toggle" onclick="toggleMats()">
 						<div class="toggle-switch"></div>
 						<span>USE OWN MATERIALS</span>
@@ -179,22 +192,29 @@
 				"HarpoonGun": "Harpoon Gun"
 			};
 
+			const specialCurrencies = [2, -2, 23, -23, 32, -32, 45, -45, 61, -61, 68, -68, 69, -69, 77, -77];
+
 			let activeKey = localStorage.getItem('gw2_active_key') || null;
 			let recipeDatabase = [];
 			let unlockedIds = new Set();
-			let itemIconCache = JSON.parse(localStorage.getItem('recipe_icon_cache') || '{}');
 			
 			let useOwnMats = localStorage.getItem('gw2_calc_own_mats') === 'true';
 			let autoUpdateMats = localStorage.getItem('gw2_calc_auto_update') === 'true';
 			let autoUpdateInterval = null;
 
 			let searchIndex = [];
+			let itemIndexMap = {}; 
+			
 			let tpPrices = {};
 			let forgeRecipes = {};
 			let isEngineReady = false;
 			let accountInventory = {}; 
 			let detailedRecipeCache = {};
+			let recipePromiseCache = {}; 
 			
+			let localOfficialRecipes = [];
+			let vendorPrices = {};
+			let bulkMapping = {};
 			let activeCraftTargets = JSON.parse(localStorage.getItem('gw2_calc_targets')) || [];
 
 			function toTitleCase(str) {
@@ -251,14 +271,67 @@
 				}
 			}
 
+			function getDisplayData(id, fallbackName = '', fallbackIcon = '', fallbackRarity = 'Basic') {
+				let numId = Number(id);
+				let absId = Math.abs(numId);
+				let isCurrency = isNaN(numId) || numId < 0 || numId === 1 || specialCurrencies.includes(absId);
+				
+				let name = fallbackName || `Item #${numId}`;
+				let icon = fallbackIcon || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+				let rarity = isCurrency ? 'Currency' : fallbackRarity;
+				
+				let idx = itemIndexMap[numId] || itemIndexMap[absId];
+				if (idx) {
+					name = toTitleCase(idx.n || idx.name);
+					icon = idx.i || idx.icon || icon;
+					if (!isCurrency) rarity = idx.r || idx.rarity || rarity;
+				}
+				
+				if (numId === 1 || numId === -1) {
+					name = "Coin";
+				}
+				
+				return { name, icon, rarity, isCurrency, rawName: (idx ? (idx.n || idx.name) : fallbackName) || name };
+			}
+
 			async function loadPhase2Data() {
 				const loaderText = document.getElementById('loader-text');
 				
 				loaderText.innerText = "LOADING MASTER INDEX...";
 				try {
 					const masterData = await fetchJSON('gw2_master_index.json') || await fetchJSON('https://gw2ps.local/gw2_master_index.json');
-					if (masterData) searchIndex = masterData;
+					if (masterData) {
+						searchIndex = masterData;
+						searchIndex.forEach(item => {
+							itemIndexMap[Number(item.id)] = item;
+						});
+					}
 				} catch(e) { console.error("Master index load failed"); }
+
+				loaderText.innerText = "LOADING OFFICIAL RECIPES...";
+				try {
+					const offData = await fetchJSON('official_recipes_clean.json') || await fetchJSON('https://gw2ps.local/official_recipes_clean.json');
+					if (offData && Array.isArray(offData)) {
+						localOfficialRecipes = offData;
+					}
+				} catch(e) {}
+
+				loaderText.innerText = "LOADING VENDOR DATABANKS...";
+				try {
+					const vpData = await fetchJSON('vendor_prices_clean.json') || await fetchJSON('https://gw2ps.local/vendor_prices_clean.json');
+					if (vpData) {
+						vendorPrices = vpData;
+						for (let key in vendorPrices) {
+							let item = vendorPrices[key];
+							if (item.name && item.name.toLowerCase().includes("in bulk")) {
+								let baseName1 = item.name.replace(/ in Bulk$/i, "");
+								let baseName2 = baseName1.endsWith('s') ? baseName1.slice(0, -1) : baseName1;
+								let baseMatch = searchIndex.find(i => i.n && (i.n.toLowerCase() === baseName1.toLowerCase() || i.n.toLowerCase() === baseName2.toLowerCase()));
+								if (baseMatch) bulkMapping[baseMatch.id] = { bulkId: Number(key), data: item };
+							}
+						}
+					}
+				} catch(e) { console.error("Vendor prices load failed"); }
 
 				loaderText.innerText = "LOADING MYSTIC FORGE DATABANKS...";
 				try {
@@ -266,39 +339,16 @@
 					if (cachedForge) {
 						forgeRecipes = JSON.parse(cachedForge);
 					} else {
-						const forgeData = await fetchJSON('mystic_forge_recipes.json') || await fetchJSON('https://gw2ps.local/mystic_forge_recipes.json');
-						if (forgeData) {
+						const forgeData = await fetchJSON('mystic_forge_clean.json') || await fetchJSON('https://gw2ps.local/mystic_forge_clean.json');
+						if (forgeData && forgeData.recipes) {
 							forgeRecipes = {};
-							if (Array.isArray(forgeData)) {
-								forgeData.forEach(r => {
-									let finalOutId = r.output_item_id || r.output || r.id;
-									if (!finalOutId && r.output_name) {
-										let searchName = r.output_name.toLowerCase();
-										let matches = searchIndex.filter(i => i.n && i.n.toLowerCase() === searchName);
-										if (matches.length > 0) {
-											matches.forEach(match => {
-												let outId = String(match.id);
-												if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
-												if (!forgeRecipes[outId].includes(r)) forgeRecipes[outId].push(r);
-											});
-										}
-										return;
-									}
-									let outId = String(finalOutId);
-									if (outId && outId !== 'undefined' && outId !== 'null') {
-										if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
-										forgeRecipes[outId].push(r);
-									}
-								});
-							} else {
-								for (let key in forgeData) {
-									let outId = String(key);
+							for (let key in forgeData.recipes) {
+								let r = forgeData.recipes[key];
+								let finalOutId = r.output_item_id;
+								let outId = String(finalOutId);
+								if (outId && outId !== 'undefined' && outId !== 'null') {
 									if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
-									if (Array.isArray(forgeData[key])) {
-										forgeRecipes[outId].push(...forgeData[key]);
-									} else {
-										forgeRecipes[outId].push(forgeData[key]);
-									}
+									forgeRecipes[outId].push(r);
 								}
 							}
 							sessionStorage.setItem('gw2profits_forge', JSON.stringify(forgeRecipes));
@@ -312,62 +362,32 @@
 			async function syncInventory() {
 				if (!activeKey) return;
 				accountInventory = {};
-				
 				const mats = await fetchJSON(`https://api.guildwars2.com/v2/account/materials?access_token=${activeKey}`);
-				if (mats && !mats.error) {
-					mats.forEach(m => { accountInventory[m.id] = (accountInventory[m.id] || 0) + m.count; });
-				}
-				
+				if (mats && !mats.error) mats.forEach(m => { accountInventory[m.id] = (accountInventory[m.id] || 0) + m.count; });
 				const bank = await fetchJSON(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
-				if (bank && !bank.error) {
-					bank.forEach(b => { 
-						if (b) accountInventory[b.id] = (accountInventory[b.id] || 0) + b.count; 
-					});
-				}
-
+				if (bank && !bank.error) bank.forEach(b => { if (b) accountInventory[b.id] = (accountInventory[b.id] || 0) + b.count; });
 				const shared = await fetchJSON(`https://api.guildwars2.com/v2/account/inventory?access_token=${activeKey}`);
-				if (shared && !shared.error) {
-					shared.forEach(s => { 
-						if (s) accountInventory[s.id] = (accountInventory[s.id] || 0) + s.count; 
-					});
-				}
-
+				if (shared && !shared.error) shared.forEach(s => { if (s) accountInventory[s.id] = (accountInventory[s.id] || 0) + s.count; });
 				const wallet = await fetchJSON(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
-				if (wallet && !wallet.error) {
-					wallet.forEach(w => { 
-						accountInventory[-w.id] = (accountInventory[-w.id] || 0) + w.value;
-						if (w.id === 1) accountInventory[1] = (accountInventory[1] || 0) + w.value;
-					});
-				}
+				if (wallet && !wallet.error) wallet.forEach(w => { accountInventory[-w.id] = (accountInventory[-w.id] || 0) + w.value; if (w.id === 1) accountInventory[1] = (accountInventory[1] || 0) + w.value; });
 			}
 
 			function manageAutoUpdate() {
 				if (useOwnMats && autoUpdateMats) {
 					if (!autoUpdateInterval) {
 						autoUpdateInterval = setInterval(async () => {
-							if (activeKey) {
-								await syncInventory();
-								if (activeCraftTargets.length > 0) {
-									triggerGlobalCalculation();
-								}
-							}
+							if (activeKey) { await syncInventory(); if (activeCraftTargets.length > 0) triggerGlobalCalculation(); }
 						}, 60000);
 					}
 				} else {
-					if (autoUpdateInterval) {
-						clearInterval(autoUpdateInterval);
-						autoUpdateInterval = null;
-					}
+					if (autoUpdateInterval) { clearInterval(autoUpdateInterval); autoUpdateInterval = null; }
 				}
 			}
 
 			async function init() {
 				if (!activeKey) return;
-				const loaderText = document.getElementById('loader-text');
 				document.getElementById('loader').style.display = 'flex';
-				
 				document.getElementById('mat-toggle').classList.toggle('active', useOwnMats);
-				document.getElementById('auto-update-toggle').classList.toggle('active', autoUpdateMats);
 				document.getElementById('auto-update-toggle').style.display = useOwnMats ? 'flex' : 'none';
 
 				const cached = localStorage.getItem(`recipe_struct_${activeKey}`);
@@ -376,38 +396,19 @@
 					recipeDatabase = parsed.data;
 					unlockedIds = new Set(parsed.unlocks);
 				} else {
-					loaderText.innerText = "FETCHING UNLOCKS...";
 					const unlocks = await fetchJSON(`https://api.guildwars2.com/v2/account/recipes?access_token=${activeKey}`);
 					unlockedIds = new Set(unlocks || []);
-
-					loaderText.innerText = "CATALOGING RECIPES...";
 					const allIds = await fetchJSON('https://api.guildwars2.com/v2/recipes');
-					
 					if (allIds && !allIds.error) {
-						const recipeChunks = [];
-						for (let i = 0; i < allIds.length; i += 200) recipeChunks.push(allIds.slice(i, i + 200));
-						
-						for (let i = 0; i < recipeChunks.length; i++) {
-							loaderText.innerText = `INDEXING DATA (${Math.round((i/recipeChunks.length)*100)}%)`;
-							const data = await fetchJSON(`https://api.guildwars2.com/v2/recipes?ids=${recipeChunks[i].join(',')}`);
-							if (data && !data.error) {
-								data.forEach(r => {
-									recipeDatabase.push({
-										id: r.id,
-										type: r.type || "OTHER",
-										discs: r.disciplines,
-										outId: r.output_item_id
-									});
-								});
-							}
-							await new Promise(r => setTimeout(r, 10));
+						const chunks = []; for (let i = 0; i < allIds.length; i += 200) chunks.push(allIds.slice(i, i + 200));
+						for (let i = 0; i < chunks.length; i++) {
+							const data = await fetchJSON(`https://api.guildwars2.com/v2/recipes?ids=${chunks[i].join(',')}`);
+							if (data) data.forEach(r => { recipeDatabase.push({ id: r.id, type: r.type || "OTHER", discs: r.disciplines, outId: r.output_item_id }); });
 						}
 						localStorage.setItem(`recipe_struct_${activeKey}`, JSON.stringify({ data: recipeDatabase, unlocks: Array.from(unlockedIds) }));
 					}
 				}
-
 				await loadPhase2Data();
-
 				renderStructure();
 				finishInitSequence();
 			}
@@ -415,22 +416,16 @@
 			function finishInitSequence() {
 				document.getElementById('loader').style.display = 'none';
 				document.getElementById('recipe-ui').style.display = 'flex';
-
 				manageAutoUpdate();
-
 				let savedTab = localStorage.getItem('gw2_calc_tab') || 'account';
 				switchTab(savedTab, true);
-
-				if (activeCraftTargets.length > 0 && savedTab === 'calculator') {
-					triggerGlobalCalculation();
-				}
+				if (activeCraftTargets.length > 0 && savedTab === 'calculator') triggerGlobalCalculation();
 			}
 
 			function renderStructure() {
 				const container = document.getElementById('recipes-container');
 				const structure = {};
 				Object.keys(discIcons).forEach(d => structure[d] = {});
-
 				recipeDatabase.forEach(r => {
 					r.discs.forEach(disc => {
 						if (structure[disc]) {
@@ -439,37 +434,18 @@
 						}
 					});
 				});
-
 				let html = '';
 				for (const disc in structure) {
 					const categories = structure[disc];
 					const catKeys = Object.keys(categories).sort();
 					if (catKeys.length === 0 && disc !== "Handiworker") continue;
-
-					html += `<div class="recipe-section">
-								<div class="dropdown-btn master-btn" onclick="toggleMaster(this)">
-									<img src="${discIcons[disc]}" style="width:22px; height:22px;" />
-									<span>${disc}</span>
-								</div>
-								<div class="dropdown-content">`;
-
-					if (disc === "Handiworker" && catKeys.length === 0) {
-						html += `<div style="padding:15px; font-size:10px; color:#4a3b2a; text-align:center;">API DATA CURRENTLY UNAVAILABLE</div>`;
-					}
-
+					html += `<div class="recipe-section"><div class="dropdown-btn master-btn" onclick="toggleMaster(this)"><img src="${discIcons[disc]}" style="width:22px; height:22px;" /><span>${disc}</span></div><div class="dropdown-content">`;
 					catKeys.forEach(cat => {
 						const items = categories[cat];
 						const outIdsAttr = items.map(i => i.outId).join(',');
 						const recipeIdsAttr = items.map(i => i.id).join(',');
 						const friendlyName = categoryMapping[cat] || cat.replace(/([A-Z])/g, ' $1').trim();
-
-						html += `<div class="dropdown-btn sub-btn" 
-									 data-out-ids="${outIdsAttr}" 
-									 data-recipe-ids="${recipeIdsAttr}"
-									 onclick="toggleLazySub(this)">
-									<span>${friendlyName} (${items.length})</span>
-								 </div>
-								 <div class="dropdown-content recipe-grid"></div>`;
+						html += `<div class="dropdown-btn sub-btn" data-out-ids="${outIdsAttr}" data-recipe-ids="${recipeIdsAttr}" onclick="toggleLazySub(this)"><span>${friendlyName} (${items.length})</span></div><div class="dropdown-content recipe-grid"></div>`;
 					});
 					html += `</div></div>`;
 				}
@@ -479,38 +455,18 @@
 			async function toggleLazySub(btn) {
 				const grid = btn.nextElementSibling;
 				const isActive = !btn.classList.contains("active");
-
-				const siblingBtns = btn.parentElement.querySelectorAll('.sub-btn');
-				siblingBtns.forEach(s => {
-					if (s !== btn) {
-						s.classList.remove("active");
-						s.nextElementSibling.style.display = "none";
-					}
-				});
-
 				btn.classList.toggle("active", isActive);
 				grid.style.display = isActive ? "grid" : "none";
-
 				if (isActive && !btn.dataset.loaded) {
 					const outIds = btn.dataset.outIds.split(',');
 					const recipeIds = btn.dataset.recipeIds.split(',');
-					
 					let html = '';
 					outIds.forEach((id, idx) => {
-						const it = searchIndex.find(item => Number(item.id) === Number(id));
-						if (!it) return;
+						const d = getDisplayData(id);
+						if (d.name.includes("Item #")) return;
 						const isUnlocked = unlockedIds.has(parseInt(recipeIds[idx]));
-						const titleName = toTitleCase(it.n);
-						const displayIcon = it.i || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
-						
-						html += `<div class="item-slot rarity-${it.r}" 
-									onmouseover="window.parent.postMessage({action:'showTooltip', text: '${titleName.replace(/'/g, "\\'")}${isUnlocked ? '' : ' (LOCKED)'}', x: event.clientX, y: event.clientY}, '*')" 
-									onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"
-									onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(titleName)}', '_blank')">
-									<img src="${displayIcon}" class="recipe-icon ${isUnlocked ? '' : 'locked'}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'" />
-								</div>`;
+						html += `<div class="item-slot rarity-${d.rarity}" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${d.name.replace(/'/g, "\\'")}${isUnlocked ? '' : ' (LOCKED)'}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.name)}', '_blank')"><img src="${d.icon}" class="recipe-icon ${isUnlocked ? '' : 'locked'}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'" /></div>`;
 					});
-
 					grid.innerHTML = html;
 					btn.dataset.loaded = "true";
 				}
@@ -519,7 +475,6 @@
 			function toggleMaster(btn) {
 				const content = btn.nextElementSibling;
 				const isActive = !btn.classList.contains("active");
-
 				const allMasterBtns = document.querySelectorAll('.master-btn');
 				allMasterBtns.forEach(m => {
 					if (m !== btn) {
@@ -527,12 +482,9 @@
 						m.nextElementSibling.style.display = "none";
 					}
 				});
-
 				btn.classList.toggle("active", isActive);
 				content.style.display = isActive ? "block" : "none";
 			}
-
-			// --- Phase 3 Calculator Engine ---
 
 			function switchTab(tab, skipSave) {
 				document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -545,33 +497,22 @@
 					document.getElementById('recipes-container').style.display = 'none';
 					document.getElementById('calculator-container').style.display = 'flex';
 				}
-				if (!skipSave) {
-					localStorage.setItem('gw2_calc_tab', tab);
-				}
+				if (!skipSave) localStorage.setItem('gw2_calc_tab', tab);
 			}
 
 			async function toggleMats() {
-				useOwnMats = !useOwnMats;
-				localStorage.setItem('gw2_calc_own_mats', useOwnMats);
+				useOwnMats = !useOwnMats; localStorage.setItem('gw2_calc_own_mats', useOwnMats);
 				document.getElementById('mat-toggle').classList.toggle('active', useOwnMats);
-				
-				const autoBtn = document.getElementById('auto-update-toggle');
-				autoBtn.style.display = useOwnMats ? 'flex' : 'none';
-				manageAutoUpdate();
-				
-				if (useOwnMats && Object.keys(accountInventory).length === 0) {
+				document.getElementById('auto-update-toggle').style.display = useOwnMats ? 'flex' : 'none';
+				manageAutoUpdate(); if (useOwnMats && Object.keys(accountInventory).length === 0) {
 					document.getElementById('calc-results').innerHTML = '<div style="padding: 20px; text-align: center; color: #8a7a5f;">SYNCING INVENTORY...</div>';
 					await syncInventory();
 				}
-				
-				if (activeCraftTargets.length > 0) {
-					triggerGlobalCalculation();
-				}
+				if (activeCraftTargets.length > 0) triggerGlobalCalculation();
 			}
 
 			function toggleAutoUpdate() {
-				autoUpdateMats = !autoUpdateMats;
-				localStorage.setItem('gw2_calc_auto_update', autoUpdateMats);
+				autoUpdateMats = !autoUpdateMats; localStorage.setItem('gw2_calc_auto_update', autoUpdateMats);
 				document.getElementById('auto-update-toggle').classList.toggle('active', autoUpdateMats);
 				manageAutoUpdate();
 			}
@@ -580,97 +521,57 @@
 				let content = document.getElementById(`target-content-${idx}`);
 				let icon = document.getElementById(`target-icon-${idx}`);
 				let isOpen = content.style.display !== 'none';
-				if (isOpen) {
-					content.style.display = 'none';
-					icon.innerHTML = '&#9660;';
-					localStorage.setItem(`gw2_calc_target_${idx}_open`, 'false');
-				} else {
-					content.style.display = 'flex';
-					icon.innerHTML = '&#9650;';
-					localStorage.setItem(`gw2_calc_target_${idx}_open`, 'true');
-				}
+				content.style.display = isOpen ? 'none' : 'flex';
+				icon.innerHTML = isOpen ? '&#9660;' : '&#9650;';
+				localStorage.setItem(`gw2_calc_target_${idx}_open`, !isOpen);
 			}
 
 			function toggleSection(type, idx) {
 				let el = document.getElementById(`calc-${type}-content-${idx}`);
 				let icon = document.getElementById(`calc-${type}-icon-${idx}`);
 				let isOpen = el.style.display !== 'none';
-				if (isOpen) {
-					el.style.display = 'none';
-					icon.innerHTML = '&#9660;';
-					localStorage.setItem(`gw2_calc_${type}_${idx}`, 'false');
-				} else {
-					el.style.display = type === 'bd' ? 'grid' : 'block';
-					icon.innerHTML = '&#9650;';
-					localStorage.setItem(`gw2_calc_${type}_${idx}`, 'true');
-				}
+				el.style.display = isOpen ? 'none' : (type === 'bd' ? 'grid' : 'block');
+				icon.innerHTML = isOpen ? '&#9660;' : '&#9650;';
+				localStorage.setItem(`gw2_calc_${type}_${idx}`, !isOpen);
 			}
 
-			function removeTarget(idx) {
-				activeCraftTargets.splice(idx, 1);
+			function removeTarget(idx) { activeCraftTargets.splice(idx, 1); localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets)); triggerGlobalCalculation(); }
+			
+			function updateTargetAmount(idx, val) { let amt = parseInt(val); if (isNaN(amt) || amt < 1) amt = 1; activeCraftTargets[idx].requestedAmount = amt; localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets)); triggerGlobalCalculation(); }
+			
+			function updateTargetPrecursor(idx, isChecked) {
+				activeCraftTargets[idx].craftPrecursor = isChecked;
 				localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
 				triggerGlobalCalculation();
 			}
 
-			function updateTargetAmount(idx, val) {
-				let amt = parseInt(val);
-				if (isNaN(amt) || amt < 1) amt = 1;
-				activeCraftTargets[idx].requestedAmount = amt;
-				localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
-				triggerGlobalCalculation();
-			}
-
-			function clearCalcSearch() {
-				document.getElementById('calc-search').value = '';
-				document.getElementById('calc-clear-search').style.display = 'none';
-				document.getElementById('calc-autocomplete').style.display = 'none';
-			}
+			function clearCalcSearch() { document.getElementById('calc-search').value = ''; document.getElementById('calc-clear-search').style.display = 'none'; document.getElementById('calc-autocomplete').style.display = 'none'; }
 
 			document.getElementById('calc-search').addEventListener('input', function(e) {
 				const val = this.value.toLowerCase().trim();
 				const list = document.getElementById('calc-autocomplete');
 				const clearBtn = document.getElementById('calc-clear-search');
 				list.innerHTML = '';
-				
 				clearBtn.style.display = val === "" ? "none" : "block";
-
-				if (val.length < 3) {
-					list.style.display = 'none';
-					return;
-				}
-
-				if (!isEngineReady) {
-					list.innerHTML = '<div style="padding:10px; color:#8a7a5f; font-size:11px; text-align:center;">ENGINE BOOTING...</div>';
-					list.style.display = 'block';
-					return;
-				}
-
-				let matches = searchIndex
-					.filter(item => item.n && item.n.toLowerCase().includes(val))
-					.slice(0, 30);
+				if (val.length < 3) { list.style.display = 'none'; return; }
+				if (!isEngineReady) { list.innerHTML = '<div style="padding:10px; color:#8a7a5f; font-size:11px; text-align:center;">ENGINE BOOTING...</div>'; list.style.display = 'block'; return; }
 				
+				let matches = searchIndex.filter(item => item.n && item.n.toLowerCase().includes(val)).slice(0, 30);
 				if (matches.length > 0) {
 					matches.forEach(item => {
-						let div = document.createElement('div');
-						div.className = 'autocomplete-item';
-						let titleName = toTitleCase(item.n);
-						let displayIcon = item.i || item.icon || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
-						div.innerHTML = `<img src="${displayIcon}" class="rarity-${item.r}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'"> <span>${titleName}</span>`;
-						div.onclick = function() {
-							document.getElementById('calc-search').value = '';
-							clearBtn.style.display = 'none';
-							list.style.display = 'none';
-
-							activeCraftTargets.push({ item: item, requestedAmount: 1 });
-							localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets));
-							triggerGlobalCalculation();
+						let div = document.createElement('div'); div.className = 'autocomplete-item';
+						let d = getDisplayData(item.id);
+						div.innerHTML = `<img src="${d.icon}" class="rarity-${d.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'"> <span class="text-${d.rarity}">${d.name}</span>`;
+						div.onclick = function() { 
+							clearCalcSearch(); 
+							activeCraftTargets.push({ item: item, requestedAmount: 1, craftPrecursor: false }); 
+							localStorage.setItem('gw2_calc_targets', JSON.stringify(activeCraftTargets)); 
+							triggerGlobalCalculation(); 
 						};
 						list.appendChild(div);
 					});
 					list.style.display = 'block';
-				} else {
-					list.style.display = 'none';
-				}
+				} else list.style.display = 'none';
 			});
 
 			document.addEventListener("click", function (e) {
@@ -679,220 +580,167 @@
 				}
 			});
 
-			// --- Recursive Math & Rendering ---
-
 			async function collectRecipeIds(itemId, neededIds) {
 				let recipes = await getRecipeInfo(itemId);
 				if (recipes.length > 0) {
 					for (let ing of recipes[0].ingredients) {
-						if (!neededIds.has(Number(ing.item_id))) {
-							neededIds.add(Number(ing.item_id));
-							await collectRecipeIds(Number(ing.item_id), neededIds);
-						}
+						if (!neededIds.has(Number(ing.item_id))) { neededIds.add(Number(ing.item_id)); await collectRecipeIds(Number(ing.item_id), neededIds); }
 					}
 				}
 			}
 
 			async function triggerGlobalCalculation() {
 				const resultsDiv = document.getElementById('calc-results');
-
-				if (activeCraftTargets.length === 0) {
-					resultsDiv.innerHTML = `<div style="padding: 60px 20px; text-align: center; color: #8a7a5f; font-style: italic; letter-spacing: 1px;">SELECT AN ITEM TO GENERATE SHOPPING LIST</div>`;
-					return;
-				}
-
-				resultsDiv.innerHTML = `
-					<div style="text-align: center; color: #8a7a5f; padding: 40px 10px;">
-						<div style="font-size: 14px; font-weight: bold; color: #fff; margin-bottom: 10px;">
-							CALCULATING CRAFTING QUEUE...
-						</div>
-						<div style="font-size: 11px; letter-spacing: 1px;">ANALYZING CHEAPEST PATHS & MARKET PRICES...</div>
-					</div>
-				`;
-
-				let globalMissingIds = new Set();
-				for (let target of activeCraftTargets) {
-					globalMissingIds.add(Number(target.item.id));
-					await collectRecipeIds(Number(target.item.id), globalMissingIds);
-				}
-
-				let idArr = Array.from(globalMissingIds);
-				let missingPrices = idArr.filter(id => !tpPrices[id] && id > 0);
+				if (activeCraftTargets.length === 0) { resultsDiv.innerHTML = `<div style="padding: 60px 20px; text-align: center; color: #8a7a5f; font-style: italic; letter-spacing: 1px;">SELECT AN ITEM TO GENERATE SHOPPING LIST</div>`; return; }
+				resultsDiv.innerHTML = `<div style="text-align: center; color: #8a7a5f; padding: 40px 10px;"><div style="font-size: 14px; font-weight: bold; color: #fff; margin-bottom: 10px;">CALCULATING CRAFTING QUEUE...</div><div style="font-size: 11px; letter-spacing: 1px;">ANALYZING CHEAPEST PATHS & MARKET PRICES...</div></div>`;
 				
-				for (let i = 0; i < missingPrices.length; i += 200) {
-					let chunk = missingPrices.slice(i, i + 200).join(',');
-					let priceData = await fetchJSON(`https://api.guildwars2.com/v2/commerce/prices?ids=${chunk}`);
-					if (priceData && !priceData.error) {
-						priceData.forEach(p => { tpPrices[Number(p.id)] = p; });
-					}
+				let missingIds = new Set();
+				for (let target of activeCraftTargets) { missingIds.add(Number(target.item.id)); await collectRecipeIds(Number(target.item.id), missingIds); }
+				let idArr = Array.from(missingIds);
+				let toFetch = idArr.filter(id => !tpPrices[id] && id > 0);
+				for (let i = 0; i < toFetch.length; i += 200) {
+					let data = await fetchJSON(`https://api.guildwars2.com/v2/commerce/prices?ids=${toFetch.slice(i, i+200).join(',')}`);
+					if (data && !data.error) data.forEach(p => tpPrices[p.id] = p);
 				}
-
-				let localInventory = useOwnMats ? JSON.parse(JSON.stringify(accountInventory)) : {};
+				
 				let targetsData = [];
-
+				let localInv = useOwnMats ? JSON.parse(JSON.stringify(accountInventory)) : {};
 				for (let target of activeCraftTargets) {
-					let shoppingList = {}; 
-					let craftingSteps = {};
-					let vendorPurchases = {};
-					await recurseItem(Number(target.item.id), target.requestedAmount, localInventory, shoppingList, craftingSteps, vendorPurchases, true);
-					targetsData.push({ target, shoppingList, craftingSteps, vendorPurchases });
+					let sl = {}, cs = {}, vp = {};
+					await recurseItem(Number(target.item.id), target.requestedAmount, localInv, sl, cs, vp, true, target.craftPrecursor);
+					targetsData.push({ target, sl, cs, vp });
 				}
-
 				renderGlobalList(targetsData);
 			}
 
 			async function getRecipeInfo(outId) {
-				let strId = String(outId);
+				let strId = String(outId); let numId = Number(outId);
 				if (detailedRecipeCache[strId]) return detailedRecipeCache[strId];
+				if (recipePromiseCache[strId]) return await recipePromiseCache[strId];
+				let promise = (async () => {
+					
+					// OVERRIDE: Prevent Runestone TP/Forge loop. Force 1g vendor price.
+					if (numId === 20798 || numId === 100067) {
+						return [{ type: 'vendor', ingredients: [{ item_id: -1, count: 10000 }], output_item_count: 1, disciplines: ['Merchant'], min_rating: 0 }];
+					}
 
-				let possibleRecipes = [];
-
-				const search = await fetchJSON(`https://api.guildwars2.com/v2/recipes/search?output=${strId}`);
-				if (search && search.length > 0 && !search.error) {
-					const rDetails = await fetchJSON(`https://api.guildwars2.com/v2/recipes/${search[0]}`);
-					if (rDetails && !rDetails.error) {
-						let ing = rDetails.ingredients.map(i => ({ item_id: i.item_id, count: i.count }));
-						if (ing.length <= 4) {
-							possibleRecipes.push({ type: 'crafting', ingredients: ing, output_item_count: rDetails.output_item_count || 1, disciplines: rDetails.disciplines || [], min_rating: rDetails.min_rating || 0 });
+					let recipes = [];
+					let offMatches = localOfficialRecipes.filter(r => Number(r.output_item_id) === numId);
+					if (offMatches.length > 0) offMatches.forEach(r => recipes.push({ type: 'crafting', ingredients: r.ingredients, output_item_count: r.output_item_count || 1, disciplines: r.disciplines || [], min_rating: r.min_rating || 0 }));
+					else {
+						const search = await fetchJSON(`https://api.guildwars2.com/v2/recipes/search?output=${strId}`);
+						if (search && search.length > 0 && !search.error) {
+							const details = await fetchJSON(`https://api.guildwars2.com/v2/recipes/${search[0]}`);
+							if (details && !details.error) recipes.push({ type: 'crafting', ingredients: details.ingredients, output_item_count: details.output_item_count || 1, disciplines: details.disciplines || [], min_rating: details.min_rating || 0 });
 						}
 					}
-				}
-
-				if (forgeRecipes[strId]) {
-					forgeRecipes[strId].forEach(fRec => {
-						let ingList = (fRec.ingredients || []).map(i => {
-							let finalItemId = i.item_id || i.item || i.id;
-							if (!finalItemId && i.item_name) {
-								let searchName = i.item_name.toLowerCase();
-								let match = searchIndex.find(idx => idx.n && idx.n.toLowerCase() === searchName);
-								if (match) finalItemId = match.id;
-							}
-							return { item_id: finalItemId, count: i.count };
+					if (vendorPrices[strId] && !vendorPrices[strId].name.toLowerCase().includes("in bulk")) recipes.push({ type: 'vendor', ingredients: vendorPrices[strId].ingredients, output_item_count: vendorPrices[strId].yields || 1, disciplines: ['Merchant'], min_rating: 0 });
+					if (forgeRecipes[strId]) forgeRecipes[strId].forEach(f => recipes.push({ type: 'forge', ingredients: f.ingredients.map(i => ({ item_id: i.item_id || i.id, count: i.count })), output_item_count: f.count || 1, disciplines: ['Mystic Forge'], min_rating: 0 }));
+					
+					// OVERRIDE: Mystic Clovers
+					if (numId === 19675) {
+						recipes = recipes.filter(r => !r.disciplines.includes('Merchant'));
+						recipes.forEach(r => {
+							if (r.type === 'forge') r.output_item_count = (r.output_item_count || 1) / 3.33;
 						});
-						
-						if (strId !== "19675") {
-							if (ingList.length > 4) return;
-							if (ingList.some(ing => [20796, 20799, 70842].includes(Number(ing.item_id)))) return;
-						}
-
-						possibleRecipes.push({ type: 'forge', ingredients: ingList, output_item_count: fRec.output_item_count || fRec.count || 1, disciplines: fRec.disciplines || ['Mystic Forge'], min_rating: 0 });
+					}
+					
+					recipes.sort((a,b) => {
+						let sa = (a.type==='crafting' || a.type==='vendor') ? 0 : 1, sb = (b.type==='crafting' || b.type==='vendor') ? 0 : 1;
+						if (sa !== sb) return sa - sb;
+						const score = (r) => { let s = 0; r.ingredients.forEach(i => { let id = Number(i.item_id); if (isNaN(id) || id <= 0 || id === 1 || specialCurrencies.includes(Math.abs(id))) s+=1; else { let tp = tpPrices[id]?.sells?.unit_price || 0; if (tp > 0) s+=tp; else s+=10000000; } }); return s/(r.output_item_count||1); };
+						return score(a) - score(b);
 					});
-				}
-
-				possibleRecipes.sort((a, b) => {
-					function score(r) {
-						let s = 0;
-						r.ingredients.forEach(i => {
-							let id = Number(i.item_id);
-							if (id === 1 || id === -1) s += 0;
-							else if (id === 2 || id === -2) s += 1;
-							else if (id === 32 || id === -32) s += 2;
-							else if (id === 45 || id === -45) s += 3;
-							else if (id < 0) s += 4;
-							else s += 10;
-						});
-						return s;
-					}
-					return score(a) - score(b);
-				});
-
-				detailedRecipeCache[strId] = possibleRecipes;
-				return possibleRecipes;
+					return recipes;
+				})();
+				recipePromiseCache[strId] = promise; let final = await promise; detailedRecipeCache[strId] = final; return final;
 			}
 
-			async function recurseItem(itemId, neededQty, localInv, shoppingList, craftingSteps, vendorPurchases, isTopLevel = false, path = new Set(), depth = 0) {
-				if (useOwnMats && localInv[itemId] > 0) {
-					let taking = Math.min(localInv[itemId], neededQty);
-					localInv[itemId] -= taking;
-					neededQty -= taking;
-					if (neededQty <= 0) return; 
+			async function recurseItem(itemId, needed, local, sl, cs, vp, isTopLevel = false, forcePrecursorCraft = false, path = new Set(), depth = 0) {
+				if (useOwnMats && local[itemId] > 0) { let taking = Math.min(local[itemId], needed); local[itemId] -= taking; needed -= taking; if (needed <= 0) return; }
+				if (bulkMapping[itemId]) {
+					let b = bulkMapping[itemId]; let q = Math.ceil(needed / 25);
+					if (!vp[b.bulkId]) { let d = getDisplayData(b.bulkId, b.data.name); vp[b.bulkId] = { id: b.bulkId, qty: 0, name: d.name, icon: d.icon, rarity: d.rarity, recipeInfo: { ingredients: b.data.ingredients, output_item_count: b.data.yields || 1 }}; }
+					vp[b.bulkId].qty += q; return;
 				}
-
+				
 				let tpPrice = tpPrices[itemId] ? (tpPrices[itemId].sells?.unit_price || 0) : 0;
 				let recipes = await getRecipeInfo(itemId);
 				recipes = recipes.filter(r => !r.ingredients.some(ing => path.has(Number(ing.item_id))));
 				let isBaseMaterial = recipes.length === 0;
-				
-				let craftCost = Infinity;
-				if (!isBaseMaterial) {
-					craftCost = recipes[0].ingredients.reduce((acc, ing) => {
-						let ip = tpPrices[Number(ing.item_id)]?.sells?.unit_price || 0;
-						return acc + (ip * ing.count);
-					}, 0) / (recipes[0].output_item_count || 1);
-				}
-				
-				let isVendor = !isBaseMaterial && (recipes[0].disciplines.includes('Merchant') || recipes[0].ingredients.some(ing => Number(ing.item_id) < 0));
-				if (itemId === 19675) isVendor = false;
 
-				let shouldBuy = isBaseMaterial || (!isTopLevel && tpPrice > 0 && tpPrice <= craftCost) || path.has(itemId);
+				let d = getDisplayData(itemId);
+				let isPrecursor = d.rarity === 'Legendary' || (d.rarity === 'Exotic' && tpPrice > 500000) || d.name.includes("Tier ");
 
-				if (isVendor) {
-					if (!vendorPurchases[itemId]) {
-						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
-						vendorPurchases[itemId] = { 
-							id: itemId, 
-							qty: 0, 
-							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`, 
-							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
-							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
-							recipeInfo: recipes[0]
-						};
-					}
-					vendorPurchases[itemId].qty += neededQty;
+				let shouldBuy = false;
 
-					path.add(itemId);
-					let bestRecipe = recipes[0];
-					let outputMultiplier = bestRecipe.output_item_count || 1;
-					let craftsNeeded = neededQty / outputMultiplier;
-
-					for (let i = 0; i < bestRecipe.ingredients.length; i++) {
-						let ing = bestRecipe.ingredients[i];
-						await recurseItem(Number(ing.item_id), Math.ceil(ing.count * craftsNeeded), localInv, shoppingList, craftingSteps, vendorPurchases, false, path, depth + 1);
-					}
-					path.delete(itemId);
-
-				} else if (shouldBuy) {
-					if (!shoppingList[itemId]) {
-						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
-						shoppingList[itemId] = { 
-							id: itemId, 
-							qty: 0, 
-							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`, 
-							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
-							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
-							unitPrice: tpPrice 
-						};
-					}
-					shoppingList[itemId].qty += neededQty;
-				} else {
-					path.add(itemId);
-					let bestRecipe = recipes[0];
-					let outputMultiplier = bestRecipe.output_item_count || 1;
-					let craftsNeeded = neededQty / outputMultiplier;
-
-					if (!craftingSteps[itemId]) {
-						const idxInfo = searchIndex.find(i => Number(i.id) === itemId);
-						craftingSteps[itemId] = {
-							id: itemId,
-							crafts: 0,
-							yields: 0,
-							depth: depth,
-							name: idxInfo ? toTitleCase(idxInfo.n || idxInfo.name) : `Item #${itemId}`,
-							icon: idxInfo ? (idxInfo.i || idxInfo.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png',
-							rarity: idxInfo ? (idxInfo.r || idxInfo.rarity) : 'Basic',
-							recipeInfo: bestRecipe
-						};
+				// RULE 1: Base material -> Buy it
+				if (isBaseMaterial) {
+					shouldBuy = true;
+				} 
+				// RULE 2: Selected Item -> NEVER buy it
+				else if (isTopLevel) {
+					shouldBuy = false; 
+				} 
+				// RULE 4: Precursor/Legendary sub-ingredient -> Obey toggle
+				else if (isPrecursor) {
+					if (forcePrecursorCraft) {
+						shouldBuy = false; 
 					} else {
-						craftingSteps[itemId].depth = Math.max(craftingSteps[itemId].depth, depth);
+						// Only buy if it's actually tradable
+						shouldBuy = (tpPrice > 0); 
 					}
-					craftingSteps[itemId].crafts += craftsNeeded;
-					craftingSteps[itemId].yields += (craftsNeeded * outputMultiplier);
+				} 
+				// RULE 3: Sub-ingredient with a TP price -> Calculate cheapest route
+				else if (tpPrice > 0) {
+					let craftCost = 0;
+					let r = recipes[0]; 
+					r.ingredients.forEach(ing => {
+						let ingId = Number(ing.item_id);
+						if (ingId === 1 || ingId === -1) {
+							craftCost += ing.count;
+						} else if (ingId < 0 || specialCurrencies.includes(Math.abs(ingId))) {
+							craftCost += 0; 
+						} else {
+							let ingPrice = tpPrices[ingId]?.sells?.unit_price || 0;
+							if (ingPrice === 0) craftCost += 10000000; 
+							craftCost += ingPrice * ing.count;
+						}
+					});
+					craftCost = craftCost / (r.output_item_count || 1);
+					
+					shouldBuy = (tpPrice <= craftCost);
+				} 
+				// Default: If no TP price and not a base material, craft it
+				else {
+					shouldBuy = false;
+				}
 
-					for (let i = 0; i < bestRecipe.ingredients.length; i++) {
-						let ing = bestRecipe.ingredients[i];
-						await recurseItem(Number(ing.item_id), Math.ceil(ing.count * craftsNeeded), localInv, shoppingList, craftingSteps, vendorPurchases, false, path, depth + 1);
+				if (shouldBuy) {
+					if (!sl[itemId]) { sl[itemId] = { id: itemId, qty: 0, name: d.name, icon: d.icon, rarity: d.rarity, unitPrice: tpPrice }; }
+					sl[itemId].qty += needed;
+				} else {
+					let r = recipes[0];
+					if (r.disciplines.includes('Merchant')) {
+						if (!vp[itemId]) { vp[itemId] = { id: itemId, qty: 0, name: d.name, icon: d.icon, rarity: d.rarity, recipeInfo: r }; }
+						vp[itemId].qty += needed; path.add(itemId);
+						for (let i = 0; i < r.ingredients.length; i++) {
+							let ing = r.ingredients[i];
+							let ingId = Number(ing.item_id);
+							if (ingId === 1 || ingId === -1) continue;
+							if (ingId <= 0 || specialCurrencies.includes(Math.abs(ingId))) continue;
+							await recurseItem(ingId, ing.count * Math.ceil(needed/r.output_item_count), local, sl, cs, vp, false, forcePrecursorCraft, path, depth + 1);
+						}
+						path.delete(itemId);
+					} else {
+						if (!cs[itemId]) { cs[itemId] = { id: itemId, crafts: 0, yields: 0, depth: depth, name: d.name, icon: d.icon, rarity: d.rarity, recipeInfo: r }; }
+						let count = Math.ceil(needed / r.output_item_count); cs[itemId].crafts += count; cs[itemId].yields += count * r.output_item_count; path.add(itemId);
+						for (let i = 0; i < r.ingredients.length; i++) {
+							let ing = r.ingredients[i];
+							await recurseItem(Number(ing.item_id), ing.count * count, local, sl, cs, vp, false, forcePrecursorCraft, path, depth + 1);
+						}
+						path.delete(itemId);
 					}
-					path.delete(itemId);
 				}
 			}
 
@@ -904,13 +752,13 @@
 
 				targetsData.forEach((data, idx) => {
 					let target = data.target;
-					let shoppingList = data.shoppingList;
-					let craftingSteps = data.craftingSteps;
-					let vendorPurchases = data.vendorPurchases;
+					let shoppingList = data.sl;
+					let craftingSteps = data.cs;
+					let vendorPurchases = data.vp;
 					
-					let displayIcon = target.item.i || target.item.icon || 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
+					let dIcon = getDisplayData(target.item.id);
+					let displayIcon = dIcon.icon;
 					let tName = toTitleCase(target.item.n || target.item.name);
-					let rawTargetName = target.item.n || target.item.name;
 					let isOpen = localStorage.getItem(`gw2_calc_target_${idx}_open`) !== 'false';
 					
 					let totalCost = 0;
@@ -923,9 +771,9 @@
 
 					if (sortedItems.length > 0) {
 						sortedItems.forEach(item => {
-							if (item.id === 1 || item.id === -1 || item.id < 0) return;
+							if (item.id === 1 || item.id === -1) return;
 							
-							let rawItemName = searchIndex.find(i => Number(i.id) === Number(item.id))?.n || item.name;
+							let d = getDisplayData(item.id, item.name, item.icon, item.rarity);
 
 							if (item.unitPrice > 0) {
 								let lineCost = item.unitPrice * item.qty;
@@ -933,20 +781,20 @@
 								
 								buyableHtml += `
 								<div class="shopping-list-item">
-									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawItemName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
-										<img src="${item.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${item.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
-										<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${item.name}</span>
+										<img src="${d.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${d.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+										<span class="text-${d.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${d.name}</span>
 									</div>
 									<span style="white-space:nowrap; color:#8a7a5f; text-align:right; flex-shrink:0; margin-left:auto;">${formatCoin(item.unitPrice, false)} / ${formatCoin(lineCost, false)}</span>
 								</div>`;
-							} else if (item.unitPrice === 0) {
+							} else if (item.unitPrice === 0 && item.id > 0) {
 								untradableHtml += `
 								<div class="shopping-list-item">
-									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawItemName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
-										<img src="${item.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${item.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
-										<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${item.name}</span>
+										<img src="${d.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${d.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+										<span class="text-${d.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${d.name}</span>
 									</div>
 								</div>`;
 							}
@@ -954,29 +802,29 @@
 					}
 
 					Object.values(vendorPurchases).forEach(vItem => {
-						let rawVName = searchIndex.find(i => Number(i.id) === Number(vItem.id))?.n || vItem.name;
+						let vd = getDisplayData(vItem.id, vItem.name, vItem.icon, vItem.rarity);
 
 						let costHtml = (vItem.recipeInfo.ingredients || []).map(ing => {
 							let ingId = Number(ing.item_id);
-							let totalIngNeeded = Math.ceil(ing.count * (vItem.qty / (vItem.recipeInfo.output_item_count || 1)));
+							let craftsNeeded = Math.ceil(vItem.qty / (vItem.recipeInfo.output_item_count || 1));
+							let totalIngNeeded = ing.count * craftsNeeded;
 							
 							if (ingId === 1 || ingId === -1) {
 								rawGoldTotal += totalIngNeeded;
 								return formatCoin(totalIngNeeded, false);
 							}
 
-							let ingIdx = searchIndex.find(i => Number(i.id) === ingId);
-							let ingName = ingIdx ? toTitleCase(ingIdx.n || ingIdx.name) : `Currency`;
-							let ingIcon = ingIdx ? (ingIdx.i || ingIdx.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
-							return `${totalIngNeeded.toLocaleString('de-DE')} <img src="${ingIcon}" style="width:14px; vertical-align:middle; border:1px solid #332a1e;">`;
+							let idata = getDisplayData(ingId);
+							let displayTotal = Math.ceil(totalIngNeeded); 
+							return `${displayTotal.toLocaleString('de-DE')} <img src="${idata.icon}" style="width:14px; vertical-align:middle; border:1px solid #332a1e;" title="${idata.name}">`;
 						}).join(' <span style="color:#4a3b2a;">+</span> ');
 
 						vendorPurchasesHtml += `
 						<div class="shopping-list-item">
-							<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawVName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${vItem.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+							<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(vd.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${vd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 								<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(vItem.qty)}</div>
-								<img src="${vItem.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${vItem.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
-								<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${vItem.name}</span>
+								<img src="${vd.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${vd.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+								<span class="text-${vd.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${vd.name}</span>
 							</div>
 							<span style="white-space:nowrap; color:#8a7a5f; text-align:right; flex-shrink:0; margin-left:auto;">${costHtml}</span>
 						</div>`;
@@ -993,8 +841,8 @@
 						stepsHtml = `<div style="text-align:center; color:#8a7a5f; padding:20px; font-style:italic;">NO CRAFTING STEPS REQUIRED</div>`;
 					} else {
 						stepValues.forEach(step => {
-							let rawStepName = searchIndex.find(i => Number(i.id) === Number(step.id))?.n || step.name;
-							let hasCurrency = (step.recipeInfo.ingredients || []).some(i => Number(i.item_id) < 0);
+							let sd = getDisplayData(step.id, step.name, step.icon, step.rarity);
+							let hasCurrency = (step.recipeInfo.ingredients || []).some(i => Number(i.item_id) <= 0);
 							let isMerchant = (step.recipeInfo.disciplines || []).includes('Merchant');
 							let isSingleItemMF = (step.recipeInfo.disciplines || []).includes('Mystic Forge') && (step.recipeInfo.ingredients || []).length === 1;
 							let verb = (hasCurrency || isMerchant || isSingleItemMF) ? 'Buy' : 'Craft';
@@ -1007,11 +855,11 @@
 								<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
 									<div style="display: flex; align-items: center; flex-grow:1; overflow:hidden;">
 										<input type="checkbox" ${stepChecked ? 'checked' : ''} onchange="this.closest('.step-container').classList.toggle('completed-step', this.checked); localStorage.setItem('gw2_calc_target_${idx}_step_${step.id}_checked', this.checked);" style="margin-right:10px; cursor:pointer; flex-shrink:0;">
-										<div class="step-header-content" style="display: flex; align-items: center; gap: 10px; cursor: pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawStepName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${step.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
-											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(Math.ceil(step.yields), verb)}</div>
-											<img src="${step.icon}" style="width:24px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${step.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
-											<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">
-												<span>${step.name}</span> <span style="color:#8a7a5f; margin-left:4px; margin-right:4px; text-decoration:none !important;">${connector}</span>
+										<div class="step-header-content" style="display: flex; align-items: center; gap: 10px; cursor: pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sd.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${sd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(Math.round(step.yields), verb)}</div>
+											<img src="${sd.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${sd.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+											<span class="text-${sd.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">
+												<span>${sd.name}</span> <span style="color:#8a7a5f; margin-left:4px; margin-right:4px; text-decoration:none !important;">${connector}</span>
 											</span>
 										</div>
 									</div>
@@ -1022,7 +870,7 @@
 								<div class="step-ingredients">
 									${(step.recipeInfo.ingredients || []).map(ing => {
 										let ingId = Number(ing.item_id);
-										let totalIngNeeded = Math.ceil(ing.count * step.crafts);
+										let totalIngNeeded = ing.count * step.crafts;
 
 										if (ingId === 1 || ingId === -1) {
 											rawGoldTotal += totalIngNeeded;
@@ -1032,17 +880,14 @@
 											</div>`;
 										}
 
-										let ingIdx = searchIndex.find(i => Number(i.id) === ingId);
-										let rawIngName = ingIdx ? (ingIdx.n || ingIdx.name) : `Item #${ingId}`;
-										let ingName = ingIdx ? toTitleCase(rawIngName) : `Item #${ingId}`;
-										let ingIcon = ingIdx ? (ingIdx.i || ingIdx.icon) : 'https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png';
-										let ingRarity = ingIdx ? (ingIdx.r || ingIdx.rarity) : 'Basic';
+										let idata = getDisplayData(ingId);
+										let displayTotal = Math.ceil(totalIngNeeded); 
 										
 										return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
-											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(totalIngNeeded)}</div>
-											<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(rawIngName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${ingName.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
-												<img src="${ingIcon}" style="width:20px; border:1px solid #332a1e; flex-shrink:0; pointer-events:none;" class="rarity-${ingRarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
-												<span style="color:#e2c07d; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${ingName}</span>
+											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(displayTotal)}</div>
+											<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(idata.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${idata.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+												<img src="${idata.icon}" style="width:20px; flex-shrink:0; pointer-events:none;" class="rarity-${idata.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
+												<span class="text-${idata.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${idata.name}</span>
 											</div>
 										</div>`;
 									}).join('')}
@@ -1080,11 +925,18 @@
 							</div>
 						</div>
 						<div id="target-content-${idx}" class="target-content" style="display: ${isOpen ? 'flex' : 'none'};" onclick="event.stopPropagation();">
+							
 							<div class="target-actions">
 								<div>
 									<span style="color:#8a7a5f; font-size:11px; font-weight:bold;">AMOUNT:</span>
 									<input type="number" value="${target.requestedAmount}" min="1" onchange="updateTargetAmount(${idx}, this.value)" style="background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 5px 10px; width: 60px; outline:none; font-family: 'Crimson Text', serif; text-align:center;">
 								</div>
+								
+								<label style="color:#8a7a5f; font-size:11px; cursor:pointer; display:flex; align-items:center; gap:5px; font-weight:bold; letter-spacing:1px; user-select:none;">
+									<input type="checkbox" ${target.craftPrecursor ? 'checked' : ''} onchange="updateTargetPrecursor(${idx}, this.checked)" style="cursor:pointer;">
+									CRAFT PRECURSORS
+								</label>
+
 								<button class="target-remove-btn" onclick="removeTarget(${idx})">REMOVE</button>
 							</div>
 							

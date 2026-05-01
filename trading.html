@@ -167,7 +167,7 @@
 					<div class="dropdown-content">
 						<div class="dropdown-btn sub-btn" data-id="history_sells" onclick="toggleSub(this, 'history', 'sells')">SOLD ITEMS</div>
 						<div class="dropdown-content"></div>
-						<div class="dropdown-btn sub-btn" data-id="history_buys" onclick="toggleSub(this, 'history', 'BOUGHT ITEMS')">BOUGHT ITEMS</div>
+						<div class="dropdown-btn sub-btn" data-id="history_buys" onclick="toggleSub(this, 'history', 'buys')">BOUGHT ITEMS</div>
 						<div class="dropdown-content"></div>
 					</div>
 				</div>
@@ -601,6 +601,62 @@
             function cancelDelete() { investToDelete = null; document.getElementById('delete-confirm-modal').style.display = 'none'; }
 			async function calcGold() { let val = document.getElementById('ex-gold').value, data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=" + ((val||0)*10000)); document.getElementById('res-gem').innerHTML = data ? data.quantity.toLocaleString() : 'ERR'; }
 			async function calcGem() { let val = document.getElementById('ex-gem').value, data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=" + (val||0)); document.getElementById('res-gold').innerHTML = data ? formatCoin(data.quantity) : 'ERR'; }
+
+			async function calcSmartCrafting(type) {
+				const resultsDiv = document.getElementById(`crafting-${type}-results`);
+				resultsDiv.innerHTML = '<div style="padding:10px; font-size:10px; color:#8a7a5f; text-align:center;">ANALYZING MARKET DATA...</div>';
+				
+				let itemsToAnalyze = [];
+				if (type === 'timegated') {
+					itemsToAnalyze = [46736, 46738, 46739, 46741, 66913, 67015, 46740]; // Examples: Deldrimor, Spiritwood, etc.
+				} else if (type === 'custom') {
+					itemsToAnalyze = customCrafts;
+				}
+
+				if (itemsToAnalyze.length === 0) {
+					resultsDiv.innerHTML = '<div style="padding:10px; font-size:10px; color:#4a3b2a; text-align:center;">NO ITEMS TO ANALYZE</div>';
+					return;
+				}
+
+				let html = '';
+				const prices = await fetchJSON("https://api.guildwars2.com/v2/commerce/prices?ids=" + itemsToAnalyze.join(','));
+				
+				for (let id of itemsToAnalyze) {
+					const recipe = await fetchRecipeForOutput(id);
+					const market = prices ? prices.find(p => p.id === id) : null;
+					const item = itemCache[id] || await fetchJSON("https://api.guildwars2.com/v2/items/" + id);
+					
+					if (item && market) {
+						itemCache[id] = item;
+						const sellPrice = market.sells.unit_price * 0.85;
+						html += `
+						<div class="search-res-row" style="flex-direction:column; align-items:flex-start; gap:5px;">
+							<div style="display:flex; align-items:center; gap:10px; width:100%;">
+								<img src="${item.icon}" style="width:20px; border:1px solid #332a1e;" class="rarity-${item.rarity}" />
+								<span style="flex:1; font-size:11px;">${item.name}</span>
+								<span style="font-size:10px; color:#e2c07d;">PROFIT: ${formatCoin(sellPrice - (market.buys.unit_price))}</span>
+							</div>
+						</div>`;
+					}
+				}
+				resultsDiv.innerHTML = html || '<div style="padding:10px; font-size:10px; color:#4a3b2a; text-align:center;">ANALYSIS COMPLETE - NO DATA</div>';
+			}
+
+			function addCustomCraft(id, btn) {
+				if (!customCrafts.includes(Number(id))) {
+					customCrafts.push(Number(id));
+					localStorage.setItem('gw2_custom_crafts', JSON.stringify(customCrafts));
+					btn.style.background = "rgba(26,147,6,0.2)";
+					btn.style.borderColor = "#1A9306";
+					btn.style.color = "#1A9306";
+					btn.innerText = "✔ IN CRAFTING WATCHLIST";
+				}
+			}
+
+			function removeCustomCraft(id) {
+				customCrafts = customCrafts.filter(c => c !== Number(id));
+				localStorage.setItem('gw2_custom_crafts', JSON.stringify(customCrafts));
+			}
 
 			init();
 			/*]]>*/
