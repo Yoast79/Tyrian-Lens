@@ -45,8 +45,7 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 ## Roadmap
 
 - Live Dynamic Events on map
-- Add more recipes to the Crafting Calculator
+- ~~Add more recipes to the Crafting Calculator~~
 - PvP Equipment tab in the Hero Panel
 - PvP Equipment tab in the Build Planner
-- Fashion tab in the Hero Panel
 - Account Audit
