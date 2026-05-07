@@ -46,6 +46,5 @@ If you found bugs, have tips, feature requests or if you just want to say hi, se
 
 - Live Dynamic Events on map
 - ~~Add more recipes to the Crafting Calculator~~
-- PvP Equipment tab in the Hero Panel
-- PvP Equipment tab in the Build Planner
+- ~~PvP module~~
 - Account Audit
