@@ -37,7 +37,8 @@ To unlock the full potential of the app's functionality:
 If Tyrian Lens has enhanced your journey through Tyria, show me your appreciation by donating items or some gold.
 In-game mail: **Yoast.8572**
 
-If you found bugs, have tips, feature requests or if you just want to say hi, send me a mail at tyrian_lens_support@lightstab.com
+If you found bugs, have tips, feature requests or if you just want to say hi, send me a mail at tyrian_lens_support@lightstab.com 
+or join the [Discord server](https://discord.com/invite/7pWPzV6Rt4)
 
 ---
 *Disclaimer: This is a fan-made project and is not affiliated with or endorsed by ArenaNet.* (yet...)
