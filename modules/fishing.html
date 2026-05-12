@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 10px; flex-shrink: 0; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
+			.divider { height: 1px; background: #4a3b2a; margin-bottom: 8px; flex-shrink: 0; }
+
+			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 5px; }
+
+			.group-btn { width: 100%; background: rgba(30,22,15,0.9); border: 1px solid #332a1e; color: #e2c07d; padding: 10px 12px; text-align: left; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; position: relative; }
+			.group-btn:hover { background: #251d16; border-color: #8a7a5f; }
+			.group-btn:after { content: '▼'; font-size: 9px; color: #8a7a5f; transition: 0.3s; margin-left: auto; margin-right: 15px; }
+			.group-btn.active:after { transform: rotate(180deg); color: #e2c07d; }
+
+			.sub-content { display: none; flex-direction: column; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top: none; gap: 10px; }
+
+			.item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 4px; justify-content: flex-start; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; transition: 0.2s; }
+			.item-slot:hover { border-color: #e2c07d; transform: scale(1.05); z-index: 5; }
+
+			/* Fish Imagery Styling */
+			.item-icon { width: 100%; height: 100%; object-fit: cover; transition: 0.2s; }
+			.item-slot.caught .item-icon { filter: grayscale(100%) brightness(0.4); opacity: 0.6; }
+			.item-slot.uncaught { border-color: #62A4DA; } /* Highlight uncaught fish */
+
+			/* Fish Caught Overlay */
+			.caught-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('https://gw2ps.local/Assets/Icons/fish_caught.png') center/contain no-repeat; z-index: 6; }
+
+			.star-btn { cursor: pointer; width: 18px; height: 18px; opacity: 0.3; transition: 0.2s; position: absolute; right: 10px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+
+			.fancy-toggle { position: relative; display: inline-block; width: 44px; height: 22px; vertical-align: middle; margin-left: 8px; }
+			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 22px; }
+			.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
+			input:checked + .slider:before { transform: translateX(22px); background-color: #000; }
+
+			.loading-text { font-size: 12px; color: #8a7a5f; text-align: center; margin-top: 20px; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .section-title { font-size: 20px; }
+			body.ui-large .group-btn { font-size: 14px; padding: 12px 15px; }
+			body.ui-large .item-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 6px; }
+			body.ui-large .item-slot { width: 50px; height: 50px; }
+			body.ui-large .star-btn { width: 22px; height: 22px; }
+		</style>
+	</head>
+	<body>
+		<div id="ui-root" style="display:flex; height:100%; flex-direction: column;">
+			<div class="header-row">
+				<div class="section-title">FISHING REGIONS</div>
+				<div style="display:flex; align-items:center;">
+					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST OVERLAY</span>
+					<label class="fancy-toggle">
+						<input type="checkbox" id="fishing-overlay-toggle" onchange="toggleFishingOverlay(this.checked)" />
+						<span class="slider"></span>
+					</label>
+				</div>
+			</div>
+
+			<div style="position: relative; margin-bottom: 10px; flex-shrink: 0;">
+				<input type="text" id="fish-search" autocomplete="off" placeholder="SEARCH FISH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+					<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('fish-search').value=''; handleSearch('');">X</span>
+				</div>
+
+			<div class="content-panel" id="fish-container">
+				<div class="loading-text">LOADING FISHING DATA...</div>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let activeKey = localStorage.getItem('gw2_active_key') || null;
+            let trackedMaps = JSON.parse(localStorage.getItem('gw2_tracked_fishing') || '{}');
+            let isOverlayVisible = localStorage.getItem('gw2_fishing_tracker_visible') === 'true';
+            
+            // Track open/closed states so they don't reset on live refresh
+            let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_fishing') || '{}');
+            let searchQuery = '';
+
+            let achCache = [];
+            let itemCache = {};
+            let progCache = {};
+
+            const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+            if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+            async function fetchJSON(url) {
+                try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+            }
+
+            async function init() {
+                document.getElementById('fishing-overlay-toggle').checked = isOverlayVisible;
+
+                // 1. Fetch ALL Fishing Achievements dynamically via Category 317
+                const catData = await fetchJSON("https://api.guildwars2.com/v2/achievements/categories/317");
+                if (!catData || !catData.achievements) { document.getElementById('fish-container').innerHTML = "<div class='loading-text'>FAILED TO LOAD GW2 API</div>"; return; }
+
+                // 2. Fetch Achievement definitions
+                const achData = await fetchJSON("https://api.guildwars2.com/v2/achievements?ids=" + catData.achievements.join(','));
+                if (!achData) { document.getElementById('fish-container').innerHTML = "<div class='loading-text'>FAILED TO LOAD GW2 API</div>"; return; }
+                
+                // 3. Strict filter: Remove achievements without items, and explicitly remove problem meta-achievements
+                const excludeList = ["I'm Very Buoyant", "Nonstop Nourish Natural"];
+                achCache = achData.filter(ach => 
+                    ach.bits && 
+                    ach.bits.some(b => b.type === 'Item') && 
+                    !excludeList.includes(ach.name)
+                );
+
+                // 4. Gather all Item IDs for the fish
+                let neededItemIds = new Set();
+                achCache.forEach(ach => {
+                    if (ach.bits) {
+                        ach.bits.forEach(bit => {
+                            if (bit.type === 'Item') neededItemIds.add(bit.id);
+                        });
+                    }
+                });
+
+                // 5. Fetch Items in chunks of 200
+                const idsArray = Array.from(neededItemIds);
+                for(let i=0; i<idsArray.length; i+=200) {
+                    const batch = idsArray.slice(i, i+200);
+                    const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(','));
+                    if (iData && Array.isArray(iData)) {
+                        iData.forEach(it => itemCache[it.id] = it);
+                    }
+                }
+
+                await pollAccountProgress();
+                setInterval(pollAccountProgress, 30000); // Live sync every 30s
+                
+                // Broadcast overlay state to main window on startup
+                if (isOverlayVisible && Object.keys(trackedMaps).length > 0) {
+                    window.parent.postMessage('FSH_TOGGLE:true', '*');
+                } else if (isOverlayVisible) {
+                    toggleFishingOverlay(false);
+                }
+            }
+
+            async function pollAccountProgress() {
+                if (!activeKey) return;
+                const progData = await fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey);
+                if (progData && Array.isArray(progData)) {
+                    progCache = {};
+                    const validIds = achCache.map(a => a.id);
+                    progData.forEach(p => {
+                        if (validIds.includes(p.id)) progCache[p.id] = p;
+                    });
+                    renderUI();
+                    updateWatchlistOverlay();
+                }
+            }
+
+            window.handleSearch = function(val) {
+                searchQuery = val.toLowerCase();
+                renderUI();
+            };
+
+            function renderUI() {
+                const container = document.getElementById('fish-container');
+                let html = '';
+                let isSearching = searchQuery.length >= 3;
+
+                achCache.sort((a, b) => a.name.localeCompare(b.name)).forEach(ach => {
+                    const prog = progCache[ach.id] || { done: false, bits: [] };
+                    const progBits = prog.bits || [];
+                    const isTracked = !!trackedMaps[ach.id];
+                    
+                    // Force open if searching, otherwise rely on memory
+                    const isOpen = isSearching ? true : (harmonicaState[ach.id] === true);
+                    
+                    let fishHtml = '<div class="item-grid">';
+                    let hasMatches = false;
+                    
+                    if (ach.bits) {
+                        ach.bits.forEach((bit, idx) => {
+                            if (bit.type !== 'Item') return;
+                            const item = itemCache[bit.id];
+                            if (!item) return;
+
+                            let safeName = item.name || "Unknown";
+                            
+                            // Apply search filter
+                            if (isSearching && !safeName.toLowerCase().includes(searchQuery)) return;
+                            hasMatches = true;
+
+                            const isCaught = prog.done || progBits.includes(idx);
+                            const cls = isCaught ? 'caught' : 'uncaught';
+                            const caughtIcon = isCaught ? '<div class="caught-overlay"></div>' : '';
+                            
+                            let descRaw = bit.text || item.description || "";
+                            let safeDesc = descRaw.replace(/<c=[^>]*>/g, '').replace(/<\/c>/g, '').replace(/\n/g, '<br>');
+                            
+                            let tooltipRaw = `<b style="color:#e2c07d">${safeName}</b><br><span style="color:#8a7a5f;font-size:10px;">${safeDesc}</span>`;
+                            let tooltipSafe = tooltipRaw.replace(/"/g, '&quot;'); 
+
+                            fishHtml += `<div class="item-slot ${cls}" data-tooltip="${tooltipSafe}" 
+                                onmouseover="window.parent.postMessage({action:'showTooltip', text:this.getAttribute('data-tooltip'), x:event.clientX, y:event.clientY}, '*')" 
+                                onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+                                <img src="${item.icon}" class="item-icon" />
+                                ${caughtIcon}
+                            </div>`;
+                        });
+                    }
+                    fishHtml += '</div>';
+
+                    // If actively searching and no fish matched in this category, skip rendering it
+                    if (isSearching && !hasMatches) return;
+
+                    const maxCount = ach.tiers ? ach.tiers[ach.tiers.length-1].count : (ach.bits ? ach.bits.length : 0);
+                    const currentCount = prog.done ? maxCount : (prog.current || 0);
+                    const headerColor = prog.done ? '#1A9306' : '#e2c07d';
+
+                    html += `<div style="position:relative;">
+                        <div class="star-btn ${isTracked ? 'active' : ''}" onclick="toggleTrack(${ach.id}, '${ach.name.replace(/'/g, "\\'")}', this, event)"></div>
+                        <button class="group-btn ${isOpen ? 'active' : ''}" onclick="toggleSection(this, ${ach.id})">
+                            <div>
+                                <span style="color:${headerColor};">${ach.name}</span>
+                                <span style="color:#8a7a5f; font-weight:normal; margin-left:10px; font-family:monospace;">${currentCount}/${maxCount}</span>
+                            </div>
+                        </button>
+                        <div class="sub-content" style="display:${isOpen ? 'flex' : 'none'}">${fishHtml}</div>
+                    </div>`;
+                });
+
+                if (isSearching && html === '') {
+                    html = "<div class='loading-text'>NO FISH MATCH YOUR SEARCH</div>";
+                }
+
+                container.innerHTML = html;
+            }
+
+            window.toggleSection = function(btn, id) {
+                btn.classList.toggle('active');
+                const isOpen = btn.classList.contains('active');
+                btn.nextElementSibling.style.display = isOpen ? 'flex' : 'none';
+                
+                if (searchQuery.length < 3) {
+                    harmonicaState[id] = isOpen;
+                    localStorage.setItem('gw2_harmonica_fishing', JSON.stringify(harmonicaState));
+                }
+            };
+
+            window.toggleTrack = function(id, name, el, event) {
+                event.stopPropagation();
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active');
+                    delete trackedMaps[id];
+                } else {
+                    el.classList.add('active');
+                    trackedMaps[id] = name;
+                }
+                localStorage.setItem('gw2_tracked_fishing', JSON.stringify(trackedMaps));
+                
+                if (Object.keys(trackedMaps).length === 0) {
+                    document.getElementById('fishing-overlay-toggle').checked = false;
+                    toggleFishingOverlay(false);
+                } else if (!isOverlayVisible) {
+                    document.getElementById('fishing-overlay-toggle').checked = true;
+                    toggleFishingOverlay(true);
+                } else {
+                    updateWatchlistOverlay();
+                }
+            };
+
+            window.toggleFishingOverlay = function(isVisible) {
+                isOverlayVisible = isVisible;
+                localStorage.setItem('gw2_fishing_tracker_visible', isVisible);
+                
+                if (isVisible && Object.keys(trackedMaps).length === 0) {
+                    window.parent.postMessage({action:'toast', msg:'NO MAPS TRACKED'}, '*');
+                    document.getElementById('fishing-overlay-toggle').checked = false;
+                    isOverlayVisible = false;
+                    localStorage.setItem('gw2_fishing_tracker_visible', false);
+                    return;
+                }
+                
+                window.parent.postMessage('FSH_TOGGLE:' + isVisible, '*');
+                if (isVisible) updateWatchlistOverlay();
+            };
+
+            function updateWatchlistOverlay() {
+                if (!isOverlayVisible || Object.keys(trackedMaps).length === 0) return;
+
+                let html = '';
+                Object.keys(trackedMaps).forEach(id => {
+                    const ach = achCache.find(a => a.id == id);
+                    if (!ach) return;
+
+                    const prog = progCache[id] || { done: false, bits: [] };
+                    const progBits = prog.bits || [];
+                    
+                    if (prog.done) return; 
+                    
+                    html += `<div style="margin-bottom:8px;">
+                        <div style="font-size:10px; color:#e2c07d; margin-bottom:4px; font-weight:bold;">${ach.name}</div>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(24px, 1fr)); gap:2px;">`;
+
+                    if (ach.bits) {
+                        ach.bits.forEach((bit, idx) => {
+                            if (bit.type !== 'Item' || progBits.includes(idx)) return; 
+                            
+                            const item = itemCache[bit.id];
+                            if (!item) return;
+
+                            let safeName = item.name || "Unknown";
+                            let descRaw = bit.text || item.description || "";
+                            let safeDesc = descRaw.replace(/<c=[^>]*>/g, '').replace(/<\/c>/g, '').replace(/\n/g, '<br>');
+                            
+                            let tooltipRaw = `<b style="color:#e2c07d">${safeName}</b><br><span style="color:#8a7a5f;font-size:10px;">${safeDesc}</span>`;
+                            let tooltipSafe = tooltipRaw.replace(/"/g, '&quot;');
+
+                            html += `<div style="width:24px; height:24px; background:rgba(255,255,255,0.05); border:1px solid #332a1e; opacity:0.8; transition:0.2s; position:relative;" 
+                                data-tooltip="${tooltipSafe}"
+                                onmouseover="this.style.borderColor='#e2c07d'; window.parent.postMessage({action:'showTooltip', text:this.getAttribute('data-tooltip'), x:event.clientX, y:event.clientY}, '*')" 
+                                onmouseout="this.style.borderColor='#332a1e'; window.parent.postMessage({action:'hideTooltip'}, '*')">
+                                <img src="${item.icon}" style="width:100%; height:100%; object-fit:cover;" />
+                            </div>`;
+                        });
+                    }
+                    html += `</div></div>`;
+                });
+
+                if (html === '') html = "<div style='color:#8a7a5f; font-size:10px; text-align:center;'>ALL TRACKED MAPS COMPLETE</div>";
+
+                window.parent.postMessage('FSH_DATA:' + html, '*');
+            }
+
+            window.addEventListener('message', async (e) => {
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+                else if (e.data.action === 'switchAccount') { 
+                    activeKey = e.data.apiKey; 
+                    init(); 
+                }
+                else if (e.data.action === 'fishingWatchlistClosed') {
+                    document.getElementById('fishing-overlay-toggle').checked = false;
+                    isOverlayVisible = false;
+                }
+            });
+
+            init();
+			/*]]>*/
+		</script>
+	</body>
+</html>

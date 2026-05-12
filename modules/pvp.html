@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
+			.tabs { display: flex; gap: 5px; margin-bottom: 15px; flex-shrink: 0; }
+			.tab-btn { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #8a7a5f; padding: 8px; cursor: pointer; text-transform: uppercase; font-size: 10px; flex: 1; transition: 0.2s; }
+			.tab-btn.active { background: rgba(226,192,125,0.1); border-color: #e2c07d; color: #e2c07d; }
+			.content-panel { flex: 1; overflow-y: auto; display: none; flex-direction: column; gap: 10px; }
+			.content-panel.active { display: flex; }
+			
+			.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+			.stat-card { 
+				background: rgba(20,15,10,0.8); 
+				border: 1px solid #332a1e; 
+				height: 80px; 
+				display: flex; 
+				flex-direction: column; 
+				justify-content: center; 
+				align-items: center; 
+				text-align: center;
+				padding: 5px;
+				position: relative; /* Needed for the absolute icon */
+			}
+			.stat-title { font-size: 10px; color: #8a7a5f; margin-bottom: 2px; }
+			.stat-value { font-size: 18px; color: #e2c07d; font-weight: bold; }
+
+			/* Rank Icon: Absolute positioning keeps it from pushing the text */
+			.rank-icon-lg { 
+				position: absolute;
+				left: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 110px; 
+				height: 110px; 
+				object-fit: contain; 
+				filter: drop-shadow(0 0 8px rgba(226, 192, 125, 0.3));
+				z-index: 1;
+			}
+			.rank-text-stack {
+				position: relative;
+				z-index: 2; /* Keeps text above icon if they overlap slightly */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.match-row { display: flex; flex-direction: column; background: rgba(30,22,15,0.6); border-left: 3px solid #4a3b2a; padding: 10px; border: 1px solid #332a1e; margin-bottom: 6px; }
+			.match-win { border-left-color: #1A9306; }
+			.match-loss { border-left-color: #ff4444; }
+			.match-meta { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 5px; }
+			.match-score-bar { display: flex; height: 4px; background: #222; width: 100%; margin: 5px 0; }
+			.score-red { background: #ff4444; height: 100%; }
+			.score-blue { background: #4444ff; height: 100%; }
+
+			.lb-row { display: flex; justify-content: space-between; padding: 8px; background: rgba(20,15,10,0.4); border-bottom: 1px solid #2a2015; font-size: 12px; align-items: center; }
+			.lb-rank { color: #8a7a5f; font-weight: bold; width: 35px; }
+
+			select { background: #000; color: #e2c07d; border: 1px solid #4a3b2a; padding: 8px; width: 100%; text-transform: uppercase; margin-bottom: 10px; font-family: inherit; outline: none; }
+			.eq-item { display: flex; align-items: center; gap: 10px; background: rgba(20,15,10,0.6); border: 1px solid #332a1e; padding: 8px; margin-bottom: 5px; }
+			.eq-icon { width: 44px; height: 44px; border: 1px solid #4a3b2a; cursor: help; }
+			.eq-info { display: flex; flex-direction: column; flex: 1; }
+			.eq-name { font-size: 12px; font-weight: bold; color: #e2c07d; }
+			.eq-stats { font-size: 10px; color: #8a7a5f; text-transform: none; line-height: 1.3; }
+			
+			.hero-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(45px, 1fr)); gap: 8px; margin-top: 10px; }
+			.hero-icon { width: 45px; height: 45px; border: 1px solid #4a3b2a; filter: grayscale(100%); opacity: 0.4; transition: 0.3s; background: #000; object-fit: contain; cursor: pointer; }
+			.hero-unlocked { filter: grayscale(0%); opacity: 1; border-color: #e2c07d; box-shadow: 0 0 5px rgba(226, 192, 125, 0.3); }
+
+			.loading, .no-data { text-align: center; color: #8a7a5f; font-style: italic; margin-top: 20px; font-size: 12px; letter-spacing: 1px; }
+		</style>
+	</head>
+	<body>
+		<div class="header-row"><div class="section-title">PvP Module</div></div>
+		<div class="tabs">
+			<button class="tab-btn active" onclick="switchTab('stats', this)">Stats</button>
+			<button class="tab-btn" onclick="switchTab('season', this)">Season</button>
+			<button class="tab-btn" onclick="switchTab('leaderboard', this)">Top 50</button>
+			<button class="tab-btn" onclick="switchTab('history', this)">History</button>
+		</div>
+
+		<div id="panel-stats" class="content-panel active">
+			<div id="stats-container"></div>
+			<div id="stats-equipment-container" style="display:none; margin-top:10px;">
+				<div class="section-title" style="font-size:12px; margin-bottom:10px; border-bottom: 1px solid #2a2015; padding-bottom:5px;">Equipment</div>
+				<select id="char-selector" onchange="loadCharBuild(this.value)"></select>
+				<div id="prof-display" style="font-size: 11px; color: #8a7a5f; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px;"></div>
+				<div id="build-display"></div>
+				<div class="section-title" style="font-size:11px; margin-top:15px; border-bottom: 1px solid #2a2015;">Mist Champions</div>
+				<div id="hero-display" class="hero-grid"></div>
+			</div>
+		</div>
+		<div id="panel-season" class="content-panel"></div>
+		<div id="panel-leaderboard" class="content-panel"></div>
+		<div id="panel-history" class="content-panel"></div>
+
+		<script>
+			/*<![CDATA[*/
+			let activeKey = localStorage.getItem('gw2_active_key');
+			let settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+
+			const CHAMP_ICONS = {
+				"Turai Ossa": "https://gw2ps.local/Assets/Icons/Turai_Ossa_icon.png",
+				"Grymm Svaard": "https://gw2ps.local/Assets/Icons/Grymm_Svaard_icon.png",
+				"Nika": "https://gw2ps.local/Assets/Icons/Nika_icon.png",
+				"Tybalt Leftpaw": "https://gw2ps.local/Assets/Icons/Tybalt_Leftpaw_icon.png",
+				"Tybalt": "https://gw2ps.local/Assets/Icons/Tybalt_Leftpaw_icon.png"
+			};
+
+			function showTip(text, e) {
+				window.parent.postMessage({ action: 'showTooltip', text: text, x: e.clientX, y: e.clientY, offsetTop: 0, isRight: false }, '*');
+			}
+			function hideTip() { window.parent.postMessage({ action: 'hideTooltip' }, '*'); }
+			function openWiki(url) { window.parent.postMessage('openWiki:' + url, '*'); }
+
+			async function apiFetch(endpoint) {
+				try { const r = await fetch(`https://api.guildwars2.com/v2/${endpoint}${endpoint.includes('?') ? '&' : '?'}access_token=${activeKey}`); return r.ok ? await r.json() : null; } catch { return null; }
+			}
+
+			function switchTab(tab, btn) {
+				document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+				document.querySelectorAll('.content-panel').forEach(p => p.classList.remove('active'));
+				btn.classList.add('active');
+				document.getElementById(`panel-${tab}`).classList.add('active');
+				if (tab === 'stats') loadStats();
+				if (tab === 'season') loadSeason();
+				if (tab === 'leaderboard') loadLeaderboard();
+				if (tab === 'history') loadHistory();
+			}
+
+			async function loadStats() {
+				const div = document.getElementById('stats-container');
+				div.innerHTML = '<div class="loading">Fetching Stats...</div>';
+				
+				const [data, ranksResponse] = await Promise.all([
+					apiFetch('pvp/stats'),
+					fetch('https://api.guildwars2.com/v2/pvp/ranks?ids=all').then(r => r.json()).catch(() => [])
+				]);
+				
+				if (!data) {
+					div.innerHTML = '<div class="no-data">NO PVP DATA FOUND</div>';
+					document.getElementById('stats-equipment-container').style.display = 'none';
+					return;
+				}
+				
+				const wins = data.aggregate.wins;
+				const losses = data.aggregate.losses;
+				const total = wins + losses;
+				const winRate = total > 0 ? Math.round((wins / total) * 100) : 0;
+
+				let rankHtml = '';
+				if (ranksResponse && ranksResponse.length > 0) {
+					const sorted = ranksResponse.sort((a,b) => a.min_rank - b.min_rank);
+					const r = sorted.find(x => data.pvp_rank >= x.min_rank && data.pvp_rank <= x.max_rank) || sorted[sorted.length-1];
+					if (r && r.icon) {
+						rankHtml = `<img class="rank-icon-lg" src="${r.icon}" onmouseover="showTip('${r.name}', event)" onmouseout="hideTip()">`;
+					}
+				}
+
+				let mostPlayed = "None";
+				let maxGames = 0;
+				let mvpWinRate = 0;
+				if (data.professions) {
+					for (const [prof, stats] of Object.entries(data.professions)) {
+						const games = stats.wins + stats.losses;
+						if (games > maxGames) {
+							maxGames = games;
+							mostPlayed = prof.charAt(0).toUpperCase() + prof.slice(1);
+							mvpWinRate = games > 0 ? Math.round((stats.wins / games) * 100) : 0;
+						}
+					}
+				}
+
+				div.innerHTML = `<div class="stat-grid">
+					<div class="stat-card">
+						${rankHtml}
+						<div class="rank-text-stack">
+							<div class="stat-title">PVP RANK</div>
+							<div class="stat-value">${data.pvp_rank}</div>
+						</div>
+					</div>
+					<div class="stat-card"><div class="stat-title">WIN RATE</div><div class="stat-value">${winRate}%</div></div>
+					<div class="stat-card"><div class="stat-title" style="color:#1A9306;">WINS</div><div class="stat-value">${wins}</div></div>
+					<div class="stat-card"><div class="stat-title" style="color:#ff4444;">LOSSES</div><div class="stat-value">${losses}</div></div>
+					<div class="stat-card"><div class="stat-title">MOST PLAYED</div><div class="stat-value" style="font-size:16px;">${mostPlayed}</div></div>
+					<div class="stat-card"><div class="stat-title">${mostPlayed.toUpperCase()} WIN RATE</div><div class="stat-value" style="font-size:16px;">${mvpWinRate}%</div></div>
+				</div>`;
+
+				document.getElementById('stats-equipment-container').style.display = 'block';
+				initBuild();
+			}
+
+			async function loadSeason() {
+				const div = document.getElementById('panel-season');
+				div.innerHTML = '<div class="loading">Checking Season...</div>';
+				const standings = await apiFetch('pvp/standings');
+				if (!standings || !standings.length) return div.innerHTML = '<div class="no-data">NO ACTIVE SEASON PLAY DETECTED</div>';
+				const s = standings[0].current;
+				const b = standings[0].best;
+				div.innerHTML = `<div class="stat-grid">
+					<div class="stat-card"><div class="stat-title">Current Rating</div><div class="stat-value"><span>${s.rating}</span></div></div>
+					<div class="stat-card"><div class="stat-title">Best Rating</div><div class="stat-value"><span>${b ? b.rating : s.rating}</span></div></div>
+				</div>`;
+			}
+
+			async function loadLeaderboard() {
+				const div = document.getElementById('panel-leaderboard');
+				div.innerHTML = '<div class="loading">Loading EU Ladder...</div>';
+				const seasons = await fetch('https://api.guildwars2.com/v2/pvp/seasons').then(r => r.json());
+				const latest = seasons[seasons.length - 1];
+				const lb = await fetch(`https://api.guildwars2.com/v2/pvp/seasons/${latest}/leaderboards/ladder/eu?limit=50`).then(r => r.json());
+				div.innerHTML = lb.map(p => `<div class="lb-row"><span class="lb-rank">#${p.rank}</span><span class="lb-name">${p.name}</span><span style="color:#1A9306; font-weight:bold;">${p.scores[0].value}</span></div>`).join('');
+			}
+
+			async function loadHistory() {
+				const div = document.getElementById('panel-history');
+				div.innerHTML = '<div class="loading">Loading History...</div>';
+				const games = await apiFetch('pvp/games');
+				if (!games || games.length === 0) return div.innerHTML = '<div class="no-data">NO MATCH HISTORY FOUND</div>';
+				const details = await apiFetch(`pvp/games?ids=${games.slice(0,10).join(',')}`);
+				const mapIds = [...new Set(details.map(g => g.map_id))].filter(id => id).join(',');
+				let mapData = [];
+				if (mapIds) mapData = await fetch(`https://api.guildwars2.com/v2/maps?ids=${mapIds}`).then(r => r.json()).catch(() => []);
+
+				div.innerHTML = details.map(g => {
+					const redPct = (g.scores.red / (g.scores.red + g.scores.blue)) * 100;
+					const win = g.result === 'Victory';
+					const mapObj = mapData.find(m => m.id === g.map_id);
+					const mapName = mapObj ? mapObj.name : `Map ${g.map_id}`;
+					const profName = g.profession ? (g.profession.charAt(0).toUpperCase() + g.profession.slice(1)) : 'Unknown';
+					return `<div class="match-row ${win ? 'match-win' : 'match-loss'}">
+						<div class="match-meta"><span>${profName}</span><span>${g.rating_type || 'Unranked'}</span></div>
+						<div style="font-size:14px; font-weight:bold; margin-bottom:2px; display:flex; justify-content:space-between; align-items:center;">
+							<span>${win ? 'VICTORY' : 'DEFEAT'}</span>
+							<span style="font-size:11px; color:#8a7a5f; font-weight:normal; letter-spacing:0px;">${mapName}</span>
+						</div>
+						<div class="match-score-bar"><div class="score-red" style="width:${redPct}%"></div><div class="score-blue" style="width:${100-redPct}%"></div></div>
+						<div class="match-meta"><span>Red: ${g.scores.red}</span><span>Blue: ${g.scores.blue}</span></div>
+					</div>`;
+				}).join('');
+			}
+
+			async function initBuild() {
+				const sel = document.getElementById('char-selector');
+				if (sel.options.length > 0) return;
+				const chars = await apiFetch('characters');
+				if (!chars) return;
+				chars.sort().forEach(c => { const o = document.createElement('option'); o.value = c; o.text = c; sel.add(o); });
+				sel.value = settings.defaultChar || chars[0];
+				loadCharBuild(sel.value);
+				loadHeroes();
+			}
+
+			async function loadCharBuild(name) {
+				const div = document.getElementById('build-display');
+				const profDiv = document.getElementById('prof-display');
+				div.innerHTML = '<div class="loading">Loading Gear...</div>';
+				const data = await apiFetch(`characters/${encodeURIComponent(name)}`);
+				if (!data) return;
+				profDiv.innerText = `PROFESSION: ${data.profession}`;
+				if (!data.equipment_pvp || (!data.equipment_pvp.amulet && !data.equipment_pvp.rune && data.equipment_pvp.sigils.every(s => s === null))) return div.innerHTML = '<div class="no-data">NO PVP EQUIPMENT DETECTED</div>';
+				let html = '';
+				const pvp = data.equipment_pvp;
+				if (pvp.amulet) {
+					const amulet = await apiFetch(`pvp/amulets/${pvp.amulet}`);
+					if (amulet) {
+						const stats = Object.entries(amulet.attributes).map(([s, v]) => `+${v} ${s}`).join(', ');
+						html += renderEqItem(amulet.icon, amulet.name, stats);
+					}
+				}
+				const itemIds = [pvp.rune, ...pvp.sigils].filter(id => id !== null);
+				if (itemIds.length > 0) {
+					const items = await apiFetch(`items?ids=${itemIds.join(',')}`);
+					if (items) {
+						items.forEach(item => {
+							let d = (item.details && item.details.bonuses) ? item.details.bonuses.map((b, i) => `(${i+1}) ${b}`).join('<br>') : (item.details && item.details.infix_upgrade && item.details.infix_upgrade.buff ? item.details.infix_upgrade.buff.description : (item.description || ""));
+							html += renderEqItem(item.icon, item.name, d.replace(/<[^>]*>/g, ' '));
+						});
+					}
+				}
+				div.innerHTML = html;
+			}
+
+			function renderEqItem(icon, name, extra) {
+				let safeName = name.replace(/'/g, "\\'").toUpperCase();
+				return `<div class="eq-item"><img class="eq-icon" src="${icon}" onmouseover="showTip('${safeName}', event)" onmouseout="hideTip()"><div class="eq-info"><span class="eq-name">${name}</span><span class="eq-stats">${extra}</span></div></div>`;
+			}
+
+			async function loadHeroes() {
+				const div = document.getElementById('hero-display');
+				const unlocked = await apiFetch('account/pvp/heroes') || [];
+				const allIds = await fetch('https://api.guildwars2.com/v2/pvp/heroes').then(r => r.json());
+				const heroes = await fetch(`https://api.guildwars2.com/v2/pvp/heroes?ids=${allIds.join(',')}`).then(r => r.json());
+				div.innerHTML = heroes.map(h => {
+					let n = h.name || "";
+					let iconUrl = h.icon;
+					
+					if (n.includes("Turai")) iconUrl = "https://gw2ps.local/Assets/Icons/Turai_Ossa_icon.png";
+					else if (n.includes("Grymm")) iconUrl = "https://gw2ps.local/Assets/Icons/Grymm_Svaard_icon.png";
+					else if (n.includes("Nika")) iconUrl = "https://gw2ps.local/Assets/Icons/Nika_icon.png";
+					else if (n.includes("Tybalt")) iconUrl = "https://gw2ps.local/Assets/Icons/Tybalt_Leftpaw_icon.png";
+
+					let safeName = n.replace(/'/g, "\\'").toUpperCase();
+					return `<img class="hero-icon ${unlocked.includes(h.id) ? 'hero-unlocked' : ''}" src="${iconUrl}" onmouseover="showTip('${safeName}', event)" onmouseout="hideTip()" onclick="openWiki('https://wiki.guildwars2.com/wiki/Mist_Champion')">`;
+				}).join('');
+			}
+
+			loadStats();
+			/*]]>*/
+		</script>
+	</body>
+</html>

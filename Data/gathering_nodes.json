@@ -1,0 +1,620 @@
+[
+  {
+    "node": "Jungle Plants",
+    "yields": ["Cassava Root", "Flax Fiber", "Jungle Grass Seed", "Maguuma Lily", "Pile of Allspice Berries"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Herb Patch",
+    "yields": ["Black Peppercorn", "Parsley Leaf", "Thyme Leaf"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Herb Seedlings",
+    "yields": ["Black Peppercorn", "Chili Pepper", "Head of Garlic", "Parsley Leaf", "Thyme Leaf", "Vanilla Bean"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Herb Sprouts",
+    "yields": ["Bay Leaf", "Black Peppercorn", "Chili Pepper", "Head of Garlic", "Oregano Leaf", "Parsley Leaf", "Sage Leaf", "Thyme Leaf", "Vanilla Bean"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Taproots",
+    "yields": ["Beet", "Carrot", "Sage Leaf", "Turnip"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Root Vegetables",
+    "yields": ["Beet", "Carrot", "Turnip", "Yam"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Young Herbs",
+    "yields": ["Bay Leaf", "Black Peppercorn", "Chili Pepper", "Dill Sprig", "Head of Garlic", "Parsley Leaf", "Rosemary Sprig", "Sage Leaf", "Sesame Seed", "Thyme Leaf"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Mature Herbs",
+    "yields": ["Bay Leaf", "Chili Pepper", "Coriander Seed", "Dill Sprig", "Head of Garlic", "Mint Leaf", "Rosemary Sprig", "Sage Leaf", "Sesame Seed", "Thyme Leaf", "Vanilla Bean"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Cluster of Desert Herbs",
+    "yields": ["Chili Pepper", "Coriander Seed", "Sage Leaf", "Sesame Seed"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Cluster of Herbs",
+    "yields": ["Head of Garlic", "Lemongrass", "Coriander Seed", "Tarragon Leaves"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Desert Vegetables",
+    "yields": ["Cassava Root", "Flax Fiber", "Grape", "Head of Garlic", "Onion"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Leeks",
+    "yields": ["Green Onion", "Leek"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Verdant Herbs",
+    "yields": ["Clove", "Head of Garlic", "Mint Leaf", "Sage Leaf", "Tarragon Leaves", "Thyme Leaf", "Vanilla Bean"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Winter Root Vegetables",
+    "yields": ["Beet", "Parsnip", "Rutabaga", "Turnip"],
+    "primary_item_id": 0,
+    "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"
+  },
+  {
+    "node": "Passiflora",
+    "yields": ["Passion Fruit", "Passion Flower"],
+    "primary_item_id": 36731,
+    "icon": "https://render.guildwars2.com/file/F41EE5BB97FE360156942C5F60CCDE164973CEE4/544007.png"
+  },
+  {
+    "node": "Scallions",
+    "yields": ["Green Onion", "Onion"],
+    "primary_item_id": 12534,
+    "icon": "https://render.guildwars2.com/file/5EFD6BA24CBA9D1DCE5221008C36B39230623C6D/63124.png"
+  },
+  {
+    "node": "Coral",
+    "yields": ["Coral Chunk", "Coral Orb", "Coral Tentacle"],
+    "primary_item_id": 24324,
+    "icon": "https://render.guildwars2.com/file/32616D71AAEA5B876DF7FBE69BC7E9B8E314CDFE/63148.png"
+  },
+  {
+    "node": "Blueberry Bush",
+    "yield": "Blueberry",
+    "item_id": 12255,
+    "icon": "https://render.guildwars2.com/file/E2DA4E9B994DE9E4382B096907715FF9A2327E28/63332.png"
+  },
+  {
+    "node": "Button Mushrooms",
+    "yield": "Mushroom",
+    "item_id": 12147,
+    "icon": "https://render.guildwars2.com/file/2713C5787FCB403F25A4F7144D2B1E52291E3178/219399.png"
+  },
+  {
+    "node": "Carrots",
+    "yield": "Carrot",
+    "item_id": 12134,
+    "icon": "https://render.guildwars2.com/file/F06472A03B49AA6C9256195FC43B49BEA26595D0/62859.png"
+  },
+  {
+    "node": "Lettuce",
+    "yield": "Head of Lettuce",
+    "item_id": 12238,
+    "icon": "https://render.guildwars2.com/file/F370E14DE5C1FACE91D19F19FD65CD19C5F74F75/63317.png"
+  },
+  {
+    "node": "Onions",
+    "yield": "Onion",
+    "item_id": 12142,
+    "icon": "https://render.guildwars2.com/file/62FEA707A3547EA74113C29A110B40B23501B75C/63115.png"
+  },
+  {
+    "node": "Potato",
+    "yield": "Potato",
+    "item_id": 12135,
+    "icon": "https://render.guildwars2.com/file/24CE9454113F0609E6E9B655EF0670B40D5522EC/63245.png"
+  },
+  {
+    "node": "Clam",
+    "yield": "Clam",
+    "item_id": 12327,
+    "icon": "https://render.guildwars2.com/file/6C2143352D3E0B4B45A3E01CE2FAFAB8D0D77C51/63364.png"
+  },
+  {
+    "node": "Spinach",
+    "yield": "Spinach Leaf",
+    "item_id": 12241,
+    "icon": "https://render.guildwars2.com/file/0E1D68AE260A72F91CCF00239BCA3261B1C5D1A9/63319.png"
+  },
+  {
+    "node": "Strawberry Patch",
+    "yield": "Strawberry",
+    "item_id": 12253,
+    "icon": "https://render.guildwars2.com/file/FA03EA4891609320A6CE08069EABE7F65465EC09/63330.png"
+  },
+  {
+    "node": "Cabbage",
+    "yield": "Head of Cabbage",
+    "item_id": 12332,
+    "icon": "https://render.guildwars2.com/file/3343B0E5B72DDDC1432F4C4A629D77F5A03B269E/63369.png"
+  },
+  {
+    "node": "Grapes",
+    "yield": "Grape",
+    "item_id": 12341,
+    "icon": "https://render.guildwars2.com/file/D94408B9276CD9C89521E14166DCE87719676621/63378.png"
+  },
+  {
+    "node": "Kale",
+    "yield": "Kale Leaf",
+    "item_id": 12333,
+    "icon": "https://render.guildwars2.com/file/B27FE2990ADC0B65E7C5A811F9C20DB676EC3305/63370.png"
+  },
+  {
+    "node": "Varied Mushrooms",
+    "yield": "Mushroom",
+    "item_id": 12147,
+    "icon": "https://render.guildwars2.com/file/2713C5787FCB403F25A4F7144D2B1E52291E3178/219399.png"
+  },
+  {
+    "node": "Zucchini",
+    "yield": "Zucchini",
+    "item_id": 12330,
+    "icon": "https://render.guildwars2.com/file/DD9CAA539E02CA7A69A42D9398777F0FA7C30D73/63367.png"
+  },
+  {
+    "node": "Blackberries",
+    "yield": "Blackberry",
+    "item_id": 12537,
+    "icon": "https://render.guildwars2.com/file/EB324BCF05D270CAFE77C132BA97E2FA2DEF4B0E/219485.png"
+  },
+  {
+    "node": "Cauliflower",
+    "yield": "Head of Cauliflower",
+    "item_id": 12532,
+    "icon": "https://render.guildwars2.com/file/327E15CA0B5D069908C8F96E0AA335140BD302CD/219482.png"
+  },
+  {
+    "node": "Coral",
+    "yield": "Coral Chunk",
+    "item_id": 24874,
+    "icon": "https://render.guildwars2.com/file/E3EE022F17127B45FDFC266BDAD05033359BF9E2/221175.png"
+  },
+  {
+    "node": "Portobello Mushrooms",
+    "yield": "Portobello Mushroom",
+    "item_id": 12334,
+    "icon": "https://render.guildwars2.com/file/47F90A54375129EADD7FA1279BF391B99B4A6A56/63371.png"
+  },
+  {
+    "node": "Scallions",
+    "yield": "Green Onion",
+    "item_id": 12533,
+    "icon": "https://render.guildwars2.com/file/DB03DC50A5BA020811221B04D1D4FB3957F81512/63389.png"
+  },
+  {
+    "node": "Sugar Pumpkin",
+    "yield": "Sugar Pumpkin",
+    "item_id": 12538,
+    "icon": "https://render.guildwars2.com/file/6ED9FE4CB6DCDA7F542718507DC33305FDD9A62C/63386.png"
+  },
+  {
+    "node": "Variegated Taproots",
+    "yield": "Carrot",
+    "item_id": 12134,
+    "icon": "https://render.guildwars2.com/file/F06472A03B49AA6C9256195FC43B49BEA26595D0/62859.png"
+  },
+  {
+    "node": "Artichoke",
+    "yield": "Artichoke",
+    "item_id": 12512,
+    "icon": "https://render.guildwars2.com/file/3FF00D3CF70B4AB4E117040F541D384302E7D93E/219472.png"
+  },
+  {
+    "node": "Asparagus",
+    "yield": "Asparagus Spear",
+    "item_id": 12505,
+    "icon": "https://render.guildwars2.com/file/693F7207FB74B962DE327E355C18D680E0357965/219467.png"
+  },
+  {
+    "node": "Blooming Passiflora",
+    "yield": "Passion Flower",
+    "item_id": 37907,
+    "icon": "https://render.guildwars2.com/file/A3EF78BAC765FCBFBA41FE95A17839A3AA3AEDC8/511906.png"
+  },
+  {
+    "node": "Butternut Squash",
+    "yield": "Butternut Squash",
+    "item_id": 12511,
+    "icon": "https://render.guildwars2.com/file/D46839D1040447D5E417D848A10DC2B7D8A73493/219471.png"
+  },
+  {
+    "node": "Cayenne Pepper",
+    "yield": "Cayenne Pepper",
+    "item_id": 12504,
+    "icon": "https://render.guildwars2.com/file/0B4DFEC1F0F270F4AE01E854FFF3CC64124C25C9/219466.png"
+  },
+  {
+    "node": "Passiflora",
+    "yield": "Passion Fruit",
+    "item_id": 36731,
+    "icon": "https://render.guildwars2.com/file/245EB89D59905C2857587A1A2E02FC1645EBF740/511768.png"
+  },
+  {
+    "node": "Toxic Seedlings",
+    "yield": "Pristine Toxic Spore Sample",
+    "item_id": 48884,
+    "icon": "https://render.guildwars2.com/file/78B90364F0FA4806E6600DD260BE2EBC51D1431D/665773.png"
+  },
+  {
+    "node": "Raspberries",
+    "yield": "Raspberry",
+    "item_id": 12254,
+    "icon": "https://render.guildwars2.com/file/06BC637CD223F39DAF93B9D6FC6FA474B13F9E20/63331.png"
+  },
+  {
+    "node": "Black Crocus",
+    "yield": "Saffron Thread",
+    "item_id": 12547,
+    "icon": "https://render.guildwars2.com/file/FE1C9BB06AF7E83EDCBD655B030EB8EC00CBD350/219491.png"
+  },
+  {
+    "node": "Cactus",
+    "yield": "Nopal",
+    "item_id": 66524,
+    "icon": "https://render.guildwars2.com/file/971B013D9BDF56931451EBAA3C0DBBCC03C6982C/831440.png"
+  },
+  {
+    "node": "Flax",
+    "yield": "Flax Fiber",
+    "item_id": 75241,
+    "icon": "https://render.guildwars2.com/file/D5E8144273D1EADBE8AD454CCCDA17576243DF51/1201899.png"
+  },
+  {
+    "node": "Ghost Pepper",
+    "yield": "Ghost Pepper",
+    "item_id": 12544,
+    "icon": "https://render.guildwars2.com/file/01051F0458C052BF08916A555273FF6145592FE6/219488.png"
+  },
+  {
+    "node": "Lentils",
+    "yield": "Handful of Red Lentils",
+    "item_id": 82866,
+    "icon": "https://render.guildwars2.com/file/38190310DD4D44BDEC0A0C7EA1CFC71D0C276B5E/1766618.png"
+  },
+  {
+    "node": "Lotus",
+    "yield": "Lotus Root",
+    "item_id": 12510,
+    "icon": "https://render.guildwars2.com/file/2BCA0A07077D3899C3F601AF1FAEFB18C67FB30F/219470.png"
+  },
+  {
+    "node": "Mussels",
+    "yield": "Mussel",
+    "item_id": 74266,
+    "icon": "https://render.guildwars2.com/file/C8E60C9C5013DD03AA152A634615C5B1DF610E39/223191.png"
+  },
+  {
+    "node": "Omnomberries",
+    "yield": "Omnomberry",
+    "item_id": 12128,
+    "icon": "https://render.guildwars2.com/file/9C5457B024D9152906D808A53BFF67539BB94FA0/219396.png"
+  },
+  {
+    "node": "Orrian Truffle",
+    "yield": "Orrian Truffle",
+    "item_id": 12545,
+    "icon": "https://render.guildwars2.com/file/0AF0FD06192106D5D9C73A35A3E364CE6B4A1FC0/219489.png"
+  },
+  {
+    "node": "Sawgill Mushrooms",
+    "yield": "Sawgill Mushroom",
+    "item_id": 73504,
+    "icon": "https://render.guildwars2.com/file/AAFF3F76320FCB0177550F2D6CBA22334D935AF1/1203082.png"
+  },
+  {
+    "node": "Seaweed",
+    "yield": "Seaweed",
+    "item_id": 12509,
+    "icon": "https://render.guildwars2.com/file/35C6906CCA6A0541383D5AE31E656456DC3418E5/63385.png"
+  },
+  {
+    "node": "Snow Truffle",
+    "yield": "Snow Truffle",
+    "item_id": 12144,
+    "icon": "https://render.guildwars2.com/file/917E9C5504FE06715DCBE04D75F826BE5DB895BA/219398.png"
+  },
+  {
+    "node": "Green Wood",
+    "yield": "Green Wood Log",
+    "item_id": 19723,
+    "icon": "https://render.guildwars2.com/file/DAF50142ADC06FB11FBC02F8FFEF504F4E674047/65942.png"
+  },
+  {
+    "node": "Soft Wood",
+    "yield": "Soft Wood Log",
+    "item_id": 19726,
+    "icon": "https://render.guildwars2.com/file/AB6C5501209B91D9B890B1F84B29BC0142CB59D8/65943.png"
+  },
+  {
+    "node": "Seasoned Wood",
+    "yield": "Seasoned Wood Log",
+    "item_id": 19727,
+    "icon": "https://render.guildwars2.com/file/66BEAC3E5D0EDA160AA4A7942D0C46C27DC0E7AA/65944.png"
+  },
+  {
+    "node": "Hard Wood",
+    "yield": "Hard Wood Log",
+    "item_id": 19724,
+    "icon": "https://render.guildwars2.com/file/576ED6A37FA1130DDD230D5D0E0D80484E25260C/220466.png"
+  },
+  {
+    "node": "Elder Wood",
+    "yield": "Elder Wood Log",
+    "item_id": 19722,
+    "icon": "https://render.guildwars2.com/file/205871B734054D0206986FB44D6DC5425E572B0B/220465.png"
+  },
+  {
+    "node": "Ancient Wood",
+    "yield": "Ancient Wood Log",
+    "item_id": 19725,
+    "icon": "https://render.guildwars2.com/file/5C999770AB7CC1F85D270A50C205673DF8B6E104/220467.png"
+  },
+  {
+    "node": "Copper Ore",
+    "yield": "Copper Ore",
+    "item_id": 19697,
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png"
+  },
+  {
+    "node": "Rich Copper Vein",
+    "yield": "Copper Ore",
+    "item_id": 19697,
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png"
+  },
+  {
+    "node": "Iron Ore",
+    "yield": "Iron Ore",
+    "item_id": 19699,
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png"
+  },
+  {
+    "node": "Rich Iron Vein",
+    "yield": "Iron Ore",
+    "item_id": 19699,
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png"
+  },
+  {
+    "node": "Silver Ore",
+    "yield": "Silver Ore",
+    "item_id": 19703,
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png"
+  },
+  {
+    "node": "Rich Silver Vein",
+    "yield": "Silver Ore",
+    "item_id": 19703,
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png"
+  },
+  {
+    "node": "Gold Ore",
+    "yield": "Gold Ore",
+    "item_id": 19698,
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png"
+  },
+  {
+    "node": "Rich Gold Vein",
+    "yield": "Gold Ore",
+    "item_id": 19698,
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png"
+  },
+  {
+    "node": "Platinum Ore",
+    "yield": "Platinum Ore",
+    "item_id": 19702,
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png"
+  },
+  {
+    "node": "Rich Platinum Vein",
+    "yield": "Platinum Ore",
+    "item_id": 19702,
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png"
+  },
+  {
+    "node": "Rich Mithril Vein",
+    "yield": "Mithril Ore",
+    "item_id": 19700,
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png"
+  },
+  {
+    "node": "Rich Orichalcum Vein",
+    "yield": "Orichalcum Ore",
+    "item_id": 19701,
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png"
+  },
+  {
+    "node": "Raw Candy Corn",
+    "yield": "Piece of Candy Corn",
+    "item_id": 36041,
+    "icon": "https://render.guildwars2.com/file/7AF3232140CB5DF159E4E54C2F092F69B5BD460F/499376.png"
+  },
+  {
+    "node": "Rich Candy Corn Vein",
+    "yield": "Piece of Candy Corn",
+    "item_id": 36041,
+    "icon": "https://render.guildwars2.com/file/7AF3232140CB5DF159E4E54C2F092F69B5BD460F/499376.png"
+  },
+  {
+    "node": "Quartz Crystal Formation",
+    "yield": "Quartz Crystal",
+    "item_id": 43773,
+    "icon": "https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png"
+  },
+  {
+    "node": "Bloodstone Crystals",
+    "yield": "Blood Ruby",
+    "item_id": 79280,
+    "icon": "https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png"
+  },
+  {
+    "node": "Kournan Supply Cache",
+    "yield": "Inscribed Shard",
+    "item_id": 87645,
+    "icon": "https://render.guildwars2.com/file/F5D7B94E53F8B380497CADDE2A562222B30EB793/1998867.png"
+  },
+  {
+    "node": "Petrified Stump",
+    "yield": "Petrified Wood",
+    "item_id": 79469,
+    "icon": "https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png"
+  },
+  {
+    "node": "Winterberry Bush",
+    "yield": "Fresh Winterberry",
+    "item_id": 79899,
+    "icon": "https://render.guildwars2.com/file/414B0D0E3E38F73EC360C5BAE8A1DE98D324DCE6/1601463.png"
+  },
+  {
+    "node": "Jade Fragments",
+    "yield": "Jade Shard",
+    "item_id": 80332,
+    "icon": "https://render.guildwars2.com/file/B3D1DB6458480968B2FC0C0115476EC892CD0555/1633883.png"
+  },
+  {
+    "node": "Primordial Orchid",
+    "yield": "Fire Orchid Blossom",
+    "item_id": 81127,
+    "icon": "https://render.guildwars2.com/file/D667F038D601D31EC35F08E96EB1C832026E3A21/1677062.png"
+  },
+  {
+    "node": "Orrian Oyster",
+    "yield": "Orrian Pearl",
+    "item_id": 23709,
+    "icon": "https://render.guildwars2.com/file/7D70420B60279BB1019EE840FD0B493CB41EF993/66820.png"
+  },
+  {
+    "node": "Brandstone",
+    "yield": "Kralkatite Ore",
+    "item_id": 86069,
+    "icon": "https://render.guildwars2.com/file/380A7E3B250B050C2C39B1106CA39AED65C8396B/1894933.png"
+  },
+  {
+    "node": "Difluorite Crystals",
+    "yield": "Difluorite Crystal",
+    "item_id": 86977,
+    "icon": "https://render.guildwars2.com/file/3148F3239A104D6C7CE4F65DB41BAAB16039C81E/1947318.png"
+  },
+  {
+    "node": "Mistonium",
+    "yield": "Lump of Mistonium",
+    "item_id": 88955,
+    "icon": "https://render.guildwars2.com/file/0D75705348E1AE54CF0679FA65C24E0739A3B79F/2038791.png"
+  },
+  {
+    "node": "Dragon Crystal Node",
+    "yield": "Branded Mass",
+    "item_id": 89537,
+    "icon": "https://render.guildwars2.com/file/0C2FD403DACFABF74B9E3824914FB60B3C285804/2083245.png"
+  },
+  {
+    "node": "Mistborn Mote",
+    "yield": "Mistborn Mote",
+    "item_id": 90783,
+    "icon": "https://render.guildwars2.com/file/E76806D6DF4E27C70EA70A9FAC1F0D036C18659E/2140686.png"
+  },
+  {
+    "node": "Hatched Chili Pepper Bush",
+    "yield": "Hatched Chili",
+    "item_id": 92072,
+    "icon": "https://render.guildwars2.com/file/410EE218CCA01BB60A0BE00D0BA076B1DCCFD648/2199299.png"
+  },
+  {
+    "node": "Eternal Ice",
+    "yield": "Eternal Ice Shard",
+    "item_id": 92272,
+    "icon": "https://render.guildwars2.com/file/D40CAAE1BEE9C8B3606534F501A244E5E3149852/2220776.png"
+  },
+  {
+    "node": "Prismaticite Node",
+    "yield": "Prismaticite Crystal",
+    "item_id": 94163,
+    "icon": "https://render.guildwars2.com/file/9DDB1C7505A90302C2071E1A680C0057B900C62C/2351828.png"
+  },
+  {
+    "node": "Salvage Pile",
+    "yield": "Charr Salvage",
+    "item_id": 93649,
+    "icon": "https://render.guildwars2.com/file/3E0D543456C171191A2856E4B05456DEF2176F5E/2293280.png"
+  },
+  {
+    "node": "Mursaat Obsidian",
+    "yield": "Mursaat Obsidian Chunk",
+    "item_id": 103427,
+    "icon": "https://render.guildwars2.com/file/E75844E3E9DA02E2520D03FC55540944F93A05D2/3592776.png"
+  },
+  {
+    "node": "Titan Heatstone Cluster",
+    "yield": "Titan Heatstone",
+    "item_id": 102655,
+    "icon": "https://render.guildwars2.com/file/ADFDE2390DB1BC9109BA51CB5D55339C620357D5/3592778.png"
+  },
+  {
+    "node": "Mursaat Obsidian",
+    "yield": "Mursaat Obsidian Chunk",
+    "item_id": 103427,
+    "icon": "https://render.guildwars2.com/file/E75844E3E9DA02E2520D03FC55540944F93A05D2/3592776.png"
+  },
+  {
+    "node": "Rotted Titan Amber",
+    "yield": "Rotted Titan Amber",
+    "item_id": 102255,
+    "icon": "https://render.guildwars2.com/file/504227ABF7272B9DD8ECC4C494FBEBBF4296E368/3375062.png"
+  },
+  {
+    "node": "Charged Titan Ore",
+    "yield": "Charged Titan Ore",
+    "item_id": 103279,
+    "icon": "https://render.guildwars2.com/file/04800AD00DFEB801C3DF77973D49FC1D017C9A04/3375061.png"
+  },
+  {
+    "node": "Honey Flower",
+    "yield": "Honey Flower",
+    "item_id": 102558,
+    "icon": "https://render.guildwars2.com/file/B4E067EC20C4020F707B61B45139B3012EDFB219/3375060.png"
+  },
+  {
+    "node": "Lowland Pine Sapling",
+    "yield": "Lowland Pine Log",
+    "item_id": 102503,
+    "icon": "https://render.guildwars2.com/file/3FDB469FA0B15612A43B1534EDD8F6747C032EF4/3375064.png"
+  },
+  {
+    "node": "Jadeite Vein",
+    "yield": "Chunk of Pure Jade",
+    "item_id": 97102,
+    "icon": "https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png"
+  }
+]

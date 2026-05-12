@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
+			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow-x: hidden; text-transform: uppercase; margin: 0; }
+
+			.header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; }
+			.char-name { font-size: 18px; font-weight: bold; color: #f0dca5; }
+			.char-level { font-size: 14px; color: #e2c07d; margin-left: 8px; font-family: monospace; }
+			.char-class { font-size: 14px; font-weight: normal; text-transform: capitalize; color: #8a7a5f; margin-left: 8px; }
+			.char-select { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; outline: none; font-family: "Crimson Text", serif; }
+
+			.template-row { display: flex; gap: 6px; justify-content: flex-start; margin-bottom: 20px; }
+			.template-box {
+			width: 28px; height: 28px; border: 1px solid #332a1e; background: rgba(20,15,10,0.8);
+			display: flex; align-items: center; justify-content: center; font-size: 13px;
+			color: #4a3b2a; transition: 0.2s; cursor: default; font-family: "Crimson Text", serif;
+			}
+
+			.template-box.unlocked { color: #e2c07d; cursor: pointer; }
+			.template-box.has-gear { border: 1px solid #e2c07d; color: #f0dca5; }
+			.template-box.active { background: #e2c07d !important; color: #1a1510 !important; border-color: #e2c07d !important; font-weight: bold; }
+
+			.main-layout { display: flex; justify-content: space-between; gap: 15px; max-width: 600px; margin: 0 auto; transition: box-shadow 0.3s ease; }
+			.equip-column { display: flex; flex-direction: column; gap: 12px; align-items: center; width: 220px; }
+			.equip-row { display: flex; gap: 12px; justify-content: center; width: 100%; min-height: 48px; transition: opacity 0.3s ease; }
+			.item-slot { width: 48px; height: 48px; border: 2px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; cursor: pointer; }
+			.item-slot img { width: 100%; height: 100%; object-fit: cover; }
+			.separator { height: 1px; background: rgba(74, 59, 42, 0.4); width: 100%; margin: 5px 0; }
+
+			.right-column { display: flex; flex-direction: column; gap: 15px; }
+			.attr-panel, .skills-panel, .build-panel { background: rgba(15,12,10,0.95); border: 1px solid #2a2015; padding: 10px; width: 310px; height: fit-content; box-sizing: border-box; }
+			.attr-grid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 8px; column-gap: 10px; }
+			.attr-item { display: flex; align-items: center; gap: 6px; font-family: "Arial", sans-serif; font-size: 11px; color: #fff; }
+			.attr-icon { width: 15px; height: 15px; object-fit: contain; cursor: help; }
+			.attr-val { font-weight: bold; color: #ffffff; }
+
+			.skill-row { display: flex; gap: 6px; align-items: center; }
+			.skill-slot { width: 34px; height: 34px; border: 1px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; }
+			.skill-slot img { width: 100%; height: 100%; object-fit: cover; }
+
+			.btn { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; height: 34px; padding: 0 15px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; -webkit-appearance: none; appearance: none; }
+			.btn:hover { border-color: #f0dca5; color: #f0dca5; background: rgba(226, 192, 125, 0.1); }
+
+			.swap-btn { width: 36px; height: 36px; cursor: pointer; border: 1px solid #4a3b2a; background: rgba(20,15,10,0.9); border-radius: 3px; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
+			.swap-btn:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.15); }
+
+			.rarity-Legendary { border-color: #4C139D; }
+			.rarity-Ascended { border-color: #FB3E8D; }
+			.rarity-Exotic { border-color: #FFA405; }
+			.rarity-Rare { border-color: #FCD00B; }
+			.rarity-Masterwork { border-color: #1A9306; }
+			.rarity-Fine { border-color: #62A4DA; }
+
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; }
+
+			/* Large UI Scaling Overrides */
+			body.ui-large .char-name { font-size: 22px; }
+			body.ui-large .char-level, body.ui-large .char-class { font-size: 16px; }
+			body.ui-large .attr-panel, body.ui-large .skills-panel, body.ui-large .build-panel { width: 310px; }
+			body.ui-large .attr-item { font-size: 14px; }
+			body.ui-large .attr-icon { width: 20px; height: 20px; }
+			body.ui-large .item-slot { width: 48px; height: 48px; }
+			body.ui-large .skill-slot { width: 44px; height: 44px; }
+			body.ui-large .swap-btn { width: 36px; height: 36px; }
+			body.ui-large .equip-column { width: 240px; }
+			body.ui-large .main-layout { max-width: 680px; margin: 0 auto; justify-content: space-between; gap: 15px; }
+			body.ui-large .right-column { width: 310px; }
+		</style>
+	</head>
+	<body>
+		<div id="hero-ui" style="display:none">
+			<div class="header">
+				<div>
+					<span class="char-name" id="display-name">---</span>
+					<span class="char-level" id="display-level"></span>
+					<span class="char-class" id="display-class">---</span>
+				</div>
+				<select id="char-select" class="char-select"></select>
+			</div>
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+				<div class="template-row" id="template-tabs" style="margin-bottom: 0;"></div>
+				<div style="display:flex; gap:10px;">
+					<button class="btn" onclick="copyEquipmentCode()">Copy Equipment</button>
+					<button class="btn" onclick="exportToPlanner()">Save to Planner</button>
+				</div>
+			</div>
+			<div class="main-layout">
+				<div class="equip-column">
+					<div class="equip-row" id="row-head"></div>
+					<div class="equip-row" id="row-torso"></div>
+					<div class="equip-row" id="row-legs"></div>
+					<div class="separator"></div>
+
+					<div style="position:relative; display:flex; flex-direction:column; gap:12px; width:100%; align-items:center;">
+						<div class="swap-btn" style="position:absolute; left:0; top:50%; transform:translateY(-50%); z-index:10;" onclick="toggleEnv('land')">
+							<img src="https://wiki.guildwars2.com/images/c/ce/Weapon_Swap_Button.png" style="width:28px; height:28px;" />
+						</div>
+						<div class="equip-row" id="row-weapon1"></div>
+						<div class="equip-row" id="row-weapon2"></div>
+					</div>
+
+					<div class="separator"></div>
+					<div class="equip-row" id="row-trinket1"></div>
+					<div class="equip-row" id="row-trinket2"></div>
+					<div class="separator"></div>
+
+					<div style="display:flex; align-items:center; gap:10px; width:100%; justify-content:center;">
+						<div class="equip-row" id="row-breather" style="width:auto; margin:0;"></div>
+						<div style="display:flex; flex-direction:column; gap:12px;">
+							<div style="display:flex; align-items:center; gap:8px;">
+								<div class="equip-row" id="row-aquaticA" style="width:auto; margin:0;"></div>
+								<div class="swap-btn" onclick="toggleEnv('water')">
+									<img src="https://wiki.guildwars2.com/images/c/ce/Weapon_Swap_Button.png" style="width:28px; height:28px;" />
+								</div>
+								<div class="equip-row" id="row-aquaticB" style="width:auto; margin:0;"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="separator"></div>
+					<div class="equip-row" id="row-tools"></div>
+					<div class="separator"></div>
+					<div class="equip-row" id="row-jade"></div>
+				</div>
+
+				<div class="right-column">
+					<div class="attr-panel">
+						<div style="font-size: 13px; color: #fff; margin-bottom: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 3px;">Attributes</div>
+						<div class="attr-grid" id="attr-display"></div>
+					</div>
+
+					<div style="display: flex; justify-content: center; width: 100%;">
+						<button class="btn" onclick="copyBuildCode()">Copy Build</button>
+					</div>
+
+					<div class="skills-panel">
+						<div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-bottom: 10px;">
+							<div style="font-size: 14px; font-weight:bold; color: #fff;">SKILLS</div>
+							<div style="display:flex; gap:10px; align-items:center;">
+								<div id="btn-env-land" style="width:22px; height:22px; cursor:pointer;" onclick="setEnv('land')">
+									<img src="https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png" style="width:100%; height:100%;" />
+								</div>
+								<div id="btn-env-water" style="width:22px; height:22px; cursor:pointer;" onclick="setEnv('water')">
+									<img src="https://wiki.guildwars2.com/images/f/f8/Water_Collected.png" style="width:100%; height:100%;" />
+								</div>
+							</div>
+						</div>
+						<div style="font-size: 10px; color: #8a7a5f; letter-spacing: 1px; margin-bottom:4px;">WEAPON</div>
+						<div class="skill-row" id="weapon-skills" style="margin-bottom: 12px; gap:6px;"></div>
+						<div style="font-size: 10px; color: #8a7a5f; letter-spacing: 1px; margin-bottom:4px;">UTILITY</div>
+						<div class="skill-row" id="utility-skills" style="gap:6px;"></div>
+					</div>
+
+					<div class="build-panel">
+						<div style="font-size: 14px; font-weight:bold; color: #fff; margin-bottom: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px;">BUILD</div>
+						<div class="template-row" id="build-tabs" style="margin-bottom: 10px; justify-content: flex-start;"></div>
+						<div id="build-display" style="display:flex; flex-direction:column; gap:6px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="save-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#1a1510; border:2px solid #4a3b2a; padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:350px; font-family: 'Crimson Text', serif;">
+			<div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">SAVE TO PLANNER</div>
+			<div style="color:#ccc; font-size:14px; margin-bottom:10px;">Enter build name:</div>
+			<input type="text" id="save-build-name" style="width: 100%; background: #0a0805; color: #e2c07d; border: 1px solid #332a1e; padding: 8px; margin-bottom: 20px; outline: none; font-family: 'Crimson Text', serif; font-size: 14px; box-sizing: border-box;" />
+			<div style="display:flex; justify-content:space-between;">
+				<button class="btn" onclick="document.getElementById('save-modal').style.display='none'">Cancel</button>
+				<button class="btn" onclick="confirmExport()">Save</button>
+			</div>
+		</div>
+
+		<div id="equipment-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#1a1510; border:2px solid #4a3b2a; padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:600px; max-height:80vh; flex-direction:column; font-family: 'Crimson Text', serif;">
+			<div style="color:#f0dca5; margin-bottom:15px; font-weight:bold; font-size:16px; display:flex; justify-content:space-between; align-items:center;">
+				<span>EQUIPMENT LINKS</span>
+				<button class="btn" style="height:24px; padding:0 10px; font-size:12px;" onclick="document.getElementById('equipment-modal').style.display='none'">Close</button>
+			</div>
+			<div id="eq-modal-list" style="overflow-y:auto; padding-right:10px; display:flex; flex-direction:column; gap:6px;"></div>
+		</div>
+
+		<div id="toast-msg" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#1a1510; border:1px solid #e2c07d; color:#e2c07d; padding:10px 20px; z-index:1001; box-shadow:0 0 10px rgba(0,0,0,0.8); text-transform:uppercase; font-family: 'Crimson Text', serif;"></div>
+
+		<div id="loader" class="loading">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
+			<div>SYNCING HERO DATA...</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+        let CURRENT_ENV = 'land', CURRENT_TERRA_WSET = 1, CURRENT_AQUA_WSET = 1, CURRENT_TAB_DATA = [], fullData = null;
+        window.PLANNER_DB = null;
+
+        window.copyBuildCode = function() {
+            if (!fullData) return;
+            const activeBuildEl = document.querySelector('#build-tabs .template-box.active');
+            const bTabId = activeBuildEl ? parseInt(activeBuildEl.innerText) : (fullData.active_build_tab || 1);
+            const bTab = fullData.build_tabs.find(t => t.tab === bTabId);
+            if (!bTab || !bTab.build) return showToast("No build to copy.");
+            
+            const profs = { "Guardian":1, "Warrior":2, "Engineer":3, "Ranger":4, "Thief":5, "Elementalist":6, "Mesmer":7, "Necromancer":8, "Revenant":9 };
+            const profId = profs[fullData.profession] || 1;
+            
+            let bytes = [0x0D, profId];
+            
+            for (let i=0; i<3; i++) {
+                let spec = bTab.build.specializations[i];
+                if (spec && spec.id && UTILS.itemCache['spec_' + spec.id]) {
+                    bytes.push(spec.id);
+                    let traitByte = 0;
+                    let specData = UTILS.itemCache['spec_' + spec.id];
+                    for (let j=0; j<3; j++) {
+                        let tId = spec.traits[j];
+                        let pos = 0;
+                        if (tId && specData.major_traits) {
+                            let idx = specData.major_traits.indexOf(tId);
+                            if (idx !== -1) pos = (idx % 3) + 1;
+                        }
+                        traitByte |= (pos << (j * 2));
+                    }
+                    bytes.push(traitByte);
+                } else {
+                    bytes.push(0, 0);
+                }
+            }
+            
+            const getPaletteId = (skillId) => {
+                if (!skillId) return 0;
+                if (fullData.professionData && fullData.professionData.skills_by_palette) {
+                    const pair = fullData.professionData.skills_by_palette.find(p => p[1] === skillId);
+                    if (pair) return pair[0];
+                }
+                return 0;
+            };
+            
+            const addSkill = (id) => {
+                let pId = getPaletteId(id);
+                bytes.push(pId & 0xFF, (pId >> 8) & 0xFF);
+            };
+            
+            let bs = bTab.build.skills || {};
+            addSkill(bs.heal); addSkill(bs.utilities?.[0]); addSkill(bs.utilities?.[1]); addSkill(bs.utilities?.[2]); addSkill(bs.elite);
+            
+            let aq = bTab.build.aquatic_skills || {};
+            addSkill(aq.heal); addSkill(aq.utilities?.[0]); addSkill(aq.utilities?.[1]); addSkill(aq.utilities?.[2]); addSkill(aq.elite);
+            
+            for(let i=0; i<18; i++) bytes.push(0);
+            
+            const b64 = btoa(String.fromCharCode.apply(null, bytes));
+            const chatCode = "[&" + b64 + "]";
+            
+            navigator.clipboard.writeText(chatCode).then(() => {
+                showToast("Build code copied!");
+            }).catch(() => {
+                showToast("Failed to copy code.");
+            });
+        };
+
+        window.copyEquipmentCode = function() {
+            if (!fullData || !CURRENT_TAB_DATA || CURRENT_TAB_DATA.length === 0) return showToast("No equipment to show.");
+            
+            let itemIds = new Set();
+            CURRENT_TAB_DATA.forEach(d => {
+                if (d.id) itemIds.add(d.id);
+                if (d.upgrades) d.upgrades.forEach(u => itemIds.add(u));
+                if (d.infusions) d.infusions.forEach(i => itemIds.add(i));
+            });
+            
+            const colors = { Legendary:'#4C139D', Ascended:'#FB3E8D', Exotic:'#FFA405', Rare:'#FCD00B', Masterwork:'#1A9306', Fine:'#62A4DA' };
+            let html = '';
+            
+            Array.from(itemIds).forEach(id => {
+                let it = UTILS.itemCache[id];
+                if (it && it.chat_link) {
+                    let color = colors[it.rarity] || '#eee';
+                    html += `
+                    <div style="display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,0.4); padding:6px; border:1px solid #332a1e;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <img src="${it.icon}" style="width:28px; height:28px; border:1px solid ${color};" />
+                            <span style="color:${color}; font-size:14px; text-transform:none; font-family:sans-serif;">${it.name}</span>
+                        </div>
+                        <button class="btn" style="height:26px; padding:0 10px; font-size:11px; flex-shrink:0;" onclick="copySingleLink('${it.chat_link}')">Copy Chatlink</button>
+                    </div>`;
+                }
+            });
+            
+            if (html === '') {
+                html = '<div style="color:#ccc; font-size:14px;">No extractable item links found.</div>';
+            }
+            
+            document.getElementById('eq-modal-list').innerHTML = html;
+            document.getElementById('equipment-modal').style.display = 'flex';
+        };
+
+        window.copySingleLink = function(link) {
+            if(!link) return;
+            navigator.clipboard.writeText(link).then(() => {
+                showToast("Chatlink copied!");
+            }).catch(() => {
+                showToast("Failed to copy.");
+            });
+        };
+
+        window.exportToPlanner = function() {
+            if (!fullData) return;
+            const defaultName = document.getElementById('display-name').innerText + " - Exported";
+            document.getElementById('save-build-name').value = defaultName;
+            document.getElementById('save-modal').style.display = 'block';
+        };
+
+        window.confirmExport = function() {
+            if (!fullData) return;
+            const buildName = document.getElementById('save-build-name').value.trim() || "New Build";
+            const profession = fullData.profession;
+            let equipObj = {};
+            
+            const plannerWeps = {
+                "axe": 30682, "dagger": 30690, "mace": 30694, "pistol": 30695, "scepter": 30698, "sword": 30699,
+                "focus": 30696, "shield": 30697, "torch": 30693, "warhorn": 30692,
+                "greatsword": 30689, "hammer": 30687, "longbow": 30684, "rifle": 30685, "shortbow": 30686, "staff": 30688,
+                "speargun": 30700, "harpoongun": 30700, "spear": 30691, "harpoon": 30691, "trident": 30702
+            };
+
+            const prefixToStat = {
+                "zojja": "Berserker's", "yassith": "Viper's", "saphir": "Assassin's", "soros": "Assassin's",
+                "veldrunner": "Marauder", "svaard": "Marauder", "ahamid": "Trailblazer's", "chorben": "Trailblazer's",
+                "maklain": "Minstrel's", "zehtuka": "Harrier's", "wupwup": "Celestial", "hronk": "Magi's",
+                "tate": "Cleric's", "theodosus": "Dire", "morbach": "Dire", "mathilde": "Diviner's", "ossa": "Dragon's",
+                "zintl": "Shaman's", "laranthir": "Vigilant", "leftpaw": "Settler's", "eir": "Sinister",
+                "ferratus": "Rabid", "acastus": "Nomad's", "occam": "Carrion", "weling": "Sentinel's",
+                "ruka": "Vander's", "tizlak": "Giver's", "stonecleaver": "Crusader", "angchu": "Cavalier's",
+                "grizzlemouth": "Cavalier's", "beigarth": "Knight's", "gobrech": "Valkyrie", "wei qi": "Valkyrie",
+                "ventari": "Plaguedoctor's", "bringer": "Bringer's", "wanderer": "Wanderer's", "suun": "Dragon's", "togo": "Ritualist's"
+            };
+            const commonStats = ["Berserker's", "Viper's", "Celestial", "Marauder", "Trailblazer's", "Diviner's", "Ritualist's", "Harrier's", "Minstrel's", "Commander's", "Dragon's", "Assassin's", "Cleric's", "Magi's", "Sinister", "Grieving", "Valkyrie", "Knight's", "Cavalier's", "Dire", "Rabid", "Carrion", "Shaman's", "Plaguedoctor's", "Bringer's", "Wanderer's", "Zealot's", "Crusader", "Seraph", "Giver's", "Marshal's", "Apothecary's", "Captain's", "Settler's", "Sentinel's", "Nomad's"];
+
+            function inferStat(attrs) {
+                if (!attrs || attrs.length === 0) return null;
+                let keys = attrs.map(a => a.attribute);
+                let has = (k) => keys.includes(k);
+                let val = (k) => { let x = attrs.find(a=>a.attribute===k); return x ? x.modifier : 0; };
+                
+                let statKeys = keys.filter(k => k !== 'AgonyResistance');
+                if (statKeys.length >= 7) return "Celestial";
+                
+                // 4-stat combinations
+                if (has('ConditionDamage') && has('Power') && has('Precision') && has('ConditionDuration')) return "Viper's";
+                if (has('Toughness') && has('ConditionDamage') && has('Vitality') && has('ConditionDuration')) return "Trailblazer's";
+                if (has('Power') && has('Precision') && has('Vitality') && has('CritDamage')) {
+                    if (val('Power') === val('CritDamage') || val('CritDamage') > val('Precision')) return "Dragon's";
+                    return "Marauder";
+                }
+                if (has('Power') && has('BoonDuration') && has('Precision') && has('CritDamage')) return "Diviner's";
+                if (has('ConditionDamage') && has('Vitality') && has('BoonDuration') && has('ConditionDuration')) return "Ritualist's";
+                if (has('Toughness') && has('Healing') && has('Vitality') && has('BoonDuration')) return "Minstrel's";
+                if (has('Power') && has('ConditionDamage') && has('Precision') && has('CritDamage')) return "Grieving";
+                if (has('Toughness') && has('Healing') && has('Vitality') && has('ConditionDamage')) return "Plaguedoctor's";
+
+                // 3-stat combinations
+                if (has('Power') && has('Precision') && has('CritDamage')) {
+                    if (val('Power') >= val('Precision')) return "Berserker's";
+                    return "Assassin's";
+                }
+                if (has('Power') && has('Healing') && has('BoonDuration')) return "Harrier's";
+                if (has('Healing') && has('Power') && has('Toughness')) return "Cleric's";
+                if (has('ConditionDamage') && has('Toughness') && has('Vitality')) return "Dire";
+                if (has('ConditionDamage') && has('Precision') && has('Toughness')) return "Rabid";
+                if (has('ConditionDamage') && has('Power') && has('Vitality')) return "Carrion";
+                if (has('Power') && has('Toughness') && has('Vitality')) return "Soldier's";
+                if (has('Power') && has('Toughness') && has('CritDamage')) return "Cavalier's";
+                if (has('Toughness') && has('Power') && has('Precision')) return "Knight's";
+                if (has('Power') && has('Vitality') && has('CritDamage')) return "Valkyrie";
+                if (has('ConditionDamage') && has('Power') && has('Precision')) return "Sinister";
+                if (has('Healing') && has('Vitality') && has('ConditionDamage')) return "Shaman's";
+                if (has('Healing') && has('Precision') && has('Vitality')) return "Magi's";
+                if (has('Toughness') && has('Healing') && has('ConditionDamage')) return "Apothecary's";
+                if (has('Power') && has('Healing') && has('Precision')) return "Zealot's";
+                
+                return null;
+            }
+
+            const getPlannerId = (apiId, type) => {
+                let itm = UTILS.itemCache[apiId];
+                if (!itm || !window.PLANNER_DB || !window.PLANNER_DB[type]) return apiId;
+                let name = itm.name;
+                let match = window.PLANNER_DB[type].find(x => x.n === name);
+                return match ? match.id : apiId;
+            };
+
+            const plannerSlots = ['Helm','Shoulders','Coat','Gloves','Leggings','Boots','Backpack','Accessory1','Accessory2','Amulet','Ring1','Ring2','Relic','HelmAquatic','WeaponA1','WeaponA2','WeaponB1','WeaponB2','WeaponAquaticA','WeaponAquaticB'];
+            
+            plannerSlots.forEach(slot => {
+                equipObj[slot] = { id: null, stat: null, rune: null, rune2: null, infusion1: null, infusion2: null, infusion3: null };
+            });
+
+            plannerSlots.forEach(slot => {
+                let d = CURRENT_TAB_DATA.find(x => x.slot === slot);
+                if (d) {
+                    let it = UTILS.itemCache[d.id];
+                    
+                    if (slot.startsWith('Weapon') && it) {
+                        let wType = "";
+                        if (it.details && it.details.type) wType = it.details.type;
+                        else if (it.type) wType = it.type;
+                        wType = wType.toLowerCase().replace(/ /g, '');
+                        equipObj[slot].id = plannerWeps[wType] || null;
+                    }
+                    
+                    // --- STATS EXTRACTION ---
+                    let statName = null;
+                    let attrsToAnalyze = [];
+
+                    if (d.stats && d.stats.attributes) {
+                        attrsToAnalyze = Object.entries(d.stats.attributes).map(([k,v]) => ({ attribute: k, modifier: v }));
+                    } else if (it && it.details && it.details.infix_upgrade && it.details.infix_upgrade.attributes) {
+                        attrsToAnalyze = it.details.infix_upgrade.attributes;
+                    }
+                    
+                    statName = inferStat(attrsToAnalyze);
+
+                    if (!statName && it) {
+                        let lowerName = it.name.toLowerCase();
+                        for (let prefix in prefixToStat) {
+                            if (lowerName.includes(prefix)) { statName = prefixToStat[prefix]; break; }
+                        }
+                        if (!statName) {
+                            for (let s of commonStats) {
+                                if (lowerName.includes(s.toLowerCase())) { statName = s; break; }
+                            }
+                        }
+                    }
+                    equipObj[slot].stat = statName;
+                    
+                    // --- UPGRADES EXTRACTION (Runes/Sigils) ---
+                    let upgrades = d.upgrades ? [...d.upgrades] : [];
+                    if (upgrades.length === 0 && it && it.details && it.details.suffix_item_id) {
+                        upgrades.push(it.details.suffix_item_id);
+                        if (it.details.secondary_suffix_item_id) upgrades.push(it.details.secondary_suffix_item_id);
+                    }
+
+                    if (upgrades.length > 0) {
+                        let type1 = slot.startsWith('Weapon') ? 'sigils' : 'runes';
+                        equipObj[slot].rune = getPlannerId(upgrades[0], type1);
+                        
+                        if (upgrades.length > 1) {
+                            equipObj[slot].rune2 = getPlannerId(upgrades[1], type1);
+                        }
+                    }
+                    
+                    // --- INFUSIONS EXTRACTION ---
+                    if (d.infusions) {
+                        for(let i=0; i<d.infusions.length && i<3; i++) {
+                            let infItem = UTILS.itemCache[d.infusions[i]];
+                            let infName = null;
+                            if (infItem) {
+                                let attrs = infItem.details?.infix_upgrade?.attributes || [];
+                                let buff = infItem.details?.infix_upgrade?.buff?.description || infItem.description || "";
+                                
+                                let mainAttr = attrs.find(a => a.attribute !== 'AgonyResistance' && a.modifier > 0);
+                                if (mainAttr) {
+                                    let a = mainAttr.attribute;
+                                    if (a === 'Healing') infName = 'HealingPower';
+                                    else if (a === 'ConditionDuration') infName = 'Expertise';
+                                    else if (a === 'BoonDuration') infName = 'Concentration';
+                                    else if (a === 'CritDamage') infName = 'Ferocity';
+                                    else infName = a;
+                                }
+                                
+                                if (!infName && buff) {
+                                    let b = buff.toLowerCase();
+                                    if (b.includes('power')) infName = 'Power';
+                                    else if (b.includes('precision')) infName = 'Precision';
+                                    else if (b.includes('condition damage')) infName = 'ConditionDamage';
+                                    else if (b.includes('toughness')) infName = 'Toughness';
+                                    else if (b.includes('vitality')) infName = 'Vitality';
+                                    else if (b.includes('healing')) infName = 'HealingPower';
+                                    else if (b.includes('expertise') || b.includes('condition duration')) infName = 'Expertise';
+                                    else if (b.includes('concentration') || b.includes('boon duration')) infName = 'Concentration';
+                                    else if (b.includes('ferocity') || b.includes('critical damage')) infName = 'Ferocity';
+                                }
+                            }
+                            equipObj[slot]['infusion' + (i+1)] = infName;
+                        }
+                    }
+                }
+            });
+
+            const plannerJadeCores = [
+                { n: "Tier 10", id: 96613, vit: 235 },
+                { n: "Tier 9", id: 96070, vit: 211 },
+                { n: "Tier 8", id: 96299, vit: 188 },
+                { n: "Tier 7", id: 97020, vit: 165 },
+                { n: "Tier 6", id: 96467, vit: 141 },
+                { n: "Tier 5", id: 95864, vit: 118 },
+                { n: "Tier 4", id: 96628, vit: 94 },
+                { n: "Tier 3", id: 97284, vit: 70 },
+                { n: "Tier 2", id: 97041, vit: 47 },
+                { n: "Tier 1", id: 97339, vit: 23 }
+            ];
+            
+            let pc = CURRENT_TAB_DATA.find(x => x.slot === 'PowerCore');
+            let jId = null; let jVit = 0;
+            if (pc && UTILS.itemCache[pc.id]) {
+                let jName = UTILS.itemCache[pc.id].name;
+                let jMatch = plannerJadeCores.find(c => jName.includes(c.n));
+                if (jMatch) { jId = jMatch.id; jVit = jMatch.vit; }
+            }
+            equipObj['JadeBot'] = { id: jId, vit: jVit };
+            
+            let relicData = CURRENT_TAB_DATA.find(x => x.slot === 'Relic');
+            let relicId = null;
+            if (relicData) relicId = getPlannerId(relicData.id, 'relics');
+            equipObj['Relic'] = { id: null, stat: null, rune: relicId };
+
+            let traitsObj = [{spec:null, traits:[null,null,null]}, {spec:null, traits:[null,null,null]}, {spec:null, traits:[null,null,null]}];
+            let skillsObj = { land: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null }, water: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null } };
+            
+            let activeBuildEl = document.querySelector('#build-tabs .template-box.active');
+            let bTabId = activeBuildEl ? parseInt(activeBuildEl.innerText) : (fullData.active_build_tab || 1);
+            const bTab = fullData.build_tabs.find(t => t.tab === bTabId);
+
+            if (bTab && bTab.build) {
+                if (bTab.build.specializations) {
+                    bTab.build.specializations.forEach((sp, i) => {
+                        if (sp && sp.id && i < 3) {
+                            traitsObj[i].spec = sp.id;
+                            traitsObj[i].traits = [ sp.traits[0] || null, sp.traits[1] || null, sp.traits[2] || null ];
+                        }
+                    });
+                }
+                const mapSkills = (source, target) => {
+                    if (!source) return;
+                    target.Heal = source.heal || null;
+                    target.Utility1 = (source.utilities && source.utilities.length > 0) ? source.utilities[0] : null;
+                    target.Utility2 = (source.utilities && source.utilities.length > 1) ? source.utilities[1] : null;
+                    target.Utility3 = (source.utilities && source.utilities.length > 2) ? source.utilities[2] : null;
+                    target.Elite = source.elite || null;
+                };
+                mapSkills(bTab.build.skills, skillsObj.land);
+                mapSkills(bTab.build.aquatic_skills, skillsObj.water);
+            }
+
+            let plannerState = { name: buildName, profession: profession, equipment: equipObj, traits: traitsObj, skills: skillsObj };
+            let savedBuilds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}');
+            savedBuilds[buildName] = plannerState;
+            localStorage.setItem('gw2_planner_builds', JSON.stringify(savedBuilds));
+            
+            document.getElementById('save-modal').style.display = 'none';
+            window.showToast('Build saved to Planner!');
+        };
+
+        window.showToast = function(msg) {
+            const t = document.getElementById('toast-msg');
+            t.innerText = msg;
+            t.style.display = 'block';
+            setTimeout(() => { t.style.display = 'none'; }, 3000);
+        };
+
+        window.toggleEnv = function(env) {
+            if (env === 'land') CURRENT_TERRA_WSET = (CURRENT_TERRA_WSET === 1 ? 2 : 1);
+            else CURRENT_AQUA_WSET = (CURRENT_AQUA_WSET === 1 ? 2 : 1);
+            CURRENT_ENV = env;
+            window.updateView();
+        };
+
+        window.setEnv = function(env) { CURRENT_ENV = env; window.updateView(); };
+
+        const UTILS = {
+            itemCache: {}, statCache: {}, activeRunes: {},
+            async fetchSafe(url) { try { const r = await fetch(url); return (r && r.ok) ? await r.json() : null; } catch(e) { return null; } },
+            getAttrs(slot, item) { if (slot?.stats?.attributes) return Object.entries(slot.stats.attributes).map(([k,v]) => ({ attribute: k, modifier: v })); return item?.details?.infix_upgrade?.attributes || []; },
+            cleanText(t) { return t ? t.replace(/<[^>]*>?/gm, '').replace(/[\r\n]+/g, '<br />') : ""; },
+            renderFacts(facts) {
+                if (!facts) return '';
+                return facts.map(f => {
+                    let fText = "", dur = f.duration ? `(${f.duration}s)` : '';
+                    if (f.type === 'Buff' || f.type === 'Condition' || f.status) {
+                        fText = `<span style="color:#eee;">${f.status || f.text || f.type}${dur}</span>${f.description ? ': ' + f.description : ''}`;
+                    }
+                    else if (f.type === 'Damage') {
+                        // Extract current Power from the UI attributes display
+                        const powerEl = Array.from(document.querySelectorAll('.attr-item')).find(el => el.innerHTML.includes('att_power.png'));
+                        const powerVal = powerEl ? parseInt(powerEl.querySelector('.attr-val').innerText.replace(/,/g, '')) || 1000 : 1000;
+                        
+                        // Standard GW2 Tooltip Damage Formula: (Weapon Strength * Power * Multiplier) / Armor
+                        // Baseline Armor for tooltips is assumed at 2600. Weapon Strength is normalized to 1000.
+                        let calculatedDmg = Math.round((f.dmg_multiplier * powerVal * 1000) / 2600);
+                        
+                        fText = `Damage: ${(f.hit_count > 1 ? f.hit_count + 'x ' : '')}<span style="color:#ffaa00;">${calculatedDmg || "Calculated"}</span>`;
+                    }
+                    else if (f.type === 'Recharge') fText = `Recharge: ${f.value}s`;
+                    else fText = `${f.text || f.type}${dur}${f.value !== undefined ? ': ' + f.value : ''}`;
+                    
+                    return `<div style="display:flex; align-items:center; gap:6px; margin-top:4px; font-size:11px; color:#aaa; white-space:normal; word-wrap:break-word;">${f.icon ? `<img src="${f.icon}" style="width:14px; height:14px; flex-shrink:0;" />` : ''}<span>${fText}</span></div>`;
+                }).join('');
+            },
+            generateSkillTooltip(skill) {
+                let h = `<div style="text-transform:none; font-family:sans-serif; width:280px; line-height:1.4; color:#eee; padding:2px; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;">`;
+                h += `<div style="color:#FFD700; font-size:15px; font-weight:bold; margin-bottom:4px;">${skill.name}</div>`;
+                if (skill.description) h += `<div style="color:#eee; font-size:11px; margin-bottom:8px;">${this.cleanText(skill.description)}</div>`;
+                h += this.renderFacts(skill.facts);
+                const linkedId = skill.flip_skill || skill.next_chain;
+                if (linkedId && this.itemCache['skill_' + linkedId]) {
+                    const l = this.itemCache['skill_' + linkedId];
+                    h += `<div style="margin-top:10px; border-top:1px solid #4a3b2a; padding-top:8px;"><div style="color:#FFD700; font-weight:bold; font-size:12px;">${l.name}</div>${this.renderFacts(l.facts)}</div>`;
+                }
+                h += `</div>`; return h;
+            },
+            generateTooltip(item, slot) {
+                const colors = { Legendary:'#4C139D', Ascended:'#FB3E8D', Exotic:'#FFA405', Rare:'#FCD00B', Masterwork:'#1A9306', Fine:'#62A4DA' };
+                let h = `<div style="text-transform:none; font-family:sans-serif; width:fit-content; min-width:220px; line-height:1.3; padding:2px;">`;
+                h += `<div style="color:${colors[item.rarity] || '#eee'}; font-size:16px; font-weight:bold; margin-bottom:1px; white-space:nowrap;">${item.name}</div>`;
+                h += `<div style="color:#eee; font-size:11px; margin-bottom:6px; text-transform:capitalize;">${item.rarity} ${item.details?.weight_class || ""} ${(item.details?.type || item.type || "").replace(/([A-Z])/g, ' $1').trim()}</div>`;
+                if (slot?.stats) h += `<div style="color:#00ff00; font-weight:bold; font-size:12px;">${this.statCache[slot.stats.id] || "Stats"}</div>`;
+                this.getAttrs(slot, item).forEach(a => { let lbl = String(a.attribute).replace(/([A-Z])/g, ' $1').trim(); if (lbl === 'Crit Damage') lbl = 'Ferocity'; if (lbl !== 'Agony Resistance') h += `<div style="color:#00ff00; font-size:11px;">+${a.modifier} ${lbl}</div>`; });
+                if (slot?.upgrades) {
+                    slot.upgrades.forEach(uId => {
+                        const u = this.itemCache[uId];
+                        if (u) {
+                            h += `<div style="margin-top:6px; color:#62A4DA; font-size:12px;"><img src="${u.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:4px;" /> ${u.name}</div>`;
+                            if (u.details?.bonuses) u.details.bonuses.forEach((b, i) => h += `<div style="color:${i < (this.activeRunes[uId] || 0) ? '#62A4DA' : '#555'}; font-size:10px; padding-left:16px;">(${i+1}): ${b}</div>`);
+                            else h += `<div style="color:#62A4DA; font-size:10px; padding-left:16px;">${this.cleanText(u.details?.infix_upgrade?.buff?.description || u.description)}</div>`;
+                        }
+                    });
+                }
+                if (slot?.infusions) {
+                    slot.infusions.forEach(iId => {
+                        const i = this.itemCache[iId];
+                        if (i) {
+                            let s = i.details?.infix_upgrade?.attributes?.map(a => `+${a.modifier} ${a.attribute.replace(/([A-Z])/g, ' $1')}`).join(', ') || "";
+                            h += `<div style="margin-top:5px; color:#95c5ff; font-size:12px;"><img src="${i.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:5px;" /> ${i.name} <small>(${s})</small></div>`;
+                        }
+                    });
+                }
+                let lore = item.description || item.details?.description || item.details?.infix_upgrade?.buff?.description || "";
+                if (lore) h += `<div style="margin-top:10px; color:#aaa; font-style:italic; font-size:11px; border-top:1px solid #444; padding-top:4px;">"${this.cleanText(lore)}"</div>`;
+                h += `</div>`; return h;
+            }
+        };
+
+        async function init() {
+            // Apply UI scale on load
+            const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+            if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+            // Pre-load planner db for translation
+            window.PLANNER_DB = await UTILS.fetchSafe('https://gw2ps.local/Data/planner_db.json');
+
+            const activeKey = localStorage.getItem('gw2_active_key'); if (!activeKey) return;
+            const res = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?access_token=${activeKey}`);
+            if (res) { 
+                const s = document.getElementById('char-select'); 
+                s.innerHTML = res.sort().map(n => `<option value="${n}">${n}</option>`).join(''); 
+                s.onchange = (e) => {
+                    sessionStorage.setItem('gw2_session_char', e.target.value);
+                    loadChar(e.target.value); 
+                };
+                
+                let charToLoad = sessionStorage.getItem('gw2_session_char');
+                if (!charToLoad) charToLoad = settings.defaultChar;
+                if (!charToLoad || !res.includes(charToLoad)) charToLoad = res[0];
+                
+                s.value = charToLoad;
+                loadChar(charToLoad); 
+            }
+        }
+
+        async function loadChar(name) {
+            const activeKey = localStorage.getItem('gw2_active_key');
+            document.getElementById('loader').style.display = 'flex'; document.getElementById('hero-ui').style.display = 'none';
+            
+            // Explicitly clear temporary memory before loading new character
+            UTILS.itemCache = {};
+            UTILS.statCache = {};
+            UTILS.activeRunes = {};
+            
+            fullData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}?access_token=${activeKey}`);
+            if (!fullData) return;
+            const [tabs, buildTabs, prof] = await Promise.all([
+                UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/equipmenttabs?tabs=all&access_token=${activeKey}`),
+                UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/buildtabs?tabs=all&access_token=${activeKey}`),
+                UTILS.fetchSafe(`https://api.guildwars2.com/v2/professions/${fullData.profession}`)
+            ]);
+            fullData.full_tabs = Array.isArray(tabs) ? tabs : [];
+            fullData.build_tabs = Array.isArray(buildTabs) ? buildTabs : [];
+            fullData.professionData = prof;
+            
+            let items = [], stats = [], skills = [], specIds = [], traitIds = [];
+            const addEq = (eq) => eq?.forEach(e => { items.push(e.id, ...(e.upgrades || []), ...(e.infusions || [])); if (e.stats) stats.push(e.stats.id); });
+            addEq(fullData.equipment); fullData.full_tabs.forEach(t => addEq(t.equipment));
+            
+            fullData.build_tabs.forEach(t => { 
+                if (t.build?.skills) skills.push(t.build.skills.heal, ...(t.build.skills.utilities || []), t.build.skills.elite);
+                if (t.build?.aquatic_skills) skills.push(t.build.aquatic_skills.heal, ...(t.build.aquatic_skills.utilities || []), t.build.aquatic_skills.elite);
+                if (t.build?.specializations) {
+                    t.build.specializations.forEach(sp => {
+                        if (sp && sp.id) { specIds.push(sp.id); if (sp.traits) traitIds.push(...sp.traits.filter(tr => tr)); }
+                    });
+                }
+            });
+            
+            if (prof?.weapons) Object.values(prof.weapons).forEach(w => w.skills?.forEach(s => skills.push(s.id)));
+            const uniqueStats = [...new Set(stats)].filter(id => id);
+            if (uniqueStats.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStats.join(',')}`); sData?.forEach(s => UTILS.statCache[s.id] = s.name); }
+            const uniqueItems = [...new Set(items)].filter(id => id && !UTILS.itemCache[id]);
+            for (let i = 0; i < uniqueItems.length; i += 100) { const iData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${uniqueItems.slice(i, i + 100).join(',')}`); iData?.forEach(it => UTILS.itemCache[it.id] = it); }
+            
+            const uniqueSpecs = [...new Set(specIds)];
+            if (uniqueSpecs.length) {
+                const spData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/specializations?ids=${uniqueSpecs.join(',')}`);
+                spData?.forEach(sp => { UTILS.itemCache['spec_' + sp.id] = sp; if (sp.minor_traits) traitIds.push(...sp.minor_traits); });
+            }
+            const uniqueTraits = [...new Set(traitIds)].filter(id => id);
+            if (uniqueTraits.length) {
+                for (let i = 0; i < uniqueTraits.length; i += 100) {
+                    const trData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/traits?ids=${uniqueTraits.slice(i, i + 100).join(',')}`);
+                    trData?.forEach(tr => UTILS.itemCache['trait_' + tr.id] = tr);
+                }
+            }
+            const uniqueSkills = [...new Set(skills)].filter(id => id);
+            let fq = [];
+            for (let i = 0; i < uniqueSkills.length; i += 100) { 
+                const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${uniqueSkills.slice(i, i + 100).join(',')}`); 
+                sData?.forEach(sk => { UTILS.itemCache['skill_' + sk.id] = sk; if (sk.flip_skill) fq.push(sk.flip_skill); if (sk.next_chain) fq.push(sk.next_chain); }); 
+            }
+            const extra = [...new Set(fq)].filter(id => id && !UTILS.itemCache['skill_' + id]);
+            if (extra.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${extra.join(',')}`); sData?.forEach(sk => UTILS.itemCache['skill_' + sk.id] = sk); }
+            
+            document.getElementById('display-name').innerText = name; 
+            document.getElementById('display-level').innerText = ` [LVL ${fullData.level || '??'}] `;
+            document.getElementById('display-class').innerText = fullData.profession;
+            CURRENT_ENV = 'land'; CURRENT_TERRA_WSET = 1; CURRENT_AQUA_WSET = 1;
+            renderTemplates();
+            window.renderBuildTabs();
+            document.getElementById('loader').style.display = 'none'; document.getElementById('hero-ui').style.display = 'block';
+        }
+
+        function renderTemplates() {
+            const container = document.getElementById('template-tabs'); container.innerHTML = '';
+            const activeTabId = fullData.active_equipment_tab || 1;
+            for (let i = 1; i <= 9; i++) {
+                const box = document.createElement('div'); box.className = 'template-box'; box.innerText = i;
+                const t = fullData.full_tabs.find(x => x.tab === i);
+                if (t) {
+                    box.classList.add('unlocked');
+                    if ((t.equipment || []).some(e => !['Sickle','Axe','Pick','JadeBot','PowerCore','SensoryArray','ServiceChip','HelmAquatic','WeaponAquaticA','WeaponAquaticB'].includes(e.slot))) box.classList.add('has-gear');
+                    if (i === activeTabId) box.classList.add('active');
+                    box.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: t.name || 'Equipment ' + i, x: e.clientX, y: e.clientY}, '*');
+                    box.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+                    box.onclick = () => { document.querySelectorAll('#template-tabs .template-box').forEach(b => b.classList.remove('active')); box.classList.add('active'); loadTab(i); };
+                }
+                container.appendChild(box);
+            }
+            loadTab(activeTabId);
+        }
+
+        function loadTab(tabId) {
+            const t = fullData.full_tabs.find(x => x.tab === tabId);
+            CURRENT_TAB_DATA = t ? [...(t.equipment || [])] : [];
+            const shared = ['Sickle','Axe','Pick','JadeBot','PowerCore','SensoryArray','ServiceChip','Relic'];
+            (fullData.equipment || []).forEach(b => { if (shared.includes(b.slot) && !CURRENT_TAB_DATA.find(a => a.slot === b.slot)) CURRENT_TAB_DATA.push(b); });
+            
+            const emptyWiki = {
+                Amulet: "https://wiki.guildwars2.com/images/4/40/Amulet_slot.png",
+                WeaponAquaticA: "https://wiki.guildwars2.com/images/3/3f/Aquatic_weapon_slot.png",
+                WeaponAquaticB: "https://wiki.guildwars2.com/images/3/3f/Aquatic_weapon_slot.png",
+                Backpack: "https://wiki.guildwars2.com/images/8/89/Back_slot.png",
+                HelmAquatic: "https://wiki.guildwars2.com/images/8/88/Breathing_apparatus_slot.png",
+                Coat: "https://wiki.guildwars2.com/images/2/2c/Chest_slot.png",
+                Boots: "https://wiki.guildwars2.com/images/8/84/Feet_slot.png",
+                Sickle: "https://wiki.guildwars2.com/images/f/f1/Foraging_slot.png",
+                Gloves: "https://wiki.guildwars2.com/images/4/45/Hand_slot.png",
+                Helm: "https://wiki.guildwars2.com/images/3/35/Head_slot.png",
+                Ring1: "https://wiki.guildwars2.com/images/8/89/Left_ring_slot.png",
+                Ring2: "https://wiki.guildwars2.com/images/d/de/Right_ring_slot.png",
+                Leggings: "https://wiki.guildwars2.com/images/0/0c/Leg_slot.png",
+                Axe: "https://wiki.guildwars2.com/images/b/bb/Logging_slot.png",
+                Pick: "https://wiki.guildwars2.com/images/1/1c/Mining_slot.png",
+                PowerCore: "https://wiki.guildwars2.com/images/9/99/Power_Core_slot.png",
+                Relic: "https://wiki.guildwars2.com/images/4/46/Relic_slot.png",
+                SensoryArray: "https://wiki.guildwars2.com/images/6/6e/Sensory_Array_slot.png",
+                ServiceChip: "https://wiki.guildwars2.com/images/f/f7/Service_Chip_slot.png",
+                WeaponA2: "https://wiki.guildwars2.com/images/d/d9/Shield_slot.png",
+                WeaponB2: "https://wiki.guildwars2.com/images/d/d9/Shield_slot.png",
+                Shoulders: "https://wiki.guildwars2.com/images/c/c5/Shoulder_slot.png",
+                WeaponA1: "https://wiki.guildwars2.com/images/d/de/Sword_slot.png",
+                WeaponB1: "https://wiki.guildwars2.com/images/d/de/Sword_slot.png"
+            };
+
+            const draw = (id, slots) => {
+                const el = document.getElementById(id); el.innerHTML = '';
+                slots.forEach(s => {
+                    const b = document.createElement('div'); b.className = 'item-slot';
+                    b.setAttribute('data-slot', s); // For Planner interception
+                    if (s === 'JadeBot') { const img = document.createElement('img'); img.src = 'https://wiki.guildwars2.com/images/b/bf/Jade_Bot_%28skin%29.png'; img.style.opacity = "1"; b.appendChild(img); el.appendChild(b); return; }
+                    const d = CURRENT_TAB_DATA.find(x => x.slot === s);
+                    if (d && UTILS.itemCache[d.id]) {
+                        const it = UTILS.itemCache[d.id]; b.classList.add(`rarity-${it.rarity}`);
+                        const img = document.createElement('img'); img.src = it.icon;
+                        img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(it, d), x: e.clientX, y: e.clientY}, '*');
+                        img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                        img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(it.name)}`, '_blank');
+                        b.appendChild(img);
+                    } else {
+                        if (emptyWiki[s]) {
+                            const img = document.createElement('img'); 
+                            img.src = emptyWiki[s];
+                            img.style.opacity = "0.5";
+                            b.appendChild(img);
+                        } else {
+                            b.style.opacity = "0.1";
+                        }
+                    }
+                    el.appendChild(b);
+                });
+            };
+            draw('row-head',['Helm','Shoulders']); draw('row-torso',['Coat','Gloves']); draw('row-legs',['Leggings','Boots']);
+            draw('row-weapon1',['WeaponA1','WeaponA2']); draw('row-weapon2',['WeaponB1','WeaponB2']);
+            draw('row-trinket1',['Backpack','Accessory1','Accessory2','Relic']); draw('row-trinket2',['Amulet','Ring1','Ring2']);
+            draw('row-breather',['HelmAquatic']); draw('row-aquaticA',['WeaponAquaticA']); draw('row-aquaticB',['WeaponAquaticB']);
+            draw('row-tools',['Sickle','Axe','Pick']); draw('row-jade',['JadeBot','PowerCore','SensoryArray','ServiceChip']);
+            window.updateView();
+        }
+
+        window.updateView = function() {
+            document.getElementById('row-weapon1').style.opacity = (CURRENT_ENV === 'land' && CURRENT_TERRA_WSET === 1) ? '1' : '0.4';
+            document.getElementById('row-weapon2').style.opacity = (CURRENT_ENV === 'land' && CURRENT_TERRA_WSET === 2) ? '1' : '0.4';
+            document.getElementById('row-aquaticA').style.opacity = (CURRENT_ENV === 'water' && CURRENT_AQUA_WSET === 1) ? '1' : '0.4';
+            document.getElementById('row-aquaticB').style.opacity = (CURRENT_ENV === 'water' && CURRENT_AQUA_WSET === 2) ? '1' : '0.4';
+            document.getElementById('btn-env-land').style.opacity = CURRENT_ENV === 'land' ? '1' : '0.3';
+            document.getElementById('btn-env-water').style.opacity = CURRENT_ENV === 'water' ? '1' : '0.3';
+
+            let activeItems = [];
+            const twoHanded = ['greatsword','hammer','longbow','rifle','shortbow','staff','harpoon','speargun','harpoongun','trident','spear'];
+
+            if (CURRENT_ENV === 'land') {
+                let mSlot = CURRENT_TERRA_WSET === 1 ? 'WeaponA1' : 'WeaponB1';
+                let oSlot = CURRENT_TERRA_WSET === 1 ? 'WeaponA2' : 'WeaponB2';
+                let fallbackM = CURRENT_TERRA_WSET === 1 ? 'WeaponB1' : 'WeaponA1';
+                let fallbackO = CURRENT_TERRA_WSET === 1 ? 'WeaponB2' : 'WeaponA2';
+                let mhRaw = CURRENT_TAB_DATA.find(x => x.slot === mSlot), ohRaw = CURRENT_TAB_DATA.find(x => x.slot === oSlot);
+                let mh = mhRaw, oh = ohRaw;
+                if (!mh) {
+                    let fallMh = CURRENT_TAB_DATA.find(x => x.slot === fallbackM);
+                    if (fallMh && UTILS.itemCache[fallMh.id]) {
+                        let fType = (UTILS.itemCache[fallMh.id].details?.type || UTILS.itemCache[fallMh.id].type || "").toLowerCase().replace(/ /g, '');
+                        if (!twoHanded.includes(fType)) mh = fallMh;
+                    }
+                }
+                if (!oh) {
+                    let fallOh = CURRENT_TAB_DATA.find(x => x.slot === fallbackO);
+                    if (fallOh) {
+                        let activeMhType = "";
+                        if (mh && UTILS.itemCache[mh.id]) activeMhType = (UTILS.itemCache[mh.id].details?.type || UTILS.itemCache[mh.id].type || "").toLowerCase().replace(/ /g, '');
+                        if (!twoHanded.includes(activeMhType)) oh = fallOh;
+                    }
+                }
+                if (mh) activeItems.push({ item: mh, isMain: true });
+                if (oh) activeItems.push({ item: oh, isMain: false });
+            } else {
+                let aSlot = CURRENT_AQUA_WSET === 1 ? 'WeaponAquaticA' : 'WeaponAquaticB';
+                let aq = CURRENT_TAB_DATA.find(x => x.slot === aSlot) || CURRENT_TAB_DATA.find(x => x.slot === (CURRENT_AQUA_WSET === 1 ? 'WeaponAquaticB' : 'WeaponAquaticA'));
+                if (aq) activeItems.push({ item: aq, isMain: true });
+            }
+
+            let validSlots = ['Shoulders','Coat','Gloves','Leggings','Boots','Backpack','Accessory1','Accessory2','Amulet','Ring1','Ring2','Relic','Sickle','Axe','Pick','JadeBot','PowerCore','SensoryArray','ServiceChip'];
+            if (CURRENT_ENV === 'water') validSlots.push('HelmAquatic'); else validSlots.push('Helm');
+
+            let s = { Power:1000, Precision:1000, Toughness:1000, Vitality:1000, ConditionDamage:0, HealingPower:0, Ferocity:0, Concentration:0, Expertise:0, Armor:0, AgonyResistance:0 };
+            UTILS.activeRunes = {};
+            CURRENT_TAB_DATA.forEach(d => {
+                let isActiveWep = activeItems.some(aw => aw.item.id === d.id && aw.item.slot === d.slot);
+                if (!validSlots.includes(d.slot) && !isActiveWep) return;
+                const it = UTILS.itemCache[d.id]; if (!it) return;
+                UTILS.getAttrs(d, it).forEach(a => {
+                    let k = a.attribute; if (k === 'CritDamage') k = 'Ferocity'; if (k === 'Healing') k = 'HealingPower'; if (k === 'BoonDuration') k = 'Concentration'; if (k === 'ConditionDuration') k = 'Expertise';
+                    if (s[k] !== undefined && k !== 'AgonyResistance') s[k] += a.modifier;
+                });
+                if (it.details?.defense) s.Armor += it.details.defense;
+                d.infusions?.forEach(iId => { UTILS.itemCache[iId]?.details?.infix_upgrade?.attributes?.forEach(a => { if (a.attribute === 'AgonyResistance') s.AgonyResistance += a.modifier; }); });
+                d.upgrades?.forEach(uId => { if (UTILS.itemCache[uId]?.details?.type === "Rune") UTILS.activeRunes[uId] = (UTILS.activeRunes[uId] || 0) + 1; });
+            });
+            const finalHealth = (s.Vitality * 10) + ({ "Warrior":9212, "Necromancer":9212, "Revenant":5922, "Engineer":5922, "Ranger":5922, "Mesmer":5922, "Guardian":1645, "Thief":1645, "Elementalist":1645 }[fullData.profession] || 5922);
+            const attrs = [ {n:'Power',i:'att_power.png',v:s.Power},{n:'',i:'',v:''},{n:'Toughness',i:'att_toughness.png',v:s.Toughness},{n:'Armor',i:'att_armor.png',v:s.Armor+s.Toughness},{n:'Vitality',i:'att_vitality.png',v:s.Vitality},{n:'Health',i:'att_health.png',v:finalHealth.toLocaleString()},{n:'Precision',i:'att_precision.png',v:s.Precision},{n:'Crit Chance',i:'att_critical_chance.png',v:(5+(s.Precision-1000)/21).toFixed(2)+'%'},{n:'Ferocity',i:'att_ferocity.png',v:s.Ferocity},{n:'Crit Damage',i:'att_critical_damage.png',v:(150+s.Ferocity/15).toFixed(1)+'%'},{n:'Condition Damage',i:'att_condition_damage.png',v:s.ConditionDamage},{n:'Healing Power',i:'att_healing_power.png',v:s.HealingPower},{n:'Expertise',i:'att_expertise.png',v:s.Expertise},{n:'Condi Duration',i:'condition_duration.png',v:(s.Expertise/15).toFixed(2)+'%'},{n:'Concentration',i:'att_concentration.png',v:s.Concentration},{n:'Boon Duration',i:'att_boon_duration.png',v:(s.Concentration / 15).toFixed(2)+'%'},{n:'Agony Resistance',i:'att_agony_resistance.png',v:s.AgonyResistance},{n:'Magic Find',i:'att_magic_find.png',v:'---'} ];
+            document.getElementById('attr-display').innerHTML = attrs.map(a => `<div class="attr-item">${a.i ? `<img src="https://gw2ps.local/Assets/Icons/${a.i}" class="attr-icon" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${a.n}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"/><span class="attr-val">${a.v}</span>` : ''}</div>`).join('');
+            window.drawSkills(activeItems);
+        };
+
+        window.drawSkills = function(activeItems) {
+            const uRow = document.getElementById('utility-skills'); uRow.innerHTML = '';
+            const build = (fullData.build_tabs?.find(t => t.tab === (fullData.active_build_tab || 1)) || fullData.build_tabs?.[0])?.build;
+            let bs = build?.skills || {}; if (CURRENT_ENV === 'water' && build?.aquatic_skills && Object.keys(build.aquatic_skills).length > 0) bs = build.aquatic_skills;
+            [bs.heal, ...(bs.utilities || []), bs.elite].forEach(id => {
+                const b = document.createElement('div'); b.className = 'skill-slot';
+                if (id && UTILS.itemCache['skill_'+id]) {
+                    const sk = UTILS.itemCache['skill_'+id]; const img = document.createElement('img'); img.src = sk.icon;
+                    img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(sk), x: e.clientX, y: e.clientY}, '*');
+                    img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                    img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sk.name)}`, '_blank');
+                    b.appendChild(img);
+                } else b.style.opacity = '0.1'; uRow.appendChild(b);
+            });
+            const wRow = document.getElementById('weapon-skills'); wRow.innerHTML = '';
+            let ws = [null,null,null,null,null];
+            const mhObj = activeItems.find(x => x.isMain), ohObj = activeItems.find(x => !x.isMain), prof = fullData.professionData;
+            if (prof?.weapons) {
+                const twoHanded = ['greatsword','hammer','longbow','rifle','shortbow','staff','harpoon','speargun','harpoongun','trident','spear'];
+                const getWepData = (itemObj) => {
+                    if (!itemObj) return null; const it = UTILS.itemCache[itemObj.item.id]; if (!it) return null;
+                    let b = (it.details?.type || it.type || "").toLowerCase().replace(/ /g, '');
+                    let aliases = [b]; if (b === 'spear' || b === 'harpoon') aliases.push('spear', 'harpoon');
+                    if (b === 'speargun' || b === 'harpoongun') aliases.push('speargun', 'harpoongun', 'harpoon-gun');
+                    if (b === 'shortbow') aliases.push('shortbow'); if (b === 'longbow') aliases.push('longbow');
+                    let matchedKey = null; for (let alias of aliases) { matchedKey = Object.keys(prof.weapons).find(k => k.toLowerCase().replace(/ /g, '') === alias); if (matchedKey) break; }
+                    return matchedKey ? { data: prof.weapons[matchedKey], type: matchedKey.toLowerCase().replace(/ /g, '') } : null;
+                };
+                const mhWep = getWepData(mhObj); if (mhWep) {
+                    const is2H = twoHanded.includes(mhWep.type);
+                    mhWep.data.skills?.forEach(s => { if (s.slot?.startsWith('Weapon_')) { const n = parseInt(s.slot.split('_')[1]); if (n >= 1 && (is2H ? n <= 5 : n <= 3)) ws[n-1] = s.id; } });
+                }
+                const ohWep = getWepData(ohObj); if (ohWep) {
+                    ohWep.data.skills?.forEach(s => { if (s.slot?.startsWith('Weapon_')) { const n = parseInt(s.slot.split('_')[1]); if (n >= 4 && n <= 5) ws[n-1] = s.id; } });
+                }
+            }
+            ws.forEach(id => {
+                const b = document.createElement('div'); b.className = 'skill-slot';
+                if (id && UTILS.itemCache['skill_'+id]) {
+                    const sk = UTILS.itemCache['skill_'+id]; const img = document.createElement('img'); img.src = sk.icon;
+                    img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(sk), x: e.clientX, y: e.clientY}, '*');
+                    img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                    img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sk.name)}`, '_blank');
+                    b.appendChild(img);
+                } else b.style.opacity = '0.1'; wRow.appendChild(b);
+            });
+        };
+
+        window.renderBuildTabs = function() {
+            const container = document.getElementById('build-tabs'); container.innerHTML = '';
+            const activeTabId = fullData.active_build_tab || 1;
+            for (let i = 1; i <= 9; i++) {
+                const box = document.createElement('div'); box.className = 'template-box'; box.innerText = i;
+                const t = fullData.build_tabs.find(x => x.tab === i);
+                if (t) {
+                    box.classList.add('unlocked'); if (t.build?.specializations?.some(s => s && s.id)) box.classList.add('has-gear');
+                    if (i === activeTabId) box.classList.add('active');
+                    box.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: t.build?.name || t.name || 'Build ' + i, x: e.clientX, y: e.clientY}, '*');
+                    box.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+                    box.onclick = () => { document.querySelectorAll('#build-tabs .template-box').forEach(b => b.classList.remove('active')); box.classList.add('active'); window.renderBuild(i); };
+                }
+                container.appendChild(box);
+            }
+            window.renderBuild(activeTabId);
+        };
+
+        window.renderBuild = function(tabId) {
+            const container = document.getElementById('build-display'); container.innerHTML = '';
+            const t = fullData.build_tabs.find(x => x.tab === tabId);
+            const specs = t?.build?.specializations || [null, null, null];
+            specs.forEach(sp => {
+                const row = document.createElement('div'); row.style.height = '54px'; row.style.border = '1px solid #332a1e'; row.style.position = 'relative'; row.style.display = 'flex'; row.style.alignItems = 'center'; row.style.marginBottom = '6px';
+                if (sp && sp.id && UTILS.itemCache['spec_' + sp.id]) {
+                    const specData = UTILS.itemCache['spec_' + sp.id];
+                    row.style.backgroundImage = `url(${specData.background})`; row.style.backgroundSize = 'cover'; row.style.backgroundPosition = 'center';
+                    const overlay = document.createElement('div'); overlay.style.position = 'absolute'; overlay.style.inset = '0'; overlay.style.background = 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 100%)'; row.appendChild(overlay);
+                    const content = document.createElement('div'); content.style.position = 'relative'; content.style.zIndex = '2'; content.style.display = 'flex'; content.style.alignItems = 'center'; content.style.gap = '8px'; content.style.padding = '0 10px'; content.style.height = '100%';
+                    const sIcon = document.createElement('img'); sIcon.src = specData.icon; sIcon.style.width = '38px'; sIcon.style.height = '38px'; sIcon.style.borderRadius = '50%'; sIcon.style.border = '1px solid #e2c07d'; sIcon.style.cursor = 'help';
+                    sIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(specData), x: e.clientX, y: e.clientY}, '*');
+                    sIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                    sIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(specData.name)}`, '_blank');
+                    content.appendChild(sIcon);
+                    const minorTraits = specData.minor_traits || [], majorTraits = sp.traits || [];
+                    for (let i=0; i<3; i++) {
+                        if (minorTraits[i] && UTILS.itemCache['trait_' + minorTraits[i]]) {
+                            const tr = UTILS.itemCache['trait_' + minorTraits[i]];
+                            const tIcon = document.createElement('img'); tIcon.src = tr.icon;
+                            tIcon.style.width = '24px'; tIcon.style.height = '24px'; tIcon.style.borderRadius = '50%'; tIcon.style.border = '1px solid #4a3b2a'; tIcon.style.cursor = 'help';
+                            tIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(tr), x: e.clientX, y: e.clientY}, '*');
+                            tIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                            tIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(tr.name)}`, '_blank');
+                            content.appendChild(tIcon);
+                        } else { const empty = document.createElement('div'); empty.style.width = '24px'; empty.style.height = '24px'; content.appendChild(empty); }
+                        if (majorTraits[i] && UTILS.itemCache['trait_' + majorTraits[i]]) {
+                            const tr = UTILS.itemCache['trait_' + majorTraits[i]];
+                            const tIcon = document.createElement('img'); tIcon.src = tr.icon;
+                            tIcon.style.width = '30px'; tIcon.style.height = '30px'; tIcon.style.border = '1px solid #332a1e'; tIcon.style.cursor = 'help';
+                            tIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(tr), x: e.clientX, y: e.clientY}, '*');
+                            tIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
+                            tIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(tr.name)}`, '_blank');
+                            content.appendChild(tIcon);
+                        } else { const empty = document.createElement('div'); empty.style.width = '30px'; empty.style.height = '30px'; empty.style.border = '1px solid #332a1e'; empty.style.background = 'rgba(0,0,0,0.5)'; content.appendChild(empty); }
+                    }
+                    row.appendChild(content);
+                } else row.style.background = 'rgba(0,0,0,0.5)'; container.appendChild(row);
+            });
+        };
+        window.addEventListener('message', (e) => { 
+                if (e.data.action === 'switchAccount') init(); 
+                if (e.data.action === 'preferredCharChanged') {
+                    const sel = document.getElementById('char-select');
+                    if(sel && e.data.value) {
+                        sessionStorage.setItem('gw2_session_char', e.data.value);
+                        sel.value = e.data.value;
+                        loadChar(e.data.value);
+                    }
+                }
+            });
+        init();
+        /*]]>*/
+		</script>
+		<script src="modules/build_planner.js"></script>
+	</body>
+</html>

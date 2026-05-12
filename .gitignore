@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userprefs
+*.vcmeta
+*.log
+
+# Project specific
+temp/
+
+# User-specific files
+.idea/
+.vscode/
+
+# Build results
+[Aa]ppHost.exe
+[Cc]omHost.dll
+*.pdb
+*.config
+*.json.user
+
+# WebView2
+*.WebView2/
+EBWebView/

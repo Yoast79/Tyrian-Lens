@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body { 
+				margin: 0; background: transparent; padding: 20px; color: #e2c07d; 
+				font-family: "Crimson Text", serif; text-transform: uppercase; 
+				display: flex; flex-direction: column; height: 100vh; overflow-y: auto; 
+			}
+
+			/* Styled Scrollbar */
+			body::-webkit-scrollbar { width: 6px; }
+			body::-webkit-scrollbar-track { background: rgba(10, 8, 5, 0.5); }
+			body::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			body::-webkit-scrollbar-thumb:hover { background: #e2c07d; }
+
+			/* Search Bar Container */
+			.search-container { position: sticky; top: -20px; background: #0a0805; padding: 10px 0; z-index: 10; margin-bottom: 15px; border-bottom: 1px solid #4a3b2a; }
+			.search-wrapper { position: relative; display: flex; align-items: center; }
+			#marker-search {
+				width: 100%; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d;
+				padding: 8px 35px 8px 10px; font-family: "Crimson Text", serif; font-size: 14px;
+				outline: none; text-transform: uppercase;
+			}
+			#marker-search:focus { border-color: #e2c07d; }
+			.clear-search {
+				position: absolute; right: 10px; cursor: pointer; color: #8a7a5f;
+				font-weight: bold; font-size: 14px; display: none;
+			}
+			.clear-search:hover { color: #ff4444; }
+
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin: 15px 0 10px; padding-bottom: 5px; letter-spacing: 1px; }
+
+			/* Category Styling */
+			.category-header { font-size: 14px; font-weight: bold; cursor: pointer; padding: 8px 0; display: flex; align-items: center; border-bottom: 1px solid rgba(74, 59, 42, 0.3); letter-spacing: 1px; }
+			.category-header::before { content: '▶'; font-size: 10px; margin-right: 8px; transition: transform 0.3s; }
+			.category-header.open::before { transform: rotate(90deg); }
+			.category-items { padding-left: 10px; display: none; margin-top: 5px; }
+			.category-items.open { display: block; }
+
+			/* Toggle Switches */
+			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 6px 0; font-size: 12px; letter-spacing: 1px; cursor: pointer; }
+			.filter-option input { display: none; }
+			.toggle-btn {
+				width: 30px; height: 16px; background: #1a1510; border: 1px solid #4a3b2a; 
+				border-radius: 8px; position: relative; transition: 0.3s; margin-right: 10px; flex-shrink: 0;
+			}
+			.toggle-btn::after {
+				content: ''; position: absolute; top: 1px; left: 1px; width: 12px; height: 12px; 
+				background: #8a7a5f; border-radius: 50%; transition: 0.3s;
+			}
+			.filter-option input:checked + .toggle-btn { background: rgba(226, 192, 125, 0.15); border-color: #e2c07d; }
+			.filter-option input:checked + .toggle-btn::after { transform: translateX(14px); background: #e2c07d; }
+			
+			.node-icon { width: 20px; height: 20px; margin-right: 10px; object-fit: contain; }
+			.label-text { flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+			
+			.hidden-node { display: none !important; }
+		</style>
+	</head>
+	<body>
+		<div class="search-container">
+			<div class="search-wrapper">
+				<input type="text" id="marker-search" placeholder="Search Markers..." autocomplete="off" oninput="handleSearch(this.value)">
+				<span class="clear-search" id="clear-btn" onclick="clearSearch()">X</span>
+			</div>
+		</div>
+
+		<div class="section-title">Gathering Nodes</div>
+
+		<div class="category-header" id="head-ore" onclick="toggleCategory('cat-ore')">Ore</div>
+		<div class="category-items" id="cat-ore">
+			<label class="filter-option"><input type="checkbox" id="node_copper_ore" onchange="saveAndToggle('node_copper_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png"><span class="label-text">Rich Copper Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_iron_ore" onchange="saveAndToggle('node_iron_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png"><span class="label-text">Rich Iron Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_silver_ore" onchange="saveAndToggle('node_silver_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png"><span class="label-text">Rich Silver Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_gold_ore" onchange="saveAndToggle('node_gold_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png"><span class="label-text">Rich Gold Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_platinum_ore" onchange="saveAndToggle('node_platinum_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png"><span class="label-text">Rich Platinum Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_rich_mithril_vein" onchange="saveAndToggle('node_rich_mithril_vein', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png"><span class="label-text">Rich Mithril Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_rich_orichalcum_vein" onchange="saveAndToggle('node_rich_orichalcum_vein', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png"><span class="label-text">Rich Orichalcum Vein</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_quartz_crystal" onchange="saveAndToggle('node_quartz_crystal', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png"><span class="label-text">Quartz Crystal</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_rich_quartz_crystal_formation" onchange="saveAndToggle('node_rich_quartz_crystal_formation', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png"><span class="label-text">Rich Quartz Crystal Formation</span></label>
+		</div>
+
+		<div class="category-header" id="head-wood" onclick="toggleCategory('cat-wood')">Wood</div>
+		<div class="category-items" id="cat-wood">
+			<label class="filter-option"><input type="checkbox" id="node_soft_wood" onchange="saveAndToggle('node_soft_wood', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/AB6C5501209B91D9B890B1F84B29BC0142CB59D8/65943.png"><span class="label-text">Soft Wood</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_seasoned_wood" onchange="saveAndToggle('node_seasoned_wood', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/66BEAC3E5D0EDA160AA4A7942D0C46C27DC0E7AA/65944.png"><span class="label-text">Seasoned Wood</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_hard_wood" onchange="saveAndToggle('node_hard_wood', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/576ED6A37FA1130DDD230D5D0E0D80484E25260C/220466.png"><span class="label-text">Hard Wood</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_elder_wood" onchange="saveAndToggle('node_elder_wood', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/205871B734054D0206986FB44D6DC5425E572B0B/220465.png"><span class="label-text">Elder Wood</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_ancient_wood" onchange="saveAndToggle('node_ancient_wood', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/5C999770AB7CC1F85D270A50C205673DF8B6E104/220467.png"><span class="label-text">Ancient Wood</span></label>
+		</div>
+
+		<div class="category-header" id="head-plants" onclick="toggleCategory('cat-plants')">Plants</div>
+		<div class="category-items" id="cat-plants">
+			<label class="filter-option"><input type="checkbox" id="node_lettuce" onchange="saveAndToggle('node_lettuce', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/F370E14DE5C1FACE91D19F19FD65CD19C5F74F75/63317.png"><span class="label-text">Lettuce</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_onions" onchange="saveAndToggle('node_onions', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/62FEA707A3547EA74113C29A110B40B23501B75C/63115.png"><span class="label-text">Onions</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_potato" onchange="saveAndToggle('node_potato', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/24CE9454113F0609E6E9B655EF0670B40D5522EC/63245.png"><span class="label-text">Potato</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_clam" onchange="saveAndToggle('node_clam', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/6C2143352D3E0B4B45A3E01CE2FAFAB8D0D77C51/63364.png"><span class="label-text">Clam</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_strawberry_patch" onchange="saveAndToggle('node_strawberry_patch', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/FA03EA4891609320A6CE08069EABE7F65465EC09/63330.png"><span class="label-text">Strawberry Patch</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_coral" onchange="saveAndToggle('node_coral', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/E3EE022F17127B45FDFC266BDAD05033359BF9E2/221175.png"><span class="label-text">Coral</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_seaweed" onchange="saveAndToggle('node_seaweed', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/35C6906CCA6A0541383D5AE31E656456DC3418E5/63385.png"><span class="label-text">Seaweed</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_sugar_pumpkin" onchange="saveAndToggle('node_sugar_pumpkin', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/6ED9FE4CB6DCDA7F542718507DC33305FDD9A62C/63386.png"><span class="label-text">Sugar Pumpkin</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_artichoke" onchange="saveAndToggle('node_artichoke', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/3FF00D3CF70B4AB4E117040F541D384302E7D93E/219472.png"><span class="label-text">Artichoke</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_asparagus" onchange="saveAndToggle('node_asparagus', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/693F7207FB74B962DE327E355C18D680E0357965/219467.png"><span class="label-text">Asparagus</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_passiflora" onchange="saveAndToggle('node_passiflora', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/A3EF78BAC765FCBFBA41FE95A17839A3AA3AEDC8/511906.png"><span class="label-text">Blooming Passiflora</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_toxic_seedlings" onchange="saveAndToggle('node_toxic_seedlings', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/78B90364F0FA4806E6600DD260BE2EBC51D1431D/665773.png"><span class="label-text">Toxic Seedlings</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_black_crocus" onchange="saveAndToggle('node_black_crocus', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/FE1C9BB06AF7E83EDCBD655B030EB8EC00CBD350/219491.png"><span class="label-text">Black Crocus</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_flax" onchange="saveAndToggle('node_flax', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/481BDB30B60B08E759CCEF3FF10C9441D49BBB76/1203081.png"><span class="label-text">Flax</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_mussels" onchange="saveAndToggle('node_mussels', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/C8E60C9C5013DD03AA152A634615C5B1DF610E39/223191.png"><span class="label-text">Mussels</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_omnomberries" onchange="saveAndToggle('node_omnomberries', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/9C5457B024D9152906D808A53BFF67539BB94FA0/219396.png"><span class="label-text">Omnomberries</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_orrian_truffle" onchange="saveAndToggle('node_orrian_truffle', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/0AF0FD06192106D5D9C73A35A3E364CE6B4A1FC0/219489.png"><span class="label-text">Orrian Truffle</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_sawgill_mushrooms" onchange="saveAndToggle('node_sawgill_mushrooms', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/AAFF3F76320FCB0177550F2D6CBA22334D935AF1/1203082.png"><span class="label-text">Sawgill Mushrooms</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_jungle_plants" onchange="saveAndToggle('node_jungle_plants', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"><span class="label-text">Jungle Plants</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_verdant_herbs" onchange="saveAndToggle('node_verdant_herbs', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"><span class="label-text">Verdant Herbs</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_desert_herbs" onchange="saveAndToggle('node_desert_herbs', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"><span class="label-text">Desert Herbs</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_mixed_herbs" onchange="saveAndToggle('node_mixed_herbs', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"><span class="label-text">Mixed Herbs</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_mixed_vegetables" onchange="saveAndToggle('node_mixed_vegetables', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png"><span class="label-text">Mixed Vegetables</span></label>
+			</div>
+
+		<div class="category-header" id="head-lws3" onclick="toggleCategory('cat-lws3')">Living World Season 3</div>
+		<div class="category-items" id="cat-lws3">
+			<label class="filter-option"><input type="checkbox" id="node_bloodstone_crystals" onchange="saveAndToggle('node_bloodstone_crystals', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png"><span class="label-text">Bloodstone Crystals (Blood Ruby)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_petrified_stump" onchange="saveAndToggle('node_petrified_stump', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png"><span class="label-text">Petrified Stump (Petrified Wood)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_winterberry_bush" onchange="saveAndToggle('node_winterberry_bush', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/414B0D0E3E38F73EC360C5BAE8A1DE98D324DCE6/1601463.png"><span class="label-text">Winterberry Bush (Fresh Winterberry)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_jade_fragments" onchange="saveAndToggle('node_jade_fragments', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/B3D1DB6458480968B2FC0C0115476EC892CD0555/1633883.png"><span class="label-text">Jade Fragments (Jade Shard)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_primordial_orchid" onchange="saveAndToggle('node_primordial_orchid', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/D667F038D601D31EC35F08E96EB1C832026E3A21/1677062.png"><span class="label-text">Primordial Orchid (Fire Orchid Blossom)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_orrian_oyster" onchange="saveAndToggle('node_orrian_oyster', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/F3B0E4096379AA58AFC6CE1ED1FBC5B015C40840/1729789.png"><span class="label-text">Orrian Oyster (Orrian Pearl)</span></label>
+		</div>
+
+		<div class="category-header" id="head-lws4" onclick="toggleCategory('cat-lws4')">Living World Season 4</div>
+		<div class="category-items" id="cat-lws4">
+			<label class="filter-option"><input type="checkbox" id="node_brandstone" onchange="saveAndToggle('node_brandstone', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/380A7E3B250B050C2C39B1106CA39AED65C8396B/1894933.png"><span class="label-text">Brandstone (Kralkatite Ore)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_difluorite_crystals" onchange="saveAndToggle('node_difluorite_crystals', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/3148F3239A104D6C7CE4F65DB41BAAB16039C81E/1947318.png"><span class="label-text">Difluorite Crystals (Difluorite Crystal)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_mistonium" onchange="saveAndToggle('node_mistonium', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/0D75705348E1AE54CF0679FA65C24E0739A3B79F/2038791.png"><span class="label-text">Mistonium (Lump of Mistonium)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_kournan_supply_cache" onchange="saveAndToggle('node_kournan_supply_cache', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/F5D7B94E53F8B380497CADDE2A562222B30EB793/1998867.png"><span class="label-text">Kournan Supply Cache (Inscribed Shard)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_dragon_crystal_node" onchange="saveAndToggle('node_dragon_crystal_node', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/0C2FD403DACFABF74B9E3824914FB60B3C285804/2083245.png"><span class="label-text">Dragon Crystal Node (Branded Mass)</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_mistborn_mote" onchange="saveAndToggle('node_mistborn_mote', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/E76806D6DF4E27C70EA70A9FAC1F0D036C18659E/2140686.png"><span class="label-text">Mistborn Mote (Mistborn Mote)</span></label>
+		</div>
+
+		<div class="category-header" id="head-icebrood" onclick="toggleCategory('cat-icebrood')">Icebrood Saga</div>
+		<div class="category-items" id="cat-icebrood">
+			<label class="filter-option"><input type="checkbox" id="node_eternal_ice" onchange="saveAndToggle('node_eternal_ice', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/D40CAAE1BEE9C8B3606534F501A244E5E3149852/2220776.png"><span class="label-text">Eternal Ice</span></label>
+		</div>
+
+		<div class="category-header" id="head-janthir" onclick="toggleCategory('cat-janthir')">Janthir Wilds</div>
+		<div class="category-items" id="cat-janthir">
+			<label class="filter-option"><input type="checkbox" id="node_rotted_titan_amber" onchange="saveAndToggle('node_rotted_titan_amber', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/504227ABF7272B9DD8ECC4C494FBEBBF4296E368/3375062.png"><span class="label-text">Rotted Titan Amber </span></label>
+			<label class="filter-option"><input type="checkbox" id="node_charged_titan_ore" onchange="saveAndToggle('node_charged_titan_ore', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/04800AD00DFEB801C3DF77973D49FC1D017C9A04/3375061.png"><span class="label-text">Charged Titan Ore</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_honey_flower" onchange="saveAndToggle('node_honey_flower', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/B4E067EC20C4020F707B61B45139B3012EDFB219/3375060.png"><span class="label-text">Honey Flower</span></label>
+			<label class="filter-option"><input type="checkbox" id="node_lowland_pine_sapling" onchange="saveAndToggle('node_lowland_pine_sapling', this.checked)"><div class="toggle-btn"></div><img class="node-icon" src="https://render.guildwars2.com/file/3FDB469FA0B15612A43B1534EDD8F6747C032EF4/3375064.png"><span class="label-text">Lowland Pine Sapling</span></label>
+		</div>
+
+		<div class="section-title">World Services</div>
+
+<div class="category-header" id="head-hunting" onclick="toggleCategory('cat-hunting')">Hunting & Trade</div>
+<div class="category-items" id="cat-hunting">
+    <label class="filter-option">
+        <input type="checkbox" id="node_mists_rift" onchange="saveAndToggle('node_mists_rift', this.checked)">
+        <div class="toggle-btn"></div>
+        <img class="node-icon" src="https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png">
+        <span class="label-text">Mists Rifts</span>
+    </label>
+
+    <div style="display: flex; align-items: center; gap: 5px;">
+        <label class="filter-option" style="flex-grow: 1;">
+            <input type="checkbox" id="node_pact_supply_network_agent" onchange="saveAndToggle('node_pact_supply_network_agent', this.checked)">
+            <div class="toggle-btn"></div>
+            <img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png">
+            <span class="label-text">Pact Supply Vendors</span>
+        </label>
+        <button class="copy-btn" title="Copy Waypoints" onclick="copyPSNAWaypoints()" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 2px 8px; cursor: pointer; font-size: 10px; border-radius: 3px;">
+            COPY WP
+        </button>
+    </div>
+</div>
+
+		<script>
+			function toggleCategory(id) {
+				const items = document.getElementById(id);
+				const header = document.getElementById('head-' + id.split('-')[1]);
+				
+				items.classList.toggle('open');
+				header.classList.toggle('open');
+
+				// Save state
+				let openCategories = JSON.parse(localStorage.getItem('gw2_marker_categories') || '[]');
+				if (items.classList.contains('open')) {
+					if (!openCategories.includes(id)) openCategories.push(id);
+				} else {
+					openCategories = openCategories.filter(cat => cat !== id);
+				}
+				localStorage.setItem('gw2_marker_categories', JSON.stringify(openCategories));
+			}
+
+			function handleSearch(val) {
+				const query = val.toLowerCase();
+				const clearBtn = document.getElementById('clear-btn');
+				const options = document.querySelectorAll('.filter-option');
+				const categories = document.querySelectorAll('.category-items');
+				const headers = document.querySelectorAll('.category-header');
+
+				clearBtn.style.display = query.length > 0 ? 'block' : 'none';
+
+				if (query.length < 3) {
+					// Restore normal view and previously open categories
+					options.forEach(opt => opt.classList.remove('hidden-node'));
+					categories.forEach(cat => cat.classList.remove('open'));
+					headers.forEach(head => head.classList.remove('open'));
+					restoreCategories();
+					return;
+				}
+
+				// Search active: override memory and open matching categories
+				options.forEach(opt => {
+					const text = opt.querySelector('.label-text').innerText.toLowerCase();
+					if (text.includes(query)) {
+						opt.classList.remove('hidden-node');
+						opt.parentElement.classList.add('open');
+						const headId = 'head-' + opt.parentElement.id.split('-')[1];
+						const headEl = document.getElementById(headId);
+						if (headEl) headEl.classList.add('open');
+					} else {
+						opt.classList.add('hidden-node');
+					}
+				});
+			}
+
+			function clearSearch() {
+				const input = document.getElementById('marker-search');
+				input.value = '';
+				handleSearch('');
+				input.focus();
+			}
+
+			function saveAndToggle(name, isVisible) {
+				let settings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
+				settings[name] = isVisible;
+				localStorage.setItem('gw2_marker_settings', JSON.stringify(settings));
+				window.parent.postMessage({ action: 'toggleMapLayer', name: name, isVisible: isVisible }, '*');
+			}
+
+			function restoreCategories() {
+				let openCategories = JSON.parse(localStorage.getItem('gw2_marker_categories') || '[]');
+				openCategories.forEach(id => {
+					let el = document.getElementById(id);
+					let head = document.getElementById('head-' + id.split('-')[1]);
+					if (el && head) {
+						el.classList.add('open');
+						head.classList.add('open');
+					}
+				});
+			}
+
+			window.onload = () => {
+				let settings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
+				
+				// Loop through every checkbox
+				document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(el => {
+					const key = el.id;
+					
+					// If the user has never set this marker, default to FALSE (hidden)
+					if (settings[key] === undefined) {
+						settings[key] = false; 
+					}
+					
+					el.checked = settings[key];
+					window.parent.postMessage({ action: 'toggleMapLayer', name: key, isVisible: settings[key] }, '*');
+				});
+
+				// Save the cleaned-up default states
+				localStorage.setItem('gw2_marker_settings', JSON.stringify(settings));
+
+				restoreCategories();
+			};
+		</script>
+		<script>
+    async function copyPSNAWaypoints() {
+    window.parent.postMessage({ action: 'toast', msg: 'SYNCING WITH ROTATION TABLE...' }, "*");
+
+    // DATA SOURCE: Verified 7-Day Fixed Location Table
+    // Each index (0-6) represents the day of the week (Sunday-Saturday)
+    const rotation = {
+        1: ["[&BIcHAAA=]", "[&BEwDAAA=]", "[&BBEAAAA=]", "[&BA8CAAA=]", "[&BOcBAAA=]", "[&BO4CAAA=]"], // Monday
+        2: ["[&BIcHAAA=]", "[&BEwDAAA=]", "[&BIMAAAA=]", "[&BF0GAAA=]", "[&BOcBAAA=]", "[&BNIEAAA=]"], // Tuesday
+        3: ["[&BK8HAAA=]", "[&BEgAAAA=]", "[&BJIBAAA=]", "[&BEICAAA=]", "[&BBABAAA=]", "[&BLkCAAA=]"], // Wednesday
+        4: ["[&BHoHAAA=]", "[&BDoBAAA=]", "[&BKYAAAA=]", "[&BGUCAAA=]", "[&BCECAAA=]", "[&BCIDAAA=]"], // Thursday
+        5: ["[&BIcHAAA=]", "[&BGEBAAA=]", "[&BNUGAAA=]", "[&BFEGAAA=]", "[&BPEBAAA=]", "[&BBEDAAA=]"], // Friday
+        6: ["[&BKsHAAA=]", "[&BF0AAAA=]", "[&BKcBAAA=]", "[&BEUCAAA=]", "[&BNoAAAA=]", "[&BKYBAAA=]"], // Saturday
+        0: ["[&BK8HAAA=]", "[&BEIAAAA=]", "[&BKYBAAA=]", "[&BMEDAAA=]", "[&BIUCAAA=]", "[&BMIBAAA=]"]  // Sunday
+    };
+
+    try {
+        const now = new Date();
+        let utcDay = now.getUTCDay();
+        let utcHours = now.getUTCHours();
+
+        // Location Move Logic: Agents move at 08:00 UTC
+        if (utcHours < 8) {
+            utcDay = (utcDay === 0) ? 6 : utcDay - 1;
+        }
+
+        const todayCodes = rotation[utcDay];
+
+        if (todayCodes) {
+            // Join waypoints without spaces for easy pasting into GW2 chat
+            const finalString = todayCodes.join("");
+            await navigator.clipboard.writeText(finalString);
+            window.parent.postMessage({ action: 'toast', msg: 'COPIED 6 WAYPOINTS' }, "*");
+        } else {
+            throw new Error("Invalid day mapping");
+        }
+    } catch (e) {
+        console.error("PSNA Sync Error:", e);
+        window.parent.postMessage({ action: 'toast', msg: 'ROTATION SYNC ERROR' }, "*");
+    }
+}
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body { margin: 0; background: transparent; padding: 20px; color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; }
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin: 15px 0; padding-bottom: 5px; letter-spacing: 1px; }
+			
+			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 10px 0; font-size: 13px; letter-spacing: 1px; cursor: pointer; }
+			.filter-option input { display: none; }
+			.toggle-btn {
+				width: 38px; height: 20px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 10px; position: relative; transition: 0.3s; margin-right: 15px; flex-shrink: 0;
+			}
+			.toggle-btn::after {
+				content: ''; position: absolute; top: 1px; left: 1px; width: 16px; height: 16px; background: #8a7a5f; border-radius: 50%; transition: 0.3s;
+			}
+			.filter-option input:checked + .toggle-btn { background: rgba(226, 192, 125, 0.15); border-color: #e2c07d; }
+			.filter-option input:checked + .toggle-btn::after { transform: translateX(18px); background: #e2c07d; }
+			.label-text { flex-grow: 1; }
+			
+			.fancy-divider { height: 1px; background: linear-gradient(90deg, transparent, #4a3b2a, transparent); margin: 15px 0; }
+		</style>
+	</head>
+	<body>
+		<div class="section-title">Map Icons</div>
+		<label class="filter-option">
+			<input type="checkbox" id="poi" checked onchange="saveAndToggle('poi', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Points of Interest</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="waypoint" checked onchange="saveAndToggle('waypoint', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Waypoints</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="vista" checked onchange="saveAndToggle('vista', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Vistas</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="heropoint" checked onchange="saveAndToggle('heropoint', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Hero Points</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="towers" checked onchange="saveAndToggle('towers', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Towers</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="keeps" checked onchange="saveAndToggle('keeps', this.checked); saveAndToggle('castles', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Keeps</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="camps" checked onchange="saveAndToggle('camps', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Camps</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="ruins" checked onchange="saveAndToggle('ruins', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Ruins of Power</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="personal_markers" checked onchange="saveAndToggle('personal_markers', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Personal Markers</span>
+		</label>
+
+		<div class="section-title">Labels & Borders</div>
+		<label class="filter-option">
+			<input type="checkbox" id="map_text" checked onchange="saveAndToggle('map_text', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Map Names</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="sector" checked onchange="saveAndToggle('sector', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Sectors</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="borders" checked onchange="saveAndToggle('borders', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Borders</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="overlay" checked onchange="saveAndToggle('overlay', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Sector Color Overlay</span>
+		</label>
+		<label class="filter-option">
+			<input type="checkbox" id="scoreboard" checked onchange="saveAndToggle('scoreboard', this.checked)">
+			<div class="toggle-btn"></div>
+			<span class="label-text">Scoreboard</span>
+		</label>
+
+		<script>
+			function saveAndToggle(name, isVisible) {
+				let settings = JSON.parse(localStorage.getItem('gw2_wvw_settings') || '{}');
+				settings[name] = isVisible;
+				localStorage.setItem('gw2_wvw_settings', JSON.stringify(settings));
+				window.parent.postMessage({ action: 'toggleMapLayer', name: name, isVisible: isVisible }, '*');
+			}
+
+			window.onload = () => {
+				let settings = JSON.parse(localStorage.getItem('gw2_wvw_settings') || '{}');
+				Object.keys(settings).forEach(key => {
+					let el = document.getElementById(key);
+					if (el) {
+						el.checked = settings[key];
+						window.parent.postMessage({ action: 'toggleMapLayer', name: key, isVisible: settings[key] }, '*');
+					}
+				});
+			};
+		</script>
+	</body>
+</html>
