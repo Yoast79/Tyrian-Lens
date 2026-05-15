@@ -1,0 +1,24 @@
+name: Discord Release Notification
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Notification
+        uses: appleboy/discord-action@master
+        with:
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          username: "Tyrian Lens Update"
+          avatar_url: "https://i.imgur.com/HmyYArl.png"
+          color: "#E2C07D"
+          title: "Version Release: ${{ github.event.release.tag_name }}"
+          description: |
+            **Changelog:**
+            ${{ github.event.release.body }}
+
+            [View Release on GitHub](${{ github.event.release.html_url }})
+          footer: "Tyrian Lens - Professional GW2 Utility"
