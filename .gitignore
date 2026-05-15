@@ -25,3 +25,6 @@ temp/
 # WebView2
 *.WebView2/
 EBWebView/
+
+# Local Installer Scripts
+setup_script.iss
