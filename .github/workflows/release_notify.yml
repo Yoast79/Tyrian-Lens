@@ -26,7 +26,7 @@ jobs:
           description: |
             **Changelog:**
             ${{ github.event.release.body || github.event.inputs.test_body }}
-          image: "https://i.imgur.com/HmyYArl.png"
+          thumbnail: "https://i.imgur.com/HmyYArl.png"
           color: 0xE2C07D
           url: "${{ github.event.release.html_url || 'https://github.com/Yoast79/Tyrian-Lens' }}"
           username: "Tyrian Lens Update"
