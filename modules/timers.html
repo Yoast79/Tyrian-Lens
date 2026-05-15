@@ -2,21 +2,22 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
 
-			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; margin-bottom: 5px; }
-			.divider { height: 1px; background: #4a3b2a; margin-bottom: 8px; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); font-weight: bold; margin-bottom: 5px; }
+			.divider { height: 1px; background: var(--border-color, #4a3b2a); margin-bottom: 8px; }
 
 			/* Time Row */
 			.time-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-			.tyria-time-display { font-size: 11px; color: #dcb36b; font-weight: bold; letter-spacing: 1px; display: flex; gap: 8px; }
-			.local-time-display { font-size: 13px; color: #e2c07d; font-weight: bold; font-family: monospace; }
-			.tz-label { font-size: 9px; color: #8a7a5f; margin-right: 5px; }
+			.tyria-time-display { font-size: 11px; color: var(--text-primary, #dcb36b); font-weight: bold; letter-spacing: 1px; display: flex; gap: 8px; }
+			.local-time-display { font-size: 13px; color: var(--text-primary, #e2c07d); font-weight: bold; font-family: monospace; }
+			.tz-label { font-size: 9px; color: var(--text-muted, #8a7a5f); margin-right: 5px; }
 
 			/* Settings Rows */
 			.settings-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; }
@@ -24,56 +25,56 @@
 			.setting-col-right { display: flex; align-items: center; justify-content: flex-end; }
 
 			/* Fixed widths to perfectly align the toggles */
-			.setting-label-left { display: inline-block; width: 175px; font-size: 10px; font-weight: bold; color: #8a7a5f; }
-			.setting-label-right { font-size: 9px; color: #8a7a5f; margin-right: 8px; font-weight: bold; }
+			.setting-label-left { display: inline-block; width: 175px; font-size: 10px; font-weight: bold; color: var(--text-muted, #8a7a5f); }
+			.setting-label-right { font-size: 9px; color: var(--text-muted, #8a7a5f); margin-right: 8px; font-weight: bold; }
 
 			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; margin-top: 10px; }
-			.nav-panel { width: 200px; flex-shrink: 0; overflow-y: auto; background: rgba(0,0,0,0.3); border: 1px solid #2a2015; padding: 5px; }
-			.cat-btn { width: 100%; background: #1a1510; border: none; color: #8a7a5f; padding: 10px; text-align: left; font-size: 10px; font-weight: bold; cursor: pointer; border-bottom: 1px solid #2a2015; transition: 0.2s; border-left: 2px solid transparent; }
-			.cat-btn:hover { background: #251d16; color: #e2c07d; }
-			.cat-btn.active { background: rgba(226,192,125,0.1); color: #e2c07d; border-left-color: #e2c07d; }
+			.nav-panel { width: 200px; flex-shrink: 0; overflow-y: auto; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #2a2015); padding: 5px; }
+			.cat-btn { width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-muted, #8a7a5f); padding: 10px; text-align: left; font-size: 10px; font-weight: bold; cursor: pointer; border-bottom: 1px solid var(--border-color, #2a2015); transition: 0.2s; border-left: 2px solid transparent; }
+			.cat-btn:hover { background: var(--bg-button-hover, #251d16); color: var(--text-primary, #e2c07d); }
+			.cat-btn.active { background: rgba(226,192,125,0.1); color: var(--text-primary, #e2c07d); border-left-color: var(--text-primary, #e2c07d); }
 			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 5px; padding-right: 5px; }
 
 			/* Compact Toggles */
 			.fancy-toggle { position: relative; display: inline-block; width: 28px; height: 14px; vertical-align: middle; }
 			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
-			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 20px; }
-			.slider:before { position: absolute; content: ""; height: 10px; width: 10px; left: 2px; bottom: 1px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
-			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); transition: .3s; border-radius: 20px; }
+			.slider:before { position: absolute; content: ""; height: 10px; width: 10px; left: 2px; bottom: 1px; background-color: var(--border-color, #4a3b2a); transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: var(--text-primary, #e2c07d); border-color: var(--text-primary, #e2c07d); }
 			input:checked + .slider:before { transform: translateX(13px); background-color: #000; }
 
-			.select-compact { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; font-size: 9px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 1px 4px; cursor: pointer; text-transform: uppercase; outline: none; }
+			.select-compact { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); font-size: 9px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 1px 4px; cursor: pointer; text-transform: uppercase; outline: none; }
 
-			.sub-grp-btn { width: 100%; background: rgba(30,22,15,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 12px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; margin-top: 5px; }
-			.sub-grp-btn:after { content: '▼'; font-size: 8px; color: #8a7a5f; transition: 0.3s; }
+			.sub-grp-btn { width: 100%; background: var(--bg-panel, rgba(30,22,15,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 12px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; margin-top: 5px; }
+			.sub-grp-btn:after { content: '▼'; font-size: 8px; color: var(--text-muted, #8a7a5f); transition: 0.3s; }
 			.sub-grp-btn.active:after { transform: rotate(180deg); }
-			.sub-content { display: none; flex-direction: column; gap: 8px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top: none; }
+			.sub-content { display: none; flex-direction: column; gap: 8px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color, #2a2015); border-top: none; }
 
-			.event-card { background: rgba(20,15,10,0.8); border: 1px solid #332a1e; display: flex; padding: 8px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
-			.event-card:hover { border-color: #8a7a5f; background: rgba(30,22,15,0.9); }
-			.event-card.active-state { border-color: #1A9306; background: rgba(26, 147, 6, 0.1); }
-			.event-card.imminent-state { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
-			.event-icon-wrap { width: 32px; height: 32px; flex-shrink: 0; background: #000; border: 1px solid #4a3b2a; padding: 2px; }
+			.event-card { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #332a1e); display: flex; padding: 8px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
+			.event-card:hover { border-color: var(--text-muted, #8a7a5f); background: var(--bg-button-hover, rgba(30,22,15,0.9)); }
+			.event-card.active-state { border-color: var(--success-color, #1A9306); background: rgba(26, 147, 6, 0.1); }
+			.event-card.imminent-state { border-color: var(--text-primary, #e2c07d); background: rgba(226, 192, 125, 0.1); }
+			.event-icon-wrap { width: 32px; height: 32px; flex-shrink: 0; background: #000; border: 1px solid var(--border-color, #4a3b2a); padding: 2px; }
 			.event-icon { width: 100%; height: 100%; object-fit: contain; }
 			.event-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-			.event-title { font-size: 10px; font-weight: bold; color: #e2c07d; margin-bottom: 2px; padding-right: 65px; }
-			.event-status { font-size: 8px; color: #8a7a5f; font-weight: bold; }
-			.active-text { color: #1A9306; }
-			.imminent-text { color: #e2c07d; }
+			.event-title { font-size: 10px; font-weight: bold; color: var(--text-primary, #e2c07d); margin-bottom: 2px; padding-right: 65px; }
+			.event-status { font-size: 8px; color: var(--text-muted, #8a7a5f); font-weight: bold; }
+			.active-text { color: var(--success-color, #1A9306); }
+			.imminent-text { color: var(--text-primary, #e2c07d); }
 			.prog-container { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
-			.prog-bg { flex: 1; height: 4px; background: #111; border: 1px solid #4a3b2a; position: relative; }
-			.prog-fill { height: 100%; background: #4a3b2a; width: 0%; transition: width 0.3s ease; }
-			.time-text { font-size: 10px; font-weight: bold; width: 45px; text-align: right; color: #e2c07d; font-family: monospace; }
+			.prog-bg { flex: 1; height: 4px; background: #111; border: 1px solid var(--border-color, #4a3b2a); position: relative; }
+			.prog-fill { height: 100%; background: var(--border-color, #4a3b2a); width: 0%; transition: width 0.3s ease; }
+			.time-text { font-size: 10px; font-weight: bold; width: 45px; text-align: right; color: var(--text-primary, #e2c07d); font-family: monospace; }
 
 			.star-btn { cursor: pointer; width: 16px; height: 16px; opacity: 0.3; transition: 0.2s; position: absolute; top: 8px; right: 8px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
-			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
-			.wp-btn { position: absolute; top: 8px; right: 30px; font-size: 8px; background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 2px 4px; cursor: pointer; transition: 0.2s; z-index: 10; font-weight: bold; }
-			.wp-btn:hover { color: #e2c07d; border-color: #e2c07d; background: #251d16; }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
+			.wp-btn { position: absolute; top: 8px; right: 30px; font-size: 8px; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 2px 4px; cursor: pointer; transition: 0.2s; z-index: 10; font-weight: bold; }
+			.wp-btn:hover { color: var(--text-primary, #e2c07d); border-color: var(--text-primary, #e2c07d); background: var(--bg-button-hover, #251d16); }
 
-			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 100; border: 1px solid #4a3b2a; padding: 20px; text-align: center; }
+			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 100; border: 1px solid var(--border-color, #4a3b2a); padding: 20px; text-align: center; }
 			.confirm-btn-row { display: flex; gap: 10px; margin-top: 15px; }
-			.confirm-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
-			.confirm-btn:hover { background: #251d16; border-color: #e2c07d; }
+			.confirm-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.confirm-btn:hover { background: var(--bg-button-hover, #251d16); border-color: var(--text-primary, #e2c07d); }
 
 			/* Super Adventure Box Easter Egg */
 			.sab-glitch { image-rendering: pixelated; box-shadow: inset 0 0 0 2px #39ff14 !important; background: repeating-linear-gradient(0deg, rgba(57,255,20,0.05), rgba(57,255,20,0.05) 1px, transparent 1px, transparent 3px), rgba(20,15,10,0.8) !important; animation: sabGlitchAnim 4s infinite; }
@@ -198,165 +199,7 @@
             const ICON_BOSS = "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png";
             const ICON_WRENCH = "https://wiki.guildwars2.com/images/e/e2/Event_wrench_%28map_icon%29.png";
 
-            const schedule = [
-                { cat: "WATCHLIST", sub: [] },
-                { cat: "Core Tyria", sub: [
-					{ n: "General", evs: [
-						{ n: "Daily Reset", i: ICON_WRENCH, exact: [0], d: 1, wp: "", desc: "Server reset and daily achievements cycle." }
-					]},
-                    { n: "World bosses", evs: [
-                        { n: "Frozen Maw", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BMIDAAA=]", desc: "Frozen Maw meta in Wayfarer Foothills." },
-                        { n: "Fire Elemental", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "[&BE4AAAA=]", desc: "Metrica construct meta." },
-                        { n: "Jungle Wurm", i: ICON_BOSS, r: 120, o: 75, d: 15, wp: "[&BEEBAAA=]", desc: "Great Jungle Wurm meta in Caledon Forest." },
-                        { n: "Shadow Behemoth", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BPcAAAA=]", desc: "Queensdale demon meta." },
-                        { n: "Admiral Covington", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "[&BKgBAAA=]", desc: "Bloodtide Coast pirate meta." },
-                        { n: "Megadestroyer", i: ICON_BOSS, r: 180, o: 30, d: 15, wp: "[&BM0CAAA=]", desc: "Mount Maelstrom destroyer meta." },
-                        { n: "The Shatterer", i: ICON_DRAGON, r: 180, o: 60, d: 15, wp: "[&BE4DAAA=]", desc: "Kralkatorrik champion meta." },
-                        { n: "Modniir Ulgoth", i: ICON_BOSS, r: 180, o: 90, d: 15, wp: "[&BLAAAAA=]", desc: "Centaur King meta." },
-                        { n: "Golem Mark II", i: ICON_BOSS, r: 180, o: 120, d: 15, wp: "[&BNQCAAA=]", desc: "Inquest golem meta." },
-                        { n: "Claw of Jormag", i: ICON_DRAGON, r: 180, o: 150, d: 15, wp: "[&BHoCAAA=]", desc: "Jormag lieutenant meta." }
-                    ]},
-                    { n: "Hard world bosses", evs: [
-                        { n: "Tequatl the Sunless", i: ICON_DRAGON, exact: [0, 180, 270, 480, 690, 960, 1140], d: 15, wp: "[&BNABAAA=]", desc: "A dragon lieutenant of Zhaitan invading Sparkfly Fen." },
-                        { n: "Karka Queen", i: ICON_BOSS, exact: [120, 360, 630, 900, 1080, 1380], d: 15, wp: "[&BNUGAAA=]", desc: "Massive Karka attacking Southsun Cove." },
-                        { n: "Triple Trouble", i: ICON_BOSS, exact: [60, 240, 480, 720, 930, 1200], d: 15, wp: "[&BKoBAAA=]", desc: "Three legendary jungle wurms in Bloodtide Coast." }
-                    ]},
-                    { n: "Orr Metas", evs: [
-                        { n: "Temple of Balthazar", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BPICAAA=]", desc: "Capture the Cathedral of Glorious Victory." },
-                        { n: "Temple of Melandru", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BB8DAAA=]", desc: "Capture the Cathedral of Verdance." },
-                        { n: "Temple of Lyssa", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BK0CAAA=]", desc: "Capture the Cathedral of Zephyrs." },
-                        { n: "Temple of Grenth", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "[&BCIDAAA=]", desc: "Capture the Cathedral of Silence." }
-                    ]},
-                    { n: "Zone Cycles", evs: [
-                        { n: "Dredge Assault", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "[&BMIDAAA=]", desc: "Diessa Plateau dredge meta." },
-                        { n: "Ogre Wars", i: ICON_BOSS, r: 120, o: 75, d: 15, wp: "[&BE4AAAA=]", desc: "Fields of Ruin ogre meta." }
-                    ]},
-                    { n: "Ley-Line Anomaly", evs: [ { n: "Ley-Line Anomaly", i: ICON_BOSS, r: 120, o: 20, d: 20, wp: "[&BOcAAAA=]", desc: "Rogue anomaly run meta." } ]},
-                    { n: "Invasions", evs: [ { n: "Awakened / Forged", i: ICON_BOSS, r: 60, o: 30, d: 15, wp: "", desc: "Map-wide incursion meta." } ]},
-                    { n: "Fractal Incursions", evs: [ { n: "Fractal Incursion", i: ICON_BOSS, r: 120, o: 45, d: 15, wp: "", desc: "Tyria fractal meta." } ]},
-                    { n: "EU PvP Tournaments", evs: [ { n: "EU Tournament", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "", desc: "Automated EU PvP." } ]},
-                    { n: "NA PvP Tournaments", evs: [ { n: "NA Tournament", i: ICON_BOSS, r: 180, o: 0, d: 15, wp: "", desc: "Automated NA PvP." } ]}
-                ]},
-                { cat: "Living World Season 2", sub: [ { n: "Dry Top", evs: [ { n: "Sandstorm", i: ICON_BOSS, r: 60, o: 40, d: 20, wp: "[&BIAHAAA=]", desc: "Dry Top sandstorm meta." } ]} ]},
-                { cat: "Living World Season 3", sub: [
-                    { n: "Lake Doric", evs: [
-                        { n: "Saidra's Haven", i: ICON_BOSS, r: 120, o: 20, d: 15, wp: "[&BK0JAAA=]", desc: "Saidra's Haven takes place every 120 minutes." },
-                        { n: "New Loamhurst", i: ICON_BOSS, r: 120, o: 40, d: 15, wp: "[&BLkJAAA=]", desc: "New Loamhurst takes place every 120 minutes." },
-                        { n: "Noran's Homestead", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BK8JAAA=]", desc: "Noran's Homestead takes place every 120 minutes." }
-                    ]}
-                ]},
-                { cat: "Heart of Thorns", sub: [
-                    { n: "Verdant Brink", evs: [ 
-                        { n: "Securing Outposts", i: ICON_BOSS, r: 120, o: 10, d: 35, wp: "[&BN4HAAA=]", desc: "Daytime preparation." },
-                        { n: "Night Bosses", i: ICON_BOSS, r: 120, o: 45, d: 45, wp: "[&BN4HAAA=]", desc: "Verdant Brink night meta." } 
-                    ]},
-                    { n: "Auric Basin", evs: [ 
-                        { n: "Defending Tarir", i: ICON_BOSS, r: 120, o: 45, d: 60, wp: "[&BAIIAAA=]", desc: "Preparation for Octovine." },
-                        { n: "Octovine", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BAIIAAA=]", desc: "Tarir Octovine meta." } 
-                    ]},
-                    { n: "Tangled Depths", evs: [ 
-                        { n: "Outpost Prep", i: ICON_BOSS, r: 120, o: 0, d: 30, wp: "[&BPUHAAA=]", desc: "Outpost event chains." },
-                        { n: "Chak Gerent", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BPUHAAA=]", desc: "Chak Gerent meta in Tangled Depths." } 
-                    ]},
-                    { n: "Dragon's Stand", evs: [ { n: "Mouth of Mordremoth", i: ICON_DRAGON, r: 120, o: 90, d: 60, wp: "[&BBAIAAA=]", desc: "Final push meta." } ]}
-                ]},
-                { cat: "Path of Fire", sub: [
-                    { n: "Crystal Oasis", evs: [ 
-						{ n: "Casino Blitz", i: ICON_BOSS, r: 120, o: 5, d: 20, wp: "[&BLsKAAA=]", desc: "Pinata meta preparation." },
-						{ n: "Choya Pinata", i: ICON_BOSS, r: 120, o: 25, d: 5, wp: "[&BLsKAAA=]", desc: "Choya Pinata boss fight." } 
-					]},
-                    { n: "Desert Highlands", evs: [ { n: "Buried Treasure", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BNEKAAA=]", desc: "Treasure hunt meta." } ]},
-                    { n: "Elon Riverlands", evs: [ { n: "Doppelganger", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BFMKAAA=]", desc: "Mirror meta." } ]},
-                    { n: "The Desolation", evs: [
-                        { n: "Forged with Fire", i: ICON_BOSS, r: 60, o: 0, d: 20, wp: "[&BMEKAAA=]", desc: "Maw of Torment meta." },
-                        { n: "Junundu Rising", i: ICON_BOSS, r: 60, o: 30, d: 15, wp: "[&BMEKAAA=]", desc: "Junundu wurm meta." }
-                    ]},
-                    { n: "Domain of Vabbi", evs: [ { n: "Serpents' Ire", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BH0KAAA=]", desc: "Branded Zealot meta." } ]}
-                ]},
-                { cat: "Living World Season 4", sub: [
-                    { n: "Domain of Istan", evs: [
-                        { n: "Sunspear Uprising", i: ICON_BOSS, r: 120, o: 15, d: 15, wp: "[&BBAKAAA=]", desc: "Champion Awakened Warden." },
-                        { n: "Palawadan", i: ICON_BOSS, r: 120, o: 105, d: 30, wp: "[&BAkLAAA=]", desc: "Palawadan Jewel of Istan meta." }
-                    ]},
-                    { n: "Sandswept Isles", evs: [
-                        { n: "Specimen Chamber", i: ICON_BOSS, r: 120, o: 5, d: 20, wp: "[&BEMLAAA=]", desc: "Inquest facility meta." },
-                        { n: "Gathering Storms", i: ICON_BOSS, r: 120, o: 65, d: 20, wp: "[&BEMLAAA=]", desc: "Zohaqan meta." }
-                    ]},
-                    { n: "Jahai Bluffs", evs: [ { n: "Death-Branded Shatterer", i: ICON_DRAGON, r: 120, o: 60, d: 15, wp: "[&BJMLAAA=]", desc: "Shatterer 2.0 meta." } ]},
-                    { n: "Thunderhead Peaks", evs: [
-                        { n: "Thunderhead Keep", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BLsLAAA=]", desc: "Keep defense meta." },
-                        { n: "Oil Floes", i: ICON_BOSS, r: 120, o: 105, d: 15, wp: "[&BLkLAAA=]", desc: "Peaks oil defense meta." }
-                    ]},
-                    { n: "Dragonfall", evs: [ { n: "Battle of Dragonfall", i: ICON_DRAGON, r: 120, o: 0, d: 120, wp: "[&BN4LAAA=]", desc: "Kralkatorrik meta." } ]}
-                ]},
-                { cat: "The Icebrood Saga", sub: [
-                    { n: "Grothmar Valley", evs: [
-                        { n: "Doomlore Shrine", i: ICON_BOSS, r: 120, o: 10, d: 15, wp: "[&BP8LAAA=]", desc: "Doomlore shrine defense." },
-                        { n: "Ooze Pit", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BP8LAAA=]", desc: "Ooze Pit trial." },
-                        { n: "Metal Legion", i: ICON_BOSS, r: 120, o: 60, d: 30, wp: "[&BPMLAAA=]", desc: "Concert meta." },
-                        { n: "Sacred Flame", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BP8LAAA=]", desc: "Sacred Flame ceremony." }
-                    ]},
-                    { n: "Bjora Marches", evs: [
-                        { n: "Drakkar", i: ICON_DRAGON, r: 120, o: 5, d: 25, wp: "[&BIsMAAA=]", desc: "Drakkar meta." },
-                        { n: "Storms of Winter", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BCcMAAA=]", desc: "Raven Shrine defense." }
-                    ]},
-                    { n: "Drizzlewood Coast", evs: [ { n: "Assault on Frost Citadel", i: ICON_BOSS, r: 120, o: 0, d: 120, wp: "[&BIEHAAA=]", desc: "Drizzlewood Citadel meta." } ]}
-                ]},
-                { cat: "End of Dragons", sub: [
-                    { n: "Day/Night Cycle", evs: [ { n: "Day/Night Cycle", i: ICON_BOSS, r: 120, o: 0, d: 80, wp: "", desc: "Expansion global cycle." } ]},
-                    { n: "Seitung Province", evs: [ { n: "Assault", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BOMMAAA=]", desc: "Province meta." } ]},
-                    { n: "New Kaineng City", evs: [ { n: "Blackout", i: ICON_BOSS, r: 120, o: 60, d: 45, wp: "[&BPUMAAA=]", desc: "Grid meta." } ]},
-                    { n: "The Echovald Wilds", evs: [ { n: "Gang War", i: ICON_BOSS, r: 120, o: 30, d: 30, wp: "[&BMMMAAA=]", desc: "Faction meta." } ]},
-                    { n: "Dragon's End", evs: [ { n: "Soo-Won", i: ICON_DRAGON, r: 120, o: 0, d: 120, wp: "[&BKIMAAA=]", desc: "Final SO battle." } ]},
-                    { n: "Fishing Tournaments", evs: [
-                        { n: "Seitung Fishing", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BOMMAAA=]", desc: "Seitung Province fishing." },
-                        { n: "Kaineng Fishing", i: ICON_BOSS, r: 120, o: 30, d: 15, wp: "[&BPUMAAA=]", desc: "New Kaineng fishing." },
-                        { n: "Echovald Fishing", i: ICON_BOSS, r: 120, o: 60, d: 15, wp: "[&BMMMAAA=]", desc: "Echovald Wilds fishing." },
-                        { n: "Dragon's End Fishing", i: ICON_BOSS, r: 120, o: 90, d: 15, wp: "[&BKIMAAA=]", desc: "Dragon's End fishing." }
-                    ]}
-                ]},
-                { cat: "Secrets of the Obscure", sub: [
-                    { n: "Skywatch Archipelago", evs: [ { n: "Wizard's Tower Access", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BL8NAAA=]", desc: "Skywatch meta." } ]},
-                    { n: "Wizard's Tower", evs: [ { n: "Tower Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BB8OAAA=]", desc: "Hub meta." } ]},
-                    { n: "Amnytas", evs: [ { n: "Defense of Amnytas", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BD8OAAA=]", desc: "Bastion meta." } ]},
-                    { n: "Inner Nayos", evs: [
-                        { n: "Road to Heitor", i: ICON_BOSS, r: 120, o: 15, d: 20, wp: "[&BBoPAAA=]", desc: "Heitor meta." },
-                        { n: "The Fangs That Gnash", i: ICON_BOSS, r: 120, o: 45, d: 20, wp: "[&BBoPAAA=]", desc: "Kryptis meta." },
-                        { n: "Into the Spider's Web", i: ICON_BOSS, r: 120, o: 105, d: 20, wp: "[&BBoPAAA=]", desc: "Eparch meta." }
-                    ]}
-                ]},
-                { cat: "Janthir Wilds", sub: [
-                    { n: "Lowland Shore", evs: [ { n: "Moon Camp", i: ICON_BOSS, r: 120, o: 0, d: 20, wp: "[&BGUOAAA=]", desc: "Lowland Shore meta." } ]},
-                    { n: "Janthir Syntri", evs: [ { n: "Syntri Meta", i: ICON_BOSS, r: 120, o: 30, d: 20, wp: "[&BC0PAAA=]", desc: "Syntri meta." } ]},
-                    { n: "Bava Nisos", evs: [ { n: "Bava Nisos Meta", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BDEPAAA=]", desc: "Bava Nisos meta." } ]},
-					{ n: "Mistburned Barrens", evs: [ { n: "Mistburned Meta", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "", desc: "Mistburned Barrens meta." } ]}
-                ]},
-                { cat: "Visions of Eternity", sub: [
-                    { n: "Day/Night Cycle", evs: [ { n: "Day/Night Cycle", i: ICON_BOSS, r: 120, o: 0, d: 60, wp: "", desc: "Local cycle." } ]},
-                    { n: "Shipwreck Strand", evs: [ { n: "Strand Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Strand meta." } ]},
-                    { n: "Starlit Weald", evs: [ { n: "Weald Meta", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "", desc: "Weald meta." } ]}
-                ]},
-                { cat: "Public Instances", sub: [
-                    { n: "Eye of the North", evs: [
-                        { n: "Twisted Marionette", i: ICON_BOSS, exact: [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080, 1200, 1320], d: 15, wp: "[&BAoMAAA=]", desc: "Scarlet weapon." },
-                        { n: "Dragonstorm", i: ICON_DRAGON, r: 120, o: 0, d: 20, wp: "[&BAoMAAA=]", desc: "Two dragons." },
-                        { n: "Battle For Lion's Arch", i: ICON_BOSS, r: 120, o: 60, d: 20, wp: "[&BCoAAAA=]", desc: "City reclaim." },
-                        { n: "Tower of Nightmares", i: ICON_BOSS, r: 120, o: 90, d: 20, wp: "[&BDIBAAA=]", desc: "Toxic tower." }
-                    ]},
-                    { n: "Convergence", evs: [ { n: "Convergence", i: ICON_BOSS, exact: [90, 270, 450, 630, 810, 990, 1170, 1350], d: 45, wp: "[&BB8OAAA=]", desc: "Legendary Kryptis." } ]}
-                ]},
-                { cat: "Festivals", sub: [
-                    { n: "Halloween", evs: [ { n: "Mad King Says", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BCAEAAA=]", desc: "Lion's Arch Halloween event." } ]},
-                    { n: "Wintersday", evs: [ { n: "Winter Wonderland", i: ICON_BOSS, r: 30, o: 0, d: 10, wp: "[&BCEEAAA=]", desc: "DR Wintersday event." } ]},
-                    { n: "Lunar New Year", evs: [ { n: "Dragonball", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BCEEAAA=]", desc: "DR Lunar New Year event." } ]},
-                    { n: "Super Adventure Box", evs: [ { n: "Super Adventure Festival", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BLkEAAA=]", desc: "Rata Sum SAB event." } ]},
-                    { n: "Dragon Bash", evs: [ { n: "Pinata Bashing", i: ICON_BOSS, r: 120, o: 0, d: 15, wp: "[&BHsEAAA=]", desc: "Hoelbrak Dragon Bash event." } ]},
-                    { n: "Four Winds", evs: [
-                        { n: "Flying Dolyak", i: ICON_BOSS, r: 120, o: 30, d: 15, wp: "[&BMgHAAA=]", desc: "Labyrinthine Cliffs." },
-                        { n: "Boss Blitz", i: ICON_BOSS, r: 120, o: 60, d: 15, wp: "[&BMgHAAA=]", desc: "Crown Pavilion." }
-                    ]}
-                ]}
-            ];
+            let schedule = [];
 
 			let currentMainCat = 1, syncCounter = 0;
 			let trackedTimers = JSON.parse(localStorage.getItem('gw2_tracked_timers') || '{}');
@@ -371,7 +214,7 @@
 			const ctx = canvas.getContext('2d');
 			let particles = [];
             
-            schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
+            // Schedule initialized later
 			
 			if ('speechSynthesis' in window) {
 				window.speechSynthesis.onvoiceschanged = function() { window.speechSynthesis.getVoices(); };
@@ -537,30 +380,38 @@
 			}
 
             // GW2 Game Update Checker
-            let currentBuildId = null;
             async function checkGameBuild() {
                 try {
                     let res = await fetch("https://api.guildwars2.com/v2/build");
                     if (!res.ok) return;
                     let data = await res.json();
+                    let lastBuild = localStorage.getItem('gw2_last_known_build');
                     
-                    if (currentBuildId === null) {
-                        currentBuildId = data.id; 
-                    } else if (currentBuildId !== data.id) {
-                        currentBuildId = data.id;
-                        window.parent.postMessage({action:'toast', msg:'NEW GW2 BUILD AVAILABLE!'}, '*');
+                    if (lastBuild === null) {
+                        localStorage.setItem('gw2_last_known_build', data.id);
+                    } else if (parseInt(lastBuild) !== data.id) {
+                        localStorage.setItem('gw2_last_known_build', data.id);
+                        window.parent.postMessage({action:'toast', msg:'NEW GW2 BUILD AVAILABLE!', persistent: true}, '*');
                         playTimerNotification(localStorage.getItem('gw2_timer_sound'), "A new Guild Wars 2 build is available.");
                     }
                 } catch(e) {}
             }
 
-			function init() {
+			async function init() {
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
 				window.onresize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
 
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+                try {
+                    const response = await fetch("https://gw2ps.local/Data/timers_config.json");
+                    if (response.ok) {
+                        schedule = await response.json();
+                        schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
+                    }
+                } catch(e) { console.error("Failed to load timers JSON:", e); }
 
 				const toggle = document.getElementById('timer-overlay-toggle');
 				toggle.checked = localStorage.getItem('gw2_timer_tracker_visible') === 'true';
@@ -584,20 +435,22 @@
 				}
 
 				const nav = document.getElementById('nav-panel');
-				schedule.forEach((c, idx) => {
-					const btn = document.createElement('button');
-					btn.className = 'cat-btn' + (idx === currentMainCat ? ' active' : '');
-					btn.innerText = c.cat;
-					btn.onclick = () => {
-						document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-						btn.classList.add('active');
-						currentMainCat = idx;
-						searchQuery = '';
-						document.getElementById('event-search').value = '';
-						renderView(true);
-					};
-					nav.appendChild(btn);
-				});
+                if (schedule.length > 0) {
+                    schedule.forEach((c, idx) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'cat-btn' + (idx === currentMainCat ? ' active' : '');
+                        btn.innerText = c.cat;
+                        btn.onclick = () => {
+                            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                            currentMainCat = idx;
+                            searchQuery = '';
+                            document.getElementById('event-search').value = '';
+                            renderView(true);
+                        };
+                        nav.appendChild(btn);
+                    });
+                }
 
 				setInterval(engineTick, 1000); 
                 engineTick();
@@ -874,6 +727,9 @@
 											freq.forEach(f => {
 												if(f > 0 && remMin === f && !alertHistory[name + '-' + f]) {
 													window.parent.postMessage({action:'eventPop', msg: name + " IN " + f + " MIN"}, '*');
+                                                    if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+                                                        window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " in " + f + " minutes"}, '*');
+                                                    }
 													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
 													alertHistory[name + '-' + f] = true;
 													setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
@@ -883,6 +739,9 @@
                                             const elapsed = Math.round(state.total - state.remain);
                                             if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
                                                 window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
+                                                if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+                                                    window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " is ACTIVE!"}, '*');
+                                                }
 												let soundOverride = (name === "Tequatl the Sunless") ? "https://gw2ps.local/Assets/Sounds/something_in_the_water.mp3" : null;
                                                 playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
                                                 alertHistory[name + '-0'] = true;
@@ -903,14 +762,37 @@
                     window.parent.postMessage('WVL_DATA:' + payloadString, '*');
                 }
 
+                let activeBosses = [];
+                schedule.forEach(cat => {
+                    if (cat.cat === "WATCHLIST" || cat.cat === "Custom Timers") return;
+                    cat.sub.forEach(s => {
+                        s.evs.forEach(ev => {
+                            const state = getEventState(ev, totalMin);
+                            if (state.active) activeBosses.push(ev.n);
+                        });
+                    });
+                });
+                window.parent.postMessage('ACTIVE_BOSSES:' + JSON.stringify(activeBosses), '*');
+
                 updateTyriaPhase(totalMin); 
                 renderView(false); 
                 syncCounter++; 
                 if (syncCounter >= 300) { syncCounter = 0; renderView(true); }
             }
             
+            window.addEventListener('message', (e) => {
+                if (e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
+                }
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+            });
+
             // Initialization happens at the very end
             init();
+            document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>
 	</body>

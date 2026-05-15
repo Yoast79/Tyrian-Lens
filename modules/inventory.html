@@ -9,11 +9,16 @@
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
 			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 20px; overflow-x: hidden; text-transform: uppercase; margin: 0; display: flex; flex-direction: column; height: 100vh; }
 
+			.title-bar { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #4a3b2a; margin-bottom: 10px; padding-bottom: 5px; gap: 15px; }
+			.section-title { font-size: 16px; font-weight: bold; letter-spacing: 1px; flex: 0 0 auto; }
+			.char-name-header { font-size: 12px; font-weight: bold; color: #f0dca5; letter-spacing: 1px; text-transform: uppercase; text-align: center; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 10px; }
+			.title-controls { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+			.sort-select { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; padding: 2px 5px; outline: none; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; }
+			.audit-btn { background: #4a3b2a; border: 1px solid #e2c07d; color: #e2c07d; font-size: 10px; padding: 2px 8px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; }
+			.audit-btn:hover { background: #e2c07d; color: #1a1510; }
+
 			.header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; gap: 10px; }
 			.header-left { display: flex; align-items: center; gap: 15px; }
-			.char-info { display: flex; flex-direction: column; }
-			.char-name { font-size: 18px; font-weight: bold; color: #f0dca5; line-height: 1.2; }
-			.char-class { font-size: 13px; text-transform: capitalize; color: #8a7a5f; }
 
 			.toggle-container { display: flex; align-items: center; gap: 8px; font-size: 10px; color: #8a7a5f; cursor: pointer; user-select: none; }
 			.toggle-switch { position: relative; width: 34px; height: 18px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 9px; transition: 0.2s; }
@@ -37,16 +42,24 @@
 			.tab-title { font-size: 12px; letter-spacing: 1px; color: #e2c07d; display: flex; align-items: center; gap: 8px; }
 			.bag-icon { width: 20px; height: 20px; border: 1px solid #332a1e; }
 
+			.tab-header-right { display: flex; align-items: center; gap: 10px; }
+			.tab-total-value { font-size: 11px; font-family: Arial, sans-serif; color: #fff; text-transform: none; display: flex; align-items: center; }
+			.coin { display: inline-flex; align-items: center; margin-left: 1px; }
+			.coin img { width: 10px; height: 10px; margin-left: 2px; vertical-align: middle; }
+			.gold { color: #f5d042; display: inline-flex; align-items: center; }
+			.silver { color: #ccc; display: inline-flex; align-items: center; margin-left: 3px; }
+			.copper { color: #ffa54f; display: inline-flex; align-items: center; margin-left: 3px; }
+
 			.arrow { font-size: 10px; transition: transform 0.2s; }
 			.collapsed .arrow { transform: rotate(-90deg); }
 			.collapsed .tab-grid { display: none; }
 
-			.tab-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; }
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; }
+			.tab-grid { display: grid; grid-template-columns: repeat(10, 36px); gap: 4px; padding: 10px; justify-content: center; }
+			.item-slot { width: 36px; height: 36px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; }
 			.item-slot.has-item { cursor: pointer; }
 			.item-slot.has-item:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
 			.item-icon { width: 100%; height: 100%; object-fit: cover; }
-			.item-count { position: absolute; top: 1px; right: 2px; font-size: 11px; font-family: Arial, sans-serif; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000, -1px -1px 2px #000; pointer-events: none; }
+			.item-count { position: absolute; top: 1px; right: 2px; font-size: 10px; font-family: Arial, sans-serif; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000, -1px -1px 2px #000; pointer-events: none; }
 
 			.rarity-Legendary { border-color: #4C139D; }
 			.rarity-Ascended { border-color: #FB3E8D; }
@@ -59,30 +72,47 @@
 			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
 
 			/* Large UI Scaling Overrides (~20% increase) */
-			body.ui-large .char-name { font-size: 22px; }
-			body.ui-large .char-class { font-size: 16px; }
 			body.ui-large .tab-title { font-size: 15px; }
 			body.ui-large .bag-icon { width: 24px; height: 24px; }
-			body.ui-large .tab-grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
-			body.ui-large .item-slot { width: 50px; height: 50px; }
-			body.ui-large .item-count { font-size: 13px; }
+			body.ui-large .tab-grid { grid-template-columns: repeat(10, 46px); gap: 6px; }
+			body.ui-large .item-slot { width: 46px; height: 46px; }
+			body.ui-large .item-count { font-size: 12px; }
 			body.ui-large .search-box { font-size: 15px; padding: 10px 35px 10px 10px; }
 			body.ui-large .toggle-container { font-size: 12px; }
+			body.ui-large .tab-total-value { font-size: 14px; }
+			body.ui-large .coin img { width: 14px; height: 14px; }
+			body.ui-large .char-name-header { font-size: 16px; }
 		</style>
 	</head>
 	<body>
 		<div id="main-ui" style="display:none; height: 100%; flex-direction: column;">
+			<div class="title-bar">
+				<div class="section-title">Inventory</div>
+				<div class="title-controls">
+
+					<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
+						<option value="default">Sort by: Default</option>
+						<option value="instant_high">Instant Sell: High -> Low</option>
+						<option value="instant_low">Instant Sell: Low -> High</option>
+						<option value="list_high">Listing Price: High -> Low</option>
+						<option value="list_low">Listing Price: Low -> High</option>
+					</select>
+				</div>
+			</div>
 			<div class="header" id="dynamic-header">
 				<div class="header-left">
-					<div class="toggle-container" id="bag-toggle" onclick="toggleBags()">
-						<div class="toggle-switch"></div>
-						<span>SHOW BAGS</span>
-					</div>
-					<div class="char-info">
-						<span class="char-name" id="display-name">---</span>
-						<span class="char-class" id="display-class">---</span>
+					<div style="display: flex; flex-direction: column; gap: 8px;">
+						<div class="toggle-container" id="all-char-toggle" onclick="toggleAllChars()">
+							<div class="toggle-switch"></div>
+							<span>SHOW ALL CHARACTERS</span>
+						</div>
+						<div class="toggle-container" id="bag-toggle" onclick="toggleBags()">
+							<div class="toggle-switch"></div>
+							<span>SHOW BAGS</span>
+						</div>
 					</div>
 				</div>
+				<div id="display-name" class="char-name-header">NAME</div>
 				<select id="char-select" class="char-select" onchange="switchChar(this.value)"></select>
 			</div>
 
@@ -102,44 +132,96 @@
 		<script>
 			/*<![CDATA[*/
 			let showBags = localStorage.getItem('gw2_inv_show_bags') === 'true';
+			let showAllChars = localStorage.getItem('gw2_inv_show_all_chars') === 'true';
+			let currentSort = 'default';
 			let allCharacters = [];
 			let sharedInventory = [];
 			let activeCharName = "";
+			let priceCache = {};
 
 			const UTILS = {
 			itemCache: {}, statCache: {},
 			async fetchSafe(url) { try { const r = await fetch(url); return (r && r.ok) ? await r.json() : null; } catch(e) { return null; } },
 			getAttrs(slot, item) { if (slot?.stats?.attributes) return Object.entries(slot.stats.attributes).map(([k,v]) => ({ attribute: k, modifier: v })); return item?.details?.infix_upgrade?.attributes || []; },
 			cleanText(t) { return t ? t.replace(/<[^>]*>?/gm, '').replace(/[\r\n]+/g, '<br />') : ""; },
+			formatCoin(copper, small = false) {
+				if (!copper || copper <= 0) return small ? "" : `0<span class="coin copper"><img src="https://gw2ps.local/Assets/CurrencyIcons/copper_coin.png"></span>`;
+				const g = Math.floor(copper / 10000);
+				const s = Math.floor((copper % 10000) / 100);
+				const c = copper % 100;
+				let html = '';
+				if (g > 0) html += `<span class="gold">${g}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/gold_coin.png"></span></span> `;
+				if (s > 0 || (g > 0 && !small)) html += `<span class="silver">${s}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/silver_coin.png"></span></span> `;
+				if (c > 0 || (!small && g === 0 && s === 0)) html += `<span class="copper">${c}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/copper_coin.png"></span></span>`;
+				return html;
+			},
 			generateTooltip(item, slot) {
-			const colors = { Legendary:'#4C139D', Ascended:'#FB3E8D', Exotic:'#FFA405', Rare:'#FCD00B', Masterwork:'#1A9306', Fine:'#62A4DA' };
-			let h = `<div style="text-transform:none; font-family:sans-serif; width:fit-content; min-width:220px; line-height:1.3; padding:2px;">`;
+				const colors = { Legendary:'#4C139D', Ascended:'#FB3E8D', Exotic:'#FFA405', Rare:'#FCD00B', Masterwork:'#1A9306', Fine:'#62A4DA' };
+				let h = `<div style="text-transform:none; font-family:sans-serif; width:fit-content; min-width:220px; line-height:1.3; padding:2px;">`;
 				h += `<div style="color:${colors[item.rarity] || '#eee'}; font-size:16px; font-weight:bold; margin-bottom:1px; white-space:nowrap;">${item.name}</div>`;
 				h += `<div style="color:#eee; font-size:11px; margin-bottom:6px; text-transform:capitalize;">${item.rarity} ${item.details?.weight_class || ""} ${(item.details?.type || item.type || "").replace(/([A-Z])/g, ' $1').trim()}</div>`;
-				if (slot?.stats) h += `<div style="color:#00ff00; font-weight:bold; font-size:12px;">${this.statCache[slot.stats.id] || "Stats"}</div>`;
+				
+				const prices = priceCache[item.id] || { buys: 0, sells: 0 };
+				const count = slot?.count || 1;
+				const tax = 0.85;
+				const instantSell = Math.floor(prices.buys * tax);
+				const listPrice = prices.sells;
+				const stackInstantSell = Math.floor(count * prices.buys * tax);
+				const stackListPrice = count * prices.sells;
+
+				let ph = `<div style="margin-top:8px; border-top:1px solid #444; padding-top:6px; display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
+				
+				let hasFinancials = false;
+				const canSellVendor = item.vendor_value > 0 && !(item.flags && item.flags.includes('NoSell'));
+				
+				if (prices.sells > 0) {
+					hasFinancials = true;
+					ph += `<span>INSTANT SELL:</span><span>${this.formatCoin(instantSell)}</span>`;
+					ph += `<span>LIST PRICE:</span><span>${this.formatCoin(listPrice)}</span>`;
+					if (count > 1) {
+						ph += `</div><div style="margin:4px 0; border-top:1px solid #444; opacity:0.3;"></div>`;
+						ph += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
+						ph += `<span>STACK INSTANT SELL:</span><span>${this.formatCoin(stackInstantSell)}</span>`;
+						ph += `<span>STACK LIST PRICE:</span><span>${this.formatCoin(stackListPrice)}</span>`;
+					}
+				} else if (canSellVendor) {
+					hasFinancials = true;
+					ph += `<span>VENDOR VALUE:</span><span>${this.formatCoin(item.vendor_value)}</span>`;
+					if (count > 1) {
+						ph += `<span>STACK VENDOR VALUE:</span><span>${this.formatCoin(item.vendor_value * count)}</span>`;
+					}
+				}
+
+				if (!hasFinancials) {
+					ph += `<span style="grid-column: span 2; opacity: 0.5;">NO VENDOR OR TP VALUE</span>`;
+				}
+				ph += `</div>`;
+				h += ph;
+
+				if (slot?.stats) h += `<div style="margin-top:8px; color:#00ff00; font-weight:bold; font-size:12px;">${this.statCache[slot.stats.id] || "Stats"}</div>`;
 				this.getAttrs(slot, item).forEach(a => { let lbl = String(a.attribute).replace(/([A-Z])/g, ' $1').trim(); if (lbl === 'Crit Damage') lbl = 'Ferocity'; if (lbl !== 'Agony Resistance') h += `<div style="color:#00ff00; font-size:11px;">+${a.modifier} ${lbl}</div>`; });
 				if (slot?.upgrades) {
-				slot.upgrades.forEach(uId => {
-				const u = this.itemCache[uId];
-				if (u) {
-				h += `<div style="margin-top:6px; color:#62A4DA; font-size:12px;">
-					<img src="${u.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:4px;" /> ${u.name}
-				</div>`;
-				if (u.details?.bonuses) u.details.bonuses.forEach((b, i) => h += `<div style="color:#62A4DA; font-size:10px; padding-left:16px;">(${i+1}): ${b}</div>`);
-				else h += `<div style="color:#62A4DA; font-size:10px; padding-left:16px;">${this.cleanText(u.details?.infix_upgrade?.buff?.description || u.description)}</div>`;
-				}
-				});
+					slot.upgrades.forEach(uId => {
+						const u = this.itemCache[uId];
+						if (u) {
+							h += `<div style="margin-top:6px; color:#62A4DA; font-size:12px;">
+								<img src="${u.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:4px;" /> ${u.name}
+							</div>`;
+							if (u.details?.bonuses) u.details.bonuses.forEach((b, i) => h += `<div style="color:#62A4DA; font-size:10px; padding-left:16px;">(${i+1}): ${b}</div>`);
+							else h += `<div style="color:#62A4DA; font-size:10px; padding-left:16px;">${this.cleanText(u.details?.infix_upgrade?.buff?.description || u.description)}</div>`;
+						}
+					});
 				}
 				if (slot?.infusions) {
-				slot.infusions.forEach(iId => {
-				const i = this.itemCache[iId];
-				if (i) {
-				let s = i.details?.infix_upgrade?.attributes?.map(a => `+${a.modifier} ${a.attribute.replace(/([A-Z])/g, ' $1')}`).join(', ') || "";
-				h += `<div style="margin-top:5px; color:#95c5ff; font-size:12px;">
-					<img src="${i.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:5px;" /> ${i.name} <small>(${s})</small>
-				</div>`;
-				}
-				});
+					slot.infusions.forEach(iId => {
+						const i = this.itemCache[iId];
+						if (i) {
+							let s = i.details?.infix_upgrade?.attributes?.map(a => `+${a.modifier} ${a.attribute.replace(/([A-Z])/g, ' $1')}`).join(', ') || "";
+							h += `<div style="margin-top:5px; color:#95c5ff; font-size:12px;">
+								<img src="${i.icon}" style="width:12px; height:12px; vertical-align:middle; margin-right:5px;" /> ${i.name} <small>(${s})</smal
+							</div>`;
+						}
+					});
 				}
 				let lore = item.description || item.details?.description || item.details?.infix_upgrade?.buff?.description || "";
 				if (lore) h += `<div style="margin-top:8px; color:#aaa; font-style:italic; font-size:10px; border-top:1px solid #444; padding-top:4px;">"${this.cleanText(lore)}"</div>`;
@@ -151,7 +233,19 @@
 				showBags = !showBags;
 				localStorage.setItem('gw2_inv_show_bags', showBags);
 				document.getElementById('bag-toggle').classList.toggle('active', showBags);
-				renderNormalView();
+				renderView();
+			}
+
+			function toggleAllChars() {
+				showAllChars = !showAllChars;
+				localStorage.setItem('gw2_inv_show_all_chars', showAllChars);
+				document.getElementById('all-char-toggle').classList.toggle('active', showAllChars);
+				renderView();
+			}
+
+			function changeSort(val) {
+				currentSort = val;
+				renderView();
 			}
 
 			async function init() {
@@ -159,72 +253,79 @@
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 				
-				// Initialize toggle visual from storage
+				// Initialize toggles
 				document.getElementById('bag-toggle').classList.toggle('active', showBags);
+				document.getElementById('all-char-toggle').classList.toggle('active', showAllChars);
 
 				const activeKey = localStorage.getItem('gw2_active_key');
 				if (!activeKey) return;
-
-				// Clear existing caches to free RAM during re-init[cite: 20]
-				UTILS.itemCache = {};
-				UTILS.statCache = {};
 
 				document.getElementById('loader').style.display = 'flex';
 				document.getElementById('main-ui').style.display = 'none';
 
 				try {
-				const [sharedRes, charRes] = await Promise.all([
-				UTILS.fetchSafe(`https://api.guildwars2.com/v2/account/inventory?access_token=${activeKey}`),
-				UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?page=0&page_size=200&access_token=${activeKey}`)
-				]);
+                    // Check cache first
+                    const cachedInv = localStorage.getItem('gw2_cache_inventory');
+                    const cachedShared = localStorage.getItem('gw2_cache_shared_inventory');
+                    
+                    if (cachedInv && cachedShared) {
+                        allCharacters = JSON.parse(cachedInv).sort((a,b) => a.name.localeCompare(b.name));
+                        sharedInventory = JSON.parse(cachedShared);
+                    } else {
+                        const [sharedRes, charRes] = await Promise.all([
+                            UTILS.fetchSafe(`https://api.guildwars2.com/v2/account/inventory?access_token=${activeKey}`),
+                            UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?page=0&page_size=200&access_token=${activeKey}`)
+                        ]);
+                        sharedInventory = sharedRes || [];
+                        allCharacters = (charRes || []).sort((a,b) => a.name.localeCompare(b.name));
+                        
+                        localStorage.setItem('gw2_cache_inventory', JSON.stringify(allCharacters));
+                        localStorage.setItem('gw2_cache_shared_inventory', JSON.stringify(sharedInventory));
+                    }
 
-				sharedInventory = sharedRes || [];
-				allCharacters = (charRes || []).sort((a,b) => a.name.localeCompare(b.name));
+                    let itemIds = new Set(), statIds = new Set();
+                    const processSlot = (slot) => {
+                        if (!slot) return;
+                        itemIds.add(slot.id);
+                        if (slot.stats) statIds.add(slot.stats.id);
+                        if (slot.upgrades) slot.upgrades.forEach(id => itemIds.add(id));
+                        if (slot.infusions) slot.infusions.forEach(id => itemIds.add(id));
+                    };
 
-				let itemIds = new Set(), statIds = new Set();
-				const processSlot = (slot) => {
-				if (!slot) return;
-				itemIds.add(slot.id);
-				if (slot.stats) statIds.add(slot.stats.id);
-				if (slot.upgrades) slot.upgrades.forEach(id => itemIds.add(id));
-				if (slot.infusions) slot.infusions.forEach(id => itemIds.add(id));
-				};
+                    sharedInventory.forEach(processSlot);
+                    allCharacters.forEach(c => {
+                        if (c.bags) {
+                            c.bags.forEach(bag => {
+                                if (bag) {
+                                    itemIds.add(bag.id);
+                                    bag.inventory.forEach(processSlot);
+                                }
+                            });
+                        }
+                    });
 
-				sharedInventory.forEach(processSlot);
-				allCharacters.forEach(c => {
-				if (c.bags) {
-				c.bags.forEach(bag => {
-				if (bag) {
-				itemIds.add(bag.id);
-				bag.inventory.forEach(processSlot);
-				}
-				});
-				}
-				});
+                    const uniqueItemIds = [...itemIds];
+                    await Promise.all([
+                        fetchItemsInChunks(uniqueItemIds),
+                        fetchItemPrices(uniqueItemIds)
+                    ]);
 
-				const uniqueItemIds = [...itemIds];
-				for (let i = 0; i < uniqueItemIds.length; i += 200) {
-						const chunk = uniqueItemIds.slice(i, i + 200);
-						const data = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
-						if (data) data.forEach(item => UTILS.itemCache[item.id] = item);
-					}
+                    const uniqueStatIds = [...statIds];
+                    if (uniqueStatIds.length > 0) {
+                        const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStatIds.join(',')}`);
+                        if (sData) sData.forEach(s => UTILS.statCache[s.id] = s.name);
+                    }
 
-					const uniqueStatIds = [...statIds];
-					if (uniqueStatIds.length > 0) {
-						const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStatIds.join(',')}`);
-						if (sData) sData.forEach(s => UTILS.statCache[s.id] = s.name);
-					}
+                    const sel = document.getElementById('char-select');
+                    sel.innerHTML = allCharacters.map(c => `<option value="${c.name}">${c.name}</option>`).join('');
 
-					const sel = document.getElementById('char-select');
-					sel.innerHTML = allCharacters.map(c => `<option value="${c.name}">${c.name}</option>`).join('');
+                    // Respect preferred character from global settings
+                    const defaultChar = settings.defaultChar;
+                    const startChar = (defaultChar && allCharacters.find(c => c.name === defaultChar)) ? defaultChar : (allCharacters.length > 0 ? allCharacters[0].name : "");
+                    if (startChar) { sel.value = startChar; switchChar(startChar); }
 
-				// Respect preferred character from global settings[cite: 20]
-				const defaultChar = settings.defaultChar;
-				const startChar = (defaultChar && allCharacters.find(c => c.name === defaultChar)) ? defaultChar : (allCharacters.length > 0 ? allCharacters[0].name : "");
-				if (startChar) { sel.value = startChar; switchChar(startChar); }
-
-				document.getElementById('loader').style.display = 'none';
-				document.getElementById('main-ui').style.display = 'flex';
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('main-ui').style.display = 'flex';
 
 				} catch (err) { console.error("Error fetching inventory data", err); }
 			}
@@ -233,24 +334,57 @@
 				activeCharName = name;
 				const char = allCharacters.find(c => c.name === name);
 				if (char) {
-				document.getElementById('display-name').innerText = char.name;
-				document.getElementById('display-class').innerText = char.profession;
+					document.getElementById('display-name').innerText = char.name;
 				}
 				document.getElementById('inv-search').value = "";
 				document.getElementById('clear-search').style.display = "none";
-				renderNormalView();
+				renderView();
 			};
+
+
+
+			async function fetchItemsInChunks(ids) {
+				for (let i = 0; i < ids.length; i += 200) {
+					const chunk = ids.slice(i, i + 200);
+					const data = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+					if (data) data.forEach(item => UTILS.itemCache[item.id] = item);
+				}
+			}
+
+			async function fetchItemPrices(ids) {
+				for (let i = 0; i < ids.length; i += 200) {
+					const chunk = ids.slice(i, i + 200);
+					const data = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/commerce/prices?ids=${chunk.join(',')}`);
+					if (data) data.forEach(p => {
+						priceCache[p.id] = { buys: p.buys ? p.buys.unit_price : 0, sells: p.sells ? p.sells.unit_price : 0 };
+					});
+				}
+			}
+
+			function sortSlots(slots) {
+				if (currentSort === 'default') return slots;
+				return [...slots].sort((a, b) => {
+					if (!a && !b) return 0; if (!a) return 1; if (!b) return -1;
+					const pA = priceCache[a.id] || { buys: 0, sells: 0 };
+					const pB = priceCache[b.id] || { buys: 0, sells: 0 };
+					if (currentSort === 'instant_high') return (pB.buys * 0.85) - (pA.buys * 0.85);
+					if (currentSort === 'instant_low') return (pA.buys * 0.85) - (pB.buys * 0.85);
+					if (currentSort === 'list_high') return pB.sells - pA.sells;
+					if (currentSort === 'list_low') return pA.sells - pB.sells;
+					return 0;
+				});
+			}
 
 			function createSlotHTML(slotData) {
 				const slotDiv = document.createElement('div');
 				slotDiv.className = 'item-slot';
 				if (slotData && UTILS.itemCache[slotData.id]) {
-				const item = UTILS.itemCache[slotData.id];
-				slotDiv.classList.add('has-item', `rarity-${item.rarity}`);
-				slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
-				slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(item, slotData), x: e.clientX, y: e.clientY}, '*');
-				slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
-				slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
+					const item = UTILS.itemCache[slotData.id];
+					slotDiv.classList.add('has-item', `rarity-${item.rarity}`);
+					slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
+					slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(item, slotData), x: e.clientX, y: e.clientY}, '*');
+					slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+					slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
 					if (slotData.count > 1) slotDiv.innerHTML += `<div class="item-count">${slotData.count}</div>`;
 				}
 				return slotDiv;
@@ -260,43 +394,74 @@
 				if (skipEmpty && slotsData.filter(s => s !== null).length === 0) return null;
 				const tabDiv = document.createElement('div');
 				tabDiv.className = 'inv-tab';
+				let tabTotalCopper = 0;
+				const grid = document.createElement('div');
+				grid.className = 'tab-grid';
+				const sorted = sortSlots(slotsData);
+				sorted.forEach(slot => {
+					if (!skipEmpty || slot) {
+						grid.appendChild(createSlotHTML(slot));
+						if (slot) tabTotalCopper += (slot.count * (priceCache[slot.id]?.sells || 0));
+					}
+				});
 				const header = document.createElement('div');
 				header.className = 'tab-header';
 				header.onclick = () => tabDiv.classList.toggle('collapsed');
 				let iconHtml = iconUrl ? `<img src="${iconUrl}" class="bag-icon">` : '';
-				header.innerHTML = `<span class="tab-title">${iconHtml} ${title}</span><span class="arrow">▼</span>`;
-				const grid = document.createElement('div');
-				grid.className = 'tab-grid';
-				slotsData.forEach(slot => { if (!skipEmpty || slot) grid.appendChild(createSlotHTML(slot)); });
+				header.innerHTML = `<span class="tab-title">${iconHtml} ${title}</span><div class="tab-header-right"><span class="tab-total-value">${UTILS.formatCoin(tabTotalCopper)}</span><span class="arrow">▼</span></div>`;
 				tabDiv.appendChild(header);
 				tabDiv.appendChild(grid);
 				return tabDiv;
+			}
+
+			function renderView() {
+				const query = document.getElementById('inv-search').value.toLowerCase().trim();
+				if (query !== "") { renderGlobalSearch(query); return; }
+				showAllChars ? renderAllCharsView() : renderNormalView();
 			}
 
 			function renderNormalView() {
 				document.getElementById('dynamic-header').style.display = 'flex';
 				const container = document.getElementById('inv-container');
 				container.innerHTML = '';
-
 				if (sharedInventory.length > 0) {
-				const sharedTab = createTabHTML("Shared Inventory", "https://render.guildwars2.com/file/58085D0B0C10C3594E96046B95BE963B7A293BB5/1314214.png", sharedInventory);
-				if (sharedTab) container.appendChild(sharedTab);
+					const sharedTab = createTabHTML("Shared Inventory", "https://render.guildwars2.com/file/58085D0B0C10C3594E96046B95BE963B7A293BB5/1314214.png", sharedInventory);
+					if (sharedTab) container.appendChild(sharedTab);
 				}
-
 				const char = allCharacters.find(c => c.name === activeCharName);
 				if (!char || !char.bags) return;
+				renderCharInventory(char, container);
+			}
 
-				if (showBags) {
-				char.bags.forEach((bag, idx) => {
-				if (bag) {
-				const item = UTILS.itemCache[bag.id];
-				container.appendChild(createTabHTML(item ? item.name : `Bag ${idx+1}`, item ? item.icon : "", bag.inventory));
+			function renderAllCharsView() {
+				document.getElementById('dynamic-header').style.display = 'flex';
+				const container = document.getElementById('inv-container');
+				container.innerHTML = '';
+				if (sharedInventory.length > 0) {
+					const sharedTab = createTabHTML("Shared Inventory", "https://render.guildwars2.com/file/58085D0B0C10C3594E96046B95BE963B7A293BB5/1314214.png", sharedInventory);
+					if (sharedTab) container.appendChild(sharedTab);
 				}
+				allCharacters.forEach(char => {
+					const charHeader = document.createElement('div');
+					charHeader.style = "margin: 20px 0 10px; font-size: 14px; font-weight: bold; color: #f0dca5; border-bottom: 1px solid rgba(74,59,42,0.5); padding-bottom: 5px;";
+					charHeader.innerText = char.name;
+					container.appendChild(charHeader);
+					renderCharInventory(char, container);
 				});
+			}
+
+			function renderCharInventory(char, container) {
+				if (showBags) {
+					char.bags.forEach((bag, idx) => {
+						if (bag) {
+							const item = UTILS.itemCache[bag.id];
+							container.appendChild(createTabHTML(item ? item.name : `Bag ${idx+1}`, item ? item.icon : "", bag.inventory));
+						}
+					});
 				} else {
-				let consolidated = [];
-				char.bags.forEach(bag => { if (bag) consolidated.push(...bag.inventory); });
-				container.appendChild(createTabHTML("Consolidated Inventory", null, consolidated));
+					let consolidated = [];
+					char.bags.forEach(bag => { if (bag) consolidated.push(...bag.inventory); });
+					container.appendChild(createTabHTML(showAllChars ? `${char.name} (Consolidated)` : "Consolidated Inventory", null, consolidated));
 				}
 			}
 
@@ -305,36 +470,33 @@
 				const container = document.getElementById('inv-container');
 				container.innerHTML = '';
 				const isMatch = (slot) => slot && UTILS.itemCache[slot.id] && UTILS.itemCache[slot.id].name.toLowerCase().includes(query);
-
 				const sharedMatches = sharedInventory.filter(isMatch);
 				if (sharedMatches.length > 0) container.appendChild(createTabHTML("Shared Matches", "https://render.guildwars2.com/file/58085D0B0C10C3594E96046B95BE963B7A293BB5/1314214.png", sharedMatches, true));
-
 				allCharacters.forEach(c => {
-				let matches = [];
-				if (c.bags) c.bags.forEach(bag => { if (bag) matches.push(...bag.inventory.filter(isMatch)); });
-				if (matches.length > 0) container.appendChild(createTabHTML(c.name, `https://gw2ps.local/Assets/Icons/race_${c.race.toLowerCase()}.png`, matches, true));
+					let matches = [];
+					if (c.bags) c.bags.forEach(bag => { if (bag) matches.push(...bag.inventory.filter(isMatch)); });
+					if (matches.length > 0) container.appendChild(createTabHTML(c.name, `https://gw2ps.local/Assets/Icons/race_${c.race.toLowerCase()}.png`, matches, true));
 				});
 			}
 
 			window.filterInventory = function() {
 				const query = document.getElementById('inv-search').value.toLowerCase().trim();
 				document.getElementById('clear-search').style.display = query === "" ? "none" : "block";
-				query === "" ? renderNormalView() : renderGlobalSearch(query);
+				query === "" ? renderView() : renderGlobalSearch(query);
 			};
 
 			window.clearSearch = function() { document.getElementById('inv-search').value = ""; filterInventory(); };
 			window.addEventListener('message', (e) => { 
-                if (e.data.action === 'switchAccount') init(); 
-                if (e.data.action === 'preferredCharChanged') {
-                    const sel = document.getElementById('char-select');
-                    if(sel && e.data.value) {
-                        sel.value = e.data.value;
-                        switchChar(e.data.value);
-                    }
-                }
-            });
+				if (e.data.action === 'accountDataRefreshed') init();
+				if (e.data.action === 'switchAccount') init(); 
+				if (e.data.action === 'preferredCharChanged') {
+					const sel = document.getElementById('char-select');
+					if(sel && e.data.value) { sel.value = e.data.value; switchChar(e.data.value); }
+				}
+			});
 			init();
 			/*]]>*/
 		</script>
 	</body>
 </html>
+

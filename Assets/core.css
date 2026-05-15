@@ -1,0 +1,66 @@
+/* Assets/core.css */
+:root {
+    --text-primary: #e2c07d;
+    --text-bright: #ffffff;
+    --bg-dark: #000000;
+    --bg-panel: #0a0805;
+    --bg-button: #1a1510;
+    --bg-button-hover: #e2c07d;
+    --text-button-hover: #1a1510;
+    --border-color: #4a3b2a;
+    --border-highlight: #e2c07d;
+    --success-color: #4ae25b;
+    --danger-color: #ff4a4a;
+    --error-color: #ff4a4a;
+    --text-muted: #8a7a5f;
+    --tracker-bg: rgba(26, 21, 16, 0.95);
+    --menu-height: 45px;
+}
+
+body.ui-large {
+    --menu-height: 55px;
+}
+
+[data-theme="sylvari"] {
+    --text-primary: #a1e27d;
+    --bg-panel: #050a06;
+    --bg-button: #101a11;
+    --bg-button-hover: #a1e27d;
+    --border-color: #2a4a2b;
+    --border-highlight: #a1e27d;
+    --text-muted: #5f8a65;
+    --tracker-bg: rgba(16, 26, 17, 0.95);
+}
+
+[data-theme="asura"] {
+    --text-primary: #7dcae2;
+    --bg-panel: #05080a;
+    --bg-button: #10151a;
+    --bg-button-hover: #7dcae2;
+    --border-color: #2a3b4a;
+    --border-highlight: #7dcae2;
+    --text-muted: #5f7a8a;
+    --tracker-bg: rgba(16, 21, 26, 0.95);
+}
+
+[data-theme="charr"] {
+    --text-primary: #e27d7d;
+    --bg-panel: #0a0505;
+    --bg-button: #1a1010;
+    --bg-button-hover: #e27d7d;
+    --border-color: #4a2a2a;
+    --border-highlight: #e27d7d;
+    --text-muted: #8a5f5f;
+    --tracker-bg: rgba(26, 16, 16, 0.95);
+}
+
+[data-theme="norn"] {
+    --text-primary: #d4e0e5;
+    --bg-panel: #080a0b;
+    --bg-button: #151a1c;
+    --bg-button-hover: #d4e0e5;
+    --border-color: #3b4a52;
+    --border-highlight: #d4e0e5;
+    --text-muted: #7a8a91;
+    --tracker-bg: rgba(21, 26, 28, 0.95);
+}

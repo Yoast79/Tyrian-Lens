@@ -1,0 +1,159 @@
+[
+    { "cat": "WATCHLIST", "sub": [] },
+    { "cat": "Core Tyria", "sub": [
+        { "n": "General", "evs": [
+            { "n": "Daily Reset", "i": "https://wiki.guildwars2.com/images/e/e2/Event_wrench_%28map_icon%29.png", "exact": [0], "d": 1, "wp": "", "desc": "Server reset and daily achievements cycle." }
+        ]},
+        { "n": "World bosses", "evs": [
+            { "n": "Frozen Maw", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 15, "d": 15, "wp": "[&BMIDAAA=]", "desc": "Frozen Maw meta in Wayfarer Foothills." },
+            { "n": "Fire Elemental", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 15, "wp": "[&BE4AAAA=]", "desc": "Metrica construct meta." },
+            { "n": "Jungle Wurm", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 75, "d": 15, "wp": "[&BEEBAAA=]", "desc": "Great Jungle Wurm meta in Caledon Forest." },
+            { "n": "Shadow Behemoth", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 105, "d": 15, "wp": "[&BPcAAAA=]", "desc": "Queensdale demon meta." },
+            { "n": "Admiral Covington", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 0, "d": 15, "wp": "[&BKgBAAA=]", "desc": "Bloodtide Coast pirate meta." },
+            { "n": "Megadestroyer", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 30, "d": 15, "wp": "[&BM0CAAA=]", "desc": "Mount Maelstrom destroyer meta." },
+            { "n": "The Shatterer", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 180, "o": 60, "d": 15, "wp": "[&BE4DAAA=]", "desc": "Kralkatorrik champion meta." },
+            { "n": "Modniir Ulgoth", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 90, "d": 15, "wp": "[&BLAAAAA=]", "desc": "Centaur King meta." },
+            { "n": "Golem Mark II", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 120, "d": 15, "wp": "[&BNQCAAA=]", "desc": "Inquest golem meta." },
+            { "n": "Claw of Jormag", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 180, "o": 150, "d": 15, "wp": "[&BHoCAAA=]", "desc": "Jormag lieutenant meta." }
+        ]},
+        { "n": "Hard world bosses", "evs": [
+            { "n": "Tequatl the Sunless", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "exact": [0, 180, 270, 480, 690, 960, 1140], "d": 15, "wp": "[&BNABAAA=]", "desc": "A dragon lieutenant of Zhaitan invading Sparkfly Fen." },
+            { "n": "Karka Queen", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "exact": [120, 360, 630, 900, 1080, 1380], "d": 15, "wp": "[&BNUGAAA=]", "desc": "Massive Karka attacking Southsun Cove." },
+            { "n": "Triple Trouble", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "exact": [60, 240, 480, 720, 930, 1200], "d": 15, "wp": "[&BKoBAAA=]", "desc": "Three legendary jungle wurms in Bloodtide Coast." }
+        ]},
+        { "n": "Orr Metas", "evs": [
+            { "n": "Temple of Balthazar", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BPICAAA=]", "desc": "Capture the Cathedral of Glorious Victory." },
+            { "n": "Temple of Melandru", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 20, "wp": "[&BB8DAAA=]", "desc": "Capture the Cathedral of Verdance." },
+            { "n": "Temple of Lyssa", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 20, "wp": "[&BK0CAAA=]", "desc": "Capture the Cathedral of Zephyrs." },
+            { "n": "Temple of Grenth", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 20, "wp": "[&BCIDAAA=]", "desc": "Capture the Cathedral of Silence." }
+        ]},
+        { "n": "Zone Cycles", "evs": [
+            { "n": "Dredge Assault", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 15, "wp": "[&BMIDAAA=]", "desc": "Diessa Plateau dredge meta." },
+            { "n": "Ogre Wars", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 75, "d": 15, "wp": "[&BE4AAAA=]", "desc": "Fields of Ruin ogre meta." }
+        ]},
+        { "n": "Ley-Line Anomaly", "evs": [ { "n": "Ley-Line Anomaly", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 20, "d": 20, "wp": "[&BOcAAAA=]", "desc": "Rogue anomaly run meta." } ]},
+        { "n": "Invasions", "evs": [ { "n": "Awakened / Forged", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 60, "o": 30, "d": 15, "wp": "", "desc": "Map-wide incursion meta." } ]},
+        { "n": "Fractal Incursions", "evs": [ { "n": "Fractal Incursion", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 15, "wp": "", "desc": "Tyria fractal meta." } ]},
+        { "n": "EU PvP Tournaments", "evs": [ { "n": "EU Tournament", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 0, "d": 15, "wp": "", "desc": "Automated EU PvP." } ]},
+        { "n": "NA PvP Tournaments", "evs": [ { "n": "NA Tournament", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 180, "o": 0, "d": 15, "wp": "", "desc": "Automated NA PvP." } ]}
+    ]},
+    { "cat": "Living World Season 2", "sub": [ { "n": "Dry Top", "evs": [ { "n": "Sandstorm", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 60, "o": 40, "d": 20, "wp": "[&BIAHAAA=]", "desc": "Dry Top sandstorm meta." } ]} ]},
+    { "cat": "Living World Season 3", "sub": [
+        { "n": "Lake Doric", "evs": [
+            { "n": "Saidra's Haven", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 20, "d": 15, "wp": "[&BK0JAAA=]", "desc": "Saidra's Haven takes place every 120 minutes." },
+            { "n": "New Loamhurst", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 40, "d": 15, "wp": "[&BLkJAAA=]", "desc": "New Loamhurst takes place every 120 minutes." },
+            { "n": "Noran's Homestead", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BK8JAAA=]", "desc": "Noran's Homestead takes place every 120 minutes." }
+        ]}
+    ]},
+    { "cat": "Heart of Thorns", "sub": [
+        { "n": "Verdant Brink", "evs": [ 
+            { "n": "Securing Outposts", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 10, "d": 35, "wp": "[&BN4HAAA=]", "desc": "Daytime preparation." },
+            { "n": "Night Bosses", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 45, "wp": "[&BN4HAAA=]", "desc": "Verdant Brink night meta." } 
+        ]},
+        { "n": "Auric Basin", "evs": [ 
+            { "n": "Defending Tarir", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 60, "wp": "[&BAIIAAA=]", "desc": "Preparation for Octovine." },
+            { "n": "Octovine", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 105, "d": 15, "wp": "[&BAIIAAA=]", "desc": "Tarir Octovine meta." } 
+        ]},
+        { "n": "Tangled Depths", "evs": [ 
+            { "n": "Outpost Prep", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 30, "wp": "[&BPUHAAA=]", "desc": "Outpost event chains." },
+            { "n": "Chak Gerent", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 20, "wp": "[&BPUHAAA=]", "desc": "Chak Gerent meta in Tangled Depths." } 
+        ]},
+        { "n": "Dragon's Stand", "evs": [ { "n": "Mouth of Mordremoth", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 90, "d": 60, "wp": "[&BBAIAAA=]", "desc": "Final push meta." } ]}
+    ]},
+    { "cat": "Path of Fire", "sub": [
+        { "n": "Crystal Oasis", "evs": [ 
+            { "n": "Casino Blitz", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 5, "d": 20, "wp": "[&BLsKAAA=]", "desc": "Pinata meta preparation." },
+            { "n": "Choya Pinata", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 25, "d": 5, "wp": "[&BLsKAAA=]", "desc": "Choya Pinata boss fight." } 
+        ]},
+        { "n": "Desert Highlands", "evs": [ { "n": "Buried Treasure", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BNEKAAA=]", "desc": "Treasure hunt meta." } ]},
+        { "n": "Elon Riverlands", "evs": [ { "n": "Doppelganger", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 15, "wp": "[&BFMKAAA=]", "desc": "Mirror meta." } ]},
+        { "n": "The Desolation", "evs": [
+            { "n": "Forged with Fire", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 60, "o": 0, "d": 20, "wp": "[&BMEKAAA=]", "desc": "Maw of Torment meta." },
+            { "n": "Junundu Rising", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 60, "o": 30, "d": 15, "wp": "[&BMEKAAA=]", "desc": "Junundu wurm meta." }
+        ]},
+        { "n": "Domain of Vabbi", "evs": [ { "n": "Serpents' Ire", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 30, "wp": "[&BH0KAAA=]", "desc": "Branded Zealot meta." } ]}
+    ]},
+    { "cat": "Living World Season 4", "sub": [
+        { "n": "Domain of Istan", "evs": [
+            { "n": "Sunspear Uprising", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 15, "d": 15, "wp": "[&BBAKAAA=]", "desc": "Champion Awakened Warden." },
+            { "n": "Palawadan", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 105, "d": 30, "wp": "[&BAkLAAA=]", "desc": "Palawadan Jewel of Istan meta." }
+        ]},
+        { "n": "Sandswept Isles", "evs": [
+            { "n": "Specimen Chamber", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 5, "d": 20, "wp": "[&BEMLAAA=]", "desc": "Inquest facility meta." },
+            { "n": "Gathering Storms", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 65, "d": 20, "wp": "[&BEMLAAA=]", "desc": "Zohaqan meta." }
+        ]},
+        { "n": "Jahai Bluffs", "evs": [ { "n": "Death-Branded Shatterer", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 60, "d": 15, "wp": "[&BJMLAAA=]", "desc": "Shatterer 2.0 meta." } ]},
+        { "n": "Thunderhead Peaks", "evs": [
+            { "n": "Thunderhead Keep", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 20, "wp": "[&BLsLAAA=]", "desc": "Keep defense meta." },
+            { "n": "Oil Floes", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 105, "d": 15, "wp": "[&BLkLAAA=]", "desc": "Peaks oil defense meta." }
+        ]},
+        { "n": "Dragonfall", "evs": [ { "n": "Battle of Dragonfall", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 0, "d": 120, "wp": "[&BN4LAAA=]", "desc": "Kralkatorrik meta." } ]}
+    ]},
+    { "cat": "The Icebrood Saga", "sub": [
+        { "n": "Grothmar Valley", "evs": [
+            { "n": "Doomlore Shrine", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 10, "d": 15, "wp": "[&BP8LAAA=]", "desc": "Doomlore shrine defense." },
+            { "n": "Ooze Pit", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 20, "wp": "[&BP8LAAA=]", "desc": "Ooze Pit trial." },
+            { "n": "Metal Legion", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 30, "wp": "[&BPMLAAA=]", "desc": "Concert meta." },
+            { "n": "Sacred Flame", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 15, "wp": "[&BP8LAAA=]", "desc": "Sacred Flame ceremony." }
+        ]},
+        { "n": "Bjora Marches", "evs": [
+            { "n": "Drakkar", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 5, "d": 25, "wp": "[&BIsMAAA=]", "desc": "Drakkar meta." },
+            { "n": "Storms of Winter", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 20, "wp": "[&BCcMAAA=]", "desc": "Raven Shrine defense." }
+        ]},
+        { "n": "Drizzlewood Coast", "evs": [ { "n": "Assault on Frost Citadel", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 120, "wp": "[&BIEHAAA=]", "desc": "Drizzlewood Citadel meta." } ]}
+    ]},
+    { "cat": "End of Dragons", "sub": [
+        { "n": "Day/Night Cycle", "evs": [ { "n": "Day/Night Cycle", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 80, "wp": "", "desc": "Expansion global cycle. Day starts at X:30 on even hours." } ]},
+        { "n": "Seitung Province", "evs": [ { "n": "Assault", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 30, "wp": "[&BOMMAAA=]", "desc": "Province meta." } ]},
+        { "n": "New Kaineng City", "evs": [ { "n": "Blackout", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 45, "wp": "[&BPUMAAA=]", "desc": "Grid meta." } ]},
+        { "n": "The Echovald Wilds", "evs": [ { "n": "Gang War", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 30, "wp": "[&BMMMAAA=]", "desc": "Faction meta." } ]},
+        { "n": "Dragon's End", "evs": [ { "n": "Soo-Won", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 0, "d": 120, "wp": "[&BKIMAAA=]", "desc": "Final SO battle." } ]},
+        { "n": "Fishing Tournaments", "evs": [
+            { "n": "Seitung Fishing", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BOMMAAA=]", "desc": "Seitung Province fishing." },
+            { "n": "Kaineng Fishing", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 15, "wp": "[&BPUMAAA=]", "desc": "New Kaineng fishing." },
+            { "n": "Echovald Fishing", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 15, "wp": "[&BMMMAAA=]", "desc": "Echovald Wilds fishing." },
+            { "n": "Dragon's End Fishing", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 15, "wp": "[&BKIMAAA=]", "desc": "Dragon's End fishing." }
+        ]}
+    ]},
+    { "cat": "Secrets of the Obscure", "sub": [
+        { "n": "Skywatch Archipelago", "evs": [ { "n": "Wizard's Tower Access", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BL8NAAA=]", "desc": "Skywatch meta." } ]},
+        { "n": "Wizard's Tower", "evs": [ { "n": "Tower Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BB8OAAA=]", "desc": "Hub meta." } ]},
+        { "n": "Amnytas", "evs": [ { "n": "Defense of Amnytas", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BD8OAAA=]", "desc": "Bastion meta." } ]},
+        { "n": "Inner Nayos", "evs": [
+            { "n": "Road to Heitor", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 15, "d": 20, "wp": "[&BBoPAAA=]", "desc": "Heitor meta." },
+            { "n": "The Fangs That Gnash", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 45, "d": 20, "wp": "[&BBoPAAA=]", "desc": "Kryptis meta." },
+            { "n": "Into the Spider's Web", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 105, "d": 20, "wp": "[&BBoPAAA=]", "desc": "Eparch meta." }
+        ]}
+    ]},
+    { "cat": "Janthir Wilds", "sub": [
+        { "n": "Lowland Shore", "evs": [ { "n": "Moon Camp", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BGUOAAA=]", "desc": "Lowland Shore meta." } ]},
+        { "n": "Janthir Syntri", "evs": [ { "n": "Syntri Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 20, "wp": "[&BC0PAAA=]", "desc": "Syntri meta." } ]},
+        { "n": "Bava Nisos", "evs": [ { "n": "Bava Nisos Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 20, "wp": "[&BDEPAAA=]", "desc": "Bava Nisos meta." } ]},
+        { "n": "Mistburned Barrens", "evs": [ { "n": "Mistburned Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 20, "wp": "", "desc": "Mistburned Barrens meta." } ]}
+    ]},
+    { "cat": "Visions of Eternity", "sub": [
+        { "n": "Day/Night Cycle", "evs": [ { "n": "Day/Night Cycle", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 60, "wp": "", "desc": "Local cycle. Day starts at X:30 on even hours." } ]},
+        { "n": "Shipwreck Strand", "evs": [ { "n": "Strand Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "", "desc": "Strand meta." } ]},
+        { "n": "Starlit Weald", "evs": [ { "n": "Weald Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "", "desc": "Weald meta." } ]}
+    ]},
+    { "cat": "Public Instances", "sub": [
+        { "n": "Eye of the North", "evs": [
+            { "n": "Twisted Marionette", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "exact": [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080, 1200, 1320], "d": 15, "wp": "[&BAoMAAA=]", "desc": "Scarlet weapon." },
+            { "n": "Dragonstorm", "i": "https://wiki.guildwars2.com/images/4/46/Event_dragon_%28map_icon%29.png", "r": 120, "o": 0, "d": 20, "wp": "[&BAoMAAA=]", "desc": "Two dragons." },
+            { "n": "Battle For Lion's Arch", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 20, "wp": "[&BCoAAAA=]", "desc": "City reclaim." },
+            { "n": "Tower of Nightmares", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 90, "d": 20, "wp": "[&BDIBAAA=]", "desc": "Toxic tower." }
+        ]},
+        { "n": "Convergence", "evs": [ { "n": "Convergence", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "exact": [90, 270, 450, 630, 810, 990, 1170, 1350], "d": 45, "wp": "[&BB8OAAA=]", "desc": "Legendary Kryptis." } ]}
+    ]},
+    { "cat": "Festivals", "sub": [
+        { "n": "Halloween", "evs": [ { "n": "Mad King Says", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BCAEAAA=]", "desc": "Lion's Arch Halloween event." } ]},
+        { "n": "Wintersday", "evs": [ { "n": "Winter Wonderland", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 30, "o": 0, "d": 10, "wp": "[&BCEEAAA=]", "desc": "DR Wintersday event." } ]},
+        { "n": "Lunar New Year", "evs": [ { "n": "Dragonball", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BCEEAAA=]", "desc": "DR Lunar New Year event." } ]},
+        { "n": "Super Adventure Box", "evs": [ { "n": "Super Adventure Festival", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BLkEAAA=]", "desc": "Rata Sum SAB event." } ]},
+        { "n": "Dragon Bash", "evs": [ { "n": "Pinata Bashing", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BHsEAAA=]", "desc": "Hoelbrak Dragon Bash event." } ]},
+        { "n": "Four Winds", "evs": [
+            { "n": "Flying Dolyak", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 15, "wp": "[&BMgHAAA=]", "desc": "Labyrinthine Cliffs." },
+            { "n": "Boss Blitz", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 60, "d": 15, "wp": "[&BMgHAAA=]", "desc": "Crown Pavilion." }
+        ]}
+    ]}
+]

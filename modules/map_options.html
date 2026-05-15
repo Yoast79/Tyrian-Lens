@@ -2,31 +2,32 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
-			body { margin: 0; background: transparent; padding: 20px; color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; }
-			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin: 15px 0; padding-bottom: 5px; letter-spacing: 1px; }
+			body { margin: 0; background: transparent; padding: 20px; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; }
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid var(--border-color, #4a3b2a); margin: 15px 0; padding-bottom: 5px; letter-spacing: 1px; color: var(--text-muted, #8a7a5f); }
 
-			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 10px 0; font-size: 13px; letter-spacing: 1px; cursor: pointer; }
+			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 10px 0; font-size: 13px; letter-spacing: 1px; cursor: pointer; color: var(--text-primary, #e2c07d); }
 			.filter-option input { display: none; }
 			.toggle-btn {
-			width: 38px; height: 20px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 10px; position: relative; transition: 0.3s; margin-right: 15px; flex-shrink: 0;
+			width: 38px; height: 20px; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); border-radius: 10px; position: relative; transition: 0.3s; margin-right: 15px; flex-shrink: 0;
 			}
 			.toggle-btn::after {
-			content: ''; position: absolute; top: 1px; left: 1px; width: 16px; height: 16px; background: #8a7a5f; border-radius: 50%; transition: 0.3s;
+			content: ''; position: absolute; top: 1px; left: 1px; width: 16px; height: 16px; background: var(--border-color, #8a7a5f); border-radius: 50%; transition: 0.3s;
 			}
-			.filter-option input:checked + .toggle-btn { background: rgba(226, 192, 125, 0.15); border-color: #e2c07d; }
-			.filter-option input:checked + .toggle-btn::after { transform: translateX(18px); background: #e2c07d; }
+			.filter-option input:checked + .toggle-btn { background: rgba(226, 192, 125, 0.15); border-color: var(--text-primary, #e2c07d); }
+			.filter-option input:checked + .toggle-btn::after { transform: translateX(18px); background: var(--text-primary, #e2c07d); }
 			.label-text { flex-grow: 1; }
 
 			.color-picker { display: flex; gap: 8px; padding: 0 0 15px 0; }
-			.color-swatch { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #4a3b2a; cursor: pointer; transition: 0.2s; }
-			.color-swatch:hover { border-color: #e2c07d; }
-			.color-swatch.active { border-color: #e2c07d; box-shadow: 0 0 5px #e2c07d; transform: scale(1.2); }
+			.color-swatch { width: 16px; height: 16px; border-radius: 50%; border: 1px solid var(--border-color, #4a3b2a); cursor: pointer; transition: 0.2s; }
+			.color-swatch:hover { border-color: var(--text-primary, #e2c07d); }
+			.color-swatch.active { border-color: var(--text-primary, #e2c07d); box-shadow: 0 0 5px var(--text-primary, #e2c07d); transform: scale(1.2); }
 
 			.panel-footer { margin-top: auto; padding-top: 15px; text-align: center; }
-			.fancy-divider { height: 1px; background: linear-gradient(90deg, transparent, #4a3b2a, transparent); margin-bottom: 10px; }
-			.footer-text { font-size: 11px; color: #8a7a5f; font-style: italic; text-transform: none; }
+			.fancy-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border-color, #4a3b2a), transparent); margin-bottom: 10px; }
+			.footer-text { font-size: 11px; color: var(--text-muted, #8a7a5f); font-style: italic; text-transform: none; }
 		</style>
 	</head>
 	<body>
@@ -67,15 +68,21 @@
 				<div class="toggle-btn"></div>
 				<span class="label-text">Mastery Insights</span>
 			</label>
-		
+
 		<label class="filter-option">
-			<input type="checkbox" id="node_zone_portal" onchange="saveAndToggle('node_zone_portal', this.checked)">
+			<input type="checkbox" id="node_zone_portal" onchange="toggleLayer('node_zone_portal', this.checked)">
 				<div class="toggle-btn"></div>
 				<span class="label-text">Zone Portals</span>
 			</label>
 
 		<label class="filter-option">
-			<input type="checkbox" id="personal_markers" checked="" onchange="saveAndToggle('personal_markers', this.checked)">
+			<input type="checkbox" id="farming_nodes" onchange="toggleLayer('farming_nodes', this.checked)">
+				<div class="toggle-btn"></div>
+				<span class="label-text">Farming Markers</span>
+			</label>
+
+		<label class="filter-option">
+			<input type="checkbox" id="personal_markers" onchange="toggleLayer('personal_markers', this.checked)">
 				<div class="toggle-btn"></div>
 				<span class="label-text">Personal Markers</span>
 			</label>
@@ -121,11 +128,23 @@
 		</div>
 
 		<script>
+			// Define exactly which keys go into Map UI Settings vs Marker Settings
+			const mapUIKeys = ['region', 'map_text', 'sector', 'map_borders', 'farming_nodes'];
+
+			// Single unified function to handle all checkboxes
 			function saveAndToggle(name, isVisible) {
-			let settings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+			let storageKey = mapUIKeys.includes(name) ? 'gw2_map_settings' : 'gw2_marker_settings';
+			let settings = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
 			settings[name] = isVisible;
-			localStorage.setItem('gw2_map_settings', JSON.stringify(settings));
+			localStorage.setItem(storageKey, JSON.stringify(settings));
+
 			window.parent.postMessage({ action: 'toggleMapLayer', name: name, isVisible: isVisible }, '*');
+			}
+
+			// Keep toggleLayer as a fallback redirect just in case your HTML still calls it
+			function toggleLayer(name, isVisible) {
+			saveAndToggle(name, isVisible);
 			}
 
 			function setBorderColor(color) {
@@ -141,31 +160,44 @@
 			}
 
 			window.onload = () => {
-			let settings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+			const mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+			const markerSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
 
-			// Initialize all checkboxes based on saved state
 			document.querySelectorAll('input[type="checkbox"]').forEach(el => {
 			const key = el.id;
+			let isVisible;
 
-			// Special case for zone portals to default to OFF if no setting exists
-			if (key === 'node_zone_portal' && settings[key] === undefined) {
-			settings[key] = false;
-			} else if (settings[key] === undefined) {
-			// Other map options default to ON
-			settings[key] = true;
+			if (mapUIKeys.includes(key)) {
+			// It's a Map UI Key
+			isVisible = (mapSettings[key] !== undefined) ? mapSettings[key] : true; // Default ON
+			} else {
+			// It's a Marker Key
+			if (markerSettings[key] !== undefined) {
+			isVisible = markerSettings[key];
+			} else {
+			// Specific defaults for new marker keys
+			isVisible = (key === 'node_zone_portal') ? false : true;
+			}
 			}
 
-			el.checked = settings[key];
-			window.parent.postMessage({ action: 'toggleMapLayer', name: key, isVisible: settings[key] }, '*');
+			// Apply state to UI and send to map
+			el.checked = isVisible;
+			window.parent.postMessage({ action: 'toggleMapLayer', name: key, isVisible: isVisible }, '*');
 			});
 
-			localStorage.setItem('gw2_map_settings', JSON.stringify(settings));
-
-			let activeColor = settings.borderColor || '#8a7a5f';
+			// Initialize Border Color Swatches
+			const activeColor = mapSettings.borderColor || '#8a7a5f';
 			document.querySelectorAll('.color-swatch').forEach(s => {
 			if (s.dataset.color === activeColor) s.classList.add('active');
 			});
+            document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			};
+
+            window.addEventListener('message', (e) => {
+                if (e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
+                }
+            });
 		</script>
 	</body>
 </html>

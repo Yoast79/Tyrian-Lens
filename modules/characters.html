@@ -15,7 +15,10 @@
 			flex-direction: column; margin: 0; text-transform: uppercase;
 			}
 
-			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; letter-spacing: 1px; color: #8a7a5f; }
+			.title-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; }
+			.section-title { font-size: 16px; font-weight: bold; letter-spacing: 1px; color: #8a7a5f; border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+			.audit-btn { background: #4a3b2a; border: 1px solid #e2c07d; color: #e2c07d; font-size: 10px; padding: 2px 8px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; }
+			.audit-btn:hover { background: #e2c07d; color: #1a1510; }
 
 			.account-summary { background: rgba(20, 15, 10, 0.9); border: 1px solid #4a3b2a; padding: 10px; margin-bottom: 20px; text-align: center; }
 			.total-playtime { font-size: 14px; color: #f0dca5; font-family: monospace; letter-spacing: 1px; }
@@ -70,7 +73,9 @@
 			<div class="total-playtime" id="acc-total-time">Total Playtime: 0 HRS</div>
 		</div>
 
-		<div class="section-title">Character Roster</div>
+		<div class="title-bar">
+			<div class="section-title">Character Roster</div>
+		</div>
 		<div id="char-list">
 			<div class="loading">
 				<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
@@ -254,6 +259,7 @@
 			window.addEventListener('message', (e) => {
 				if (e.data.action === 'switchAccount') init();
 			});
+
 
 			init();
 			/*]]>*/

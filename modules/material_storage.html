@@ -9,7 +9,12 @@
 			color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase;
 			display: flex; flex-direction: column; height: 100vh; overflow: hidden;
 			}
-			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; letter-spacing: 1px; }
+			.title-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; }
+			.section-title { font-size: 16px; font-weight: bold; letter-spacing: 1px; }
+			.title-controls { display: flex; align-items: center; gap: 8px; }
+			.audit-btn { background: #4a3b2a; border: 1px solid #e2c07d; color: #e2c07d; font-size: 10px; padding: 2px 8px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; }
+			.audit-btn:hover { background: #e2c07d; color: #1a1510; }
+			.sort-select { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; padding: 2px 5px; outline: none; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; }
 
 			.search-container { position: relative; width: 100%; margin-bottom: 15px; }
 			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 8px 30px 8px 8px; font-size: 12px; outline: none; width: 100%; }
@@ -26,13 +31,21 @@
 			.collapsed .arrow { transform: rotate(-90deg); }
 			.collapsed .cat-grid { display: none; }
 
-			.cat-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; }
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; cursor: pointer; }
+			.cat-grid { display: grid; grid-template-columns: repeat(10, 36px); gap: 4px; padding: 10px; justify-content: center; }
+			.item-slot { width: 36px; height: 36px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; cursor: pointer; }
 			.item-slot:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
 			.item-slot.hidden { visibility: hidden; pointer-events: none; }
 			.item-icon { width: 100%; height: 100%; object-fit: contain; }
-			.item-count { position: absolute; top: 1px; right: 2px; font-size: 11px; font-family: Arial, sans-serif; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000, -1px -1px 2px #000; pointer-events: none; }
+			.item-count { position: absolute; top: 1px; right: 2px; font-size: 10px; font-family: Arial, sans-serif; font-weight: bold; color: #fff; text-shadow: 1px 1px 2px #000, -1px -1px 2px #000; pointer-events: none; }
 			.zero-count { opacity: 0.3; filter: grayscale(1); }
+
+			.cat-header-right { display: flex; align-items: center; gap: 10px; }
+			.cat-total-value { font-size: 11px; font-family: Arial, sans-serif; color: #fff; text-transform: none; display: flex; align-items: center; }
+			.coin { display: inline-flex; align-items: center; margin-left: 1px; }
+			.coin img { width: 10px; height: 10px; margin-left: 2px; vertical-align: middle; }
+			.gold { color: #f5d042; display: inline-flex; align-items: center; }
+			.silver { color: #ccc; display: inline-flex; align-items: center; margin-left: 3px; }
+			.copper { color: #ffa54f; display: inline-flex; align-items: center; margin-left: 3px; }
 
 			#storage-container::-webkit-scrollbar { width: 4px; }
 			#storage-container::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
@@ -44,13 +57,27 @@
 			body.ui-large .section-title { font-size: 20px; }
 			body.ui-large .search-box { font-size: 15px; padding: 10px 35px 10px 10px; }
 			body.ui-large .cat-title { font-size: 15px; }
-			body.ui-large .cat-grid { grid-template-columns: repeat(10, 50px); gap: 6px; }
-			body.ui-large .item-slot { width: 50px; height: 50px; }
-			body.ui-large .item-count { font-size: 13px; }
+			body.ui-large .cat-grid { grid-template-columns: repeat(10, 46px); gap: 6px; }
+			body.ui-large .item-slot { width: 46px; height: 46px; }
+			body.ui-large .item-count { font-size: 12px; }
+			body.ui-large .cat-total-value { font-size: 14px; }
+			body.ui-large .coin img { width: 14px; height: 14px; }
 		</style>
 	</head>
 	<body>
-		<div class="section-title">Material Storage</div>
+		<div class="title-bar">
+			<div class="section-title">Material Storage</div>
+			<div class="title-controls">
+
+				<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
+					<option value="default">Sort: Default</option>
+					<option value="instant_high">Instant Sell: High -> Low</option>
+					<option value="instant_low">Instant Sell: Low -> High</option>
+					<option value="list_high">List Price: High -> Low</option>
+					<option value="list_low">List Price: Low -> High</option>
+				</select>
+			</div>
+		</div>
 		<div class="search-container">
 			<input type="text" class="search-box" id="storage-search" placeholder="SEARCH MATERIALS..." oninput="filterStorage()">
 				<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
@@ -67,6 +94,7 @@
 			let itemCache = {};
 			let categories = [];
 			let accountMaterials = {};
+			let currentSort = 'default';
 
 			async function initStorage() {
 				// Apply UI scale on load
@@ -75,11 +103,6 @@
 
 				const activeKey = localStorage.getItem('gw2_active_key');
 				if (!activeKey) return;
-
-				// Explicitly clear memory before rebuilding data to prevent RAM stacking
-				itemCache = {};
-				categories = [];
-				accountMaterials = {};
 
 				try {
 					const catRes = await fetch('https://api.guildwars2.com/v2/materials?ids=all');
@@ -105,13 +128,64 @@
 						return indexA - indexB;
 					});
 
-					const accRes = await fetch(`https://api.guildwars2.com/v2/account/materials?access_token=${activeKey}`);
-					const accData = await accRes.json();
-					accData.forEach(m => accountMaterials[m.id] = m.count);
+                    // Check cache first
+                    const cachedMats = localStorage.getItem('gw2_cache_materials');
+                    if (cachedMats) {
+                        const accData = JSON.parse(cachedMats);
+                        accData.forEach(m => accountMaterials[m.id] = m.count);
+                    } else {
+                        const accRes = await fetch(`https://api.guildwars2.com/v2/account/materials?access_token=${activeKey}`);
+                        const accData = await accRes.json();
+                        accData.forEach(m => accountMaterials[m.id] = m.count);
+                        localStorage.setItem('gw2_cache_materials', JSON.stringify(accData));
+                    }
+
 					const allItemIds = categories.flatMap(c => c.items);
-					await fetchItemDetails(allItemIds);
+					await Promise.all([
+						fetchItemDetails(allItemIds),
+						fetchItemPrices(allItemIds)
+					]);
 					renderStorage();
 				} catch (err) { console.error(err); }
+			}
+
+			let priceCache = {};
+			async function fetchItemPrices(ids) {
+				const chunks = [];
+				for (let i = 0; i < ids.length; i += 200) chunks.push(ids.slice(i, i + 200));
+				for (const chunk of chunks) {
+					try {
+						const res = await fetch(`https://api.guildwars2.com/v2/commerce/prices?ids=${chunk.join(',')}`);
+						if (!res.ok) continue;
+						const data = await res.json();
+						data.forEach(p => {
+							priceCache[p.id] = {
+								buys: p.buys ? p.buys.unit_price : 0,
+								sells: p.sells ? p.sells.unit_price : 0
+							};
+						});
+					} catch (e) { console.warn("Failed to fetch some prices", e); }
+				}
+			}
+
+			function changeSort(val) {
+				currentSort = val;
+				renderStorage();
+			}
+
+			function formatCoin(copper, small = false) {
+				if (!copper || copper <= 0) return small ? "" : `0<span class="coin copper"><img src="https://gw2ps.local/Assets/CurrencyIcons/copper_coin.png"></span>`;
+				
+				const g = Math.floor(copper / 10000);
+				const s = Math.floor((copper % 10000) / 100);
+				const c = copper % 100;
+				
+				let html = '';
+				if (g > 0) html += `<span class="gold">${g}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/gold_coin.png"></span></span> `;
+				if (s > 0 || (g > 0 && !small)) html += `<span class="silver">${s}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/silver_coin.png"></span></span> `;
+				if (c > 0 || (!small && g === 0 && s === 0)) html += `<span class="copper">${c}<span class="coin"><img src="https://gw2ps.local/Assets/CurrencyIcons/copper_coin.png"></span></span>`;
+				
+				return html;
 			}
 
 			async function fetchItemDetails(ids) {
@@ -131,47 +205,105 @@
 			}
 
 			function renderStorage() {
-    const container = document.getElementById('storage-container');
-    container.innerHTML = '';
-    
-    categories.forEach(cat => {
-        const catDiv = document.createElement('div');
-        catDiv.className = 'storage-cat';
-        
-        const header = document.createElement('div');
-        header.className = 'cat-header';
-        header.onclick = () => catDiv.classList.toggle('collapsed');
-        header.innerHTML = `<span class="cat-title">${cat.name}</span><span class="arrow">▼</span>`;
-        
-        const grid = document.createElement('div');
-        grid.className = 'cat-grid';
-        
-        cat.items.forEach(id => {
-            const item = itemCache[id];
-            const count = accountMaterials[id] || 0;
-            const slotDiv = document.createElement('div');
-            slotDiv.className = 'item-slot' + (count === 0 ? ' zero-count' : '');
-            slotDiv.dataset.name = item ? item.name.toLowerCase() : "";
-            
-            if (item) {
-                slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
-                slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: item.name, x: e.clientX, y: e.clientY}, '*');
-                slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
-                slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
-                
-                if (count > 0) {
-                    slotDiv.innerHTML += `<div class="item-count">${count}</div>`;
-                }
-            }
-            grid.appendChild(slotDiv);
-        });
+				const container = document.getElementById('storage-container');
+				container.innerHTML = '';
+				
+				categories.forEach(cat => {
+					const catDiv = document.createElement('div');
+					catDiv.className = 'storage-cat';
+					
+					let catTotalCopper = 0;
+					const grid = document.createElement('div');
+					grid.className = 'cat-grid';
+					
+					const sortedItems = [...cat.items].sort((a, b) => {
+						const pA = priceCache[a] || { buys: 0, sells: 0 };
+						const pB = priceCache[b] || { buys: 0, sells: 0 };
+						if (currentSort === 'instant_high') return (pB.buys * 0.85) - (pA.buys * 0.85);
+						if (currentSort === 'instant_low') return (pA.buys * 0.85) - (pB.buys * 0.85);
+						if (currentSort === 'list_high') return pB.sells - pA.sells;
+						if (currentSort === 'list_low') return pA.sells - pB.sells;
+						return 0; // Default
+					});
 
-        // Fixed the variable name from tabDiv to catDiv
-        catDiv.appendChild(header);
-        catDiv.appendChild(grid);
-        container.appendChild(catDiv);
-    });
-}
+					sortedItems.forEach(id => {
+						const item = itemCache[id];
+						const count = accountMaterials[id] || 0;
+						const prices = priceCache[id] || { buys: 0, sells: 0 };
+						const tax = 0.85;
+						
+						const instantSell = Math.floor(prices.buys * tax);
+						const listPrice = prices.sells;
+						const stackInstantSell = Math.floor(count * prices.buys * tax);
+						const stackListPrice = count * prices.sells;
+						
+						// Header uses Listing Price (gross) as requested
+						catTotalCopper += stackListPrice;
+
+						const slotDiv = document.createElement('div');
+						slotDiv.className = 'item-slot' + (count === 0 ? ' zero-count' : '');
+						slotDiv.dataset.name = item ? item.name.toLowerCase() : "";
+						
+						if (item) {
+							slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
+							
+							let tooltipText = `<div style="font-weight:bold; margin-bottom:6px; color:#e2c07d; letter-spacing:1px; border-bottom:1px solid #4a3b2a; padding-bottom:4px; text-transform:uppercase;">${item.name}</div>`;
+							tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
+							
+							let hasFinancials = false;
+							const canSellVendor = item.vendor_value > 0 && !(item.flags && item.flags.includes('NoSell'));
+							
+							if (prices.sells > 0) {
+								hasFinancials = true;
+								tooltipText += `<span>INSTANT SELL:</span><span>${formatCoin(instantSell)}</span>`;
+								tooltipText += `<span>LIST PRICE:</span><span>${formatCoin(listPrice)}</span>`;
+								if (count > 0) {
+									tooltipText += `</div><div style="margin:6px 0; border-top:1px solid #4a3b2a; opacity:0.5;"></div>`;
+									tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
+									tooltipText += `<span>STACK INSTANT SELL:</span><span>${formatCoin(stackInstantSell)}</span>`;
+									tooltipText += `<span>STACK LIST PRICE:</span><span>${formatCoin(stackListPrice)}</span>`;
+								}
+							} else if (canSellVendor) {
+								hasFinancials = true;
+								tooltipText += `<span>VENDOR VALUE:</span><span>${formatCoin(item.vendor_value)}</span>`;
+								if (count > 0) {
+									tooltipText += `<span>STACK VENDOR VALUE:</span><span>${formatCoin(item.vendor_value * count)}</span>`;
+								}
+							}
+
+							if (!hasFinancials) {
+								tooltipText += `<span style="grid-column: span 2; opacity: 0.5;">NO VENDOR OR TP VALUE</span>`;
+							}
+
+							tooltipText += `</div>`;
+
+							slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: tooltipText, x: e.clientX, y: e.clientY}, '*');
+							slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+							slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
+							
+							if (count > 0) {
+								slotDiv.innerHTML += `<div class="item-count">${count}</div>`;
+							}
+						}
+						grid.appendChild(slotDiv);
+					});
+
+					const header = document.createElement('div');
+					header.className = 'cat-header';
+					header.onclick = () => catDiv.classList.toggle('collapsed');
+					header.innerHTML = `
+						<span class="cat-title">${cat.name}</span>
+						<div class="cat-header-right">
+							<span class="cat-total-value">${formatCoin(catTotalCopper)}</span>
+							<span class="arrow">▼</span>
+						</div>
+					`;
+
+					catDiv.appendChild(header);
+					catDiv.appendChild(grid);
+					container.appendChild(catDiv);
+				});
+			}
 
 				function filterStorage() {
 				const query = document.getElementById('storage-search').value.toLowerCase();
@@ -188,6 +320,10 @@
 				cat.style.display = (query !== "" && !hasMatch) ? "none" : "block";
 				});
 				}
+
+				window.addEventListener('message', (e) => {
+					if (e.data.action === 'accountDataRefreshed') initStorage();
+				});
 				initStorage();
 				/*]]>*/
 		</script>

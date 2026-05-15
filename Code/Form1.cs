@@ -41,6 +41,18 @@ namespace GW2PS
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+        
+        private NotifyIcon notifyIcon;
+
+        public static void LogError(Exception ex)
+        {
+            try
+            {
+                string logPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "error_log.txt");
+                File.AppendAllText(logPath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {ex?.Message}\n{ex?.StackTrace}\n");
+            }
+            catch { }
+        }
 
         public Form1()
         {
@@ -51,6 +63,17 @@ namespace GW2PS
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+
+            Application.ThreadException += (s, ev) => LogError(ev.Exception);
+            AppDomain.CurrentDomain.UnhandledException += (s, ev) => LogError(ev.ExceptionObject as Exception);
+
+            notifyIcon = new NotifyIcon();
+            notifyIcon.Icon = SystemIcons.Information;
+            try {
+                if (File.Exists(@"Assets\app_icon.ico")) notifyIcon.Icon = new Icon(@"Assets\app_icon.ico");
+            } catch { }
+            notifyIcon.Visible = true;
+            notifyIcon.Text = "Tyrian Lens";
 
             mapView.Dock = DockStyle.Fill;
             this.Controls.Add(mapView);
@@ -139,22 +162,50 @@ namespace GW2PS
                 try
                 {
                     string rawJson = e.WebMessageAsJson;
-                    if (rawJson.Contains("updateDRFToken"))
+                    string cleanJson = rawJson;
+                    if (cleanJson.StartsWith("\"")) {
+                        cleanJson = cleanJson.Replace("\\\"", "\"").Replace("\\\\", "\\").Trim('"');
+                    }
+
+                    if (cleanJson.Contains("updateDRFToken"))
                     {
-                        string cleanText = rawJson.Replace("\\\"", "\"").Replace("\\\\", "\\").Trim('"');
-                        int start = cleanText.IndexOf("\"token\":\"") + 9;
+                        int start = cleanJson.IndexOf("\"token\":\"") + 9;
                         if (start > 8)
                         {
-                            int end = cleanText.IndexOf("\"", start);
+                            int end = cleanJson.IndexOf("\"", start);
                             if (end > start)
                             {
-                                string token = cleanText.Substring(start, end - start);
+                                string token = cleanJson.Substring(start, end - start);
                                 if (!string.IsNullOrWhiteSpace(token))
                                 {
                                     await ConnectToDRF(token);
                                 }
                             }
                         }
+                    }
+                    else if (cleanJson.StartsWith("{"))
+                    {
+                        try {
+                            var json = System.Text.Json.JsonDocument.Parse(cleanJson);
+                            if (json.RootElement.TryGetProperty("action", out var act)) {
+                                string actionStr = act.GetString();
+                                if (actionStr == "trayNotification") {
+                                    string title = json.RootElement.GetProperty("title").GetString();
+                                    string text = json.RootElement.GetProperty("text").GetString();
+                                    notifyIcon.ShowBalloonTip(5000, title, text, ToolTipIcon.Info);
+                                }
+                                else if (actionStr == "openLogFolder") {
+                                    string srcLogPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "error_log.txt");
+                                    if (!File.Exists(srcLogPath)) {
+                                        File.WriteAllText(srcLogPath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] LOG INITIALIZED - NO ERRORS RECORDED YET.\n");
+                                    }
+                                    
+                                    string destLogPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "tyrian_lens_log.txt");
+                                    File.Copy(srcLogPath, destLogPath, true);
+                                    mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('TYRIAN_LENS_LOG.TXT SAVED TO DESKTOP');");
+                                }
+                            }
+                        } catch { }
                     }
                 }
                 catch { }

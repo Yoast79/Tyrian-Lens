@@ -70,28 +70,33 @@
 			let accountBalances = {};
 
 			async function initWallet() {
-			// Apply UI scale on load
-			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
-			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+				// Apply UI scale on load
+				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
-			// Explicitly clear temporary variables before rebuilding data
-			masterCurrencyList = [];
-			accountBalances = {};
+				const activeKey = localStorage.getItem('gw2_active_key');
+				
+                // Check cache first
+                const cachedWallet = localStorage.getItem('gw2_cache_wallet');
+                if (cachedWallet) {
+                    const wallet = JSON.parse(cachedWallet);
+                    wallet.forEach(item => accountBalances[item.id] = item.value);
+                }
 
-			const activeKey = localStorage.getItem('gw2_active_key');
-			try {
-			const allRes = await fetch('https://api.guildwars2.com/v2/currencies?ids=all');
-			masterCurrencyList = await allRes.json();
+				try {
+					const allRes = await fetch('https://api.guildwars2.com/v2/currencies?ids=all');
+					masterCurrencyList = await allRes.json();
 
-			if (activeKey) {
-			const accRes = await fetch(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
-			if (accRes.ok) {
-			const wallet = await accRes.json();
-			wallet.forEach(item => accountBalances[item.id] = item.value);
-			}
-			}
-			renderWallet();
-			} catch (err) { console.error(err); }
+					if (activeKey && !cachedWallet) {
+						const accRes = await fetch(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
+						if (accRes.ok) {
+							const wallet = await accRes.json();
+							wallet.forEach(item => accountBalances[item.id] = item.value);
+                            localStorage.setItem('gw2_cache_wallet', JSON.stringify(wallet));
+						}
+					}
+					renderWallet();
+				} catch (err) { console.error(err); }
 			}
 
 			function clearSearch() {
@@ -157,10 +162,13 @@
 			}
 
 			window.addEventListener('message', (e) => {
-			if (e.data.action === 'uiScaleChanged') {
-			if (e.data.value === 'large') document.body.classList.add('ui-large');
-			else document.body.classList.remove('ui-large');
-			}
+				if (e.data.action === 'accountDataRefreshed') {
+					initWallet();
+				}
+				if (e.data.action === 'uiScaleChanged') {
+					if (e.data.value === 'large') document.body.classList.add('ui-large');
+					else document.body.classList.remove('ui-large');
+				}
 			});
 
 			initWallet();

@@ -2,19 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
 			body, html { height: 100%; width: 100%; background: transparent; overflow: hidden; }
 			#navbar { display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 10px; background: transparent; transition: padding 0.3s ease; }
 			.nav-group { display: flex; align-items: center; gap: 4px; transition: gap 0.3s ease; }
 			.nav-item { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: 0.2s; }
-			.nav-item:hover { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 5px #e2c07d); }
+			.nav-item:hover { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 5px var(--border-highlight)); }
 			.nav-item img { width: 24px; height: 24px; transition: width 0.3s ease, height 0.3s ease; object-fit: contain; }
 
 			/* Adjust specific thinner icons to match visual weight */
 			.v-align { width: 28px !important; height: 28px !important; }
 
-			.separator { width: 1px; height: 18px; background: #4a3b2a; margin: 0 3px; transition: margin 0.3s ease; }
+			.separator { width: 1px; height: 18px; background: var(--border-color); margin: 0 3px; transition: margin 0.3s ease; }
 
 			.active-glow { filter: drop-shadow(0 0 8px #1A9306) !important; opacity: 1 !important; }
 
@@ -162,6 +163,9 @@
 				else if (data.action === 'updateAvailable') {
 					checkUpdateIcon();
 				}
+                else if (data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', data.theme);
+                }
 			});
 
 			document.addEventListener('mousedown', function(e) {
@@ -175,6 +179,7 @@
 			
 			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+            document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>
 	</body>

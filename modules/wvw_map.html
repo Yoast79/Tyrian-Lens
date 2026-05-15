@@ -10,7 +10,7 @@
 			body, html, #map { margin: 0; padding: 0; height: 100%; width: 100%; background: #000; overflow: hidden; font-family: "Crimson Text", serif; }
 
 			.map-label {
-			font-family: serif; color: #e2c07d; font-weight: bold; text-transform: uppercase;
+			font-family: serif; color: var(--text-primary, #e2c07d); font-weight: bold; text-transform: uppercase;
 			white-space: nowrap; background: none !important; border: none !important;
 			pointer-events: none !important; text-align: center;
 			-webkit-text-stroke: 2px black; paint-order: stroke fill;
@@ -22,8 +22,8 @@
 
 			#coord-hud {
 			position: fixed; bottom: 20px; left: 20px; z-index: 10000;
-			background: rgba(10, 8, 5, 0.85); border: 1px solid #4a3b2a; padding: 10px 15px;
-			color: #e2c07d; font-family: monospace; font-size: 12px; pointer-events: none; line-height: 1.6;
+			background: var(--bg-panel, rgba(10, 8, 5, 0.85)); border: 1px solid var(--border-color, #4a3b2a); padding: 10px 15px;
+			color: var(--text-primary, #e2c07d); font-family: monospace; font-size: 12px; pointer-events: none; line-height: 1.6;
 			}
 			.coord-val { color: #ffffff; font-weight: bold; }
 
@@ -42,7 +42,7 @@
 
 			#scoreboard {
 			position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10000;
-			background: rgba(10, 8, 5, 0.8); border: 1px solid #4a3b2a; padding: 10px 20px;
+			background: var(--bg-panel, rgba(10, 8, 5, 0.8)); border: 1px solid var(--border-color, #4a3b2a); padding: 10px 20px;
 			display: flex; gap: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; pointer-events: none;
 			}
 			.team-red { color: #ff4444; text-align: center; }
@@ -52,13 +52,13 @@
 			.player-icon-container { background: none !important; border: none !important; }
 
 			/* Custom Marker UI Styles */
-			#marker-picker { display: none; position: absolute; z-index: 20000; background: rgba(10, 8, 5, 0.95); border: 1px solid #4a3b2a; padding: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.8); }
+			#marker-picker { display: none; position: absolute; z-index: 20000; background: var(--bg-panel, rgba(10, 8, 5, 0.95)); border: 1px solid var(--border-color, #4a3b2a); padding: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.8); }
 			.marker-row { display: flex; }
 			.marker-icon-btn { width: 24px; height: 24px; cursor: pointer; margin: 2px; border: 1px solid transparent; transition: 0.2s; }
-			.marker-icon-btn:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.2); }
-			.prompt-overlay { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 8, 5, 0.98); border: 1px solid #e2c07d; padding: 20px; z-index: 20001; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.9); }
-			.prompt-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-weight: bold; margin: 0 5px; text-transform: uppercase; transition: 0.2s; }
-			.prompt-btn:hover { background: #2a221a; border-color: #e2c07d; }
+			.marker-icon-btn:hover { border-color: var(--text-primary, #e2c07d); background: rgba(226, 192, 125, 0.2); }
+			.prompt-overlay { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--bg-panel, rgba(10, 8, 5, 0.98)); border: 1px solid var(--text-primary, #e2c07d); padding: 20px; z-index: 20001; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.9); }
+			.prompt-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-weight: bold; margin: 0 5px; text-transform: uppercase; transition: 0.2s; }
+			.prompt-btn:hover { background: var(--bg-button-hover, #2a221a); border-color: var(--text-primary, #e2c07d); }
 			.prompt-btn.danger { color: #ff4a4a; }
 		</style>
 	</head>
@@ -501,8 +501,12 @@
 					window.setTracking(false);
 					map.flyTo([event.data.pos[1], event.data.pos[0]], 6);
 				}
+				if (event.data && event.data.action === 'updateTheme') {
+					document.body.setAttribute('data-theme', event.data.theme);
+				}
 			});
 			initWvW();
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>
 	</body>

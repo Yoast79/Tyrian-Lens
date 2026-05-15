@@ -4,31 +4,31 @@
 		<meta charset="utf-8" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
-			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
-			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; color: #8a7a5f; margin: 0; }
-			.rebuild-btn { background: #1a1510; border: 1px solid #4a3b2a; border-right: none; color: #8a7a5f; padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; height: 21px; }
-			.rebuild-btn:hover { border-color: #e2c07d; color: #e2c07d; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); margin: 0; }
+			.rebuild-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); border-right: none; color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; height: 21px; }
+			.rebuild-btn:hover { border-color: var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); }
 			#tp-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; min-height: 0; }
-			.tp-section { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
-			.dropdown-btn { width: 100%; background: #1a1510; border: none; color: #e2c07d; padding: 10px 15px; text-transform: uppercase; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.2s; border-bottom: 1px solid #2a2015; }
-			.dropdown-btn:hover { background: #251d16; }
-			.dropdown-btn::after { content: '▼'; font-size: 10px; transition: 0.3s; color: #4a3b2a; }
-			.dropdown-btn.active::after { transform: rotate(180deg); color: #e2c07d; }
-			.sub-btn { background: rgba(20,15,10,0.4); font-size: 11px; padding: 8px 20px; color: #8a7a5f; border-bottom: 1px solid #2a2015; }
+			.tp-section { margin-bottom: 15px; border: 1px solid var(--border-color, #2a2015); background: rgba(0,0,0,0.3); }
+			.dropdown-btn { width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-primary, #e2c07d); padding: 10px 15px; text-transform: uppercase; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.2s; border-bottom: 1px solid var(--border-color, #2a2015); }
+			.dropdown-btn:hover { background: var(--bg-button-hover, #251d16); }
+			.dropdown-btn::after { content: '▼'; font-size: 10px; transition: 0.3s; color: var(--border-color, #4a3b2a); }
+			.dropdown-btn.active::after { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
+			.sub-btn { background: rgba(20,15,10,0.4); font-size: 11px; padding: 8px 20px; color: var(--text-muted, #8a7a5f); border-bottom: 1px solid var(--border-color, #2a2015); }
 			.dropdown-content { display: none; }
 			.item-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; }
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; cursor: pointer; position: relative; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color, #332a1e); cursor: pointer; position: relative; }
 			.item-icon { width: 100%; height: 100%; object-fit: cover; }
-			.search-res-row { display: flex; align-items: center; padding: 8px 15px; border-bottom: 1px solid #2a2015; font-size: 12px; gap: 10px; cursor: pointer; position: relative; }
+			.search-res-row { display: flex; align-items: center; padding: 8px 15px; border-bottom: 1px solid var(--border-color, #2a2015); font-size: 12px; gap: 10px; cursor: pointer; position: relative; color: var(--text-primary, #e2c07d); }
 			.star-btn { cursor: pointer; width: 20px; height: 20px; opacity: 0.3; transition: 0.2s; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; flex-shrink: 0; }
-			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
 			.exchange-row { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; }
-			.exchange-result { min-width: 120px; text-align: center; font-size: 14px; font-weight: bold; color: #f0dca5; }
-			.quick-view { background: rgba(20,15,10,0.6); border: 1px solid #4a3b2a; margin-bottom: 10px; display: none; }
+			.exchange-result { min-width: 120px; text-align: center; font-size: 14px; font-weight: bold; color: var(--text-primary, #f0dca5); }
+			.quick-view { background: var(--bg-panel, rgba(20,15,10,0.6)); border: 1px solid var(--border-color, #4a3b2a); margin-bottom: 10px; display: none; }
 			.rarity-Legendary { border-color: #4C139D !important; }
 			.rarity-Ascended { border-color: #FB3E8D !important; }
 			.rarity-Exotic { border-color: #FFA405 !important; }
@@ -36,41 +36,41 @@
 			.rarity-Masterwork { border-color: #1A9306 !important; }
 			.rarity-Fine { border-color: #62A4DA !important; }
 			.coin-icon { height: 14px; width: 14px; vertical-align: text-bottom; margin: 0 2px; }
-			.search-clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: #8a7a5f; cursor: pointer; transition: 0.2s; }
-			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
-			.watch-row { display: flex; align-items: center; gap: 10px; padding: 10px 15px; border-bottom: 1px solid #2a2015; font-size: 11px; position: relative; }
+			.search-clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--text-muted, #8a7a5f); cursor: pointer; transition: 0.2s; }
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: var(--text-primary, #e2c07d); letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+			.watch-row { display: flex; align-items: center; gap: 10px; padding: 10px 15px; border-bottom: 1px solid var(--border-color, #2a2015); font-size: 11px; position: relative; color: var(--text-primary, #e2c07d); }
 			.watch-prices { display: flex; flex-direction: column; gap: 2px; min-width: 140px; }
-			.watch-price-item { display: flex; align-items: center; justify-content: flex-end; gap: 8px; font-size: 10px; color: #8a7a5f; white-space: nowrap; }
+			.watch-price-item { display: flex; align-items: center; justify-content: flex-end; gap: 8px; font-size: 10px; color: var(--text-muted, #8a7a5f); white-space: nowrap; }
 			.watch-price-item .label { width: 35px; text-align: left; }
-			.watch-price-item span { color: #e2c07d; font-weight: bold; flex: 1; text-align: right; }
+			.watch-price-item span { color: var(--text-primary, #e2c07d); font-weight: bold; flex: 1; text-align: right; }
 
 			/* Investment UI */
-			.invest-row { background: rgba(20,15,10,0.6); border: 1px solid #2a2015; padding: 10px; margin-bottom: 10px; position: relative; }
-			.invest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-bottom: 1px solid #332a1e; padding-bottom: 5px; }
-			.invest-stats { font-size: 11px; color: #8a7a5f; display: flex; justify-content: space-between; align-items: center; }
-			.invest-graph { height: 40px; border-bottom: 1px solid #4a3b2a; margin-top: 10px; position: relative; overflow: visible; }
+			.invest-row { background: var(--bg-panel, rgba(20,15,10,0.6)); border: 1px solid var(--border-color, #2a2015); padding: 10px; margin-bottom: 10px; position: relative; color: var(--text-primary, #e2c07d); }
+			.invest-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-bottom: 1px solid var(--border-color, #332a1e); padding-bottom: 5px; }
+			.invest-stats { font-size: 11px; color: var(--text-muted, #8a7a5f); display: flex; justify-content: space-between; align-items: center; }
+			.invest-graph { height: 40px; border-bottom: 1px solid var(--border-color, #4a3b2a); margin-top: 10px; position: relative; overflow: visible; }
 
 			input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 			input[type=number] { -moz-appearance: textfield; }
 
 			input[type=text], input[type=number] {
-			background:rgba(10,8,5,0.9); border:1px solid #4a3b2a; color:#e2c07d;
+			background:var(--bg-dark, rgba(10,8,5,0.9)); border:1px solid var(--border-color, #4a3b2a); color:var(--text-primary, #e2c07d);
 			padding:8px; outline:none; font-family:"Crimson Text", serif; text-transform:uppercase; font-size: 14px;
 			text-align: center;
 			}
-			input[type=text]:focus, input[type=number]:focus { border-color: #e2c07d; }
+			input[type=text]:focus, input[type=number]:focus { border-color: var(--text-primary, #e2c07d); }
 
 			button {
-			background:rgba(20,15,10,0.9); border:1px solid #4a3b2a; color:#e2c07d;
+			background:var(--bg-panel, rgba(20,15,10,0.9)); border:1px solid var(--border-color, #4a3b2a); color:var(--text-primary, #e2c07d);
 			padding:8px 15px; cursor:pointer; font-family:"Crimson Text", serif;
 			text-transform:uppercase; transition:0.2s; font-size: 11px; letter-spacing: 1px;
 			}
-			button:hover { border-color:#e2c07d; background:rgba(226, 192, 125, 0.15); }
+			button:hover { border-color:var(--text-primary, #e2c07d); background:rgba(226, 192, 125, 0.15); }
 
-			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 300; border: 1px solid #4a3b2a; padding: 20px; text-align: center; }
+			.confirm-modal { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,8,5,0.9); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 300; border: 1px solid var(--border-color, #4a3b2a); padding: 20px; text-align: center; }
 			.confirm-btn-row { display: flex; gap: 10px; margin-top: 15px; }
-			.confirm-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
-			.confirm-btn:hover { background: #251d16; border-color: #e2c07d; }
+			.confirm-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 15px; font-family: 'Crimson Text', serif; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+			.confirm-btn:hover { background: var(--bg-button-hover, #251d16); border-color: var(--text-primary, #e2c07d); }
 
 			body.ui-large .section-title { font-size: 20px; }
 			body.ui-large .dropdown-btn { font-size: 15px; }
@@ -84,8 +84,8 @@
 			body.ui-large .invest-stats { font-size: 13px; }
 			body.ui-large input[type=text], body.ui-large input[type=number] { font-size: 16px; }
 
-			.refresh-select { background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 4px 8px; font-size: 9px; cursor: pointer; font-family: inherit; text-transform: uppercase; height: 21px; outline: none; }
-			.refresh-select:hover { border-color: #e2c07d; color: #e2c07d; }
+			.refresh-select { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; font-family: inherit; text-transform: uppercase; height: 21px; outline: none; }
+			.refresh-select:hover { border-color: var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); }
 		</style>
 	</head>
 	<body>
@@ -666,9 +666,15 @@
 				localStorage.setItem('gw2_custom_crafts', JSON.stringify(customCrafts));
 			}
 
-			window.addEventListener('message', (e) => { if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } });
+			window.addEventListener('message', (e) => { 
+				if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
+				if (e.data.action === 'updateTheme') {
+					document.body.setAttribute('data-theme', e.data.theme);
+				}
+			});
 
 			init();
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>
 	</body>

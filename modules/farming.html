@@ -2,34 +2,35 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
 
-			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; }
-			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); font-weight: bold; }
 
 			.controls { display: flex; gap: 10px; align-items: center; }
-			button { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; padding: 8px 15px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 11px; font-weight: bold; transition: 0.2s; letter-spacing: 1px; }
-			button:hover { background: rgba(226, 192, 125, 0.1); border-color: #e2c07d; }
-			button.active { background: #1A9306; color: #fff; border-color: #1A9306; }
-			button.stop { background: #721c24; color: #fff; border-color: #f5c6cb; }
+			button { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 15px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 11px; font-weight: bold; transition: 0.2s; letter-spacing: 1px; }
+			button:hover { background: rgba(226, 192, 125, 0.1); border-color: var(--text-primary, #e2c07d); }
+			button.active { background: var(--success-color, #1A9306); color: #fff; border-color: var(--success-color, #1A9306); }
+			button.stop { background: var(--error-color, #721c24); color: #fff; border-color: var(--error-color, #f5c6cb); }
 
-			.tabs { display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid #2a2015; padding-bottom: 5px; }
-			.tab-btn { background: transparent; border: none; color: #8a7a5f; padding: 5px 10px; cursor: pointer; border-bottom: 2px solid transparent; }
-			.tab-btn.active { color: #e2c07d; border-bottom-color: #e2c07d; }
+			.tabs { display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color, #2a2015); padding-bottom: 5px; }
+			.tab-btn { background: transparent; border: none; color: var(--text-muted, #8a7a5f); padding: 5px 10px; cursor: pointer; border-bottom: 2px solid transparent; }
+			.tab-btn.active { color: var(--text-primary, #e2c07d); border-bottom-color: var(--text-primary, #e2c07d); }
 
 			.tab-content { flex: 1; overflow-y: auto; display: none; flex-direction: column; gap: 15px; padding-right: 5px; }
 			.tab-content.active { display: flex; }
 
-			.panel-box { background: rgba(20,15,10,0.8); border: 1px solid #332a1e; padding: 10px; }
-			.box-title { font-size: 11px; color: #8a7a5f; border-bottom: 1px solid #2a2015; padding-bottom: 5px; margin-bottom: 10px; }
+			.panel-box { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #332a1e); padding: 10px; }
+			.box-title { font-size: 11px; color: var(--text-muted, #8a7a5f); border-bottom: 1px solid var(--border-color, #2a2015); padding-bottom: 5px; margin-bottom: 10px; }
 
 			.item-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; justify-content: center; }
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color, #332a1e); position: relative; }
 
 			/* Rarity Borders */
 			.item-slot.rarity-junk { border-color: #AAAAAA; }
@@ -43,33 +44,46 @@
 
 			.item-icon { width: 100%; height: 100%; object-fit: cover; }
 			.item-count { position: absolute; bottom: 2px; right: 4px; font-size: 10px; font-weight: bold; color: #fff; text-shadow: 1px 1px 1px #000; }
-			.item-count.negative { color: #ff6b6b; }
+			.item-count.negative { color: var(--error-color, #ff6b6b); }
 
 			.currency-list { display: flex; flex-direction: column; gap: 5px; }
-			.currency-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 6px; background: rgba(0,0,0,0.3); border: 1px solid #2a2015; }
+			.currency-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 6px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #2a2015); }
 			.currency-name { display: flex; align-items: center; gap: 8px; }
 			.currency-icon { width: 16px; height: 16px; object-fit: cover; }
-			.val-pos { color: #1A9306; font-weight: bold; }
-			.val-neg { color: #ff6b6b; font-weight: bold; }
+			.val-pos { color: var(--success-color, #1A9306); font-weight: bold; }
+			.val-neg { color: var(--error-color, #ff6b6b); font-weight: bold; }
 
 			.coin-icon { height: 12px; width: 12px; vertical-align: baseline; margin: 0 1px; }
-			#session-timer { font-family: monospace; font-size: 14px; color: #e2c07d; }
+			#session-timer { font-family: monospace; font-size: 14px; color: var(--text-primary, #e2c07d); }
 
 			/* Simple Flex Graph */
 			.graph-controls { display: flex; gap: 10px; margin-bottom: 10px; }
-			.graph-area { height: 200px; display: flex; align-items: flex-end; gap: 8px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-top: 15px; border-left: 1px solid #4a3b2a; padding-left: 5px; }
+			.graph-area { height: 200px; display: flex; align-items: flex-end; gap: 8px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px; margin-top: 15px; border-left: 1px solid var(--border-color, #4a3b2a); padding-left: 5px; }
 			.bar-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 5px; position: relative; }
-			.bar { width: 100%; background: #e2c07d; transition: height 0.5s ease; min-height: 1px; }
-			.bar:hover { background: #fff; filter: drop-shadow(0 0 5px #e2c07d); }
-			.bar-label { font-size: 9px; color: #8a7a5f; text-align: center; }
+			.bar { width: 100%; background: var(--text-primary, #e2c07d); transition: height 0.5s ease; min-height: 1px; }
+			.bar:hover { background: #fff; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
+			.bar-label { font-size: 9px; color: var(--text-muted, #8a7a5f); text-align: center; }
+
+			/* Graph Enhancements */
+			.graph-container-outer { width: 100%; overflow-x: auto; overflow-y: hidden; padding-bottom: 25px; position: relative; }
+			.graph-svg-wrapper { position: relative; border-bottom: 1px solid var(--border-color, #4a3b2a); border-left: 1px solid var(--border-color, #4a3b2a); cursor: crosshair; }
+			.graph-scrubber { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(226, 192, 125, 0.4); pointer-events: none; display: none; z-index: 5; }
+			.graph-scrubber::after { content: ''; position: absolute; top: -4px; left: -4px; width: 9px; height: 9px; background: var(--text-primary, #e2c07d); border-radius: 50%; box-shadow: 0 0 10px var(--text-primary, #e2c07d); }
+			
+			.graph-tooltip { position: fixed; background: rgba(15, 12, 8, 0.95); border: 1px solid var(--border-color, #4a3b2a); padding: 8px 12px; pointer-events: none; z-index: 1000; display: none; min-width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
+			.gt-time { font-size: 10px; color: var(--text-muted, #8a7a5f); margin-bottom: 6px; border-bottom: 1px solid rgba(74, 59, 42, 0.3); padding-bottom: 4px; text-align: center; }
+			.gt-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; font-size: 11px; margin-bottom: 3px; }
+			.gt-currency { display: flex; align-items: center; gap: 5px; }
+			.gt-icon { width: 14px; height: 14px; }
+			.gt-val { font-weight: bold; font-family: monospace; }
 
 			.history-list { display: flex; flex-direction: column; gap: 5px; margin-top: 15px; }
-			.history-row { background: rgba(20,15,10,0.5); border: 1px solid #2a2015; padding: 10px; font-size: 11px; display: flex; justify-content: space-between; transition: 0.2s; }
+			.history-row { background: var(--bg-panel, rgba(20,15,10,0.5)); border: 1px solid var(--border-color, #2a2015); padding: 10px; font-size: 11px; display: flex; justify-content: space-between; transition: 0.2s; color: var(--text-primary, #e2c07d); }
 
 			/* Added CSS for Delete Buttons, Golden Graph Buttons, and Sliders */
-			.btn-delete { background: transparent; border: none; color: #721c24; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 5px; margin-left: 10px; line-height: 1; transition: 0.2s; }
-			.btn-delete:hover { color: #ff6b6b; }
-			.graph-btn.active { background: #e2c07d; color: #1a1510; border-color: #e2c07d; }
+			.btn-delete { background: transparent; border: none; color: var(--error-color, #721c24); cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 5px; margin-left: 10px; line-height: 1; transition: 0.2s; }
+			.btn-delete:hover { color: var(--error-color, #ff6b6b); }
+			.graph-btn.active { background: var(--text-primary, #e2c07d); color: #1a1510; border-color: var(--text-primary, #e2c07d); }
 
 			/* Large UI Scaling Overrides */
 			body.ui-large .section-title { font-size: 20px; }
@@ -137,7 +151,8 @@
 							<span id="slider-label-max" style="min-width: 25px;"></span>
 						</div>
 					<div id="graph-toggles" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; border-bottom: 1px solid #2a2015; padding-bottom: 10px;"></div>
-					<div id="graph-container" class="graph-area"></div>
+					<div id="graph-container" class="graph-area" style="height: auto; border:none; padding:0; display:block;"></div>
+					<div id="graph-tooltip" class="graph-tooltip"></div>
 				</div>
 				<div class="panel-box" style="flex:1; position: relative;">
 					<div class="box-title" style="display:flex; justify-content:space-between; align-items:center;">
@@ -210,6 +225,9 @@
                 if (e.data.action === 'uiScaleChanged') {
                     if (e.data.value === 'large') document.body.classList.add('ui-large');
                     else document.body.classList.remove('ui-large');
+                }
+                else if (e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
                 }
                 else if (e.data.action === 'drfData') {
                     if (sessionActive) {
@@ -630,7 +648,7 @@
                     const info = currencyIndex[id] || { name: 'Currency ' + id, icon: '' };
                     const isChecked = activeGraphCurrencies.has(id) ? 'checked' : '';
                     const color = getRandomColor(id);
-                    togglesHtml += '<label style="display:flex; align-items:center; gap:5px; font-size:11px; color:' + color + '; cursor:pointer; background: rgba(0,0,0,0.4); padding: 4px 8px; border: 1px solid #2a2015;">' +
+                    togglesHtml += '<label style="display:flex; align-items:center; gap:5px; font-size:11px; color:' + color + '; cursor:pointer; background: rgba(0,0,0,0.4); padding: 4px 8px; border: 1px solid #2a2015; border-radius: 4px;">' +
                         '<input type="checkbox" ' + isChecked + ' onchange="toggleGraphCurrency(\'' + id + '\', this.checked)">' +
                         '<img src="' + info.icon + '" style="width:14px; height:14px;"> ' + info.name +
                     '</label>';
@@ -654,8 +672,7 @@
                 }
 
                 if (pointsData.length === 0) {
-                    gCont.style.display = 'flex';
-                    gCont.innerHTML = '<div style="color:#8a7a5f; font-size:11px; width:100%; text-align:center;">NO DATA FOR THIS PERIOD</div>';
+                    gCont.innerHTML = '<div style="color:#8a7a5f; font-size:11px; width:100%; text-align:center; padding: 40px 0;">NO DATA FOR THIS PERIOD</div>';
                     return;
                 }
 
@@ -664,62 +681,153 @@
                 pointsData.forEach(p => {
                     const wDiff = p.walletDiff || { '1': p.goldDiff || 0 };
                     activeGraphCurrencies.forEach(id => {
-                        if ((wDiff[id] || 0) > maxVals[id]) maxVals[id] = wDiff[id];
+                        const val = Math.abs(wDiff[id] || 0);
+                        if (val > maxVals[id]) maxVals[id] = val;
                     });
                 });
 
-                const width = Math.max(600, pointsData.length * 20); 
-                const height = 180; 
+                const width = Math.max(gCont.offsetWidth - 20, pointsData.length * 15); 
+                const height = 220; 
                 
-                let svgHtml = '<svg width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '" style="overflow:visible;">';
+                let svgHtml = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="overflow:visible;">`;
                 
+                // Add Gradient Definitions
+                svgHtml += '<defs>';
+                activeGraphCurrencies.forEach(id => {
+                    const color = getRandomColor(id);
+                    svgHtml += `
+                        <linearGradient id="grad-${id}" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:${color};stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:${color};stop-opacity:0" />
+                        </linearGradient>
+                    `;
+                });
+                svgHtml += '</defs>';
+
+                // Add Grid Lines
+                for(let i=0; i<=4; i++) {
+                    let y = 15 + (i * (height - 30) / 4);
+                    svgHtml += `<line x1="0" y1="${y}" x2="${width}" y2="${y}" stroke="rgba(74, 59, 42, 0.1)" stroke-width="1" />`;
+                }
+
                 activeGraphCurrencies.forEach(id => {
                     const color = getRandomColor(id);
                     let points = [];
-                    let offset = (Array.from(activeGraphCurrencies).indexOf(id) - (activeGraphCurrencies.size / 2)) * 3; 
+                    let areaPoints = [`0,${height-15}`];
 
                     pointsData.forEach((p, idx) => {
                         const x = (idx / Math.max(1, pointsData.length - 1)) * (width - 20) + 10; 
                         const wDiff = p.walletDiff || { '1': p.goldDiff || 0 };
                         const val = wDiff[id] || 0;
                         
-                        let y = height - ((val / maxVals[id]) * (height - 30)) - 15 + offset;
-                        y = Math.max(5, Math.min(height - 5, y)); 
+                        let y = height - ((val / maxVals[id]) * (height - 30)) - 15;
+                        y = Math.max(10, Math.min(height - 10, y)); 
 
-                        points.push(x + ',' + y);
-                        
-                        let tipVal = val;
-                        if (id == 1) tipVal = formatCoin(val).replace(/"/g, '&quot;');
-                        
-                        let timeStr = new Date(p.date).toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
-                        let cName = currencyIndex[id] ? currencyIndex[id].name.split("'").join("") : 'Currency';
-                        
-                        svgHtml += '<circle cx="' + x + '" cy="' + y + '" r="2" fill="' + color + '" style="cursor:pointer;" onmouseover="window.parent.postMessage({action:\'showTooltip\', text:\'' + cName + ': ' + tipVal + '<br><span style=\\\'font-size:9px; color:#8a7a5f;\\\'>' + timeStr + '</span>\', x:event.clientX, y:event.clientY}, \'*\' )" onmouseout="window.parent.postMessage({action:\'hideTooltip\'}, \'*\' )"/>';
+                        points.push(`${x},${y}`);
+                        areaPoints.push(`${x},${y}`);
                     });
-                    svgHtml += '<polyline points="' + points.join(' ') + '" fill="none" stroke="' + color + '" stroke-width="1.2" opacity="0.8" />';
+                    
+                    areaPoints.push(`${width-10},${height-15}`);
+                    
+                    // Render Area
+                    svgHtml += `<path d="M ${areaPoints.join(' L ')} Z" fill="url(#grad-${id})" />`;
+                    // Render Line
+                    svgHtml += `<path d="M ${points.join(' L ')}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />`;
+                    
+                    // Render Points (Larger)
+                    pointsData.forEach((p, idx) => {
+                        const x = (idx / Math.max(1, pointsData.length - 1)) * (width - 20) + 10;
+                        const wDiff = p.walletDiff || { '1': p.goldDiff || 0 };
+                        const val = wDiff[id] || 0;
+                        let y = height - ((val / maxVals[id]) * (height - 30)) - 15;
+                        y = Math.max(10, Math.min(height - 10, y));
+                        
+                        svgHtml += `<circle cx="${x}" cy="${y}" r="3" fill="${color}" stroke="#000" stroke-width="1" class="graph-point" data-id="${id}" data-idx="${idx}" />`;
+                    });
                 });
 
                 svgHtml += '</svg>';
 
                 let labelsHtml = '';
                 pointsData.forEach((p, idx) => {
-                    if (idx % Math.max(1, Math.ceil(pointsData.length / 10)) === 0 || idx === pointsData.length - 1) {
+                    if (idx % Math.max(1, Math.ceil(pointsData.length / 8)) === 0 || idx === pointsData.length - 1) {
                         const x = (idx / Math.max(1, pointsData.length - 1)) * (width - 20) + 10;
                         let d = new Date(p.date);
                         let timeStr = (period === 'day') ? 
                             d.getHours() + ':' + d.getMinutes().toString().padStart(2, '0') : 
                             d.toLocaleDateString(undefined, {month:'short', day:'numeric'});
-                        labelsHtml += '<div style="position:absolute; left:' + x + 'px; bottom:-20px; font-size:10px; color:#8a7a5f; transform:translateX(-50%); white-space:nowrap;">' + timeStr + '</div>';
+                        labelsHtml += `<div style="position:absolute; left:${x}px; bottom:-20px; font-size:10px; color:#8a7a5f; transform:translateX(-50%); white-space:nowrap;">${timeStr}</div>`;
                     }
                 });
 
-                gCont.style.display = 'block';
-                gCont.innerHTML = '<div style="width:100%; overflow-x:auto; overflow-y:hidden; padding-bottom: 25px;">' +
-                    '<div style="width:' + width + 'px; height:' + height + 'px; position:relative; border-bottom:1px solid #4a3b2a; border-left:1px solid #4a3b2a;">' +
-                        svgHtml +
-                        labelsHtml +
-                    '</div>' +
-                '</div>';
+                gCont.innerHTML = `
+                    <div class="graph-container-outer" id="graph-outer">
+                        <div class="graph-svg-wrapper" id="graph-wrapper" style="width:${width}px; height:${height}px;">
+                            <div class="graph-scrubber" id="graph-scrubber"></div>
+                            ${svgHtml}
+                            ${labelsHtml}
+                        </div>
+                    </div>
+                `;
+
+                // Add Scrubber Logic
+                const wrapper = document.getElementById('graph-wrapper');
+                const scrubber = document.getElementById('graph-scrubber');
+                const tooltip = document.getElementById('graph-tooltip');
+
+                wrapper.addEventListener('mousemove', (e) => {
+                    const rect = wrapper.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    
+                    if (x >= 0 && x <= rect.width) {
+                        scrubber.style.display = 'block';
+                        scrubber.style.left = x + 'px';
+                        
+                        // Find closest point
+                        const idx = Math.round((x - 10) / (rect.width - 20) * (pointsData.length - 1));
+                        const safeIdx = Math.max(0, Math.min(pointsData.length - 1, idx));
+                        const point = pointsData[safeIdx];
+                        
+                        if (point) {
+                            let ttHtml = `<div class="gt-time">${new Date(point.date).toLocaleString()}</div>`;
+                            activeGraphCurrencies.forEach(id => {
+                                const info = currencyIndex[id] || { name: 'Currency', icon: '' };
+                                const wDiff = point.walletDiff || { '1': point.goldDiff || 0 };
+                                const val = wDiff[id] || 0;
+                                const color = getRandomColor(id);
+                                let valStr = (id == 1) ? formatCoin(val, false) : (val > 0 ? '+' : '') + val;
+                                
+                                ttHtml += `
+                                    <div class="gt-row" style="color:${color}">
+                                        <div class="gt-currency">
+                                            <img src="${info.icon}" class="gt-icon">
+                                            <span>${info.name}</span>
+                                        </div>
+                                        <div class="gt-val">${valStr}</div>
+                                    </div>
+                                `;
+                            });
+                            
+                            tooltip.innerHTML = ttHtml;
+                            tooltip.style.display = 'block';
+                            
+                            // Position tooltip
+                            let tx = e.clientX + 15;
+                            let ty = e.clientY + 15;
+                            
+                            if (tx + 200 > window.innerWidth) tx = e.clientX - 215;
+                            if (ty + 150 > window.innerHeight) ty = e.clientY - 165;
+                            
+                            tooltip.style.left = tx + 'px';
+                            tooltip.style.top = ty + 'px';
+                        }
+                    }
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    scrubber.style.display = 'none';
+                    tooltip.style.display = 'none';
+                });
             }
 
             async function viewSessionDetails(dateStr) {
@@ -795,6 +903,18 @@
             function closeSessionDetails() {
                 document.getElementById('session-details-modal').style.display = 'none';
             }
+
+            window.addEventListener('message', (e) => {
+                if (e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
+                }
+                if (e.data.action === 'uiScaleChanged') {
+                    if (e.data.value === 'large') document.body.classList.add('ui-large');
+                    else document.body.classList.remove('ui-large');
+                }
+            });
+
+            document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>
 	</body>

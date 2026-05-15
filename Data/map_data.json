@@ -14,7 +14,15 @@
         32960
       ],
       "name": "Dredgehaunt Cliffs",
-      "type": "map"
+      "type": "map",
+      "level": "40-50",
+      "waypoints": 18,
+      "hearts": 11,
+      "heropoints": 6,
+      "pois": 24,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -30,6 +38,14 @@
         34454.5
       ],
       "name": "De Molish Post",
+      "type": "sector"
+    },
+	{
+      "pos": [
+        47120,
+        34416
+      ],
+      "name": "Mistlock Sactuary",
       "type": "sector"
     },
     {
@@ -763,7 +779,15 @@
         32128
       ],
       "name": "Lornar's Pass",
-      "type": "map"
+      "type": "map",
+      "level": "25-40",
+      "waypoints": 17,
+      "hearts": 15,
+      "heropoints": 9,
+      "pois": 43,
+      "vistas": 10,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -1664,7 +1688,15 @@
         29952
       ],
       "name": "Wayfarer Foothills",
-      "type": "map"
+      "type": "map",
+      "level": "1-15",
+      "waypoints": 17,
+      "hearts": 15,
+      "heropoints": 8,
+      "pois": 20,
+      "vistas": 10,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -2428,7 +2460,15 @@
         36160
       ],
       "name": "Timberline Falls",
-      "type": "map"
+      "type": "map",
+      "level": "50-60",
+      "waypoints": 19,
+      "hearts": 11,
+      "heropoints": 5,
+      "pois": 13,
+      "vistas": 6,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -3055,7 +3095,15 @@
         25984
       ],
       "name": "Frostgorge Sound",
-      "type": "map"
+      "type": "map",
+      "level": "70-80",
+      "waypoints": 16,
+      "hearts": 11,
+      "heropoints": 7,
+      "pois": 20,
+      "vistas": 8,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -3717,7 +3765,15 @@
         28672
       ],
       "name": "Snowden Drifts",
-      "type": "map"
+      "type": "map",
+      "level": "15-25",
+      "waypoints": 19,
+      "hearts": 13,
+      "heropoints": 6,
+      "pois": 11,
+      "vistas": 6,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -4388,7 +4444,15 @@
         30432
       ],
       "name": "Hoelbrak",
-      "type": "map"
+      "type": "map",
+      "level": "0",
+      "waypoints": 14,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 24,
+      "vistas": 5,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -4929,7 +4993,15 @@
         23854
       ],
       "name": "Bitterfrost Frontier",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 4,
+      "heropoints": 0,
+      "pois": 13,
+      "vistas": 5,
+      "masteries": 3,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -5210,7 +5282,15 @@
         36936
       ],
       "name": "Thunderhead Peaks",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 4,
+      "heropoints": 0,
+      "pois": 27,
+      "vistas": 7,
+      "masteries": 5,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -5746,7 +5826,15 @@
         18009
       ],
       "name": "Bjora Marches",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 29,
+      "vistas": 8,
+      "masteries": 7,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -6202,7 +6290,15 @@
         20334
       ],
       "name": "Drizzlewood Coast",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 37,
+      "vistas": 16,
+      "masteries": 9,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -6857,7 +6953,15 @@
         30976
       ],
       "name": "Plains of Ashford",
-      "type": "map"
+      "type": "map",
+      "level": "1-15",
+      "waypoints": 18,
+      "hearts": 18,
+      "heropoints": 6,
+      "pois": 17,
+      "vistas": 10,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -7534,7 +7638,15 @@
         30464
       ],
       "name": "Blazeridge Steppes",
-      "type": "map"
+      "type": "map",
+      "level": "40-50",
+      "waypoints": 18,
+      "hearts": 15,
+      "heropoints": 5,
+      "pois": 10,
+      "vistas": 5,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -8142,7 +8254,15 @@
         34176
       ],
       "name": "Fields of Ruin",
-      "type": "map"
+      "type": "map",
+      "level": "30-40",
+      "waypoints": 17,
+      "hearts": 13,
+      "heropoints": 5,
+      "pois": 20,
+      "vistas": 6,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -8833,7 +8953,15 @@
         26240
       ],
       "name": "Fireheart Rise",
-      "type": "map"
+      "type": "map",
+      "level": "60-70",
+      "waypoints": 18,
+      "hearts": 12,
+      "heropoints": 7,
+      "pois": 16,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -9512,7 +9640,15 @@
         27904
       ],
       "name": "Iron Marches",
-      "type": "map"
+      "type": "map",
+      "level": "50-60",
+      "waypoints": 14,
+      "hearts": 13,
+      "heropoints": 6,
+      "pois": 14,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -10164,7 +10300,15 @@
         28760
       ],
       "name": "Diessa Plateau",
-      "type": "map"
+      "type": "map",
+      "level": "15-25",
+      "waypoints": 19,
+      "hearts": 15,
+      "heropoints": 8,
+      "pois": 17,
+      "vistas": 10,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -10927,7 +11071,15 @@
         30460
       ],
       "name": "Black Citadel",
-      "type": "map"
+      "type": "map",
+	  "level": "",
+      "waypoints": 12,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 17,
+      "vistas": 5,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -11841,7 +11993,15 @@
         18784
       ],
       "name": "Grothmar Valley",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 31,
+      "vistas": 10,
+      "masteries": 2,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -11973,7 +12133,15 @@
         40192
       ],
       "name": "Straits of Devastation",
-      "type": "map"
+      "type": "map",
+      "level": "70-75",
+      "waypoints": 20,
+      "hearts": 0,
+      "heropoints": 12,
+      "pois": 30,
+      "vistas": 6,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -12758,7 +12926,15 @@
         43648
       ],
       "name": "Cursed Shore",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 13,
+      "hearts": 0,
+      "heropoints": 17,
+      "pois": 28,
+      "vistas": 5,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -13446,7 +13622,15 @@
         40576
       ],
       "name": "Malchor's Leap",
-      "type": "map"
+      "type": "map",
+      "level": "75-80",
+      "waypoints": 13,
+      "hearts": 0,
+      "heropoints": 15,
+      "pois": 37,
+      "vistas": 5,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -14200,7 +14384,15 @@
         42184
       ],
       "name": "Siren's Landing",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 1,
+      "hearts": 5,
+      "heropoints": 0,
+      "pois": 17,
+      "vistas": 4,
+      "masteries": 5,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -14547,7 +14739,15 @@
         29248
       ],
       "name": "Queensdale",
-      "type": "map"
+      "type": "map",
+      "level": "1-15",
+      "waypoints": 16,
+      "hearts": 17,
+      "heropoints": 7,
+      "pois": 21,
+      "vistas": 9,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -15296,7 +15496,15 @@
         27264
       ],
       "name": "Harathi Hinterlands",
-      "type": "map"
+      "type": "map",
+      "level": "35-45",
+      "waypoints": 15,
+      "hearts": 11,
+      "heropoints": 6,
+      "pois": 15,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -15914,7 +16122,15 @@
         27136
       ],
       "name": "Divinity's Reach",
-      "type": "map"
+      "type": "map",
+      "level": "0",
+      "waypoints": 13,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 21,
+      "vistas": 6,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -16383,7 +16599,15 @@
         31509
       ],
       "name": "Kessex Hills",
-      "type": "map"
+      "type": "map",
+      "level": "15-25",
+      "waypoints": 16,
+      "hearts": 14,
+      "heropoints": 5,
+      "pois": 20,
+      "vistas": 9,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -17072,7 +17296,15 @@
         29568
       ],
       "name": "Gendarran Fields",
-      "type": "map"
+      "type": "map",
+      "level": "25-35",
+      "waypoints": 22,
+      "hearts": 11,
+      "heropoints": 7,
+      "pois": 17,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -17819,7 +18051,15 @@
         31488
       ],
       "name": "Lion's Arch",
-      "type": "map"
+      "type": "map",
+      "level": "-",
+      "waypoints": 13,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 26,
+      "vistas": 11,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -18378,7 +18618,15 @@
         33792
       ],
       "name": "Bloodtide Coast",
-      "type": "map"
+      "type": "map",
+      "level": "45-55",
+      "waypoints": 15,
+      "hearts": 13,
+      "heropoints": 6,
+      "pois": 18,
+      "vistas": 7,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -19091,7 +19339,15 @@
         36216
       ],
       "name": "Southsun Cove",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 6,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -19295,7 +19551,15 @@
         26884
       ],
       "name": "Lake Doric",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 6,
+      "heropoints": 0,
+      "pois": 16,
+      "vistas": 9,
+      "masteries": 5,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -19667,7 +19931,15 @@
         34432
       ],
       "name": "Caledon Forest",
-      "type": "map"
+      "type": "map",
+      "level": "1-15",
+      "waypoints": 18,
+      "hearts": 19,
+      "heropoints": 7,
+      "pois": 20,
+      "vistas": 8,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -20341,7 +20613,15 @@
         35200
       ],
       "name": "Metrica Province",
-      "type": "map"
+      "type": "map",
+      "level": "1-15",
+      "waypoints": 16,
+      "hearts": 16,
+      "heropoints": 8,
+      "pois": 23,
+      "vistas": 9,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -21090,7 +21370,15 @@
         32192
       ],
       "name": "Brisban Wildlands",
-      "type": "map"
+      "type": "map",
+      "level": "15-25",
+      "waypoints": 13,
+      "hearts": 16,
+      "heropoints": 8,
+      "pois": 20,
+      "vistas": 7,
+      "masteries": 1,
+      "mastery_icon": "mi_ibs.png"
     },
     {
       "pos": [
@@ -21761,7 +22049,15 @@
         37384
       ],
       "name": "The Grove",
-      "type": "map"
+      "type": "map",
+      "level": "0",
+      "waypoints": 4,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 19,
+      "vistas": 6,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -21994,7 +22290,15 @@
         36928
       ],
       "name": "Rata Sum",
-      "type": "map"
+      "type": "map",
+      "level": "0",
+      "waypoints": 9,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 19,
+      "vistas": 5,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -22385,7 +22689,15 @@
         38912
       ],
       "name": "Mount Maelstrom",
-      "type": "map"
+      "type": "map",
+      "level": "60-70",
+      "waypoints": 17,
+      "hearts": 11,
+      "heropoints": 7,
+      "pois": 32,
+      "vistas": 7,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -23164,7 +23476,15 @@
         37120
       ],
       "name": "Sparkfly Fen",
-      "type": "map"
+      "type": "map",
+      "level": "55-65",
+      "waypoints": 17,
+      "hearts": 13,
+      "heropoints": 6,
+      "pois": 20,
+      "vistas": 5,
+      "masteries": 1,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -23835,8 +24155,8 @@
     },
     {
       "pos": [
-        32768,
-        16384
+        55714,
+        39460
       ],
       "name": "Labyrinthine Cliffs",
       "type": "map"
@@ -24498,7 +24818,15 @@
         37120
       ],
       "name": "Dragon's Stand",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 11,
+      "hearts": 0,
+      "heropoints": 7,
+      "pois": 24,
+      "vistas": 7,
+      "masteries": 0,
+      "mastery_icon": "mi_tyria.png"
     },
     {
       "pos": [
@@ -25034,7 +25362,15 @@
         33792
       ],
       "name": "Auric Basin",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 7,
+      "hearts": 0,
+      "heropoints": 11,
+      "pois": 22,
+      "vistas": 6,
+      "masteries": 8,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -25439,7 +25775,15 @@
         34748
       ],
       "name": "Tangled Depths",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 7,
+      "hearts": 0,
+      "heropoints": 11,
+      "pois": 20,
+      "vistas": 6,
+      "masteries": 5,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -25978,7 +26322,15 @@
         31744
       ],
       "name": "Verdant Brink",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 7,
+      "hearts": 0,
+      "heropoints": 11,
+      "pois": 26,
+      "vistas": 6,
+      "masteries": 9,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -26447,7 +26799,15 @@
         30688
       ],
       "name": "Bloodstone Fen",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 7,
+      "vistas": 3,
+      "masteries": 2,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -27353,7 +27713,7 @@
         55118,
         62384
       ],
-      "name": "Crystal Desert",
+      "name": "Isle of Istan",
       "type": "region"
     },
     {
@@ -27362,6 +27722,38 @@
         61884
       ],
       "name": "Domain of Istan",
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 3,
+      "heropoints": 0,
+      "pois": 27,
+      "vistas": 6,
+      "masteries": 3,
+      "mastery_icon": "mi_pof.png"
+    },
+	{
+      "pos": [
+        52672,
+        62176
+      ],
+      "name": "Fahranur, the First City",
+      "type": "map"
+    },
+	{
+      "pos": [
+        67252,
+        51572
+      ],
+      "name": "The Key of Ahdashim",
+      "type": "map"
+    },
+	{
+      "pos": [
+        64668,
+        51752
+      ],
+      "name": "Windswept Haven",
       "type": "map"
     },
     {
@@ -27913,7 +28305,15 @@
         22890
       ],
       "name": "Lowland Shore",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 3,
+      "heropoints": 0,
+      "pois": 56,
+      "vistas": 8,
+      "masteries": 11,
+      "mastery_icon": "mi_jw.png"
     },
     {
       "pos": [
@@ -28642,7 +29042,15 @@
         15607
       ],
       "name": "Janthir Syntri",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 3,
+      "heropoints": 0,
+      "pois": 50,
+      "vistas": 8,
+      "masteries": 11,
+      "mastery_icon": "mi_jw.png"
     },
     {
       "pos": [
@@ -29503,7 +29911,15 @@
         11549
       ],
       "name": "Bava Nisos",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 10,
+      "vistas": 3,
+      "masteries": 6,
+      "mastery_icon": "mi_jw.png"
     },
     {
       "pos": [
@@ -29715,7 +30131,15 @@
         11721
       ],
       "name": "Mistburned Barrens",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 1,
+      "hearts": 1,
+      "heropoints": 0,
+      "pois": 18,
+      "vistas": 3,
+      "masteries": 6,
+      "mastery_icon": "mi_jw.png"
     },
     {
       "pos": [
@@ -29997,7 +30421,15 @@
         45445
       ],
       "name": "Ember Bay",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 5,
+      "heropoints": 0,
+      "pois": 23,
+      "vistas": 7,
+      "masteries": 2,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -30451,7 +30883,15 @@
         41584
       ],
       "name": "Draconis Mons",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 4,
+      "heropoints": 0,
+      "pois": 22,
+      "vistas": 5,
+      "masteries": 3,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -30714,7 +31154,15 @@
         103437
       ],
       "name": "Dragon's End",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 5,
+      "hearts": 0,
+      "heropoints": 6,
+      "pois": 48,
+      "vistas": 5,
+      "masteries": 6,
+      "mastery_icon": "mi_eod.png"
     },
     {
       "pos": [
@@ -31670,7 +32118,15 @@
         99400
       ],
       "name": "New Kaineng City",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 3,
+      "heropoints": 9,
+      "pois": 38,
+      "vistas": 5,
+      "masteries": 13,
+      "mastery_icon": "mi_eod.png"
     },
     {
       "pos": [
@@ -32238,7 +32694,15 @@
         101800
       ],
       "name": "Seitung Province",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 3,
+      "heropoints": 9,
+      "pois": 41,
+      "vistas": 5,
+      "masteries": 14,
+      "mastery_icon": "mi_eod.png"
     },
     {
       "pos": [
@@ -32780,7 +33244,15 @@
         102360
       ],
       "name": "The Echovald Wilds",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 3,
+      "heropoints": 6,
+      "pois": 45,
+      "vistas": 5,
+      "masteries": 12,
+      "mastery_icon": "mi_eod.png"
     },
     {
       "pos": [
@@ -33457,7 +33929,15 @@
         102240
       ],
       "name": "Gyala Delve",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 24,
+      "vistas": 3,
+      "masteries": 0,
+      "mastery_icon": "mi_eod.png"
     },
     {
       "pos": [
@@ -34222,6 +34702,22 @@
         23679
       ],
       "name": "Skywatch Archipelago",
+      "type": "map",
+      "level": "80",
+      "waypoints": 7,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 50,
+      "vistas": 8,
+      "masteries": 11,
+      "mastery_icon": "mi_soto.png"
+    },
+	{
+      "pos": [
+        22140,
+        104852
+      ],
+      "name": "Isle of Reflection",
       "type": "map"
     },
     {
@@ -34852,7 +35348,31 @@
         20568
       ],
       "name": "Amnytas",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 50,
+      "vistas": 8,
+      "masteries": 9,
+      "mastery_icon": "mi_soto.png"
+    },
+	{
+      "pos": [
+        24085,
+        20568
+      ],
+      "name": "The Wizard's Tower",
+      "type": "map",
+      "level": "0",
+      "waypoints": 1,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 24,
+      "vistas": 3,
+      "masteries": 2,
+      "mastery_icon": "mi_soto.png"
     },
     {
       "pos": [
@@ -35603,7 +36123,15 @@
         22772
       ],
       "name": "Inner Nayos",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 50,
+      "vistas": 7,
+      "masteries": 7,
+      "mastery_icon": "mi_soto.png"
     },
     {
       "pos": [
@@ -36060,9 +36588,17 @@
         58600
       ],
       "name": "Starlit Weald",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 3,
+      "heropoints": 15,
+      "pois": 43,
+      "vistas": 5,
+      "masteries": 8,
+      "mastery_icon": "mi_voe.png"
     },
-    {
+	{
       "pos": [
         7807.02,
         59409.7
@@ -36731,7 +37267,15 @@
         58830
       ],
       "name": "Shipwreck Strand",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 3,
+      "heropoints": 15,
+      "pois": 41,
+      "vistas": 6,
+      "masteries": 12,
+      "mastery_icon": "mi_voe.png"
     },
     {
       "pos": [
@@ -37242,7 +37786,7 @@
       "type": "heart",
       "chat_code": "[&BMwPAAA=]"
     },
-	{
+    {
       "pos": [
         10793,
         58215
@@ -37373,8 +37917,8 @@
     },
     {
       "pos": [
-        59968,
-        42384
+        59904,
+        47200
       ],
       "name": "Crystal Desert",
       "type": "region"
@@ -37454,7 +37998,15 @@
         43534
       ],
       "name": "Crystal Oasis",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 4,
+      "heropoints": 5,
+      "pois": 30,
+      "vistas": 10,
+      "masteries": 6,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -38033,7 +38585,15 @@
         41240
       ],
       "name": "Desert Highlands",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 5,
+      "hearts": 4,
+      "heropoints": 7,
+      "pois": 31,
+      "vistas": 11,
+      "masteries": 15,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -39052,7 +39612,15 @@
         50752
       ],
       "name": "The Desolation",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 5,
+      "heropoints": 6,
+      "pois": 43,
+      "vistas": 10,
+      "masteries": 8,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -39813,7 +40381,15 @@
         46284
       ],
       "name": "Elon Riverlands",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 3,
+      "hearts": 6,
+      "heropoints": 8,
+      "pois": 30,
+      "vistas": 10,
+      "masteries": 8,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -40421,7 +40997,15 @@
         53702
       ],
       "name": "Domain of Vabbi",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 6,
+      "hearts": 8,
+      "heropoints": 3,
+      "pois": 32,
+      "vistas": 10,
+      "masteries": 3,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -40641,7 +41225,15 @@
         57384
       ],
       "name": "Sandswept Isles",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 4,
+      "heropoints": 0,
+      "pois": 30,
+      "vistas": 4,
+      "masteries": 4,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -40798,7 +41390,7 @@
       "type": "waypoint",
       "chat_code": "[&BCULAAA=]"
     },
-	{
+    {
       "pos": [
         54412,
         57420
@@ -41133,7 +41725,15 @@
         61384
       ],
       "name": "Domain of Kourna",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 2,
+      "hearts": 5,
+      "heropoints": 0,
+      "pois": 25,
+      "vistas": 4,
+      "masteries": 5,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -41221,7 +41821,15 @@
         62743.9
       ],
       "name": "Corsair Landing",
-      "type": "sector"
+      "type": "map",
+      "level": "80",
+      "waypoints": 1,
+      "hearts": 5,
+      "heropoints": 0,
+      "pois": 17,
+      "vistas": 4,
+      "masteries": 5,
+      "mastery_icon": "mi_hot.png"
     },
     {
       "pos": [
@@ -41974,7 +42582,15 @@
         58087
       ],
       "name": "Jahai Bluffs",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 3,
+      "heropoints": 0,
+      "pois": 28,
+      "vistas": 7,
+      "masteries": 5,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -42083,7 +42699,15 @@
         49589
       ],
       "name": "Dragonfall",
-      "type": "map"
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 21,
+      "vistas": 8,
+      "masteries": 6,
+      "mastery_icon": "mi_pof.png"
     },
     {
       "pos": [
@@ -42585,13 +43209,585 @@
       "type": "landmark",
       "chat_code": "[&BPALAAA=]"
     },
+	{
+      "pos": [
+        34230,
+        30248
+      ],
+      "name": "Lost Percipice",
+      "type": "map"
+    },
+	{
+      "pos": [
+        35844,
+        29376
+      ],
+      "name": "Forsaken Thicket",
+      "type": "region"
+    },
+	{
+      "pos": [
+        45776,
+        21216
+      ],
+      "name": "Bation of the Penitent",
+      "type": "map"
+    },
     {
       "pos": [
-        61991.2,
-        39849
+        4470,
+        62000
       ],
-      "name": "Mist Chase",
+      "name": "Eternity's Garden",
+      "type": "map",
+      "level": "80",
+      "waypoints": 4,
+      "hearts": 2,
+      "heropoints": 0,
+      "pois": 40,
+      "vistas": 6,
+      "masteries": 7,
+      "mastery_icon": "mi_voe.png"
+    },
+    {
+      "pos": [
+        3672.95,
+        61798.3
+      ],
+      "name": "Temple of Abnegation",
       "type": "sector"
+    },
+    {
+      "pos": [
+        5287.11,
+        60626.7
+      ],
+      "name": "Sanctum of the Divine",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        3582.92,
+        62583.9
+      ],
+      "name": "Venomgrove Observatory",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        4356.8,
+        61661.7
+      ],
+      "name": "Artificer's Islet",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        3634.34,
+        60701.4
+      ],
+      "name": "The Deepwood",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        5225.92,
+        61611.5
+      ],
+      "name": "Ley-Drowned Quarry",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        4194.65,
+        62526.5
+      ],
+      "name": "The Mothmarsh",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        4963.42,
+        62371
+      ],
+      "name": "Pilgrim's Rest",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        4354.05,
+        60764.4
+      ],
+      "name": "Temple of the Blessed Mantle",
+      "type": "sector"
+    },
+    {
+      "pos": [
+        3788.7,
+        60888
+      ],
+      "name": "Deepwood Outpost",
+      "type": "landmark",
+      "chat_code": "[&BNgPAAA=]"
+    },
+    {
+      "pos": [
+        4282.58,
+        62461.2
+      ],
+      "name": "Deserted Inquest Camp",
+      "type": "landmark",
+      "chat_code": "[&BNkPAAA=]"
+    },
+    {
+      "pos": [
+        3452.43,
+        60255.4
+      ],
+      "name": "The First Elder",
+      "type": "landmark",
+      "chat_code": "[&BNoPAAA=]"
+    },
+    {
+      "pos": [
+        4766.48,
+        61684.7
+      ],
+      "name": "The Animal Apothecary",
+      "type": "landmark",
+      "chat_code": "[&BNsPAAA=]"
+    },
+    {
+      "pos": [
+        3700.61,
+        61891.2
+      ],
+      "name": "Western Outpost",
+      "type": "landmark",
+      "chat_code": "[&BNwPAAA=]"
+    },
+    {
+      "pos": [
+        4926.76,
+        60741.7
+      ],
+      "name": "Dilapidated Auditorium",
+      "type": "landmark",
+      "chat_code": "[&BN0PAAA=]"
+    },
+    {
+      "pos": [
+        4380.55,
+        61306.2
+      ],
+      "name": "Gardesano's Atelier",
+      "type": "landmark",
+      "chat_code": "[&BN4PAAA=]"
+    },
+    {
+      "pos": [
+        5320.82,
+        62324.1
+      ],
+      "name": "Luce's Garden",
+      "type": "landmark",
+      "chat_code": "[&BN8PAAA=]"
+    },
+    {
+      "pos": [
+        5058.59,
+        62736
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BOAPAAA=]"
+    },
+    {
+      "pos": [
+        4300.25,
+        61683.6
+      ],
+      "name": "Supra Fortis",
+      "type": "landmark",
+      "chat_code": "[&BOEPAAA=]"
+    },
+    {
+      "pos": [
+        4764.53,
+        62523.9
+      ],
+      "name": "Gated Waterfall",
+      "type": "landmark",
+      "chat_code": "[&BOIPAAA=]"
+    },
+    {
+      "pos": [
+        5395.98,
+        60445.5
+      ],
+      "name": "Issvano's Reliquary",
+      "type": "landmark",
+      "chat_code": "[&BOMPAAA=]"
+    },
+    {
+      "pos": [
+        3804.34,
+        60931.1
+      ],
+      "name": "Deepwood Outpost Waypoint",
+      "type": "waypoint",
+      "chat_code": "[&BOQPAAA=]"
+    },
+    {
+      "pos": [
+        4808.92,
+        60923.6
+      ],
+      "name": "Arcanological Survey Station",
+      "type": "landmark",
+      "chat_code": "[&BOUPAAA=]"
+    },
+    {
+      "pos": [
+        4048.29,
+        62208.7
+      ],
+      "name": "Kitshark Den",
+      "type": "landmark",
+      "chat_code": "[&BOYPAAA=]"
+    },
+    {
+      "pos": [
+        4016.48,
+        60780.8
+      ],
+      "name": "Leylit Retreat",
+      "type": "landmark",
+      "chat_code": "[&BOcPAAA=]"
+    },
+    {
+      "pos": [
+        5156.2,
+        61454.1
+      ],
+      "name": "Crumbling Edifice",
+      "type": "landmark",
+      "chat_code": "[&BOgPAAA=]"
+    },
+    {
+      "pos": [
+        4200.63,
+        62407.5
+      ],
+      "name": "Beetle Gallery",
+      "type": "landmark",
+      "chat_code": "[&BOkPAAA=]"
+    },
+    {
+      "pos": [
+        4755.91,
+        60312
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BOoPAAA=]"
+    },
+    {
+      "pos": [
+        4274.39,
+        60930.9
+      ],
+      "name": "Ascendant's Way",
+      "type": "landmark",
+      "chat_code": "[&BOsPAAA=]"
+    },
+    {
+      "pos": [
+        3473.45,
+        62678.5
+      ],
+      "name": "Raul's Watch",
+      "type": "landmark",
+      "chat_code": "[&BOwPAAA=]"
+    },
+    {
+      "pos": [
+        3418.12,
+        62534.1
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BO0PAAA=]"
+    },
+    {
+      "pos": [
+        3496.87,
+        61933.3
+      ],
+      "name": "Serene Nursery",
+      "type": "landmark",
+      "chat_code": "[&BO4PAAA=]"
+    },
+    {
+      "pos": [
+        4108.01,
+        62034.9
+      ],
+      "name": "Hydrothermal Vents",
+      "type": "landmark",
+      "chat_code": "[&BO8PAAA=]"
+    },
+    {
+      "pos": [
+        4867.48,
+        61003.2
+      ],
+      "name": "Sanctum Exterior Waypoint",
+      "type": "waypoint",
+      "chat_code": "[&BPAPAAA=]"
+    },
+    {
+      "pos": [
+        3508.5,
+        61643.5
+      ],
+      "name": "Hidden Cellar",
+      "type": "landmark",
+      "chat_code": "[&BPEPAAA=]"
+    },
+    {
+      "pos": [
+        4107.85,
+        60431.4
+      ],
+      "name": "The All Seer",
+      "type": "landmark",
+      "chat_code": "[&BPIPAAA=]"
+    },
+    {
+      "pos": [
+        5334.73,
+        61940.3
+      ],
+      "name": "Toppled Monument",
+      "type": "landmark",
+      "chat_code": "[&BPMPAAA=]"
+    },
+    {
+      "pos": [
+        4500.1,
+        61647.3
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BPQPAAA=]"
+    },
+    {
+      "pos": [
+        4122.26,
+        60763.8
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BPUPAAA=]"
+    },
+    {
+      "pos": [
+        5310.05,
+        61307.7
+      ],
+      "name": "Quarry Depths",
+      "type": "landmark",
+      "chat_code": "[&BPYPAAA=]"
+    },
+    {
+      "pos": [
+        4726.96,
+        61370.7
+      ],
+      "name": "Steward Trial Chamber",
+      "type": "landmark",
+      "chat_code": "[&BPcPAAA=]"
+    },
+    {
+      "pos": [
+        4827.92,
+        60346.3
+      ],
+      "name": "Spire of Exaltation",
+      "type": "landmark",
+      "chat_code": "[&BPgPAAA=]"
+    },
+    {
+      "pos": [
+        5082.37,
+        62488.9
+      ],
+      "name": "Alliance Expedition Camp",
+      "type": "landmark",
+      "chat_code": "[&BPkPAAA=]"
+    },
+    {
+      "pos": [
+        3722.91,
+        61850.8
+      ],
+      "name": "Temple of Abnegation Waypoint",
+      "type": "waypoint",
+      "chat_code": "[&BPoPAAA=]"
+    },
+    {
+      "pos": [
+        3984.94,
+        61777.1
+      ],
+      "name": "Logistics Depot",
+      "type": "landmark",
+      "chat_code": "[&BPsPAAA=]"
+    },
+    {
+      "pos": [
+        5162.33,
+        62438.5
+      ],
+      "name": "Pilgrim's Rest Waypoint",
+      "type": "waypoint",
+      "chat_code": "[&BPwPAAA=]"
+    },
+    {
+      "pos": [
+        5277.25,
+        60740.5
+      ],
+      "name": "Dome of the Indelible Word",
+      "type": "landmark",
+      "chat_code": "[&BP0PAAA=]"
+    },
+    {
+      "pos": [
+        4516.1,
+        60428.1
+      ],
+      "name": "Grand Colonnade",
+      "type": "landmark",
+      "chat_code": "[&BP4PAAA=]"
+    },
+    {
+      "pos": [
+        4565.64,
+        61529.3
+      ],
+      "name": "The Forge",
+      "type": "landmark",
+      "chat_code": "[&BP8PAAA=]"
+    },
+    {
+      "pos": [
+        4206.99,
+        61166
+      ],
+      "name": "Sunken Leyspring",
+      "type": "landmark",
+      "chat_code": "[&BAAQAAA=]"
+    },
+    {
+      "pos": [
+        4677.62,
+        61107.7
+      ],
+      "name": "Inquest Bridgehead",
+      "type": "landmark",
+      "chat_code": "[&BAEQAAA=]"
+    },
+    {
+      "pos": [
+        4936.66,
+        62869.1
+      ],
+      "name": "Pilfered Inquest Equipment",
+      "type": "landmark",
+      "chat_code": "[&BAIQAAA=]"
+    },
+    {
+      "pos": [
+        4956.15,
+        62317.5
+      ],
+      "name": "Pilgrim's Approach",
+      "type": "landmark",
+      "chat_code": "[&BAMQAAA=]"
+    },
+    {
+      "pos": [
+        5307.32,
+        60805.1
+      ],
+      "name": "Vista",
+      "type": "vista",
+      "chat_code": "[&BAQQAAA=]"
+    },
+    {
+      "pos": [
+        3495.67,
+        61747.2
+      ],
+      "name": "Chamber of Discipline",
+      "type": "landmark",
+      "chat_code": "[&BAUQAAA=]"
+    },
+    {
+      "pos": [
+        3530.31,
+        60397.1
+      ],
+      "name": "Whispering Artifact",
+      "type": "landmark",
+      "chat_code": "[&BAYQAAA=]"
+    },
+    {
+      "pos": [
+        4438.5,
+        62600.3
+      ],
+      "name": "Aperture Falls",
+      "type": "landmark",
+      "chat_code": "[&BAcQAAA=]"
+    },
+    {
+      "pos": [
+        5411.04,
+        60230.9
+      ],
+      "name": "Glowing Pond",
+      "type": "landmark",
+      "chat_code": "[&BAgQAAA=]"
+    },
+    {
+      "pos": [
+        4001.32,
+        62600.8
+      ],
+      "name": "Infested Thicket",
+      "type": "landmark",
+      "chat_code": "[&BAkQAAA=]"
+    },
+    {
+      "pos": [
+        5160.31,
+        62548.2
+      ],
+      "name": "Help out with research and expedition tasks around Pilgrim's Rest.",
+      "type": "heart",
+      "chat_code": "[&BM8BAAA=]"
+    },
+    {
+      "pos": [
+        4665.5,
+        61492.1
+      ],
+      "name": "Assist the Stewards of Galdra around the forge.",
+      "type": "heart",
+      "chat_code": "[&BNABAAA=]"
     }
   ]
 }
