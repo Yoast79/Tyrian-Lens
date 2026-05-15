@@ -18,17 +18,17 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Discord Notification
-        uses: appleboy/discord-action@master
+      - name: Send Fancy Discord Notification
+        uses: sarisia/actions-status-discord@v1
         with:
-          webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
-          username: "Tyrian Lens Update"
-          avatar_url: "https://i.imgur.com/HmyYArl.png"
-          color: "#E2C07D"
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
           title: "Version Release: ${{ github.event.release.tag_name || github.event.inputs.test_version }}"
           description: |
             **Changelog:**
             ${{ github.event.release.body || github.event.inputs.test_body }}
-
-            [View Release on GitHub](${{ github.event.release.html_url || 'https://github.com/Yoast79/Tyrian-Lens' }})
+          image: "https://i.imgur.com/HmyYArl.png"
+          color: 0xE2C07D
+          url: "${{ github.event.release.html_url || 'https://github.com/Yoast79/Tyrian-Lens' }}"
+          username: "Tyrian Lens Update"
+          avatar_url: "https://i.imgur.com/HmyYArl.png"
           footer: "Tyrian Lens - Professional GW2 Utility"
