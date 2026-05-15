@@ -1,18 +1,8 @@
-name: Discord Release Notification
+name: Tyrian Lens High-Fidelity Notifier
 
 on:
   release:
     types: [published]
-  workflow_dispatch:
-    inputs:
-      test_version:
-        description: 'Test Version Number'
-        default: 'v1.3.0-TEST'
-        required: true
-      test_body:
-        description: 'Test Changelog Message'
-        default: 'This is a manual test of the notification system.'
-        required: true
 
 jobs:
   notify:
@@ -22,55 +12,42 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           EVENT_NAME: ${{ github.event_name }}
-          TEST_VERSION: ${{ github.event.inputs.test_version }}
-          TEST_BODY: ${{ github.event.inputs.test_body }}
         run: |
           python3 -c "
           import os, json, urllib.request
 
           # Get variables from GitHub environment
-          event_name = os.environ.get('EVENT_NAME')
-          print(f'Starting notification for event: {event_name}')
+          event_path = os.environ['GITHUB_EVENT_PATH']
+          with open(event_path, 'r') as f:
+              event_data = json.load(f)
           
+          # For release events, we pull from the event payload
+          version = event_data['release']['tag_name']
+          body = event_data['release']['body']
+          url = event_data['release']['html_url']
+
+          payload = {
+              'username': 'Tyrian Lens Update',
+              'avatar_url': 'https://i.imgur.com/HmyYArl.png',
+              'embeds': [{
+                  'title': f'Version Release: {version}',
+                  'description': f'**Changelog:**\n{body}',
+                  'url': url,
+                  'color': 14860413,
+                  'thumbnail': { 'url': 'https://i.imgur.com/HmyYArl.png' },
+                  'footer': { 'text': 'Tyrian Lens - Professional GW2 Utility' }
+              }]
+          }
+
           try:
-              if event_name == 'workflow_dispatch':
-                  version = os.environ.get('TEST_VERSION', 'v1.3.0-TEST')
-                  body = os.environ.get('TEST_BODY', 'Test Notification')
-                  url = 'https://github.com/Yoast79/Tyrian-Lens'
-              else:
-                  event_path = os.environ['GITHUB_EVENT_PATH']
-                  with open(event_path, 'r') as f:
-                      event_data = json.load(f)
-                  version = event_data['release']['tag_name']
-                  body = event_data['release']['body']
-                  url = event_data['release']['html_url']
-              
-              print(f'Found Version: {version}')
-
-              payload = {
-                  'username': 'Tyrian Lens Update',
-                  'avatar_url': 'https://i.imgur.com/HmyYArl.png',
-                  'embeds': [{
-                      'title': f'Version Release: {version}',
-                      'description': f'**Changelog:**\n{body}',
-                      'url': url,
-                      'color': 14860413,
-                      'thumbnail': { 'url': 'https://i.imgur.com/HmyYArl.png' },
-                      'footer': { 'text': 'Tyrian Lens - Professional GW2 Utility' }
-                  }]
-              }
-
               req = urllib.request.Request(
                   os.environ['DISCORD_WEBHOOK'], 
                   data=json.dumps(payload).encode('utf-8'), 
                   headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
               )
               with urllib.request.urlopen(req) as response:
-                  print(f'Discord Response Code: {response.getcode()}')
-                  
+                  print(f'Status: {response.getcode()}')
           except Exception as e:
-              print(f'CRITICAL ERROR: {str(e)}')
-              if hasattr(e, 'read'):
-                  print(f'Discord API Error Detail: {e.read().decode()}')
+              print(f'Error: {str(e)}')
               exit(1)
           "
