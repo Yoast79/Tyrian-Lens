@@ -22,7 +22,6 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const axios = require('axios');
             const version = context.payload.release ? context.payload.release.tag_name : context.payload.inputs.test_version;
             const body = context.payload.release ? context.payload.release.body : context.payload.inputs.test_body;
             const url = context.payload.release ? context.payload.release.html_url : 'https://github.com/Yoast79/Tyrian-Lens';
@@ -40,6 +39,10 @@ jobs:
               }]
             };
             
-            await axios.post(process.env.DISCORD_WEBHOOK, payload);
+            await fetch(process.env.DISCORD_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
