@@ -30,38 +30,47 @@ jobs:
 
           # Get variables from GitHub environment
           event_name = os.environ.get('EVENT_NAME')
+          print(f'Starting notification for event: {event_name}')
           
-          if event_name == 'workflow_dispatch':
-              version = os.environ.get('TEST_VERSION', 'v1.3.0-TEST')
-              body = os.environ.get('TEST_BODY', 'Test Notification')
-              url = 'https://github.com/Yoast79/Tyrian-Lens'
-          else:
-              # For release events, we pull from the event payload
-              event_path = os.environ['GITHUB_EVENT_PATH']
-              with open(event_path, 'r') as f:
-                  event_data = json.load(f)
-              version = event_data['release']['tag_name']
-              body = event_data['release']['body']
-              url = event_data['release']['html_url']
+          try:
+              if event_name == 'workflow_dispatch':
+                  version = os.environ.get('TEST_VERSION', 'v1.3.0-TEST')
+                  body = os.environ.get('TEST_BODY', 'Test Notification')
+                  url = 'https://github.com/Yoast79/Tyrian-Lens'
+              else:
+                  event_path = os.environ['GITHUB_EVENT_PATH']
+                  with open(event_path, 'r') as f:
+                      event_data = json.load(f)
+                  version = event_data['release']['tag_name']
+                  body = event_data['release']['body']
+                  url = event_data['release']['html_url']
+              
+              print(f'Found Version: {version}')
 
-          payload = {
-              'username': 'Tyrian Lens Update',
-              'avatar_url': 'https://i.imgur.com/HmyYArl.png',
-              'embeds': [{
-                  'title': f'Version Release: {version}',
-                  'description': f'**Changelog:**\n{body}',
-                  'url': url,
-                  'color': 14860413,
-                  'thumbnail': { 'url': 'https://i.imgur.com/HmyYArl.png' },
-                  'footer': { 'text': 'Tyrian Lens - Professional GW2 Utility' }
-              }]
-          }
+              payload = {
+                  'username': 'Tyrian Lens Update',
+                  'avatar_url': 'https://i.imgur.com/HmyYArl.png',
+                  'embeds': [{
+                      'title': f'Version Release: {version}',
+                      'description': f'**Changelog:**\n{body}',
+                      'url': url,
+                      'color': 14860413,
+                      'thumbnail': { 'url': 'https://i.imgur.com/HmyYArl.png' },
+                      'footer': { 'text': 'Tyrian Lens - Professional GW2 Utility' }
+                  }]
+              }
 
-          req = urllib.request.Request(
-              os.environ['DISCORD_WEBHOOK'], 
-              data=json.dumps(payload).encode('utf-8'), 
-              headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
-          )
-          with urllib.request.urlopen(req) as response:
-              print(f'Status: {response.getcode()}')
+              req = urllib.request.Request(
+                  os.environ['DISCORD_WEBHOOK'], 
+                  data=json.dumps(payload).encode('utf-8'), 
+                  headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
+              )
+              with urllib.request.urlopen(req) as response:
+                  print(f'Discord Response Code: {response.getcode()}')
+                  
+          except Exception as e:
+              print(f'CRITICAL ERROR: {str(e)}')
+              if hasattr(e, 'read'):
+                  print(f'Discord API Error Detail: {e.read().decode()}')
+              exit(1)
           "
