@@ -17,34 +17,28 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - name: Send Professional Discord Embed
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const version = context.payload.release ? context.payload.release.tag_name : context.payload.inputs.test_version;
-            const body = context.payload.release ? context.payload.release.body : context.payload.inputs.test_body;
-            const url = context.payload.release ? context.payload.release.html_url : 'https://github.com/Yoast79/Tyrian-Lens';
+      - name: Build and Send Notification
+        run: |
+          node -e "
+            const fs = require('fs');
+            const version = '${{ github.event.release.tag_name }}' || '${{ github.event.inputs.test_version }}';
+            const body = \`${{ github.event.release.body || github.event.inputs.test_body }}\`;
+            const url = '${{ github.event.release.html_url }}' || 'https://github.com/Yoast79/Tyrian-Lens';
             
             const payload = {
-              username: "Tyrian Lens Update",
-              avatar_url: "https://i.imgur.com/HmyYArl.png",
+              username: 'Tyrian Lens Update',
+              avatar_url: 'https://i.imgur.com/HmyYArl.png',
               embeds: [{
-                title: `Version Release: ${version}`,
-                description: `**Changelog:**\n${body}`,
+                title: 'Version Release: ' + version,
+                description: '**Changelog:**\n' + body,
                 url: url,
                 color: 14860413,
-                thumbnail: { url: "https://i.imgur.com/HmyYArl.png" },
-                footer: { text: "Tyrian Lens - Professional GW2 Utility" }
+                thumbnail: { url: 'https://i.imgur.com/HmyYArl.png' },
+                footer: { text: 'Tyrian Lens - Professional GW2 Utility' }
               }]
             };
             
-            await fetch(process.env.DISCORD_WEBHOOK, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-            });
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+            fs.writeFileSync('payload.json', JSON.stringify(payload));
+          "
+          curl -H "Content-Type: application/json" -d @payload.json ${{ secrets.DISCORD_WEBHOOK }}
