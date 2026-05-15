@@ -19,25 +19,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Professional Discord Embed
-        run: |
-          VERSION="${{ github.event.release.tag_name || github.event.inputs.test_version }}"
-          BODY="${{ github.event.release.body || github.event.inputs.test_body }}"
-          URL="${{ github.event.release.html_url || 'https://github.com/Yoast79/Tyrian-Lens' }}"
-          
-          # Clean up the body for JSON (escape newlines and quotes)
-          CLEAN_BODY=$(echo "$BODY" | sed ':a;N;$!ba;s/\n/\\n/g' | sed 's/"/\\"/g')
-          
-          curl -H "Content-Type: application/json" \
-               -d '{
-                 "username": "Tyrian Lens Update",
-                 "avatar_url": "https://i.imgur.com/HmyYArl.png",
-                 "embeds": [{
-                   "title": "Version Release: '"$VERSION"'",
-                   "description": "**Changelog:**\n'"$CLEAN_BODY"'",
-                   "url": "'"$URL"'",
-                   "color": 14860413,
-                   "thumbnail": { "url": "https://i.imgur.com/HmyYArl.png" },
-                   "footer": { "text": "Tyrian Lens - Professional GW2 Utility" }
-                 }]
-               }' \
-               ${{ secrets.DISCORD_WEBHOOK }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const axios = require('axios');
+            const version = context.payload.release ? context.payload.release.tag_name : context.payload.inputs.test_version;
+            const body = context.payload.release ? context.payload.release.body : context.payload.inputs.test_body;
+            const url = context.payload.release ? context.payload.release.html_url : 'https://github.com/Yoast79/Tyrian-Lens';
+            
+            const payload = {
+              username: "Tyrian Lens Update",
+              avatar_url: "https://i.imgur.com/HmyYArl.png",
+              embeds: [{
+                title: `Version Release: ${version}`,
+                description: `**Changelog:**\n${body}`,
+                url: url,
+                color: 14860413,
+                thumbnail: { url: "https://i.imgur.com/HmyYArl.png" },
+                footer: { text: "Tyrian Lens - Professional GW2 Utility" }
+              }]
+            };
+            
+            await axios.post(process.env.DISCORD_WEBHOOK, payload);
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
