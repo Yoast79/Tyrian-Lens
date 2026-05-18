@@ -28,3 +28,7 @@ EBWebView/
 
 # Local Installer Scripts
 setup_script.iss
+
+# Backups and local builds
+*.bak
+[Oo]utput/

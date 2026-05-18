@@ -93,6 +93,54 @@
 			#map-switch-popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 8, 5, 0.98); border: 1px solid var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); padding: 20px 30px; z-index: 100005; text-align: center; display: none; box-shadow: 0 0 20px rgba(0,0,0,0.9); font-family: "Crimson Text", serif; letter-spacing: 1px; }
 			.popup-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 20px; margin: 15px 10px 0; cursor: pointer; text-transform: uppercase; transition: 0.2s; font-family: "Crimson Text", serif; font-size: 14px; font-weight: bold; }
 			.popup-btn:hover { background: var(--bg-button-hover, #2a221a); border-color: var(--text-primary, #e2c07d); }
+
+			.panel-loader {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: var(--tracker-bg, rgba(10, 8, 5, 0.98));
+				z-index: 1000;
+				display: none;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				transition: opacity 0.2s ease-in-out;
+				pointer-events: none;
+			}
+			.panel-loader.active {
+				display: flex;
+				opacity: 1;
+				pointer-events: auto;
+			}
+			.panel-spinner {
+				width: 40px;
+				height: 40px;
+				border: 2px solid rgba(226, 192, 125, 0.1);
+				border-top: 2px solid var(--text-primary, #e2c07d);
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+				box-shadow: 0 0 10px rgba(226, 192, 125, 0.1);
+				margin-bottom: 15px;
+			}
+			.panel-loading-text {
+				font-size: 11px;
+				color: var(--text-muted, #8a7a5f);
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-family: "Crimson Text", serif;
+				animation: pulse 1.5s ease-in-out infinite;
+			}
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			@keyframes pulse {
+				0%, 100% { opacity: 0.6; }
+				50% { opacity: 1; }
+			}
 		</style>
 	</head>
 	<body>
@@ -153,14 +201,22 @@
 		</div>
 
 		<div id="side-panel">
-			<iframe id="panel-frame"></iframe>
+			<div id="panel-loading" class="panel-loader">
+				<div class="panel-spinner"></div>
+				<div class="panel-loading-text">Loading Module...</div>
+			</div>
+			<iframe id="panel-frame" onload="window.hideLoader('panel-loading')"></iframe>
 			<iframe id="farming-frame" src="farming.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
 			<iframe id="timers-frame" src="timers.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
 			<iframe id="fishing-frame" src="fishing.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
 		</div>
 		<div id="side-panel-right">
 			<div id="wiki-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:100; transition:0.2s; border-radius:3px;" onclick="closeWiki()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
-			<iframe id="panel-frame-right"></iframe>
+			<div id="panel-loading-right" class="panel-loader">
+				<div class="panel-spinner"></div>
+				<div class="panel-loading-text">Loading...</div>
+			</div>
+			<iframe id="panel-frame-right" onload="window.hideLoader('panel-loading-right')"></iframe>
 		</div>
 
 
@@ -172,9 +228,17 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "v1.3.3";
+			const APP_VERSION = "v1.3.4";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
+			window.showLoader = function(loaderId) {
+				const el = document.getElementById(loaderId);
+				if (el) el.classList.add('active');
+			};
+			window.hideLoader = function(loaderId) {
+				const el = document.getElementById(loaderId);
+				if (el) el.classList.remove('active');
+			};
 			window.pendingMapSwitch = null;
 			window.manualSwitchActive = false;
 			window.lastPlayerCoords = {x: 0, y: 0};
@@ -294,6 +358,7 @@
 						const rightPanel = document.getElementById('side-panel-right');
 						const rightFrame = document.getElementById('panel-frame-right');
 						
+						window.showLoader('panel-loading-right');
 						rightFrame.src = url;
 						rightPanel.classList.add('wiki-mode', 'open');
 						document.getElementById('wiki-close-btn').style.display = 'flex';
@@ -420,9 +485,14 @@
 						if (module === 'farming') { farmingFrame.style.display = 'block'; } 
                         else if (module === 'timers') { timersFrame.style.display = 'block'; } 
                         else if (module === 'fishing') { fishingFrame.style.display = 'block'; } 
-                        else { frame.style.display = 'block'; frame.src = newSrc; }
+                        else { 
+							window.showLoader('panel-loading');
+							frame.style.display = 'block'; 
+							frame.src = newSrc; 
+						}
 						if (['bank', 'map_markers', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(module)) { panel.classList.add('wide'); } else { panel.classList.remove('wide'); }
 					} else {
+						window.showLoader('panel-loading-right');
 						frame.src = newSrc; panel.classList.remove('wide', 'wiki-mode'); document.getElementById('wiki-close-btn').style.display = 'none';
 					}
 					panel.classList.add('open');
@@ -564,6 +634,7 @@
                         const rightPanel = document.getElementById('side-panel-right');
                         const rightFrame = document.getElementById('panel-frame-right');
                         
+                        window.showLoader('panel-loading-right');
                         rightFrame.src = url;
                         rightPanel.classList.add('wiki-mode', 'open');
                         document.getElementById('wiki-close-btn').style.display = 'flex';
@@ -587,6 +658,7 @@
 						const rightPanel = document.getElementById('side-panel-right');
 						const rightFrame = document.getElementById('panel-frame-right');
 						if (rightPanel && rightFrame) {
+							window.showLoader('panel-loading-right');
 							rightFrame.src = url;
 							rightPanel.classList.add('wiki-mode', 'open');
 							document.getElementById('wiki-close-btn').style.display = 'flex';
@@ -671,6 +743,7 @@
 						document.getElementById('timers-frame').style.display = 'none';
 						document.getElementById('fishing-frame').style.display = 'none';
 						
+						window.showLoader('panel-loading');
 						frame.src = newSrc;
 						panel.classList.add('open');
 						if (['bank', 'map_markers', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(moduleName)) { 

@@ -51,7 +51,7 @@
 			.sub-content { display: none; flex-direction: column; gap: 8px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color, #2a2015); border-top: none; }
 
 			.event-card { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #332a1e); display: flex; padding: 8px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
-			.event-card:hover { border-color: var(--text-muted, #8a7a5f); background: var(--bg-button-hover, rgba(30,22,15,0.9)); }
+			.event-card:hover { border-color: var(--text-primary, #e2c07d); background: color-mix(in srgb, var(--text-primary) 8%, transparent); }
 			.event-card.active-state { border-color: var(--success-color, #1A9306); background: rgba(26, 147, 6, 0.1); }
 			.event-card.imminent-state { border-color: var(--text-primary, #e2c07d); background: rgba(226, 192, 125, 0.1); }
 			.event-icon-wrap { width: 32px; height: 32px; flex-shrink: 0; background: #000; border: 1px solid var(--border-color, #4a3b2a); padding: 2px; }
@@ -107,6 +107,63 @@
 			body.ui-large .event-icon-wrap { width: 40px; height: 40px; }
 			body.ui-large .wp-btn { font-size: 10px; padding: 4px 6px; }
 			body.ui-large .star-btn { width: 20px; height: 20px; }
+
+			.alert-once-wrap {
+				position: absolute;
+				bottom: 6px;
+				right: 30px;
+				display: none;
+				align-items: center;
+				gap: 4px;
+				z-index: 10;
+				font-size: 8px;
+				font-weight: bold;
+				color: var(--text-muted, #8a7a5f);
+				cursor: pointer;
+			}
+			.alert-once-wrap input {
+				cursor: pointer;
+				margin: 0;
+				width: 10px;
+				height: 10px;
+				accent-color: var(--text-primary, #e2c07d);
+				background: #1a1510;
+				border: 1px solid #4a3b2a;
+				appearance: none;
+				-webkit-appearance: none;
+				display: inline-grid;
+				place-content: center;
+				outline: none;
+			}
+			.alert-once-wrap input:checked::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background-color: var(--text-primary, #e2c07d);
+				clip-path: polygon(14% 44%, 0 58%, 38% 96%, 100% 23%, 86% 9%, 38% 68%);
+			}
+			.event-card.tracked-state .alert-once-wrap {
+				display: flex;
+			}
+			.event-card.tracked-state .prog-container {
+				padding-right: 90px;
+			}
+			body.ui-large .alert-once-wrap {
+				font-size: 10px;
+				right: 30px;
+				bottom: 8px;
+			}
+			body.ui-large .alert-once-wrap input {
+				width: 12px;
+				height: 12px;
+			}
+			body.ui-large .alert-once-wrap input:checked::before {
+				width: 8px;
+				height: 8px;
+			}
+			body.ui-large .event-card.tracked-state .prog-container {
+				padding-right: 105px;
+			}
 
 			#confetti-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1000; }
 		</style>
@@ -203,6 +260,7 @@
 
 			let currentMainCat = 1, syncCounter = 0;
 			let trackedTimers = JSON.parse(localStorage.getItem('gw2_tracked_timers') || '{}');
+			let alertOnceTimers = JSON.parse(localStorage.getItem('gw2_alert_once_timers') || '{}');
 			let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_timers') || '{}');
             let customTimers = JSON.parse(localStorage.getItem('gw2_custom_timers') || '[]');
 			let alertHistory = {};
@@ -618,7 +676,7 @@
 
 						sorted.forEach((item, eIdx) => {
 							const id = `ev-${sIdx}-${item.ev.n.replace(/\s+/g, '-')}`;
-                            let deleteBtn = item.ev.isCustom ? `<button class="wp-btn" style="right: 30px;" onclick="event.stopPropagation(); promptDelete('${item.ev.id}')">DEL</button>` : '';
+                            let deleteBtn = item.ev.isCustom ? `<button class="wp-btn" onclick="event.stopPropagation(); promptDelete('${item.ev.id}')">DEL</button>` : '';
                             
 							let showWp = item.ev.wp && item.ev.n !== "Daily Reset" && item.ev.n !== "Day/Night Cycle";
 							let copyBtn = (item.ev.isCustom || !showWp) ? '' : `<button class="wp-btn" onclick="event.stopPropagation(); window.parent.postMessage({action:'copy', code:'${item.ev.wp || ''}'}, '*')">COPY WP</button>`;
@@ -627,10 +685,21 @@
                             let tooltipDesc = (item.ev.desc || item.ev.n).replace(/'/g, "\\'");
 							let isSAB = item.ev.n === "Super Adventure Festival";
 
-							html += `<div class="event-card ${isSAB ? 'sab-glitch' : ''}" id="${id}" ${clickAction} onmouseover="window.parent.postMessage({action:'showTooltip', text:'${tooltipDesc}', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+							const isTracked = !!trackedTimers[item.ev.n];
+							const isAlertOnce = !!alertOnceTimers[item.ev.n];
+							let alertOnceBtn = '';
+							if (isTracked) {
+								alertOnceBtn = `<label class="alert-once-wrap" onclick="event.stopPropagation();">
+									<input type="checkbox" ${isAlertOnce ? 'checked' : ''} onchange="window.toggleAlertOnce('${item.ev.n.replace(/'/g, "\\'")}', this, event)">
+									<span>ALERT ONCE</span>
+								</label>`;
+							}
+
+							html += `<div class="event-card ${isSAB ? 'sab-glitch' : ''} ${isTracked ? 'tracked-state' : ''}" id="${id}" ${clickAction} onmouseover="window.parent.postMessage({action:'showTooltip', text:'${tooltipDesc}', x:event.clientX, y:event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 								${deleteBtn}
                                 ${copyBtn}
-								<div class="star-btn ${!!trackedTimers[item.ev.n]?'active':''}" onclick="toggleTrackTimer('${item.ev.n.replace(/'/g, "\\'")}', this, event)"></div>
+								${alertOnceBtn}
+								<div class="star-btn ${isTracked ? 'active' : ''}" onclick="window.toggleTrackTimer('${item.ev.n.replace(/'/g, "\\'")}', this, event)"></div>
 								<div class="event-icon-wrap"><img src="${item.ev.i}" class="event-icon" /></div>
 								<div class="event-info"><div class="event-title">${item.ev.n}</div><div class="event-status" id="${id}-stat">-</div>
 								<div class="prog-container"><div class="prog-bg"><div class="prog-fill" id="${id}-fill" style="width:0%"></div></div><div class="time-text" id="${id}-time">00:00</div></div></div></div>`;
@@ -648,7 +717,8 @@
 						const card = document.getElementById(id);
 						if(!card) return;
 						let isSAB = ev.n === "Super Adventure Festival";
-						card.className = "event-card" + (state.active ? " active-state" : (state.remain <= 900 ? " imminent-state" : "")) + (isSAB ? " sab-glitch" : "");
+						const isTracked = !!trackedTimers[ev.n];
+						card.className = "event-card" + (state.active ? " active-state" : (state.remain <= 900 ? " imminent-state" : "")) + (isSAB ? " sab-glitch" : "") + (isTracked ? " tracked-state" : "");
 						document.getElementById(id+'-stat').innerText = state.active ? "ACTIVE" : "STARTS IN " + formatCountdown(state.remain);
 						document.getElementById(id+'-stat').className = "event-status" + (state.active ? " active-text" : (state.remain <= 900 ? " imminent-text" : ""));
 						document.getElementById(id+'-time').innerText = formatCountdown(state.remain);
@@ -683,10 +753,25 @@
 
             window.toggleTrackTimer = function(name, el, event) {
                 event.stopPropagation();
-                if (el.classList.contains('active')) { delete trackedTimers[name]; el.classList.remove('active'); }
+                if (el.classList.contains('active')) { 
+                    delete trackedTimers[name]; 
+                    delete alertOnceTimers[name];
+                    el.classList.remove('active'); 
+                }
                 else { trackedTimers[name] = true; el.classList.add('active'); }
                 localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
-                if (schedule[currentMainCat].cat === "WATCHLIST") renderView(true);
+                localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
+                renderView(true);
+            };
+
+            window.toggleAlertOnce = function(name, el, event) {
+                event.stopPropagation();
+                if (el.checked) { 
+                    alertOnceTimers[name] = true; 
+                }
+                else { delete alertOnceTimers[name]; }
+                localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
+                renderView(true);
             };
 
             function updateTyriaPhase(m) {
@@ -733,6 +818,14 @@
 													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
 													alertHistory[name + '-' + f] = true;
 													setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
+
+													if (alertOnceTimers[name]) {
+														delete alertOnceTimers[name];
+														localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
+														delete trackedTimers[name];
+														localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
+														setTimeout(() => renderView(true), 100);
+													}
 												}
 											});
                                         } else {
@@ -746,6 +839,14 @@
                                                 playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
                                                 alertHistory[name + '-0'] = true;
                                                 setTimeout(()=> delete alertHistory[name + '-0'], 5000);
+
+												if (alertOnceTimers[name]) {
+													delete alertOnceTimers[name];
+													localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
+													delete trackedTimers[name];
+													localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
+													setTimeout(() => renderView(true), 100);
+												}
                                             }
                                         }
                                     }

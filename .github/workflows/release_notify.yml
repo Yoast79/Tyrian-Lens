@@ -29,6 +29,7 @@ jobs:
           payload = {
               'username': 'Tyrian Lens Update',
               'avatar_url': 'https://i.imgur.com/HmyYArl.png',
+              'content': '@users',
               'embeds': [{
                   'title': f'Version Release: {version}',
                   'description': f'**Changelog:**\n{body}',

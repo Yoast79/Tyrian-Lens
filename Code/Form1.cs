@@ -101,8 +101,54 @@ namespace GW2PS
             string userDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TyrianLens");
             string dontShowFilePath = Path.Combine(userDataFolder, "hide_welcome.txt");
 
-            var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
-            await mapView.EnsureCoreWebView2Async(env);
+            bool initialized = false;
+            try
+            {
+                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+                await mapView.EnsureCoreWebView2Async(env);
+                initialized = true;
+            }
+            catch (Exception ex)
+            {
+                LogError(ex);
+                // Fallback 1: Try with GPU hardware acceleration disabled (highly common on fresh Windows resets/generic drivers)
+                try
+                {
+                    var options = new CoreWebView2EnvironmentOptions("--disable-gpu");
+                    var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder, options);
+                    await mapView.EnsureCoreWebView2Async(env);
+                    initialized = true;
+                }
+                catch (Exception fallbackEx)
+                {
+                    LogError(fallbackEx);
+                    // Fallback 2: Try using alternative temp folder + GPU disabled (handles profile/OneDrive permission locking)
+                    try
+                    {
+                        string altUserDataFolder = Path.Combine(Path.GetTempPath(), "TyrianLensTemp");
+                        var options = new CoreWebView2EnvironmentOptions("--disable-gpu");
+                        var env = await CoreWebView2Environment.CreateAsync(null, altUserDataFolder, options);
+                        await mapView.EnsureCoreWebView2Async(env);
+                        initialized = true;
+                    }
+                    catch (Exception finalEx)
+                    {
+                        LogError(finalEx);
+                        MessageBox.Show(
+                            $"Failed to initialize the browser engine (WebView2).\n\n" +
+                            $"Primary Error: {ex.Message}\n\n" +
+                            $"GPU-Disabled Fallback: {fallbackEx.Message}\n\n" +
+                            $"Temp-Folder Fallback: {finalEx.Message}\n\n" +
+                            $"Please make sure the Microsoft WebView2 Evergreen Runtime is fully installed and your GPU drivers are updated.",
+                            "Browser Engine Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+                }
+            }
+
+            if (!initialized) return;
 
             mapView.CoreWebView2.Settings.IsStatusBarEnabled = false;
             mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
