@@ -320,10 +320,10 @@
             let equipObj = {};
             
             const plannerWeps = {
-                "axe": 30682, "dagger": 30690, "mace": 30694, "pistol": 30695, "scepter": 30698, "sword": 30699,
-                "focus": 30696, "shield": 30697, "torch": 30693, "warhorn": 30692,
-                "greatsword": 30689, "hammer": 30687, "longbow": 30684, "rifle": 30685, "shortbow": 30686, "staff": 30688,
-                "speargun": 30700, "harpoongun": 30700, "spear": 30691, "harpoon": 30691, "trident": 30702
+                "axe": 4175, "dagger": 4237, "mace": 4178, "pistol": 4167, "scepter": 4196, "sword": 4251,
+                "focus": 4168, "shield": 4203, "torch": 4124, "warhorn": 4141,
+                "greatsword": 4222, "hammer": 4230, "longbow": 4195, "rifle": 4200, "shortbow": 4148, "staff": 4241,
+                "speargun": 4126, "harpoongun": 4126, "spear": 4159, "harpoon": 4159, "trident": 4130
             };
 
             const prefixToStat = {
@@ -804,7 +804,7 @@
                         const img = document.createElement('img'); img.src = it.icon;
                         img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(it, d), x: e.clientX, y: e.clientY}, '*');
                         img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                        img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(it.name)}`, '_blank');
+                        img.onclick = () => window.parent.postMessage({ action: 'openWiki', title: it.name }, '*');
                         b.appendChild(img);
                     } else {
                         if (emptyWiki[s]) {
@@ -901,7 +901,7 @@
                     const sk = UTILS.itemCache['skill_'+id]; const img = document.createElement('img'); img.src = sk.icon;
                     img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(sk), x: e.clientX, y: e.clientY}, '*');
                     img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                    img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sk.name)}`, '_blank');
+                    img.onclick = () => window.parent.postMessage({ action: 'openWiki', title: sk.name }, '*');
                     b.appendChild(img);
                 } else b.style.opacity = '0.1'; uRow.appendChild(b);
             });
@@ -933,7 +933,7 @@
                     const sk = UTILS.itemCache['skill_'+id]; const img = document.createElement('img'); img.src = sk.icon;
                     img.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(sk), x: e.clientX, y: e.clientY}, '*');
                     img.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                    img.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sk.name)}`, '_blank');
+                    img.onclick = () => window.parent.postMessage({ action: 'openWiki', title: sk.name }, '*');
                     b.appendChild(img);
                 } else b.style.opacity = '0.1'; wRow.appendChild(b);
             });
@@ -971,7 +971,7 @@
                     const sIcon = document.createElement('img'); sIcon.src = specData.icon; sIcon.style.width = '38px'; sIcon.style.height = '38px'; sIcon.style.borderRadius = '50%'; sIcon.style.border = '1px solid #e2c07d'; sIcon.style.cursor = 'help';
                     sIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(specData), x: e.clientX, y: e.clientY}, '*');
                     sIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                    sIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(specData.name)}`, '_blank');
+                    sIcon.onclick = () => window.parent.postMessage({ action: 'openWiki', title: specData.name }, '*');
                     content.appendChild(sIcon);
                     const minorTraits = specData.minor_traits || [], majorTraits = sp.traits || [];
                     for (let i=0; i<3; i++) {
@@ -981,7 +981,7 @@
                             tIcon.style.width = '24px'; tIcon.style.height = '24px'; tIcon.style.borderRadius = '50%'; tIcon.style.border = '1px solid #4a3b2a'; tIcon.style.cursor = 'help';
                             tIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(tr), x: e.clientX, y: e.clientY}, '*');
                             tIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                            tIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(tr.name)}`, '_blank');
+                            tIcon.onclick = () => window.parent.postMessage({ action: 'openWiki', title: tr.name }, '*');
                             content.appendChild(tIcon);
                         } else { const empty = document.createElement('div'); empty.style.width = '24px'; empty.style.height = '24px'; content.appendChild(empty); }
                         if (majorTraits[i] && UTILS.itemCache['trait_' + majorTraits[i]]) {
@@ -990,7 +990,7 @@
                             tIcon.style.width = '30px'; tIcon.style.height = '30px'; tIcon.style.border = '1px solid #332a1e'; tIcon.style.cursor = 'help';
                             tIcon.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateSkillTooltip(tr), x: e.clientX, y: e.clientY}, '*');
                             tIcon.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*'); 
-                            tIcon.onclick = () => window.open(`https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(tr.name)}`, '_blank');
+                            tIcon.onclick = () => window.parent.postMessage({ action: 'openWiki', title: tr.name }, '*');
                             content.appendChild(tIcon);
                         } else { const empty = document.createElement('div'); empty.style.width = '30px'; empty.style.height = '30px'; empty.style.border = '1px solid #332a1e'; empty.style.background = 'rgba(0,0,0,0.5)'; content.appendChild(empty); }
                     }

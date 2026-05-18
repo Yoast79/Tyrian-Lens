@@ -261,7 +261,7 @@ function createSlot(item, count = null) {
         badge.className = 'count-badge'; badge.innerText = count;
         slot.appendChild(badge);
     }
-    slot.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(name)}`, 'gw2wiki');
+    slot.onclick = () => window.parent.postMessage({ action: 'openWiki', title: name }, '*');
     slot.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: name, x: e.clientX, y: e.clientY, offsetTop: 45}, '*');
     slot.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
     return slot;

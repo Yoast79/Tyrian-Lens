@@ -476,7 +476,7 @@
 						const d = getDisplayData(id);
 						if (d.name.includes("Item #")) return;
 						const isUnlocked = unlockedIds.has(parseInt(recipeIds[idx]));
-						html += `<div class="item-slot rarity-${d.rarity}" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${d.name.replace(/'/g, "\\'")}${isUnlocked ? '' : ' (LOCKED)'}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.name)}', '_blank')"><img src="${d.icon}" class="recipe-icon ${isUnlocked ? '' : 'locked'}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'" /></div>`;
+						html += `<div class="item-slot rarity-${d.rarity}" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${d.name.replace(/'/g, "\\'")}${isUnlocked ? '' : ' (LOCKED)'}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.parent.postMessage({ action: 'openWiki', title: d.name }, '*')"><img src="${d.icon}" class="recipe-icon ${isUnlocked ? '' : 'locked'}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'" /></div>`;
 					});
 					grid.innerHTML = html;
 					btn.dataset.loaded = "true";
@@ -792,7 +792,7 @@
 								
 								buyableHtml += `
 								<div class="shopping-list-item">
-									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.parent.postMessage({ action: 'openWiki', title: d.rawName }, '*')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
 										<img src="${d.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${d.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 										<span class="text-${d.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${d.name}</span>
@@ -802,7 +802,7 @@
 							} else if (item.unitPrice === 0 && item.id > 0) {
 								untradableHtml += `
 								<div class="shopping-list-item">
-									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(d.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+									<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.parent.postMessage({ action: 'openWiki', title: d.rawName }, '*')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${item.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 										<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(item.qty)}</div>
 										<img src="${d.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${d.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 										<span class="text-${d.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${d.name}</span>
@@ -832,7 +832,7 @@
 
 						vendorPurchasesHtml += `
 						<div class="shopping-list-item">
-							<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(vd.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${vd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+							<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.parent.postMessage({ action: 'openWiki', title: vd.rawName }, '*')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${vd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 								<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(vItem.qty)}</div>
 								<img src="${vd.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${vd.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 								<span class="text-${vd.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${vd.name}</span>
@@ -866,7 +866,7 @@
 								<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
 									<div style="display: flex; align-items: center; flex-grow:1; overflow:hidden;">
 										<input type="checkbox" ${stepChecked ? 'checked' : ''} onchange="this.closest('.step-container').classList.toggle('completed-step', this.checked); localStorage.setItem('gw2_calc_target_${idx}_step_${step.id}_checked', this.checked);" style="margin-right:10px; cursor:pointer; flex-shrink:0;">
-										<div class="step-header-content" style="display: flex; align-items: center; gap: 10px; cursor: pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(sd.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${sd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+										<div class="step-header-content" style="display: flex; align-items: center; gap: 10px; cursor: pointer; width:max-content; padding-right:10px;" onclick="window.parent.postMessage({ action: 'openWiki', title: sd.rawName }, '*')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${sd.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(Math.round(step.yields), verb)}</div>
 											<img src="${sd.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${sd.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 											<span class="text-${sd.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">
@@ -896,7 +896,7 @@
 										
 										return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
 											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(displayTotal)}</div>
-											<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/${encodeURIComponent(idata.rawName)}', '_blank')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${idata.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+											<div style="display:flex; align-items:center; gap:10px; cursor:pointer; width:max-content; padding-right:10px;" onclick="window.parent.postMessage({ action: 'openWiki', title: idata.rawName }, '*')" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${idata.name.replace(/'/g, "\\'")}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
 												<img src="${idata.icon}" style="width:20px; flex-shrink:0; pointer-events:none;" class="rarity-${idata.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 												<span class="text-${idata.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">${idata.name}</span>
 											</div>

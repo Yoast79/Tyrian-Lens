@@ -109,7 +109,7 @@
                                 const isDone = accRaids && accRaids.includes(e.id);
                                 if (isDone) wingCleared++;
                                 eventsHtml += `
-                                <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${formatName(e.id)}'), '_blank')">
+                                <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${formatName(e.id)}' }, '*')">
                                     <span class="clear-name">${formatName(e.id)}</span>
                                     <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
                                 </div>`;
@@ -155,7 +155,7 @@
                         const isDone = accStrikes && accStrikes.includes(s);
                         if (isDone) catCleared++;
                         sHtml += `
-                        <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${formatName(s)}'), '_blank')">
+                        <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${formatName(s)}' }, '*')">
                             <span class="clear-name">${formatName(s)}</span>
                             <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
                         </div>`;
@@ -203,7 +203,7 @@
                             }
 
                             pHtml += `
-                            <div class="clear-item" onclick="window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent('${pathName}'), '_blank')">
+                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${pathName}' }, '*')">
                                 <span class="clear-name">${pathName}</span>
                                 <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
                                 </div>`;

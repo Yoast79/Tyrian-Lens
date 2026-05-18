@@ -28245,8 +28245,8 @@
     },
     {
       "pos": [
-        34440,
-        16252
+        38080,
+        13056
       ],
       "name": "Janthir",
       "type": "region"
@@ -29017,6 +29017,15 @@
       "name": "Assist the Kodan Inhabitants of Harvest Den",
       "type": "heart",
       "chat_code": "[&BMIBAAA=]"
+    },
+	{
+      "pos": [
+        11243,
+        59713
+      ],
+      "name": "Help Pub Canach grow into a lucrative business",
+      "type": "heart",
+      "chat_code": "[&BIIPAAA=]"
     },
     {
       "pos": [

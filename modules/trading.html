@@ -458,7 +458,7 @@
                         }
 
 						return `
-						<div class="search-res-row" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent('${nameAttr.replace(/ /g, '_')}'), '_blank')">
+						<div class="search-res-row" onclick="window.parent.postMessage({ action: 'openWiki', title: '${nameAttr}' }, '*')">
 							<img src="${it?.icon || it?.i}" style="width:22px; border:1px solid #332a1e;" class="rarity-${it?.rarity || it?.r}" onmouseover="showItemTip(${tx.item_id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" />
 							<div style="flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
 								${tx.quantity}x ${name} ${undercutIcon}
@@ -515,7 +515,7 @@
 					let nameAttr = (m.n || '').replace(/"/g, '&quot;');
 					return `<div class="search-res-row" data-name="${nameAttr}" onclick="showQuickView(${m.id})">
 						<span class="star-btn ${watchlist.includes(m.id)?'active':''}" onclick="event.stopPropagation(); toggleWatchlist(${m.id})"></span>
-						<img src="${m.i}" style="width:18px; border:1px solid #332a1e;" class="rarity-${m.r}" onmouseover="showItemTip(${m.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="event.stopPropagation(); window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent(this.parentElement.dataset.name.replace(/ /g, '_')), '_blank')" />
+						<img src="${m.i}" style="width:18px; border:1px solid #332a1e;" class="rarity-${m.r}" onmouseover="showItemTip(${m.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="event.stopPropagation(); window.parent.postMessage({ action: 'openWiki', title: this.parentElement.dataset.name }, '*')" />
 						<span style="flex:1; text-transform:capitalize;">${m.n}</span>
 					</div>`;
 				}).join('');
@@ -531,7 +531,7 @@
 				if (!item) { qv.innerHTML = '<div style="padding:10px; font-size:10px; color:#f44; text-align:center;">ITEM NOT FOUND</div>'; return; }
 				let nameAttr = (item.n || '').replace(/"/g, '&quot;');
 				let craftBtnHtml = recipe ? (customCrafts.includes(Number(id)) ? `<button style="width:100%; background:rgba(26,147,6,0.2); border-color:#1A9306; color:#1A9306;" onclick="removeCustomCraft(${item.id}); this.style.display='none';">✔ IN CRAFTING WATCHLIST</button>` : `<button style="width:100%;" onclick="addCustomCraft(${item.id}, this)">ADD TO CRAFTING WATCHLIST</button>`) : '';
-				qv.innerHTML = `<div style="padding:10px; display:flex; flex-direction:column; gap:10px;"><div style="display:flex; align-items:center; gap:10px;"><img src="${item.i}" style="width:32px; cursor:help;" class="rarity-${item.r}" onmouseover="showItemTip(${item.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent('${nameAttr.replace(/ /g, '_')}'), '_blank')" /><div style="flex:1;"><div style="color:#e2c07d; font-size:12px; text-transform:capitalize;">${item.n}</div><div style="font-size:10px;">BUY: ${formatCoin(price?.buys?.unit_price)} | SELL: ${formatCoin(price?.sells?.unit_price)}</div></div></div><div style="display:flex; flex-direction:column; gap:5px;"><button style="width:100%;" onclick="openInvestPrompt(${item.id}, '${nameAttr}')">TRACK INVESTMENT</button>${craftBtnHtml}</div></div>`;
+				qv.innerHTML = `<div style="padding:10px; display:flex; flex-direction:column; gap:10px;"><div style="display:flex; align-items:center; gap:10px;"><img src="${item.i}" style="width:32px; cursor:help;" class="rarity-${item.r}" onmouseover="showItemTip(${item.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.parent.postMessage({ action: 'openWiki', title: '${nameAttr}' }, '*')" /><div style="flex:1;"><div style="color:#e2c07d; font-size:12px; text-transform:capitalize;">${item.n}</div><div style="font-size:10px;">BUY: ${formatCoin(price?.buys?.unit_price)} | SELL: ${formatCoin(price?.sells?.unit_price)}</div></div></div><div style="display:flex; flex-direction:column; gap:5px;"><button style="width:100%;" onclick="openInvestPrompt(${item.id}, '${nameAttr}')">TRACK INVESTMENT</button>${craftBtnHtml}</div></div>`;
 			}
 
 			function toggleWatchlist(id) { watchlist = watchlist.includes(id) ? watchlist.filter(w => w !== id) : [...watchlist, id]; localStorage.setItem('tp_watchlist', JSON.stringify(watchlist)); renderWatchlist(); }
@@ -546,7 +546,7 @@
 						itemCache[id] = info;
 						let name = info.name || info.n || '';
 						let nameAttr = name.replace(/"/g, '&quot;');
-						html += `<div class="watch-row" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent('${nameAttr.replace(/ /g, '_')}'), '_blank')"><span class="star-btn active" onclick="event.stopPropagation(); toggleWatchlist(${id})"></span><img src="${info.icon || info.i}" style="width:24px; border:1px solid #332a1e; cursor:help;" class="rarity-${info.rarity || info.r}" onmouseover="showItemTip(${id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" /><div style="color:#e2c07d; font-size:11px; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-transform:capitalize;">${name}</div><div class="watch-prices"><div class="watch-price-item"><span>${formatCoin(price?.buys?.unit_price)}</span> <div class="label">- BUY</div></div><div class="watch-price-item"><span>${formatCoin(price?.sells?.unit_price)}</span> <div class="label">- SELL</div></div></div></div>`;
+						html += `<div class="watch-row" onclick="window.parent.postMessage({ action: 'openWiki', title: '${nameAttr}' }, '*')"><span class="star-btn active" onclick="event.stopPropagation(); toggleWatchlist(${id})"></span><img src="${info.icon || info.i}" style="width:24px; border:1px solid #332a1e; cursor:help;" class="rarity-${info.rarity || info.r}" onmouseover="showItemTip(${id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" /><div style="color:#e2c07d; font-size:11px; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-transform:capitalize;">${name}</div><div class="watch-prices"><div class="watch-price-item"><span>${formatCoin(price?.buys?.unit_price)}</span> <div class="label">- BUY</div></div><div class="watch-price-item"><span>${formatCoin(price?.sells?.unit_price)}</span> <div class="label">- SELL</div></div></div></div>`;
 					}
 				}
 				container.innerHTML = html;
@@ -560,7 +560,7 @@
 				if (ids.length > 0) { const itemData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + ids.join(',')); if (itemData) itemData.forEach(it => { if(it) itemCache[it.id] = it; }); }
 				for (let it of data.items) {
 					let info = itemCache[it.id];
-					if (info) { html += `<div class="item-slot rarity-${info.rarity}" onmouseover="showItemTip(${it.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.open('https://wiki.guildwars2.com/wiki/' + encodeURIComponent('${info.name.replace(/ /g, '_')}'), '_blank')"><img src="${info.icon}" class="item-icon" /><div style="position:absolute; bottom:1px; right:2px; font-size:10px; font-weight:bold; color:#fff; text-shadow:1px 1px 1px #000;">${it.count}</div></div>`; }
+					if (info) { html += `<div class="item-slot rarity-${info.rarity}" onmouseover="showItemTip(${it.id}, event)" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')" onclick="window.parent.postMessage({ action: 'openWiki', title: '${info.name.replace(/"/g, '&quot;')}' }, '*')"><img src="${info.icon}" class="item-icon" /><div style="position:absolute; bottom:1px; right:2px; font-size:10px; font-weight:bold; color:#fff; text-shadow:1px 1px 1px #000;">${it.count}</div></div>`; }
 				}
 				container.innerHTML = html + "</div>";
 			}

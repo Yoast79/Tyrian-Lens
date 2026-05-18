@@ -97,7 +97,7 @@
 	</head>
 	<body>
 		<div id="menu-container" onmousedown="if(event.target === this) window.postToHost('drag')">
-			<iframe id="menu-frame" src="menu.html" style="flex-grow: 1; border: none; height: 100%; background: transparent;"></iframe>
+			<iframe id="menu-frame" src="menu.html?v=v1.3.2" style="flex-grow: 1; border: none; height: 100%; background: transparent;"></iframe>
 			<div id="system-controls">
 				<div class="sys-btn" onclick="postToHost('minimize')">&#8212;</div>
 				<div class="sys-btn" onclick="postToHost('fullscreen')">&#9633;</div>
@@ -154,9 +154,9 @@
 
 		<div id="side-panel">
 			<iframe id="panel-frame"></iframe>
-			<iframe id="farming-frame" src="farming.html" style="display:none; width:100%; height:100%; border:none;"></iframe>
-			<iframe id="timers-frame" src="timers.html" style="display:none; width:100%; height:100%; border:none;"></iframe>
-			<iframe id="fishing-frame" src="fishing.html" style="display:none; width:100%; height:100%; border:none;"></iframe>
+			<iframe id="farming-frame" src="farming.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
+			<iframe id="timers-frame" src="timers.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
+			<iframe id="fishing-frame" src="fishing.html?v=v1.3.2" style="display:none; width:100%; height:100%; border:none;"></iframe>
 		</div>
 		<div id="side-panel-right">
 			<div id="wiki-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:100; transition:0.2s; border-radius:3px;" onclick="closeWiki()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
@@ -165,13 +165,15 @@
 
 
 		<div id="map-container">
-			<iframe src="map.html" id="map-frame"></iframe>
+			<iframe src="map.html?v=v1.3.2" id="map-frame"></iframe>
 		</div>
 
 		<div id="resize-handle" onmousedown="window.postToHost('resize')"></div>
 
 		<script>
 			/*<![CDATA[*/
+			const APP_VERSION = "v1.3.3";
+			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
 			window.manualSwitchActive = false;
@@ -242,7 +244,6 @@
                 }
 
 				// --- START UPDATE CHECKER ---
-				const APP_VERSION = "1.3.0";
 				const REPO = "Yoast79/Tyrian-Lens";
 
 				async function checkReleaseUpdate() {
@@ -390,7 +391,7 @@
 				const farmingFrame = document.getElementById('farming-frame');
                 const timersFrame = document.getElementById('timers-frame');
                 const fishingFrame = document.getElementById('fishing-frame');
-				const newSrc = `${module}.html`; 
+				const newSrc = `${module}.html?v=${APP_VERSION}`; 
 				const mapFrame = document.getElementById('map-frame');
 				
 				const rightModules = ['settings', 'api_management', 'help'];
@@ -403,9 +404,9 @@
 					if (module === 'farming') { isSameModule = (farmingFrame.style.display === 'block'); } 
                     else if (module === 'timers') { isSameModule = (timersFrame.style.display === 'block'); } 
                     else if (module === 'fishing') { isSameModule = (fishingFrame.style.display === 'block'); } 
-                    else { isSameModule = frame.src.includes(newSrc) && (farmingFrame.style.display !== 'block') && (timersFrame.style.display !== 'block') && (fishingFrame.style.display !== 'block'); }
+                    else { isSameModule = frame.src.includes(`${module}.html?v=`) && (farmingFrame.style.display !== 'block') && (timersFrame.style.display !== 'block') && (fishingFrame.style.display !== 'block'); }
 				} else {
-					isSameModule = frame.src.includes(newSrc);
+					isSameModule = frame.src.includes(`${module}.html?v=`);
 				}
 
 				if (isCurrentlyOpen && isSameModule) {
@@ -571,7 +572,27 @@
                 }
 
 				if (typeof data === 'object') {
-					if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
+					if (data.action === 'openWiki') {
+						let url = '';
+						if (data.url) {
+							url = data.url;
+						} else if (data.title && (data.title.startsWith('http://') || data.title.startsWith('https://'))) {
+							url = data.title;
+						} else {
+							url = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(data.title)}`;
+						}
+						if (!url.includes('useskin=vector')) {
+							url += (url.includes('?') ? '&' : '?') + 'useskin=vector';
+						}
+						const rightPanel = document.getElementById('side-panel-right');
+						const rightFrame = document.getElementById('panel-frame-right');
+						if (rightPanel && rightFrame) {
+							rightFrame.src = url;
+							rightPanel.classList.add('wiki-mode', 'open');
+							document.getElementById('wiki-close-btn').style.display = 'flex';
+						}
+					}
+					else if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
 					else if (data.action === 'hideTooltip') document.getElementById("global-tooltip").style.display = "none";
 					else if (data.action === 'toast') window.showToast(data.msg, data.persistent);
 					else if (data.action === 'eventPop') window.showEventPop(data.msg);
@@ -581,20 +602,51 @@
 					else if (data.action === 'untrackAchievement') { delete trackedAchievements[data.id]; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'toggleTracker') window.toggleTrackerOverlay();
 					else if (data.action === 'toggleMapLayer') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
-					else if (data.action === 'highlightLayer') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
+					else if (data.action === 'highlightLayer') {
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame) {
+							let targetMap = 'map';
+							if (window.activeMap !== targetMap) {
+								window.activeMap = targetMap;
+								mapFrame.onload = function() {
+									try { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {}
+								};
+								mapFrame.src = targetMap + '.html?v=' + APP_VERSION;
+								const panel = document.getElementById('side-panel'); const frame = document.getElementById('panel-frame'); if (panel.classList.contains('open') && (frame.src.includes('map_options.html') || frame.src.includes('wvw_map_options.html'))) { window.closeAllPanels(); }
+							} else {
+								if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*');
+							}
+						}
+					}
+					else if (data.action === 'jumpToLocation' || data.action === 'highlightLocation') {
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame) {
+							let targetMap = data.isWvW ? 'wvw_map' : 'map';
+							if (window.activeMap !== targetMap) {
+								window.activeMap = targetMap;
+								mapFrame.onload = function() {
+									try { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {}
+								};
+								mapFrame.src = targetMap + '.html?v=' + APP_VERSION;
+								const panel = document.getElementById('side-panel'); const frame = document.getElementById('panel-frame'); if (panel.classList.contains('open') && (frame.src.includes('map_options.html') || frame.src.includes('wvw_map_options.html'))) { window.closeAllPanels(); }
+							} else {
+								if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*');
+							}
+						}
+					}
 					else if (data.action === 'changeMapBorderColor') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
-					else if (data.action === 'jumpMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { let targetMap = data.map || 'map'; if (window.activeMap !== targetMap) { window.activeMap = targetMap; mapFrame.onload = function() { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') mapFrame.contentWindow.setTracking(false); mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {} }; mapFrame.src = targetMap + '.html'; } else { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } } }
+					else if (data.action === 'jumpMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { let targetMap = data.map || 'map'; if (window.activeMap !== targetMap) { window.activeMap = targetMap; mapFrame.onload = function() { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') mapFrame.contentWindow.setTracking(false); mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {} }; mapFrame.src = targetMap + '.html?v=' + APP_VERSION; } else { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } } }
 					else if (data.action === 'copy') { navigator.clipboard.writeText(data.code); window.showToast("Copied Link"); }
 					else if (data.action === 'drag') { window.postToHost('drag'); }
 					else if (data.action === 'resize') { window.postToHost('resize'); }
-					else if (data.action === 'reloadMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { mapFrame.src = window.activeMap + '.html'; } }
+					else if (data.action === 'reloadMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { mapFrame.src = window.activeMap + '.html?v=' + APP_VERSION; } }
 					else if (data.action === 'switchMap') {
 						const mapFrame = document.getElementById('map-frame');
 						if (mapFrame) {
 							let isManual = !data.confirmed; let isConfirmed = data.confirmed;
 							if (isManual) { window.manualSwitchActive = true; window.pendingMapSwitch = null; document.getElementById("map-switch-popup").style.display = "none"; }
 							mapFrame.onload = function() { if (isManual) { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') { if (data.map === window.currentPlayerZone) { mapFrame.contentWindow.setTracking(true); } else { mapFrame.contentWindow.setTracking(false); if (typeof mapFrame.contentWindow.map !== 'undefined') { let jumpCoords = (data.map === 'wvw_map') ? [12500, 10500] : [31384, 49071]; mapFrame.contentWindow.map.setView(jumpCoords, 4); } } } } catch(e) {} } else if (isConfirmed) { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') { mapFrame.contentWindow.setTracking(true); } } catch(e) {} } };
-							mapFrame.src = data.map + '.html'; window.activeMap = data.map;
+							mapFrame.src = data.map + '.html?v=' + APP_VERSION; window.activeMap = data.map;
 							const panel = document.getElementById('side-panel'); const frame = document.getElementById('panel-frame'); if (panel.classList.contains('open') && (frame.src.includes('map_options.html') || frame.src.includes('wvw_map_options.html'))) { window.closeAllPanels(); }
 						}
 					}
@@ -612,7 +664,7 @@
 						const panel = document.getElementById('side-panel');
 						const frame = document.getElementById('panel-frame');
 						const moduleName = data.module.replace('.html', '');
-						const newSrc = data.module + (data.from ? '?from=' + data.from : '');
+						const newSrc = data.module + (data.from ? '?from=' + data.from + '&v=' + APP_VERSION : '?v=' + APP_VERSION);
 						
 						frame.style.display = 'block';
 						document.getElementById('farming-frame').style.display = 'none';

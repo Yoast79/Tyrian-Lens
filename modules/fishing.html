@@ -46,12 +46,19 @@
 
 			.loading-text { font-size: 12px; color: #8a7a5f; text-align: center; margin-top: 20px; }
 
+			.search-container { position: relative; width: 100%; margin-bottom: 10px; flex-shrink: 0; }
+			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; padding: 10px 30px 10px 10px; font-size: 11px; outline: none; width: 100%; font-family: 'Crimson Text', serif; font-weight: bold; text-transform: uppercase; transition: 0.2s; }
+			.search-box:focus { border-color: #e2c07d; box-shadow: 0 0 5px rgba(226, 192, 125, 0.2); }
+			.clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #8a7a5f; cursor: pointer; font-size: 16px; font-weight: bold; line-height: 1; transition: 0.2s; }
+			.clear-btn:hover { color: #e2c07d; }
+
 			/* Large UI Scaling Overrides */
 			body.ui-large .section-title { font-size: 20px; }
 			body.ui-large .group-btn { font-size: 14px; padding: 12px 15px; }
 			body.ui-large .item-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 6px; }
 			body.ui-large .item-slot { width: 50px; height: 50px; }
 			body.ui-large .star-btn { width: 22px; height: 22px; }
+			body.ui-large .search-box { font-size: 14px; padding: 12px 35px 12px 12px; }
 		</style>
 	</head>
 	<body>
@@ -67,10 +74,10 @@
 				</div>
 			</div>
 
-			<div style="position: relative; margin-bottom: 10px; flex-shrink: 0;">
-				<input type="text" id="fish-search" autocomplete="off" placeholder="SEARCH FISH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
-					<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('fish-search').value=''; handleSearch('');">X</span>
-				</div>
+			<div class="search-container">
+				<input type="text" id="fish-search" class="search-box" autocomplete="off" placeholder="SEARCH FISH..." onkeyup="handleSearch(this.value)">
+				<span class="clear-btn" onclick="document.getElementById('fish-search').value=''; handleSearch('');">&times;</span>
+			</div>
 
 			<div class="content-panel" id="fish-container">
 				<div class="loading-text">LOADING FISHING DATA...</div>

@@ -189,6 +189,127 @@
 			animation: markerPulse 2s infinite ease-in-out;
 		}
 
+		/* Premium Ranger Pet Marker Styling */
+		.pet-marker {
+			background: rgba(10, 30, 15, 0.85) !important;
+			border: 2px solid #2ecc71 !important;
+			border-radius: 50% !important;
+			box-shadow: 0 0 10px rgba(46, 204, 113, 0.6), inset 0 0 5px rgba(46, 204, 113, 0.3) !important;
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			overflow: hidden !important;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+			box-sizing: border-box !important;
+		}
+
+		.pet-marker:hover {
+			border-color: #55efc4 !important;
+			box-shadow: 0 0 25px 8px rgba(46, 204, 113, 0.95), inset 0 0 10px rgba(46, 204, 113, 0.7) !important;
+			z-index: 10000 !important;
+		}
+
+		.pet-marker img {
+			width: 150% !important;
+			height: 150% !important;
+			border-radius: 50% !important;
+			object-fit: cover !important;
+		}
+
+		/* Optional Breathing Pulse keyframes and class */
+		@keyframes petPulse {
+			0% {
+				box-shadow: 0 0 8px rgba(46, 204, 113, 0.6), inset 0 0 5px rgba(46, 204, 113, 0.3) !important;
+				border-color: #2ecc71 !important;
+			}
+			50% {
+				box-shadow: 0 0 25px 8px rgba(46, 204, 113, 1), inset 0 0 8px rgba(46, 204, 113, 0.8) !important;
+				border-color: #55efc4 !important;
+			}
+			100% {
+				box-shadow: 0 0 8px rgba(46, 204, 113, 0.6), inset 0 0 5px rgba(46, 204, 113, 0.3) !important;
+				border-color: #2ecc71 !important;
+			}
+		}
+
+
+		/* Transform-Safe Premium Blue Circle Highlight Beacon for Search Results */
+		@keyframes highlightActivePulse {
+			0% {
+				box-shadow: 0 0 10px rgba(0, 168, 255, 0.6), inset 0 0 5px rgba(0, 168, 255, 0.4) !important;
+				border-color: #00a8ff !important;
+			}
+			50% {
+				box-shadow: 0 0 30px 12px rgba(0, 168, 255, 1), inset 0 0 12px rgba(0, 168, 255, 0.8) !important;
+				border-color: #ffffff !important;
+			}
+			100% {
+				box-shadow: 0 0 10px rgba(0, 168, 255, 0.6), inset 0 0 5px rgba(0, 168, 255, 0.4) !important;
+				border-color: #00a8ff !important;
+			}
+		}
+
+		.highlight-active {
+			border-radius: 50% !important;
+			border: 2px solid #00a8ff !important;
+			background: rgba(0, 168, 255, 0.25) !important;
+			z-index: 10001 !important;
+			animation: highlightActivePulse 1.2s infinite ease-in-out !important;
+			box-sizing: border-box !important;
+			pointer-events: none !important;
+		}
+
+		/* Transform-Safe Premium Fuchsia/Magenta Circle Highlight Beacon for Resource Nodes */
+		@keyframes highlightNodePulse {
+			0% {
+				box-shadow: 0 0 10px rgba(255, 0, 180, 0.6), inset 0 0 5px rgba(255, 0, 180, 0.4) !important;
+				border-color: #ff00b4 !important;
+			}
+			50% {
+				box-shadow: 0 0 30px 12px rgba(255, 0, 180, 1), inset 0 0 12px rgba(255, 0, 180, 0.8) !important;
+				border-color: #ffffff !important;
+			}
+			100% {
+				box-shadow: 0 0 10px rgba(255, 0, 180, 0.6), inset 0 0 5px rgba(255, 0, 180, 0.4) !important;
+				border-color: #ff00b4 !important;
+			}
+		}
+
+		.highlight-node-active {
+			border-radius: 50% !important;
+			border: 2px solid #ff00b4 !important;
+			background: rgba(255, 0, 180, 0.25) !important;
+			z-index: 10001 !important;
+			animation: highlightNodePulse 1.2s infinite ease-in-out !important;
+			box-sizing: border-box !important;
+			pointer-events: none !important;
+		}
+
+		/* Transform-Safe Gold Highlight Beacon for Pact Supply Agents & Elisa */
+		@keyframes highlightGoldPulse {
+			0% {
+				box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), inset 0 0 5px rgba(255, 215, 0, 0.4) !important;
+				border-color: #ffd700 !important;
+			}
+			50% {
+				box-shadow: 0 0 30px 12px rgba(255, 215, 0, 1), inset 0 0 12px rgba(255, 215, 0, 0.8) !important;
+				border-color: #ffffff !important;
+			}
+			100% {
+				box-shadow: 0 0 10px rgba(255, 215, 0, 0.6), inset 0 0 5px rgba(255, 215, 0, 0.4) !important;
+				border-color: #ffd700 !important;
+			}
+		}
+
+		.psna-highlight-active {
+			border-radius: 50% !important;
+			border: 2px solid #ffd700 !important;
+			background: rgba(255, 215, 0, 0.25) !important;
+			z-index: 10001 !important;
+			animation: highlightGoldPulse 1.2s infinite ease-in-out !important;
+			box-sizing: border-box !important;
+		}
+
 		.highlight-pulse {
 			z-index: 1000 !important;
 			border-radius: 50%;
@@ -418,6 +539,9 @@
 		var map;
 		var markers = [];
 		var subLayers = {};
+		var activeHighlightMarker = null;
+		var activeTempIconMarker = null;
+		var activeHighlightTimeout = null;
 		var markerDataCache = [];
 		var layerMap = { 'region': L.layerGroup(), 'map_text': L.layerGroup(), 'sector': L.layerGroup() };
 		var borderLayer = L.layerGroup();
@@ -430,6 +554,8 @@
 		map.createPane('playerPane').style.zIndex = 800;
 		map.getPane('playerPane').style.pointerEvents = 'none';
 		map.createPane('customMarkerPane').style.zIndex = 850;
+		map.createPane('highlightPane').style.zIndex = 590;
+		map.getPane('highlightPane').style.pointerEvents = 'none';
 
 		var mapStorageKey = 'gw2_custom_markers_tyria';
 
@@ -437,9 +563,54 @@
 			var markers = cluster.getAllChildMarkers();
 			if (!markers || markers.length === 0) return L.divIcon({ html: '' });
 			var count = markers.length;
-			var iconUrl = markers[0].options.icon.options.iconUrl || "https://gw2ps.local/Assets/Icons/map_scout.png";
-			var html = `<div style="position: relative; display: inline-block;"><img src="${iconUrl}" style="width: 24px; height: 24px;" /><div style="position: absolute; bottom: -5px; right: -5px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #e2c07d; border-radius: 5px; font-size: 10px; padding: 1px 4px; font-weight: bold; font-family: monospace;">${count}</div></div>`;
-			return L.divIcon({ html: html, className: 'custom-cluster-icon', iconSize: [24, 24], iconAnchor: [12, 12] });
+			
+			let baseSize = 24;
+			let isPet = false;
+			let firstMarker = markers[0];
+			let iconUrl = "";
+			
+			if (firstMarker.options.icon && firstMarker.options.icon.options) {
+				let opt = firstMarker.options.icon.options;
+				iconUrl = opt.iconUrl || "";
+				if (opt.className && opt.className.includes("pet-marker")) {
+					isPet = true;
+					baseSize = 52; // Perfect 52px base size for pet clusters
+				}
+			}
+			
+			if (isPet) {
+				iconUrl = "https://gw2ps.local/Assets/RangerPetIcons/ranger_icon.png";
+			} else if (!iconUrl) {
+				// Fallback to dynamic data fields or default icon
+				if (firstMarker.options.data && firstMarker.options.data.icon) {
+					iconUrl = firstMarker.options.data.icon;
+				} else {
+					iconUrl = "https://gw2ps.local/Assets/Icons/poi_discovered.png";
+				}
+			}
+			
+			let scale = isPet ? farmScale : locScale;
+			let size = Math.round(baseSize * scale);
+			
+			let html = "";
+			if (isPet) {
+				html = `<div style="position: relative; display: flex; align-items: center; justify-content: center; width: ${size}px; height: ${size}px;">
+							<img src="${iconUrl}" style="width: ${size}px; height: ${size}px;" />
+							<div style="position: absolute; bottom: -3px; right: -3px; background: rgba(10,30,15,0.95); color: #2ecc71; border: 1px solid #2ecc71; border-radius: 4px; font-size: 9px; padding: 0px 3px; font-weight: bold; font-family: sans-serif; box-shadow: 0 0 5px rgba(0,0,0,0.5); z-index: 10;">${count}</div>
+						</div>`;
+			} else {
+				html = `<div style="position: relative; display: flex; align-items: center; justify-content: center; width: ${size}px; height: ${size}px;">
+							<img src="${iconUrl}" style="width: ${size}px; height: ${size}px;" />
+							<div style="position: absolute; bottom: -3px; right: -3px; background: rgba(10,8,5,0.9); color: #e2c07d; border: 1px solid #e2c07d; border-radius: 4px; font-size: 9px; padding: 0px 3px; font-weight: bold; font-family: monospace; box-shadow: 0 0 5px rgba(0,0,0,0.5); z-index: 10;">${count}</div>
+						</div>`;
+			}
+			
+			return L.divIcon({ 
+				html: html, 
+				className: isPet ? 'pet-cluster-icon' : 'custom-cluster-icon', 
+				iconSize: [size, size], 
+				iconAnchor: [size / 2, size / 2] 
+			});
 		};
 
 		var customMarkersLayer = L.markerClusterGroup({ disableClusteringAtZoom: 7, maxClusterRadius: 40, showCoverageOnHover: false, iconCreateFunction: createClusterIcon }).addTo(map);
@@ -460,7 +631,7 @@
 
 		const independentNodes = [
 			'node_zone_portal', 'node_mists_rift', 'node_pact_supply_network_agent', 'node_ranger_pet',
-			'node_fishing_hole',
+			'node_fishing_hole', 'node_historian_elisa',
 			'node_treasure_mushroom', 'node_matrix_cube_key', 'node_carving_pumpkin',
 			'node_sunken_chest', 'node_dry_top_chest', 'node_silverwastes_chest', 'node_greater_arcane_chest',
 			'node_shrine_guardian_chest', 'node_detected_treasure', 'node_aetherlocation_treasure',
@@ -480,6 +651,15 @@
 
 		window.toggleMapLayer = function (name, isVisible) {
 			layerToggles[name] = isVisible;
+			
+			// If we are turning a layer OFF, immediately remove any active temporary clone belonging to that layer!
+			if (!isVisible && activeTempIconMarker) {
+				if (activeTempIconMarker.options && activeTempIconMarker.options.layerKey === name) {
+					map.removeLayer(activeTempIconMarker);
+					activeTempIconMarker = null;
+				}
+			}
+
 			if (['region', 'map_text', 'sector', 'map_borders'].includes(name)) refreshLabels();
 			else if (name === 'personal_markers') {
 				if (isVisible) map.addLayer(customMarkersLayer);
@@ -675,6 +855,11 @@
 
 		window.toggleMapLayer = function (name, isVisible) {
 			layerToggles[name] = isVisible;
+			if (name === 'node_historian_elisa') {
+				if (isVisible) renderElisaMarker();
+				else elisaLayer.clearLayers();
+				return;
+			}
 			if (name === 'region' || name === 'map_text' || name === 'sector' || name === 'map_borders') { refreshLabels(); return; }
 			if (name === 'personal_markers') { if (isVisible) map.addLayer(customMarkersLayer); else map.removeLayer(customMarkersLayer); return; }
 			if (name === 'farming_nodes') {
@@ -690,11 +875,7 @@
 			}
 			if (subLayers[name]) {
 				if (isVisible) {
-					if (name.startsWith('node_') && !independentNodes.includes(name)) {
-						if (layerToggles['farming_nodes'] !== false) map.addLayer(subLayers[name]);
-					} else {
-						map.addLayer(subLayers[name]);
-					}
+					map.addLayer(subLayers[name]);
 				} else {
 					map.removeLayer(subLayers[name]);
 				}
@@ -762,6 +943,115 @@
 					}
 				}
 			} catch (e) { console.error("Failed to load flowing borders:", e); }
+		}
+
+		var elisaLayer = L.layerGroup().addTo(map);
+
+		function getElisaActiveWeek(currentTime = new Date()) {
+			const epoch = Date.UTC(2017, 8, 22, 8, 0, 0); // Friday Reset: Sept 22, 2017 08:00 UTC
+			const currentMs = currentTime.getTime();
+			const elapsedWeeks = (currentMs - epoch) / (7 * 24 * 60 * 60 * 1000);
+			const activeWeek = Math.floor((elapsedWeeks + 37) % 52) + 1;
+			return activeWeek;
+		}
+
+		const ELISA_ROTATION = {
+			1: { map: "Desert Highlands", area: "Brightwater Inlet", desc: "Inside the blue tent right next to Nimbose Butte.", pos: [41495, 59532] },
+			2: { map: "Domain of Vabbi", area: "Kodash Bazaar", desc: "On top of King Joko's Sky Garden.", pos: [54041, 66892] },
+			3: { map: "Crystal Oasis", area: "Hatari Tablelands", desc: "Just south of the Temple of Atar.", pos: [42584, 59955] },
+			4: { map: "Elon Riverlands", area: "Augury Rock", desc: "North of the Hall of Ascension, on a wall above a sand portal.", pos: [45106, 60750] },
+			5: { map: "The Desolation", area: "Boundary Preserve", desc: "On the mountain ridge in-between this area and The Bonestrand, southwest of the Silent Vale.", pos: [48889, 60938] },
+			6: { map: "Desert Highlands", area: "Prophet's Fall", desc: "At the 'Glint's Lair' Hero Challenge point.", pos: [41952, 61713] },
+			7: { map: "Domain of Vabbi", area: "Zagonur Cliffs", desc: "Under the stairs for the western-most dome of the Hanging Gardens.", pos: [54181, 68074] },
+			8: { map: "Crystal Oasis", area: "Bay of Elon", desc: "West of The Empty Quarter on a pillar.", pos: [43348, 57901] },
+			9: { map: "Elon Riverlands", area: "Skyward Reach", desc: "North of Heroes' Overlook on a pillar.", pos: [45322, 59750] },
+			10: { map: "The Desolation", area: "Boundary Preserve", desc: "North of Springer's Ladder on a pillar.", pos: [48925, 61584] },
+			11: { map: "Desert Highlands", area: "Tomb of the Primeval Kings", desc: "East on a ledge, by the Hero point near the edge of the map.", pos: [40804, 62108] },
+			12: { map: "Domain of Vabbi", area: "Grand Court of Sebelkeh", desc: "South of Grand Court of Sebelkeh on a broken structure high up in the air with a protective bubble.", pos: [53256, 67542] },
+			13: { map: "Crystal Oasis", area: "Amnoon Southern Outskirts", desc: "On a cliff south of Marifa Refugee Camp, near the Taimi contact point.", pos: [44637, 59326] },
+			14: { map: "Elon Riverlands", area: "The Quickmire", desc: "Northwest of ruined towers.", pos: [45806, 60092] },
+			15: { map: "The Desolation", area: "Sulfur Quarry", desc: "East of the Imperial Sulfurworks, high up on a sloping pipeline.", pos: [49560, 58964] },
+			16: { map: "Desert Highlands", area: "Lifeblood Ravine", desc: "North from Lommuld Kraal Waypoint, near Lifeblood Falls, at the top of the longer waterfall.", pos: [39931, 60786] },
+			17: { map: "Domain of Vabbi", area: "Vehtendi Academy", desc: "On the roof of the vineyard porch. Use a springer on the southern sand slope.", pos: [55366, 66918] },
+			18: { map: "Crystal Oasis", area: "Kusini Crossing", desc: "On a ledge partway up a cliff, looking down at the swirling sand portal. Reached with a springer.", pos: [44414, 60621] },
+			19: { map: "Elon Riverlands", area: "Champion's Gap", desc: "On a ledge southeast of Sandwallow Retreat.", pos: [46289, 58932] },
+			20: { map: "The Desolation", area: "Vitriolic Rim", desc: "All the way to the west.", pos: [51131, 58351] },
+			21: { map: "Desert Highlands", area: "Stampede Uplands", desc: "On a pillar due west of the Stampede Uplands vista.", pos: [40321, 59178] },
+			22: { map: "Domain of Vabbi", area: "Vehjin Palace", desc: "On a small floating platform beneath the royal rotunda / vista platform.", pos: [53503, 63990] },
+			23: { map: "Crystal Oasis", area: "Omiramba Sand Sea", desc: "South of Retreat of the Resolute, on a ledge of the cliff.", pos: [43771, 60108] },
+			24: { map: "Elon Riverlands", area: "Elon Flow", desc: "East of Stoneyard Rest, between a large broken stone hand and a sheer cliff.", pos: [47839, 61433] },
+			25: { map: "The Desolation", area: "Broken Shelf", desc: "Southeast of Bleached Pillars, halfway between the POI and Hero challenge.", pos: [52376, 58626] },
+			26: { map: "Desert Highlands", area: "Brightwater Inlet", desc: "Beside Desert Highlands Insight: Brightwater Hollow.", pos: [42160, 59163] },
+			27: { map: "Domain of Vabbi", area: "The Necropolis", desc: "South-east of Taimi's contact point in The Necropolis.", pos: [55458, 64841] },
+			28: { map: "Crystal Oasis", area: "Destiny's Gorge", desc: "South-west of Destiny's Gorge Waypoint on top of the cliffs.", pos: [44197, 61515] },
+			29: { map: "Elon Riverlands", area: "Whispering Grottos", desc: "Southwest of Whispering Grottos at the Vista location on the cliff.", pos: [47234, 61005] },
+			30: { map: "The Desolation", area: "Lair of the Forgotten", desc: "South of Lair of the Forgotten waypoint on a cliff overlooking the sulfurous watch.", pos: [51555, 61458] },
+			31: { map: "Desert Highlands", area: "Winter's Teeth", desc: "North below the Winter's Teeth Vista on a ledge.", pos: [41419, 58280] },
+			32: { map: "Domain of Vabbi", area: "Forum Highlands", desc: "Highest point east of Necropolis Waypoint.", pos: [54774, 65556] },
+			33: { map: "Crystal Oasis", area: "Diviner's Passage", desc: "Spider cave north of Temple of Kormir Waypoint.", pos: [42838, 60831] },
+			34: { map: "Elon Riverlands", area: "Whispering Grottos", desc: "On top of a hill north of Dragoon Hearth.", pos: [46491, 61369] },
+			35: { map: "The Desolation", area: "Helcoid Seeps", desc: "Southeast of Toxic Pools.", pos: [50434, 61627] },
+			36: { map: "Desert Highlands", area: "Enchanted Bluffs", desc: "High up on a ledge within the Palace of Aban.", pos: [41312, 57824] },
+			37: { map: "Domain of Vabbi", area: "Cragged Vale", desc: "Up on a ledge near the letter 'E' in 'Vale'.", pos: [52690, 64113] },
+			38: { map: "Crystal Oasis", area: "Elona Reach", desc: "Ledge east of main entrance of Temple of Kormir.", pos: [43121, 61308] },
+			39: { map: "Elon Riverlands", area: "Ustulate Barrens", desc: "Ledge east of Scattered Remnants, north of Threefold Waylay.", pos: [45023, 61390] },
+			40: { map: "The Desolation", area: "Palawa Cut", desc: "Ledge north of Scourge's Threshold, overlooking road fork.", pos: [49490, 59583] },
+			41: { map: "Desert Highlands", area: "Fortune's Vale", desc: "Ledge south of the Derelict Delve among rocks.", pos: [40476, 57714] },
+			42: { map: "Domain of Vabbi", area: "Forum Highlands", desc: "Rooftop southwest of Tihark Orchard.", pos: [54343, 65243] },
+			43: { map: "Crystal Oasis", area: "Maculate Fringe", desc: "Ledge northeast of The Teratohedron.", pos: [42534, 62216] },
+			44: { map: "Elon Riverlands", area: "Vulture Drifts", desc: "Ledge west of Garden of the Chosen.", pos: [46882, 59688] },
+			45: { map: "The Desolation", area: "The Scourgeway", desc: "Southwest of Scourgeway, on a rock next to the Ruination road.", pos: [50466, 60012] },
+			46: { map: "Desert Highlands", area: "Enchanted Bluffs", desc: "In a waterfall cave; follow the dwarven ruins tunnel south from Derelict Delve WP.", pos: [41469, 57850] },
+			47: { map: "Domain of Vabbi", area: "Eastern Mihan Hillsides", desc: "On a rock structure right in the center of this area.", pos: [52493, 65983] },
+			48: { map: "Crystal Oasis", area: "Mekele Bluffs", desc: "On the mountain ledge between Seeker's Village and Talatat Quarry.", pos: [42799.6, 58722.7] },
+			49: { map: "Elon Riverlands", area: "Shallows of Despair", desc: "Ledge southeast of Bahdaj Vigil and northwest of Throne of Pellentia.", pos: [47717, 58467] },
+			50: { map: "The Desolation", area: "The Alkali Pan", desc: "On a rock outcrop in the southeastern corner of the Pan.", pos: [52946, 59963] },
+			51: { map: "Desert Highlands", area: "Brightwater Inlet", desc: "Inside the blue tent right next to Nimbose Butte.", pos: [41495, 59532] },
+			52: { map: "The Desolation", area: "Boundary Preserve", desc: "On the mountain ridge in-between this area and The Bonestrand, southwest of the Silent Vale.", pos: [48889, 60938] }
+		};
+
+		function renderElisaMarker() {
+			elisaLayer.clearLayers();
+			if (layerToggles['node_historian_elisa'] === false) return;
+			
+			let activeWeek = getElisaActiveWeek();
+			let data = ELISA_ROTATION[activeWeek];
+			if (!data) return;
+			
+			let iconPath = "https://wiki.guildwars2.com/images/1/19/Merchant.png";
+			let scale = locScale;
+			let size = Math.round(30 * scale);
+			
+			let html = `<div class="elisa-marker psna-highlight-active" style="width: ${size}px; height: ${size}px; border-radius: 50%; border: 2px solid #ffd700; background: rgba(10, 8, 5, 0.9); box-shadow: 0 0 12px #ffd700; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+							<img src="${iconPath}" style="width: 80%; height: 80%; object-fit: contain;" />
+						</div>`;
+						
+			let m = L.marker(data.pos, {
+				pane: 'customMarkerPane',
+				interactive: true,
+				icon: L.divIcon({
+					html: html,
+					className: 'elisa-custom-icon',
+					iconSize: [size, size],
+					iconAnchor: [size / 2, size / 2]
+				})
+			});
+			
+			let tooltipHtml = `<div style="text-align: center; font-family: 'Crimson Text', serif; font-size: 13px; color: #e2c07d; line-height: 1.4; padding: 4px;">
+								<div style="font-weight: bold; font-size: 15px; margin-bottom: 4px; letter-spacing: 1px; border-bottom: 1px solid #4a3b2a; padding-bottom: 2px;">PRIORY HISTORIAN ELISA</div>
+								<div style="font-size: 11px; color: #8a7a5f; margin-bottom: 6px; text-transform: uppercase;">ACTIVE WEEK: ${activeWeek} / 52</div>
+								<div><strong>Map:</strong> ${data.map} (${data.area})</div>
+								<div style="margin-top: 6px; font-style: italic; color: #fff; font-size: 12px; text-transform: none;">"${data.desc}"</div>
+							   </div>`;
+							   
+			m.on('mouseover', e => {
+				var pt = map.mouseEventToContainerPoint(e.originalEvent);
+				window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+			});
+			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+			
+			elisaLayer.addLayer(m);
+			elisaLayer.addTo(map);
 		}
 
 		async function init() {
@@ -838,9 +1128,17 @@
 					fData.forEach(p => {
 						if (!p.node) return;
 						if (p.day && p.day !== today) return;
+						if (p.continent && p.continent !== 1) return; // Skip WvW (Continent 2) markers on Tyria overworld map
 
 						let slug = p.node.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '');
-						let layerKey = p.type || p.layer || "node_" + slug;
+						let layerKey = p.type || p.layer;
+						if (!layerKey) {
+							if (mapping[slug]) {
+								layerKey = mapping[slug];
+							} else {
+								layerKey = "node_" + slug;
+							}
+						}
 
 						if (p.layer) layerKey = p.layer;
 						else if (p.type === 'node_ranger_pet') layerKey = 'node_ranger_pet';
@@ -858,17 +1156,29 @@
 						}
 
 						let currentScale = farmingScaleNodes.includes(layerKey) ? farmScale : locScale;
-						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 50 : (layerKey === 'node_fishing_hole') ? 32 : 24;
-						let glowClass = (layerKey === 'node_pact_supply_network_agent') ? "marker-glow" : "";
+						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 35 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+						let glowClass = "";
 
 						let m = L.marker([p.pos[1], p.pos[0]], {
 							pane: 'iconPane', interactive: true,
 							bossName: p.node,
 							data: p,
-							icon: L.icon({
+							icon: (layerKey === 'node_ranger_pet') ? L.divIcon({
+								className: 'pet-marker pet-' + slug,
+								iconSize: [baseSize * currentScale, baseSize * currentScale],
+								iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale],
+								html: `<img src="${p.icon || 'https://gw2ps.local/Assets/Icons/poi_discovered.png'}" />`
+							}) : (layerKey === 'node_pact_supply_network_agent') ? L.divIcon({
+								className: 'psna-custom-icon',
+								iconSize: [30 * currentScale, 30 * currentScale],
+								iconAnchor: [15 * currentScale, 15 * currentScale],
+								html: `<div class="psna-marker psna-highlight-active" style="width: ${30 * currentScale}px; height: ${30 * currentScale}px; border-radius: 50%; border: 2px solid #ffd700; background: rgba(10, 8, 5, 0.9); box-shadow: 0 0 10px #ffd700; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+											<img src="${p.icon || 'https://gw2ps.local/Assets/Icons/poi_discovered.png'}" style="width: 80%; height: 80%; object-fit: contain;" />
+									   </div>`
+							}) : L.icon({
 								iconUrl: p.icon || "https://gw2ps.local/Assets/Icons/poi_discovered.png",
 								iconSize: [baseSize * currentScale, baseSize * currentScale], iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale],
-								className: glowClass + (layerKey === 'node_ranger_pet' ? ' pet-marker pet-' + slug : '')
+								className: glowClass
 							})
 						});
 
@@ -947,6 +1257,8 @@
 				if (layerToggles['personal_markers'] === false) map.removeLayer(customMarkersLayer);
 				if (layerToggles['map_borders'] === false) map.removeLayer(borderLayer);
 
+				renderElisaMarker(); // Calculate and display Historian Elisa!
+
 				refreshLabels();
 			} catch (e) { console.error(e); }
 		}
@@ -955,6 +1267,113 @@
 		window.addEventListener("message", function (event) {
 			if (event.data && event.data.action === 'toggleMapLayer') {
 				window.toggleMapLayer(event.data.name, event.data.isVisible);
+			}
+			if (event.data && event.data.action === 'jumpToLocation') {
+				let x = event.data.x;
+				let y = event.data.y;
+				if (x !== undefined && y !== undefined) {
+					window.setTracking(false);
+					map.setView([parseFloat(y), parseFloat(x)], 6);
+				}
+			}
+			if (event.data && event.data.action === 'highlightLocation') {
+				let x = event.data.x;
+				let y = event.data.y;
+				let isPet = event.data.isPet;
+				let isFarmingNode = event.data.isFarmingNode;
+				let markerIcon = event.data.markerIcon;
+				let layerKey = event.data.layerKey;
+				let markerName = event.data.markerName;
+				
+				// Clear any previous active highlight and temporary clone immediately
+				if (activeHighlightTimeout) {
+					clearTimeout(activeHighlightTimeout);
+					activeHighlightTimeout = null;
+				}
+				if (activeHighlightMarker) { map.removeLayer(activeHighlightMarker); activeHighlightMarker = null; }
+				if (activeTempIconMarker) { map.removeLayer(activeTempIconMarker); activeTempIconMarker = null; }
+				
+				if (x !== undefined && y !== undefined) {
+					let posArr = [parseFloat(y), parseFloat(x)];
+					
+					// 1. Highlight Ring
+					let markerClass = 'highlight-active';
+					if (isPet) {
+						markerClass = 'pet-marker highlight-active';
+					} else if (isFarmingNode) {
+						markerClass = 'highlight-node-active';
+					}
+					
+					activeHighlightMarker = L.marker(posArr, {
+						pane: 'highlightPane',
+						icon: L.divIcon({
+							className: markerClass,
+							iconSize: [44, 44],
+							iconAnchor: [22, 22],
+							html: '<div style="width:100%;height:100%;"></div>'
+						}),
+						interactive: false
+					}).addTo(map);
+					
+					// 2. Temporary Marker Clone (if the layer is not permanently shown)
+					let tempIconMarker = null;
+					let isPermanentlyShown = false;
+					if (layerKey) {
+						let type = layerKey === 'landmark' ? 'poi' : layerKey;
+						if (subLayers[type] && map.hasLayer(subLayers[type])) {
+							isPermanentlyShown = true;
+						} else if (layerMap[type] && map.hasLayer(layerMap[type])) {
+							isPermanentlyShown = true;
+						} else if (layerToggles[type] === true) {
+							isPermanentlyShown = true;
+						}
+					}
+					
+					if (!isPermanentlyShown && markerIcon) {
+						let currentScale = locScale;
+						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 35 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+						
+						let customIcon;
+						if (isPet) {
+							let slug = (markerName || '').toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '');
+							customIcon = L.divIcon({
+								className: 'pet-marker pet-' + slug,
+								iconSize: [baseSize * currentScale, baseSize * currentScale],
+								iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale],
+								html: `<img src="${markerIcon}" style="width:150% !important; height:150% !important; border-radius:50% !important; object-fit:cover !important;" />`
+							});
+						} else {
+							customIcon = L.icon({
+								iconUrl: markerIcon,
+								iconSize: [baseSize * currentScale, baseSize * currentScale],
+								iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale]
+							});
+						}
+						
+						let type = layerKey === 'landmark' ? 'poi' : layerKey;
+						tempIconMarker = L.marker(posArr, {
+							icon: customIcon,
+							interactive: true,
+							layerKey: type // Store type (e.g. 'poi', 'waypoint') on options for toggle cleanup
+						}).addTo(map);
+						if (markerName) {
+							tempIconMarker.on('mouseover', e => {
+								var pt = map.mouseEventToContainerPoint(e.originalEvent);
+								window.parent.postMessage({ action: 'showTooltip', text: markerName, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+							});
+							tempIconMarker.on('mouseout', () => {
+								window.parent.postMessage({ action: 'hideTooltip' }, "*");
+							});
+						}
+						activeTempIconMarker = tempIconMarker;
+					}
+					
+					activeHighlightTimeout = setTimeout(() => {
+						if (activeHighlightMarker) { map.removeLayer(activeHighlightMarker); activeHighlightMarker = null; }
+						if (activeTempIconMarker) { map.removeLayer(activeTempIconMarker); activeTempIconMarker = null; }
+						activeHighlightTimeout = null;
+					}, 60000);
+				}
 			}
 			if (event.data && event.data.action === 'updateTheme') {
 				document.body.setAttribute('data-theme', event.data.theme);
@@ -969,13 +1388,47 @@
 				let petName = (event.data.markerName || "").trim().toLowerCase();
 				if (!petName) return;
 
-				// Ensure target layer is visible
-				if (layerName && layerToggles[layerName] === false) {
+				// Determine if the layer was originally set to OFF in user settings
+				let originallyOff = false;
+				if (layerName) {
+					let markerSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
+					let mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+					originallyOff = (markerSettings[layerName] !== true && mapSettings[layerName] !== true);
+				}
+
+				// Ensure target layer is temporarily visible for highlighting
+				if (layerName && originallyOff) {
 					window.toggleMapLayer(layerName, true);
 				}
 
 				let foundCount = 0;
-				let highlightMarkers = [];
+
+				// Create temporary cluster group for highlights
+				let highlightClusterGroup = L.markerClusterGroup({
+					disableClusteringAtZoom: 6,
+					maxClusterRadius: 40,
+					showCoverageOnHover: false,
+					clusterPane: 'highlightPane',
+					iconCreateFunction: (cluster) => {
+						let childMarkers = cluster.getAllChildMarkers();
+						let markerClass = 'highlight-node-active';
+						if (childMarkers.length > 0 && childMarkers[0].options.highlightClass) {
+							markerClass = childMarkers[0].options.highlightClass;
+						}
+						
+						let scale = (markerClass.includes('pet-marker')) ? farmScale : locScale;
+						let baseSize = (markerClass.includes('pet-marker')) ? 52 : 36;
+						let size = Math.round(baseSize * scale);
+						let anchor = size / 2;
+
+						return L.divIcon({
+							className: markerClass,
+							iconSize: [size, size],
+							iconAnchor: [anchor, anchor],
+							html: '<div style="width:100%;height:100%;"></div>'
+						});
+					}
+				});
 
 				// Use the raw markerDataCache for 100% accurate coordinate placement
 				markerDataCache.forEach(p => {
@@ -986,24 +1439,42 @@
 						foundCount++;
 						// Use the exact same coordinate array logic as the successful init() function
 						let posArr = [p.pos[1], p.pos[0]];
+						
+						let isPet = layerName === 'node_ranger_pet' || nodeName.includes("juvenile");
+						let markerClass = isPet ? 'pet-marker highlight-active' : 'highlight-node-active';
 
 						let highlightMarker = L.marker(posArr, {
+							pane: 'highlightPane',
+							highlightClass: markerClass, // Store on options for iconCreateFunction
 							icon: L.divIcon({
-								className: 'pet-marker highlight-active',
-								iconSize: [60, 60],
-								iconAnchor: [30, 30],
+								className: markerClass,
+								iconSize: [44, 44],
+								iconAnchor: [22, 22],
 								html: '<div style="width:100%;height:100%;"></div>'
 							}),
 							interactive: false
-						}).addTo(map);
-						highlightMarkers.push(highlightMarker);
+						});
+						highlightClusterGroup.addLayer(highlightMarker);
 					}
 				});
 
 				if (foundCount > 0) {
+					highlightClusterGroup.addTo(map);
 					window.parent.postMessage({ action: 'toast', msg: `HIGHLIGHTED ${foundCount} "${petName.toUpperCase()}" LOCATIONS` }, '*');
+					
 					setTimeout(() => {
-						highlightMarkers.forEach(m => map.removeLayer(m));
+						map.removeLayer(highlightClusterGroup);
+						highlightClusterGroup.clearLayers();
+						
+						// Only turn the layer OFF if the user has not manually enabled it during the highlighted session
+						if (layerName && originallyOff) {
+							let markerSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
+							let mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+							let currentToggleOn = (markerSettings[layerName] === true || mapSettings[layerName] === true);
+							if (!currentToggleOn) {
+								window.toggleMapLayer(layerName, false);
+							}
+						}
 					}, 60000);
 				} else {
 					// Fallback search through DOM if cache failed or for non-farming markers
@@ -1017,6 +1488,16 @@
 						window.parent.postMessage({ action: 'toast', msg: `HIGHLIGHTED ${foundCount} VISIBLE ICONS` }, '*');
 						setTimeout(() => {
 							document.querySelectorAll('.highlight-active').forEach(el => el.classList.remove('highlight-active'));
+							
+							// Only turn the layer OFF if the user has not manually enabled it during the highlighted session
+							if (layerName && originallyOff) {
+								let markerSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
+								let mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+								let currentToggleOn = (markerSettings[layerName] === true || mapSettings[layerName] === true);
+								if (!currentToggleOn) {
+									window.toggleMapLayer(layerName, false);
+								}
+							}
 						}, 60000);
 					}
 				}

@@ -91,6 +91,7 @@
 			<div class="top-actions">
 				<div style="display:flex; gap:10px; align-items:center;">
 					<button class="main-action" onclick="loadDailies()">DAILY</button>
+					<button class="main-action" onclick="loadMasteries()">MASTERIES</button>
 					<button class="main-action" onclick="loadWatchlistView()">WATCHLIST</button>
 				</div>
 				<div style="display:flex; align-items:center;">
@@ -126,6 +127,7 @@
 			/*<![CDATA[*/
 			const activeKey = localStorage.getItem('gw2_active_key');
             let indexData = null, accountProg = [], tracked = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
+            let accountMasteries = [], globalMasteries = [];
             let currentView = 'dailies';
             let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_achievements') || '{}');
             let searchQuery = '';
@@ -144,13 +146,33 @@
 
                 // Check cache first
                 const cachedAchs = localStorage.getItem('gw2_cache_achievements');
+                const cachedMasteries = localStorage.getItem('gw2_cache_masteries_global');
+                const cachedAccMasteries = localStorage.getItem('gw2_cache_masteries_account');
+                
                 if (cachedAchs) {
                     accountProg = JSON.parse(cachedAchs);
-                } else {
-                    const prog = await fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey);
+                    if (cachedMasteries) globalMasteries = JSON.parse(cachedMasteries);
+                    if (cachedAccMasteries) accountMasteries = JSON.parse(cachedAccMasteries);
+                }
+                
+                // Always try to refresh masteries if global data is missing
+                if (!globalMasteries || globalMasteries.length === 0) {
+                    const [prog, mGlob, mAcc] = await Promise.all([
+                        fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey),
+                        fetchJSON("https://api.guildwars2.com/v2/masteries?ids=all"),
+                        fetchJSON("https://api.guildwars2.com/v2/account/masteries?access_token=" + activeKey)
+                    ]);
                     if (prog) {
                         accountProg = prog;
                         localStorage.setItem('gw2_cache_achievements', JSON.stringify(prog));
+                    }
+                    if (mGlob) {
+                        globalMasteries = mGlob;
+                        localStorage.setItem('gw2_cache_masteries_global', JSON.stringify(mGlob));
+                    }
+                    if (mAcc) {
+                        accountMasteries = mAcc;
+                        localStorage.setItem('gw2_cache_masteries_account', JSON.stringify(mAcc));
                     }
                 }
 
@@ -224,13 +246,59 @@
             window.handleSearch = function(val) {
                 searchQuery = val.toLowerCase();
                 if (searchQuery) {
-                    currentView = 'search';
-                    renderSearchResults();
+                    const isMasteryView = currentView === 'masteries' || currentView === 'mastery_search';
+                    if (isMasteryView) {
+                        currentView = 'mastery_search';
+                        renderMasterySearchResults();
+                    } else {
+                        currentView = 'search';
+                        renderSearchResults();
+                    }
                 } else {
-                    currentView = 'dailies';
-                    loadDailies();
+                    const mBtn = Array.from(document.querySelectorAll('.main-action')).find(b => b.innerText.includes('MASTERIES'));
+                    if (mBtn && mBtn.classList.contains('active')) {
+                        loadMasteries();
+                    } else {
+                        currentView = 'dailies';
+                        loadDailies();
+                    }
                 }
             };
+
+            function renderMasterySearchResults() {
+                const content = document.getElementById('content-panel');
+                let results = [];
+                
+                if (!globalMasteries) return;
+
+                globalMasteries.forEach(m => {
+                    let match = m.name.toLowerCase().includes(searchQuery);
+                    if (!match && m.levels) {
+                        match = m.levels.some(l => l.name.toLowerCase().includes(searchQuery) || l.description.toLowerCase().includes(searchQuery));
+                    }
+                    if (match) results.push(m);
+                });
+
+                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>MASTERY SEARCH RESULTS</div>";
+                if (results.length === 0) {
+                    html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO MASTERIES FOUND</div>";
+                } else {
+                    results.forEach(m => {
+                        html += `
+                            <div class="ach-card" style="padding-right:15px;" onclick="window.selectMasteryTrack(${m.id})">
+                                <div class="ach-icon-wrap" style="background:rgba(0,0,0,0.4); border:1px solid #4a3b2a; border-radius:4px; padding:4px;">
+                                    <img src="${m.levels[0].icon}" class="ach-icon" style="border:none;">
+                                </div>
+                                <div class="ach-info">
+                                    <div class="ach-title">${m.name.toUpperCase()}</div>
+                                    <div class="ach-req" style="color:#8a7a5f;">${m.region.toUpperCase()} REGION • ${m.levels.length} TIERS</div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                content.innerHTML = html;
+            }
 
             function renderSearchResults() {
                 const content = document.getElementById('content-panel');
@@ -324,6 +392,212 @@
                 sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (aid) html += generateCard(aid, ach); });
                 content.innerHTML = html;
             }
+            async function loadMasteries() {
+                currentView = 'masteries';
+                document.querySelectorAll('.main-action').forEach(b => b.classList.remove('active'));
+                const mBtn = Array.from(document.querySelectorAll('.main-action')).find(b => b.innerText.includes('MASTERIES'));
+                if (mBtn) mBtn.classList.add('active');
+                
+                if (!globalMasteries || globalMasteries.length === 0) {
+                    document.getElementById('content-panel').innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.</div>';
+                    return;
+                }
+
+                // Fetch Available Points
+                let pointsData = { totals: [] };
+                try {
+                    const activeKey = localStorage.getItem('gw2_active_key');
+                    const pRes = await fetch(`https://api.guildwars2.com/v2/account/mastery/points?access_token=${activeKey}`);
+                    pointsData = await pRes.json();
+                } catch(e) { console.error("Failed to fetch mastery points", e); }
+
+                // Calculate total Mastery Rank (Sum of all spent points = Rank)
+                let totalRank = 0;
+                if (pointsData && pointsData.totals) {
+                    pointsData.totals.forEach(t => totalRank += t.spent);
+                }
+                
+                // USER DEFINED ORDER & MAPPING
+                const regionOrder = [
+                    { id: 'Tyria', disp: 'Central Tyria', localIcon: 'mi_tyria.png' },
+                    { id: 'Maguuma', disp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
+                    { id: 'Desert', disp: 'Path of Fire', localIcon: 'mi_pof.png' },
+                    { id: 'Tundra', disp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
+                    { id: 'Jade', disp: 'End of Dragons', localIcon: 'mi_eod.png' },
+                    { id: 'Sky', disp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
+                    { id: 'Wild', disp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
+                    { id: 'Magic', disp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
+                ];
+
+                const regions = {};
+                globalMasteries.forEach(m => {
+                    if (!regions[m.region]) regions[m.region] = [];
+                    regions[m.region].push(m);
+                });
+
+                // Overwrite Sidebar with Mastery Navigation
+                const sidebar = document.getElementById('nav-panel');
+                sidebar.innerHTML = `
+                    <div style="padding:15px 5px; border-bottom:1px solid #3c3228; margin-bottom:10px; text-align:center; background: rgba(0,0,0,0.2);">
+                        <img src="https://gw2ps.local/Assets/Icons/mi_tyria.png" style="width:40px; filter: drop-shadow(0 0 5px #e5c100);">
+                        <div style="font-size:9px; color:#8a7a5f; text-transform:uppercase; margin-top:6px; letter-spacing:1px;">Mastery Rank</div>
+                        <div style="font-size:28px; color:#e2c07d; font-weight:bold; font-family: 'Crimson Text', serif;">${totalRank}</div>
+                    </div>
+                `;
+
+                regionOrder.forEach(reg => {
+                    const tracks = regions[reg.id];
+                    if (!tracks) return;
+
+                    const isOpen = harmonicaState['mastery_nav_' + reg.id] === true;
+                    // Ultra-Fuzzy matching for points
+                    const points = (pointsData && pointsData.totals) ? (pointsData.totals.find(t => 
+                        t.region === reg.id || 
+                        t.region.toLowerCase().includes(reg.id.toLowerCase()) || 
+                        reg.disp.toLowerCase().includes(t.region.toLowerCase())
+                    ) || { spent: 0, earned: 0 }) : { spent: 0, earned: 0 };
+                    const available = Math.max(0, points.earned - points.spent);
+
+                    const regionBtn = document.createElement('div');
+                    regionBtn.className = `cat-btn ${isOpen ? 'active' : ''}`;
+                    regionBtn.style.display = 'flex';
+                    regionBtn.style.justifyContent = 'space-between';
+                    regionBtn.style.alignItems = 'center';
+                    regionBtn.style.padding = '10px 12px';
+                    regionBtn.style.background = isOpen ? 'rgba(226, 192, 125, 0.05)' : 'transparent';
+                    regionBtn.innerHTML = `
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span style="font-size:8px; width:10px; text-align:center; opacity:0.5;">${isOpen ? '▼' : '▶'}</span>
+                            <span style="font-size:11px; letter-spacing:0.5px;">${reg.disp.toUpperCase()}</span>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:#e2c07d; font-weight:bold;">
+                            ${available} <img src="https://gw2ps.local/Assets/Icons/${reg.localIcon}" style="width:16px; height:16px;">
+                        </div>
+                    `;
+                    regionBtn.onclick = () => {
+                        harmonicaState['mastery_nav_' + reg.id] = !isOpen;
+                        localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
+                        loadMasteries();
+                    };
+                    sidebar.appendChild(regionBtn);
+
+                    if (isOpen) {
+                        tracks.sort((a,b) => a.id - b.id).forEach(t => {
+                            const prog = accountMasteries.find(p => p.id === t.id);
+                            const current = (prog !== undefined) ? (prog.level + 1) : 0;
+                            const total = t.levels.length;
+                            const isSelected = harmonicaState.selectedTrackId === t.id;
+
+                            const trackBtn = document.createElement('div');
+                            trackBtn.className = `sub-btn ${isSelected ? 'active' : ''}`;
+                            trackBtn.dataset.trackId = t.id;
+                            trackBtn.style.marginLeft = '20px';
+                            trackBtn.style.fontSize = '10px';
+                            trackBtn.style.padding = '8px 12px';
+                            trackBtn.style.color = isSelected ? '#e2c07d' : '#8a7a5f';
+                            trackBtn.style.borderLeft = isSelected ? '2px solid #e2c07d' : '1px solid #3c3228';
+                            trackBtn.innerHTML = `
+                                <span>${t.name.toUpperCase()}</span>
+                                <span style="float:right; opacity:0.6; font-family: Arial, sans-serif;">${current}/${total}</span>
+                            `;
+                            trackBtn.onclick = (e) => {
+                                e.stopPropagation();
+                                window.selectMasteryTrack(t.id);
+                            };
+                            sidebar.appendChild(trackBtn);
+                        });
+                    }
+                });
+
+                const initialTrackId = harmonicaState.selectedTrackId || (regions[regionOrder[0].id] ? regions[regionOrder[0].id][0].id : null);
+                if (initialTrackId) window.selectMasteryTrack(initialTrackId);
+            }
+
+            window.selectMasteryTrack = function(trackId) {
+                harmonicaState.selectedTrackId = trackId;
+                localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
+                
+                document.querySelectorAll('#nav-panel .sub-btn').forEach(b => {
+                    const active = b.dataset.trackId == trackId;
+                    b.classList.toggle('active', active);
+                    b.style.color = active ? '#e2c07d' : '#8a7a5f';
+                    b.style.borderLeft = active ? '2px solid #e2c07d' : '1px solid #3c3228';
+                });
+
+                const track = globalMasteries.find(t => t.id === trackId);
+                const content = document.getElementById('content-panel');
+                if (!track) return;
+
+                const prog = accountMasteries.find(p => p.id === trackId);
+                const unlockedLevel = (prog !== undefined) ? (prog.level + 1) : 0;
+                
+                const regionOrder = [
+                    { id: 'Tyria', disp: 'Central Tyria', localIcon: 'mi_tyria.png' },
+                    { id: 'Maguuma', disp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
+                    { id: 'Desert', disp: 'Path of Fire', localIcon: 'mi_pof.png' },
+                    { id: 'Tundra', disp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
+                    { id: 'Jade', disp: 'End of Dragons', localIcon: 'mi_eod.png' },
+                    { id: 'Sky', disp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
+                    { id: 'Wild', disp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
+                    { id: 'Magic', disp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
+                ];
+                const regInfo = regionOrder.find(r => r.id === track.region) || { disp: track.region, localIcon: 'mi_locked.png' };
+                const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(regInfo.disp.replace(/ /g, '_') + '_mastery_tracks')}&useskin=vector#${track.name.replace(/ /g, '_')}`;
+
+                content.innerHTML = `
+                    <div style="padding: 15px; display:flex; flex-direction:column; gap:20px; height:100%; background: rgba(0,0,0,0.1);">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #3c3228; padding-bottom:15px;">
+                            <div>
+                                <div style="font-size:10px; color:#8a7a5f; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">${regInfo.disp}</div>
+                                <div style="font-size:28px; color:#e2c07d; font-weight:bold; font-family: 'Crimson Text', serif; letter-spacing:0.5px;">${track.name}</div>
+                            </div>
+                            <button class="main-action" onclick="window.parent.postMessage({ action: 'openWiki', url: '${wikiUrl}' }, '*')" style="background:rgba(226,192,125,0.05); border:1px solid #4a3b2a; color:#e2c07d; padding:8px 16px; font-size:11px;">VIEW ON WIKI</button>
+                        </div>
+                        
+                        <div style="flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:12px; padding-right:8px;">
+                            ${track.levels.map((level, idx) => {
+                                const isUnlocked = idx < unlockedLevel;
+                                const isReady = !isUnlocked && (idx === unlockedLevel);
+                                const points = level.point_cost;
+                                
+                                // Specific logic for staggered rows as per user request
+                                let rowCounts = [];
+                                if (points <= 5) {
+                                    rowCounts = [points];
+                                } else if (points <= 10) {
+                                    const r1 = Math.ceil(points / 2);
+                                    rowCounts = [r1, points - r1];
+                                } else {
+                                    const r1 = Math.ceil(points / 3);
+                                    const r2 = Math.ceil((points - r1) / 2);
+                                    rowCounts = [r1, r2, points - r1 - r2];
+                                }
+
+                                return `
+                                    <div style="background:rgba(26,21,16,0.9); border:1px solid ${isUnlocked ? '#3c3228' : '#2a2015'}; border-left:4px solid ${isUnlocked ? '#e5c100' : (isReady ? '#8a7a5f' : '#1a1510')}; padding:18px; display:flex; align-items:center; opacity: ${isUnlocked || isReady ? '1' : '0.4'}; transition: 0.2s; position: relative;">
+                                        <div style="width:44px; height:44px; background:rgba(0,0,0,0.6); border:1px solid ${isUnlocked ? '#e5c100' : '#2a2015'}; border-radius:4px; margin-right:25px; position:relative; flex-shrink:0; overflow:hidden;">
+                                            <img src="${level.icon}" style="width:100%; height:100%; object-fit:contain; ${isUnlocked ? '' : 'filter:grayscale(1) opacity(0.2);'}">
+                                            ${!isUnlocked ? '<div style="position:absolute; inset:0; background:rgba(0,0,0,0.4);"></div>' : ''}
+                                        </div>
+                                        <div style="flex:1; margin-right:20px;">
+                                            <div style="color:${isUnlocked ? '#e5c100' : '#8a7a5f'}; font-size:16px; font-weight:bold; letter-spacing:1px; margin-bottom:6px;">${level.name.toUpperCase()}</div>
+                                            <div style="color:rgba(226,192,125,0.7); font-size:12px; font-family: Arial, sans-serif; text-transform:none; line-height:1.5;">${level.description}</div>
+                                            ${isReady ? '<div style="margin-top:10px; display:inline-block; padding:3px 10px; background:#4a3b2a; color:#fff; font-size:10px; font-weight:bold; border-radius:2px; letter-spacing:0.5px;">READY TO TRAIN</div>' : ''}
+                                        </div>
+                                        <div style="display:flex; flex-direction:column; align-items:center; gap:3px; margin-left:auto; width: 100px; flex-shrink:0; padding-right:15px; justify-content: center;">
+                                            ${rowCounts.map((count, rowIdx) => `
+                                                <div style="display:flex; justify-content:center; gap:4px; ${rowIdx === 1 ? 'margin-left: 8px;' : ''}">
+                                                    ${Array(count).fill(0).map(() => `<img src="https://gw2ps.local/Assets/Icons/${regInfo.localIcon}" style="width:12px; height:12px; ${isUnlocked ? '' : 'filter:grayscale(1) opacity(0.5);'}">`).join('')}
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            };
 
             function generateCard(id, ach) {
                 const prog = getProg(id);
@@ -368,7 +642,7 @@
                 document.getElementById('modal-title').innerText = ach.n;
                 document.getElementById('modal-desc').innerHTML = (ach.r || '') + '<br><br>' + (ach.d || '');
                 document.getElementById('modal-bits').innerHTML = bitsHtml;
-                document.getElementById('modal-wiki-btn').onclick = () => window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(ach.n), '_blank');
+                document.getElementById('modal-wiki-btn').onclick = () => window.parent.postMessage({ action: 'openWiki', title: ach.n }, '*');
                 document.getElementById('ach-modal').style.display = 'flex';
             };
 

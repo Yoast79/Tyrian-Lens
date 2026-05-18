@@ -665,10 +665,10 @@
 						choyaCooldown = true;
 						setTimeout(() => { choyaCooldown = false; }, 3000);
 					} else {
-						window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(name), '_blank');
+						window.parent.postMessage({ action: 'openWiki', title: name }, '*');
 					}
 				} else {
-					window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(name), '_blank');
+					window.parent.postMessage({ action: 'openWiki', title: name }, '*');
 				}
 			};
 

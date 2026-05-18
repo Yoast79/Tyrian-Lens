@@ -60,6 +60,32 @@
 			.prompt-btn { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-weight: bold; margin: 0 5px; text-transform: uppercase; transition: 0.2s; }
 			.prompt-btn:hover { background: var(--bg-button-hover, #2a221a); border-color: var(--text-primary, #e2c07d); }
 			.prompt-btn.danger { color: #ff4a4a; }
+
+			/* Transform-Safe Premium Blue Circle Highlight Beacon for Search Results */
+			@keyframes highlightActivePulse {
+				0% {
+					box-shadow: 0 0 10px rgba(0, 168, 255, 0.6), inset 0 0 5px rgba(0, 168, 255, 0.4) !important;
+					border-color: #00a8ff !important;
+				}
+				50% {
+					box-shadow: 0 0 30px 12px rgba(0, 168, 255, 1), inset 0 0 12px rgba(0, 168, 255, 0.8) !important;
+					border-color: #ffffff !important;
+				}
+				100% {
+					box-shadow: 0 0 10px rgba(0, 168, 255, 0.6), inset 0 0 5px rgba(0, 168, 255, 0.4) !important;
+					border-color: #00a8ff !important;
+				}
+			}
+
+			.highlight-active {
+				border-radius: 50% !important;
+				border: 2px solid #00a8ff !important;
+				background: rgba(0, 168, 255, 0.25) !important;
+				z-index: 10001 !important;
+				animation: highlightActivePulse 1.2s infinite ease-in-out !important;
+				box-sizing: border-box !important;
+				pointer-events: none !important;
+			}
 		</style>
 	</head>
 	<body class="tracking-active">
@@ -126,8 +152,13 @@
 			var isTracking = true;
 			var layerToggles = { 'poi': true, 'waypoint': true, 'vista': true, 'heropoint': true, 'sector': true, 'borders': true, 'overlay': true, 'map_text': true, 'camps': true, 'towers': true, 'keeps': true, 'castles': true, 'ruins': true, 'scoreboard': true, 'personal_markers': true };
 			var subLayers = { 'poi': L.layerGroup(), 'waypoint': L.layerGroup(), 'vista': L.layerGroup(), 'heropoint': L.layerGroup(), 'sector': L.layerGroup(), 'borders': L.layerGroup(), 'overlay': L.layerGroup(), 'map_text': L.layerGroup(), 'camps': L.layerGroup(), 'towers': L.layerGroup(), 'keeps': L.layerGroup(), 'castles': L.layerGroup(), 'ruins': L.layerGroup() };
+			var activeHighlightMarker = null;
+			var activeTempIconMarker = null;
+			var activeHighlightTimeout = null;
 
 			var map = L.map("map", { crs: L.extend({}, L.CRS.Simple, { transformation: new L.Transformation(1/128, 0, 1/128, 0) }), minZoom: 1, maxZoom: 7, zoomControl: false, attributionControl: false, doubleClickZoom: false });
+			map.createPane('highlightPane').style.zIndex = 590;
+			map.getPane('highlightPane').style.pointerEvents = 'none';
 			map.createPane('staticPane').style.zIndex = 640;
 			map.createPane('iconPane').style.zIndex = 650;
 			map.createPane('textPane').style.zIndex = 700; map.getPane('textPane').style.pointerEvents = 'none';
@@ -148,6 +179,15 @@
 
 			window.toggleMapLayer = function(name, isVisible) {
 				layerToggles[name] = isVisible;
+				
+				// If we are turning a layer OFF, immediately remove any active temporary clone belonging to that layer!
+				if (!isVisible && activeTempIconMarker) {
+					if (activeTempIconMarker.options && activeTempIconMarker.options.layerKey === name) {
+						map.removeLayer(activeTempIconMarker);
+						activeTempIconMarker = null;
+					}
+				}
+
 				if (name === 'scoreboard') {
 					document.getElementById('scoreboard').style.display = isVisible ? 'flex' : 'none';
 				}
@@ -500,6 +540,88 @@
 				if (event.data && event.data.action === 'jumpMap') {
 					window.setTracking(false);
 					map.flyTo([event.data.pos[1], event.data.pos[0]], 6);
+				}
+				if (event.data && event.data.action === 'jumpToLocation') {
+					let x = event.data.x;
+					let y = event.data.y;
+					if (x !== undefined && y !== undefined) {
+						window.setTracking(false);
+						map.setView([parseFloat(y), parseFloat(x)], 6);
+					}
+				}
+				if (event.data && event.data.action === 'highlightLocation') {
+					let x = event.data.x;
+					let y = event.data.y;
+					let markerIcon = event.data.markerIcon;
+					let layerKey = event.data.layerKey;
+					let markerName = event.data.markerName;
+					
+					// Clear any previous active highlight and temporary clone immediately
+					if (activeHighlightTimeout) {
+						clearTimeout(activeHighlightTimeout);
+						activeHighlightTimeout = null;
+					}
+					if (activeHighlightMarker) { map.removeLayer(activeHighlightMarker); activeHighlightMarker = null; }
+					if (activeTempIconMarker) { map.removeLayer(activeTempIconMarker); activeTempIconMarker = null; }
+					
+					if (x !== undefined && y !== undefined) {
+						let posArr = [parseFloat(y), parseFloat(x)];
+						
+						// 1. Highlight Ring
+						let markerClass = 'highlight-active';
+						
+						activeHighlightMarker = L.marker(posArr, {
+							pane: 'highlightPane',
+							icon: L.divIcon({
+								className: markerClass,
+								iconSize: [44, 44],
+								iconAnchor: [22, 22],
+								html: '<div style="width:100%;height:100%;"></div>'
+							}),
+							interactive: false
+						}).addTo(map);
+						
+						// 2. Temporary Marker Clone (if the layer is not permanently shown)
+						let tempIconMarker = null;
+						let isPermanentlyShown = false;
+						if (layerKey) {
+							let type = layerKey === 'landmark' ? 'poi' : layerKey;
+							if (subLayers[type] && map.hasLayer(subLayers[type])) {
+								isPermanentlyShown = true;
+							} else if (layerToggles[type] === true) {
+								isPermanentlyShown = true;
+							}
+						}
+						
+						if (!isPermanentlyShown && markerIcon) {
+							let currentScale = 1.0;
+							let baseSize = 24;
+							
+							let customIcon = L.icon({
+								iconUrl: markerIcon,
+								iconSize: [baseSize * currentScale, baseSize * currentScale],
+								iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale]
+							});
+							
+							let type = layerKey === 'landmark' ? 'poi' : layerKey;
+							tempIconMarker = L.marker(posArr, {
+								icon: customIcon,
+								interactive: true,
+								layerKey: type // Store type (e.g. 'poi', 'waypoint') on options for toggle cleanup
+							}).addTo(map);
+							if (markerName) {
+								tempIconMarker.on('mouseover', e => showTip(markerName, e.originalEvent));
+								tempIconMarker.on('mouseout', hideTip);
+							}
+							activeTempIconMarker = tempIconMarker;
+						}
+						
+						activeHighlightTimeout = setTimeout(() => {
+							if (activeHighlightMarker) { map.removeLayer(activeHighlightMarker); activeHighlightMarker = null; }
+							if (activeTempIconMarker) { map.removeLayer(activeTempIconMarker); activeTempIconMarker = null; }
+							activeHighlightTimeout = null;
+						}, 60000);
+					}
 				}
 				if (event.data && event.data.action === 'updateTheme') {
 					document.body.setAttribute('data-theme', event.data.theme);

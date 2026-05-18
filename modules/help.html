@@ -93,7 +93,7 @@
 	<body>
 		<div class="branding-wrap">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="branding-icon" alt="Tyrian Lens Logo" />
-			<div class="version-tag">TYRIAN LENS - v1.3.0</div>
+			<div class="version-tag" id="version-display">TYRIAN LENS - v1.3.2</div>
 		</div>
 
 		<div id="help-container">
@@ -258,6 +258,12 @@
 
 			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+			// Dynamically sync version with parent shell
+			const versionDisplay = document.getElementById('version-display');
+			if (versionDisplay && window.parent && window.parent.APP_VERSION) {
+				versionDisplay.innerText = `TYRIAN LENS - ${window.parent.APP_VERSION}`;
+			}
 		</script>
 	</body>
 </html>

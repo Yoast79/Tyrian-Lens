@@ -12,7 +12,7 @@ async function loadHomeData(el, index) {
     gridDiv.className = 'grid';
     const { sub } = el.dataset;
     const fallbackIcon = "https://wiki.guildwars2.com/images/7/75/Mini_Orange_Tabby_Cat.png";
-    const scavengerWiki = "https://wiki.guildwars2.com/wiki/Hungry_cat_scavenger_hunt";
+    const scavengerWiki = "https://wiki.guildwars2.com/index.php?title=Hungry_cat_scavenger_hunt&useskin=vector";
 
     const activeTab = typeof currentTab !== 'undefined' ? currentTab : 'unlocked';
 
@@ -66,7 +66,7 @@ async function loadHomeData(el, index) {
                 const data = catMap[id];
                 if (data) {
                     const slot = createSlot({ id: id, n: data.n, i: data.i, w: scavengerWiki });
-                    slot.onclick = () => window.open(scavengerWiki, 'gw2wiki');
+                    slot.onclick = () => window.parent.postMessage({ action: 'openWiki', title: 'Hungry cat scavenger hunt' }, '*');
                     gridDiv.appendChild(slot);
                 }
             });
@@ -76,7 +76,7 @@ async function loadHomeData(el, index) {
                 if (!ownedIds.has(numId)) {
                     const data = catMap[id];
                     const slot = createSlot({ id: numId, n: data.n, i: data.i, w: scavengerWiki });
-                    slot.onclick = () => window.open(scavengerWiki, 'gw2wiki');
+                    slot.onclick = () => window.parent.postMessage({ action: 'openWiki', title: 'Hungry cat scavenger hunt' }, '*');
                     gridDiv.appendChild(slot);
                 }
             });
@@ -103,7 +103,7 @@ async function loadHomeData(el, index) {
             "bound_hatched_chili_pepper_node": { n: "Bound Hatched Chili Pepper Node", i: "https://wiki.guildwars2.com/images/f/f4/Hatched_Chili_Pepper_Home_Instance_Node.png" },
             "brandstone_node": { n: "Brandstone Node", i: "https://wiki.guildwars2.com/wiki/Special:FilePath/Brandstone_Node.png" },
             "candy_corn_node": { n: "Raw Candy Corn", i: "https://wiki.guildwars2.com/images/4/44/Gift_of_Candy_Corn.png" },
-            "commemorative_dragon_pinata": { n: "Commemorative Dragon Piñata", i: "https://render.guildwars2.com/file/C247F12B1F9454A5CF0D075E6057286DA5C8F8E8/2306760.png" },
+            "commemorative_dragon_pinata": { n: "Commemorative Dragon PiÃ±ata", i: "https://render.guildwars2.com/file/C247F12B1F9454A5CF0D075E6057286DA5C8F8E8/2306760.png" },
             "crystallized_supply_cache": { n: "Crystallized Supply Cache", i: "https://wiki.guildwars2.com/images/9/93/Personal_Crystallized_Supply_Cache_Voucher.png" },
             "difluorite_crystal_cluster_node": { n: "Difluorite Crystal Cluster Node", i: "https://wiki.guildwars2.com/wiki/Special:FilePath/Difluorite_Crystal_Cluster_Node.png" },
             "dragon_crystal": { n: "Dragon Crystal Node", i: "https://wiki.guildwars2.com/images/2/2f/Dragon_Crystal_Home_Instance_Node.png" },

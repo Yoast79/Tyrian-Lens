@@ -238,9 +238,6 @@
             background: rgba(226, 192, 125, 0.15);
         }
 
-        .rarity-Legendary {
-            border-color: #4C139D !important;
-        }
 
         #load-modal,
         #skill-modal,
@@ -634,7 +631,7 @@
                 <button class="btn btn-clear" id="btn-clear">Clear</button>
                 <button class="btn" id="btn-save">Save</button>
                 <button class="btn" id="btn-load">Load</button>
-                <button class="btn" id="btn-copy">Copy Code</button>
+                <button class="btn" id="btn-copy">Copy Build</button>
                 <button class="btn" id="btn-share">Share</button>
                 <div style="display:flex; flex-direction:column; gap:2px;">
                     <span style="font-size:10px; color:#8a7a5f; margin-left:5px;">Build or shared code</span>
@@ -1228,6 +1225,17 @@
                 document.getElementById('btn-modal-delete').onclick = () => this.deleteSavedBuild();
                 document.getElementById('btn-copy').onclick = () => this.copyCode();
                 document.getElementById('btn-share').onclick = () => this.shareBuild();
+
+                // Custom tooltips for Copy Build Code and Share Lens Profile buttons
+                const btnCopy = document.getElementById('btn-copy');
+                const btnShare = document.getElementById('btn-share');
+                const copyTooltip = "Copy Game Build Code<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Copies a standard Guild Wars 2 Build Template chat link to your clipboard for direct in-game import of traits, specializations, and slot skills. Note: Equipment stats, weapons, and sigils are not supported by the game's template system and must be configured manually.</span>";
+                const shareTooltip = "Share Lens Profile<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Generates a comprehensive build profile code for other Tyrian Lens users. Note: Lens profiles are exclusive to Tyrian Lens applications and cannot be imported directly into the Guild Wars 2 game client.</span>";
+                btnCopy.onmouseover = (e) => this.showTip(copyTooltip, e);
+                btnCopy.onmouseout = () => this.hideTip();
+                btnShare.onmouseover = (e) => this.showTip(shareTooltip, e);
+                btnShare.onmouseout = () => this.hideTip();
+
                 document.getElementById('main-paste-code').oninput = (e) => { if (e.target.value.trim().startsWith('[&')) { this.importCode(e.target.value.trim()); e.target.value = ''; } };
                 document.getElementById('btn-clear').onclick = () => document.getElementById('clear-modal').style.display = 'block';
                 document.getElementById('btn-clear-cancel').onclick = () => document.getElementById('clear-modal').style.display = 'none';

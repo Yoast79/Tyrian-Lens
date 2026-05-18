@@ -245,7 +245,7 @@
 						slotDiv.dataset.name = item ? item.name.toLowerCase() : "";
 						
 						if (item) {
-							slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
+							slotDiv.onclick = () => window.parent.postMessage({ action: 'openWiki', title: item.name }, '*');
 							
 							let tooltipText = `<div style="font-weight:bold; margin-bottom:6px; color:#e2c07d; letter-spacing:1px; border-bottom:1px solid #4a3b2a; padding-bottom:4px; text-transform:uppercase;">${item.name}</div>`;
 							tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;

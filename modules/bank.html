@@ -9,11 +9,18 @@
 			color: #e2c07d; font-family: "Crimson Text", serif; text-transform: uppercase;
 			display: flex; flex-direction: column; height: 100vh; overflow: hidden;
 			}
-			.title-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; }
+			.title-bar { display: flex; flex-direction: column; border-bottom: 1px solid #4a3b2a; margin-bottom: 15px; padding-bottom: 5px; gap: 10px; }
+			.title-top { display: flex; justify-content: space-between; align-items: center; }
 			.section-title { font-size: 16px; font-weight: bold; letter-spacing: 1px; }
 			.title-controls { display: flex; align-items: center; gap: 8px; }
-			.audit-btn { background: #4a3b2a; border: 1px solid #e2c07d; color: #e2c07d; font-size: 10px; padding: 2px 8px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; }
-			.audit-btn:hover { background: #e2c07d; color: #1a1510; }
+			
+			.header-tabs { display: flex; gap: 5px; border-bottom: 1px solid #2a2015; padding-bottom: 5px; }
+			.header-tab { background: transparent; border: none; color: #8a7a5f; padding: 5px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 11px; font-weight: bold; border-bottom: 2px solid transparent; transition: 0.2s; }
+			.header-tab.active { color: #e2c07d; border-bottom-color: #e2c07d; }
+			.header-tab:hover { color: #fff; }
+			
+			.guild-switcher { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; font-size: 11px; padding: 4px 10px; outline: none; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; margin-left: auto; display: none; }
+
 			.sort-select { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; font-size: 10px; padding: 2px 5px; outline: none; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; }
 
 			.search-container { position: relative; width: 100%; margin-bottom: 15px; }
@@ -21,7 +28,7 @@
 			.search-box:focus { border-color: #e2c07d; }
 			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #4a3b2a; cursor: pointer; font-size: 18px; line-height: 1; display: none; }
 			.clear-btn:hover { color: #e2c07d; }
-
+            
 			#bank-container { flex: 1; overflow-y: auto; padding-right: 10px; }
 			.bank-tab { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
 			.tab-header { background: #1a1510; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #2a2015; }
@@ -69,67 +76,199 @@
 	</head>
 	<body>
 		<div class="title-bar">
-			<div class="section-title">Account Bank</div>
-			<div class="title-controls">
-
-				<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
-					<option value="default">Sort: Default</option>
-					<option value="instant_high">Instant Sell: High -> Low</option>
-					<option value="instant_low">Instant Sell: Low -> High</option>
-					<option value="list_high">List Price: High -> Low</option>
-					<option value="list_low">List Price: Low -> High</option>
-				</select>
+			<div class="title-top">
+				<div class="section-title">Account Vaults</div>
+				<div class="title-controls">
+					<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
+						<option value="default">Sort: Default</option>
+						<option value="instant_high">Instant Sell: High -> Low</option>
+						<option value="instant_low">Instant Sell: Low -> High</option>
+						<option value="list_high">List Price: High -> Low</option>
+						<option value="list_low">List Price: Low -> High</option>
+					</select>
+				</div>
+			</div>
+			<div class="header-tabs">
+				<button id="tab-personal" class="header-tab active" onclick="switchMainTab('personal')">Personal Bank</button>
+				<button id="tab-guild" class="header-tab" onclick="switchMainTab('guild')">Guild Banks</button>
+				<select id="guild-switcher" class="guild-switcher" onchange="switchGuild(this.value)"></select>
 			</div>
 		</div>
 		<div class="search-container">
 			<input type="text" class="search-box" id="bank-search" placeholder="SEARCH VAULT..." oninput="filterBank()">
-				<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
-			</div>
-		<div id="bank-container">
-			<div class="loading">
-				<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png">
-					<div>Accessing Vault...</div>
-				</div>
+			<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
 		</div>
+		<div id="bank-container"></div>
+        </div>
 
 		<script>
 			/*<![CDATA[*/
 			let itemCache = {};
 			let bankDataGlobal = [];
+			let guildStorageGlobal = [];
 			let priceCache = {};
 			let currentSort = 'default';
+			let currentMainTab = 'personal';
+			let currentGuildIdx = 0;
+			let isRefreshing = false;
 
-			async function initBank() {
+			async function initBank(forceRefresh = false) {
+                if (isRefreshing) return;
+                isRefreshing = true;
+                try {
+
 				// Apply UI scale on load
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
 				const activeKey = localStorage.getItem('gw2_active_key');
-				if (!activeKey) return;
+				if (!activeKey) {
+                    isRefreshing = false;
+                    return;
+                }
 
-                // Check cache first
+                // Force one-time clear of old format cache
+                const cacheVer = localStorage.getItem('gw2_cache_version_bank');
+                if (cacheVer !== 'v6' || forceRefresh) {
+                    localStorage.removeItem('gw2_cache_bank');
+                    localStorage.removeItem('gw2_cache_guild_storage');
+                    localStorage.setItem('gw2_cache_version_bank', 'v6');
+                }
+
+                // 1. Load Personal Bank
                 const cachedBank = localStorage.getItem('gw2_cache_bank');
-                if (cachedBank) {
-                    bankDataGlobal = JSON.parse(cachedBank);
-                    const itemIds = [...new Set(bankDataGlobal.filter(i => i !== null).map(i => i.id))];
-                    await Promise.all([
-						fetchItemDetails(itemIds),
-						fetchItemPrices(itemIds)
-					]);
-                    renderBank();
+                if (cachedBank && !forceRefresh) {
+                    try { bankDataGlobal = JSON.parse(cachedBank); } catch(e) { bankDataGlobal = []; }
                 } else {
                     try {
                         const res = await fetch(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
-                        bankDataGlobal = await res.json();
-                        localStorage.setItem('gw2_cache_bank', JSON.stringify(bankDataGlobal));
-                        const itemIds = [...new Set(bankDataGlobal.filter(i => i !== null).map(i => i.id))];
-                        await Promise.all([
-							fetchItemDetails(itemIds),
-							fetchItemPrices(itemIds)
-						]);
-                        renderBank();
-                    } catch (err) { console.error(err); }
+                        if (res.ok) {
+                            bankDataGlobal = await res.json();
+                            localStorage.setItem('gw2_cache_bank', JSON.stringify(bankDataGlobal));
+                        } else { console.error("Bank fetch failed", res.status); bankDataGlobal = []; }
+                    } catch(e) { console.error("Bank fetch error", e); bankDataGlobal = []; }
                 }
+
+                // 2. Load Guild Storage
+                const cachedGuilds = localStorage.getItem('gw2_cache_guild_storage');
+                if (cachedGuilds && !forceRefresh) {
+                    try { guildStorageGlobal = JSON.parse(cachedGuilds); } catch(e) { guildStorageGlobal = []; }
+                } else {
+                    try {
+                        const accRes = await fetch(`https://api.guildwars2.com/v2/account?access_token=${activeKey}`);
+                        const accData = await accRes.json();
+                        
+                        const uniqueGuilds = new Map();
+                        if (accData && accData.guilds) {
+                            for (const guildId of accData.guilds) {
+                                if (uniqueGuilds.has(guildId)) continue;
+                                try {
+                                    const detailRes = await fetch(`https://api.guildwars2.com/v2/guild/${guildId}`);
+                                    const detail = await detailRes.json();
+                                    
+                                    const gRes = await fetch(`https://api.guildwars2.com/v2/guild/${guildId}/stash?access_token=${activeKey}`);
+                                    if (gRes.ok) {
+                                        const storage = await gRes.json();
+                                        uniqueGuilds.set(guildId, {
+                                            name: detail.name,
+                                            tag: detail.tag,
+                                            items: storage,
+                                            id: guildId,
+                                            accessible: true
+                                        });
+                                    } else {
+                                        uniqueGuilds.set(guildId, {
+                                            name: detail.name,
+                                            tag: detail.tag,
+                                            items: [],
+                                            id: guildId,
+                                            accessible: false,
+                                            error: gRes.status === 403 ? "OFFICIAL API RESTRICTION: ONLY GUILD LEADERS CAN VIEW STORAGE" : "ACCESS DENIED"
+                                        });
+                                    }
+                                } catch (e) { console.warn(`Access denied for guild ${guildId}`, e); }
+                            }
+                        }
+                        guildStorageGlobal = Array.from(uniqueGuilds.values());
+                        localStorage.setItem('gw2_cache_guild_storage', JSON.stringify(guildStorageGlobal));
+                    } catch (err) { console.error("Guild fetch error", err); guildStorageGlobal = []; }
+                }
+
+                if (!Array.isArray(bankDataGlobal)) bankDataGlobal = [];
+                if (!Array.isArray(guildStorageGlobal)) guildStorageGlobal = [];
+
+                setupGuildSwitcher();
+                
+                // Collect IDs for fetching details
+                const bankItemIds = bankDataGlobal.filter(i => i !== null).map(i => i.id);
+                const guildItemIds = guildStorageGlobal.flatMap(g => {
+                    if (!g.items || !Array.isArray(g.items)) return [];
+                    // Hybrid check: Tabbed vs Flat
+                    const first = g.items[0];
+                    if (first && typeof first === 'object' && 'inventory' in first) {
+                        return g.items.flatMap(tab => (tab && tab.inventory ? tab.inventory : []).filter(i => i !== null).map(i => i.id));
+                    } else {
+                        return g.items.filter(i => i !== null).map(i => i.id);
+                    }
+                });
+                const allItemIds = [...new Set([...bankItemIds, ...guildItemIds])];
+                
+                if (allItemIds.length > 0) {
+                    try {
+                        await Promise.all([
+                            fetchItemDetails(allItemIds),
+                            fetchItemPrices(allItemIds)
+                        ]);
+                    } catch(e) { console.error("Detail fetch failed", e); }
+                }
+                
+                    renderBank();
+                } finally {
+                    isRefreshing = false;
+                }
+			}
+
+
+			function setupGuildSwitcher() {
+				const switcher = document.getElementById('guild-switcher');
+				switcher.innerHTML = '';
+                
+                // Final uniqueness check to prevent double listing
+                const seenIds = new Set();
+                const uniqueGuilds = [];
+                guildStorageGlobal.forEach(g => {
+                    if (!seenIds.has(g.id)) {
+                        seenIds.add(g.id);
+                        uniqueGuilds.push(g);
+                    }
+                });
+                guildStorageGlobal = uniqueGuilds;
+
+				guildStorageGlobal.forEach((guild, idx) => {
+					const opt = document.createElement('option');
+					opt.value = idx;
+					opt.innerText = `[${guild.tag}] ${guild.name}`;
+					switcher.appendChild(opt);
+				});
+				if (guildStorageGlobal.length > 0 && currentGuildIdx >= guildStorageGlobal.length) currentGuildIdx = 0;
+			}
+
+			function switchMainTab(tab) {
+				currentMainTab = tab;
+				document.getElementById('tab-personal').classList.toggle('active', tab === 'personal');
+				document.getElementById('tab-guild').classList.toggle('active', tab === 'guild');
+				document.getElementById('guild-switcher').style.display = tab === 'guild' ? 'block' : 'none';
+				
+                if (tab === 'guild' && guildStorageGlobal.length === 0) {
+                    initBank();
+                } else {
+                    renderBank();
+                }
+			}
+
+			function switchGuild(idx) {
+				currentGuildIdx = parseInt(idx);
+				renderBank();
 			}
 
 			async function fetchItemDetails(ids) {
@@ -182,115 +321,174 @@
 				container.innerHTML = '';
 				const itemsPerTab = 30;
 
-				let processedBank = [...bankDataGlobal];
-				if (currentSort !== 'default') {
-					processedBank = processedBank.filter(i => i !== null).sort((a, b) => {
-						const pA = priceCache[a.id] || { buys: 0, sells: 0 };
-						const pB = priceCache[b.id] || { buys: 0, sells: 0 };
-						if (currentSort === 'instant_high') return (pB.buys * 0.85) - (pA.buys * 0.85);
-						if (currentSort === 'instant_low') return (pA.buys * 0.85) - (pB.buys * 0.85);
-						if (currentSort === 'list_high') return pB.sells - pA.sells;
-						if (currentSort === 'list_low') return pA.sells - pB.sells;
-						return 0;
-					});
-				}
+				if (currentMainTab === 'personal') {
+					// 1. Render Personal Bank
+					let processedBank = [...bankDataGlobal];
+					if (currentSort !== 'default') {
+						processedBank = processedBank.filter(i => i !== null).sort((a, b) => {
+							const pA = priceCache[a.id] || { buys: 0, sells: 0 };
+							const pB = priceCache[b.id] || { buys: 0, sells: 0 };
+							if (currentSort === 'instant_high') return (pB.buys * 0.85) - (pA.buys * 0.85);
+							if (currentSort === 'instant_low') return (pA.buys * 0.85) - (pB.buys * 0.85);
+							if (currentSort === 'list_high') return pB.sells - pA.sells;
+							if (currentSort === 'list_low') return pA.sells - pB.sells;
+							return 0;
+						});
+					}
 
-				const totalTabs = Math.ceil(processedBank.length / itemsPerTab);
-				for (let t = 0; t < totalTabs; t++) {
-					const tabDiv = document.createElement('div');
-					tabDiv.className = 'bank-tab';
-					
-					let tabTotalCopper = 0;
-					const grid = document.createElement('div');
-					grid.className = 'tab-grid';
-					
-					processedBank.slice(t * itemsPerTab, (t + 1) * itemsPerTab).forEach(slot => {
-						const slotDiv = document.createElement('div');
-						slotDiv.className = 'item-slot';
-						if (slot && itemCache[slot.id]) {
-							const item = itemCache[slot.id];
-							const prices = priceCache[slot.id] || { buys: 0, sells: 0 };
-							const count = slot.count || 1;
-							const tax = 0.85;
-							
-							const instantSell = Math.floor(prices.buys * tax);
-							const listPrice = prices.sells;
-							const stackInstantSell = Math.floor(count * prices.buys * tax);
-							const stackListPrice = count * prices.sells;
-							
-							tabTotalCopper += stackListPrice;
+					const totalTabs = Math.ceil(processedBank.length / itemsPerTab);
+					for (let t = 0; t < totalTabs; t++) {
+						const tabItems = processedBank.slice(t * itemsPerTab, (t + 1) * itemsPerTab);
+						renderTab(container, `Bank Tab ${t + 1}`, tabItems);
+					}
+				} else {
+					// 2. Render Guild Vaults
+                    if (guildStorageGlobal.length === 0) {
+                        container.innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">NO GUILDS FOUND ON ACCOUNT</div>';
+                        return;
+                    }
+					const guild = guildStorageGlobal[currentGuildIdx];
+					if (!guild) {
+						container.innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">NO GUILD STORAGE ACCESSIBLE</div>';
+						return;
+					}
 
-							slotDiv.dataset.name = item.name.toLowerCase();
-							slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
-							
-							let tooltipText = `<div style="font-weight:bold; margin-bottom:6px; color:#e2c07d; letter-spacing:1px; border-bottom:1px solid #4a3b2a; padding-bottom:4px; text-transform:uppercase;">${item.name}</div>`;
-							tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
-							
-							let hasFinancials = false;
-							const canSellVendor = item.vendor_value > 0 && !(item.flags && item.flags.includes('NoSell'));
-							
-							if (prices.sells > 0) {
-								hasFinancials = true;
-								tooltipText += `<span>INSTANT SELL:</span><span>${formatCoin(instantSell)}</span>`;
-								tooltipText += `<span>LIST PRICE:</span><span>${formatCoin(listPrice)}</span>`;
-								if (count > 0) {
-									tooltipText += `</div><div style="margin:6px 0; border-top:1px solid #4a3b2a; opacity:0.5;"></div>`;
-									tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
-									tooltipText += `<span>STACK INSTANT SELL:</span><span>${formatCoin(stackInstantSell)}</span>`;
-									tooltipText += `<span>STACK LIST PRICE:</span><span>${formatCoin(stackListPrice)}</span>`;
-								}
-							} else if (canSellVendor) {
-								hasFinancials = true;
-								tooltipText += `<span>VENDOR VALUE:</span><span>${formatCoin(item.vendor_value)}</span>`;
-								if (count > 0) {
-									tooltipText += `<span>STACK VENDOR VALUE:</span><span>${formatCoin(item.vendor_value * count)}</span>`;
-								}
-							}
+                    if (!guild.accessible) {
+                        container.innerHTML = `
+                            <div style="padding:60px 40px; text-align:center; background:rgba(20, 15, 10, 0.95); border:1px solid #4a3b2a; margin:20px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                                <div style="font-size:20px; color:#e2c07d; font-weight:bold; margin-bottom:20px; letter-spacing:3px; text-transform:uppercase;">${guild.name}</div>
+                                <div style="width:50px; height:2px; background:#4a3b2a; margin:0 auto 20px;"></div>
+                                <div style="font-size:13px; color:#ff4a4a; font-weight:bold; margin-bottom:12px; letter-spacing:1px;">OFFICIAL API RESTRICTION</div>
+                                <div style="font-size:12px; color:#8a7a5f; margin-bottom:20px; line-height:1.6; max-width:400px; margin-left:auto; margin-right:auto;">
+                                    Due to Guild Wars 2 API limitations, you must be a <b>Guild Leader (Rank 1)</b> to view the vault contents via an API key, regardless of your in-game permissions.
+                                </div>
+                                <div style="font-size:10px; color:#4a3b2a; font-style:italic; border-top:1px solid rgba(74, 59, 42, 0.3); padding-top:15px;">
+                                    This is a limitation of the official API servers, not Tyrian Lens.
+                                </div>
+                            </div>
+                        `;
+                        return;
+                    }
 
-							if (!hasFinancials) {
-								tooltipText += `<span style="grid-column: span 2; opacity: 0.5;">NO VENDOR OR TP VALUE</span>`;
-							}
-							tooltipText += `</div>`;
+                    // Guild Storage can be an array of tabs OR a flat array of items depending on API behavior
+                    if (Array.isArray(guild.items)) {
+                        if (guild.items.length === 0) {
+                            container.innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">VAULT IS CURRENTLY EMPTY</div>';
+                        } else {
+                            // Check if first element is a tab object or a slot object
+                            const first = guild.items[0];
+                            if (first && typeof first === 'object' && 'inventory' in first) {
+                                // Tabbed format
+                                guild.items.forEach((tab, idx) => {
+                                    let tabName = "Vault Tab";
+                                    if (tab.size === 50) tabName = "Guild Stash";
+                                    else if (tab.size === 100 && idx === 1) tabName = "Treasure Trove";
+                                    else if (tab.size === 100 && idx === 2) tabName = "Deep Cave";
+                                    else tabName = `Vault Tab ${idx + 1}`;
 
-							slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: tooltipText, x: e.clientX, y: e.clientY}, '*');
-							slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
-							slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
-							if (slot.count > 1) slotDiv.innerHTML += `<div class="item-count">${slot.count}</div>`;
-						} else { slotDiv.dataset.name = ""; }
-						grid.appendChild(slotDiv);
-					});
-
-					const header = document.createElement('div');
-					header.className = 'tab-header';
-					header.onclick = () => tabDiv.classList.toggle('collapsed');
-					header.innerHTML = `
-						<span class="tab-title">Bank Tab ${t + 1}</span>
-						<div class="tab-header-right">
-							<span class="tab-total-value">${formatCoin(tabTotalCopper)}</span>
-							<span class="arrow">▼</span>
-						</div>
-					`;
-
-					tabDiv.appendChild(header);
-					tabDiv.appendChild(grid);
-					container.appendChild(tabDiv);
+                                    if (tab && Array.isArray(tab.inventory)) {
+                                        renderTab(container, `[${guild.tag}] ${tabName}`, tab.inventory, true);
+                                    }
+                                });
+                            } else {
+                                // Flat array format
+                                renderTab(container, `[${guild.tag}] Guild Vault`, guild.items, true);
+                            }
+                        }
+                    } else {
+                        container.innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">UNEXPECTED VAULT DATA FORMAT</div>';
+                    }
 				}
 			}
 
-				function filterBank() {
+			function renderTab(container, title, items, isGuild = false) {
+				const tabDiv = document.createElement('div');
+				tabDiv.className = 'bank-tab';
+				if (isGuild) tabDiv.style.borderColor = '#4a3b2a';
+				
+				let tabTotalValue = 0;
+				const grid = document.createElement('div');
+				grid.className = 'tab-grid';
+				
+                if (!Array.isArray(items)) {
+                    tabDiv.innerHTML = `<div style="padding:20px; color:#8a7a5f; text-align:center;">TAB INVENTORY NOT ACCESSIBLE</div>`;
+                    container.appendChild(tabDiv);
+                    return;
+                }
+
+                // Guild banks should usually be padded to 50 slots (Stash) or more
+                let displayItems = [...items];
+                if (isGuild && displayItems.length > 0 && displayItems.length < 50) {
+                    while (displayItems.length < 50) displayItems.push(null);
+                } else if (isGuild && displayItems.length > 50 && displayItems.length < 100) {
+                    while (displayItems.length < 100) displayItems.push(null);
+                }
+
+				displayItems.forEach(slot => {
+					const slotDiv = document.createElement('div');
+					slotDiv.className = 'item-slot';
+
+					if (!slot || !itemCache[slot.id]) {
+                        grid.appendChild(slotDiv);
+                        return;
+                    }
+					
+					const item = itemCache[slot.id];
+					const prices = priceCache[slot.id] || { buys: 0, sells: 0 };
+					const count = slot.count || 1;
+					
+					const listPrice = prices.sells;
+					const stackValue = count * listPrice;
+					tabTotalValue += stackValue;
+
+					slotDiv.dataset.name = item.name.toLowerCase();
+					slotDiv.onclick = () => window.parent.postMessage({ action: 'openWiki', title: item.name }, '*');
+					
+					let tooltipText = `<div style="font-weight:bold; margin-bottom:6px; color:#e2c07d; letter-spacing:1px; border-bottom:1px solid #4a3b2a; padding-bottom:4px; text-transform:uppercase;">${item.name}</div>`;
+					tooltipText += `<div style="display:grid; grid-template-columns: 1fr auto; gap:4px 15px; font-size:11px; font-family:Arial, sans-serif; text-transform:none; line-height:1.4;">`;
+					tooltipText += `<span>LIST PRICE:</span><span>${formatCoin(listPrice)}</span>`;
+					tooltipText += `<span>STACK VALUE:</span><span>${formatCoin(stackValue)}</span>`;
+					tooltipText += `</div>`;
+
+					slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: tooltipText, x: e.clientX, y: e.clientY}, '*');
+					slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
+					slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
+					if (slot.count > 1) slotDiv.innerHTML += `<div class="item-count">${slot.count}</div>`;
+					grid.appendChild(slotDiv);
+				});
+
+				const header = document.createElement('div');
+				header.className = 'tab-header';
+				if (isGuild) header.style.background = '#1a1a10';
+				header.onclick = () => tabDiv.classList.toggle('collapsed');
+
+				header.innerHTML = `
+					<span class="tab-title">${title}</span>
+					<div class="tab-header-right">
+						<span class="tab-total-value">${formatCoin(tabTotalValue)}</span>
+						<span class="arrow">▼</span>
+					</div>
+				`;
+
+				tabDiv.appendChild(header);
+				tabDiv.appendChild(grid);
+				container.appendChild(tabDiv);
+			}
+
+			function filterBank() {
 				const query = document.getElementById('bank-search').value.toLowerCase();
 				document.getElementById('clear-search').style.display = query === "" ? "none" : "block";
 				document.querySelectorAll('.bank-tab').forEach(tab => {
-				const slots = tab.querySelectorAll('.item-slot');
-				let hasMatch = false;
-				slots.forEach(slot => {
-				const match = query === "" || (slot.dataset.name && slot.dataset.name.includes(query));
-				slot.classList.toggle('hidden', !match);
-				if (match && slot.dataset.name !== "") hasMatch = true;
+					const slots = tab.querySelectorAll('.item-slot');
+					let hasMatch = false;
+					slots.forEach(slot => {
+						const match = query === "" || (slot.dataset.name && slot.dataset.name.includes(query));
+						slot.classList.toggle('hidden', !match);
+						if (match && slot.dataset.name !== "") hasMatch = true;
+					});
+					tab.classList.toggle('collapsed', query !== "" && !hasMatch);
 				});
-				tab.classList.toggle('collapsed', query !== "" && !hasMatch);
-				});
-				}
+			}
 
 			window.addEventListener('message', (e) => {
 				if (e.data.action === 'accountDataRefreshed') initBank();

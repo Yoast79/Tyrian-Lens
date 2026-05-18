@@ -381,7 +381,7 @@
 				if (slotData && UTILS.itemCache[slotData.id]) {
 					const item = UTILS.itemCache[slotData.id];
 					slotDiv.classList.add('has-item', `rarity-${item.rarity}`);
-					slotDiv.onclick = () => window.open(`https://wiki.guildwars2.com/index.php?search=${encodeURIComponent(item.name)}`, '_blank');
+					slotDiv.onclick = () => window.parent.postMessage({ action: 'openWiki', title: item.name }, '*');
 					slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(item, slotData), x: e.clientX, y: e.clientY}, '*');
 					slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
 					slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;

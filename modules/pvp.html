@@ -119,7 +119,7 @@
 				window.parent.postMessage({ action: 'showTooltip', text: text, x: e.clientX, y: e.clientY, offsetTop: 0, isRight: false }, '*');
 			}
 			function hideTip() { window.parent.postMessage({ action: 'hideTooltip' }, '*'); }
-			function openWiki(url) { window.parent.postMessage('openWiki:' + url, '*'); }
+			function openWiki(title) { window.parent.postMessage({ action: 'openWiki', title: title }, '*'); }
 
 			async function apiFetch(endpoint) {
 				try { const r = await fetch(`https://api.guildwars2.com/v2/${endpoint}${endpoint.includes('?') ? '&' : '?'}access_token=${activeKey}`); return r.ok ? await r.json() : null; } catch { return null; }
@@ -309,7 +309,7 @@
 					else if (n.includes("Tybalt")) iconUrl = "https://gw2ps.local/Assets/Icons/Tybalt_Leftpaw_icon.png";
 
 					let safeName = n.replace(/'/g, "\\'").toUpperCase();
-					return `<img class="hero-icon ${unlocked.includes(h.id) ? 'hero-unlocked' : ''}" src="${iconUrl}" onmouseover="showTip('${safeName}', event)" onmouseout="hideTip()" onclick="openWiki('https://wiki.guildwars2.com/wiki/Mist_Champion')">`;
+					return `<img class="hero-icon ${unlocked.includes(h.id) ? 'hero-unlocked' : ''}" src="${iconUrl}" onmouseover="showTip('${safeName}', event)" onmouseout="hideTip()" onclick="openWiki('Mist Champion')">`;
 				}).join('');
 			}
 

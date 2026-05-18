@@ -55,27 +55,33 @@
 	<body>
 		<div id="ui-root" style="display:none; height:100%; flex-direction: column;">
 			<div class="header-row">
-				<div class="section-title">Account Search</div>
+				<div class="section-title">Search Anything</div>
 			</div>
 
 			<div class="search-container">
-				<input type="text" class="search-box" id="global-search" placeholder="SEARCH ITEMS & CURRENCIES..." oninput="triggerSearch()" autocomplete="off">
+				<input type="text" class="search-box" id="global-search" placeholder="SEARCH ANYTHING..." oninput="triggerSearch()" autocomplete="off">
 					<span class="clear-btn" id="clear-search" onclick="document.getElementById('global-search').value=''; triggerSearch();">&times;</span>
 				</div>
 
-			<div style="display:flex; align-items:center; gap: 8px; margin-bottom: 15px; flex-shrink: 0;">
-				<input type="checkbox" id="toggle-map-locs" checked="" onchange="filterSearch()" style="cursor:pointer;" />
-				<label for="toggle-map-locs" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW MAP LOCATIONS</label>
+			<div style="display:flex; flex-direction: column; gap: 6px; margin-bottom: 15px; flex-shrink: 0; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 12px;">
+				<div style="display:flex; align-items:center; gap: 8px;">
+					<input type="checkbox" id="toggle-map-locs" checked="" onchange="filterSearch()" style="cursor:pointer;" />
+					<label for="toggle-map-locs" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW MAP LOCATIONS</label>
+				</div>
+				<div style="display:flex; align-items:center; gap: 8px;">
+					<input type="checkbox" id="toggle-farming-markers" checked="" onchange="filterSearch()" style="cursor:pointer;" />
+					<label for="toggle-farming-markers" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW FARMING MARKERS</label>
+				</div>
 			</div>
 
 			<div id="results-container">
-				<div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS ACROSS YOUR ACCOUNT</div>
+				<div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS, MAP MARKERS OR LOCATIONS</div>
 			</div>
 		</div>
 
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
-			<div id="loader-text">SCANNING ACCOUNT...</div>
+			<div id="loader-text">SCANNING TYRIA...</div>
 		</div>
 
 		<script>
@@ -160,7 +166,8 @@
                             rarity: 'Basic',
                             isMapLoc: true,
                             isWvW: false,
-                            pos: p.pos
+                            pos: p.pos,
+                            layer: t
                         };
                         addLoc(id, label, 1);
                     });
@@ -170,11 +177,11 @@
                     farmingMarkers.forEach((m) => {
                         if (!m.node) return;
                         
-                        // ONLY include Ranger Pets in the search results as per user goal
                         const isPet = m.type === 'node_ranger_pet' || m.node.includes("Juvenile");
-                        if (!isPet) return;
-
-                        let layer = "node_ranger_pet";
+                        let layer = m.type || m.layer || "node_" + m.node.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '');
+                        if (m.layer) layer = m.layer;
+                        else if (m.type === 'node_ranger_pet') layer = 'node_ranger_pet';
+                        else if (m.yields && m.yields.includes("Ranger Pet")) layer = "node_ranger_pet";
                         
                         const id = 'farmnode_' + layer + '_' + m.node.replace(/[^a-z0-9]/gi, '_');
                         if (!itemCache[id]) {
@@ -184,10 +191,12 @@
                                 rarity: 'Basic',
                                 isMapLoc: true,
                                 isFarmingNode: true,
-                                layer: layer
+                                isPet: isPet,
+                                layer: layer,
+                                pos: m.pos
                             };
                         }
-                        addLoc(id, "RANGER PET", 1);
+                        addLoc(id, isPet ? "RANGER PET" : "FARMING NODE", 1);
                     });
                 }
 
@@ -323,19 +332,33 @@
                 const q = document.getElementById('global-search').value.toLowerCase().trim();
                 const res = document.getElementById('results-container');
                 const showMapLocs = document.getElementById('toggle-map-locs').checked;
+                const showFarming = document.getElementById('toggle-farming-markers').checked;
                 
                 document.getElementById('clear-search').style.display = q === "" ? "none" : "block";
 
                 if (q.length < 3) {
-                    res.innerHTML = '<div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS ACROSS YOUR ACCOUNT</div>';
+                    res.innerHTML = '<div style="padding:20px; text-align:center; color:#8a7a5f; font-size:11px;">ENTER A SEARCH TERM TO LOCATE ASSETS, MAP MARKERS OR LOCATIONS</div>';
                     return;
                 }
 
                 const matches = Object.keys(itemLocations).filter(id => {
                     const item = itemCache[id];
                     if (!item || !item.name) return false;
-                    if (item.isMapLoc && !showMapLocs) return false;
-                    return item.name.toLowerCase().includes(q);
+                    
+                    if (!item.name.toLowerCase().includes(q)) return false;
+                    
+                    if (item.isMapLoc) {
+                        if (item.isFarmingNode) {
+                            if (item.isPet) {
+                                return showMapLocs || showFarming;
+                            } else {
+                                return showFarming;
+                            }
+                        } else {
+                            return showMapLocs;
+                        }
+                    }
+                    return true;
                 }).sort((a,b) => (itemCache[a].name || "").localeCompare(itemCache[b].name || "")).slice(0, 50);
 
                 if (matches.length === 0) {
@@ -358,11 +381,29 @@
                     });
 
                     let actionBtn = '';
-                    if (item.isFarmingNode) {
-                        let mSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
-                        let isHidden = mSettings[item.layer] === false;
-                        let btnText = isHidden ? "Show on Map" : "Highlight on Map";
-                        actionBtn = `<button style="background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px 15px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; text-transform: uppercase; transition: 0.2s;" onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.8)'" onclick="window.parent.postMessage({action:'highlightLayer', layer: '${item.layer}', markerName: '${item.name.replace(/'/g, "\\'")}'}, '*')">${btnText}</button>`;
+                    if (item.isMapLoc && !item.isFarmingNode && item.pos) {
+                        const x = item.pos[0];
+                        const y = item.pos[1];
+                        const isPet = !!item.isPet;
+                        const isWvW = !!item.isWvW;
+                        
+                        actionBtn = `
+                        <div style="display: flex; gap: 6px; flex-shrink: 0;">
+                            <button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" 
+                                    onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" 
+                                    onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" 
+                                    onclick="window.parent.postMessage({action:'jumpToLocation', x: ${x}, y: ${y}, isWvW: ${isWvW}}, '*')">
+                                JUMP
+                            </button>
+                            <button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" 
+                                    onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" 
+                                    onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" 
+                                    onclick="window.parent.postMessage({action:'highlightLocation', x: ${x}, y: ${y}, isPet: ${isPet}, markerIcon: '${item.icon}', markerName: '${item.name.replace(/'/g, "\\'")}', layerKey: '${item.layer}', isWvW: ${isWvW}}, '*')">
+                                HIGHLIGHT
+                            </button>
+                        </div>`;
+                    } else if (item.isFarmingNode) {
+                        actionBtn = `<button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" onclick="window.parent.postMessage({action:'highlightLayer', layer: '${item.layer}', markerName: '${item.name.replace(/'/g, "\\'")}'}, '*')">HIGHLIGHT</button>`;
                     }
 
                     html += `
@@ -371,7 +412,7 @@
                              onmouseover="${item.isMapLoc ? '' : `showItemTip('${id}', event)`}" 
                              onmouseout="${item.isMapLoc ? '' : `window.parent.postMessage({action:'hideTooltip'}, '*')`}"
                              data-name="${(item.name || '').replace(/"/g, '&quot;')}"
-                             onclick="${item.isMapLoc ? '' : `window.open('https://wiki.guildwars2.com/wiki/Special:Search/' + encodeURIComponent(this.getAttribute('data-name')), '_blank')`}">
+                             onclick="${item.isMapLoc ? '' : `window.parent.postMessage({ action: 'openWiki', title: this.getAttribute('data-name') }, '*')`}">
                             <img src="${item.icon}" class="item-icon" />
                         </div>
                         <div class="item-info">
