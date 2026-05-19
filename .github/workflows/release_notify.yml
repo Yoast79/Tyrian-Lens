@@ -30,6 +30,7 @@ jobs:
               'username': 'Tyrian Lens Update',
               'avatar_url': 'https://i.imgur.com/HmyYArl.png',
               'content': '<@&1501744128667685025>',
+              'allowed_mentions': { 'parse': ['roles', 'everyone', 'users'] },
               'embeds': [{
                   'title': f'Version Release: {version}',
                   'description': f'**Changelog:**\n{body}',
