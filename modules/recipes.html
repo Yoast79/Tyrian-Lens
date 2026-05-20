@@ -150,6 +150,10 @@
 						<div class="toggle-switch"></div>
 						<span>UPDATE OWNED MATERIALS EVERY MINUTE</span>
 					</div>
+					<div class="toggle-container" id="promo-toggle" onclick="togglePromotions()">
+						<div class="toggle-switch"></div>
+						<span>USE ITEM PROMOTIONS</span>
+					</div>
 				</div>
 
 				<div id="calc-results">
@@ -199,6 +203,7 @@
 			let unlockedIds = new Set();
 			
 			let useOwnMats = localStorage.getItem('gw2_calc_own_mats') === 'true';
+			let useItemPromotions = localStorage.getItem('gw2_calc_item_promotions') === 'true';
 			let autoUpdateMats = localStorage.getItem('gw2_calc_auto_update') === 'true';
 			let autoUpdateInterval = null;
 
@@ -335,7 +340,7 @@
 
 				loaderText.innerText = "LOADING MYSTIC FORGE DATABANKS...";
 				try {
-					const cachedForge = sessionStorage.getItem('gw2profits_forge');
+					const cachedForge = sessionStorage.getItem('gw2profits_forge_v2');
 					if (cachedForge) {
 						forgeRecipes = JSON.parse(cachedForge);
 					} else {
@@ -348,10 +353,10 @@
 								let outId = String(finalOutId);
 								if (outId && outId !== 'undefined' && outId !== 'null') {
 									if (!forgeRecipes[outId]) forgeRecipes[outId] = [];
-									forgeRecipes[outId].push(r);
+									forgeRecipes[outId].push({ ...r, forge_type: r.type });
 								}
 							}
-							sessionStorage.setItem('gw2profits_forge', JSON.stringify(forgeRecipes));
+							sessionStorage.setItem('gw2profits_forge_v2', JSON.stringify(forgeRecipes));
 						}
 					}
 				} catch (e) { console.error("Failed to load Forge recipes", e); }
@@ -400,6 +405,7 @@
 				document.getElementById('loader').style.display = 'flex';
 				document.getElementById('mat-toggle').classList.toggle('active', useOwnMats);
 				document.getElementById('auto-update-toggle').style.display = useOwnMats ? 'flex' : 'none';
+				document.getElementById('promo-toggle').classList.toggle('active', useItemPromotions);
 
 				const cached = localStorage.getItem(`recipe_struct_${activeKey}`);
 				if (cached) {
@@ -528,6 +534,14 @@
 				manageAutoUpdate();
 			}
 
+			function togglePromotions() {
+				useItemPromotions = !useItemPromotions; localStorage.setItem('gw2_calc_item_promotions', useItemPromotions);
+				document.getElementById('promo-toggle').classList.toggle('active', useItemPromotions);
+				// Clear recipe cache so the solver re-evaluates with the new promotion setting
+				detailedRecipeCache = {}; recipePromiseCache = {};
+				if (activeCraftTargets.length > 0) triggerGlobalCalculation();
+			}
+
 			function toggleTarget(idx) {
 				let content = document.getElementById(`target-content-${idx}`);
 				let icon = document.getElementById(`target-icon-${idx}`);
@@ -646,8 +660,25 @@
 						}
 					}
 					if (vendorPrices[strId] && !vendorPrices[strId].name.toLowerCase().includes("in bulk")) recipes.push({ type: 'vendor', ingredients: vendorPrices[strId].ingredients, output_item_count: vendorPrices[strId].yields || 1, disciplines: ['Merchant'], min_rating: 0 });
-					if (forgeRecipes[strId]) forgeRecipes[strId].forEach(f => recipes.push({ type: 'forge', ingredients: f.ingredients.map(i => ({ item_id: i.item_id || i.id, count: i.count })), output_item_count: f.count || 1, disciplines: ['Mystic Forge'], min_rating: 0 }));
+					if (forgeRecipes[strId]) forgeRecipes[strId].forEach(f => recipes.push({ type: 'forge', forge_type: f.forge_type || f.type, ingredients: f.ingredients.map(i => ({ item_id: i.item_id || i.id, count: i.count })), output_item_count: f.count || 1, disciplines: ['Mystic Forge'], min_rating: 0 }));
 					
+					// FILTER: Skip Mystic Forge material promotions unless the player has enabled the toggle
+					if (!useItemPromotions) {
+						recipes = recipes.filter(r => !(r.type === 'forge' && r.forge_type === 'CraftingMaterial'));
+					}
+
+					// RESOLVE: Self-referential catalyst loops (e.g., T5->T6 promotions use 1 of the output as a catalyst)
+					// Math: if yield Y > catalyst count C, set effective yield = Y - C and remove the catalyst ingredient.
+					recipes.forEach(r => {
+						if (r.type === 'forge') {
+							let selfRef = r.ingredients.find(i => Number(i.item_id) === numId);
+							if (selfRef && r.output_item_count > selfRef.count) {
+								r.output_item_count = r.output_item_count - selfRef.count;
+								r.ingredients = r.ingredients.filter(i => Number(i.item_id) !== numId);
+							}
+						}
+					});
+
 					// OVERRIDE: Mystic Clovers
 					if (numId === 19675) {
 						recipes = recipes.filter(r => !r.disciplines.includes('Merchant'));
@@ -774,6 +805,7 @@
 					
 					let totalCost = 0;
 					let rawGoldTotal = 0;
+					let specialCurrencyTotals = {};
 					let buyableHtml = '';
 					let untradableHtml = '';
 					let vendorPurchasesHtml = '';
@@ -823,6 +855,11 @@
 							if (ingId === 1 || ingId === -1) {
 								rawGoldTotal += totalIngNeeded;
 								return formatCoin(totalIngNeeded, false);
+							}
+							if (ingId < 0 || specialCurrencies.includes(Math.abs(ingId))) {
+								let cKey = Math.abs(ingId);
+								if (!specialCurrencyTotals[cKey]) { let cd = getDisplayData(ingId); specialCurrencyTotals[cKey] = { id: ingId, name: cd.name, icon: cd.icon, qty: 0 }; }
+								specialCurrencyTotals[cKey].qty += totalIngNeeded;
 							}
 
 							let idata = getDisplayData(ingId);
@@ -882,13 +919,17 @@
 									${(step.recipeInfo.ingredients || []).map(ing => {
 										let ingId = Number(ing.item_id);
 										let totalIngNeeded = ing.count * step.crafts;
-
 										if (ingId === 1 || ingId === -1) {
 											rawGoldTotal += totalIngNeeded;
 											return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
 												<div style="width: 85px; flex-shrink:0;"></div>
 												<span style="color:#e2c07d; font-weight:bold;">${formatCoin(totalIngNeeded, false)}</span>
 											</div>`;
+										}
+										if (ingId < 0 || specialCurrencies.includes(Math.abs(ingId))) {
+											let cKey = Math.abs(ingId);
+											if (!specialCurrencyTotals[cKey]) { let cd = getDisplayData(ingId); specialCurrencyTotals[cKey] = { id: ingId, name: cd.name, icon: cd.icon, qty: 0 }; }
+											specialCurrencyTotals[cKey].qty += totalIngNeeded;
 										}
 
 										let idata = getDisplayData(ingId);
@@ -981,6 +1022,12 @@
 										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (profitSell >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitSell, true)}</span>
 										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(profitSell / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
 									</div>
+									${Object.keys(specialCurrencyTotals).length > 0 ? `<div class="calc-breakdown-item" style="grid-column: 1 / -1;">
+										<span class="calc-bd-title">Special Currencies Needed</span>
+										<div class="calc-bd-val" style="flex-wrap:wrap; gap:8px; margin-top:4px;">
+											${Object.values(specialCurrencyTotals).map(c => `<span style="display:flex; align-items:center; gap:4px; white-space:nowrap; margin-right:8px;"><img src="${c.icon}" style="width:16px; height:16px; vertical-align:middle;"> <span style="color:#fff; font-size:13px;">${Math.ceil(c.qty).toLocaleString('de-DE')}</span> <span style="color:#8a7a5f; font-size:10px;">${c.name}</span></span>`).join('<span style="color:#4a3b2a; margin:0 4px;">·</span>')}
+										</div>
+									</div>` : ''}
 								</div>
 							</div>
 

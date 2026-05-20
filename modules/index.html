@@ -228,7 +228,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "v1.3.4";
+			const APP_VERSION = "1.3.5";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.showLoader = function(loaderId) {
@@ -490,7 +490,7 @@
 							frame.style.display = 'block'; 
 							frame.src = newSrc; 
 						}
-						if (['bank', 'map_markers', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(module)) { panel.classList.add('wide'); } else { panel.classList.remove('wide'); }
+						if (['bank', 'map_options', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(module)) { panel.classList.add('wide'); } else { panel.classList.remove('wide'); }
 					} else {
 						window.showLoader('panel-loading-right');
 						frame.src = newSrc; panel.classList.remove('wide', 'wiki-mode'); document.getElementById('wiki-close-btn').style.display = 'none';
@@ -746,7 +746,7 @@
 						window.showLoader('panel-loading');
 						frame.src = newSrc;
 						panel.classList.add('open');
-						if (['bank', 'map_markers', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(moduleName)) { 
+						if (['bank', 'map_options', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(moduleName)) { 
 							panel.classList.add('wide'); 
 						} else { 
 							panel.classList.remove('wide'); 

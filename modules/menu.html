@@ -32,9 +32,6 @@
 		<div id="navbar">
 			<div class="nav-group">
 				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Map Options'}, '*')" onmouseover="showTip('Map Options', event)" onmouseout="hideTip()">
-					<img src="https://gw2ps.local/Assets/MenuIcons/nav_map.png" />
-				</div>
-				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Map Markers'}, '*')" onmouseover="showTip('Farming Markers', event)" onmouseout="hideTip()">
 					<img src="https://gw2ps.local/Assets/MenuIcons/nav_markers.png" />
 				</div>
 				<div class="nav-item" onclick="window.parent.postMessage({action:'switchMap', map:'map'}, '*')" onmouseover="showTip('Tyria Map', event)" onmouseout="hideTip()">
@@ -46,10 +43,10 @@
 				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Timers'}, '*')" onmouseover="showTip('Timers', event)" onmouseout="hideTip()">
 					<img src="https://gw2ps.local/Assets/MenuIcons/nav_timers.png" />
 				</div>
-				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'PvP'}, '*')" onmouseover="showTip('PvP Module', event)" onmouseout="hideTip()">
+				<div class="separator"></div>
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'PvP'}, '*')" onmouseover="showTip('PvP', event)" onmouseout="hideTip()">
 					<img src="https://gw2ps.local/Assets/MenuIcons/nav_pvp.png" />
 				</div>
-				<div class="separator"></div>
 				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Hero'}, '*')" onmouseover="showTip('Hero Panel', event)" onmouseout="hideTip()">
 					<img src="https://gw2ps.local/Assets/MenuIcons/nav_hero.png" />
 				</div>
