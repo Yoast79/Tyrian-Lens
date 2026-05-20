@@ -75,6 +75,7 @@ Built with a high-performance **C# / .NET 9** core and a modern **WebView2** fro
 *   Tyrian Lens is a third-party application and is **not affiliated with or endorsed by ArenaNet or NCSOFT**. Use of this application is at your own risk. It is designed to comply with the Guild Wars 2 User Agreement regarding third-party tools (no automation, only information display).
 
 ---
+<img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-color-icon.png"  width="16" height="16">  [Join the Discord Server](https://discord.gg/7pWPzV6Rt4)
 
 **If Tyrian Lens has enhanced your journey through Tyria, show your appreciation by donating some items or gold.**
 **Yoast.8572**
