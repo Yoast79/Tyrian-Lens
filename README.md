@@ -27,7 +27,6 @@ Built with a high-performance **C# / .NET 9** core and a modern **WebView2** fro
 ### <img src="https://i.imgur.com/RVjWmh5.png" width="24" height="24"> Achievement & Event Tracking
 *   **Persistent Watchlist**: Track multiple achievements simultaneously with live progress bars.
 *   **Event Timers**: Integrated world boss and meta-event timers with audio notifications.
-*   **Daily Raid Framework (DRF)**: Direct integration with the DRF WebSocket for raid-specific tracking and data.
 
 ### <img src="https://i.imgur.com/9QfORJz.png" width="24" height="24"> Integrated Wiki Support
 *   **Smart Wiki Lookup**: Click on any item or achievement to open the official Guild Wars 2 Wiki in an integrated side-panel, keeping you focused on the game.
