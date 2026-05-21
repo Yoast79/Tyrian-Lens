@@ -100100,6 +100100,123 @@
         "icon": "https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png",
         "layer": "node_aetherlocation_treasure"
     },
+        {
+        "name": "Mastery Insight (VoE)",
+        "type": "mastery",
+        "pos": [
+            3808,
+            60559
+        ],
+        "chat_link": ""
+    },
+	{
+        "pos": [
+            5047.4,
+            62152.2
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            4336.4,
+            62202.8
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            4039.2,
+            62008.9
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            3511.9,
+            62521.7
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            3518,
+            61280.5
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            5115.7,
+            61557.4
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            3808.2,
+            60431.1
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            4339.1,
+            60588.1
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            5035.4,
+            60543.7
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
     {
         "pos": [
             4339,
@@ -100114,113 +100231,8 @@
     },
     {
         "pos": [
-            5034.7,
-            60543.9
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            3518,
-            61409
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "name": "Mastery Insight (VoE)",
-        "type": "mastery",
-        "pos": [
-            3808,
-            60559
-        ],
-        "chat_link": ""
-    },
-    {
-        "pos": [
-            4339,
-            60588
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
             5036,
             60672
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5116,
-            61685
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            3512,
-            62648
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            4039,
-            62137
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5047,
-            62280
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            4336,
-            62332
         ],
         "node": "Magic Mirrors",
         "yields": [
