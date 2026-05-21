@@ -100195,18 +100195,6 @@
     },
     {
         "pos": [
-            4339.1,
-            60588.1
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
             5035.4,
             60543.7
         ],
@@ -100221,18 +100209,6 @@
         "pos": [
             4339,
             60716
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5036,
-            60672
         ],
         "node": "Magic Mirrors",
         "yields": [
