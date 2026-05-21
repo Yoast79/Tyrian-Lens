@@ -76154,6 +76154,138 @@
         "item_id": 0,
         "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png"
     },
+	{
+        "pos": [
+            4994.1,
+            61945.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            5135.7,
+            62623.9
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4203.4,
+            62150.4
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4560.1,
+            62401.4
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4736.1,
+            62288.3
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            3793.4,
+            61998.9
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4084.6,
+            60659.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            3727.3,
+            61247.1
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4597.8,
+            60112.7
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            5114.3,
+            60111.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
+    {
+        "pos": [
+            4514.3,
+            60765.1
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": "node_mist_rift"
+    },
     {
         "pos": [
             56899.4,
@@ -102679,6 +102811,54 @@
         "node": "Zone Portal",
         "type": "node_zone_portal",
         "icon": "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            4049.2,
+            60652.9
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4010,
+            60667.7
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4019.2,
+            60641
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4040,
+            60710.5
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
     },
     {
         "pos": [
