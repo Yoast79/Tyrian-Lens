@@ -27192,31 +27192,10 @@
         "layer": "node_npc_services"
     },
     {
-        "pos": [34668, 47322],
-        "node": "Mistlock Sanctuary Waypoint",
-        "yields": ["Waypoint"],
-        "icon": "https://wiki.guildwars2.com/images/d/d2/Waypoint_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
         "pos": [34543, 47345],
         "node": "Fractals of the Mists",
         "yields": ["Fractals of the Mists"],
         "icon": "https://wiki.guildwars2.com/images/9/9f/Fractals_of_the_Mists_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34709, 47156],
-        "node": "ACLM-0403",
-        "yields": ["Guild Commendation Trader"],
-        "icon": "https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34403, 47089],
-        "node": "Sanctuary Krewe",
-        "yields": ["Activity"],
-        "icon": "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
@@ -27301,20 +27280,6 @@
         "node": "Mystic Forge Attendant",
         "yields": ["Mystic Forge"],
         "icon": "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34688, 47189],
-        "node": "BY-TK10",
-        "yields": ["Merchant"],
-        "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34687, 47164],
-        "node": "TRD-0B4",
-        "yields": ["Account vault"],
-        "icon": "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
