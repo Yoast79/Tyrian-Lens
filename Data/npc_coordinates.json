@@ -27199,15 +27199,8 @@
         "layer": "node_npc_services"
     },
     {
-        "pos": [34545, 47176],
-        "node": "Asura Gate (Mistlock Sanctuary)",
-        "yields": ["Asura Gate"],
-        "icon": "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
         "pos": [34543, 47345],
-        "node": "Fractals of the Mists (Mistlock)",
+        "node": "Fractals of the Mists",
         "yields": ["Fractals of the Mists"],
         "icon": "https://wiki.guildwars2.com/images/9/9f/Fractals_of_the_Mists_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -27228,63 +27221,63 @@
     },
     {
         "pos": [34589, 47193],
-        "node": "Master Tailor (Mistlock)",
+        "node": "Tailoring Station",
         "yields": ["Tailor"],
         "icon": "https://wiki.guildwars2.com/images/1/12/Tailoring_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34561, 47130],
-        "node": "Master Jeweler (Mistlock)",
+        "node": "Jeweling Station",
         "yields": ["Jeweler"],
         "icon": "https://wiki.guildwars2.com/images/b/b2/Jeweling_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34563, 47221],
-        "node": "Master Leatherworker (Mistlock)",
+        "node": "Leatherworking Station",
         "yields": ["Leatherworker"],
         "icon": "https://wiki.guildwars2.com/images/d/db/Leatherworking_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34588, 47159],
-        "node": "Master Armorsmith (Mistlock)",
+        "node": "Armorsmithing Station",
         "yields": ["Armorsmith"],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34525, 47131],
-        "node": "Master Chef (Mistlock)",
+        "node": "Cooking  Station",
         "yields": ["Chef"],
         "icon": "https://wiki.guildwars2.com/images/c/c4/Cooking_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34497, 47157],
-        "node": "Master Artificer (Mistlock)",
+        "node": "Artificing Station",
         "yields": ["Artificer"],
         "icon": "https://wiki.guildwars2.com/images/7/73/Artificing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34499, 47194],
-        "node": "Master Weaponsmith (Mistlock)",
+        "node": "weaponsmithing Station",
         "yields": ["Weaponsmith"],
         "icon": "https://wiki.guildwars2.com/images/7/75/Weaponsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34525, 47221],
-        "node": "Master Huntsman (Mistlock)",
+        "node": "Huntsman Station",
         "yields": ["Huntsman"],
         "icon": "https://wiki.guildwars2.com/images/1/1d/Huntsman%27s_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
         "pos": [34509, 47057],
-        "node": "Aesthetician (Mistlock)",
+        "node": "Aesthetician",
         "yields": ["Makeover Preview"],
         "icon": "https://wiki.guildwars2.com/images/6/61/Makeover_Preview_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -27305,7 +27298,7 @@
     },
     {
         "pos": [34469, 47314],
-        "node": "Mystic Forge Attendant (Mistlock)",
+        "node": "Mystic Forge Attendant",
         "yields": ["Mystic Forge"],
         "icon": "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
         "layer": "node_npc_services"
@@ -27325,45 +27318,10 @@
         "layer": "node_npc_services"
     },
     {
-        "pos": [34689, 47176],
-        "node": "SL-5001",
-        "yields": ["Trading Post"],
-        "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
         "pos": [34718, 47176],
         "node": "Black Lion Weapons Specialist",
         "yields": ["Weaponsmith (vendor)"],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34720, 47195],
-        "node": "Black Lion Researcher",
-        "yields": ["Guild Vault"],
-        "icon": "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34416, 47301],
-        "node": "Merit Professor Rizzak",
-        "yields": ["Laurel Merchant"],
-        "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34510, 47247],
-        "node": "Tekka",
-        "yields": ["Gathering Merchant"],
-        "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [34509, 47258],
-        "node": "Dungeon Merchant (Mistlock)",
-        "yields": ["Dungeon Merchant"],
-        "icon": "https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
@@ -27424,7 +27382,7 @@
     },
     {
         "pos": [34455, 47016],
-        "node": "Raid Rally Point (Mistlock)",
+        "node": "Raid Rally Point",
         "yields": ["Raid Rally Point"],
         "icon": "https://wiki.guildwars2.com/images/8/86/Raid_%28map_icon%29.png",
         "layer": "node_npc_services"
