@@ -69,7 +69,6 @@ Built with a high-performance **C# / .NET 9** core and a modern **WebView2** fro
 *   **[WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)**: Used for the Chromium-based UI bridge.
 *   **[Lady Elyssa](https://github.com/LadyElyssa)**: Coordinates for various map markers.
 *   **[gw2efficiency](https://gw2efficiency.com/)**: Great inspiration for the Crafting Calculator.
-*   **[Google Gemini LLM](https://gemini.google.com/)**: Great help with my limited knowledge of coding.
 
 ### Disclaimer
 *   Tyrian Lens is a third-party application and is **not affiliated with or endorsed by ArenaNet or NCSOFT**. Use of this application is at your own risk. It is designed to comply with the Guild Wars 2 User Agreement regarding third-party tools (no automation, only information display).
