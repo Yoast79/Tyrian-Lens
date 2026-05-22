@@ -42,7 +42,7 @@
         ],
         "node": "Orrius",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -54,7 +54,7 @@
         ],
         "node": "Paedra",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -188,7 +188,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -200,7 +200,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -212,7 +212,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -260,7 +260,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -282,7 +282,7 @@
         ],
         "node": "Flaum",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -294,7 +294,7 @@
         ],
         "node": "Caelia",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -330,7 +330,7 @@
         ],
         "node": "Praagh",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -342,7 +342,7 @@
         ],
         "node": "Alexus",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -352,9 +352,9 @@
             30202,
             57582
         ],
-        "node": "Herta (weaponsmith)",
+        "node": "Herta",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -366,7 +366,7 @@
         ],
         "node": "Polgus",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -378,7 +378,7 @@
         ],
         "node": "Bleyze",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -450,7 +450,7 @@
         ],
         "node": "Rarrii",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -500,7 +500,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -524,7 +524,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -548,7 +548,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -558,7 +558,7 @@
         ],
         "node": "Veryta Plainstread",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -630,7 +630,7 @@
         ],
         "node": "Kaven Sharpeye",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -642,7 +642,7 @@
         ],
         "node": "Trenur",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -654,7 +654,7 @@
         ],
         "node": "Quell",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -836,7 +836,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -860,7 +860,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -884,7 +884,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -894,7 +894,7 @@
         ],
         "node": "Latres Bladebane",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1050,7 +1050,7 @@
         ],
         "node": "Grett Ironbound",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1122,7 +1122,7 @@
         ],
         "node": "Tryphena Rustfur",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1134,7 +1134,7 @@
         ],
         "node": "Fibulus the Quick",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1170,7 +1170,7 @@
         ],
         "node": "Scarra Clawstrike",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1194,7 +1194,7 @@
         ],
         "node": "Remulus Sharpblade",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1278,7 +1278,7 @@
         ],
         "node": "Palagonius Steelsmasher",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1506,7 +1506,7 @@
         ],
         "node": "Clepta Calceus",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1686,7 +1686,7 @@
         ],
         "node": "Shove Earbleeder",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1710,7 +1710,7 @@
         ],
         "node": "Axbad Blightbringer",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1770,7 +1770,7 @@
         ],
         "node": "Shiva Axegrinder",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1794,7 +1794,7 @@
         ],
         "node": "Finna",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -1964,7 +1964,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -2094,7 +2094,7 @@
         ],
         "node": "Breen Teardealer",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2130,7 +2130,7 @@
         ],
         "node": "Zaan Ruinbringer",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2140,7 +2140,7 @@
             29609.3,
             56342
         ],
-        "node": "Merchant (North Nolan Hatchery)",
+        "node": "Merchant",
         "yields": [
             "Merchant"
         ],
@@ -2236,7 +2236,7 @@
             28519.1,
             57071.2
         ],
-        "node": "Bartender (Butcher's Block)",
+        "node": "Bartender",
         "yields": [
             "Merchant"
         ],
@@ -2478,7 +2478,7 @@
         ],
         "node": "Ulma",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2490,7 +2490,7 @@
         ],
         "node": "Silas",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2574,7 +2574,7 @@
         ],
         "node": "Clareen Taylor",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2584,7 +2584,7 @@
             34877.2,
             61965.7
         ],
-        "node": "Ilya (NPC)",
+        "node": "Ilya",
         "yields": [
             "Jeweler"
         ],
@@ -2596,7 +2596,7 @@
             35349.7,
             62285.7
         ],
-        "node": "Bartender (Stronghold of Ebonhawke)",
+        "node": "Bartender",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -2764,7 +2764,7 @@
             34750.7,
             61999
         ],
-        "node": "Jorf (Stronghold of Ebonhawke)",
+        "node": "Jorf",
         "yields": [
             "Reinforce Armor"
         ],
@@ -2778,7 +2778,7 @@
         ],
         "node": "Jordi Laysmith",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -2836,7 +2836,7 @@
             33182,
             62467.6
         ],
-        "node": "Bartender (Sentinel's Perch)",
+        "node": "Bartender",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -3030,7 +3030,7 @@
         ],
         "node": "Will",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3102,7 +3102,7 @@
         ],
         "node": "Jodi",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3148,7 +3148,7 @@
             30257.2,
             63766.7
         ],
-        "node": "Slugger (reinforce armor)",
+        "node": "Slugger",
         "yields": [
             "Reinforce Armor"
         ],
@@ -3270,7 +3270,7 @@
         ],
         "node": "Tabun Mineweave",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3282,7 +3282,7 @@
         ],
         "node": "Narra Stripeclaw",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3330,7 +3330,7 @@
         ],
         "node": "Hronar",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3342,7 +3342,7 @@
         ],
         "node": "Trapper Sootpaws",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3510,7 +3510,7 @@
         ],
         "node": "Kore Sliceflesh",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3546,7 +3546,7 @@
         ],
         "node": "Regret Brightaxe",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3594,7 +3594,7 @@
         ],
         "node": "Torlan Manslayer",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3606,7 +3606,7 @@
         ],
         "node": "Tokkra of Iron",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -3678,7 +3678,7 @@
         ],
         "node": "Drim Steelbow",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4062,7 +4062,7 @@
         ],
         "node": "Colpa",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4074,7 +4074,7 @@
         ],
         "node": "Farbur Spinestrike",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4086,7 +4086,7 @@
         ],
         "node": "Oerus",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4110,7 +4110,7 @@
         ],
         "node": "Kessio",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4216,7 +4216,7 @@
             28476,
             60549
         ],
-        "node": "Merchant (Iron Marches Fishing Supplies)",
+        "node": "Merchant",
         "yields": [
             "Fishing Supplies"
         ],
@@ -4230,7 +4230,7 @@
         ],
         "node": "Toral",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4240,7 +4240,7 @@
             28467.4,
             60538.75
         ],
-        "node": "Merchant (Iron Marches Fishmonger)",
+        "node": "Merchant",
         "yields": [
             "Fishmonger"
         ],
@@ -4374,7 +4374,7 @@
         ],
         "node": "Gero",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4386,7 +4386,7 @@
         ],
         "node": "Vexi",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4408,7 +4408,7 @@
             26982,
             60767
         ],
-        "node": "Ash Legion Spy (vendor)",
+        "node": "Ash Legion Spy",
         "yields": [
             "Event merchant"
         ],
@@ -4540,7 +4540,7 @@
             27360.5,
             57052.2
         ],
-        "node": "Wupwup Villager (merchant)",
+        "node": "Wupwup Villager",
         "yields": [
             "Merchant"
         ],
@@ -4552,7 +4552,7 @@
             27091,
             56980.2
         ],
-        "node": "Tarstar Villager (merchant)",
+        "node": "Tarstar Villager",
         "yields": [
             "Merchant"
         ],
@@ -4564,7 +4564,7 @@
             26668.9,
             57115.1
         ],
-        "node": "Nrocroc Villager (merchant)",
+        "node": "Nrocroc Villager",
         "yields": [
             "Merchant"
         ],
@@ -4590,7 +4590,7 @@
         ],
         "node": "Quaestor Marddock",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4614,7 +4614,7 @@
         ],
         "node": "Quaestor Rohara",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4722,7 +4722,7 @@
         ],
         "node": "Filipus Ironshaper",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4734,7 +4734,7 @@
         ],
         "node": "Grietje Bearsgrowl",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -4974,7 +4974,7 @@
         ],
         "node": "Genexia Helmforger",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5020,7 +5020,7 @@
             25381.7,
             58609.9
         ],
-        "node": "Ash Legion Spy (reinforce armor)",
+        "node": "Ash Legion Spy",
         "yields": [
             "Reinforce Armor"
         ],
@@ -5032,7 +5032,7 @@
             25402.3,
             58553.1
         ],
-        "node": "Ash Legion Spy (merchant)",
+        "node": "Ash Legion Spy",
         "yields": [
             "Merchant"
         ],
@@ -5118,7 +5118,7 @@
         ],
         "node": "Andrianna",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5142,7 +5142,7 @@
         ],
         "node": "Kiran",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5164,7 +5164,7 @@
             27436.1,
             43833.2
         ],
-        "node": "Apprentice (cooking)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5176,7 +5176,7 @@
             27459.5,
             44139.1
         ],
-        "node": "Apprentice (artificing)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5188,7 +5188,7 @@
             27451,
             44200
         ],
-        "node": "Apprentice (leatherworking)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5200,7 +5200,7 @@
             27486.2,
             44084.3
         ],
-        "node": "Apprentice (weaponsmithing)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5224,7 +5224,7 @@
             27481.9,
             43913.9
         ],
-        "node": "Apprentice (jeweler)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5236,7 +5236,7 @@
             27460.4,
             43883
         ],
-        "node": "Apprentice (tailoring)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5248,11 +5248,11 @@
             27158,
             43661
         ],
-        "node": "Merchant (District Promenade)",
+        "node": "Merchant",
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -5260,7 +5260,7 @@
             27463.6,
             44158.8
         ],
-        "node": "Apprentice (huntsman)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5310,7 +5310,7 @@
         ],
         "node": "Felthaugh",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5320,7 +5320,7 @@
             27505,
             43923.8
         ],
-        "node": "Apprentice (armorsmithing)",
+        "node": "Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -5346,7 +5346,7 @@
         ],
         "node": "Lukas",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5394,7 +5394,7 @@
         ],
         "node": "Elena Swiftdraw",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5538,7 +5538,7 @@
         ],
         "node": "Gulsan",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5550,7 +5550,7 @@
         ],
         "node": "Lakish",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5562,7 +5562,7 @@
         ],
         "node": "Nateen",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5574,7 +5574,7 @@
         ],
         "node": "Hasrah",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5586,7 +5586,7 @@
         ],
         "node": "Balshiel",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5598,7 +5598,7 @@
         ],
         "node": "Jaziah",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5622,7 +5622,7 @@
         ],
         "node": "Hollinder",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5634,7 +5634,7 @@
         ],
         "node": "Yasmine",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5706,7 +5706,7 @@
         ],
         "node": "Chandran",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5728,7 +5728,7 @@
             26793,
             43552
         ],
-        "node": "Bartender (Plaza of Balthazar)",
+        "node": "Bartender",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -5764,7 +5764,7 @@
             26878.3,
             44612.8
         ],
-        "node": "Priest of Lyssa (speed boons)",
+        "node": "Priest of Lyssa",
         "yields": [
             "Speed boons"
         ],
@@ -5848,7 +5848,7 @@
             27208,
             44634
         ],
-        "node": "Bartender (Rurikton)",
+        "node": "Bartender",
         "yields": [
             "Merchant"
         ],
@@ -5862,7 +5862,7 @@
         ],
         "node": "Helatia",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5922,7 +5922,7 @@
         ],
         "node": "Balthamus",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -5944,7 +5944,7 @@
             26710,
             44364
         ],
-        "node": "Bartender (Salma District)",
+        "node": "Bartender",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -5956,7 +5956,7 @@
             27298,
             43512
         ],
-        "node": "Charity Corps Seraph (Gift Wrapping)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -5968,7 +5968,7 @@
             27178,
             43552
         ],
-        "node": "Firecracker Lighting 2 (NPC)",
+        "node": "Firecracker Lighting 2",
         "yields": [
             "Adventure"
         ],
@@ -5980,7 +5980,7 @@
             27153,
             43522
         ],
-        "node": "Firecracker Lighting (NPC)",
+        "node": "Firecracker Lighting",
         "yields": [
             "Adventure"
         ],
@@ -6016,7 +6016,7 @@
             27282,
             43525
         ],
-        "node": "Charity Corps Seraph (Wintersday Gifts)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -6028,7 +6028,7 @@
             27264,
             43543
         ],
-        "node": "Charity Corps Seraph (Wintersday Crafting)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -6040,7 +6040,7 @@
             27254,
             43537
         ],
-        "node": "Charity Corps Seraph (Snowflake Trader)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -6076,7 +6076,7 @@
             27288,
             43519
         ],
-        "node": "Charity Corps Seraph (Wintersday Skins)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -6088,7 +6088,7 @@
             27277,
             43525
         ],
-        "node": "Charity Corps Seraph (Wintersday Rewards)",
+        "node": "Charity Corps Seraph",
         "yields": [
             "Gift Exchange, Festival Merchant"
         ],
@@ -6100,7 +6100,7 @@
             27192,
             43530
         ],
-        "node": "Wintersday Trader (Weekly)",
+        "node": "Wintersday Trader",
         "yields": [
             "Festival Merchant"
         ],
@@ -6196,7 +6196,7 @@
             27476.6,
             43967.5
         ],
-        "node": "Glory (armorsmith)",
+        "node": "Glory",
         "yields": [
             "Cultural armorsmith"
         ],
@@ -6232,7 +6232,7 @@
             27140.3,
             43931.9
         ],
-        "node": "Priestess of Melandru (speed boons)",
+        "node": "Priestess of Melandru",
         "yields": [
             "Speed boons"
         ],
@@ -6268,7 +6268,7 @@
             30851,
             48609
         ],
-        "node": "Skritt Trader (Lion's Arch)",
+        "node": "Skritt Trader",
         "yields": [
             "Faction Provisioner"
         ],
@@ -6316,7 +6316,7 @@
             30960,
             49300
         ],
-        "node": "Black Lion Weapons Specialist (Privateer Weapons)",
+        "node": "Black Lion Weapons Specialist",
         "yields": [
             "Vendor"
         ],
@@ -6328,7 +6328,7 @@
             31741.7,
             49884.1
         ],
-        "node": "Tourist (speed boons)",
+        "node": "Tourist",
         "yields": [
             "Speed boons"
         ],
@@ -6352,7 +6352,7 @@
             31949,
             49374
         ],
-        "node": "Lionguard (Merchant)",
+        "node": "Lionguard",
         "yields": [
             "Merchant"
         ],
@@ -6364,7 +6364,7 @@
             31951,
             49392
         ],
-        "node": "Lionguard (Skirmish Merchant)",
+        "node": "Lionguard",
         "yields": [
             "Skirmish Merchant"
         ],
@@ -6376,7 +6376,7 @@
             31670.8,
             49452.2
         ],
-        "node": "Lionguard (speed boons)",
+        "node": "Lionguard",
         "yields": [
             "Speed boons"
         ],
@@ -6462,7 +6462,7 @@
         ],
         "node": "Uttorrchakk",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -6546,7 +6546,7 @@
         ],
         "node": "Frakktukk",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -6664,7 +6664,7 @@
             31546.39,
             48867.73
         ],
-        "node": "Dock Worker (Lion's Arch Fishmonger)",
+        "node": "Dock Worker",
         "yields": [
             "Fishmonger"
         ],
@@ -6688,7 +6688,7 @@
             32018,
             48763
         ],
-        "node": "Lionguard Aircrew (Transport Facilitator)",
+        "node": "Lionguard Aircrew",
         "yields": [
             "Transport Facilitator"
         ],
@@ -6700,7 +6700,7 @@
             30998,
             49027
         ],
-        "node": "Villager (Homestead Master)",
+        "node": "Villager ",
         "yields": [
             "Homestead Master"
         ],
@@ -6728,7 +6728,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -6800,7 +6800,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -6834,7 +6834,7 @@
         ],
         "node": "Bess",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -6844,7 +6844,7 @@
             31078.6,
             48395.4
         ],
-        "node": "Skritt Forager (speed boons)",
+        "node": "Skritt Forager",
         "yields": [
             "Speed boons"
         ],
@@ -6856,7 +6856,7 @@
             31245.6,
             48573.3
         ],
-        "node": "Bartender (norn)",
+        "node": "Bartender",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -6882,7 +6882,7 @@
         ],
         "node": "Derrack",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -6904,7 +6904,7 @@
             31613.1,
             48203.5
         ],
-        "node": "Priory Explorer (speed boons)",
+        "node": "Priory Explorer",
         "yields": [
             "Speed boons"
         ],
@@ -7026,7 +7026,7 @@
         ],
         "node": "Trint",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7038,7 +7038,7 @@
         ],
         "node": "Adaline",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7062,7 +7062,7 @@
         ],
         "node": "Supplymaster Aisly",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7192,7 +7192,7 @@
             29366,
             44086
         ],
-        "node": "Nessa (repair)",
+        "node": "Nessa",
         "yields": [
             "Reinforce Armor"
         ],
@@ -7206,7 +7206,7 @@
         ],
         "node": "Bolan",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7254,7 +7254,7 @@
         ],
         "node": "Greggor",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7350,7 +7350,7 @@
         ],
         "node": "Guard Barthol",
         "yields": [
-            "Event merchant, Weaponsmith (vendor)"
+            "Event merchant, Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7446,7 +7446,7 @@
         ],
         "node": "Fulvus",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7494,7 +7494,7 @@
         ],
         "node": "Belliak",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7542,7 +7542,7 @@
         ],
         "node": "Supplymaster Trudi",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7614,7 +7614,7 @@
         ],
         "node": "Josselyn",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7626,7 +7626,7 @@
         ],
         "node": "Aremis",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -7938,7 +7938,7 @@
         ],
         "node": "Reld",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8022,7 +8022,7 @@
         ],
         "node": "Brandon",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8058,7 +8058,7 @@
         ],
         "node": "Nerain",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8070,7 +8070,7 @@
         ],
         "node": "Brennan",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8142,7 +8142,7 @@
         ],
         "node": "Cham",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8154,7 +8154,7 @@
         ],
         "node": "Riley",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8214,7 +8214,7 @@
         ],
         "node": "Lena",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8226,7 +8226,7 @@
         ],
         "node": "Laurent",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8320,9 +8320,9 @@
             31246,
             44430
         ],
-        "node": "Bronk (human)",
+        "node": "Bronk",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8406,7 +8406,7 @@
         ],
         "node": "Grouse Truemantle",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8418,7 +8418,7 @@
         ],
         "node": "Thrush Bronzewattle",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8490,7 +8490,7 @@
         ],
         "node": "Frith Greffelborn",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8574,7 +8574,7 @@
         ],
         "node": "Lara Stanwick",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8610,7 +8610,7 @@
         ],
         "node": "Elsa Marrok",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8740,7 +8740,7 @@
             29988,
             48817
         ],
-        "node": "Anna (reinforce armor)",
+        "node": "Anna",
         "yields": [
             "Reinforce Armor"
         ],
@@ -8826,7 +8826,7 @@
         ],
         "node": "Beramy",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8838,7 +8838,7 @@
         ],
         "node": "Jathael",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8970,7 +8970,7 @@
         ],
         "node": "Briadin",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -8982,7 +8982,7 @@
         ],
         "node": "Helina",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9054,7 +9054,7 @@
         ],
         "node": "Fionn",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9066,7 +9066,7 @@
         ],
         "node": "Shelani",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9186,7 +9186,7 @@
         ],
         "node": "Adelais",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9198,7 +9198,7 @@
         ],
         "node": "Larraine",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9222,7 +9222,7 @@
         ],
         "node": "Tactician Luzii",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9246,7 +9246,7 @@
         ],
         "node": "Crusader Eira",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9258,7 +9258,7 @@
         ],
         "node": "Weapon Requisitioner Arto",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9376,7 +9376,7 @@
             26096.2,
             48189.6
         ],
-        "node": "Seraph Sergeant (merchant)",
+        "node": "Seraph Sergeant",
         "yields": [
             "Merchant"
         ],
@@ -9388,7 +9388,7 @@
             26169.4,
             48252.3
         ],
-        "node": "Seraph Soldier (reinforcer)",
+        "node": "Seraph Soldier",
         "yields": [
             "Reinforce Armor"
         ],
@@ -9400,9 +9400,9 @@
             26370.1,
             48012.2
         ],
-        "node": "Seraph Lieutenant (armorsmith)",
+        "node": "Seraph Lieutenant",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9412,9 +9412,9 @@
             26415.5,
             47993.3
         ],
-        "node": "Seraph Guard (weaponsmith)",
+        "node": "Seraph Guard",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9424,7 +9424,7 @@
             26173.5,
             48180.8
         ],
-        "node": "Seraph Sergeant (trading post)",
+        "node": "Seraph Sergeant",
         "yields": [
             "Trading Post"
         ],
@@ -9474,7 +9474,7 @@
         ],
         "node": "Lyle Adrast",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9486,7 +9486,7 @@
         ],
         "node": "Raela",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -9916,7 +9916,7 @@
             32445.5,
             49639.6
         ],
-        "node": "Fisherman (Bloodtide Coast)",
+        "node": "Fisherman",
         "yields": [
             "Event merchant"
         ],
@@ -10036,7 +10036,7 @@
             34849,
             48291
         ],
-        "node": "Priory Arcanist (reinforcer)",
+        "node": "Priory Arcanist",
         "yields": [
             "Reinforce Armor"
         ],
@@ -10144,7 +10144,7 @@
             32546.7,
             50158.1
         ],
-        "node": "Merchant (Merchant)",
+        "node": "Merchant",
         "yields": [
             "Merchant"
         ],
@@ -10266,7 +10266,7 @@
         ],
         "node": "Valan Stormspirit",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10278,7 +10278,7 @@
         ],
         "node": "Edrick Flinn",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10362,7 +10362,7 @@
         ],
         "node": "Velaire",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10374,7 +10374,7 @@
         ],
         "node": "Clarke",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10444,7 +10444,7 @@
             36888.6,
             46570.4
         ],
-        "node": "Consortium Beverage Vendor (Pearl Islet)",
+        "node": "Consortium Beverage Vendor",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -10458,7 +10458,7 @@
         ],
         "node": "Consortium Arms Dealer",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10472,7 +10472,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -10496,7 +10496,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -10542,7 +10542,7 @@
         ],
         "node": "Lionguard Vogel",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10554,7 +10554,7 @@
         ],
         "node": "Lionguard Inka",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10600,7 +10600,7 @@
             35728.9,
             46603.3
         ],
-        "node": "Consortium Beverage Vendor (Southsun Shoals)",
+        "node": "Consortium Beverage Vendor",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -10710,7 +10710,7 @@
         ],
         "node": "Hirrp",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10794,7 +10794,7 @@
         ],
         "node": "Nuuri",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -10806,7 +10806,7 @@
         ],
         "node": "Weena",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -11056,7 +11056,7 @@
             38315.51,
             37942.84
         ],
-        "node": "Dock Worker (Rata Sum Fishmonger)",
+        "node": "Dock Worker",
         "yields": [
             "Fishmonger"
         ],
@@ -11216,7 +11216,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11224,7 +11224,7 @@
             37076,
             43152
         ],
-        "node": "Alma (Consortium)",
+        "node": "Alma",
         "yields": [
             "Consortium Officer"
         ],
@@ -11370,7 +11370,7 @@
         ],
         "node": "Arman",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -11384,7 +11384,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11406,7 +11406,7 @@
         ],
         "node": "Atheide",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -11456,7 +11456,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11468,7 +11468,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11480,7 +11480,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11540,7 +11540,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11576,7 +11576,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11612,7 +11612,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11636,7 +11636,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11656,7 +11656,7 @@
             37497,
             43241
         ],
-        "node": "Mona (Bank)",
+        "node": "Mona",
         "yields": [
             "Account vault"
         ],
@@ -11780,7 +11780,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -11824,7 +11824,7 @@
             35654.3,
             43301.2
         ],
-        "node": "Citizen (merchant)",
+        "node": "Citizen",
         "yields": [
             "Event merchant"
         ],
@@ -11862,7 +11862,7 @@
         ],
         "node": "Swift Blacktalon",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -11886,7 +11886,7 @@
         ],
         "node": "Alise",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12030,7 +12030,7 @@
         ],
         "node": "Nabudans",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12042,7 +12042,7 @@
         ],
         "node": "Acaire",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12282,7 +12282,7 @@
         ],
         "node": "Andelise",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12354,7 +12354,7 @@
         ],
         "node": "Tengu Trader",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12378,7 +12378,7 @@
         ],
         "node": "Xee",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12402,7 +12402,7 @@
         ],
         "node": "Unt",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12810,7 +12810,7 @@
         ],
         "node": "Powla",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12858,7 +12858,7 @@
         ],
         "node": "Kreb",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -12976,7 +12976,7 @@
             34325,
             40591
         ],
-        "node": "Peacemaker Officer (merchant)",
+        "node": "Peacemaker Officer",
         "yields": [
             "Merchant"
         ],
@@ -13036,7 +13036,7 @@
             36682,
             41311
         ],
-        "node": "Krewe Apprentice (merchant)",
+        "node": "Krewe Apprentice",
         "yields": [
             "Merchant"
         ],
@@ -13060,7 +13060,7 @@
             36410,
             41663
         ],
-        "node": "Technician (merchant)",
+        "node": "Technician",
         "yields": [
             "Event merchant"
         ],
@@ -13120,7 +13120,7 @@
             34544,
             41745
         ],
-        "node": "LUM-0009 (reinforce armor)",
+        "node": "LUM-0009",
         "yields": [
             "Reinforce Armor"
         ],
@@ -13132,9 +13132,9 @@
             34546,
             41725
         ],
-        "node": "LUM-0009 (armorsmith)",
+        "node": "LUM-0009",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13144,9 +13144,9 @@
             34533,
             41749
         ],
-        "node": "LUM-0009 (weaponsmith)",
+        "node": "LUM-0009",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13156,7 +13156,7 @@
             34569,
             41740
         ],
-        "node": "LUM-0009 (merchant)",
+        "node": "LUM-0009",
         "yields": [
             "Merchant"
         ],
@@ -13266,7 +13266,7 @@
         ],
         "node": "Peacemaker Krabb",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13302,7 +13302,7 @@
         ],
         "node": "Arrchtik",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13314,7 +13314,7 @@
         ],
         "node": "Ropptuk",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13434,7 +13434,7 @@
         ],
         "node": "Anza",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13482,7 +13482,7 @@
         ],
         "node": "Kikka",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13566,7 +13566,7 @@
         ],
         "node": "Elkott",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13588,7 +13588,7 @@
             32437,
             39877
         ],
-        "node": "Gatekeeper (merchant)",
+        "node": "Gatekeeper",
         "yields": [
             "Event merchant"
         ],
@@ -13614,7 +13614,7 @@
         ],
         "node": "Rollt",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13890,7 +13890,7 @@
         ],
         "node": "Tinkerer Kattalay",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -13902,7 +13902,7 @@
         ],
         "node": "Tinkerer Ezaratch",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14058,7 +14058,7 @@
         ],
         "node": "Kayla",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14070,7 +14070,7 @@
         ],
         "node": "Ordon",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14178,7 +14178,7 @@
         ],
         "node": "Heggel",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14248,9 +14248,9 @@
             33300,
             40651
         ],
-        "node": "Jorf (Venlin Vale)",
+        "node": "Jorf",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14370,7 +14370,7 @@
         ],
         "node": "Brikawik",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14382,7 +14382,7 @@
         ],
         "node": "Loravere",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14404,7 +14404,7 @@
             37548.9,
             48890.2
         ],
-        "node": "Wyld Hunt Steward (merchant)",
+        "node": "Wyld Hunt Steward",
         "yields": [
             "Event merchant"
         ],
@@ -14538,7 +14538,7 @@
         ],
         "node": "Amak",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14560,7 +14560,7 @@
             36743.5,
             49216.9
         ],
-        "node": "Hunter (merchant)",
+        "node": "Hunter",
         "yields": [
             "Event merchant"
         ],
@@ -14620,7 +14620,7 @@
             36171,
             49550
         ],
-        "node": "Ni-tlacua Hunter (merchant)",
+        "node": "Ni-tlacua Hunter",
         "yields": [
             "Merchant"
         ],
@@ -14644,7 +14644,7 @@
             38099,
             48647
         ],
-        "node": "Zort (Sparkfly Fen)",
+        "node": "Zort",
         "yields": [
             "Reinforce Armor"
         ],
@@ -14670,7 +14670,7 @@
         ],
         "node": "Taillte",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14740,7 +14740,7 @@
             35780.1,
             49631.9
         ],
-        "node": "Vigil Crusader (merchant)",
+        "node": "Vigil Crusader",
         "yields": [
             "Event merchant"
         ],
@@ -14790,7 +14790,7 @@
         ],
         "node": "Mate Earnest",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -14872,7 +14872,7 @@
             35650,
             48706
         ],
-        "node": "Vigil Crusader (reinforce armor)",
+        "node": "Vigil Crusader",
         "yields": [
             "Reinforce Armor"
         ],
@@ -14896,7 +14896,7 @@
             36138,
             49879
         ],
-        "node": "Nahualli (merchant)",
+        "node": "Nahualli",
         "yields": [
             "Merchant"
         ],
@@ -14920,7 +14920,7 @@
             37266.1,
             49291.3
         ],
-        "node": "Priory Scholar (merchant)",
+        "node": "Priory Scholar",
         "yields": [
             "Event merchant"
         ],
@@ -14956,7 +14956,7 @@
             37605,
             49540
         ],
-        "node": "Urais (merchant)",
+        "node": "Urais",
         "yields": [
             "Merchant"
         ],
@@ -14994,7 +14994,7 @@
         ],
         "node": "Boyne",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15018,7 +15018,7 @@
         ],
         "node": "Badb",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15208,9 +15208,9 @@
             37999,
             53036
         ],
-        "node": "Anna (armorsmith)",
+        "node": "Anna",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15246,7 +15246,7 @@
         ],
         "node": "Astrarot",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15364,9 +15364,9 @@
             38925,
             51276
         ],
-        "node": "Vigil Tactician (weaponsmith)",
+        "node": "Vigil Tactician",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15412,9 +15412,9 @@
             38967,
             51305
         ],
-        "node": "Whispers Agent (armorsmith)",
+        "node": "Whispers Agent",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15556,7 +15556,7 @@
             39559,
             53088
         ],
-        "node": "Whispers Creator (merchant)",
+        "node": "Whispers Creator",
         "yields": [
             "Merchant"
         ],
@@ -15628,7 +15628,7 @@
             39065,
             55725
         ],
-        "node": "Master of Sun (Bazaar Docks)",
+        "node": "Master of Sun",
         "yields": [
             "Lore"
         ],
@@ -15656,7 +15656,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -15666,7 +15666,7 @@
         ],
         "node": "Kimmi",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15678,7 +15678,7 @@
         ],
         "node": "Ulster",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -15760,11 +15760,11 @@
             39002.7,
             55742.9
         ],
-        "node": "Trader (karma merchant)",
+        "node": "Trader",
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -15772,7 +15772,7 @@
             39169.3,
             55733.2
         ],
-        "node": "Zephyrite (Sanctum Sprint)",
+        "node": "Zephyrite",
         "yields": [
             "Activity"
         ],
@@ -15784,7 +15784,7 @@
             39161.4,
             55702.6
         ],
-        "node": "Zephyrite (Aspect Arena)",
+        "node": "Zephyrite",
         "yields": [
             "Activity"
         ],
@@ -15872,7 +15872,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -15908,7 +15908,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -15968,7 +15968,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16014,7 +16014,7 @@
         ],
         "node": "Guthrud",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16062,7 +16062,7 @@
         ],
         "node": "Atli",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16072,7 +16072,7 @@
             30184,
             52873
         ],
-        "node": "Brewer (Keg Brawl)",
+        "node": "Brewer",
         "yields": [
             "Activity"
         ],
@@ -16108,7 +16108,7 @@
             30506.5,
             53948.4
         ],
-        "node": "Dragon Bash Merchant (Weekly)",
+        "node": "Dragon Bash Merchant",
         "yields": [
             "Festival Merchant"
         ],
@@ -16120,7 +16120,7 @@
             30584.3,
             53840.9
         ],
-        "node": "Dragon Bash Merchant (Potions)",
+        "node": "Dragon Bash Merchant",
         "yields": [
             "Festival Merchant"
         ],
@@ -16132,7 +16132,7 @@
             30580.4,
             53881.7
         ],
-        "node": "Dragon Bash Merchant (Candy)",
+        "node": "Dragon Bash Merchant",
         "yields": [
             "Festival Merchant"
         ],
@@ -16144,7 +16144,7 @@
             30523,
             53714
         ],
-        "node": "Dragon Bash Merchant (Prizes)",
+        "node": "Dragon Bash Merchant",
         "yields": [
             "Festival Merchant"
         ],
@@ -16156,7 +16156,7 @@
             30511.8,
             53912.3
         ],
-        "node": "Dragon Bash Merchant (Weapons)",
+        "node": "Dragon Bash Merchant",
         "yields": [
             "Festival Merchant"
         ],
@@ -16184,7 +16184,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16194,7 +16194,7 @@
         ],
         "node": "Syftun",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16206,7 +16206,7 @@
         ],
         "node": "Haror",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16232,7 +16232,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16242,7 +16242,7 @@
         ],
         "node": "Nidbjorg",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16328,7 +16328,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16338,7 +16338,7 @@
         ],
         "node": "Talla",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16362,7 +16362,7 @@
         ],
         "node": "Bersi",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16374,7 +16374,7 @@
         ],
         "node": "Veleif",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -16444,7 +16444,7 @@
             31089,
             53590
         ],
-        "node": "Maeva (merchant)",
+        "node": "Maeva",
         "yields": [
             "Merchant, Bartender"
         ],
@@ -16508,7 +16508,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16520,7 +16520,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16552,7 +16552,7 @@
             30819.1,
             53721.5
         ],
-        "node": "Reimar (master tailor)",
+        "node": "Reimar",
         "yields": [
             "Tailor"
         ],
@@ -16708,7 +16708,7 @@
             30781.1,
             53596.3
         ],
-        "node": "Piñata Bashing (NPC)",
+        "node": "Piñata Bashing",
         "yields": [
             "Adventure"
         ],
@@ -16768,7 +16768,7 @@
             30799,
             53815.9
         ],
-        "node": "Reimar (master chef)",
+        "node": "Reimar",
         "yields": [
             "Chef"
         ],
@@ -16904,7 +16904,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16964,7 +16964,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -16972,7 +16972,7 @@
             30746,
             54018
         ],
-        "node": "Holda (Wolf Lodge)",
+        "node": "Holda",
         "yields": [
             "Merchant"
         ],
@@ -17140,7 +17140,7 @@
             31665,
             56013
         ],
-        "node": "Peaceful Grawl (merchant)",
+        "node": "Peaceful Grawl",
         "yields": [
             "Event merchant"
         ],
@@ -17214,7 +17214,7 @@
         ],
         "node": "Gautarr",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17238,7 +17238,7 @@
         ],
         "node": "Thangus",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17250,7 +17250,7 @@
         ],
         "node": "Blacksmith Aina",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17382,7 +17382,7 @@
         ],
         "node": "Kathall",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17394,7 +17394,7 @@
         ],
         "node": "Jeska",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17694,7 +17694,7 @@
         ],
         "node": "Hilgra",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -17706,7 +17706,7 @@
         ],
         "node": "Conrad the Sly",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18006,7 +18006,7 @@
         ],
         "node": "Brehilda",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18030,7 +18030,7 @@
         ],
         "node": "Thromir",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18042,7 +18042,7 @@
         ],
         "node": "Bleeding Ice",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18054,7 +18054,7 @@
         ],
         "node": "Stubborn Shell",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18126,7 +18126,7 @@
         ],
         "node": "Tarn",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18150,7 +18150,7 @@
         ],
         "node": "Aina",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18234,7 +18234,7 @@
         ],
         "node": "Avid Grelkin",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18258,7 +18258,7 @@
         ],
         "node": "Bromaj",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18304,7 +18304,7 @@
             29369.9,
             52691.8
         ],
-        "node": "Northern Refugee (merchant)",
+        "node": "Northern Refugee",
         "yields": [
             "Event merchant"
         ],
@@ -18388,7 +18388,7 @@
             31394.1,
             50675.9
         ],
-        "node": "Mordrem Researcher (NPC)",
+        "node": "Mordrem Researcher",
         "yields": [
             "Mordrem Researcher"
         ],
@@ -18402,7 +18402,7 @@
         ],
         "node": "Explorer Holly",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18426,7 +18426,7 @@
         ],
         "node": "Arcanist Braccae",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18508,7 +18508,7 @@
             33193,
             51120
         ],
-        "node": "Peg Leg (NPC)",
+        "node": "Peg Leg",
         "yields": [
             "Hero challenge"
         ],
@@ -18666,7 +18666,7 @@
         ],
         "node": "Agent Beeyo",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18714,7 +18714,7 @@
         ],
         "node": "Agent Herdis",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18762,7 +18762,7 @@
         ],
         "node": "Leanne",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18786,7 +18786,7 @@
         ],
         "node": "Tenka",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -18978,7 +18978,7 @@
         ],
         "node": "Stefnir",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19000,9 +19000,9 @@
             34112,
             51916
         ],
-        "node": "Rauha (weaponsmith)",
+        "node": "Rauha",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19180,9 +19180,9 @@
             34300.4,
             53649.4
         ],
-        "node": "Sven (Dredgehaunt Cliffs)",
+        "node": "Sven",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19218,7 +19218,7 @@
         ],
         "node": "Hralda",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19338,7 +19338,7 @@
         ],
         "node": "Vractaeg",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19374,7 +19374,7 @@
         ],
         "node": "Donnrakit",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19422,7 +19422,7 @@
         ],
         "node": "Ygo",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19434,7 +19434,7 @@
         ],
         "node": "Thordis",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19470,7 +19470,7 @@
         ],
         "node": "Lorna",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19482,7 +19482,7 @@
         ],
         "node": "Haggar",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19732,7 +19732,7 @@
             35743,
             52692
         ],
-        "node": "Skritt Forager (merchant)",
+        "node": "Skritt Forager",
         "yields": [
             "Merchant"
         ],
@@ -19854,7 +19854,7 @@
         ],
         "node": "Dwynn",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19866,7 +19866,7 @@
         ],
         "node": "Ixxa",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19888,7 +19888,7 @@
             36562.8,
             53201.9
         ],
-        "node": "Urais (hylek)",
+        "node": "Urais",
         "yields": [
             "Merchant"
         ],
@@ -19902,7 +19902,7 @@
         ],
         "node": "Pahti",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -19974,7 +19974,7 @@
         ],
         "node": "Raznik Rendclaw",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20010,7 +20010,7 @@
         ],
         "node": "Scavin Rendclaw",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20044,9 +20044,9 @@
             37555,
             53292.6
         ],
-        "node": "Villager (armorsmith)",
+        "node": "Villager",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20056,9 +20056,9 @@
             37584.2,
             53275.8
         ],
-        "node": "Villager (weaponsmith)",
+        "node": "Villager",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20128,9 +20128,9 @@
             35379.3,
             53863.5
         ],
-        "node": "Whispers Initiate (armorsmith)",
+        "node": "Whispers Initiate",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20140,7 +20140,7 @@
             35409.6,
             53860.6
         ],
-        "node": "Whispers Agent (reinforce armor)",
+        "node": "Whispers Agent",
         "yields": [
             "Reinforce Armor"
         ],
@@ -20152,9 +20152,9 @@
             35393.3,
             53856.6
         ],
-        "node": "Whispers Agent (weaponsmith)",
+        "node": "Whispers Agent",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20164,7 +20164,7 @@
             35338.2,
             53885.1
         ],
-        "node": "Whispers Agent (merchant)",
+        "node": "Whispers Agent",
         "yields": [
             "Merchant"
         ],
@@ -20248,7 +20248,7 @@
             35090.7,
             52916.6
         ],
-        "node": "Local (merchant)",
+        "node": "Local",
         "yields": [
             "Merchant"
         ],
@@ -20260,7 +20260,7 @@
             35073,
             52904
         ],
-        "node": "Local (reinforce armor)",
+        "node": "Local",
         "yields": [
             "Reinforce Armor"
         ],
@@ -20466,7 +20466,7 @@
         ],
         "node": "Creden",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20490,7 +20490,7 @@
         ],
         "node": "Stubb",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20502,7 +20502,7 @@
         ],
         "node": "Honorable Paw",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20704,7 +20704,7 @@
             26186.42,
             54390.76
         ],
-        "node": "Twoloop Trader (Fishing Supplies)",
+        "node": "Twoloop Trader",
         "yields": [
             "Fishing Supplies"
         ],
@@ -20716,7 +20716,7 @@
             26204.43,
             54397.76
         ],
-        "node": "Twoloop Trader (Fishmonger)",
+        "node": "Twoloop Trader",
         "yields": [
             "Fishmonger"
         ],
@@ -20778,7 +20778,7 @@
         ],
         "node": "Whistling Serenity",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -20838,7 +20838,7 @@
         ],
         "node": "Tempered Emotion",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21032,7 +21032,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21068,7 +21068,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21092,7 +21092,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21136,7 +21136,7 @@
             40060,
             50071
         ],
-        "node": "Priory Magister (hero challenge)",
+        "node": "Priory Magister",
         "yields": [
             "Hero challenge"
         ],
@@ -21148,7 +21148,7 @@
             40005.2,
             50035
         ],
-        "node": "Kevin (NPC)",
+        "node": "Kevin",
         "yields": [
             "Reinforce Armor"
         ],
@@ -21162,7 +21162,7 @@
         ],
         "node": "Dagmar",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21188,7 +21188,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21234,7 +21234,7 @@
         ],
         "node": "Manipa",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21260,7 +21260,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21296,7 +21296,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21344,7 +21344,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21380,7 +21380,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21440,7 +21440,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21474,7 +21474,7 @@
         ],
         "node": "Explorer Welbi",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21522,7 +21522,7 @@
         ],
         "node": "Tactician Eliot",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21532,7 +21532,7 @@
             40336,
             48029
         ],
-        "node": "Vigil Tactician (hero challenge)",
+        "node": "Vigil Tactician",
         "yields": [
             "Hero challenge"
         ],
@@ -21548,7 +21548,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21572,7 +21572,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21596,7 +21596,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21620,7 +21620,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21630,7 +21630,7 @@
         ],
         "node": "Crusader Ivan",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21680,7 +21680,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21714,7 +21714,7 @@
         ],
         "node": "Arcanist Nomar",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21728,7 +21728,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21738,7 +21738,7 @@
         ],
         "node": "Creator Derk Starre",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21762,7 +21762,7 @@
         ],
         "node": "Arcanist Dmitri Starre",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -21812,7 +21812,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21872,7 +21872,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21920,7 +21920,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -21992,7 +21992,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22004,7 +22004,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22016,7 +22016,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22052,7 +22052,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22136,7 +22136,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22146,7 +22146,7 @@
         ],
         "node": "Crusader Yozzu",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -22182,7 +22182,7 @@
         ],
         "node": "Crusader Uxx",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -22196,7 +22196,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22208,7 +22208,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22304,7 +22304,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22328,7 +22328,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22412,7 +22412,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22420,9 +22420,9 @@
             44061.6,
             44657.6
         ],
-        "node": "Priory Arcanist (armorsmith)",
+        "node": "Priory Arcanist",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -22432,9 +22432,9 @@
             44049.6,
             44647.6
         ],
-        "node": "Vigil Crusader (weaponsmith)",
+        "node": "Vigil Crusader",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -22496,7 +22496,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22520,7 +22520,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -22588,7 +22588,7 @@
             33130,
             38287
         ],
-        "node": "Dusk (NPC)",
+        "node": "Dusk",
         "yields": [
             "Zephyrite merchant"
         ],
@@ -22684,7 +22684,7 @@
             31708.5,
             38388.1
         ],
-        "node": "Merchant (The Silverwastes)",
+        "node": "Merchant",
         "yields": [
             "Merchant"
         ],
@@ -22696,9 +22696,9 @@
             31794.3,
             38377.9
         ],
-        "node": "Wolfborn (weaponsmith)",
+        "node": "Wolfborn",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -22708,7 +22708,7 @@
             31624,
             38418.9
         ],
-        "node": "Skritt Weapons Collector (weaponsmith)",
+        "node": "Skritt Weapons Collector",
         "yields": [
             "Cultural weaponsmith"
         ],
@@ -22720,7 +22720,7 @@
             31624,
             38418.9
         ],
-        "node": "Skritt Weapons Collector (armorsmith)",
+        "node": "Skritt Weapons Collector",
         "yields": [
             "Cultural armorsmith"
         ],
@@ -22732,7 +22732,7 @@
             31633,
             38576
         ],
-        "node": "Priory Historian (bandit crest collector)",
+        "node": "Priory Historian",
         "yields": [
             "Bandit Crest Collector"
         ],
@@ -22852,7 +22852,7 @@
             31729.1,
             33791
         ],
-        "node": "Vigil Recruit (merchant)",
+        "node": "Vigil Recruit",
         "yields": [
             "Merchant"
         ],
@@ -22888,7 +22888,7 @@
             31151,
             35994
         ],
-        "node": "Itzel Scout (scout)",
+        "node": "Itzel Scout",
         "yields": [
             "Scout"
         ],
@@ -22936,7 +22936,7 @@
             32194,
             34099
         ],
-        "node": "Servant (scout)",
+        "node": "Servant",
         "yields": [
             "Scout"
         ],
@@ -23008,7 +23008,7 @@
             33117.5,
             34496.2
         ],
-        "node": "Priory Arcanist (aurillium collector)",
+        "node": "Priory Arcanist",
         "yields": [
             "Aurillium Collector"
         ],
@@ -23020,7 +23020,7 @@
             33080.9,
             34504.1
         ],
-        "node": "Priory Arcanist (merchant)",
+        "node": "Priory Arcanist",
         "yields": [
             "Merchant"
         ],
@@ -23056,7 +23056,7 @@
             34642.7,
             34298.8
         ],
-        "node": "Vigil Marksman (aurillium collector)",
+        "node": "Vigil Marksman",
         "yields": [
             "Aurillium Collector"
         ],
@@ -23104,7 +23104,7 @@
             32810.7,
             33698.8
         ],
-        "node": "Priory Explorer (aurillium collector)",
+        "node": "Priory Explorer",
         "yields": [
             "Aurillium Collector"
         ],
@@ -23140,7 +23140,7 @@
             33320.5,
             33786.4
         ],
-        "node": "Skritt Recruit (aurillium collector)",
+        "node": "Skritt Recruit",
         "yields": [
             "Aurillium Collector"
         ],
@@ -23164,7 +23164,7 @@
             35917.7,
             37191.7
         ],
-        "node": "Nuhoch Stomper (Ley-Line Crystal Collector)",
+        "node": "Nuhoch Stomper",
         "yields": [
             "Merchant"
         ],
@@ -23224,7 +23224,7 @@
             35505,
             37922
         ],
-        "node": "Suspicious Crate (Tangled Depths)",
+        "node": "Suspicious Crate",
         "yields": [
             "Scout"
         ],
@@ -23296,7 +23296,7 @@
             34406.8,
             37074.2
         ],
-        "node": "Zyanya (Tangled Depths)",
+        "node": "Zyanya",
         "yields": [
             "Reinforce Armor"
         ],
@@ -23404,7 +23404,7 @@
             46253.77,
             38381.69
         ],
-        "node": "Circus Castaway (Fishing Supplies)",
+        "node": "Circus Castaway",
         "yields": [
             "Fishing Supplies"
         ],
@@ -23416,7 +23416,7 @@
             46229.66,
             38411.77
         ],
-        "node": "Circus Castaway (Fishmonger)",
+        "node": "Circus Castaway",
         "yields": [
             "Fishmonger"
         ],
@@ -23430,7 +23430,7 @@
         ],
         "node": "Shipwrecked Circus Treasurer",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -23500,7 +23500,7 @@
             24542.9,
             55268.6
         ],
-        "node": "Jotun (Weapons Specialist)",
+        "node": "Jotun",
         "yields": [
             "Merchant"
         ],
@@ -23512,7 +23512,7 @@
             23956.8,
             55049.1
         ],
-        "node": "Quaggan (merchant)",
+        "node": "Quaggan",
         "yields": [
             "Merchant"
         ],
@@ -23524,7 +23524,7 @@
             23956.1,
             55054.6
         ],
-        "node": "Kodan Villager (reinforce armor)",
+        "node": "Kodan Villager",
         "yields": [
             "Reinforce Armor"
         ],
@@ -23536,7 +23536,7 @@
             23966.6,
             55051
         ],
-        "node": "Kodan Villager (bank)",
+        "node": "Kodan Villager",
         "yields": [
             "Account vault"
         ],
@@ -23560,7 +23560,7 @@
             24354,
             53647
         ],
-        "node": "Svanir Seer (Renown Heart NPC)",
+        "node": "Svanir Seer",
         "yields": [
             "Renown Heart"
         ],
@@ -23692,7 +23692,7 @@
             41541.4,
             36111.24
         ],
-        "node": "Mark I Golemite (Renown Heart NPC)",
+        "node": "Mark I Golemite",
         "yields": [
             "Renown Heart"
         ],
@@ -23836,7 +23836,7 @@
             56438.1,
             52534.8
         ],
-        "node": "Olmakhan Villager (Fishmonger)",
+        "node": "Olmakhan Villager",
         "yields": [
             "Fishmonger"
         ],
@@ -23848,7 +23848,7 @@
             56425.1,
             52595.9
         ],
-        "node": "Olmakhan Cub (Fishing Supplies)",
+        "node": "Olmakhan Cub",
         "yields": [
             "Fishing Supplies"
         ],
@@ -23860,7 +23860,7 @@
             56425.1,
             52595.9
         ],
-        "node": "Olmakhan Villager (Fishing Supplies)",
+        "node": "Olmakhan Villager",
         "yields": [
             "Fishing Supplies"
         ],
@@ -23872,7 +23872,7 @@
             56283.9,
             53175.8
         ],
-        "node": "Olmakhan Villager (merchant)",
+        "node": "Olmakhan Villager",
         "yields": [
             "Merchant"
         ],
@@ -24004,7 +24004,7 @@
             61595.2,
             64677.7
         ],
-        "node": "Trader (merchant)",
+        "node": "Trader",
         "yields": [
             "Merchant"
         ],
@@ -24112,7 +24112,7 @@
             58778.8,
             63883
         ],
-        "node": "Villager (merchant)",
+        "node": "Villager",
         "yields": [
             "Merchant"
         ],
@@ -24124,7 +24124,7 @@
             57540.1,
             65562.4
         ],
-        "node": "Scarlet Briar (hallucination)",
+        "node": "Scarlet Briar",
         "yields": [
             "Adventure"
         ],
@@ -24174,7 +24174,7 @@
         ],
         "node": "Janet Fawn",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -24270,7 +24270,7 @@
         ],
         "node": "Jaynes",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -24424,7 +24424,7 @@
             19198,
             60768
         ],
-        "node": "Merchant (Adamant Guard weapons)",
+        "node": "Merchant",
         "yields": [
             "Cultural weaponsmith"
         ],
@@ -24440,7 +24440,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -24464,7 +24464,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -24476,7 +24476,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -24484,7 +24484,7 @@
             17823,
             56665
         ],
-        "node": "Tanner (merchant)",
+        "node": "Tanner",
         "yields": [
             "Merchant"
         ],
@@ -24692,7 +24692,7 @@
         "yields": [
             "Karma merchant"
         ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+        "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
         "layer": "node_npc_services"
     },
     {
@@ -24738,7 +24738,7 @@
         ],
         "node": "Veteran United Legions Quaestor",
         "yields": [
-            "Quaestor (service)"
+            "Quaestor"
         ],
         "icon": "https://wiki.guildwars2.com/images/6/6d/Quaestor_%28overhead_icon%29.png",
         "layer": "node_npc_services"
@@ -24750,7 +24750,7 @@
         ],
         "node": "Annona Vinedrummer",
         "yields": [
-            "Quaestor (service)"
+            "Quaestor"
         ],
         "icon": "https://wiki.guildwars2.com/images/6/6d/Quaestor_%28overhead_icon%29.png",
         "layer": "node_npc_services"
@@ -24796,7 +24796,7 @@
             102524.5,
             24364.5
         ],
-        "node": "Worker (Guild Hall Explorer)",
+        "node": "Worker",
         "yields": [
             "Guild Hall Explorer"
         ],
@@ -24808,7 +24808,7 @@
             102084,
             22950
         ],
-        "node": "Peddler (merchant)",
+        "node": "Peddler",
         "yields": [
             "Merchant"
         ],
@@ -24868,9 +24868,9 @@
             102548,
             22148
         ],
-        "node": "Traveling Merchant (charr)",
+        "node": "Traveling Merchant",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -24940,7 +24940,7 @@
             99381,
             28631
         ],
-        "node": "Veteran Purist Necromancer (hero challenge)",
+        "node": "Veteran Purist Necromancer",
         "yields": [
             "Hero challenge"
         ],
@@ -25048,7 +25048,7 @@
             103319,
             32800
         ],
-        "node": "Mori Villager (Fishing Supplies)",
+        "node": "Mori Villager",
         "yields": [
             "Fishing Supplies"
         ],
@@ -25060,7 +25060,7 @@
             103281,
             32814
         ],
-        "node": "Mori Villager (Fishmonger)",
+        "node": "Mori Villager",
         "yields": [
             "Fishmonger"
         ],
@@ -25072,7 +25072,7 @@
             103275.86,
             32831.91
         ],
-        "node": "Merchant (Mori Village)",
+        "node": "Merchant",
         "yields": [
             "Merchant"
         ],
@@ -25084,7 +25084,7 @@
             101303.7,
             32844.7
         ],
-        "node": "Elder (merchant)",
+        "node": "Elder",
         "yields": [
             "Merchant"
         ],
@@ -25108,7 +25108,7 @@
             101956.53,
             30178.91
         ],
-        "node": "Researcher (merchant)",
+        "node": "Researcher",
         "yields": [
             "Merchant"
         ],
@@ -25120,7 +25120,7 @@
             102017.53,
             30115.91
         ],
-        "node": "Archaeologist (merchant)",
+        "node": "Archaeologist",
         "yields": [
             "Merchant"
         ],
@@ -25132,7 +25132,7 @@
             101956.53,
             30178.91
         ],
-        "node": "Archaeologist (Zu Heltzer Historical Site)",
+        "node": "Archaeologist",
         "yields": [
             "Merchant"
         ],
@@ -25144,7 +25144,7 @@
             102017.53,
             30115.91
         ],
-        "node": "Researcher (Zu Heltzer Historical Site)",
+        "node": "Researcher",
         "yields": [
             "Merchant"
         ],
@@ -25216,7 +25216,7 @@
             23519.5,
             24290
         ],
-        "node": "Deldrimor Dwarf (Faction Provisioner)",
+        "node": "Deldrimor Dwarf",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25228,7 +25228,7 @@
             23890,
             25372
         ],
-        "node": "Kestrel Watchkeeper (Faction Provisioner)",
+        "node": "Kestrel Watchkeeper",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25240,7 +25240,7 @@
             23168.81,
             26397.91
         ],
-        "node": "Researcher (Rata Novus Promenade)",
+        "node": "Researcher",
         "yields": [
             "Merchant"
         ],
@@ -25252,7 +25252,7 @@
             23144,
             26291
         ],
-        "node": "Researcher (Faction Provisioner)",
+        "node": "Researcher",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25264,7 +25264,7 @@
             24405,
             25490
         ],
-        "node": "Zaishen Warrior (Faction Provisioner)",
+        "node": "Zaishen Warrior",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25288,7 +25288,7 @@
             24612.8,
             26809.6
         ],
-        "node": "Astral Ward Protector (Wizard's Ascent)",
+        "node": "Astral Ward Protector",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25300,7 +25300,7 @@
             24613,
             26862.5
         ],
-        "node": "Astral Ward Protector (merchant)",
+        "node": "Astral Ward Protector",
         "yields": [
             "Merchant"
         ],
@@ -25324,7 +25324,7 @@
             22374.3,
             24057.5
         ],
-        "node": "Astral Ward Mage (Outfitter)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Merchant"
         ],
@@ -25408,7 +25408,7 @@
             22263.9,
             24162.3
         ],
-        "node": "Cleo (Astral Ward)",
+        "node": "Cleo",
         "yields": [
             "Trading Post"
         ],
@@ -25576,7 +25576,7 @@
             19559,
             23773
         ],
-        "node": "Astral Ward Mage (Bastion of Balance)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25588,7 +25588,7 @@
             21056,
             25141
         ],
-        "node": "Astral Ward Skirmisher (Bastion of Knowledge)",
+        "node": "Astral Ward Skirmisher",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25600,7 +25600,7 @@
             20062.81,
             25152.91
         ],
-        "node": "Astral Ward Skirmisher (Fishmonger)",
+        "node": "Astral Ward Skirmisher",
         "yields": [
             "Fishmonger"
         ],
@@ -25612,7 +25612,7 @@
             20189,
             25164
         ],
-        "node": "Astral Ward Skirmisher (Bastion of Strength)",
+        "node": "Astral Ward Skirmisher",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25624,7 +25624,7 @@
             20053,
             25194.4
         ],
-        "node": "Astral Ward Mage (Bastion of Strength)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Merchant"
         ],
@@ -25636,9 +25636,9 @@
             20148,
             25200
         ],
-        "node": "Rift Hunter Warrior (weaponsmith)",
+        "node": "Rift Hunter Warrior",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -25648,9 +25648,9 @@
             20097,
             25231
         ],
-        "node": "Rift Hunter Warrior (armorsmith)",
+        "node": "Rift Hunter Warrior",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -25660,7 +25660,7 @@
             20053,
             25194.4
         ],
-        "node": "Astral Ward Skirmisher (merchant)",
+        "node": "Astral Ward Skirmisher",
         "yields": [
             "Merchant"
         ],
@@ -25672,7 +25672,7 @@
             20053,
             25194.4
         ],
-        "node": "Astral Ward Protector (Bastion of Strength)",
+        "node": "Astral Ward Protector",
         "yields": [
             "Merchant"
         ],
@@ -25696,7 +25696,7 @@
             21109,
             23867
         ],
-        "node": "Astral Ward Mage (Bastion of the Natural)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25720,7 +25720,7 @@
             20562,
             23090
         ],
-        "node": "Astral Ward Protector (Bastion of the Obscure)",
+        "node": "Astral Ward Protector",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25732,7 +25732,7 @@
             23767,
             22307
         ],
-        "node": "Astral Fisher (Fishing Supplies)",
+        "node": "Astral Fisher",
         "yields": [
             "Fishing Supplies"
         ],
@@ -25756,7 +25756,7 @@
             23809,
             22264
         ],
-        "node": "Astral Ward Skirmisher (Memory's Hollow)",
+        "node": "Astral Ward Skirmisher",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25768,7 +25768,7 @@
             22822,
             21692
         ],
-        "node": "Astral Ward Mage (The Commons)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Faction Provisioner"
         ],
@@ -25888,7 +25888,7 @@
             57683.8,
             9950.3
         ],
-        "node": "Castaway (hero challenge)",
+        "node": "Castaway",
         "yields": [
             "Hero challenge"
         ],
@@ -25900,7 +25900,7 @@
             57769,
             9800
         ],
-        "node": "Sheltered One (scout)",
+        "node": "Sheltered One",
         "yields": [
             "Scout"
         ],
@@ -25912,7 +25912,7 @@
             57973,
             11580
         ],
-        "node": "Astral Ward Protector (Soaring Sands)",
+        "node": "Astral Ward Protector",
         "yields": [
             "Merchant"
         ],
@@ -25924,7 +25924,7 @@
             58890.3,
             7671.4
         ],
-        "node": "Priory Scholar (Crumbling Precipice)",
+        "node": "Priory Scholar",
         "yields": [
             "Merchant"
         ],
@@ -25948,7 +25948,7 @@
             59517.1,
             8740.4
         ],
-        "node": "Astral Ward Mage (Shimmering Basin)",
+        "node": "Astral Ward Mage",
         "yields": [
             "Merchant"
         ],
@@ -26044,7 +26044,7 @@
             9383.6,
             14633.8
         ],
-        "node": "Mercenary (Skirmish Merchant)",
+        "node": "Mercenary",
         "yields": [
             "Skirmish Merchant"
         ],
@@ -26440,7 +26440,7 @@
             46353.8,
             37920.7
         ],
-        "node": "Circus Castaway (makeover preview)",
+        "node": "Circus Castaway",
         "yields": [
             "Makeover Preview"
         ],
@@ -26488,7 +26488,7 @@
             44283.5,
             58168.2
         ],
-        "node": "Ihsan (Makeover Preview)",
+        "node": "Ihsan",
         "yields": [
             "Makeover Preview"
         ],
@@ -26500,7 +26500,7 @@
             34716,
             47198
         ],
-        "node": "Black Lion Researcher (Mistlock Sanctuary)",
+        "node": "Black Lion Researcher",
         "yields": [
             "Guild Vault"
         ],
@@ -26536,7 +26536,7 @@
             34511,
             47260
         ],
-        "node": "Merchant (Mistlock Sanctuary)",
+        "node": "Merchant",
         "yields": [
             "Dungeon Merchant"
         ],
@@ -26814,7 +26814,7 @@
         ],
         "node": "Larana Siegebreak",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -26838,7 +26838,7 @@
         ],
         "node": "Myrrina",
         "yields": [
-            "Armorsmith (vendor)"
+            "Armorsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -26872,7 +26872,7 @@
             32453.8,
             34520.8
         ],
-        "node": "Worker (reinforce armor)",
+        "node": "Worker",
         "yields": [
             "Reinforce Armor"
         ],
@@ -26884,9 +26884,9 @@
             27011,
             43403
         ],
-        "node": "Hunter (weaponsmith)",
+        "node": "Hunter",
         "yields": [
-            "Weaponsmith (vendor)"
+            "Weaponsmith"
         ],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
@@ -26896,7 +26896,7 @@
             99050,
             21703
         ],
-        "node": "Black Lion Representative (Black Lion Chest Merchant)",
+        "node": "Black Lion Representative",
         "yields": [
             "Merchant"
         ],
@@ -26908,7 +26908,7 @@
             99016,
             21689
         ],
-        "node": "Pavilion Elder (Bank)",
+        "node": "Pavilion Elder",
         "yields": [
             "Account vault"
         ],
@@ -26920,7 +26920,7 @@
             99096,
             21708
         ],
-        "node": "Peddler (Fishing Supplies)",
+        "node": "Peddler",
         "yields": [
             "Fishing Supplies"
         ],
@@ -26932,7 +26932,7 @@
             99030,
             21695
         ],
-        "node": "Pavilion Elder (Guild Commendation Trader)",
+        "node": "Pavilion Elder",
         "yields": [
             "Guild Commendation Trader"
         ],
@@ -26944,7 +26944,7 @@
             99112,
             21681
         ],
-        "node": "Guest Elder (Research Merchant)",
+        "node": "Guest Elder",
         "yields": [
             "Research Merchant"
         ],
@@ -26956,7 +26956,7 @@
             99068,
             21700
         ],
-        "node": "Black Lion Representative (Weapons Specialist)",
+        "node": "Black Lion Representative",
         "yields": [
             "Vendor"
         ],
@@ -26968,7 +26968,7 @@
             99084,
             21613
         ],
-        "node": "Guest Elder (Laurel Merchant)",
+        "node": "Guest Elder",
         "yields": [
             "Laurel Merchant"
         ],
@@ -26980,7 +26980,7 @@
             99065,
             21706
         ],
-        "node": "Black Lion Representative (Exchange Specialist)",
+        "node": "Black Lion Representative",
         "yields": [
             "Vendor"
         ],
@@ -26992,7 +26992,7 @@
             99087,
             21660
         ],
-        "node": "Pavilion Disciple (Master Artificer)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Artificer"
         ],
@@ -27004,7 +27004,7 @@
             99102,
             21655
         ],
-        "node": "Visiting Trader (Gathering Merchant)",
+        "node": "Visiting Trader",
         "yields": [
             "Gathering Merchant"
         ],
@@ -27016,7 +27016,7 @@
             99068,
             21620
         ],
-        "node": "Pavilion Disciple (Master Armorsmith)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Armorsmith"
         ],
@@ -27028,7 +27028,7 @@
             99065,
             21687
         ],
-        "node": "Pavilion Disciple (Master Huntsman)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Huntsman"
         ],
@@ -27040,7 +27040,7 @@
             98874,
             21267
         ],
-        "node": "Peddler (Fishmonger)",
+        "node": "Peddler",
         "yields": [
             "Fishmonger"
         ],
@@ -27052,7 +27052,7 @@
             99026,
             21673
         ],
-        "node": "Pavilion Disciple (Master Tailor)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Tailor"
         ],
@@ -27064,7 +27064,7 @@
             99043,
             21621
         ],
-        "node": "Pavilion Disciple (Master Leatherworker)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Leatherworker"
         ],
@@ -27076,7 +27076,7 @@
             99087,
             21642
         ],
-        "node": "Pavilion Disciple (Master Weaponsmith)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Weaponsmith"
         ],
@@ -27088,7 +27088,7 @@
             99102,
             21640
         ],
-        "node": "Visiting Trader (merchant)",
+        "node": "Visiting Trader",
         "yields": [
             "Merchant"
         ],
@@ -27100,7 +27100,7 @@
             99017,
             21645
         ],
-        "node": "Pavilion Disciple (Master Jeweler)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Jeweler"
         ],
@@ -27112,7 +27112,7 @@
             99054,
             21708
         ],
-        "node": "Black Lion Representative (Makeover Preview)",
+        "node": "Black Lion Representative",
         "yields": [
             "Makeover Preview"
         ],
@@ -27124,7 +27124,7 @@
             99088,
             21618
         ],
-        "node": "Visiting Trader (Dungeon Merchant)",
+        "node": "Visiting Trader",
         "yields": [
             "Dungeon Merchant"
         ],
@@ -27148,7 +27148,7 @@
             99079,
             21612
         ],
-        "node": "Guest Elder (Activity)",
+        "node": "Guest Elder",
         "yields": [
             "Activity"
         ],
@@ -27160,7 +27160,7 @@
             99021,
             21693
         ],
-        "node": "Pavilion Elder (Trading Post)",
+        "node": "Pavilion Elder",
         "yields": [
             "Trading Post"
         ],
@@ -27172,7 +27172,7 @@
             99017,
             21682
         ],
-        "node": "Pavilion Elder (Guild Bank)",
+        "node": "Pavilion Elder",
         "yields": [
             "Guild Vault"
         ],
@@ -27184,7 +27184,7 @@
             99049,
             21687
         ],
-        "node": "Pavilion Disciple (Master Chef)",
+        "node": "Pavilion Disciple",
         "yields": [
             "Chef"
         ],
@@ -27285,7 +27285,7 @@
     {
         "pos": [34718, 47176],
         "node": "Black Lion Weapons Specialist",
-        "yields": ["Weaponsmith (vendor)"],
+        "yields": ["Weaponsmith"],
         "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
