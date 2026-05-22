@@ -102269,6 +102269,15 @@
         "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
         "layer": "node_obscure_chest"
     },
+	{
+        "pos": [
+            47176,
+            34545
+        ],
+        "node": "Zone Portal",
+        "type": "node_zone_portal",
+        "icon": "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png"
+    },
     {
         "pos": [
             44998.9,
@@ -112494,6 +112503,23 @@
             38089
         ],
         "node": "Mordremoth",
+        "type": "node_world_boss",
+        "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            4152,
+            60384
+        ],
+        "node": "Shackles of the Ancients",
+        "type": "node_world_boss",
+        "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
+    },{
+        "pos": [
+            4556,
+            61462
+        ],
+        "node": "Shackles of the Ancients",
         "type": "node_world_boss",
         "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
     },
