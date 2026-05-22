@@ -42,8 +42,8 @@
     },
 	{
       "pos": [
-        47120,
-        34416
+        47176,
+        34444
       ],
       "name": "Mistlock Sactuary",
       "type": "sector"
@@ -22485,6 +22485,15 @@
       "name": "Incubation Waypoint",
       "type": "waypoint",
       "chat_code": "[&BLUEAAA=]"
+    },
+	{
+      "pos": [
+        34668,
+        47322
+      ],
+      "name": "Mistlock Sanctuary Waypoint",
+      "type": "waypoint",
+      "chat_code": "[&BPMJAAA=]"
     },
     {
       "pos": [
