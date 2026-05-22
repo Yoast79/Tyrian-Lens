@@ -16,15 +16,18 @@
 			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; }
 			.nav-panel { width: 240px; flex-shrink: 0; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #2a2015); padding: 5px; display: flex; flex-direction: column; gap: 5px; overflow: hidden; }
 			.group-btn { width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-primary, #e2c07d); padding: 10px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; border-bottom: 1px solid var(--border-color, #2a2015); display: flex; justify-content: space-between; }
-			.group-btn:hover { background: var(--bg-button-hover, #251d16); }
+			.group-btn:hover { box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 			.group-btn::after { content: '▼'; font-size: 8px; transition: 0.3s; color: var(--border-color, #4a3b2a); }
 			.group-btn.active::after { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
 			.cats-container { display: none; background: rgba(20,15,10,0.4); }
-			.cat-btn { width: 100%; background: transparent; border: none; color: var(--text-muted, #8a7a5f); padding: 8px 10px 8px 25px; text-align: left; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border-color, rgba(42, 32, 21, 0.5)); }
-			.cat-btn:hover, .cat-btn.active { color: var(--text-primary, #e2c07d); background: rgba(226, 192, 125, 0.05); }
+			.cat-btn { width: 100%; background: transparent; border: none; color: var(--text-muted, #8a7a5f); padding: 8px 10px 8px 25px; text-align: left; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border-color, rgba(42, 32, 21, 0.5)); transition: 0.2s; }
+			.cat-btn:hover { color: var(--text-primary, #e2c07d); box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
+			.cat-btn.active { color: var(--text-primary, #e2c07d); background: color-mix(in srgb, var(--border-highlight, #e2c07d) 5%, transparent); }
+			.sub-btn { cursor: pointer; transition: 0.2s; }
+			.sub-btn:hover { color: var(--text-primary, #e2c07d); box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 5px; }
 			.ach-card { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #332a1e); display: flex; padding: 10px; padding-right: 40px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
-			.ach-card:hover { border-color: var(--text-primary, #e2c07d); background: color-mix(in srgb, var(--text-primary) 8%, transparent); }
+			.ach-card:hover { border-color: var(--border-highlight, #e2c07d); }
 			.ach-card.done { border-color: var(--success-color, #1A9306); background: rgba(26, 147, 6, 0.05); }
 			.ach-icon-wrap { width: 44px; height: 44px; flex-shrink: 0; pointer-events: none; }
 			.ach-icon { width: 100%; height: 100%; border: 1px solid var(--border-color, #4a3b2a); background: #000; }
@@ -39,6 +42,8 @@
 			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
 			.top-actions { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; gap: 10px; }
 			button.main-action { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; transition: 0.2s; }
+			button.main-action:hover { background: var(--bg-button-hover, #e2c07d); color: var(--text-button-hover, #1a1510); border-color: var(--border-highlight, #e2c07d); }
+			button.main-action.active { background: var(--border-highlight, #e2c07d); color: var(--bg-dark, #000000); border-color: var(--border-highlight, #e2c07d); }
 			.fancy-toggle { position: relative; display: inline-block; width: 44px; height: 22px; vertical-align: middle; margin-left: 8px; }
 			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
 			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); transition: .3s; border-radius: 22px; }
@@ -90,12 +95,13 @@
 			</div>
 			<div class="top-actions">
 				<div style="display:flex; gap:10px; align-items:center;">
+					<button class="main-action" onclick="loadAchievementsMain()">ACHIEVEMENTS</button>
 					<button class="main-action" onclick="loadDailies()">DAILY</button>
 					<button class="main-action" onclick="loadMasteries()">MASTERIES</button>
 					<button class="main-action" onclick="loadWatchlistView()">WATCHLIST</button>
 				</div>
 				<div style="display:flex; align-items:center;">
-					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST OVERLAY</span>
+					<span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);">WATCHLIST OVERLAY</span>
 					<label class="fancy-toggle">
 						<input type="checkbox" id="overlay-toggle" onchange="if(Object.keys(tracked).length === 0) { this.checked = false; window.parent.postMessage({action:'toast', msg:'WATCHLIST IS EMPTY'}, '*'); return; } window.parent.postMessage({action:'toggleTracker'}, '*')" />
 						<span class="slider"></span>
@@ -105,8 +111,8 @@
 			<div class="main-layout">
 				<div class="nav-panel" id="nav-panel-container">
 					<div style="position: relative;">
-						<input type="text" id="ach-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
-							<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
+						<input type="text" id="ach-search" placeholder="SEARCH..." style="width: 100%; background: var(--bg-button, #1a1510); border: none; border-bottom: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+							<span style="position: absolute; right: 8px; top: 10px; color: var(--text-muted, #8a7a5f); font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
 						</div>
 					<div id="nav-panel" style="display: flex; flex-direction: column; overflow-y: auto; flex: 1; min-height: 0;"></div>
 				</div>
@@ -116,8 +122,8 @@
 		<div id="ach-modal">
 			<div class="modal-content">
 				<div class="close-modal" onclick="document.getElementById('ach-modal').style.display='none'">&#10006;</div>
-				<div id="modal-title" style="font-size:14px; font-weight:bold; color:#e2c07d; margin-bottom:10px; border-bottom:1px solid #4a3b2a; padding-bottom:5px;"></div>
-				<div id="modal-desc" style="font-size:11px; color:#8a7a5f; text-transform:none; line-height:1.4; margin-bottom:15px;"></div>
+				<div id="modal-title" style="font-size:14px; font-weight:bold; color:var(--text-primary, #e2c07d); margin-bottom:10px; border-bottom:1px solid var(--border-color, #4a3b2a); padding-bottom:5px;"></div>
+				<div id="modal-desc" style="font-size:11px; color:var(--text-muted, #8a7a5f); text-transform:none; line-height:1.4; margin-bottom:15px;"></div>
 				<div id="modal-bits"></div>
 				<button id="modal-wiki-btn" class="main-action" style="margin-top:20px; width:100%;">OPEN WIKI</button>
 			</div>
@@ -178,7 +184,7 @@
 
                 const acc = await fetchJSON("https://api.guildwars2.com/v2/account?access_token=" + activeKey);
                 try {
-                    const res = await fetch('https://gw2ps.local/Data/achievement_index.json', { cache: "no-store" });
+                    const res = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/achievement_index.json', { cache: "no-store" });
                     if (res.ok) { 
                         indexData = await res.json(); 
 						indexData.categories = indexData.categories.filter(c => !c.n.includes("Character Adventure Guide"));
@@ -205,12 +211,12 @@
                             const totalAP = legacyAP + earnedAP; 
                             const nextChest = 500 - (totalAP % 500); 
                             document.getElementById('ap-stats').innerHTML = 
-                                "<div style='font-size:18px; color:#e2c07d; font-weight:bold; display:flex; align-items:center; justify-content:flex-end; gap:8px;'>" +
+                                "<div style='font-size:18px; color:var(--text-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; gap:8px;'>" +
                                 totalAP.toLocaleString() + " <img src='https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png' style='width:16px;' alt='AP' />" +
                                 "</div>" +
-                                "<div style='font-size:10px; color:#8a7a5f; margin-top:4px;'>NEXT CHEST IN: <span style='color:#e2c07d; font-weight:bold;'>" + nextChest + " AP</span></div>";
+                                "<div style='font-size:10px; color:var(--text-muted); margin-top:4px;'>NEXT CHEST IN: <span style='color:var(--text-primary); font-weight:bold;'>" + nextChest + " AP</span></div>";
                         }
-                        filterFestivals(); buildNav(); loadDailies(); 
+                        filterFestivals(); buildNav(); loadAchievementsMain(); 
                     }
                 } catch(e) { console.error("Index load fail"); }
 			}
@@ -243,6 +249,20 @@
                 });
             }
 
+            function setActiveTab(tabName) {
+                document.querySelectorAll('.main-action').forEach(btn => {
+                    if (btn.innerText.trim() === tabName) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                // Clear search input and search query when changing main tabs
+                const searchInput = document.getElementById('ach-search');
+                if (searchInput) searchInput.value = '';
+                searchQuery = '';
+            }
+
             window.handleSearch = function(val) {
                 searchQuery = val.toLowerCase();
                 if (searchQuery) {
@@ -259,8 +279,7 @@
                     if (mBtn && mBtn.classList.contains('active')) {
                         loadMasteries();
                     } else {
-                        currentView = 'dailies';
-                        loadDailies();
+                        loadAchievementsMain();
                     }
                 }
             };
@@ -279,19 +298,19 @@
                     if (match) results.push(m);
                 });
 
-                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>MASTERY SEARCH RESULTS</div>";
+                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>MASTERY SEARCH RESULTS</div>";
                 if (results.length === 0) {
-                    html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO MASTERIES FOUND</div>";
+                    html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO MASTERIES FOUND</div>";
                 } else {
                     results.forEach(m => {
                         html += `
                             <div class="ach-card" style="padding-right:15px;" onclick="window.selectMasteryTrack(${m.id})">
-                                <div class="ach-icon-wrap" style="background:rgba(0,0,0,0.4); border:1px solid #4a3b2a; border-radius:4px; padding:4px;">
+                                <div class="ach-icon-wrap" style="background:rgba(0,0,0,0.4); border:1px solid var(--border-color); border-radius:4px; padding:4px;">
                                     <img src="${m.levels[0].icon}" class="ach-icon" style="border:none;">
                                 </div>
                                 <div class="ach-info">
                                     <div class="ach-title">${m.name.toUpperCase()}</div>
-                                    <div class="ach-req" style="color:#8a7a5f;">${m.region.toUpperCase()} REGION • ${m.levels.length} TIERS</div>
+                                    <div class="ach-req" style="color:var(--text-muted);">${m.region.toUpperCase()} REGION • ${m.levels.length} TIERS</div>
                                 </div>
                             </div>
                         `;
@@ -310,9 +329,9 @@
                     }
                 });
                 
-                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>SEARCH RESULTS</div>";
+                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>SEARCH RESULTS</div>";
                 if (results.length === 0) {
-                    html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO RESULTS FOUND</div>";
+                    html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO RESULTS FOUND</div>";
                 } else {
                     let sortedIds = sortAchs(results);
                     sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); });
@@ -351,21 +370,137 @@
                 });
             }
 
+            window.loadAchievementsMain = function() {
+                currentView = 'main';
+                setActiveTab('ACHIEVEMENTS');
+                buildNav();
+
+                const content = document.getElementById('content-panel');
+                const totalWatchlist = Object.keys(tracked).length;
+                
+                let groupStatsHtml = '';
+                indexData.groups.sort((a,b) => a.order - b.order).forEach(g => {
+                    let totalAchs = 0;
+                    let completedAchs = 0;
+                    let totalAP = 0;
+                    let earnedAP = 0;
+                    
+                    g.cats.forEach(cid => {
+                        const c = indexData.categories.find(cat => cat.id === cid);
+                        if (c) {
+                            c.achs.forEach(aid => {
+                                totalAchs++;
+                                const ach = indexData.achievements[aid];
+                                const prog = getProg(aid);
+                                if (prog.done) {
+                                    completedAchs++;
+                                }
+                                if (ach) {
+                                    totalAP += (ach.p || 0);
+                                    if (prog.done) {
+                                        earnedAP += (ach.p || 0);
+                                    } else if (ach.t && ach.t.length > 0) {
+                                        ach.t.forEach(tier => {
+                                            if (prog.current >= tier.count) earnedAP += (tier.points || 0);
+                                        });
+                                        if (prog.repeated && prog.repeated > 0) {
+                                            let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
+                                            earnedAP += (prog.repeated * ptsPerRep);
+                                        }
+                                        if (ach.p > 0 && earnedAP > ach.p) earnedAP = ach.p;
+                                    }
+                                }
+                            });
+                        }
+                    });
+                    
+                    if (totalAchs === 0) return;
+                    
+                    const pct = Math.round((completedAchs / totalAchs) * 100);
+                    
+                    groupStatsHtml += `
+                        <div class="ach-card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openGroupInSidebar('${g.id}')">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div class="ach-title" style="font-size: 12px; font-weight: bold; color: var(--text-primary);">${g.n.toUpperCase()}</div>
+                                <div style="font-size: 10px; color: var(--text-muted);">${completedAchs} / ${totalAchs} COMPLETED</div>
+                            </div>
+                            <div class="prog-container" style="margin-top: 4px;">
+                                <div class="prog-bg" style="height: 8px;">
+                                    <div class="prog-fill" style="width: ${pct}%"></div>
+                                </div>
+                                <div class="prog-text" style="font-size: 10px; width: 45px; text-align: right; color: var(--text-primary);">${pct}%</div>
+                            </div>
+                            <div style="font-size: 9px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; margin-top: 2px; text-transform: none;">
+                                <span>Total AP Potential: ${totalAP} AP</span>
+                                <span style="color: var(--text-primary); font-weight: bold;">Earned: ${earnedAP} AP</span>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                content.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 15px; padding-bottom: 20px;">
+                        <div style="background: var(--bg-panel); border: 1px solid var(--border-color); padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+                            <div>
+                                <div style="font-size: 14px; font-weight: bold; color: var(--text-primary); letter-spacing: 1px;">ACHIEVEMENT OVERVIEW</div>
+                                <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase;">Manage your goals, masteries, and watchlists.</div>
+                            </div>
+                            <div style="display: flex; gap: 20px;">
+                                <div style="text-align: right;">
+                                    <div style="font-size: 18px; color: var(--text-primary); font-weight: bold;">${totalWatchlist}</div>
+                                    <div style="font-size: 9px; color: var(--text-muted);">WATCHED</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="font-size: 12px; font-weight: bold; color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 5px; letter-spacing: 1px;">CATEGORY PROGRESS</div>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            ${groupStatsHtml}
+                        </div>
+                    </div>
+                `;
+            };
+
+            window.openGroupInSidebar = function(groupId) {
+                harmonicaState[groupId] = true;
+                localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
+                buildNav();
+                const group = indexData.groups.find(g => g.id === groupId);
+                if (group && group.cats.length > 0) {
+                    const firstCatId = group.cats[0];
+                    const firstCat = indexData.categories.find(c => c.id === firstCatId);
+                    if (firstCat) {
+                        renderCategory(firstCat);
+                        setTimeout(() => {
+                            const btns = Array.from(document.querySelectorAll('.cat-btn'));
+                            const firstBtn = btns.find(b => b.innerText.includes(firstCat.n));
+                            if (firstBtn) {
+                                document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+                                firstBtn.classList.add('active');
+                            }
+                        }, 50);
+                    }
+                }
+            };
+
             function loadDailies() {
                 currentView = 'dailies';
+                setActiveTab('DAILY');
+                buildNav();
                 document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
                 const content = document.getElementById('content-panel');
                 let dailyGrp = indexData.groups.find(g => g.n === 'Daily');
                 if (!dailyGrp) return;
-                let html = '<div style="font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;">DAILY OBJECTIVES</div>';
+                let html = '<div style="font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;">DAILY OBJECTIVES</div>';
                 dailyGrp.cats.forEach((cid) => {
                     const c = indexData.categories.find(cat => cat.id === cid);
                     if (c && c.achs.length > 0) {
                         const isOpen = harmonicaState['daily_' + cid] === true;
-                        html += `<button class='group-btn ${isOpen ? 'active' : ''}' style='background:rgba(30,22,15,0.9); margin-top:8px; border:1px solid #332a1e;' onclick='this.classList.toggle("active"); const open = this.classList.contains("active"); this.nextElementSibling.style.display = open ? "flex" : "none"; harmonicaState["daily_${cid}"] = open; localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));'>` +
+                        html += `<button class='group-btn ${isOpen ? 'active' : ''}' style='background:var(--bg-panel); margin-top:8px; border:1px solid var(--border-color);' onclick='this.classList.toggle("active"); const open = this.classList.contains("active"); this.nextElementSibling.style.display = open ? "flex" : "none"; harmonicaState["daily_${cid}"] = open; localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));'>` +
                             "<div style='display:flex; align-items:center; gap:8px;'><img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:16px;' alt='icon' />" + c.n + "</div>" +
                         "</button>" +
-                        `<div style='display:${isOpen ? 'flex' : 'none'}; flex-direction:column; gap:8px; padding: 10px 5px; background:rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top:none;'>`;
+                        `<div style='display:${isOpen ? 'flex' : 'none'}; flex-direction:column; gap:8px; padding: 10px 5px; background:rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-top:none;'>`;
                         let sortedIds = sortAchs(c.achs);
                         sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (ach) html += generateCard(aid, ach); });
                         html += "</div>";
@@ -376,10 +511,12 @@
 
             function loadWatchlistView() {
                 currentView = 'watchlist';
+                setActiveTab('WATCHLIST');
+                buildNav();
                 const content = document.getElementById('content-panel');
-                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>YOUR WATCHLIST</div>";
+                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>YOUR WATCHLIST</div>";
                 const ids = Object.keys(tracked);
-                if (ids.length === 0) html += "<div style='padding:20px; text-align:center; color:#8a7a5f;'>NO ITEMS TRACKED</div>";
+                if (ids.length === 0) html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO ITEMS TRACKED</div>";
                 else { let sortedIds = sortAchs(ids); sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); }); }
                 content.innerHTML = html;
             }
@@ -387,19 +524,18 @@
             function renderCategory(c) {
                 currentView = 'category';
                 const content = document.getElementById('content-panel');
-                let html = "<div style='font-size:14px; font-weight:bold; color:#e2c07d; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:10px;'>" + c.n + "</div>";
+                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>" + c.n + "</div>";
                 let sortedIds = sortAchs(c.achs);
                 sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (aid) html += generateCard(aid, ach); });
                 content.innerHTML = html;
             }
+
             async function loadMasteries() {
                 currentView = 'masteries';
-                document.querySelectorAll('.main-action').forEach(b => b.classList.remove('active'));
-                const mBtn = Array.from(document.querySelectorAll('.main-action')).find(b => b.innerText.includes('MASTERIES'));
-                if (mBtn) mBtn.classList.add('active');
+                setActiveTab('MASTERIES');
                 
                 if (!globalMasteries || globalMasteries.length === 0) {
-                    document.getElementById('content-panel').innerHTML = '<div style="padding:40px; text-align:center; color:#8a7a5f;">MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.</div>';
+                    document.getElementById('content-panel').innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted);">MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.</div>';
                     return;
                 }
 
@@ -438,10 +574,10 @@
                 // Overwrite Sidebar with Mastery Navigation
                 const sidebar = document.getElementById('nav-panel');
                 sidebar.innerHTML = `
-                    <div style="padding:15px 5px; border-bottom:1px solid #3c3228; margin-bottom:10px; text-align:center; background: rgba(0,0,0,0.2);">
-                        <img src="https://gw2ps.local/Assets/Icons/mi_tyria.png" style="width:40px; filter: drop-shadow(0 0 5px #e5c100);">
-                        <div style="font-size:9px; color:#8a7a5f; text-transform:uppercase; margin-top:6px; letter-spacing:1px;">Mastery Rank</div>
-                        <div style="font-size:28px; color:#e2c07d; font-weight:bold; font-family: 'Crimson Text', serif;">${totalRank}</div>
+                    <div style="padding:15px 5px; border-bottom:1px solid var(--border-color); margin-bottom:10px; text-align:center; background: rgba(0,0,0,0.2);">
+                        <img src="https://gw2ps.local/Assets/Icons/mi_tyria.png" style="width:40px; filter: drop-shadow(0 0 5px var(--border-highlight, #e5c100));">
+                        <div style="font-size:9px; color:var(--text-muted); text-transform:uppercase; margin-top:6px; letter-spacing:1px;">Mastery Rank</div>
+                        <div style="font-size:28px; color:var(--text-primary); font-weight:bold; font-family: 'Crimson Text', serif;">${totalRank}</div>
                     </div>
                 `;
 
@@ -464,13 +600,13 @@
                     regionBtn.style.justifyContent = 'space-between';
                     regionBtn.style.alignItems = 'center';
                     regionBtn.style.padding = '10px 12px';
-                    regionBtn.style.background = isOpen ? 'rgba(226, 192, 125, 0.05)' : 'transparent';
+                    regionBtn.style.background = isOpen ? 'rgba(var(--text-primary-rgb, 226, 192, 125), 0.05)' : 'transparent';
                     regionBtn.innerHTML = `
                         <div style="display:flex; align-items:center; gap:8px;">
                             <span style="font-size:8px; width:10px; text-align:center; opacity:0.5;">${isOpen ? '▼' : '▶'}</span>
                             <span style="font-size:11px; letter-spacing:0.5px;">${reg.disp.toUpperCase()}</span>
                         </div>
-                        <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:#e2c07d; font-weight:bold;">
+                        <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--text-primary); font-weight:bold;">
                             ${available} <img src="https://gw2ps.local/Assets/Icons/${reg.localIcon}" style="width:16px; height:16px;">
                         </div>
                     `;
@@ -494,8 +630,8 @@
                             trackBtn.style.marginLeft = '20px';
                             trackBtn.style.fontSize = '10px';
                             trackBtn.style.padding = '8px 12px';
-                            trackBtn.style.color = isSelected ? '#e2c07d' : '#8a7a5f';
-                            trackBtn.style.borderLeft = isSelected ? '2px solid #e2c07d' : '1px solid #3c3228';
+                            trackBtn.style.color = isSelected ? 'var(--text-primary)' : 'var(--text-muted)';
+                            trackBtn.style.borderLeft = isSelected ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
                             trackBtn.innerHTML = `
                                 <span>${t.name.toUpperCase()}</span>
                                 <span style="float:right; opacity:0.6; font-family: Arial, sans-serif;">${current}/${total}</span>
@@ -520,8 +656,8 @@
                 document.querySelectorAll('#nav-panel .sub-btn').forEach(b => {
                     const active = b.dataset.trackId == trackId;
                     b.classList.toggle('active', active);
-                    b.style.color = active ? '#e2c07d' : '#8a7a5f';
-                    b.style.borderLeft = active ? '2px solid #e2c07d' : '1px solid #3c3228';
+                    b.style.color = active ? 'var(--text-primary)' : 'var(--text-muted)';
+                    b.style.borderLeft = active ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
                 });
 
                 const track = globalMasteries.find(t => t.id === trackId);
@@ -546,12 +682,12 @@
 
                 content.innerHTML = `
                     <div style="padding: 15px; display:flex; flex-direction:column; gap:20px; height:100%; background: rgba(0,0,0,0.1);">
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #3c3228; padding-bottom:15px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:15px;">
                             <div>
-                                <div style="font-size:10px; color:#8a7a5f; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">${regInfo.disp}</div>
-                                <div style="font-size:28px; color:#e2c07d; font-weight:bold; font-family: 'Crimson Text', serif; letter-spacing:0.5px;">${track.name}</div>
+                                <div style="font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">${regInfo.disp}</div>
+                                <div style="font-size:28px; color:var(--text-primary); font-weight:bold; font-family: 'Crimson Text', serif; letter-spacing:0.5px;">${track.name}</div>
                             </div>
-                            <button class="main-action" onclick="window.parent.postMessage({ action: 'openWiki', url: '${wikiUrl}' }, '*')" style="background:rgba(226,192,125,0.05); border:1px solid #4a3b2a; color:#e2c07d; padding:8px 16px; font-size:11px;">VIEW ON WIKI</button>
+                            <button class="main-action" onclick="window.parent.postMessage({ action: 'openWiki', url: '${wikiUrl}' }, '*')" style="background:var(--bg-button); border:1px solid var(--border-color); color:var(--text-primary); padding:8px 16px; font-size:11px;">VIEW ON WIKI</button>
                         </div>
                         
                         <div style="flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:12px; padding-right:8px;">
@@ -574,15 +710,15 @@
                                 }
 
                                 return `
-                                    <div style="background:rgba(26,21,16,0.9); border:1px solid ${isUnlocked ? '#3c3228' : '#2a2015'}; border-left:4px solid ${isUnlocked ? '#e5c100' : (isReady ? '#8a7a5f' : '#1a1510')}; padding:18px; display:flex; align-items:center; opacity: ${isUnlocked || isReady ? '1' : '0.4'}; transition: 0.2s; position: relative;">
-                                        <div style="width:44px; height:44px; background:rgba(0,0,0,0.6); border:1px solid ${isUnlocked ? '#e5c100' : '#2a2015'}; border-radius:4px; margin-right:25px; position:relative; flex-shrink:0; overflow:hidden;">
+                                    <div style="background:var(--bg-panel); border:1px solid ${isUnlocked ? 'var(--border-color)' : 'rgba(255,255,255,0.05)'}; border-left:4px solid ${isUnlocked ? 'var(--border-highlight)' : (isReady ? 'var(--text-muted)' : 'var(--bg-button)')}; padding:18px; display:flex; align-items:center; opacity: ${isUnlocked || isReady ? '1' : '0.4'}; transition: 0.2s; position: relative;">
+                                        <div style="width:44px; height:44px; background:rgba(0,0,0,0.6); border:1px solid ${isUnlocked ? 'var(--border-highlight)' : 'var(--border-color)'}; border-radius:4px; margin-right:25px; position:relative; flex-shrink:0; overflow:hidden;">
                                             <img src="${level.icon}" style="width:100%; height:100%; object-fit:contain; ${isUnlocked ? '' : 'filter:grayscale(1) opacity(0.2);'}">
                                             ${!isUnlocked ? '<div style="position:absolute; inset:0; background:rgba(0,0,0,0.4);"></div>' : ''}
                                         </div>
                                         <div style="flex:1; margin-right:20px;">
-                                            <div style="color:${isUnlocked ? '#e5c100' : '#8a7a5f'}; font-size:16px; font-weight:bold; letter-spacing:1px; margin-bottom:6px;">${level.name.toUpperCase()}</div>
-                                            <div style="color:rgba(226,192,125,0.7); font-size:12px; font-family: Arial, sans-serif; text-transform:none; line-height:1.5;">${level.description}</div>
-                                            ${isReady ? '<div style="margin-top:10px; display:inline-block; padding:3px 10px; background:#4a3b2a; color:#fff; font-size:10px; font-weight:bold; border-radius:2px; letter-spacing:0.5px;">READY TO TRAIN</div>' : ''}
+                                            <div style="color:${isUnlocked ? 'var(--border-highlight)' : 'var(--text-muted)'}; font-size:16px; font-weight:bold; letter-spacing:1px; margin-bottom:6px;">${level.name.toUpperCase()}</div>
+                                            <div style="color:color-mix(in srgb, var(--text-primary) 70%, transparent); font-size:12px; font-family: Arial, sans-serif; text-transform:none; line-height:1.5;">${level.description}</div>
+                                            ${isReady ? '<div style="margin-top:10px; display:inline-block; padding:3px 10px; background:var(--border-color); color:var(--text-primary); font-size:10px; font-weight:bold; border-radius:2px; letter-spacing:0.5px;">READY TO TRAIN</div>' : ''}
                                         </div>
                                         <div style="display:flex; flex-direction:column; align-items:center; gap:3px; margin-left:auto; width: 100px; flex-shrink:0; padding-right:15px; justify-content: center;">
                                             ${rowCounts.map((count, rowIdx) => `
@@ -614,7 +750,6 @@
 
                 return "<div class='ach-card " + (prog.done ? "done" : "") + (isSAB ? " sab-glitch" : "") + "' onclick='openModal(" + id + ")'>" +
                     "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
-                    "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
                     "<div class='ach-icon-wrap'><img src='" + (ach.i || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' class='ach-icon' alt='icon' /></div>" +
                     "<div class='ach-info'><div class='ach-title'>" + ach.n + "</div><div class='ach-req'>" + (ach.r || ach.d || "") + "</div>" +
                     "<div class='prog-container'><div class='prog-bg'><div class='prog-fill' style='width:" + percent + "%'></div></div>" +
@@ -629,11 +764,11 @@
                 const isFullyDone = prog.done || prog.current >= absoluteMax;
                 let bitsHtml = '';
                 if (ach.b && ach.b.length > 0) {
-                    bitsHtml = "<div style='margin-top:15px; font-size:11px; border-top:1px solid #4a3b2a; padding-top:10px;'>";
+                    bitsHtml = "<div style='margin-top:15px; font-size:11px; border-top:1px solid var(--border-color, #4a3b2a); padding-top:10px;'>";
                     const progBits = prog.bits || [];
                     ach.b.forEach((bit, i) => {
                         const isDone = isFullyDone || progBits.includes(i);
-                        const color = isDone ? '#1A9306' : '#8a7a5f';
+                        const color = isDone ? 'var(--success-color, #1A9306)' : 'var(--text-muted, #8a7a5f)';
                         const deco = isDone ? 'line-through' : 'none';
                         bitsHtml += "<div style='color:" + color + "; text-decoration:" + deco + "; margin-bottom:6px; text-transform:none;'>• " + (bit.text || 'Secret Objective') + "</div>";
                     });

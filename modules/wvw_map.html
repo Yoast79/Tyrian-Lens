@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/Leaflet/leaflet.css" />
 		<script src="https://gw2ps.local/Assets/Leaflet/leaflet.js"></script>
 		<style>
@@ -150,6 +151,7 @@
 		<script>
 			/*<![CDATA[*/
 			var isTracking = true;
+			var currentMenuOffset = 0;
 			var layerToggles = { 'poi': true, 'waypoint': true, 'vista': true, 'heropoint': true, 'sector': true, 'borders': true, 'overlay': true, 'map_text': true, 'camps': true, 'towers': true, 'keeps': true, 'castles': true, 'ruins': true, 'scoreboard': true, 'personal_markers': true };
 			var subLayers = { 'poi': L.layerGroup(), 'waypoint': L.layerGroup(), 'vista': L.layerGroup(), 'heropoint': L.layerGroup(), 'sector': L.layerGroup(), 'borders': L.layerGroup(), 'overlay': L.layerGroup(), 'map_text': L.layerGroup(), 'camps': L.layerGroup(), 'towers': L.layerGroup(), 'keeps': L.layerGroup(), 'castles': L.layerGroup(), 'ruins': L.layerGroup() };
 			var activeHighlightMarker = null;
@@ -339,13 +341,21 @@
 				isTracking = v; document.body.classList.toggle("tracking-active", v);
 				document.getElementById("track-status").innerText = v ? "ON" : "OFF";
 				document.getElementById("track-status").style.color = v ? "#00ff00" : "#ff0000";
-				if(v) map.setView(pMarker.getLatLng(), map.getZoom(), { animate: true });
+				if(v) {
+					let pos = pMarker.getLatLng();
+					window.updatePlayerLocation(pos.lng, pos.lat, 0, 0);
+				}
 			};
 
 			window.updatePlayerLocation = function(x, y, cx, cz) {
 				var pos = [parseFloat(y), parseFloat(x)]; pMarker.setLatLng(pos);
 				document.getElementById("p-x").innerText = Math.round(x); document.getElementById("p-y").innerText = Math.round(y);
-				if (isTracking) map.setView(pos, map.getZoom(), { animate: false });
+				if (isTracking) {
+					let offsetX = -currentMenuOffset;
+					let targetPoint = map.latLngToContainerPoint(pos).add([offsetX, 0]);
+					let targetLatLng = map.containerPointToLatLng(targetPoint);
+					map.setView(targetLatLng, map.getZoom(), { animate: false });
+				}
 				var el = document.getElementById("pImg");
 				if (el) { var angle = (Math.atan2(cx, cz) * (180 / Math.PI)) + 180; el.style.transform = "rotate(" + angle + "deg)"; }
 			};
@@ -466,7 +476,7 @@
 					{ name: "Alpine Borderlands", coords: [11884, 14086] }, 
 					{ name: "Eternal Battlegrounds", coords: [14580, 10605] },
 					{ name: "Edge of the Mists", coords: [10000, 7545] },
-					{ name: "Heart of the Mists", coords: [15525, 12695] }
+					{ name: "Heart of the Mists", coords: [7032, 5472] }
 				];
 				mapLabels.forEach(ml => {
 					let m = L.marker(ml.coords, { pane: 'textPane', interactive: false, icon: L.divIcon({ className: 'map-label region-label', html: ml.name, iconSize: [400, 40] }) });
@@ -537,6 +547,25 @@
 			}
 			window.addEventListener("message", function(event) { 
 				if (event.data && event.data.action === 'toggleMapLayer') window.toggleMapLayer(event.data.name, event.data.isVisible); 
+				if (event.data && event.data.action === 'toggleMenuState') {
+					let isOpen = event.data.isOpen;
+					let isWide = event.data.isWide;
+					let newOffset = isOpen ? (isWide ? 290 : 160) : 0;
+					let deltaX = newOffset - currentMenuOffset;
+					currentMenuOffset = newOffset;
+
+					if (isOpen) document.body.classList.add('menu-open');
+					else document.body.classList.remove('menu-open');
+
+					if (isTracking) {
+						let lastPos = pMarker.getLatLng();
+						window.updatePlayerLocation(lastPos.lng, lastPos.lat, 0, 0);
+					} else {
+						if (deltaX !== 0) {
+							map.panBy([-deltaX, 0], { animate: true });
+						}
+					}
+				} 
 				if (event.data && event.data.action === 'jumpMap') {
 					window.setTracking(false);
 					map.flyTo([event.data.pos[1], event.data.pos[0]], 6);

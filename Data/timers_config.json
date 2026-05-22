@@ -134,7 +134,8 @@
     { "cat": "Visions of Eternity", "sub": [
         { "n": "Day/Night Cycle", "evs": [ { "n": "Day/Night Cycle", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 30, "d": 60, "wp": "", "desc": "Local cycle. Day starts at X:30 on even hours." } ]},
         { "n": "Shipwreck Strand", "evs": [ { "n": "Strand Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "", "desc": "Strand meta." } ]},
-        { "n": "Starlit Weald", "evs": [ { "n": "Weald Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "", "desc": "Weald meta." } ]}
+        { "n": "Starlit Weald", "evs": [ { "n": "Weald Meta", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "", "desc": "Weald meta." } ]},
+        { "n": "Eternity's Garden", "evs": [ { "n": "Shackles of the Ancients", "i": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png", "r": 120, "o": 0, "d": 15, "wp": "[&BPwPAAA=]", "desc": "Shackles of the Ancients meta." } ]}
     ]},
     { "cat": "Public Instances", "sub": [
         { "n": "Eye of the North", "evs": [

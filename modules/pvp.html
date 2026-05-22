@@ -2,24 +2,27 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
+			::-webkit-scrollbar-thumb:hover { background: var(--text-primary, #e2c07d); }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
-			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
-			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
-			.tabs { display: flex; gap: 5px; margin-bottom: 15px; flex-shrink: 0; }
-			.tab-btn { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #8a7a5f; padding: 8px; cursor: pointer; text-transform: uppercase; font-size: 10px; flex: 1; transition: 0.2s; }
-			.tab-btn.active { background: rgba(226,192,125,0.1); border-color: #e2c07d; color: #e2c07d; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); font-weight: bold; }
+			.tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; align-items: center; }
+			.tab-btn { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; flex: 1; transition: 0.2s; text-align: center; }
+			.tab-btn:hover { background: var(--bg-button-hover, #e2c07d); color: var(--text-button-hover, #1a1510); border-color: var(--border-highlight, #e2c07d); }
+			.tab-btn.active { background: var(--border-highlight, #e2c07d); color: var(--bg-dark, #000000); border-color: var(--border-highlight, #e2c07d); }
 			.content-panel { flex: 1; overflow-y: auto; display: none; flex-direction: column; gap: 10px; }
 			.content-panel.active { display: flex; }
 			
 			.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 			.stat-card { 
-				background: rgba(20,15,10,0.8); 
-				border: 1px solid #332a1e; 
+				background: var(--bg-panel, rgba(20,15,10,0.8)); 
+				border: 1px solid var(--border-color, #332a1e); 
 				height: 80px; 
 				display: flex; 
 				flex-direction: column; 
@@ -29,8 +32,8 @@
 				padding: 5px;
 				position: relative; /* Needed for the absolute icon */
 			}
-			.stat-title { font-size: 10px; color: #8a7a5f; margin-bottom: 2px; }
-			.stat-value { font-size: 18px; color: #e2c07d; font-weight: bold; }
+			.stat-title { font-size: 10px; color: var(--text-muted, #8a7a5f); margin-bottom: 2px; }
+			.stat-value { font-size: 18px; color: var(--text-primary, #e2c07d); font-weight: bold; }
 
 			/* Rank Icon: Absolute positioning keeps it from pushing the text */
 			.rank-icon-lg { 
@@ -53,7 +56,7 @@
 				justify-content: center;
 			}
 
-			.match-row { display: flex; flex-direction: column; background: rgba(30,22,15,0.6); border-left: 3px solid #4a3b2a; padding: 10px; border: 1px solid #332a1e; margin-bottom: 6px; }
+			.match-row { display: flex; flex-direction: column; background: var(--bg-panel, rgba(30,22,15,0.6)); border-left: 3px solid var(--border-color, #4a3b2a); padding: 10px; border: 1px solid var(--border-color, #332a1e); margin-bottom: 6px; }
 			.match-win { border-left-color: #1A9306; }
 			.match-loss { border-left-color: #ff4444; }
 			.match-meta { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 5px; }
@@ -61,21 +64,21 @@
 			.score-red { background: #ff4444; height: 100%; }
 			.score-blue { background: #4444ff; height: 100%; }
 
-			.lb-row { display: flex; justify-content: space-between; padding: 8px; background: rgba(20,15,10,0.4); border-bottom: 1px solid #2a2015; font-size: 12px; align-items: center; }
-			.lb-rank { color: #8a7a5f; font-weight: bold; width: 35px; }
+			.lb-row { display: flex; justify-content: space-between; padding: 8px; background: var(--bg-panel, rgba(20,15,10,0.4)); border-bottom: 1px solid var(--border-color, #2a2015); font-size: 12px; align-items: center; }
+			.lb-rank { color: var(--text-muted, #8a7a5f); font-weight: bold; width: 35px; }
 
-			select { background: #000; color: #e2c07d; border: 1px solid #4a3b2a; padding: 8px; width: 100%; text-transform: uppercase; margin-bottom: 10px; font-family: inherit; outline: none; }
-			.eq-item { display: flex; align-items: center; gap: 10px; background: rgba(20,15,10,0.6); border: 1px solid #332a1e; padding: 8px; margin-bottom: 5px; }
-			.eq-icon { width: 44px; height: 44px; border: 1px solid #4a3b2a; cursor: help; }
+			select { background: var(--bg-panel, #000); color: var(--text-primary, #e2c07d); border: 1px solid var(--border-color, #4a3b2a); padding: 8px; width: 100%; text-transform: uppercase; margin-bottom: 10px; font-family: inherit; outline: none; }
+			.eq-item { display: flex; align-items: center; gap: 10px; background: var(--bg-panel, rgba(20,15,10,0.6)); border: 1px solid var(--border-color, #332a1e); padding: 8px; margin-bottom: 5px; }
+			.eq-icon { width: 44px; height: 44px; border: 1px solid var(--border-color, #4a3b2a); cursor: help; }
 			.eq-info { display: flex; flex-direction: column; flex: 1; }
-			.eq-name { font-size: 12px; font-weight: bold; color: #e2c07d; }
-			.eq-stats { font-size: 10px; color: #8a7a5f; text-transform: none; line-height: 1.3; }
+			.eq-name { font-size: 12px; font-weight: bold; color: var(--text-primary, #e2c07d); }
+			.eq-stats { font-size: 10px; color: var(--text-muted, #8a7a5f); text-transform: none; line-height: 1.3; }
 			
 			.hero-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(45px, 1fr)); gap: 8px; margin-top: 10px; }
-			.hero-icon { width: 45px; height: 45px; border: 1px solid #4a3b2a; filter: grayscale(100%); opacity: 0.4; transition: 0.3s; background: #000; object-fit: contain; cursor: pointer; }
-			.hero-unlocked { filter: grayscale(0%); opacity: 1; border-color: #e2c07d; box-shadow: 0 0 5px rgba(226, 192, 125, 0.3); }
+			.hero-icon { width: 45px; height: 45px; border: 1px solid var(--border-color, #4a3b2a); filter: grayscale(100%); opacity: 0.4; transition: 0.3s; background: #000; object-fit: contain; cursor: pointer; }
+			.hero-unlocked { filter: grayscale(0%); opacity: 1; border-color: var(--text-primary, #e2c07d); box-shadow: 0 0 5px rgba(226, 192, 125, 0.3); }
 
-			.loading, .no-data { text-align: center; color: #8a7a5f; font-style: italic; margin-top: 20px; font-size: 12px; letter-spacing: 1px; }
+			.loading, .no-data { text-align: center; color: var(--text-muted, #8a7a5f); font-style: italic; margin-top: 20px; font-size: 12px; letter-spacing: 1px; }
 		</style>
 	</head>
 	<body>
@@ -104,6 +107,7 @@
 
 		<script>
 			/*<![CDATA[*/
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			let activeKey = localStorage.getItem('gw2_active_key');
 			let settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 
@@ -314,6 +318,12 @@
 			}
 
 			loadStats();
+
+			window.addEventListener('message', (e) => {
+				if (e.data && e.data.action === 'updateTheme') {
+					document.body.setAttribute('data-theme', e.data.theme);
+				}
+			});
 			/*]]>*/
 		</script>
 	</body>

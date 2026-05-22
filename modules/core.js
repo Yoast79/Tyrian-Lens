@@ -105,10 +105,10 @@ async function initCore() {
         }
         
         // Memory-heavy index loading
-        indexes.home = await fetch('https://gw2ps.local/Data/home_index.json').then(r => r.json());
-        indexes.appearance = await fetch('https://gw2ps.local/Data/appearance_index.json').then(r => r.json());
-        indexes.gear = await fetch('https://gw2ps.local/Data/gear_index.json').then(r => r.json());
-        indexes.dyes = await fetch('https://gw2ps.local/Data/dyes_index.json').then(r => r.json());
+        indexes.home = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/home_index.json').then(r => r.json());
+        indexes.appearance = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/appearance_index.json').then(r => r.json());
+        indexes.gear = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/gear_index.json').then(r => r.json());
+        indexes.dyes = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/dyes_index.json').then(r => r.json());
         
         buildMenu();
         

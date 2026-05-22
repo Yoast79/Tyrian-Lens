@@ -2,53 +2,54 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow-x: hidden; text-transform: uppercase; margin: 0; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow-x: hidden; text-transform: uppercase; margin: 0; }
 
-			.header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; }
-			.char-name { font-size: 18px; font-weight: bold; color: #f0dca5; }
-			.char-level { font-size: 14px; color: #e2c07d; margin-left: 8px; font-family: monospace; }
-			.char-class { font-size: 14px; font-weight: normal; text-transform: capitalize; color: #8a7a5f; margin-left: 8px; }
-			.char-select { background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; outline: none; font-family: "Crimson Text", serif; }
+			.header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; }
+			.char-name { font-size: 18px; font-weight: bold; color: var(--text-primary, #f0dca5); }
+			.char-level { font-size: 14px; color: var(--text-primary, #e2c07d); margin-left: 8px; font-family: monospace; }
+			.char-class { font-size: 14px; font-weight: normal; text-transform: capitalize; color: var(--text-muted, #8a7a5f); margin-left: 8px; }
+			.char-select { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 5px; outline: none; font-family: "Crimson Text", serif; }
 
 			.template-row { display: flex; gap: 6px; justify-content: flex-start; margin-bottom: 20px; }
 			.template-box {
-			width: 28px; height: 28px; border: 1px solid #332a1e; background: rgba(20,15,10,0.8);
+			width: 28px; height: 28px; border: 1px solid var(--border-color, #332a1e); background: var(--bg-panel, rgba(20,15,10,0.8));
 			display: flex; align-items: center; justify-content: center; font-size: 13px;
-			color: #4a3b2a; transition: 0.2s; cursor: default; font-family: "Crimson Text", serif;
+			color: var(--border-color, #4a3b2a); transition: 0.2s; cursor: default; font-family: "Crimson Text", serif;
 			}
 
-			.template-box.unlocked { color: #e2c07d; cursor: pointer; }
-			.template-box.has-gear { border: 1px solid #e2c07d; color: #f0dca5; }
-			.template-box.active { background: #e2c07d !important; color: #1a1510 !important; border-color: #e2c07d !important; font-weight: bold; }
+			.template-box.unlocked { color: var(--text-primary, #e2c07d); cursor: pointer; }
+			.template-box.has-gear { border: 1px solid var(--text-primary, #e2c07d); color: var(--text-primary, #f0dca5); }
+			.template-box.active { background: var(--text-primary, #e2c07d) !important; color: var(--bg-button, #1a1510) !important; border-color: var(--text-primary, #e2c07d) !important; font-weight: bold; }
 
 			.main-layout { display: flex; justify-content: space-between; gap: 15px; max-width: 600px; margin: 0 auto; transition: box-shadow 0.3s ease; }
 			.equip-column { display: flex; flex-direction: column; gap: 12px; align-items: center; width: 220px; }
 			.equip-row { display: flex; gap: 12px; justify-content: center; width: 100%; min-height: 48px; transition: opacity 0.3s ease; }
-			.item-slot { width: 48px; height: 48px; border: 2px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; cursor: pointer; }
+			.item-slot { width: 48px; height: 48px; border: 2px solid var(--border-color, #332a1e); background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; cursor: pointer; }
 			.item-slot img { width: 100%; height: 100%; object-fit: cover; }
-			.separator { height: 1px; background: rgba(74, 59, 42, 0.4); width: 100%; margin: 5px 0; }
+			.separator { height: 1px; background: var(--border-color, rgba(74, 59, 42, 0.4)); width: 100%; margin: 5px 0; }
 
 			.right-column { display: flex; flex-direction: column; gap: 15px; }
-			.attr-panel, .skills-panel, .build-panel { background: rgba(15,12,10,0.95); border: 1px solid #2a2015; padding: 10px; width: 310px; height: fit-content; box-sizing: border-box; }
+			.attr-panel, .skills-panel, .build-panel { background: var(--bg-panel, rgba(15,12,10,0.95)); border: 1px solid var(--border-color, #2a2015); padding: 10px; width: 310px; height: fit-content; box-sizing: border-box; }
 			.attr-grid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 8px; column-gap: 10px; }
 			.attr-item { display: flex; align-items: center; gap: 6px; font-family: "Arial", sans-serif; font-size: 11px; color: #fff; }
 			.attr-icon { width: 15px; height: 15px; object-fit: contain; cursor: help; }
 			.attr-val { font-weight: bold; color: #ffffff; }
 
 			.skill-row { display: flex; gap: 6px; align-items: center; }
-			.skill-slot { width: 34px; height: 34px; border: 1px solid #332a1e; background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; }
+			.skill-slot { width: 34px; height: 34px; border: 1px solid var(--border-color, #332a1e); background: rgba(0,0,0,0.5); flex-shrink: 0; position: relative; }
 			.skill-slot img { width: 100%; height: 100%; object-fit: cover; }
 
-			.btn { background: rgba(20,15,10,0.9); border: 1px solid #4a3b2a; color: #e2c07d; height: 34px; padding: 0 15px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; -webkit-appearance: none; appearance: none; }
-			.btn:hover { border-color: #f0dca5; color: #f0dca5; background: rgba(226, 192, 125, 0.1); }
+			.btn { background: var(--bg-button, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); height: 34px; padding: 0 15px; cursor: pointer; text-transform: uppercase; font-family: "Crimson Text", serif; transition: 0.2s; -webkit-appearance: none; appearance: none; }
+			.btn:hover { border-color: var(--text-primary, #f0dca5); color: var(--text-primary, #f0dca5); background: var(--bg-button-hover, rgba(226, 192, 125, 0.1)); }
 
-			.swap-btn { width: 36px; height: 36px; cursor: pointer; border: 1px solid #4a3b2a; background: rgba(20,15,10,0.9); border-radius: 3px; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
-			.swap-btn:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.15); }
+			.swap-btn { width: 36px; height: 36px; cursor: pointer; border: 1px solid var(--border-color, #4a3b2a); background: var(--bg-button, rgba(20,15,10,0.9)); border-radius: 3px; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
+			.swap-btn:hover { border-color: var(--text-primary, #e2c07d); background: var(--bg-button-hover, rgba(226, 192, 125, 0.15)); }
 
 			.rarity-Legendary { border-color: #4C139D; }
 			.rarity-Ascended { border-color: #FB3E8D; }
@@ -57,7 +58,7 @@
 			.rarity-Masterwork { border-color: #1A9306; }
 			.rarity-Fine { border-color: #62A4DA; }
 
-			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; }
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: var(--text-primary, #e2c07d); letter-spacing: 3px; font-size: 16px; font-weight: bold; }
 
 			/* Large UI Scaling Overrides */
 			body.ui-large .char-name { font-size: 22px; }
@@ -131,7 +132,7 @@
 
 				<div class="right-column">
 					<div class="attr-panel">
-						<div style="font-size: 13px; color: #fff; margin-bottom: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 3px;">Attributes</div>
+						<div style="font-size: 13px; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 3px;">Attributes</div>
 						<div class="attr-grid" id="attr-display"></div>
 					</div>
 
@@ -140,8 +141,8 @@
 					</div>
 
 					<div class="skills-panel">
-						<div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-bottom: 10px;">
-							<div style="font-size: 14px; font-weight:bold; color: #fff;">SKILLS</div>
+						<div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px; margin-bottom: 10px;">
+							<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff);">SKILLS</div>
 							<div style="display:flex; gap:10px; align-items:center;">
 								<div id="btn-env-land" style="width:22px; height:22px; cursor:pointer;" onclick="setEnv('land')">
 									<img src="https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png" style="width:100%; height:100%;" />
@@ -151,14 +152,14 @@
 								</div>
 							</div>
 						</div>
-						<div style="font-size: 10px; color: #8a7a5f; letter-spacing: 1px; margin-bottom:4px;">WEAPON</div>
+						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;">WEAPON</div>
 						<div class="skill-row" id="weapon-skills" style="margin-bottom: 12px; gap:6px;"></div>
-						<div style="font-size: 10px; color: #8a7a5f; letter-spacing: 1px; margin-bottom:4px;">UTILITY</div>
+						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;">UTILITY</div>
 						<div class="skill-row" id="utility-skills" style="gap:6px;"></div>
 					</div>
 
 					<div class="build-panel">
-						<div style="font-size: 14px; font-weight:bold; color: #fff; margin-bottom: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px;">BUILD</div>
+						<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px;">BUILD</div>
 						<div class="template-row" id="build-tabs" style="margin-bottom: 10px; justify-content: flex-start;"></div>
 						<div id="build-display" style="display:flex; flex-direction:column; gap:6px;"></div>
 					</div>
@@ -166,25 +167,25 @@
 			</div>
 		</div>
 
-		<div id="save-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#1a1510; border:2px solid #4a3b2a; padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:350px; font-family: 'Crimson Text', serif;">
-			<div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">SAVE TO PLANNER</div>
+		<div id="save-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--bg-panel, #1a1510); border:2px solid var(--border-color, #4a3b2a); padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:350px; font-family: 'Crimson Text', serif;">
+			<div style="color:var(--text-primary, #f0dca5); margin-bottom:10px; font-weight:bold; font-size:16px;">SAVE TO PLANNER</div>
 			<div style="color:#ccc; font-size:14px; margin-bottom:10px;">Enter build name:</div>
-			<input type="text" id="save-build-name" style="width: 100%; background: #0a0805; color: #e2c07d; border: 1px solid #332a1e; padding: 8px; margin-bottom: 20px; outline: none; font-family: 'Crimson Text', serif; font-size: 14px; box-sizing: border-box;" />
+			<input type="text" id="save-build-name" style="width: 100%; background: var(--bg-button, #0a0805); color: var(--text-primary, #e2c07d); border: 1px solid var(--border-color, #332a1e); padding: 8px; margin-bottom: 20px; outline: none; font-family: 'Crimson Text', serif; font-size: 14px; box-sizing: border-box;" />
 			<div style="display:flex; justify-content:space-between;">
 				<button class="btn" onclick="document.getElementById('save-modal').style.display='none'">Cancel</button>
 				<button class="btn" onclick="confirmExport()">Save</button>
 			</div>
 		</div>
 
-		<div id="equipment-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#1a1510; border:2px solid #4a3b2a; padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:600px; max-height:80vh; flex-direction:column; font-family: 'Crimson Text', serif;">
-			<div style="color:#f0dca5; margin-bottom:15px; font-weight:bold; font-size:16px; display:flex; justify-content:space-between; align-items:center;">
+		<div id="equipment-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:var(--bg-panel, #1a1510); border:2px solid var(--border-color, #4a3b2a); padding:20px; z-index:1000; box-shadow:0 0 20px rgba(0,0,0,0.8); width:600px; max-height:80vh; flex-direction:column; font-family: 'Crimson Text', serif;">
+			<div style="color:var(--text-primary, #f0dca5); margin-bottom:15px; font-weight:bold; font-size:16px; display:flex; justify-content:space-between; align-items:center;">
 				<span>EQUIPMENT LINKS</span>
 				<button class="btn" style="height:24px; padding:0 10px; font-size:12px;" onclick="document.getElementById('equipment-modal').style.display='none'">Close</button>
 			</div>
 			<div id="eq-modal-list" style="overflow-y:auto; padding-right:10px; display:flex; flex-direction:column; gap:6px;"></div>
 		</div>
 
-		<div id="toast-msg" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#1a1510; border:1px solid #e2c07d; color:#e2c07d; padding:10px 20px; z-index:1001; box-shadow:0 0 10px rgba(0,0,0,0.8); text-transform:uppercase; font-family: 'Crimson Text', serif;"></div>
+		<div id="toast-msg" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--bg-panel, #1a1510); border:1px solid var(--text-primary, #e2c07d); color:var(--text-primary, #e2c07d); padding:10px 20px; z-index:1001; box-shadow:0 0 10px rgba(0,0,0,0.8); text-transform:uppercase; font-family: 'Crimson Text', serif;"></div>
 
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
@@ -193,6 +194,7 @@
 
 		<script>
 			/*<![CDATA[*/
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
         let CURRENT_ENV = 'land', CURRENT_TERRA_WSET = 1, CURRENT_AQUA_WSET = 1, CURRENT_TAB_DATA = [], fullData = null;
         window.PLANNER_DB = null;
 
@@ -649,7 +651,7 @@
             if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
             // Pre-load planner db for translation
-            window.PLANNER_DB = await UTILS.fetchSafe('https://gw2ps.local/Data/planner_db.json');
+            window.PLANNER_DB = await UTILS.fetchSafe('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/planner_db.json');
 
             const activeKey = localStorage.getItem('gw2_active_key'); if (!activeKey) return;
             const res = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?access_token=${activeKey}`);
@@ -999,8 +1001,11 @@
             });
         };
         window.addEventListener('message', (e) => { 
-                if (e.data.action === 'switchAccount') init(); 
-                if (e.data.action === 'preferredCharChanged') {
+                if (e.data && e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
+                }
+                else if (e.data.action === 'switchAccount') init(); 
+                else if (e.data.action === 'preferredCharChanged') {
                     const sel = document.getElementById('char-select');
                     if(sel && e.data.value) {
                         sessionStorage.setItem('gw2_session_char', e.data.value);

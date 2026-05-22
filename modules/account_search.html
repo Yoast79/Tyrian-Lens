@@ -72,6 +72,10 @@
 					<input type="checkbox" id="toggle-farming-markers" checked="" onchange="filterSearch()" style="cursor:pointer;" />
 					<label for="toggle-farming-markers" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW FARMING MARKERS</label>
 				</div>
+				<div style="display:flex; align-items:center; gap: 8px;">
+					<input type="checkbox" id="toggle-npcs" checked="" onchange="filterSearch()" style="cursor:pointer;" />
+					<label for="toggle-npcs" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW NPCs</label>
+				</div>
 			</div>
 
 			<div id="results-container">
@@ -100,6 +104,31 @@
                 itemLocations[id][locName] = (itemLocations[id][locName] || 0) + (count || 1);
             }
 
+			// NPC service yields → sublayer key mapping
+			function getNpcLayerKey(service) {
+				const s = (service || '').toLowerCase();
+				if (s.includes('weaponsmith')) return 'node_npc_weaponsmith';
+				if (s.includes('armorsmith')) return 'node_npc_armorsmith';
+				if (s.includes('tailor')) return 'node_npc_tailor';
+				if (s.includes('chef') || s.includes('cooking')) return 'node_npc_chef';
+				if (s.includes('leatherworker')) return 'node_npc_leatherworker';
+				if (s.includes('huntsman')) return 'node_npc_huntsman';
+				if (s.includes('jeweler')) return 'node_npc_jeweler';
+				if (s.includes('artificer')) return 'node_npc_artificer';
+				if (s.includes('gathering merchant')) return 'node_npc_gathering_merchant';
+				if (s.includes('dungeon merchant')) return 'node_npc_dungeon_merchant';
+				if (s.includes('laurel merchant')) return 'node_npc_laurel_merchant';
+				if (s.includes('guild vault') || s.includes('guild bank')) return 'node_npc_guild_vault';
+				if (s.includes('account vault') || s === 'bank') return 'node_npc_bank';
+				if (s.includes('trading post')) return 'node_npc_trading_post';
+				if (s.includes('reinforce armor')) return 'node_npc_reinforce_armor';
+				if (s.includes('guild commendation')) return 'node_npc_guild_commendation';
+				if (s.includes('merchant') || s.includes('karma') || s.includes('vendor') ||
+					s.includes('bartender') || s.includes('fishmonger') || s.includes('fishing supplies') ||
+					s.includes('research merchant')) return 'node_npc_merchant';
+				return 'node_npc_misc';
+			}
+
 			async function init() {
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
@@ -115,14 +144,15 @@
                 itemLocations = {};
                 itemCache = {};
 
-				const [bank, mats, inv, wallet, chars, mapData, farmingMarkers] = await Promise.all([
+				const [bank, mats, inv, wallet, chars, mapData, farmingMarkers, npcCoordinates] = await Promise.all([
 					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
                     fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey),
-					fetchJSON("https://gw2ps.local/Data/map_data.json"),
-                    fetchJSON("https://gw2ps.local/Data/farming_markers.json")
+					fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/map_data.json"),
+                    fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/farming_markers.json"),
+					fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/npc_coordinates.json").catch(() => null)
 				]);
 
                 if(bank) bank.forEach(i => { if(i) addLoc(i.id, "Bank", i.count); });
@@ -197,6 +227,55 @@
                             };
                         }
                         addLoc(id, isPet ? "RANGER PET" : "FARMING NODE", 1);
+                    });
+                }
+
+                if(npcCoordinates) {
+                    const uniqueYields = new Set();
+                    npcCoordinates.forEach((p, idx) => {
+                        if (!p.node) return;
+                        const service = (p.yields && p.yields[0]) ? p.yields[0] : 'Merchant';
+                        const layerKey = getNpcLayerKey(service);
+                        const id = 'npc_' + idx;
+
+                        if (p.yields) {
+                            p.yields.forEach(y => {
+                                if (y) uniqueYields.add(y.trim());
+                            });
+                        }
+
+                        // Coordinates in npc_coordinates.json are [y, x].
+                        // Map actions (jumpToLocation, highlightLocation) expect [x, y].
+                        itemCache[id] = {
+                            name: p.node,
+                            icon: p.icon || 'https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png',
+                            rarity: 'Basic',
+                            isMapLoc: true,
+                            isNPC: true,
+                            pos: [p.pos[1], p.pos[0]],
+                            layer: layerKey
+                        };
+                        addLoc(id, service.toUpperCase(), 1);
+                    });
+
+                    // Dynamic creation of yield group entries
+                    uniqueYields.forEach(yieldName => {
+                        const layerKey = getNpcLayerKey(yieldName);
+                        const slug = yieldName.toLowerCase().replace(/[^a-z0-9]/gi, '_');
+                        const id = 'npcgroup_' + layerKey + '_' + slug;
+
+                        const repNpc = npcCoordinates.find(p => p.yields && p.yields.includes(yieldName));
+                        const icon = (repNpc && repNpc.icon) ? repNpc.icon : 'https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png';
+
+                        itemCache[id] = {
+                            name: yieldName,
+                            icon: icon,
+                            rarity: 'Basic',
+                            isMapLoc: true,
+                            isNPCGroup: true,
+                            layer: layerKey
+                        };
+                        addLoc(id, "NPC CATEGORY", 1);
                     });
                 }
 
@@ -280,7 +359,7 @@
                 }
 
                 const keys = Object.keys(itemLocations);
-                const itemIds = keys.filter(k => !k.toString().startsWith('curr_') && !k.toString().startsWith('maploc_') && !k.toString().startsWith('wvwloc_') && !k.toString().startsWith('farmnode_'));
+                const itemIds = keys.filter(k => !k.toString().startsWith('curr_') && !k.toString().startsWith('maploc_') && !k.toString().startsWith('wvwloc_') && !k.toString().startsWith('farmnode_') && !k.toString().startsWith('npc_') && !k.toString().startsWith('npcgroup_'));
                 const currIds = keys.filter(k => k.toString().startsWith('curr_')).map(k => k.replace('curr_', ''));
 
                 // Fetch Items
@@ -333,7 +412,8 @@
                 const res = document.getElementById('results-container');
                 const showMapLocs = document.getElementById('toggle-map-locs').checked;
                 const showFarming = document.getElementById('toggle-farming-markers').checked;
-                
+                const showNPCs = document.getElementById('toggle-npcs').checked;
+
                 document.getElementById('clear-search').style.display = q === "" ? "none" : "block";
 
                 if (q.length < 3) {
@@ -348,6 +428,9 @@
                     if (!item.name.toLowerCase().includes(q)) return false;
                     
                     if (item.isMapLoc) {
+                        if (item.isNPC || item.isNPCGroup) {
+                            return showNPCs;
+                        }
                         if (item.isFarmingNode) {
                             if (item.isPet) {
                                 return showMapLocs || showFarming;
@@ -381,11 +464,12 @@
                     });
 
                     let actionBtn = '';
-                    if (item.isMapLoc && !item.isFarmingNode && item.pos) {
+                    if (item.isMapLoc && !item.isFarmingNode && !item.isNPCGroup && item.pos) {
                         const x = item.pos[0];
                         const y = item.pos[1];
                         const isPet = !!item.isPet;
                         const isWvW = !!item.isWvW;
+                        const isNPC = !!item.isNPC;
                         
                         actionBtn = `
                         <div style="display: flex; gap: 6px; flex-shrink: 0;">
@@ -398,21 +482,29 @@
                             <button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" 
                                     onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" 
                                     onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" 
-                                    onclick="window.parent.postMessage({action:'highlightLocation', x: ${x}, y: ${y}, isPet: ${isPet}, markerIcon: '${item.icon}', markerName: '${item.name.replace(/'/g, "\\'")}', layerKey: '${item.layer}', isWvW: ${isWvW}}, '*')">
+                                    onclick="window.parent.postMessage({action:'highlightLocation', x: ${x}, y: ${y}, isPet: ${isPet}, isFarmingNode: ${isNPC}, markerIcon: '${item.icon}', markerName: '${item.name.replace(/'/g, "\\'")}', layerKey: '${item.layer}', isWvW: ${isWvW}}, '*')">
                                 HIGHLIGHT
                             </button>
                         </div>`;
-                    } else if (item.isFarmingNode) {
+                    } else if (item.isFarmingNode || item.isNPCGroup) {
                         actionBtn = `<button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" onclick="window.parent.postMessage({action:'highlightLayer', layer: '${item.layer}', markerName: '${item.name.replace(/'/g, "\\'")}'}, '*')">HIGHLIGHT</button>`;
+                    }
+
+                    // Slot click handler - NPCs use the shopping anchor, all other items/locations use their normal page title
+                    let onclickWiki = '';
+                    if (item.isNPC) {
+                        onclickWiki = `window.parent.postMessage({ action: 'openWiki', url: 'https://wiki.guildwars2.com/index.php?title=' + encodeURIComponent('${item.name.replace(/'/g, "\\'")}') + '&useskin=vector#Items_offered' }, '*')`;
+                    } else {
+                        onclickWiki = `window.parent.postMessage({ action: 'openWiki', title: '${item.name.replace(/'/g, "\\'")}' }, '*')`;
                     }
 
                     html += `
                     <div class="result-row">
                         <div class="item-slot rarity-${item.rarity || 'Basic'}" 
-                             onmouseover="${item.isMapLoc ? '' : `showItemTip('${id}', event)`}" 
-                             onmouseout="${item.isMapLoc ? '' : `window.parent.postMessage({action:'hideTooltip'}, '*')`}"
+                             onmouseover="${(item.isMapLoc && !item.isNPC) ? '' : `showItemTip('${id}', event)`}" 
+                             onmouseout="${(item.isMapLoc && !item.isNPC) ? '' : `window.parent.postMessage({action:'hideTooltip'}, '*')`}"
                              data-name="${(item.name || '').replace(/"/g, '&quot;')}"
-                             onclick="${item.isMapLoc ? '' : `window.parent.postMessage({ action: 'openWiki', title: this.getAttribute('data-name') }, '*')`}">
+                             onclick="${onclickWiki}">
                             <img src="${item.icon}" class="item-icon" />
                         </div>
                         <div class="item-info">

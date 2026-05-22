@@ -19,9 +19,10 @@
 			button.active { background: var(--success-color, #1A9306); color: #fff; border-color: var(--success-color, #1A9306); }
 			button.stop { background: var(--error-color, #721c24); color: #fff; border-color: var(--error-color, #f5c6cb); }
 
-			.tabs { display: flex; gap: 5px; margin-bottom: 15px; border-bottom: 1px solid var(--border-color, #2a2015); padding-bottom: 5px; }
-			.tab-btn { background: transparent; border: none; color: var(--text-muted, #8a7a5f); padding: 5px 10px; cursor: pointer; border-bottom: 2px solid transparent; }
-			.tab-btn.active { color: var(--text-primary, #e2c07d); border-bottom-color: var(--text-primary, #e2c07d); }
+			.tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; align-items: center; }
+			.tab-btn { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; transition: 0.2s; }
+			.tab-btn:hover { background: var(--bg-button-hover, #e2c07d); color: var(--text-button-hover, #1a1510); border-color: var(--border-highlight, #e2c07d); }
+			.tab-btn.active { background: var(--border-highlight, #e2c07d); color: var(--bg-dark, #000000); border-color: var(--border-highlight, #e2c07d); }
 
 			.tab-content { flex: 1; overflow-y: auto; display: none; flex-direction: column; gap: 15px; padding-right: 5px; }
 			.tab-content.active { display: flex; }

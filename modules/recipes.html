@@ -2,56 +2,58 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
 
 			body {
-			background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px;
+			background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px;
 			overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase;
 			}
 
-			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #4a3b2a; padding-bottom: 5px; margin-bottom: 10px; color: #8a7a5f; flex-shrink: 0; }
+			.section-title { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px; margin-bottom: 10px; color: var(--text-muted, #8a7a5f); flex-shrink: 0; }
 
 			#recipes-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; min-height: 0; }
 
-			.recipe-section { margin-bottom: 15px; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); }
+			.recipe-section { margin-bottom: 15px; border: 1px solid var(--border-color, #2a2015); background: rgba(0,0,0,0.3); }
 
 			.dropdown-btn {
-			width: 100%; background: #1a1510; border: none; color: #e2c07d;
+			width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-primary, #e2c07d);
 			padding: 10px 15px; text-transform: uppercase; font-size: 13px; cursor: pointer;
 			display: flex; align-items: center; justify-content: flex-start; gap: 10px; transition: 0.2s;
-			position: relative; border-bottom: 1px solid #2a2015;
+			position: relative; border-bottom: 1px solid var(--border-color, #2a2015);
 			}
-			.dropdown-btn:hover { background: #251d16; }
+			.dropdown-btn:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 
 			.dropdown-btn::after {
-			content: '▼'; position: absolute; right: 15px; font-size: 10px; transition: 0.3s; color: #4a3b2a;
+			content: '▼'; position: absolute; right: 15px; font-size: 10px; transition: 0.3s; color: var(--border-color, #4a3b2a);
 			}
-			.dropdown-btn.active::after { transform: rotate(180deg); color: #e2c07d; }
+			.dropdown-btn.active::after { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
 
 			.sub-btn {
-			background: rgba(20,15,10,0.4); padding: 8px 20px; font-size: 11px; color: #8a7a5f; border-bottom: 1px solid #2a2015;
+			background: var(--bg-panel, rgba(20,15,10,0.4)); padding: 8px 20px; font-size: 11px; color: var(--text-muted, #8a7a5f); border-bottom: 1px solid var(--border-color, #2a2015); transition: 0.2s;
 			}
+			.sub-btn:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 
 			.dropdown-content { display: none; }
 
 			.recipe-grid { display: grid; grid-template-columns: repeat(10, 42px); gap: 4px; padding: 10px; justify-content: center; min-height: 0; }
 
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; cursor: pointer; transition: 0.2s; position: relative; }
-			.item-slot:hover { border-color: #e2c07d; background: rgba(226, 192, 125, 0.1); }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color, #332a1e); cursor: pointer; transition: 0.2s; position: relative; }
+			.item-slot:hover { border-color: var(--text-primary, #e2c07d); background: var(--bg-button-hover, rgba(226, 192, 125, 0.1)); }
 			.recipe-icon { width: 100%; height: 100%; object-fit: cover; }
 			.recipe-icon.locked { filter: grayscale(1) contrast(0.5); opacity: 0.4; }
 
-			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: #e2c07d; letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
+			.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; color: var(--text-primary, #e2c07d); letter-spacing: 3px; font-size: 16px; font-weight: bold; height: 100%; }
 			.loading img { width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain; }
 
 			/* Explicit fix for currency boxes */
 			.rarity-Currency { border-color: transparent !important; background: transparent !important; }
-			.text-Currency { color: #e2c07d !important; }
+			.text-Currency { color: var(--text-primary, #e2c07d) !important; }
 
 			.rarity-Legendary { border: 1px solid #4C139D; }
 			.rarity-Ascended { border: 1px solid #FB3E8D; }
@@ -70,54 +72,54 @@
 			.text-Basic { color: #fdfdfd; }
 
 			/* Calculator Specific Styles */
-			.tabs-header { display: flex; gap: 10px; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; }
-			.tab-btn { background: #1a1510; border: 1px solid #4a3b2a; color: #8a7a5f; padding: 8px 15px; font-family: "Crimson Text", serif; font-size: 14px; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: 0.2s; }
-			.tab-btn.active { background: #2a221a; color: #e2c07d; border-color: #e2c07d; }
-			.tab-btn:hover:not(.active) { color: #e2c07d; background: #251d16; }
+			.tabs-header { display: flex; gap: 8px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; flex-shrink: 0; align-items: center; }
+			.tab-btn { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; transition: 0.2s; }
+			.tab-btn:hover { background: var(--bg-button-hover, #e2c07d); color: var(--text-button-hover, #1a1510); border-color: var(--border-highlight, #e2c07d); }
+			.tab-btn.active { background: var(--border-highlight, #e2c07d); color: var(--bg-dark, #000000); border-color: var(--border-highlight, #e2c07d); }
 
 			#calculator-container { display: none; flex: 1 1 auto; overflow-y: auto; padding-right: 5px; flex-direction: column; }
 
 			.search-container { position: relative; width: 100%; margin-bottom: 15px; flex-shrink: 0; display: flex; gap: 10px; }
-			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 10px 30px 10px 10px; font-size: 13px; outline: none; width: 100%; font-family: "Crimson Text", serif; text-transform: uppercase; }
-			.search-box:focus { border-color: #e2c07d; }
+			.search-box { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #fff); padding: 10px 30px 10px 10px; font-size: 13px; outline: none; width: 100%; font-family: "Crimson Text", serif; text-transform: uppercase; }
+			.search-box:focus { border-color: var(--text-primary, #e2c07d); }
 
-			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #4a3b2a; cursor: pointer; font-size: 18px; line-height: 1; display: none; z-index: 10; }
-			.clear-btn:hover { color: #e2c07d; }
+			.clear-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: var(--border-color, #4a3b2a); cursor: pointer; font-size: 18px; line-height: 1; display: none; z-index: 10; }
+			.clear-btn:hover { color: var(--text-primary, #e2c07d); }
 
-			.autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: #1a1510; border: 1px solid #e2c07d; border-top: none; max-height: 250px; overflow-y: auto; z-index: 100; display: none; }
-			.autocomplete-item { padding: 8px 10px; cursor: pointer; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #2a2015; font-size: 13px; color: #e2c07d; }
-			.autocomplete-item:hover { background: #251d16; color: #fff; }
-			.autocomplete-item img { width: 28px; height: 28px; border: 1px solid #332a1e; }
+			.autocomplete-list { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-button, #1a1510); border: 1px solid var(--text-primary, #e2c07d); border-top: none; max-height: 250px; overflow-y: auto; z-index: 100; display: none; }
+			.autocomplete-item { padding: 8px 10px; cursor: pointer; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border-color, #2a2015); font-size: 13px; color: var(--text-primary, #e2c07d); }
+			.autocomplete-item:hover { background: var(--bg-button-hover, #251d16); color: var(--text-primary, #fff); }
+			.autocomplete-item img { width: 28px; height: 28px; border: 1px solid var(--border-color, #332a1e); }
 
-			.toggle-container { display: flex; align-items: center; gap: 10px; font-size: 11px; color: #8a7a5f; cursor: pointer; user-select: none; letter-spacing: 1px; }
-			.toggle-switch { position: relative; width: 34px; height: 18px; background: #1a1510; border: 1px solid #4a3b2a; border-radius: 9px; transition: 0.2s; }
-			.toggle-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; background: #4a3b2a; border-radius: 50%; transition: 0.2s; }
-			.active .toggle-switch { border-color: #e2c07d; }
-			.active .toggle-switch::after { left: 18px; background: #e2c07d; }
+			.toggle-container { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--text-muted, #8a7a5f); cursor: pointer; user-select: none; letter-spacing: 1px; }
+			.toggle-switch { position: relative; width: 34px; height: 18px; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); border-radius: 9px; transition: 0.2s; }
+			.toggle-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; background: var(--border-color, #4a3b2a); border-radius: 50%; transition: 0.2s; }
+			.active .toggle-switch { border-color: var(--text-primary, #e2c07d); }
+			.active .toggle-switch::after { left: 18px; background: var(--text-primary, #e2c07d); }
 
-			#calc-results { flex: 1; border: 1px solid #2a2015; background: rgba(0,0,0,0.3); padding: 15px; overflow-y: auto; display: flex; flex-direction: column; }
+			#calc-results { flex: 1; border: 1px solid var(--border-color, #2a2015); background: rgba(0,0,0,0.3); padding: 15px; overflow-y: auto; display: flex; flex-direction: column; }
 
-			.shopping-list-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed #332a1e; font-size: 12px; }
+			.shopping-list-item { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--border-color, #332a1e); font-size: 12px; }
 			.shopping-list-item:last-child { border-bottom: none; }
 
 			.coin-icon { height: 12px; width: 12px; vertical-align: text-bottom; margin: 0 2px; }
 
 			.calc-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
 			.calc-breakdown-item { display: flex; flex-direction: column; }
-			.calc-bd-title { color: #8a7a5f; font-size: 11px; margin-bottom: 3px; font-weight: bold; }
+			.calc-bd-title { color: var(--text-muted, #8a7a5f); font-size: 11px; margin-bottom: 3px; font-weight: bold; }
 			.calc-bd-val { font-size: 14px; font-weight: bold; display: flex; align-items: center; }
-			.calc-bd-sub { font-size: 10px; color: #8a7a5f; margin-top: 2px; display: flex; align-items: center; }
+			.calc-bd-sub { font-size: 10px; color: var(--text-muted, #8a7a5f); margin-top: 2px; display: flex; align-items: center; }
 
-			.target-block { background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0; margin-bottom: 10px; }
-			.target-header { padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; }
-			.target-content { padding: 15px; display: none; flex-direction: column; align-items: stretch; gap: 10px; border-top: 1px solid #2a2015; }
+			.target-block { background: rgba(0,0,0,0.6); border: 1px solid var(--border-color, #332a1e); flex-shrink: 0; margin-bottom: 10px; }
+			.target-header { padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-button, #1a1510); border-bottom: 1px solid var(--border-color, #2a2015); }
+			.target-content { padding: 15px; display: none; flex-direction: column; align-items: stretch; gap: 10px; border-top: 1px solid var(--border-color, #2a2015); }
 			.target-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
 			.target-remove-btn { background: #3a1515; border: 1px solid #ff4a4a; color: #ff4a4a; padding: 5px 15px; cursor: pointer; font-family: "Crimson Text", serif; font-size: 11px; font-weight: bold; transition: 0.2s; }
 			.target-remove-btn:hover { background: #ff4a4a; color: #fff; }
 			input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 			input[type=number] { -moz-appearance: textfield; }
 
-			.step-container { padding: 10px 0; border-bottom: 1px dashed #332a1e; font-size: 12px; transition: 0.2s; }
+			.step-container { padding: 10px 0; border-bottom: 1px dashed var(--border-color, #332a1e); font-size: 12px; transition: 0.2s; }
 			.completed-step { filter: grayscale(1); opacity: 0.4; }
 			.completed-step .step-header-content span { text-decoration: line-through; }
 			.completed-step .step-ingredients { display: none !important; }
@@ -157,7 +159,7 @@
 				</div>
 
 				<div id="calc-results">
-					<div style="padding: 60px 20px; text-align: center; color: #8a7a5f; font-style: italic; letter-spacing: 1px;">
+					<div style="padding: 60px 20px; text-align: center; color: var(--text-muted, #8a7a5f); font-style: italic; letter-spacing: 1px;">
 						SELECT AN ITEM TO GENERATE SHOPPING LIST
 					</div>
 				</div>
@@ -172,6 +174,7 @@
 
 		<script>
 			/*<![CDATA[*/
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			const discIcons = {
 				"Armorsmith": "https://gw2ps.local/Assets/Icons/craft_armorsmith.png",
 				"Artificer": "https://gw2ps.local/Assets/Icons/craft_artificer.png",
@@ -304,7 +307,7 @@
 				
 				loaderText.innerText = "LOADING MASTER INDEX...";
 				try {
-					const masterData = await fetchJSON('https://gw2ps.local/Data/gw2_master_index.json');
+					const masterData = await fetchJSON('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/gw2_master_index.json');
 					if (masterData) {
 						searchIndex = masterData;
 						searchIndex.forEach(item => {
@@ -315,7 +318,7 @@
 
 				loaderText.innerText = "LOADING OFFICIAL RECIPES...";
 				try {
-					const offData = await fetchJSON('https://gw2ps.local/Data/official_recipes_clean.json');
+					const offData = await fetchJSON('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/official_recipes_clean.json');
 					if (offData && Array.isArray(offData)) {
 						localOfficialRecipes = offData;
 					}
@@ -323,7 +326,7 @@
 
 				loaderText.innerText = "LOADING VENDOR DATABANKS...";
 				try {
-					const vpData = await fetchJSON('https://gw2ps.local/Data/vendor_prices_clean.json');
+					const vpData = await fetchJSON('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/vendor_prices_clean.json');
 					if (vpData) {
 						vendorPrices = vpData;
 						for (let key in vendorPrices) {
@@ -344,7 +347,7 @@
 					if (cachedForge) {
 						forgeRecipes = JSON.parse(cachedForge);
 					} else {
-						const forgeData = await fetchJSON('https://gw2ps.local/Data/mystic_forge_clean.json');
+						const forgeData = await fetchJSON('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/mystic_forge_clean.json');
 						if (forgeData && forgeData.recipes) {
 							forgeRecipes = {};
 							for (let key in forgeData.recipes) {
@@ -864,8 +867,8 @@
 
 							let idata = getDisplayData(ingId);
 							let displayTotal = Math.ceil(totalIngNeeded); 
-							return `${displayTotal.toLocaleString('de-DE')} <img src="${idata.icon}" style="width:14px; vertical-align:middle; border:1px solid #332a1e;" title="${idata.name}">`;
-						}).join(' <span style="color:#4a3b2a;">+</span> ');
+							return `${displayTotal.toLocaleString('de-DE')} <img src="${idata.icon}" style="width:14px; vertical-align:middle; border:1px solid var(--border-color, #332a1e);" title="${idata.name}">`;
+						}).join(' <span style="color:var(--border-color, #4a3b2a);">+</span> ');
 
 						vendorPurchasesHtml += `
 						<div class="shopping-list-item">
@@ -907,7 +910,7 @@
 											<div style="width: 85px; flex-shrink:0; pointer-events:none;">${formatQty(Math.round(step.yields), verb)}</div>
 											<img src="${sd.icon}" style="width:24px; flex-shrink:0; pointer-events:none;" class="rarity-${sd.rarity}" onerror="this.onerror=null; this.src='https://render.guildwars2.com/file/D68BCC6E272BB77A42D7543BDD2A68490B60029C/434789.png'">
 											<span class="text-${sd.rarity}" style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; pointer-events:none;">
-												<span>${sd.name}</span> <span style="color:#8a7a5f; margin-left:4px; margin-right:4px; text-decoration:none !important;">${connector}</span>
+												<span>${sd.name}</span> <span style="color:var(--text-muted, #8a7a5f); margin-left:4px; margin-right:4px; text-decoration:none !important;">${connector}</span>
 											</span>
 										</div>
 									</div>
@@ -923,7 +926,7 @@
 											rawGoldTotal += totalIngNeeded;
 											return `<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px; padding-left: 50px;">
 												<div style="width: 85px; flex-shrink:0;"></div>
-												<span style="color:#e2c07d; font-weight:bold;">${formatCoin(totalIngNeeded, false)}</span>
+												<span style="color:var(--text-primary, #e2c07d); font-weight:bold;">${formatCoin(totalIngNeeded, false)}</span>
 											</div>`;
 										}
 										if (ingId < 0 || specialCurrencies.includes(Math.abs(ingId))) {
@@ -973,18 +976,18 @@
 								${target.requestedAmount.toLocaleString('de-DE')}x ${tName}
 							</div>
 							<div style="display:flex; align-items:center; gap:15px;">
-								<span id="target-icon-${idx}" style="color:#8a7a5f; font-size:10px;">${isOpen ? '&#9650;' : '&#9660;'}</span>
+								<span id="target-icon-${idx}" style="color:var(--text-muted, #8a7a5f); font-size:10px;">${isOpen ? '&#9650;' : '&#9660;'}</span>
 							</div>
 						</div>
 						<div id="target-content-${idx}" class="target-content" style="display: ${isOpen ? 'flex' : 'none'};" onclick="event.stopPropagation();">
 							
 							<div class="target-actions">
 								<div>
-									<span style="color:#8a7a5f; font-size:11px; font-weight:bold;">AMOUNT:</span>
-									<input type="number" value="${target.requestedAmount}" min="1" onchange="updateTargetAmount(${idx}, this.value)" style="background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #fff; padding: 5px 10px; width: 60px; outline:none; font-family: 'Crimson Text', serif; text-align:center;">
+									<span style="color:var(--text-muted, #8a7a5f); font-size:11px; font-weight:bold;">AMOUNT:</span>
+									<input type="number" value="${target.requestedAmount}" min="1" onchange="updateTargetAmount(${idx}, this.value)" style="background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #fff); padding: 5px 10px; width: 60px; outline:none; font-family: 'Crimson Text', serif; text-align:center;">
 								</div>
 								
-								<label style="color:#8a7a5f; font-size:11px; cursor:pointer; display:flex; align-items:center; gap:5px; font-weight:bold; letter-spacing:1px; user-select:none;">
+								<label style="color:var(--text-muted, #8a7a5f); font-size:11px; cursor:pointer; display:flex; align-items:center; gap:5px; font-weight:bold; letter-spacing:1px; user-select:none;">
 									<input type="checkbox" ${target.craftPrecursor ? 'checked' : ''} onchange="updateTargetPrecursor(${idx}, this.checked)" style="cursor:pointer;">
 									CRAFT PRECURSORS
 								</label>
@@ -993,7 +996,7 @@
 							</div>
 							
 							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
-								<div onclick="toggleSection('bd', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+								<div onclick="toggleSection('bd', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-button, #1a1510); border-bottom: 1px solid var(--border-color, #2a2015); color: var(--text-muted, #8a7a5f); font-size: 13px; font-weight: bold; letter-spacing: 1px;">
 									FINANCIAL BREAKDOWN <span id="calc-bd-icon-${idx}">${breakdownOpen ? '&#9650;' : '&#9660;'}</span>
 								</div>
 								<div id="calc-bd-content-${idx}" class="calc-breakdown" style="display: ${breakdownOpen ? 'grid' : 'none'};">
@@ -1009,41 +1012,41 @@
 									</div>
 									<div class="calc-breakdown-item">
 										<span class="calc-bd-title">Savings compared to buying</span>
-										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (savings >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A (ACCOUNT BOUND)' : formatCoin(savings, true)}</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? 'var(--text-muted, #8a7a5f)' : (savings >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A (ACCOUNT BOUND)' : formatCoin(savings, true)}</span>
 										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(savings / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
 									</div>
 									<div class="calc-breakdown-item">
 										<span class="calc-bd-title">Profit (buy price)</span>
-										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (profitBuy >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitBuy, true)}</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? 'var(--text-muted, #8a7a5f)' : (profitBuy >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitBuy, true)}</span>
 										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(profitBuy / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
 									</div>
 									<div class="calc-breakdown-item" style="grid-column: 1 / -1;">
 										<span class="calc-bd-title">Profit (sell price)</span>
-										<span class="calc-bd-val" style="color:${isAccountBound ? '#8a7a5f' : (profitSell >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitSell, true)}</span>
+										<span class="calc-bd-val" style="color:${isAccountBound ? 'var(--text-muted, #8a7a5f)' : (profitSell >= 0 ? '#1A9306' : '#ff4a4a')};">${isAccountBound ? 'N/A' : formatCoin(profitSell, true)}</span>
 										${isAccountBound ? '' : `<span class="calc-bd-sub">${formatCoin(profitSell / target.requestedAmount, true)} <span style="margin-left:5px;">(per item)</span></span>`}
 									</div>
 									${Object.keys(specialCurrencyTotals).length > 0 ? `<div class="calc-breakdown-item" style="grid-column: 1 / -1;">
 										<span class="calc-bd-title">Special Currencies Needed</span>
 										<div class="calc-bd-val" style="flex-wrap:wrap; gap:8px; margin-top:4px;">
-											${Object.values(specialCurrencyTotals).map(c => `<span style="display:flex; align-items:center; gap:4px; white-space:nowrap; margin-right:8px;"><img src="${c.icon}" style="width:16px; height:16px; vertical-align:middle;"> <span style="color:#fff; font-size:13px;">${Math.ceil(c.qty).toLocaleString('de-DE')}</span> <span style="color:#8a7a5f; font-size:10px;">${c.name}</span></span>`).join('<span style="color:#4a3b2a; margin:0 4px;">·</span>')}
+											${Object.values(specialCurrencyTotals).map(c => `<span style="display:flex; align-items:center; gap:4px; white-space:nowrap; margin-right:8px;"><img src="${c.icon}" style="width:16px; height:16px; vertical-align:middle;"> <span style="color:var(--text-primary, #fff); font-size:13px;">${Math.ceil(c.qty).toLocaleString('de-DE')}</span> <span style="color:var(--text-muted, #8a7a5f); font-size:10px;">${c.name}</span></span>`).join('<span style="color:var(--border-color, #4a3b2a); margin:0 4px;">·</span>')}
 										</div>
 									</div>` : ''}
 								</div>
 							</div>
 
 							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
-								<div onclick="toggleSection('sl', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+								<div onclick="toggleSection('sl', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-button, #1a1510); border-bottom: 1px solid var(--border-color, #2a2015); color: var(--text-muted, #8a7a5f); font-size: 13px; font-weight: bold; letter-spacing: 1px;">
 									SHOPPING LIST <span id="calc-sl-icon-${idx}">${shoppingOpen ? '&#9650;' : '&#9660;'}</span>
 								</div>
 								<div id="calc-sl-content-${idx}" style="display: ${shoppingOpen ? 'block' : 'none'}; max-height: 280px; overflow-y: auto; padding-right: 5px;">
 									${buyableHtml || (vendorPurchasesHtml ? '' : (untradableHtml ? '' : '<div style="padding:10px; color:#8a7a5f; text-align:center; font-style:italic;">NO TRADABLE ITEMS REQUIRED</div>'))}
-									${vendorPurchasesHtml ? `<div style="padding: 10px 15px; background: #1a1510; border-top: 1px dashed #4a3b2a; border-bottom: 1px dashed #4a3b2a; color: #8a7a5f; font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">VENDOR PURCHASES</div>${vendorPurchasesHtml}` : ''}
-									${untradableHtml ? `<div style="padding: 10px 15px; background: #1a1510; border-top: 1px dashed #4a3b2a; border-bottom: 1px dashed #4a3b2a; color: #8a7a5f; font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">ACCOUNT BOUND</div>${untradableHtml}` : ''}
+									${vendorPurchasesHtml ? `<div style="padding: 10px 15px; background: var(--bg-button, #1a1510); border-top: 1px dashed var(--border-color, #4a3b2a); border-bottom: 1px dashed var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">VENDOR PURCHASES</div>${vendorPurchasesHtml}` : ''}
+									${untradableHtml ? `<div style="padding: 10px 15px; background: var(--bg-button, #1a1510); border-top: 1px dashed var(--border-color, #4a3b2a); border-bottom: 1px dashed var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); font-size: 11px; font-weight: bold; letter-spacing: 1px; margin-top: 10px; margin-bottom: 10px;">ACCOUNT BOUND</div>${untradableHtml}` : ''}
 								</div>
 							</div>
 
 							<div style="background: rgba(0,0,0,0.6); border: 1px solid #332a1e; flex-shrink: 0;">
-								<div onclick="toggleSection('st', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #1a1510; border-bottom: 1px solid #2a2015; color: #8a7a5f; font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+								<div onclick="toggleSection('st', ${idx})" style="padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-button, #1a1510); border-bottom: 1px solid var(--border-color, #2a2015); color: var(--text-muted, #8a7a5f); font-size: 13px; font-weight: bold; letter-spacing: 1px;">
 									CRAFTING STEPS <span id="calc-st-icon-${idx}">${stepsOpen ? '&#9650;' : '&#9660;'}</span>
 								</div>
 								<div id="calc-st-content-${idx}" style="display: ${stepsOpen ? 'block' : 'none'}; max-height: 350px; overflow-y: auto; padding-right: 5px;">
@@ -1058,7 +1061,15 @@
 				resultsDiv.innerHTML = html + `</div>`;
 			}
 
-			window.addEventListener('message', (e) => { if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } });
+			window.addEventListener('message', (e) => { 
+				if (e.data && e.data.action === 'updateTheme') {
+					document.body.setAttribute('data-theme', e.data.theme);
+				}
+				else if (e.data && e.data.action === 'switchAccount') { 
+					activeKey = e.data.apiKey; 
+					init(); 
+				} 
+			});
 			init();
 			/*]]>*/
 		</script>

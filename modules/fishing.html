@@ -2,29 +2,30 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<style>
 			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: rgba(10,8,5,0.5); }
-			::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: #e2c07d; font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
 
-			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #4a3b2a; padding-bottom: 10px; margin-bottom: 10px; flex-shrink: 0; }
-			.section-title { font-size: 16px; letter-spacing: 2px; color: #8a7a5f; font-weight: bold; }
-			.divider { height: 1px; background: #4a3b2a; margin-bottom: 8px; flex-shrink: 0; }
+			.header-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 10px; flex-shrink: 0; }
+			.section-title { font-size: 16px; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); font-weight: bold; }
+			.divider { height: 1px; background: var(--border-color, #4a3b2a); margin-bottom: 8px; flex-shrink: 0; }
 
 			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 5px; }
 
-			.group-btn { width: 100%; background: rgba(30,22,15,0.9); border: 1px solid #332a1e; color: #e2c07d; padding: 10px 12px; text-align: left; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; position: relative; }
-			.group-btn:hover { background: #251d16; border-color: #8a7a5f; }
-			.group-btn:after { content: '▼'; font-size: 9px; color: #8a7a5f; transition: 0.3s; margin-left: auto; margin-right: 15px; }
-			.group-btn.active:after { transform: rotate(180deg); color: #e2c07d; }
+			.group-btn { width: 100%; background: var(--bg-panel, rgba(30,22,15,0.9)); border: 1px solid var(--border-color, #332a1e); color: var(--text-primary, #e2c07d); padding: 10px 12px; text-align: left; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; position: relative; }
+			.group-btn:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
+			.group-btn:after { content: '▼'; font-size: 9px; color: var(--text-muted, #8a7a5f); transition: 0.3s; margin-left: auto; margin-right: 15px; }
+			.group-btn.active:after { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
 
-			.sub-content { display: none; flex-direction: column; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid #2a2015; border-top: none; gap: 10px; }
+			.sub-content { display: none; flex-direction: column; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color, #2a2015); border-top: none; gap: 10px; }
 
 			.item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 4px; justify-content: flex-start; }
-			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid #332a1e; position: relative; transition: 0.2s; }
-			.item-slot:hover { border-color: #e2c07d; transform: scale(1.05); z-index: 5; }
+			.item-slot { width: 42px; height: 42px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-color, #332a1e); position: relative; transition: 0.2s; }
+			.item-slot:hover { border-color: var(--text-primary, #e2c07d); transform: scale(1.05); z-index: 5; }
 
 			/* Fish Imagery Styling */
 			.item-icon { width: 100%; height: 100%; object-fit: cover; transition: 0.2s; }
@@ -35,22 +36,22 @@
 			.caught-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: url('https://gw2ps.local/Assets/Icons/fish_caught.png') center/contain no-repeat; z-index: 6; }
 
 			.star-btn { cursor: pointer; width: 18px; height: 18px; opacity: 0.3; transition: 0.2s; position: absolute; right: 10px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
-			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px #e2c07d); }
+			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
 
 			.fancy-toggle { position: relative; display: inline-block; width: 44px; height: 22px; vertical-align: middle; margin-left: 8px; }
 			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
-			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #1a1510; border: 1px solid #4a3b2a; transition: .3s; border-radius: 22px; }
-			.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: #4a3b2a; transition: .3s; border-radius: 50%; }
-			input:checked + .slider { background-color: #e2c07d; border-color: #e2c07d; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); transition: .3s; border-radius: 22px; }
+			.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: var(--border-color, #4a3b2a); transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: var(--text-primary, #e2c07d); border-color: var(--text-primary, #e2c07d); }
 			input:checked + .slider:before { transform: translateX(22px); background-color: #000; }
 
-			.loading-text { font-size: 12px; color: #8a7a5f; text-align: center; margin-top: 20px; }
+			.loading-text { font-size: 12px; color: var(--text-muted, #8a7a5f); text-align: center; margin-top: 20px; }
 
 			.search-container { position: relative; width: 100%; margin-bottom: 10px; flex-shrink: 0; }
-			.search-box { background: rgba(20,15,10,0.8); border: 1px solid #4a3b2a; color: #e2c07d; padding: 10px 30px 10px 10px; font-size: 11px; outline: none; width: 100%; font-family: 'Crimson Text', serif; font-weight: bold; text-transform: uppercase; transition: 0.2s; }
-			.search-box:focus { border-color: #e2c07d; box-shadow: 0 0 5px rgba(226, 192, 125, 0.2); }
-			.clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #8a7a5f; cursor: pointer; font-size: 16px; font-weight: bold; line-height: 1; transition: 0.2s; }
-			.clear-btn:hover { color: #e2c07d; }
+			.search-box { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px 30px 10px 10px; font-size: 11px; outline: none; width: 100%; font-family: 'Crimson Text', serif; font-weight: bold; text-transform: uppercase; transition: 0.2s; }
+			.search-box:focus { border-color: var(--text-primary, #e2c07d); box-shadow: 0 0 5px rgba(226, 192, 125, 0.2); }
+			.clear-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted, #8a7a5f); cursor: pointer; font-size: 16px; font-weight: bold; line-height: 1; transition: 0.2s; }
+			.clear-btn:hover { color: var(--text-primary, #e2c07d); }
 
 			/* Large UI Scaling Overrides */
 			body.ui-large .section-title { font-size: 20px; }
@@ -66,7 +67,7 @@
 			<div class="header-row">
 				<div class="section-title">FISHING REGIONS</div>
 				<div style="display:flex; align-items:center;">
-					<span style="font-size:10px; font-weight:bold; color:#8a7a5f;">WATCHLIST OVERLAY</span>
+					<span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);">WATCHLIST OVERLAY</span>
 					<label class="fancy-toggle">
 						<input type="checkbox" id="fishing-overlay-toggle" onchange="toggleFishingOverlay(this.checked)" />
 						<span class="slider"></span>
@@ -86,6 +87,7 @@
 
 		<script>
 			/*<![CDATA[*/
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			let activeKey = localStorage.getItem('gw2_active_key') || null;
             let trackedMaps = JSON.parse(localStorage.getItem('gw2_tracked_fishing') || '{}');
             let isOverlayVisible = localStorage.getItem('gw2_fishing_tracker_visible') === 'true';
@@ -209,7 +211,7 @@
                             let descRaw = bit.text || item.description || "";
                             let safeDesc = descRaw.replace(/<c=[^>]*>/g, '').replace(/<\/c>/g, '').replace(/\n/g, '<br>');
                             
-                            let tooltipRaw = `<b style="color:#e2c07d">${safeName}</b><br><span style="color:#8a7a5f;font-size:10px;">${safeDesc}</span>`;
+                            let tooltipRaw = `<b style="color:var(--text-primary, #e2c07d)">${safeName}</b><br><span style="color:var(--text-muted, #8a7a5f);font-size:10px;">${safeDesc}</span>`;
                             let tooltipSafe = tooltipRaw.replace(/"/g, '&quot;'); 
 
                             fishHtml += `<div class="item-slot ${cls}" data-tooltip="${tooltipSafe}" 
@@ -227,14 +229,14 @@
 
                     const maxCount = ach.tiers ? ach.tiers[ach.tiers.length-1].count : (ach.bits ? ach.bits.length : 0);
                     const currentCount = prog.done ? maxCount : (prog.current || 0);
-                    const headerColor = prog.done ? '#1A9306' : '#e2c07d';
+                    const headerColor = prog.done ? 'var(--success-color, #1A9306)' : 'var(--text-primary, #e2c07d)';
 
                     html += `<div style="position:relative;">
                         <div class="star-btn ${isTracked ? 'active' : ''}" onclick="toggleTrack(${ach.id}, '${ach.name.replace(/'/g, "\\'")}', this, event)"></div>
                         <button class="group-btn ${isOpen ? 'active' : ''}" onclick="toggleSection(this, ${ach.id})">
                             <div>
                                 <span style="color:${headerColor};">${ach.name}</span>
-                                <span style="color:#8a7a5f; font-weight:normal; margin-left:10px; font-family:monospace;">${currentCount}/${maxCount}</span>
+                                <span style="color:var(--text-muted, #8a7a5f); font-weight:normal; margin-left:10px; font-family:monospace;">${currentCount}/${maxCount}</span>
                             </div>
                         </button>
                         <div class="sub-content" style="display:${isOpen ? 'flex' : 'none'}">${fishHtml}</div>
@@ -311,7 +313,7 @@
                     if (prog.done) return; 
                     
                     html += `<div style="margin-bottom:8px;">
-                        <div style="font-size:10px; color:#e2c07d; margin-bottom:4px; font-weight:bold;">${ach.name}</div>
+                        <div style="font-size:10px; color:var(--text-primary, #e2c07d); margin-bottom:4px; font-weight:bold;">${ach.name}</div>
                         <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(24px, 1fr)); gap:2px;">`;
 
                     if (ach.bits) {
@@ -325,13 +327,13 @@
                             let descRaw = bit.text || item.description || "";
                             let safeDesc = descRaw.replace(/<c=[^>]*>/g, '').replace(/<\/c>/g, '').replace(/\n/g, '<br>');
                             
-                            let tooltipRaw = `<b style="color:#e2c07d">${safeName}</b><br><span style="color:#8a7a5f;font-size:10px;">${safeDesc}</span>`;
+                            let tooltipRaw = `<b style="color:var(--text-primary, #e2c07d)">${safeName}</b><br><span style="color:var(--text-muted, #8a7a5f);font-size:10px;">${safeDesc}</span>`;
                             let tooltipSafe = tooltipRaw.replace(/"/g, '&quot;');
 
-                            html += `<div style="width:24px; height:24px; background:rgba(255,255,255,0.05); border:1px solid #332a1e; opacity:0.8; transition:0.2s; position:relative;" 
+                            html += `<div style="width:24px; height:24px; background:rgba(255,255,255,0.05); border:1px solid var(--border-color, #332a1e); opacity:0.8; transition:0.2s; position:relative;" 
                                 data-tooltip="${tooltipSafe}"
-                                onmouseover="this.style.borderColor='#e2c07d'; window.parent.postMessage({action:'showTooltip', text:this.getAttribute('data-tooltip'), x:event.clientX, y:event.clientY}, '*')" 
-                                onmouseout="this.style.borderColor='#332a1e'; window.parent.postMessage({action:'hideTooltip'}, '*')">
+                                onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; window.parent.postMessage({action:'showTooltip', text:this.getAttribute('data-tooltip'), x:event.clientX, y:event.clientY}, '*')" 
+                                onmouseout="this.style.borderColor='var(--border-color, #332a1e)'; window.parent.postMessage({action:'hideTooltip'}, '*')">
                                 <img src="${item.icon}" style="width:100%; height:100%; object-fit:cover;" />
                             </div>`;
                         });
@@ -339,13 +341,16 @@
                     html += `</div></div>`;
                 });
 
-                if (html === '') html = "<div style='color:#8a7a5f; font-size:10px; text-align:center;'>ALL TRACKED MAPS COMPLETE</div>";
+                if (html === '') html = "<div style='color:var(--text-muted, #8a7a5f); font-size:10px; text-align:center;'>ALL TRACKED MAPS COMPLETE</div>";
 
                 window.parent.postMessage('FSH_DATA:' + html, '*');
             }
 
             window.addEventListener('message', async (e) => {
-                if (e.data.action === 'uiScaleChanged') {
+                if (e.data && e.data.action === 'updateTheme') {
+                    document.body.setAttribute('data-theme', e.data.theme);
+                }
+                else if (e.data.action === 'uiScaleChanged') {
                     if (e.data.value === 'large') document.body.classList.add('ui-large');
                     else document.body.classList.remove('ui-large');
                 }

@@ -76154,6 +76154,138 @@
         "item_id": 0,
         "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png"
     },
+	{
+        "pos": [
+            4994.1,
+            61945.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            5135.7,
+            62623.9
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4203.4,
+            62150.4
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4560.1,
+            62401.4
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4736.1,
+            62288.3
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            3793.4,
+            61998.9
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4084.6,
+            60659.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            3727.3,
+            61247.1
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4597.8,
+            60112.7
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            5114.3,
+            60111.6
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
+    {
+        "pos": [
+            4514.3,
+            60765.1
+        ],
+        "node": "Mists Rift",
+        "yields": [
+            "Rift Hunting"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+        "layer": ""
+    },
     {
         "pos": [
             56899.4,
@@ -99968,10 +100100,19 @@
         "icon": "https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png",
         "layer": "node_aetherlocation_treasure"
     },
-    {
+        {
+        "name": "Mastery Insight (VoE)",
+        "type": "mastery",
         "pos": [
-            4339,
-            60716
+            3808,
+            60559
+        ],
+        "chat_link": ""
+    },
+	{
+        "pos": [
+            5047.4,
+            62152.2
         ],
         "node": "Magic Mirrors",
         "yields": [
@@ -99982,8 +100123,32 @@
     },
     {
         "pos": [
-            5034.7,
-            60543.9
+            4336.4,
+            62202.8
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            4039.2,
+            62008.9
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            3511.9,
+            62521.7
         ],
         "node": "Magic Mirrors",
         "yields": [
@@ -99995,7 +100160,7 @@
     {
         "pos": [
             3518,
-            61409
+            61280.5
         ],
         "node": "Magic Mirrors",
         "yields": [
@@ -100005,90 +100170,45 @@
         "layer": "node_magic_mirrors"
     },
     {
-        "name": "Mastery Insight (VoE)",
-        "type": "mastery",
         "pos": [
-            3808,
-            60559
+            5115.7,
+            61557.4
         ],
-        "chat_link": ""
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            3808.2,
+            60431.1
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
+    },
+    {
+        "pos": [
+            5035.4,
+            60543.7
+        ],
+        "node": "Magic Mirrors",
+        "yields": [
+            "Magic Mirrors"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+        "layer": "node_magic_mirrors"
     },
     {
         "pos": [
             4339,
-            60588
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5036,
-            60672
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5116,
-            61685
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            3512,
-            62648
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            4039,
-            62137
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            5047,
-            62280
-        ],
-        "node": "Magic Mirrors",
-        "yields": [
-            "Magic Mirrors"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-        "layer": "node_magic_mirrors"
-    },
-    {
-        "pos": [
-            4336,
-            62332
+            60716
         ],
         "node": "Magic Mirrors",
         "yields": [
@@ -100330,35 +100450,11 @@
             11640.1,
             57595.5
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            11898.5,
-            58213.2
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            11444.4,
-            58321.9
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100366,23 +100462,11 @@
             11191.2,
             58389.5
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            11351.5,
-            58097.8
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100390,11 +100474,11 @@
             11117.4,
             58066.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100402,11 +100486,11 @@
             11201.7,
             57669.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100414,11 +100498,11 @@
             10999.1,
             57612.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100426,23 +100510,11 @@
             10832,
             58017.1
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10613.6,
-            57954.7
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100450,23 +100522,11 @@
             10354,
             57919.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10339,
-            57604.8
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100474,11 +100534,11 @@
             9855.2,
             57561.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100486,11 +100546,11 @@
             9874.8,
             57948.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100498,11 +100558,11 @@
             10151.1,
             57952.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100510,11 +100570,11 @@
             9908.7,
             58225.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100522,11 +100582,11 @@
             10211,
             58335.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100534,11 +100594,11 @@
             10004.2,
             58542.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100546,47 +100606,11 @@
             10454.3,
             58664.9
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10458.2,
-            58944.7
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10127.9,
-            58938.4
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10597.5,
-            59041.2
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100594,11 +100618,11 @@
             10600.9,
             59267.5
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100606,11 +100630,11 @@
             10616.1,
             59535.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100618,35 +100642,11 @@
             9979.4,
             59554.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10279.4,
-            59581
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            9762.1,
-            59780
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100654,23 +100654,11 @@
             9886.4,
             59965.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10087,
-            60209.5
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100678,11 +100666,11 @@
             10601.7,
             59697.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100690,11 +100678,11 @@
             10935.3,
             59313.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100702,11 +100690,11 @@
             10797,
             59577.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100714,11 +100702,11 @@
             11121.6,
             59805.5
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100726,11 +100714,11 @@
             11429.5,
             60304.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100738,11 +100726,11 @@
             11050,
             60132.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100750,11 +100738,11 @@
             11109.8,
             59817.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100762,11 +100750,11 @@
             11598.1,
             59634.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100774,11 +100762,11 @@
             11607.4,
             59513.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100786,11 +100774,11 @@
             11147.8,
             59214.4
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100798,11 +100786,11 @@
             11380.2,
             58936.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100810,11 +100798,11 @@
             11166.5,
             58471.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100822,23 +100810,11 @@
             10703,
             58762.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            9949.1,
-            59592.7
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100846,35 +100822,11 @@
             10187,
             59246.9
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            9810,
-            58769.2
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            10011.1,
-            59895.8
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100882,11 +100834,11 @@
             10107.4,
             60112.1
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100894,11 +100846,11 @@
             10236.1,
             59861.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100906,11 +100858,11 @@
             9810,
             58019.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100918,11 +100870,11 @@
             8795,
             59744.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100930,11 +100882,11 @@
             8944.6,
             59461.9
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100942,23 +100894,11 @@
             8478.9,
             59367.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            8056.8,
-            59227.3
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100966,11 +100906,11 @@
             8082.5,
             59411.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100978,11 +100918,11 @@
             8042.7,
             59692.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -100990,23 +100930,11 @@
             7740,
             59713.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            7394.8,
-            59737.7
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101014,11 +100942,11 @@
             7373.8,
             59246.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101026,23 +100954,11 @@
             7170.4,
             59287.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6986.9,
-            59428.8
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101050,23 +100966,11 @@
             7324,
             59546.1
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            7322.2,
-            59729.2
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101074,23 +100978,11 @@
             6901.9,
             59724.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6706.9,
-            59692.1
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101098,11 +100990,11 @@
             6523.3,
             59424.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101110,23 +101002,11 @@
             7173,
             58459.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6989.7,
-            58450.5
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101134,35 +101014,11 @@
             6689.1,
             58550
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6595.9,
-            58819.6
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6902.6,
-            58939.6
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101170,11 +101026,11 @@
             7292.5,
             59063.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101182,11 +101038,11 @@
             7048.7,
             58788.4
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101194,47 +101050,11 @@
             6589.4,
             58039.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6585.5,
-            58388.5
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            6980.8,
-            58255.6
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            7319.8,
-            58275.4
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101242,11 +101062,11 @@
             7292.5,
             57813.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101254,23 +101074,11 @@
             8264.1,
             57600
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            8006.7,
-            57547
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101278,11 +101086,11 @@
             7532.6,
             57687.9
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101290,11 +101098,11 @@
             7590.3,
             58254.1
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101302,23 +101110,11 @@
             7900.7,
             58362.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            8287.8,
-            58292.5
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101326,11 +101122,11 @@
             8478.7,
             57587.5
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101338,35 +101134,11 @@
             8530.4,
             57951.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            8700.4,
-            58096.4
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-        "layer": "node_obscure_chest"
-    },
-    {
-        "pos": [
-            8996.9,
-            58161.5
-        ],
-        "node": "Obscure Chest",
-        "yields": [
-            "Obscure Chest"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101374,11 +101146,11 @@
             7450.9,
             59049.1
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101386,11 +101158,11 @@
             8014.5,
             59054.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101398,11 +101170,11 @@
             8018.2,
             58775.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101410,11 +101182,11 @@
             8048.1,
             58489.7
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101422,11 +101194,11 @@
             8287,
             59123.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101434,11 +101206,11 @@
             8637.8,
             59112.4
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101446,11 +101218,11 @@
             8662.7,
             58947.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101458,11 +101230,11 @@
             8951.1,
             58875.8
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101470,11 +101242,11 @@
             8781.8,
             58499.6
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101482,11 +101254,11 @@
             8482.5,
             58556.4
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101494,11 +101266,11 @@
             9202.5,
             58943.3
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101506,11 +101278,11 @@
             9066.2,
             58675.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101518,11 +101290,959 @@
             9185.9,
             58329.2
         ],
-        "node": "Obscure Chest",
+        "node": "Small Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5481.9,
+            62086.1
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5077.2,
+            61949.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4683.2,
+            61963.6
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4753.7,
+            62490
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3786.5,
+            62307.7
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3635.1,
+            62672.7
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4126.4,
+            62351.7
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4444.8,
+            62487.9
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3988.4,
+            62108.7
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3707.7,
+            62383
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3640.9,
+            62119.3
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3781.7,
+            61605.3
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3467.5,
+            61778.3
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3499.4,
+            62000
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4239.2,
+            61166
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4887.5,
+            61194.2
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4577.2,
+            61723.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5070.4,
+            61827.6
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5373.4,
+            61864.2
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5134.7,
+            61219.3
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3456,
+            60080.9
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3353.8,
+            60706.9
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3439.9,
+            61075.5
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5162.1,
+            60115.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5361.6,
+            60281.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5341.1,
+            60836.5
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5203.5,
+            60638.5
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4424.8,
+            60107.3
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4855.3,
+            60271.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3789.4,
+            60211.8
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4762.7,
+            60708.1
+        ],
+        "node": "Small Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+        "layer": "node_obscure_chest"
+    },
+	{
+        "pos": [
+            11898.5,
+            58213.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            11351.5,
+            58097.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10613.6,
+            57954.7
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10339,
+            57604.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10127.9,
+            58938.4
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10597.5,
+            59041.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10279.4,
+            59581
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            9762.1,
+            59780
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10087,
+            60209.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            9810,
+            58769.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            8056.8,
+            59227.3
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            7394.8,
+            59737.7
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6986.9,
+            59428.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            7322.2,
+            59729.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6989.7,
+            58450.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6902.6,
+            58939.6
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6980.8,
+            58255.6
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            7319.8,
+            58275.4
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            8006.7,
+            57547
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            8287.8,
+            58292.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            8700.4,
+            58096.4
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            8996.9,
+            58161.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4904.1,
+            62780.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4557.1,
+            62602.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4015.3,
+            62760.9
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4041.3,
+            62512.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4458.6,
+            62640.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4577.7,
+            61063.1
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4462.4,
+            61405.6
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5407.5,
+            60510.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5184.7,
+            60840.4
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3776.9,
+            62611.2
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3893,
+            60092.5
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3944.1,
+            61303.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4114.6,
+            61522.6
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4623,
+            61497.4
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4855.3,
+            60271.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            5412.5,
+            60034
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4351.1,
+            60514.7
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4351.2,
+            60059
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            4855.3,
+            60271.8
+        ],
+        "node": "Medium Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+	{
+        "pos": [
+            11444.4,
+            58321.9
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10458.2,
+            58944.7
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            9949.1,
+            59592.7
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            10011.1,
+            59895.8
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6706.9,
+            59692.1
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6595.9,
+            58819.6
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            6585.5,
+            58388.5
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
         "layer": "node_obscure_chest"
     },
     {
@@ -101530,12 +102250,33 @@
             9259.5,
             57958.9
         ],
-        "node": "Obscure Chest",
+        "node": "Large Obscure Chest",
         "yields": [
             "Obscure Chest"
         ],
-        "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
         "layer": "node_obscure_chest"
+    },
+    {
+        "pos": [
+            3892.6,
+            60517.7
+        ],
+        "node": "Large Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+        "layer": "node_obscure_chest"
+    },
+	{
+        "pos": [
+            47176,
+            34545
+        ],
+        "node": "Zone Portal",
+        "type": "node_zone_portal",
+        "icon": "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png"
     },
     {
         "pos": [
@@ -102679,6 +103420,54 @@
         "node": "Zone Portal",
         "type": "node_zone_portal",
         "icon": "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            4049.2,
+            60652.9
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4010,
+            60667.7
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4019.2,
+            60641
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
+    },
+    {
+        "pos": [
+            4040,
+            60710.5
+        ],
+        "node": "Juvenile River Otter",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_River_Otter.png",
+        "layer": "node_ranger_pet"
     },
     {
         "pos": [
@@ -111714,6 +112503,23 @@
             38089
         ],
         "node": "Mordremoth",
+        "type": "node_world_boss",
+        "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            4152,
+            60384
+        ],
+        "node": "Shackles of the Ancients",
+        "type": "node_world_boss",
+        "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
+    },{
+        "pos": [
+            4556,
+            61462
+        ],
+        "node": "Shackles of the Ancients",
         "type": "node_world_boss",
         "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png"
     },

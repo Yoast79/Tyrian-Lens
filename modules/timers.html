@@ -31,7 +31,7 @@
 			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; margin-top: 10px; }
 			.nav-panel { width: 200px; flex-shrink: 0; overflow-y: auto; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #2a2015); padding: 5px; }
 			.cat-btn { width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-muted, #8a7a5f); padding: 10px; text-align: left; font-size: 10px; font-weight: bold; cursor: pointer; border-bottom: 1px solid var(--border-color, #2a2015); transition: 0.2s; border-left: 2px solid transparent; }
-			.cat-btn:hover { background: var(--bg-button-hover, #251d16); color: var(--text-primary, #e2c07d); }
+			.cat-btn:hover { color: var(--text-primary, #e2c07d); box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 			.cat-btn.active { background: rgba(226,192,125,0.1); color: var(--text-primary, #e2c07d); border-left-color: var(--text-primary, #e2c07d); }
 			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 5px; padding-right: 5px; }
 
@@ -46,6 +46,7 @@
 			.select-compact { background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); font-size: 9px; font-weight: bold; font-family: 'Crimson Text', serif; padding: 1px 4px; cursor: pointer; text-transform: uppercase; outline: none; }
 
 			.sub-grp-btn { width: 100%; background: var(--bg-panel, rgba(30,22,15,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 8px 12px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; margin-top: 5px; }
+			.sub-grp-btn:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
 			.sub-grp-btn:after { content: '▼'; font-size: 8px; color: var(--text-muted, #8a7a5f); transition: 0.3s; }
 			.sub-grp-btn.active:after { transform: rotate(180deg); }
 			.sub-content { display: none; flex-direction: column; gap: 8px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--border-color, #2a2015); border-top: none; }
@@ -462,9 +463,8 @@
 
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
-
                 try {
-                    const response = await fetch("https://gw2ps.local/Data/timers_config.json");
+                    const response = await fetch("https://gw2ps.local/Data/timers_config.json?t=" + Date.now(), { cache: "no-store" });
                     if (response.ok) {
                         schedule = await response.json();
                         schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });

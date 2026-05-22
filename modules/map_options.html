@@ -6,36 +6,36 @@
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
 			body {
-			margin: 0; background: transparent; padding: 20px; color: #e2c07d;
+			margin: 0; background: transparent; padding: 20px; color: var(--text-primary, #e2c07d);
 			font-family: "Crimson Text", serif; text-transform: uppercase;
 			display: flex; flex-direction: column; height: 100vh; overflow-y: auto;
 			}
 
 			/* Styled Scrollbar */
 			body::-webkit-scrollbar { width: 6px; }
-			body::-webkit-scrollbar-track { background: rgba(10, 8, 5, 0.5); }
-			body::-webkit-scrollbar-thumb { background: #4a3b2a; border-radius: 3px; }
-			body::-webkit-scrollbar-thumb:hover { background: #e2c07d; }
+			body::-webkit-scrollbar-track { background: color-mix(in srgb, var(--bg-panel, #0a0805) 50%, transparent); }
+			body::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
+			body::-webkit-scrollbar-thumb:hover { background: var(--border-highlight, #e2c07d); }
 
 			/* Search Bar Container */
-			.search-container { position: sticky; top: -20px; background: #0a0805; padding: 10px 0; z-index: 10; margin-bottom: 15px; border-bottom: 1px solid #4a3b2a; }
+			.search-container { position: sticky; top: -20px; background: var(--bg-panel, #0a0805); padding: 10px 0; z-index: 10; margin-bottom: 15px; border-bottom: 1px solid var(--border-color, #4a3b2a); }
 			.search-wrapper { position: relative; display: flex; align-items: center; }
 			#marker-search {
-			width: 100%; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d;
+			width: 100%; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d);
 			padding: 8px 35px 8px 10px; font-family: "Crimson Text", serif; font-size: 14px;
 			outline: none; text-transform: uppercase;
 			}
-			#marker-search:focus { border-color: #e2c07d; }
+			#marker-search:focus { border-color: var(--border-highlight, #e2c07d); }
 			.clear-search {
-			position: absolute; right: 10px; cursor: pointer; color: #8a7a5f;
+			position: absolute; right: 10px; cursor: pointer; color: var(--text-muted, #8a7a5f);
 			font-weight: bold; font-size: 14px; display: none;
 			}
-			.clear-search:hover { color: #ff4444; }
+			.clear-search:hover { color: var(--danger-color, #ff4a4a); }
 
-			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid #4a3b2a; margin: 15px 0 10px; padding-bottom: 5px; letter-spacing: 1px; }
+			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid var(--border-color, #4a3b2a); margin: 15px 0 10px; padding-bottom: 5px; letter-spacing: 1px; }
 
 			/* Category Styling */
-			.category-header { font-size: 14px; font-weight: bold; cursor: pointer; padding: 8px 0; display: flex; align-items: center; border-bottom: 1px solid rgba(74, 59, 42, 0.3); letter-spacing: 1px; }
+			.category-header { font-size: 14px; font-weight: bold; cursor: pointer; padding: 8px 0; display: flex; align-items: center; border-bottom: 1px solid color-mix(in srgb, var(--border-color, #4a3b2a) 30%, transparent); letter-spacing: 1px; }
 			.category-header::before { content: '▶'; font-size: 10px; margin-right: 8px; transition: transform 0.3s; }
 			.category-header.open::before { transform: rotate(90deg); }
 			.category-items { padding-left: 10px; display: none; margin-top: 5px; }
@@ -45,15 +45,15 @@
 			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 6px 0; font-size: 12px; letter-spacing: 1px; cursor: pointer; }
 			.filter-option input { display: none; }
 			.toggle-btn {
-			width: 30px; height: 16px; background: #1a1510; border: 1px solid #4a3b2a;
+			width: 30px; height: 16px; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a);
 			border-radius: 8px; position: relative; transition: 0.3s; margin-right: 10px; flex-shrink: 0;
 			}
 			.toggle-btn::after {
 			content: ''; position: absolute; top: 1px; left: 1px; width: 12px; height: 12px;
-			background: #8a7a5f; border-radius: 50%; transition: 0.3s;
+			background: var(--text-muted, #8a7a5f); border-radius: 50%; transition: 0.3s;
 			}
-			.filter-option input:checked + .toggle-btn { background: rgba(226, 192, 125, 0.15); border-color: #e2c07d; }
-			.filter-option input:checked + .toggle-btn::after { transform: translateX(14px); background: #e2c07d; }
+			.filter-option input:checked + .toggle-btn { background: color-mix(in srgb, var(--border-highlight, #e2c07d) 15%, transparent); border-color: var(--border-highlight, #e2c07d); }
+			.filter-option input:checked + .toggle-btn::after { transform: translateX(14px); background: var(--border-highlight, #e2c07d); }
 
 			.node-icon { width: 20px; height: 20px; margin-right: 10px; object-fit: contain; }
 			.label-text { flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -82,10 +82,10 @@
 				padding: 7px 11px;
 				width: max-content;
 				max-width: 240px;
-				background: rgba(10, 8, 5, 0.96);
-				border: 1px solid #e2c07d;
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.85), inset 0 0 4px rgba(226, 192, 125, 0.15);
-				color: #e2c07d;
+				background: var(--bg-panel, rgba(10, 8, 5, 0.96));
+				border: 1px solid var(--border-highlight, #e2c07d);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.85), inset 0 0 4px color-mix(in srgb, var(--border-highlight, #e2c07d) 15%, transparent);
+				color: var(--text-primary, #e2c07d);
 				font-size: 12px;
 				font-family: "Crimson Text", serif;
 				text-transform: none; /* Allows natural lowercase text reading */
@@ -101,7 +101,7 @@
 				bottom: 100%;
 				border-left: 6px solid transparent;
 				border-right: 6px solid transparent;
-				border-top: 6px solid #e2c07d;
+				border-top: 6px solid var(--border-highlight, #e2c07d);
 				margin-bottom: 2px;
 			}
 			/* Trigger tooltip on hover */
@@ -190,6 +190,7 @@
 				<div class="toggle-btn"></div>
 				<span class="label-text">Personal Markers</span>
 			</label>
+
 		</div>
 
 		<div class="category-header" id="head-maplabels" onclick="toggleCategory('cat-maplabels')">Map Labels</div>
@@ -640,7 +641,7 @@
 				</label>
 			</div>
 
-			<div class="category-header" id="head-hunting" onclick="toggleCategory('cat-hunting')">Hunting & Trade</div>
+			<div class="category-header" id="head-hunting" onclick="toggleCategory('cat-hunting')">Hunting</div>
 		<div class="category-items" id="cat-hunting">
 			<label class="filter-option" data-tooltip="A green circle will indicate the currently active World Boss.">
 				<input type="checkbox" id="node_world_boss" onchange="saveAndToggle('node_world_boss', this.checked)">
@@ -656,24 +657,6 @@
 						<span class="label-text">Mists Rifts</span>
 					</label>
 
-			<div style="display: flex; align-items: center; gap: 5px;">
-				<label class="filter-option" data-tooltip="Toggles visibility of Pact Supply Agents (shows their active daily spawn spots in Tyria)" style="flex-grow: 1;">
-					<input type="checkbox" id="node_pact_supply_network_agent" onchange="saveAndToggle('node_pact_supply_network_agent', this.checked)">
-						<div class="toggle-btn"></div>
-						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png">
-							<span class="label-text">Pact Supply Vendors</span>
-						</label>
-				<button class="copy-btn" title="Copy Waypoints" onclick="copyPSNAWaypoints()" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 2px 8px; cursor: pointer; font-size: 10px; border-radius: 3px;">
-					COPY WAYPOINTS
-				</button>
-			</div>
-
-			<label class="filter-option" data-tooltip="Toggles visibility of Priory Historian Elisa (shows her active weekly spawn spot in the Crystal Desert.)">
-				<input type="checkbox" id="node_historian_elisa" onchange="saveAndToggle('node_historian_elisa', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/19/Merchant.png">
-						<span class="label-text">Historian Elisa</span>
-					</label>
 
 			<label class="filter-option" data-tooltip="Individual pets can be searched in the Search menu.">
 				<input type="checkbox" id="node_ranger_pet" onchange="saveAndToggle('node_ranger_pet', this.checked)">
@@ -703,6 +686,143 @@
 						<span class="label-text">Matrix Cube Key</span>
 					</label>
 		</div>
+
+		<div class="category-header" id="head-trading" onclick="toggleCategory('cat-trading')">Trading & Vendors</div>
+		<div class="category-items" id="cat-trading">
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_merchant" onchange="saveAndToggle('node_npc_merchant', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/19/Merchant.png">
+						<span class="label-text">Merchants</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_gathering_merchant" onchange="saveAndToggle('node_npc_gathering_merchant', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png">
+						<span class="label-text">Gathering Merchants</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_dungeon_merchant" onchange="saveAndToggle('node_npc_dungeon_merchant', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png">
+						<span class="label-text">Dungeon Merchants</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_laurel_merchant" onchange="saveAndToggle('node_npc_laurel_merchant', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png">
+						<span class="label-text">Laurel Merchants</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_guild_commendation" onchange="saveAndToggle('node_npc_guild_commendation', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png">
+						<span class="label-text">Guild Commendation Traders</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_bank" onchange="saveAndToggle('node_npc_bank', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png">
+						<span class="label-text">Account Vault (Bank)</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_guild_vault" onchange="saveAndToggle('node_npc_guild_vault', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png">
+						<span class="label-text">Guild Vault</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_trading_post" onchange="saveAndToggle('node_npc_trading_post', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png">
+						<span class="label-text">Trading Post</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_reinforce_armor" onchange="saveAndToggle('node_npc_reinforce_armor', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png">
+						<span class="label-text">Reinforce Armor</span>
+					</label>
+
+			<div style="display: flex; align-items: center; gap: 5px;">
+				<label class="filter-option" data-tooltip="Toggles visibility of Pact Supply Agents (shows their active daily spawn spots in Tyria)" style="flex-grow: 1;">
+					<input type="checkbox" id="node_pact_supply_network_agent" onchange="saveAndToggle('node_pact_supply_network_agent', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png">
+							<span class="label-text">Pact Supply Vendors</span>
+						</label>
+				<button class="copy-btn" title="Copy Waypoints" onclick="copyPSNAWaypoints()" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 2px 8px; cursor: pointer; font-size: 10px; border-radius: 3px;">
+					COPY WAYPOINTS
+				</button>
+			</div>
+
+			<label class="filter-option" data-tooltip="Toggles visibility of Priory Historian Elisa (shows her active weekly spawn spot in the Crystal Desert.)">
+				<input type="checkbox" id="node_historian_elisa" onchange="saveAndToggle('node_historian_elisa', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/19/Merchant.png">
+						<span class="label-text">Historian Elisa</span>
+					</label>
+
+			<label class="filter-option" data-tooltip="Includes: Mystic Forge, Makeover Preview, Fractals of the Mists, Activity, Raid Rally Point, Jade Bot Workbench, Guild Commendation Trader, and other service NPCs.">
+				<input type="checkbox" id="node_npc_misc" onchange="saveAndToggle('node_npc_misc', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png">
+						<span class="label-text">Other NPC Services</span>
+					</label>
+		</div>
+
+		<div class="category-header" id="head-crafting" onclick="toggleCategory('cat-crafting')">Crafting Vendors</div>
+		<div class="category-items" id="cat-crafting">
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_armorsmith" onchange="saveAndToggle('node_npc_armorsmith', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png">
+						<span class="label-text">Armorsmith</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_artificer" onchange="saveAndToggle('node_npc_artificer', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/7/73/Artificing_Station_%28map_icon%29.png">
+						<span class="label-text">Artificer</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_chef" onchange="saveAndToggle('node_npc_chef', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c4/Cooking_Station_%28map_icon%29.png">
+						<span class="label-text">Chef</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_huntsman" onchange="saveAndToggle('node_npc_huntsman', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1d/Huntsman%27s_Station_%28map_icon%29.png">
+						<span class="label-text">Huntsman</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_jeweler" onchange="saveAndToggle('node_npc_jeweler', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/b2/Jeweling_Station_%28map_icon%29.png">
+						<span class="label-text">Jeweler</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_leatherworker" onchange="saveAndToggle('node_npc_leatherworker', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/db/Leatherworking_Station_%28map_icon%29.png">
+						<span class="label-text">Leatherworker</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_tailor" onchange="saveAndToggle('node_npc_tailor', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/12/Tailoring_Station_%28map_icon%29.png">
+						<span class="label-text">Tailor</span>
+					</label>
+			<label class="filter-option">
+				<input type="checkbox" id="node_npc_weaponsmith" onchange="saveAndToggle('node_npc_weaponsmith', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png">
+						<span class="label-text">Weaponsmith</span>
+					</label>
+		</div>
+
 
 		<div class="category-header" id="head-chests" onclick="toggleCategory('cat-chests')">Chests & Loot</div>
 		<div class="category-items" id="cat-chests">
