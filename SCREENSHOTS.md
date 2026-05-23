@@ -1,7 +1,5 @@
 # 📸 Tyrian Lens - Screenshot Gallery
 
-Welcome to the visual showcase of **Tyrian Lens**! Below is a gallery featuring 34 screenshots showcasing the premium companion interface, real-time Leaflet overworld and WvW mapping, dynamic GPS tracking, active event watchlists, and unified account search systems.
-
 ---
 
 <p align="center">
@@ -16,7 +14,6 @@ Welcome to the visual showcase of **Tyrian Lens**! Below is a gallery featuring 
   <a href="Screenshots/BC4LdUoEWG.png"><img src="Screenshots/BC4LdUoEWG.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/CBbJx0FCE6.png"><img src="Screenshots/CBbJx0FCE6.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/EkGM6QTlex.png"><img src="Screenshots/EkGM6QTlex.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
-  <a href="Screenshots/FGLrwbzLGs.png"><img src="Screenshots/FGLrwbzLGs.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/Fm706KC8VG.png"><img src="Screenshots/Fm706KC8VG.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/GDzOrzEh2v.png"><img src="Screenshots/GDzOrzEh2v.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/GZjXHcKDjE.png"><img src="Screenshots/GZjXHcKDjE.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
@@ -36,7 +33,9 @@ Welcome to the visual showcase of **Tyrian Lens**! Below is a gallery featuring 
   <a href="Screenshots/pb0Rk6gajL.png"><img src="Screenshots/pb0Rk6gajL.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/pftqr0LxZ6.png"><img src="Screenshots/pftqr0LxZ6.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/puDE5eEfiO.png"><img src="Screenshots/puDE5eEfiO.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
-  <a href="Screenshots/sPecJjD8Gs.png"><img src="Screenshots/sPecJjD8Gs.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
-  <a href="Screenshots/sQuvJDOh0Q.png"><img src="Screenshots/sQuvJDOh0Q.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
   <a href="Screenshots/tkbSnI5QW9.png"><img src="Screenshots/tkbSnI5QW9.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
+  <a href="Screenshots/sQuvJDOh0Q.png"><img src="Screenshots/sQuvJDOh0Q.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
+  <a href="Screenshots/sPecJjD8Gs.png"><img src="Screenshots/sPecJjD8Gs.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
+  <a href="Screenshots/FGLrwbzLGs.png"><img src="Screenshots/FGLrwbzLGs.png" width="230" alt="Tyrian Lens Interface" style="margin: 6px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.45);" /></a>
 </p>
+
