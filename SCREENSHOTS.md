@@ -1,4 +1,4 @@
-# 📸 Tyrian Lens - Screenshot Gallery
+# Tyrian Lens - Screenshot Gallery
 
 ---
 
