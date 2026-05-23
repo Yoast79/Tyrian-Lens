@@ -102238,6 +102238,18 @@
             4351.2,
             60059
         ],
+        "node": "TEST Obscure Chest",
+        "yields": [
+            "Obscure Chest"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+        "layer": "node_obscure_chest"
+    },
+	{
+        "pos": [
+            5048,
+            62280
+        ],
         "node": "Medium Obscure Chest",
         "yields": [
             "Obscure Chest"
