@@ -577,13 +577,13 @@
 
 		<div class="category-header" id="head-janthir" onclick="toggleCategory('cat-janthir')">Janthir Wilds</div>
 		<div class="category-items" id="cat-janthir">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri.">
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri. It can also be a Charged Titan Ore.">
 				<input type="checkbox" id="node_rotted_titan_amber" onchange="saveAndToggle('node_rotted_titan_amber', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/8b/Rotted_Titan_Amber_%28node%29.png">
 						<span class="label-text">Rotted Titan Amber </span>
 					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri.">
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri. It can also be a Rotted Titan Amber.">
 				<input type="checkbox" id="node_charged_titan_ore" onchange="saveAndToggle('node_charged_titan_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/ac/Charged_Titan_Ore_%28node%29.png">
@@ -601,13 +601,13 @@
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/87/Lowland_Pine_Sapling.png">
 						<span class="label-text">Lowland Pine Sapling</span>
 					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens.">
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.">
 				<input type="checkbox" id="node_titan_heatstone" onchange="saveAndToggle('node_titan_heatstone', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/7/7f/Titan_Heatstone_Cluster.png">
 						<span class="label-text">Titan Heatstone</span>
 					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens.">
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.">
 				<input type="checkbox" id="node_mursaat_obsidian" onchange="saveAndToggle('node_mursaat_obsidian', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/9/9c/Mursaat_Obsidian.png">
@@ -617,17 +617,17 @@
 
 		<div class="category-header" id="head-eod" onclick="toggleCategory('cat-eod')">End of Dragons</div>
 		<div class="category-items" id="cat-eod">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragon's End.">
-				<input type="checkbox" id="node_jadeite_vein" onchange="saveAndToggle('node_jadeite_vein', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png">
-						<span class="label-text">Jadeite Vein</span>
-					</label>
 			<label class="filter-option" data-tooltip="The markers are possible spawn locations in The Echovald Wilds.">
 				<input type="checkbox" id="node_petrified_echovald_sapling" onchange="saveAndToggle('node_petrified_echovald_sapling', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/F006736696D976F6D3B3C71AF811907D05949393/2595188.png">
 						<span class="label-text">Petrified Echovald Sapling</span>
+					</label>
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragon's End.">
+				<input type="checkbox" id="node_jadeite_vein" onchange="saveAndToggle('node_jadeite_vein', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png">
+						<span class="label-text">Jadeite Vein</span>
 					</label>
 		</div>
 		</div> <!-- end section-gathering-nodes -->
@@ -882,6 +882,7 @@
 				<input type="checkbox" id="node_greater_arcane_chest" onchange="saveAndToggle('node_greater_arcane_chest', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/8d/Ancient_Coin.png">
+						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/greater_arcane_chest.png">
 						<span class="label-text">Arcane Chests</span>
 					</label>
 
@@ -902,7 +903,7 @@
 			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Janthir Wilds. Use your Warclaw's 'Sniff' skill to find these.">
 				<input type="checkbox" id="node_major_detected_treasure" onchange="saveAndToggle('node_major_detected_treasure', this.checked)">
 					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/major_detected_treasure.png" style="width: 32px; height: 32px; margin-left: -6px; margin-right: 4px;">
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/major_detected_treasure.png">
 						<span class="label-text">Major Detected Treasure</span>
 					</label>
 
@@ -925,6 +926,8 @@
 					<input type="checkbox" id="node_obscure_chest" onchange="saveAndToggle('node_obscure_chest', this.checked)">
 						<div class="toggle-btn"></div>
 						<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
+							<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_medium.png">
+								<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_large.png">
 							<span class="label-text">Obscure Chests</span>
 						</label>
 			</div>

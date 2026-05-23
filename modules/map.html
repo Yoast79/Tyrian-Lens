@@ -549,7 +549,7 @@
 		var layerMap = { 'region': L.layerGroup(), 'map_text': L.layerGroup(), 'sector': L.layerGroup() };
 		var borderLayer = L.layerGroup();
 
-		var map = L.map("map", { crs: L.extend({}, L.CRS.Simple, { transformation: new L.Transformation(1 / 128, 0, 1 / 128, 0) }), minZoom: 1, maxZoom: 7, zoomControl: false, attributionControl: false, doubleClickZoom: false });
+		var map = L.map("map", { crs: L.extend({}, L.CRS.Simple, { transformation: new L.Transformation(1 / 128, 0, 1 / 128, 0) }), minZoom: 1, maxZoom: 9, zoomControl: false, attributionControl: false, doubleClickZoom: false });
 
 		map.createPane('mistlockPane').style.zIndex = 250;
 		map.createPane('iconPane').style.zIndex = 650;
@@ -645,6 +645,9 @@
 			'node_titan_heatstone', 'node_mursaat_obsidian',
 			'node_zephyrite_kite_basket', 'node_fireworks_launchers', 'node_dragon_pinata', 'node_orphan',
 			'node_salvage_pile', 'node_hatched_chili_pepper_bush', 'node_jadeite_vein', 'node_petrified_echovald_sapling', 'node_bounty',
+			'node_bloodstone_crystals', 'node_petrified_stump', 'node_winterberry_bush', 'node_jade_fragments', 'node_primordial_orchid', 'node_orrian_oyster',
+			'node_brandstone', 'node_difluorite_crystals', 'node_mistonium', 'node_kournan_supply_cache', 'node_dragon_crystals', 'node_mistborn_mote',
+			'node_eternal_ice',
 			// NPC Service layers (all independent, toggled individually)
 			'node_npc_merchant', 'node_npc_armorsmith', 'node_npc_weaponsmith', 'node_npc_tailor',
 			'node_npc_chef', 'node_npc_leatherworker', 'node_npc_huntsman', 'node_npc_jeweler',
@@ -678,7 +681,7 @@
 			return 'node_npc_misc';
 		}
 
-		L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true }).addTo(map);
+		L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
 		map.setView([31384, 49071], 4);
 
 		borderLayer.addTo(map);
@@ -1181,7 +1184,7 @@
 						}
 
 						let currentScale = farmingScaleNodes.includes(layerKey) ? farmScale : locScale;
-						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 35 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+						let baseSize = (layerKey === 'node_ranger_pet') ? 45 : (layerKey === 'node_fishing_hole') ? 32 : 24;
 						let glowClass = "";
 
 						let m = L.marker([p.pos[1], p.pos[0]], {
