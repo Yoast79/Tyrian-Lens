@@ -13717,447 +13717,915 @@
     },
     {
         "pos": [
-            57518.3,
-            18219.1
+            59136.6,
+            18306.3
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            58347.9,
-            18402.7
+            58917.1,
+            18757.8
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            58040.7,
-            18291.9
+            58615.4,
+            18535.4
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            58088.3,
-            17346
+            58680.8,
+            18292.1
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            58364.1,
-            17189.3
+            57826.4,
+            18491.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            58872.8,
-            17267.7
+            57835.1,
+            18716.7
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56583.9,
-            18478.3
+            57925.4,
+            17575.7
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55907.7,
-            18578.5
+            58111.1,
+            17344.1
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55523,
-            17613
+            57805.8,
+            17287.5
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55861,
-            17293.5
+            59037.3,
+            17780
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56098.3,
-            17034.4
+            59024.2,
+            17768.1
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56021.7,
-            17052.5
+            58933.8,
+            17305.8
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56769.9,
-            16884.1
+            58577.7,
+            17217.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56716.7,
-            16907.1
+            58582.4,
+            17209.1
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57648.4,
-            17321.5
+            58570.7,
+            17207.2
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57403.3,
-            17335.3
+            58809.2,
+            17726.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57698.1,
-            17104
+            57895.9,
+            18089.1
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57823.8,
-            17319.2
+            58520.3,
+            18545.8
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57958.3,
-            17188.8
+            58125.4,
+            18527
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56995.6,
-            18324.6
+            58044.8,
+            18458.8
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57085.4,
-            18374.7
+            58351.6,
+            18423.5
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57108.9,
-            18462.5
+            58505.7,
+            17722.4
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56582.1,
-            18884.8
+            58243.2,
+            17859.6
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56515.4,
-            18932.1
+            58456.6,
+            17596.3
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56484.6,
-            18873.8
+            58572.3,
+            17907.5
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56125,
-            17436.3
+            58171.3,
+            18721.2
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56042.3,
-            17569.5
+            58054.4,
+            18218.4
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56040.8,
-            17496
+            58070.4,
+            18309.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55820.1,
-            17465.6
+            57583.1,
+            18337.3
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55819.5,
-            17418.9
+            58037.6,
+            17397.6
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            55829.3,
-            17353.1
+            57651,
+            17138.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56576.2,
-            17014.4
+            57104.6,
+            17998.9
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56737.4,
-            16926.3
+            56917,
+            16975.3
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56782.2,
-            16929.9
+            56403,
+            17832.4
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56980.5,
-            17036.3
+            57047.4,
+            18424.7
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            57031,
-            17067.2
+            56234.3,
+            18832.5
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
-            56987.8,
-            17077.3
+            56242.1,
+            18303.4
         ],
         "node": "Eternal Ice",
         "yields": [
             "Eternal Ice Shard"
         ],
-        "item_id": 92272,
-        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png"
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56175.5,
+            17201.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            55584.5,
+            17675.7
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56367.8,
+            17094.8
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            57006.9,
+            17231.8
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56677.9,
+            18424.9
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56571.8,
+            18057.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56979.1,
+            17049.6
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56899.6,
+            18165.7
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56275.5,
+            18057.3
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56246.9,
+            18262.6
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56094,
+            17306.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56875.9,
+            16946.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56375.1,
+            18840.6
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56466.9,
+            18028.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            55610.3,
+            17778.3
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56186.5,
+            17838.2
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56246.2,
+            17378.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56200.1,
+            18578.8
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56465.7,
+            17907.6
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56015.3,
+            18278.4
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56297.4,
+            17299.4
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            57009.3,
+            17052
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56640.3,
+            18011.2
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56181.9,
+            17358.7
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56937.6,
+            17370.4
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56898.5,
+            18394.2
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56139.7,
+            18275.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56620.7,
+            18075.7
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56790.7,
+            16993.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            55503.8,
+            18486.4
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            55358.4,
+            18529.9
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56668.2,
+            18019.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56645.4,
+            18124.9
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56339.4,
+            18020.9
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56739.2,
+            18211.1
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56496.4,
+            18672.9
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            56993.8,
+            18308.7
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            57760.1,
+            17400.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
+    },
+    {
+        "pos": [
+            58268.7,
+            18273.5
+        ],
+        "node": "Eternal Ice",
+        "yields": [
+            "Eternal Ice Shard"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+        "layer": "node_eternal_ice"
     },
     {
         "pos": [
