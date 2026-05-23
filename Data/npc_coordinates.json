@@ -26041,54 +26041,6 @@
     },
     {
         "pos": [
-            9383.6,
-            14633.8
-        ],
-        "node": "Mercenary",
-        "yields": [
-            "Skirmish Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9395,
-            14712
-        ],
-        "node": "Penelope the Unconquerable",
-        "yields": [
-            "Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9460.2,
-            14742.9
-        ],
-        "node": "Decommissioned War Engine",
-        "yields": [
-            "Reinforce Armor"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9398.6,
-            14632.5
-        ],
-        "node": "Legendary Retired Commander Burn Razor",
-        "yields": [
-            "Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
             9361.1,
             14572.1
         ],
@@ -26101,66 +26053,6 @@
     },
     {
         "pos": [
-            9434,
-            14739.1
-        ],
-        "node": "Aori Brightcrest",
-        "yields": [
-            "Laurel Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9378.9,
-            14695.3
-        ],
-        "node": "Groundskeeper Cirran",
-        "yields": [
-            "Gathering Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9352.3,
-            14674.2
-        ],
-        "node": "Nareesa",
-        "yields": [
-            "Activity"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9442.9,
-            14699.2
-        ],
-        "node": "Quartermaster Kindlemane",
-        "yields": [
-            "Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9430,
-            14735.3
-        ],
-        "node": "Tear Cinderskull",
-        "yields": [
-            "Dungeon Merchant"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
             9408.13,
             14699.91
         ],
@@ -26169,18 +26061,6 @@
             "Tailor"
         ],
         "icon": "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
-        "layer": "node_npc_services"
-    },
-    {
-        "pos": [
-            9438.9,
-            14703.2
-        ],
-        "node": "Representative Axebreaker",
-        "yields": [
-            "Trading Post"
-        ],
-        "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
         "layer": "node_npc_services"
     },
     {
