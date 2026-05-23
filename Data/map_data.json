@@ -42,14 +42,6 @@
     },
 	{
       "pos": [
-        47176,
-        34444
-      ],
-      "name": "Mistlock Sactuary",
-      "type": "sector"
-    },
-    {
-      "pos": [
         52396.9,
         33667.1
       ],
@@ -27046,14 +27038,6 @@
     },
     {
       "pos": [
-        36568,
-        28384
-      ],
-      "name": "Maguuma Wastes",
-      "type": "region"
-    },
-    {
-      "pos": [
         37840,
         32926
       ],
@@ -43806,6 +43790,358 @@
       "name": "Assist the Stewards of Galdra around the forge.",
       "type": "heart",
       "chat_code": "[&BNABAAA=]"
+    },
+	{
+      "pos": [
+        39456,
+        19760
+      ],
+      "name": "Janthir Bay",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        47216,
+        23360
+      ],
+      "name": "Woodland Cascades",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        42144,
+        40720
+      ],
+      "name": "Strait of Malchor",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        39232,
+        50160
+      ],
+      "name": "Unending Ocean",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        52496,
+        46672
+      ],
+      "name": "Scavenger's Causeway",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        55696,
+        44528
+      ],
+      "name": "Elon River",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        52256,
+        52304
+      ],
+      "name": "Dajkah",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        59904,
+        55216
+      ],
+      "name": "Sulfurous Wastelands",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        36472,
+        105912
+      ],
+      "name": "The Jade Sea",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        37344,
+        99040
+      ],
+      "name": "Great Turtle Highlands",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        29760,
+        95952
+      ],
+      "name": "Drowned Kaineng",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        27140,
+        108556
+      ],
+      "name": "Kirin Peak",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        39776,
+        12928
+      ],
+      "name": "The Isles",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        41976,
+        11688
+      ],
+      "name": "Janthir Gravis",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        46768,
+        15048
+      ],
+      "name": "Highland Shore",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        54552,
+        21372
+      ],
+      "name": "Far Shiverpeaks",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        62012,
+        20636
+      ],
+      "name": "Blood Legion Homelands",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        68176,
+        47208
+      ],
+      "name": "Dzalana",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        46312,
+        35136
+      ],
+      "name": "Sea of Sorrows",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        40904,
+        37720
+      ],
+      "name": "Tarnished Coast",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        47177,
+        34549
+      ],
+      "name": "Mistlock Sanctuary",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
+    },
+	{
+      "pos": [
+        36208,
+        27744
+      ],
+      "name": "Maguuma Wastes",
+      "type": "map",
+      "level": "",
+      "waypoints": 0,
+      "hearts": 0,
+      "heropoints": 0,
+      "pois": 0,
+      "vistas": 0,
+      "masteries": 0,
+      "mastery_icon": ""
     }
   ]
 }
