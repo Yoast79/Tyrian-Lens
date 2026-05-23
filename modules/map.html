@@ -1271,7 +1271,17 @@
 								pane: 'textPane', interactive: true,
 								icon: L.divIcon({ className: 'map-label ' + (labelKey === 'region' ? 'region-label' : labelKey === 'map_text' ? 'map-title-label' : 'sector-label'), html: p.name, iconSize: [400, 40] })
 							});
-							if (labelKey === 'map_text') {
+							if (p.description || p.desc) {
+								let tooltipHtml = `<div style="text-align: center; font-family: 'Crimson Text', serif; font-size: 13px; color: #e2c07d; line-height: 1.4; padding: 4px; max-width: 250px;">
+									<div style="font-weight: bold; font-size: 15px; margin-bottom: 4px; letter-spacing: 1px; border-bottom: 1px solid #4a3b2a; padding-bottom: 2px; text-transform: uppercase;">${p.name}</div>
+									<div style="color: #fff; font-size: 12px; text-transform: none;">${p.description || p.desc}</div>
+								</div>`;
+								l.on('mouseover', e => {
+									var pt = map.mouseEventToContainerPoint(e.originalEvent);
+									window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+								});
+								l.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+							} else if (labelKey === 'map_text') {
 								l.on('mouseover', e => {
 									let meta = buildMapMetaHtml(p);
 									if (meta) {
@@ -1284,16 +1294,29 @@
 							l.addTo(layerMap[labelKey]);
 						} else {
 							if (!subLayers[type]) {
-								subLayers[type] = L.markerClusterGroup({ disableClusteringAtZoom: 6, maxClusterRadius: 40, showCoverageOnHover: false, iconCreateFunction: createClusterIcon });
+								if (type === 'node_zone_portal') {
+									subLayers[type] = L.layerGroup();
+								} else {
+									subLayers[type] = L.markerClusterGroup({ disableClusteringAtZoom: 6, maxClusterRadius: 40, showCoverageOnHover: false, iconCreateFunction: createClusterIcon });
+								}
 							}
-							let iconPath = "https://gw2ps.local/Assets/Icons/poi_discovered.png";
-							if (type === 'waypoint') iconPath = "https://gw2ps.local/Assets/Icons/waypoint_discovered.png";
-							else if (type === 'vista') iconPath = "https://gw2ps.local/Assets/Icons/vista_discovered.png";
-							else if (type === 'heart') iconPath = "https://gw2ps.local/Assets/Icons/heart_discovered.png";
-							else if (type === 'heropoint') iconPath = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
+							let iconPath = p.icon || "https://gw2ps.local/Assets/Icons/poi_discovered.png";
+							if (!p.icon) {
+								if (type === 'waypoint') iconPath = "https://gw2ps.local/Assets/Icons/waypoint_discovered.png";
+								else if (type === 'vista') iconPath = "https://gw2ps.local/Assets/Icons/vista_discovered.png";
+								else if (type === 'heart') iconPath = "https://gw2ps.local/Assets/Icons/heart_discovered.png";
+								else if (type === 'heropoint') iconPath = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
+							}
 
 							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale] }) });
-							m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Map Point", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
+							m.on('mouseover', e => {
+								var pt = map.mouseEventToContainerPoint(e.originalEvent);
+								let tooltipHtml = `<b>${p.name || "Map Point"}</b>`;
+								if (p.description || p.desc) {
+									tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.description || p.desc}</span>`;
+								}
+								window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+							});
 							m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 							m.addTo(subLayers[type]);
 						}

@@ -178,14 +178,17 @@
                 if(mapData && mapData.points) {
                     mapData.points.forEach((p, idx) => {
                         const id = 'maploc_' + idx;
-                        let mapIcon = "https://gw2ps.local/Assets/Icons/";
                         const t = p.type ? p.type.toLowerCase() : "";
-                        if (t === "waypoint") mapIcon += "waypoint_discovered.png";
-                        else if (t === "heart") mapIcon += "heart_discovered.png";
-                        else if (t === "landmark") mapIcon += "poi_discovered.png";
-                        else if (t === "skill" || t === "heropoint") mapIcon += "heropoint_discovered.png";
-                        else if (t === "vista") mapIcon += "vista_discovered.png";
-                        else mapIcon += "map_scout.png";
+                        let mapIcon = p.icon || "https://gw2ps.local/Assets/Icons/map_scout.png";
+                        if (!p.icon) {
+                            mapIcon = "https://gw2ps.local/Assets/Icons/";
+                            if (t === "waypoint") mapIcon += "waypoint_discovered.png";
+                            else if (t === "heart") mapIcon += "heart_discovered.png";
+                            else if (t === "landmark") mapIcon += "poi_discovered.png";
+                            else if (t === "skill" || t === "heropoint") mapIcon += "heropoint_discovered.png";
+                            else if (t === "vista") mapIcon += "vista_discovered.png";
+                            else mapIcon += "map_scout.png";
+                        }
 
                         let label = t;
                         if (label === 'landmark') label = 'POI';

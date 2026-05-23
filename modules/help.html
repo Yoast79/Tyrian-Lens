@@ -100,127 +100,179 @@
 		<div id="help-container">
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">GETTING STARTED & SETTINGS</span>
+					<span class="cat-title">ACCOUNT CONNECTION & KEY SETTINGS</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>API Keys</h4>
+					<h4>API Key Integration</h4>
 					<p>
-						Tyrian Lens relies on the official Guild Wars 2 API to display your account data securely. Go to the <span class="highlight">API Keys</span> module to add your key.
+						Tyrian Lens requires a Guild Wars 2 API key to display your account data securely. Create a key at the official ArenaNet account portal. For full functionality, your key requires the following permissions: <span class="highlight">account</span>, <span class="highlight">inventories</span>, <span class="highlight">characters</span>, <span class="highlight">progression</span>, <span class="highlight">wallet</span>, <span class="highlight">unlocks</span>, and <span class="highlight">trading</span>.
 					</p>
-					<h4>DRF Live Loot Tracking</h4>
-					<p>To enable real-time loot drops in the Farming Tracker, you need the DRF addon.</p>
-					<h4>Settings</h4>
+					<h4>Visual Customization & Scale</h4>
 					<p>
-						In the <span class="highlight">Settings</span>, you can adjust UI scale, volume, and default character.
+						Adjust scaling preferences and select interface themes (Sylvari, Asura, Charr, Norn, Human) within settings. Left-hand panels (Map, Timers, Farming) and right-hand panels (Wiki, API, Settings) act independently, allowing you to run layouts on both sides of the screen simultaneously.
 					</p>
-				</div>
-			</div>
-
-			<div class="help-cat">
-				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">MAP & TIMERS</span>
-					<span class="cat-icon">▼</span>
-				</div>
-				<div class="cat-content">
-					<h4>Map Options</h4>
+					<h4>DRF Live Loot Integration</h4>
 					<p>
-						Tyrian Lens automatically detects if you are in Tyria or WvW. Toggle layers via <span class="highlight">Map Options</span>.
-					</p>
-					<h4>Timers & Notifications</h4>
-					<p>
-						The <span class="highlight">Timers</span> module tracks World Bosses and Meta Events. Click the X-Ray icon to add events to your Watchlist.
+						(Optional) Link the Farming Tracker with the Drop Research Facilities (DRF) addon to enable live drop tracking. This automatically logs all item drops during grinding sessions without delay. The tracker will still work without this, but you have to wait for the GW2 API to refresh.
 					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">ACCOUNT SEARCH & STORAGE</span>
+					<span class="cat-title">INTERACTIVE MAPS & GPS NAVIGATION</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>Account Search</h4>
-					<p>Scan your Bank, Material Storage, and Character Bags for items and currencies.</p>
-					<h4>Bank, Materials & Wardrobe</h4>
-					<p>Browse account-wide storage. Click items to open their official Wiki page.</p>
+					<h4>Mumble Link Client Integration</h4>
+					<p>
+						The Leaflet-powered maps use Guild Wars 2 Mumble Link data for live location services. The map automatically snaps to your active character's location, tracks coordinate changes, and shifts between Tyria and WvW layers in real time.
+					</p>
+					<h4>Interactive Map Overlays</h4>
+					<p>
+						Use the map options panel to toggle many icons on the map like: gathering nodes, chests, ranger pet locations, service NPCs and many more! Clicking a NPC icon will show you the items they are selling.
+					</p>
+					<h4>Personal Map Markers</h4>
+					<p>
+						You can place custom icons directly onto the map. Use <span class="highlight">ALT + LEFT CLICK</span> to drop a waypoint, and click directly on the placed marker to remove it.
+					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">CHARACTERS & HERO PANEL</span>
+					<span class="cat-title">ACCOUNT WIDE STORAGE & SEARCH</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>Hero Panel</h4>
-					<p>View equipped gear, weapons, and builds. Tooltips update automatically based on your selection.</p>
-					<h4>Character Roster & Inventory</h4>
-					<p>Overview your roster playtime, deaths, and birthdays. Check bags without logging into characters.</p>
+					<h4>Unified Account Search</h4>
+					<p>
+						Search and filter your entire bank, material storage, shared slots, and individual character inventories simultaneously from a single search box.
+					</p>
+					<h4>Character Roster & Inventories</h4>
+					<p>
+						Check bag slots, equipment, birthday countdowns, and playtime across your entire character roster without having to swap characters in-game.
+					</p>
+					<h4>Material Storage & Wardrobes</h4>
+					<p>
+						Browse account-wide collections, skin unlocks, and crafting material quantities. Click on items to open their official Guild Wars 2 Wiki entries.
+					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">TRADING & ECONOMY</span>
+					<span class="cat-title">HERO PANEL & BUILD THEORYCRAFTING</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>Trading Post & Deliveries</h4>
-					<p>Track Buy/Sell orders. The TP icon glows when items are waiting in your Delivery Box.</p>
-					<h4>Smart Crafting</h4>
-					<p>Calculates crafting profit based on your actual Material Storage and market prices.</p>
+					<h4>Live Hero Equipment & Attributes</h4>
+					<p>
+						Inspect equipped weapons, armor, and accessories. Dynamic tooltips supply full item stats and match item rarity colors.
+					</p>
+					<h4>Specializations & Builds</h4>
+					<p>
+						View slotted specializations, selected traits, and active utility skills. You can review your loaded template properties directly in the interface.
+					</p>
+					<h4>Interactive Build Planner</h4>
+					<p>
+						Plan your builds and theorycraft gear sets using the layout editor. Check custom trait lines, stats distributions, and utility combinations. Share them easily with your friends.
+					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">PROGRESSION & TRACKING</span>
+					<span class="cat-title">TRADING POST & ECONOMY DATA</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>Achievements</h4>
-					<p>Search achievements and add them to your permanent on-screen Watchlist Overlay.</p>
-					<h4>Weekly Clears</h4>
-					<p>Visual dashboard for Raids, Strike Missions, and Dungeons.</p>
-					<h4>Farming Tracker</h4>
-					<p>Snapshots your wallet and inventory to calculate gains during farming sessions.</p>
+					<h4>Delivery Box Notification</h4>
+					<p>
+						The Trading Post navigation icon updates to a notification graphic when you have items or gold waiting. Hover over the icon to display an exact breakdown of total waiting items and formatted coin values.
+					</p>
+					<h4>Investment Charts & Markets</h4>
+					<p>
+						Track buy and sell orders, historical price updates, and active TP listings. The portfolio tracker plots profit and return-on-investment (ROI) charts for saved item investments.
+					</p>
+					<h4>Smart Crafting Engine</h4>
+					<p>
+						Calculate net crafting profits by cross-referencing live market pricing against materials already inside your personal bank and material storage.
+					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">CREDITS & LEGAL</span>
+					<span class="cat-title">EVENTS, BOSSES & PROGRESSION</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content">
-					<h4>Data Assets</h4>
-					<p>All Guild Wars 2 assets and API data are property of ArenaNet.</p>
-					<h4>Built With</h4>
-					<p>C#, .NET 9, WebView2, Google Gemini and Leaflet.</p>
-					<h4>Mumble Link</h4>
-					<p>Powered by the Gw2Sharp library.</p>
-					<h4>Inspiration</h4>
-					<p>gw2efficiency, gw2navi, drf.rs.</p>
+					<h4>Meta Watchlist & Boss Timers</h4>
+					<p>
+						Monitor world boss schedules and active meta timelines. Click <img src="https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png" style="height: 1.1em; vertical-align: middle; margin: 0 4px;" /> on any boss card to add it to your permanent countdown watchlist overlay.
+					</p>
+					<h4>Achievements Dashboard</h4>
+					<p>
+						Track overall achievements. The dashboard displays progress meters by category, along with completion details for individual achievement tiers.
+					</p>
+					<h4>Weekly Boss Clears</h4>
+					<p>
+						Keep tabs on your raids, strike missions, and dungeon progress. The matrix updates automatically to show completed and remaining targets for the weekly cycle.
+					</p>
+					<h4>Session Farming Tracker</h4>
+					<p>
+						Start grinding sessions to record gold-per-hour, total currency fluctuations, and logged item drops in real-time (when the DRF module is installed).
+					</p>
 				</div>
 			</div>
 
 			<div class="help-cat">
 				<div class="cat-header" onclick="toggleHelp(this)">
-					<span class="cat-title">KEYBOARD COMMANDS</span>
+					<span class="cat-title">CREDITS & LEGAL DISCLAIMERS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Copyright Notice</h4>
+					<p>
+						All Guild Wars 2 assets, imagery, and API content are owned by ArenaNet and NCSOFT.
+					</p>
+					<h4>Software Architecture</h4>
+					<p>
+						Built using C#, .NET 9, WebView2 runtime interfaces and Leaflet JS.
+					</p>
+					<h4>Core Dependencies</h4>
+					<p>
+						Powered by the Gw2Sharp library for local Mumble Link integration.
+					</p>
+					<h4>Inspirations</h4>
+					<p>
+						Inspired by the work of gw2efficiency, gw2navi, and drf.rs.
+					</p>
+					<h4>Coordinate Contributions</h4>
+					<p>
+						Map coordinate files provided by Lady Elyssa and Tekkit.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">HOTKEYS & SHORTCUT CONTROLS</span>
 					<span class="cat-icon">▼</span>
 				</div>
 				<div class="cat-content" style="padding: 10px;">
 					<div class="shortcut-grid">
-						<div class="shortcut-row">REFRESH APP</div>
+						<div class="shortcut-row">REFRESH APPLICATION</div>
 						<div class="shortcut-key">F5</div>
-						<div class="shortcut-row">MOVE WINDOW</div>
+						<div class="shortcut-row">MOVE APPLICATION WINDOW</div>
 						<div class="shortcut-key">DRAG MENU BAR</div>
-						<div class="shortcut-row">RESIZE WINDOW</div>
-						<div class="shortcut-key">DRAG BOTTOM RIGHT</div>
-						<div class="shortcut-row">PLACE PERSONAL MARKER</div>
+						<div class="shortcut-row">RESIZE APPLICATION</div>
+						<div class="shortcut-key">DRAG BOTTOM RIGHT CORNER</div>
+						<div class="shortcut-row">PLACE CUSTOM WAYPOINT</div>
 						<div class="shortcut-key">ALT + LEFT CLICK</div>
-						<div class="shortcut-row">REMOVE MARKER</div>
+						<div class="shortcut-row">DELETE WAYPOINT</div>
 						<div class="shortcut-key">LEFT CLICK MARKER</div>
 					</div>
 				</div>

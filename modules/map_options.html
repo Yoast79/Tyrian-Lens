@@ -604,7 +604,7 @@
 			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens.">
 				<input type="checkbox" id="node_titan_heatstone" onchange="saveAndToggle('node_titan_heatstone', this.checked)">
 					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/20/Titan_Heatstone.png">
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/7/7f/Titan_Heatstone_Cluster.png">
 						<span class="label-text">Titan Heatstone</span>
 					</label>
 			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens.">
@@ -656,7 +656,13 @@
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png">
 						<span class="label-text">Mists Rifts</span>
 					</label>
-
+			
+			<label class="filter-option" data-tooltip="Pick up a bounty at the bounty-board first before they show up in your game.">
+				<input type="checkbox" id="node_bounty" onchange="saveAndToggle('node_bounty', this.checked)">
+				<div class="toggle-btn"></div>
+				<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6c/Bounty_Target_yellow_%28map_icon%29.png">
+			    	<span class="label-text">Bounties</span>
+		     	</label>
 
 			<label class="filter-option" data-tooltip="Individual pets can be searched in the Search menu.">
 				<input type="checkbox" id="node_ranger_pet" onchange="saveAndToggle('node_ranger_pet', this.checked)">
@@ -679,19 +685,14 @@
 						<span class="label-text">Treasure Mushroom</span>
 					</label>
 
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Metrica Province.">
+			<label class="filter-option" data-tooltip="The markers are possible spawn locations in the Thaumanova Reactor in Metrica Province.">
 				<input type="checkbox" id="node_matrix_cube_key" onchange="saveAndToggle('node_matrix_cube_key', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/EFA4911B016A0D78A9A820B656635A71286C0207/65723.png">
 						<span class="label-text">Matrix Cube Key</span>
 					</label>
 
-			<label class="filter-option" data-tooltip="Show or hide Bounty Target locations.">
-				<input type="checkbox" id="node_bounty" onchange="saveAndToggle('node_bounty', this.checked)">
-				<div class="toggle-btn"></div>
-				<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6c/Bounty_Target_yellow_%28map_icon%29.png">
-				<span class="label-text">Bounties</span>
-			</label>
+			
 		</div>
 
 		<div class="category-header" id="head-trading" onclick="toggleCategory('cat-trading')">Trading & Vendors</div>
@@ -1108,7 +1109,7 @@
 				// Force farming_nodes master toggle to true to ensure independent node toggles work flawlessly
 				mapSettings['farming_nodes'] = true;
 
-				const defaultOnMarkerKeys = ['poi', 'waypoint', 'vista', 'heart', 'heropoint', 'mastery', 'personal_markers'];
+				const defaultOnMarkerKeys = ['poi', 'waypoint', 'vista', 'heart', 'heropoint', 'mastery', 'personal_markers', 'node_zone_portal'];
 
 				// Loop through every checkbox (ignoring the master ones to avoid conflicts during load)
 				document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(el => {

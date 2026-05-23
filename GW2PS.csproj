@@ -22,9 +22,12 @@
 		</Content>
 		
 		<!-- Static Data / Databases -->
-		<Content Include="Data\**">
+		<Content Include="Data\timers_config.json;Data\manifest.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+		<None Include="Data\**" Exclude="Data\timers_config.json;Data\manifest.json">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
 		
 		<!-- Assets (Icons, Sounds, Fonts, Leaflet) -->
 		<Content Include="Assets\**">

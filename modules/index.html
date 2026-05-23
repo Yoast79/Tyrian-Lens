@@ -210,7 +210,7 @@
 		</div>
 
 		<div id="side-panel">
-			<div id="left-panel-close-btn" style="display:none; position:absolute; top:15px; right:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:1001; transition:0.2s; border-radius:3px;" onclick="window.closeAllPanels()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
+			<div id="left-panel-close-btn" style="display:none; position:absolute; top:15px; right:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:1001; transition:0.2s; border-radius:3px;" onclick="window.closeLeftPanel()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
 			<div id="panel-loading" class="panel-loader">
 				<div class="panel-spinner"></div>
 				<div class="panel-loading-text">Loading Module...</div>
@@ -222,7 +222,7 @@
 		</div>
 		<div id="side-panel-right">
 			<div id="wiki-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:100; transition:0.2s; border-radius:3px;" onclick="closeWiki()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
-			<div id="right-panel-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:1001; transition:0.2s; border-radius:3px;" onclick="window.closeAllPanels()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
+			<div id="right-panel-close-btn" style="display:none; position:absolute; top:15px; left:15px; width:35px; height:35px; background:rgba(26,21,16,0.9); border:1px solid #4a3b2a; color:#e2c07d; align-items:center; justify-content:center; cursor:pointer; font-size:18px; z-index:1001; transition:0.2s; border-radius:3px;" onclick="window.closeRightPanel()" onmouseover="this.style.color='#ff4444'; this.style.borderColor='#ff4444';" onmouseout="this.style.color='#e2c07d'; this.style.borderColor='#4a3b2a';">&#10006;</div>
 			<div id="panel-loading-right" class="panel-loader">
 				<div class="panel-spinner"></div>
 				<div class="panel-loading-text">Loading...</div>
@@ -451,18 +451,36 @@
 			let trackedAchievements = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
 			let isTrackerVisible = localStorage.getItem('gw2_tracker_visible') === 'true';
 
-			window.closeAllPanels = function() {
+			window.closeLeftPanel = function() {
 				document.getElementById('side-panel').classList.remove('open', 'wide');
 				document.getElementById('left-panel-close-btn').style.display = 'none';
+
+				const rightPanel = document.getElementById('side-panel-right');
+				const mapFrame = document.getElementById('map-frame');
+				if (mapFrame && mapFrame.contentWindow) {
+					let isRightOpen = rightPanel.classList.contains('open');
+					mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: isRightOpen, isWide: false }, '*');
+				}
+			};
+
+			window.closeRightPanel = function() {
 				const rightPanel = document.getElementById('side-panel-right');
 				rightPanel.classList.remove('open', 'wide', 'wiki-mode');
 				document.getElementById('wiki-close-btn').style.display = 'none';
 				document.getElementById('right-panel-close-btn').style.display = 'none';
 
+				const leftPanel = document.getElementById('side-panel');
 				const mapFrame = document.getElementById('map-frame');
 				if (mapFrame && mapFrame.contentWindow) {
-					mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: false, isWide: false }, '*');
+					let isLeftOpen = leftPanel.classList.contains('open');
+					let isWide = leftPanel.classList.contains('wide');
+					mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: isLeftOpen, isWide: isWide }, '*');
 				}
+			};
+
+			window.closeAllPanels = function() {
+				window.closeLeftPanel();
+				window.closeRightPanel();
 			};
 
 			window.toggleSidePanel = function(module, isRight) {
@@ -616,8 +634,9 @@
 					if (r.ok) {
 						const data = await r.json();
 						const hasDelivery = data && (data.coins > 0 || (data.items && data.items.length > 0));
-						const menu = document.querySelector('iframe[src="menu.html"]');
-						if (menu && menu.contentWindow) { menu.contentWindow.postMessage({ action: 'updateTPIndicator', active: hasDelivery, coins: data.coins || 0, items: data.items ? data.items.length : 0 }, '*'); }
+						const menu = document.getElementById('menu-frame');
+						const totalItems = data.items ? data.items.reduce((sum, item) => sum + (item.count || 0), 0) : 0;
+						if (menu && menu.contentWindow) { menu.contentWindow.postMessage({ action: 'updateTPIndicator', active: hasDelivery, coins: data.coins || 0, items: totalItems }, '*'); }
 					}
 				} catch(e) {}
 			}
@@ -694,7 +713,7 @@
 					else if (data.action === 'hideTooltip') document.getElementById("global-tooltip").style.display = "none";
 					else if (data.action === 'toast') window.showToast(data.msg, data.persistent);
 					else if (data.action === 'eventPop') window.showEventPop(data.msg);
-					else if (data.action === 'updateTPIndicator' || data.action === 'updateFarmingIndicator') { const menu = document.querySelector('iframe[src="menu.html"]'); if (menu && menu.contentWindow) menu.contentWindow.postMessage(data, '*'); }
+					else if (data.action === 'updateTPIndicator' || data.action === 'updateFarmingIndicator') { const menu = document.getElementById('menu-frame'); if (menu && menu.contentWindow) menu.contentWindow.postMessage(data, '*'); }
 					else if (data.action === 'switchAccount') { localStorage.setItem('gw2_active_key', data.apiKey); const leftFrame = document.getElementById('panel-frame'); const farmingFrame = document.getElementById('farming-frame'); const timersFrame = document.getElementById('timers-frame'); const fishingFrame = document.getElementById('fishing-frame'); if (leftFrame && leftFrame.contentWindow) leftFrame.contentWindow.postMessage(data, '*'); if (farmingFrame && farmingFrame.contentWindow) farmingFrame.contentWindow.postMessage(data, '*'); if (timersFrame && timersFrame.contentWindow) timersFrame.contentWindow.postMessage(data, '*'); if (fishingFrame && fishingFrame.contentWindow) fishingFrame.contentWindow.postMessage(data, '*'); pollTrackerProgress(); checkDeliveries(); }
 					else if (data.action === 'trackAchievement') { trackedAchievements[data.id] = data.payload; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'untrackAchievement') { delete trackedAchievements[data.id]; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }

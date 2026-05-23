@@ -84,7 +84,7 @@
 				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Currencies'}, '*')" onmouseover="showTip('Wallet', event)" onmouseout="hideTip()">
 					<img src="https://gw2ps.local/Assets/MenuIcons/nav_wallet.png" />
 				</div>
-				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Trading'}, '*')" onmouseover="showTip('Trading', event)" onmouseout="hideTip()">
+				<div class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Trading'}, '*')" onmouseover="showTip(tpTooltipText, event)" onmouseout="hideTip()">
 					<img id="nav-tp-icon" src="https://gw2ps.local/Assets/MenuIcons/nav_tp.png" />
 				</div>
 				<div id="nav-farming" class="nav-item" onclick="window.parent.postMessage({action:'toggleMenu', menu:'Farming'}, '*')" onmouseover="showTip('Farming Tracker', event)" onmouseout="hideTip()">
@@ -110,6 +110,8 @@
 		</div>
 		<script>
 			/*<![CDATA[*/
+			let tpTooltipText = 'Trading';
+
 			function formatCoinMenu(copper) {
 				if (!copper) return '';
 				let g = Math.floor(copper / 10000), s = Math.floor((copper % 10000) / 100), c = copper % 100;
@@ -141,9 +143,9 @@
 						if (data.active) {
 							let tipText = 'Items: ' + (data.items || 0);
 							if (data.coins > 0) tipText += '<br>Funds: ' + formatCoinMenu(data.coins);
-							icon.parentElement.onmouseover = function(e) { showTip(tipText, e); };
+							tpTooltipText = tipText;
 						} else {
-							icon.parentElement.onmouseover = function(e) { showTip('Trading Post', e); };
+							tpTooltipText = 'Trading';
 						}
 					}
 				}
