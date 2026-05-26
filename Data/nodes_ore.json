@@ -1,0 +1,7454 @@
+[
+{
+    "pos": [
+        42663.3,
+        33694.6
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 56,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42995.3,
+        33815.4
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 12,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42996,
+        33817.4
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 10,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42633.5,
+        32438.5
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 2,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42634,
+        32440.8
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 0,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42439.8,
+        32559.4
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 3,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42850.9,
+        33006
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 3,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42349.7,
+        32423.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 15,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42920.1,
+        32525.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 2,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42994.8,
+        33814.9
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 11,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45563.7,
+        30161.4
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 58,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44167.3,
+        29760.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 27,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44531.3,
+        29360.4
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 24,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45544,
+        30237.5
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 61,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45546.2,
+        30237.8
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 59,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44532,
+        29359.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 25,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44529.7,
+        29362.3
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 23,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44979.5,
+        28003
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": -2,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44977.7,
+        28003.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": -4,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58539.4,
+        31749.8
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 59,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60316.3,
+        31528.1
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": -15,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58540.6,
+        31751.9
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 57,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60649.3,
+        31421.7
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": 0,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60317.7,
+        31527.3
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": -16,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60318.3,
+        31526.1
+    ],
+    "node": "Copper",
+    "yields": [
+        "Copper Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+    "alt": -17,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_copper_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42663.3,
+        33694.6
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 56,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42995.3,
+        33815.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 12,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42996,
+        33817.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 10,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42633.5,
+        32438.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 2,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42634,
+        32440.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 0,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42439.8,
+        32559.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 3,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42850.9,
+        33006
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 3,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42349.7,
+        32423.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 15,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42920.1,
+        32525.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 2,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42994.8,
+        33814.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 11,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45563.7,
+        30161.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 58,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44167.3,
+        29760.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 27,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44531.3,
+        29360.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 24,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45544,
+        30237.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 61,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45546.2,
+        30237.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 59,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44532,
+        29359.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 25,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44529.7,
+        29362.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 23,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44979.5,
+        28003
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -2,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44977.7,
+        28003.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -4,
+    "map_id": 15,
+    "map_name": "Queensdale",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58539.4,
+        31749.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 59,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60316.3,
+        31528.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -15,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58540.6,
+        31751.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 57,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60649.3,
+        31421.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 0,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60317.7,
+        31527.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -16,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60318.3,
+        31526.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -17,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64419.5,
+        33730.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 18,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61741.5,
+        33684.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 14,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61739.6,
+        33692.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 13,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61730.1,
+        33739.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 44,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61729.9,
+        33739.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 44,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63398.3,
+        31559.2
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 77,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63634.5,
+        32486.6
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 28,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63925.4,
+        31397.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 9,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63675.4,
+        31761.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 70,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62021.8,
+        32323.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 21,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57239.5,
+        29840.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 71,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56904.4,
+        29188
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 32,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56526.2,
+        29124.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 95,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53672.7,
+        28574.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 57,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53682.9,
+        28830.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 39,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52698.7,
+        32025.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 40,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53133,
+        31992.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 41,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51220.4,
+        29831.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 117,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51116.8,
+        29829.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 127,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52037.2,
+        31003.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 118,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        46500.6,
+        27642.6
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 77,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        46316.8,
+        27495.2
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 132,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49860,
+        30412.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 74,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49708.1,
+        30405.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 65,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45530,
+        31944.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 82,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45530.4,
+        31955.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 82,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45559.2,
+        32062.2
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 56,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45408.2,
+        31963.8
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 21,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45505.6,
+        32135.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 86,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45466,
+        32339.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 35,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        42351.4,
+        31448.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 43,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39095.3,
+        31297
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 36,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39095.3,
+        31297
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 38,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49707.9,
+        30404.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 65,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52902.3,
+        31893.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 62,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53133.1,
+        31993.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 41,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39095.3,
+        31297.3
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 36,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45408.6,
+        31963.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 21,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        45465.8,
+        32339.2
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 35,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        46316.9,
+        27494.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 132,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53682.4,
+        28831
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 39,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51116.6,
+        29829
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 127,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56526.3,
+        29124.5
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 95,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63925.1,
+        31397.6
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 9,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39214.1,
+        31731.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 80,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        41345.7,
+        31973.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 91,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        41171.8,
+        31591.9
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 64,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        40746.8,
+        32162.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 65,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        41279.8,
+        32829.7
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": -25,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39223.4,
+        33355
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 20,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39614.9,
+        30961.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 25,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39211,
+        31503.1
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 8,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        40140.6,
+        32037.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 41,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39723,
+        31039.4
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 63,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51935.3,
+        35508
+    ],
+    "node": "Iron",
+    "yields": [
+        "Iron Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+    "alt": 1,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_iron_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60317.7,
+        31527.3
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": -16,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63577.9,
+        32955.4
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 3,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63869.6,
+        32830.6
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 6,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63869.3,
+        32832.4
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 5,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57942.1,
+        28608.2
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 78,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57942.1,
+        28558.4
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 46,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57936.9,
+        28576.6
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 71,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57844.5,
+        28899.1
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 124,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57940.3,
+        28610
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 77,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59729.2,
+        27791.9
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 56,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57743.5,
+        28425.1
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 51,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52377.7,
+        29114.5
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 17,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52378.9,
+        29115.6
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 15,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50476.4,
+        31075.2
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 83,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50476.6,
+        31077
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 82,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50171.8,
+        30520.5
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 78,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50107.3,
+        30518.3
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 81,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50170.1,
+        30520.5
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 77,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39718,
+        30989.1
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 27,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        41751,
+        30880.9
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 91,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39716.9,
+        30987.1
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 26,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39718.4,
+        30989.5
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 27,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        40117.5,
+        32050
+    ],
+    "node": "Silver",
+    "yields": [
+        "Silver Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+    "alt": 15,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_silver_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60317.7,
+        31527.3
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": -16,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63577.9,
+        32955.4
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 3,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63869.6,
+        32830.6
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 6,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63869.3,
+        32832.4
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 5,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57942.1,
+        28608.2
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 78,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57942.1,
+        28558.4
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 46,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57936.9,
+        28576.6
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 71,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57844.5,
+        28899.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 124,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57940.3,
+        28610
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 77,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59729.2,
+        27791.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 56,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57743.5,
+        28425.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 51,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52377.7,
+        29114.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 17,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52378.9,
+        29115.6
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 15,
+    "map_id": 31,
+    "map_name": "Snowden Drifts",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50476.4,
+        31075.2
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 83,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50476.6,
+        31077
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 82,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50171.8,
+        30520.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 78,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50107.3,
+        30518.3
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 81,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50170.1,
+        30520.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 77,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39718,
+        30989.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 27,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        41751,
+        30880.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 91,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39716.9,
+        30987.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 26,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48034,
+        26420.3
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 64,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49299.9,
+        26293.8
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 185,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49302.4,
+        26294.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 186,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50679,
+        34366.8
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 60,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50677.6,
+        34364.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 59,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52834.7,
+        33463.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 118,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52834.7,
+        33463.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 118,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52590.4,
+        32666.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 93,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52588.8,
+        32666.4
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 92,
+    "map_id": 26,
+    "map_name": "Dredgehaunt Cliffs",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63893.7,
+        28666.2
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 49,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63908.2,
+        31879.1
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 1,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63638.9,
+        29418
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 51,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62115.9,
+        29467.2
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 71,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63895.5,
+        28667.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 48,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62084.2,
+        29977.2
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 39,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63926.3,
+        31424.9
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 79,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62547.8,
+        32540
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 24,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63741.1,
+        30156.6
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 29,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64419.3,
+        33731.4
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 18,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64419.5,
+        33730.3
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 18,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64419.5,
+        33730.3
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 20,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        39718.4,
+        30989.5
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 27,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        40117.5,
+        32050
+    ],
+    "node": "Gold",
+    "yields": [
+        "Gold Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+    "alt": 15,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_gold_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63869.3,
+        32832.4
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 5,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63925.4,
+        31397.8
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 9,
+    "map_id": 20,
+    "map_name": "Blazeridge Steppes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48223.7,
+        36350.9
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 106,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48227,
+        36424.6
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 105,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48717.8,
+        36260
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 21,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48508,
+        36105
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 39,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48391.7,
+        36644.8
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 51,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48391.6,
+        36644.9
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 51,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        48422.6,
+        36975.8
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 11,
+    "map_id": 53,
+    "map_name": "Sparkfly Fen",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53911.1,
+        39174.8
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 0,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53655.4,
+        38807.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 1,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50913.6,
+        38342.5
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 66,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50714.1,
+        38412.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 57,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53701.4,
+        38761.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": -41,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53702,
+        38761.6
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": -41,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        50714.3,
+        38412.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 57,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        49197.4,
+        34457.6
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 75,
+    "map_id": 73,
+    "map_name": "Bloodtide Coast",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52157.6,
+        35823.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 9,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51935.3,
+        35508
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 1,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        52078,
+        35438.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 5,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        51935.7,
+        35508.1
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 1,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53607.7,
+        34713.7
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 21,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60672.7,
+        26264.4
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 25,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61641.7,
+        26430.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 10,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61852,
+        25992.6
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 1,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60520.2,
+        26058.9
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 21,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60519.9,
+        26059.1
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 21,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61852.5,
+        25992.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 1,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61393.4,
+        29290.7
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": -27,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56828,
+        26179.4
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 82,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59606.7,
+        26163.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 27,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59626.6,
+        26173.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 39,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59702.5,
+        26233.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 44,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57445.8,
+        25729.1
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 60,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57445.8,
+        25729.1
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 62,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57446.1,
+        25729.3
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 60,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59702.4,
+        26233.2
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 44,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59820.3,
+        26454
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 29,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53912.5,
+        38587.7
+    ],
+    "node": "Platinum",
+    "yields": [
+        "Platinum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+    "alt": 25,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_platinum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57445.8,
+        25729.1
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 60,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53117.1,
+        38986.2
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -142,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59818.7,
+        25386.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 56,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58964.9,
+        25675.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 19,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59676.6,
+        25182.6
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 56,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59281.9,
+        25672.4
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 39,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59819.2,
+        25386.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 56,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54151.4,
+        24379.1
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 0,
+    "map_id": 1178,
+    "map_name": "Bitterfrost Frontier",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54396.3,
+        23958.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 36,
+    "map_id": 1178,
+    "map_name": "Bitterfrost Frontier",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54396.6,
+        23958.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 36,
+    "map_id": 1178,
+    "map_name": "Bitterfrost Frontier",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53946.2,
+        27294.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -12,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53882.8,
+        27559.4
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 45,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        55233.7,
+        25192
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 5,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        55287,
+        25316.6
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 2,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        55273,
+        25613.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 38,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        55295.7,
+        25597.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 40,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        55252.3,
+        25926.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -7,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54114.8,
+        27143
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -127,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54959.6,
+        25832.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -55,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54959.5,
+        25832
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -55,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54114.5,
+        27143.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -127,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44453.3,
+        40808.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 0,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        46903.9,
+        40401.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 0,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43807.1,
+        40316
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 9,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        47024.6,
+        39836.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 16,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43807.2,
+        40315.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 9,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        47024.9,
+        39835.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 16,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        46157.2,
+        40009.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -48,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43847,
+        43750.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 29,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43559.1,
+        43662.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -1,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43473.9,
+        43840.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -69,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44426,
+        45526.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -43,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        43474.5,
+        43839.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -69,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44426.2,
+        45525.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -43,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44582.1,
+        45452.4
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 18,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        37677.4,
+        30762.1
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 406,
+    "map_id": 1015,
+    "map_name": "The Silverwastes",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        47022.9,
+        39837.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 14,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65539.7,
+        54746.2
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 138,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65117.7,
+        54592.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 117,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65449.4,
+        54774.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 163,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68355.2,
+        54939.6
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 97,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68353.5,
+        54938.4
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 96,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65539.8,
+        54745.6
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 138,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        67381.8,
+        53795.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 142,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        67459.1,
+        52495.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -11,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        67459.4,
+        52495.9
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": -9,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60453.3,
+        50246.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 276,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61294.1,
+        49779.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 279,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58543.8,
+        50517
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 152,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61791.8,
+        46605.7
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 19,
+    "map_id": 1228,
+    "map_name": "Elon Riverlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58222.1,
+        40961.5
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 539,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58156.5,
+        41345.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 337,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58585.4,
+        41426
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 136,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        57968.2,
+        44595.3
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 31,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        58334.1,
+        42453.8
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 38,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61292.7,
+        49780.6
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 278,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        44426,
+        45526.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": -43,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68353.5,
+        54938.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 96,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        67459.4,
+        52495.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": -9,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53365.1,
+        56452.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 5,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53414.1,
+        56449.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 25,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53414.9,
+        56451.8
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 24,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53986.1,
+        56409.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 24,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54096.8,
+        56391.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 34,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        53558.7,
+        56394.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 32,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54086,
+        56267.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 72,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        54085.8,
+        56267
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 72,
+    "map_id": 1271,
+    "map_name": "Sandswept Isles",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56264.9,
+        62046.8
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 56,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56204.4,
+        62574.1
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 63,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        56204.4,
+        62574
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 63,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64761.5,
+        61447.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 19,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65176.9,
+        61237.1
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 53,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65176.9,
+        61237.1
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 55,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65258.3,
+        61246.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 128,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65256.7,
+        61230.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 122,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65262.6,
+        61254.6
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 130,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        65256.4,
+        61230.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 122,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64102.5,
+        60434.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": -402,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        63996.3,
+        60371.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": -303,
+    "map_id": 1288,
+    "map_name": "Domain of Kourna",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61588.3,
+        44180.8
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 20,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60994.3,
+        43021.8
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 116,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61015.3,
+        43012
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 136,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61015.3,
+        43012
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 137,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60981.1,
+        42919.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 223,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62024.9,
+        43797.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 79,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62024.9,
+        43797.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 80,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62125.2,
+        43829.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 106,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60981,
+        42919
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 223,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62125.8,
+        43829.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 106,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59524.6,
+        40469.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 244,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59552.8,
+        40710.6
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 229,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59606.3,
+        40969.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 298,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60672.5,
+        42145.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 163,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60084.5,
+        41976.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 140,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59727.2,
+        41963.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 174,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59496,
+        41873.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 181,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59609.3,
+        40962.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 298,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        59497,
+        41873.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 181,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60837.2,
+        45072.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 65,
+    "map_id": 1228,
+    "map_name": "Elon Riverlands",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60726.2,
+        48417.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 0,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61428,
+        51140.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 262,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61317,
+        50589.6
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 297,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60087.5,
+        48402.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 0,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        60879.4,
+        48423.3
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 5,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61685.4,
+        48432.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 22,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61775.7,
+        48396.8
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 53,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61776.2,
+        48396.7
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 53,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61281.7,
+        50679.2
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 351,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        61281.9,
+        50679.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 351,
+    "map_id": 1226,
+    "map_name": "The Desolation",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68386.8,
+        54979.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 154,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68403.9,
+        54754.9
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 150,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68359.2,
+        54671.5
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 174,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68421.2,
+        54559.4
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 157,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        64491.1,
+        55122.6
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 108,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68000.3,
+        52349
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 79,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68421.7,
+        54559.2
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 157,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68295.4,
+        55345
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 151,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        68412,
+        54577.1
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 161,
+    "map_id": 1248,
+    "map_name": "Domain of Vabbi",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        37156.2,
+        12066.6
+    ],
+    "node": "Orichalcum",
+    "yields": [
+        "Orichalcum Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+    "alt": 107,
+    "map_id": 1574,
+    "map_name": "Bava Nisos",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_orichalcum_ore",
+    "desc": ""
+},
+{
+    "pos": [
+        62092.9,
+        44011.7
+    ],
+    "node": "Quartz Crystal",
+    "yields": [
+        "Quartz Crystal"
+    ],
+    "icon": "https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png",
+    "alt": 188,
+    "map_id": 1210,
+    "map_name": "Crystal Oasis",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_quartz_crystal",
+    "desc": ""
+},
+{
+    "pos": [
+        37299.7,
+        33185
+    ],
+    "node": "Quartz Crystal",
+    "yields": [
+        "Quartz Crystal"
+    ],
+    "icon": "https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png",
+    "alt": 81,
+    "map_id": 988,
+    "map_name": "Dry Top",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_quartz_crystal",
+    "desc": ""
+},
+{
+    "pos": [
+        65222.8,
+        56756.9
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 152,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        64022.3,
+        57810.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 145,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        67013,
+        58310.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 172,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        64698.7,
+        56827.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 142,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        65444.6,
+        57753.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 180,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        64600.9,
+        58283.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 132,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        64436.1,
+        58766.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 133,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        65441.7,
+        59366
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 83,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        63467.7,
+        57334.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 135,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        67080.9,
+        58479.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 87,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        65919.3,
+        56697.9
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 140,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        57030.3,
+        34926.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 265,
+    "map_id": 1310,
+    "map_name": "Thunderhead Peaks",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        56420.4,
+        38483
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 68,
+    "map_id": 1310,
+    "map_name": "Thunderhead Peaks",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44921.7,
+        49646.9
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 279,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44184.1,
+        48797
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 224,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45503.1,
+        49414.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 24,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45138.3,
+        48563.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 1,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45070.3,
+        49441.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 283,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45306.7,
+        49222.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 196,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45424.6,
+        48531.6
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 6,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47321.8,
+        50072.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 363,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47222.5,
+        49524.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 365,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47181.5,
+        49904.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 289,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45623.2,
+        49106.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 241,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44908.7,
+        48667.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 179,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45023.1,
+        50044.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 246,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37156.5,
+        12066.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 105,
+    "map_id": 1574,
+    "map_name": "Bava Nisos",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37709.5,
+        12281.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 151,
+    "map_id": 1574,
+    "map_name": "Bava Nisos",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37023.3,
+        12001.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 105,
+    "map_id": 1574,
+    "map_name": "Bava Nisos",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37828.6,
+        12177
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 135,
+    "map_id": 1574,
+    "map_name": "Bava Nisos",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37585.4,
+        102115.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 130,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        38304.1,
+        101673.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 209,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37614.1,
+        101985.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 125,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        38382.9,
+        101616
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 209,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        38361.1,
+        101648.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 206,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37647,
+        102077.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 117,
+    "map_id": 1490,
+    "map_name": "Gyala Delve",
+    "expac": "eod",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        50365.5,
+        19924.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 27,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        50261.7,
+        21496.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 234,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        50659.4,
+        20048.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 52,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        50694.1,
+        21713.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 179,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        51087.9,
+        18944.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 220,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        62211.9,
+        19398.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 42,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        60499.4,
+        19849
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 2,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        61062.9,
+        18048
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 140,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        61727.2,
+        18906.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": -6,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        60779,
+        17594.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 0,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        62429.4,
+        19208.6
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 6,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        62292.5,
+        18534.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 19,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        60538.6,
+        19925
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 25,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        60194.1,
+        18063.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 72,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        60036.9,
+        18724.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 51,
+    "map_id": 1330,
+    "map_name": "Grothmar Valley",
+    "expac": "ibs",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        36477.7,
+        37026.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 135,
+    "map_id": 1041,
+    "map_name": "Dragon's Stand",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35209.8,
+        37429.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 119,
+    "map_id": 1041,
+    "map_name": "Dragon's Stand",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37020,
+        34902.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 74,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37730,
+        34916.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 22,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37231.1,
+        34898
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 18,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        36196.5,
+        35341.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 80,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35833.8,
+        35691.2
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 280,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        36216.5,
+        35504.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 86,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        37891.8,
+        34384.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 172,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        33835.8,
+        33949.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 335,
+    "map_id": 1043,
+    "map_name": "Auric Basin",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        34213.1,
+        32187.9
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 545,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35863.5,
+        31348.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 387,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35360.7,
+        32045.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 595,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35977.9,
+        31467.6
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 426,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        36483.1,
+        32124.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 421,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35568.5,
+        31513
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 166,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        34873.5,
+        31740.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 344,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        35923.2,
+        31790.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 12,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44921.7,
+        49646.9
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 279,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44184.1,
+        48797
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 224,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45503.1,
+        49414.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 24,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45138.3,
+        48563.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 1,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45070.3,
+        49441.1
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 283,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45306.7,
+        49222.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 196,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45424.6,
+        48531.6
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 6,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47321.8,
+        50072.8
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 363,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47222.5,
+        49524.7
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 365,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        47181.5,
+        49904.4
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 289,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45623.2,
+        49106.5
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 241,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        44908.7,
+        48667.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 179,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+},
+{
+    "pos": [
+        45023.1,
+        50044.3
+    ],
+    "node": "Rich Ore Vein",
+    "yields": [
+        "Rich Ore Vein"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+    "alt": 246,
+    "map_id": 1317,
+    "map_name": "Dragonfall",
+    "expac": "pof",
+    "category": "ore",
+    "layer": "node_rich_ore_vein",
+    "desc": ""
+}
+]
