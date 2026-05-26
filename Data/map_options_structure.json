@@ -1,0 +1,1231 @@
+[
+  {
+    "sectionId": "map-options",
+    "sectionTitle": "Map Options",
+    "categories": [
+      {
+        "categoryId": "mapicons",
+        "categoryTitle": "Map Icons",
+        "items": [
+          {
+            "id": "poi",
+            "label": "Points of Interest",
+            "tooltip": "Show or hide Points of Interest locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/poi_discovered.png"
+          },
+          {
+            "id": "waypoint",
+            "label": "Waypoints",
+            "tooltip": "Show or hide Waypoint locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/waypoint_discovered.png"
+          },
+          {
+            "id": "vista",
+            "label": "Vistas",
+            "tooltip": "Show or hide Vista locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/vista_discovered.png"
+          },
+          {
+            "id": "heart",
+            "label": "Renown Hearts",
+            "tooltip": "Show or hide Renown Heart locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/heart_discovered.png"
+          },
+          {
+            "id": "heropoint",
+            "label": "Hero Points",
+            "tooltip": "Show or hide Hero Point locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/heropoint_discovered.png"
+          },
+          {
+            "id": "mastery",
+            "label": "Mastery Insights",
+            "tooltip": "Show or hide Mastery Insight locations.",
+            "defaultOn": true,
+            "icon": "https://gw2ps.local/Assets/Icons/mi_locked.png"
+          },
+          {
+            "id": "node_zone_portal",
+            "label": "Zone Portals",
+            "tooltip": "Show or hide Zone Portal locations.",
+            "defaultOn": true,
+            "icon": "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png"
+          },
+          {
+            "id": "personal_markers",
+            "label": "Personal Markers",
+            "tooltip": "Show or hide Personal Markers.",
+            "defaultOn": true,
+            "icon": "https://wiki.guildwars2.com/images/9/9e/Personal_waypoint_blue_%28map_icon%29.png"
+          }
+        ]
+      },
+      {
+        "categoryId": "maplabels",
+        "categoryTitle": "Map Labels",
+        "items": [
+          {
+            "id": "region",
+            "label": "Region Names",
+            "tooltip": "Show or hide Region Name labels.",
+            "defaultOn": true,
+            "icon": "https://wiki.guildwars2.com/images/f/fa/Guild_registrar.png"
+          },
+          {
+            "id": "map_text",
+            "label": "Map Names",
+            "tooltip": "Show or hide Map Name labels.",
+            "defaultOn": true,
+            "icon": "https://wiki.guildwars2.com/images/f/fa/Guild_registrar.png"
+          },
+          {
+            "id": "sector",
+            "label": "Sector Names",
+            "tooltip": "Show or hide Sector Name labels.",
+            "defaultOn": true,
+            "icon": "https://wiki.guildwars2.com/images/f/fa/Guild_registrar.png"
+          },
+          {
+            "id": "map_borders",
+            "label": "Sector Borders",
+            "tooltip": "Show or hide Sector Borders and select a border color.",
+            "defaultOn": true,
+            "hasColorPicker": true,
+            "icon": "https://wiki.guildwars2.com/images/1/1c/Event_Mark.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "farming_nodes",
+    "sectionTitle": "Gathering Nodes",
+    "categories": [
+      {
+        "categoryId": "ore",
+        "categoryTitle": "Ore",
+        "items": [
+          {
+            "id": "node_gold_ore",
+            "label": "Gold",
+            "icon": "https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_silver_ore",
+            "label": "Silver",
+            "icon": "https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_iron_ore",
+            "label": "Iron",
+            "icon": "https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_copper_ore",
+            "label": "Copper",
+            "icon": "https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_platinum_ore",
+            "label": "Platinum",
+            "icon": "https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_mithril_ore",
+            "label": "Mithril",
+            "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_orichalcum_ore",
+            "label": "Orichalcum",
+            "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_quartz_crystal",
+            "label": "Quartz Crystal",
+            "icon": "https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_rich_ore_vein",
+            "label": "Rich Uncategorized Veins",
+            "icon": "https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          }
+        ]
+      },
+      {
+        "categoryId": "wood",
+        "categoryTitle": "Wood",
+        "items": [
+          {
+            "id": "node_soft_wood",
+            "label": "Soft Wood",
+            "icon": "https://render.guildwars2.com/file/AB6C5501209B91D9B890B1F84B29BC0142CB59D8/65943.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_seasoned_wood",
+            "label": "Seasoned Wood",
+            "icon": "https://render.guildwars2.com/file/66BEAC3E5D0EDA160AA4A7942D0C46C27DC0E7AA/65944.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_hard_wood",
+            "label": "Hard Wood",
+            "icon": "https://render.guildwars2.com/file/576ED6A37FA1130DDD230D5D0E0D80484E25260C/220466.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_elder_wood",
+            "label": "Elder Wood",
+            "icon": "https://render.guildwars2.com/file/205871B734054D0206986FB44D6DC5425E572B0B/220465.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_ancient_wood",
+            "label": "Ancient Wood",
+            "icon": "https://render.guildwars2.com/file/5C999770AB7CC1F85D270A50C205673DF8B6E104/220467.png",
+            "hasColorPicker": true
+          }
+        ]
+      },
+      {
+        "categoryId": "plants",
+        "categoryTitle": "Plants",
+        "items": [
+          {
+            "id": "node_lettuce_plants",
+            "label": "Lettuce",
+            "icon": "https://render.guildwars2.com/file/F370E14DE5C1FACE91D19F19FD65CD19C5F74F75/63317.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_onion_plants",
+            "label": "Onions",
+            "icon": "https://render.guildwars2.com/file/62FEA707A3547EA74113C29A110B40B23501B75C/63115.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_potato_plants",
+            "label": "Potato",
+            "icon": "https://render.guildwars2.com/file/24CE9454113F0609E6E9B655EF0670B40D5522EC/63245.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_clam_plants",
+            "label": "Clam",
+            "icon": "https://render.guildwars2.com/file/6C2143352D3E0B4B45A3E01CE2FAFAB8D0D77C51/63364.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_strawberry_plants",
+            "label": "Strawberry Patch",
+            "icon": "https://render.guildwars2.com/file/FA03EA4891609320A6CE08069EABE7F65465EC09/63330.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_coral_plants",
+            "label": "Coral",
+            "icon": "https://render.guildwars2.com/file/E3EE022F17127B45FDFC266BDAD05033359BF9E2/221175.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_seaweed_plants",
+            "label": "Seaweed",
+            "icon": "https://render.guildwars2.com/file/35C6906CCA6A0541383D5AE31E656456DC3418E5/63385.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_sugar_pumpkin_plants",
+            "label": "Sugar Pumpkin",
+            "icon": "https://render.guildwars2.com/file/6ED9FE4CB6DCDA7F542718507DC33305FDD9A62C/63386.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_artichoke_plants",
+            "label": "Artichoke",
+            "icon": "https://render.guildwars2.com/file/3FF00D3CF70B4AB4E117040F541D384302E7D93E/219472.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_asparagus_plants",
+            "label": "Asparagus",
+            "icon": "https://render.guildwars2.com/file/693F7207FB74B962DE327E355C18D680E0357965/219467.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_passiflora_plants",
+            "label": "Blooming Passiflora",
+            "icon": "https://render.guildwars2.com/file/A3EF78BAC765FCBFBA41FE95A17839A3AA3AEDC8/511906.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_toxic_seedling_plants",
+            "label": "Toxic Seedlings",
+            "icon": "https://render.guildwars2.com/file/78B90364F0FA4806E6600DD260BE2EBC51D1431D/665773.png",
+            "hasColorPicker": true,
+            "tooltip": "One node in a patch will yield a Pristine Toxic Spore Sample."
+          },
+          {
+            "id": "node_black_crocus_plants",
+            "label": "Black Crocus",
+            "icon": "https://render.guildwars2.com/file/FE1C9BB06AF7E83EDCBD655B030EB8EC00CBD350/219491.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_flax_plants",
+            "label": "Flax",
+            "icon": "https://render.guildwars2.com/file/481BDB30B60B08E759CCEF3FF10C9441D49BBB76/1203081.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_mussels_plants",
+            "label": "Mussels",
+            "icon": "https://render.guildwars2.com/file/C8E60C9C5013DD03AA152A634615C5B1DF610E39/223191.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_omnomberry_plants",
+            "label": "Omnomberries",
+            "icon": "https://render.guildwars2.com/file/9C5457B024D9152906D808A53BFF67539BB94FA0/219396.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_orrian_truffle_plants",
+            "label": "Orrian Truffle",
+            "icon": "https://render.guildwars2.com/file/0AF0FD06192106D5D9C73A35A3E364CE6B4A1FC0/219489.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_sawgill_mushroom_plants",
+            "label": "Sawgill Mushrooms",
+            "icon": "https://render.guildwars2.com/file/AAFF3F76320FCB0177550F2D6CBA22334D935AF1/1203082.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_jungle_plants_plants",
+            "label": "Jungle Plants",
+            "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_verdant_herbs_plants",
+            "label": "Verdant Herbs",
+            "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_desert_herbs_plants",
+            "label": "Desert Herbs",
+            "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_mixed_herbs_plants",
+            "label": "Mixed Herbs",
+            "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_mixed_vegetables_plants",
+            "label": "Mixed Vegetables",
+            "icon": "https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png",
+            "hasColorPicker": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "miscellaneous",
+    "sectionTitle": "Miscellaneous",
+    "categories": [
+      {
+        "categoryId": "hunting",
+        "categoryTitle": "Hunting",
+        "items": [
+          {
+            "id": "node_world_boss",
+            "label": "World Bosses",
+            "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png",
+            "tooltip": "A green circle will indicate the currently active World Boss."
+          },
+          {
+            "id": "node_mist_rift",
+            "label": "Mist Rifts",
+            "icon": "https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png",
+            "tooltip": "The markers are possible spawn locations across Tyria.",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_bounty",
+            "label": "Bounties",
+            "icon": "https://wiki.guildwars2.com/images/6/6c/Bounty_Target_yellow_%28map_icon%29.png",
+            "tooltip": "Pick up a bounty at the bounty-board first before they show up in your game.",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_ranger_pet",
+            "label": "Ranger Pets",
+            "icon": "https://wiki.guildwars2.com/images/1/1e/Ranger_icon_small.png",
+            "tooltip": "Individual pets can be searched in the Search menu.",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_fishing_hole",
+            "label": "Fishing Holes",
+            "icon": "https://wiki.guildwars2.com/images/f/f3/Fish_resource_%28map_icon%29.png",
+            "tooltip": "The markers are possible spawn locations across Tyria.",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_treasure_mushroom",
+            "label": "Treasure Mushroom",
+            "icon": "https://render.guildwars2.com/file/E79141BDA89AE40E9D106DB41B2AF8EAFDA62ACE/1203248.png",
+            "tooltip": "The markers are possible spawn locations.",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_matrix_cube_key",
+            "label": "Matrix Cube Key",
+            "icon": "https://render.guildwars2.com/file/EFA4911B016A0D78A9A820B656635A71286C0207/65723.png",
+            "tooltip": "The markers are possible spawn locations in the Thaumanova Reactor in Metrica Province.",
+            "hasColorPicker": true
+          }
+        ]
+      },
+      {
+        "categoryId": "trading",
+        "categoryTitle": "Vendors & NPCs",
+        "items": [],
+        "subcategories": [
+          {
+            "subcategoryId": "vendors",
+            "subcategoryTitle": "Vendors & NPCs",
+            "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+            "items": [
+              {
+                "id": "node_pact_supply_network_agent",
+                "label": "Pact Supply Agents",
+                "icon": "https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png",
+                "tooltip": "Toggles visibility of Pact Supply Agents (shows their active daily spawn spots in Tyria)",
+                "customAction": "copyPSNA",
+                "hasColorPicker": false
+              },
+              {
+                "id": "node_historian_elisa",
+                "label": "Priory Historian Elisa",
+                "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+                "tooltip": "Toggles visibility of Priory Historian Elisa (shows her active weekly spawn spot in the Crustal Desert)",
+                "hasColorPicker": false
+              },
+              {
+                "id": "node_npc_merchant",
+                "label": "Merchants",
+                "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+                "hasColorPicker": true,
+                "tooltip": "Regular merchants. Click the icon on the map to see what they sell."
+              },
+              {
+                "id": "node_npc_dungeon_merchant",
+                "label": "Dungeon Merchants",
+                "icon": "https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_event_merchant",
+                "label": "Event Merchants",
+                "icon": "https://wiki.guildwars2.com/images/1/19/Merchant.png",
+                "tooltip": "Event Merchant's  availability is based on local events.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_karma_merchant",
+                "label": "Karma Merchant",
+                "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_fishmonger",
+                "label": "Fishing Supplies",
+                "icon": "https://wiki.guildwars2.com/images/9/90/Fishing_tournament.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_festival_merchant",
+                "label": "Festival Merchant",
+                "icon": "https://wiki.guildwars2.com/images/9/9c/Festival_Vendor_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_gathering_merchant",
+                "label": "Gathering Merchants",
+                "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_laurel_merchant",
+                "label": "Laurel Merchants",
+                "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_guild_commendation",
+                "label": "Guild Commendation Traders",
+                "icon": "https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_bank",
+                "label": "Account Vault (Bank)",
+                "icon": "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_guild_vault",
+                "label": "Guild Vault",
+                "icon": "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_trading_post",
+                "label": "Trading Post",
+                "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_reinforce_armor",
+                "label": "Reinforce Armor",
+                "icon": "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_activity",
+                "label": "Activity",
+                "icon": "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Show or hide Activity locations."
+              },
+              {
+                "id": "node_npc_adventure",
+                "label": "Adventures",
+                "icon": "https://wiki.guildwars2.com/images/1/13/Adventure_%28map_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Show or hide Adventure locations."
+              },
+              {
+                "id": "node_npc_speed",
+                "label": "Speed Boons",
+                "icon": "https://wiki.guildwars2.com/images/4/43/Speed_boons.png",
+                "hasColorPicker": true,
+                "tooltip": "Show or hide Speed Boons locations."
+              },
+              {
+                "id": "node_npc_scout",
+                "label": "Scout",
+                "icon": "https://wiki.guildwars2.com/images/6/69/Scout.png",
+                "hasColorPicker": true,
+                "tooltip": "Get information for your location."
+              },
+              {
+                "id": "node_npc_race",
+                "label": "Race Organizer",
+                "icon": "https://wiki.guildwars2.com/images/a/a7/Event_dialogue_%28overhead_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Show or hide Race Organizer locations."
+              },
+              {
+                "id": "node_npc_mount_rental",
+                "label": "Mount Rental",
+                "icon": "https://wiki.guildwars2.com/images/c/cf/Raptor_%28map_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Show or hide Mount Rental locations."
+              },
+              {
+                "id": "node_npc_misc",
+                "label": "Miscellaneous NPC's",
+                "icon": "https://wiki.guildwars2.com/images/8/83/Three_dots_%28overhead_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Miscellaneous NPC's"
+              }
+            ]
+          },
+          {
+            "subcategoryId": "crafting_vendors",
+            "subcategoryTitle": "Crafting Vendors",
+            "icon": "https://wiki.guildwars2.com/images/c/cf/Crafting_icon.png",
+            "items": [
+              {
+                "id": "node_npc_armorsmith",
+                "label": "Armorsmith",
+                "icon": "https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_artificer",
+                "label": "Artificer",
+                "icon": "https://wiki.guildwars2.com/images/7/73/Artificing_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_chef",
+                "label": "Chef",
+                "icon": "https://wiki.guildwars2.com/images/c/c4/Cooking_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_huntsman",
+                "label": "Huntsman",
+                "icon": "https://wiki.guildwars2.com/images/1/1d/Huntsman%27s_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_jeweler",
+                "label": "Jeweler",
+                "icon": "https://wiki.guildwars2.com/images/b/b2/Jeweling_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_leatherworker",
+                "label": "Leatherworker",
+                "icon": "https://wiki.guildwars2.com/images/d/db/Leatherworking_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_tailor",
+                "label": "Tailor",
+                "icon": "https://wiki.guildwars2.com/images/1/12/Tailoring_Station_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_weaponsmith",
+                "label": "Weaponsmith",
+                "icon": "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
+                "hasColorPicker": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "categoryId": "chests_and_achievements",
+        "categoryTitle": "Chests & Achievements",
+        "items": [],
+        "subcategories": [
+          {
+            "subcategoryId": "core_tyria",
+            "subcategoryTitle": "Core Tyria",
+            "icon": "https://wiki.guildwars2.com/images/5/56/User_Fey_Zeal_Gw2wlogo.png",
+            "items": [
+              {
+                "id": "node_sunken_chest_chests",
+                "label": "Sunken Chests",
+                "icon": "https://render.guildwars2.com/file/B5C303B0DDD7925DEC9DE039AF50C1570D9A17BF/1983548.png",
+                "hasColorPicker": true,
+                "tooltip": "Can be found underwater. They can be opened with an Ornate Rusted Key"
+              },
+              {
+                "id": "node_silverwastes_chests",
+                "label": "Silverwastes - Lost Bandit Chests",
+                "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+                "tooltip": "You need a Shovel to dig these up. Can be opened by using a Bandit Key",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_silverwastes_lost_badges_achievement",
+                "label": "Silverwastes - Lost Badges",
+                "icon": "https://wiki.guildwars2.com/images/a/a8/The_Silverwastes.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_silverwastes_golden_lost_badges_achievement",
+                "label": "Silverwastes - Golden Lost Badges",
+                "icon": "https://wiki.guildwars2.com/images/a/a8/The_Silverwastes.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_dry_top_buried_locked_chest_chests",
+                "label": "Dry Top - Buried Locked Chests",
+                "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "become visible during sandstorms. Can be opened by using a Zephyrite Lockpick"
+              },
+              {
+                "id": "node_dry_top_coin_collector_achievement",
+                "label": "Dry Top - Coin Collector",
+                "icon": "https://wiki.guildwars2.com/images/d/d6/Dry_Top.png",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "heart_of_thorns",
+            "subcategoryTitle": "Heart of Thorns",
+            "icon": "https://wiki.guildwars2.com/images/b/b4/HoT_icon_small.png",
+            "items": [
+              {
+                "id": "node_airship_cargo",
+                "label": "Verdant Brink - Airship Cargo",
+                "icon": "https://wiki.guildwars2.com/images/1/14/Airship_Part.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_exalted_chest",
+                "label": "Auric Basin - Exalted Chests",
+                "icon": "https://wiki.guildwars2.com/images/1/14/Lump_of_Aurillium.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_auric_basin_no_mask_left_behind_achievement",
+                "label": "Auric Basin - No Mask Left Behind",
+                "icon": "https://wiki.guildwars2.com/images/9/9a/Uplifted.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_crystallized_supply_cache",
+                "label": "Tangled Depths - Crystallized Supply Caches",
+                "icon": "https://wiki.guildwars2.com/images/b/b4/Ley_Line_Crystal.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_noxious_seed_pod",
+                "label": "Dragon Stand - Noxious Seed Pods",
+                "icon": "https://wiki.guildwars2.com/images/6/61/Heirloom_Seed_Pouch.png",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "living_world_season_3",
+            "subcategoryTitle": "Living World Season 3",
+            "icon": "https://wiki.guildwars2.com/images/thumb/c/ca/Living_World_Season_3_logo.png/1280px-Living_World_Season_3_logo.png",
+            "items": [
+              {
+                "id": "node_bloodstone_crystal",
+                "label": "Bloodstone Fen - Bloodstone Crystals",
+                "icon": "https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png",
+                "tooltip": "The markers are possible spawn locations in Bloodstone Fen. Will yield Blood Ruby.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_petrified_stump",
+                "label": "Ember Bay - Petrified Stump",
+                "icon": "https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png",
+                "tooltip": "The markers are possible spawn locations in Ember Bay.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_skritt_stash",
+                "label": "Ember Bay - Skritt Stashes",
+                "icon": "https://render.guildwars2.com/file/B8100541BD56F4D5EBDC3AF96925CA494CC54760/1493437.png",
+                "tooltip": "They can be scavenged using a Skritt Worker Contract",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_ember_bay_token_collector_achievement",
+                "label": "Ember Bay - Token Collector",
+                "icon": "https://wiki.guildwars2.com/images/4/4a/Rising_Flames.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_winterberry_bush",
+                "label": "Bitterfrost Frontier - Winterberry Bush",
+                "icon": "https://wiki.guildwars2.com/images/6/68/Winterberry_Bush.png",
+                "tooltip": "The markers are possible spawn locations in Bitterfrost Frontier.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_bitterfrost_frontier_icebound_chest_chests",
+                "label": "Bitterfrost Frontier - Icebound Chest",
+                "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+                "tooltip": "Chests that spawn after successful 'Beacons of Koda' meta event, requires using Koda's Flame.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_jade_fragment",
+                "label": "Lake Doric - Jade Fragments",
+                "icon": "https://wiki.guildwars2.com/images/6/6a/Jade_Fragments.png",
+                "tooltip": "The markers are possible spawn locations in Lake Dorric.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_primordal_orchid",
+                "label": "Draconic Mons - Primordial Orchid",
+                "icon": "https://wiki.guildwars2.com/images/c/c2/Primordial_Orchid.png",
+                "tooltip": "The markers are possible spawn locations in Draconic Mons.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_draconis_mons_rock_collector_achievement",
+                "label": "Draconic Mons - Rock Collector",
+                "icon": "https://wiki.guildwars2.com/images/b/ba/Awakened_alarmed_%28Forearmed_Is_Forewarned_map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lessons_learned_achievement",
+                "label": "Draconic Mons - Lessons Learned",
+                "icon": "https://render.guildwars2.com/file/00A1C1286ECDA5A467136BBBA09ED4DA71C9E65F/1676685.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_orrian_oyster",
+                "label": "Siren's Landing - Orrian Oyster",
+                "icon": "https://wiki.guildwars2.com/images/d/d1/Orrian_Oyster.png",
+                "tooltip": "The markers are possible spawn locations in Siren's Landing.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_sirens_landing_storyteller_achievement",
+                "label": "Siren's Landing - Story Teller",
+                "icon": "https://wiki.guildwars2.com/images/8/87/Guide_to_Waterproofing.png",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "path_of_fire",
+            "subcategoryTitle": "Path of Fire",
+            "icon": "https://wiki.guildwars2.com/images/6/62/PoF_icon_small.png",
+            "items": [
+              {
+                "id": "node_crystal_desert_trade_cache_chests",
+                "label": "Trade Caches",
+                "icon": "https://render.guildwars2.com/file/7CD20D4B072AD23F97202F05E4130CF8A4B069C5/69116.png",
+                "tooltip": "Toggles visibility of Trade Caches.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_crystal_desert_sand_pile_chests",
+                "label": "Sand Piles",
+                "icon": "https://render.guildwars2.com/file/497B6B6311E0B8D900CE59E063E1E296A6FE9E57/1766467.png",
+                "tooltip": "Toggles visibility of Sand Piles.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_bleached_bones_achievement",
+                "label": "Crystal Oasis - Bleached Bones",
+                "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lost_dwarven_chest_achievement",
+                "label": "Desert Highlands - Dwarven Remnants",
+                "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_forgotten_debris_achievement",
+                "label": "Elon Riverlands - Forgotten Debris",
+                "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_shadows_provisions_achievement",
+                "label": "The Desolation - Shadows Provisions",
+                "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_timeworn_bust_achievement",
+                "label": "Domain of Vabbi - Scourge Buster",
+                "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_praise_joko_achievement",
+                "label": "Domain of Vabbi - Praise Joko!",
+                "icon": "https://wiki.guildwars2.com/images/b/b8/Domain_of_Vabbi.png",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "living_world_season_4",
+            "subcategoryTitle": "Living World Season 4",
+            "icon": "https://wiki.guildwars2.com/images/a/a1/Living_World_Season_4_logo.png",
+            "items": [
+              {
+                "id": "node_difluorite_crystal",
+                "label": "Sandswept Isles - Difluorite Crystals",
+                "icon": "https://wiki.guildwars2.com/images/c/c7/Difluorite_Crystals.png",
+                "hasColorPicker": true,
+                "tooltip": "The markers are possible spawn locations in Sandswept Isles."
+              },
+              {
+                "id": "node_mistonium",
+                "label": "Jahai Bluffs - Mistonium",
+                "icon": "https://wiki.guildwars2.com/images/8/89/Mistonium.png",
+                "hasColorPicker": true,
+                "tooltip": "The markers are possible spawn locations in Jahai Bluffs."
+              },
+              {
+                "id": "node_kournan_supply_cache",
+                "label": "Domain of Kourna - Kournan Supply Cache",
+                "icon": "https://wiki.guildwars2.com/images/6/69/Kournan_Supply_Cache.png",
+                "hasColorPicker": true,
+                "tooltip": "The markers are possible spawn locations in Domain of Kourna."
+              },
+              {
+                "id": "node_dragon_crystal_node",
+                "label": "Thunderhead Peaks - Dragon Crystal Node",
+                "icon": "https://wiki.guildwars2.com/images/3/32/Dragon_Crystal_Node.png",
+                "hasColorPicker": true,
+                "tooltip": "The markers are possible spawn locations in Thunderhead Peaks."
+              },
+              {
+                "id": "node_mistborn_mote",
+                "label": "Dragonfall - Mistborn Mote",
+                "icon": "https://wiki.guildwars2.com/images/f/f6/Mistborn_Mote_%28node%29.png",
+                "hasColorPicker": true,
+                "tooltip": "The markers are possible spawn locations in Dragonfall."
+              },
+              {
+                "id": "node_domain_of_istan_lost_to_time_achievement",
+                "label": "Domain of Istan - Lost to Time",
+                "icon": "https://wiki.guildwars2.com/images/7/77/Daybreak.png",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "the_icebrood_saga",
+            "subcategoryTitle": "The Icebrood Saga",
+            "icon": "https://wiki.guildwars2.com/images/1/19/Living_World_Season_5_logo.png",
+            "items": [
+              {
+                "id": "node_eternal_ice",
+                "label": "Bjora Marches - Eternal Ice",
+                "icon": "https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png",
+                "tooltip": "The markers are possible spawn locations in Bjora Marches.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_bjora_marches_treasure_hunter_achievement",
+                "label": "Bjora Marches - Bjora Marches Treasure Hunter",
+                "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_salvage_pile",
+                "label": "Drizzlewood Coast - Salvage Pile",
+                "icon": "https://wiki.guildwars2.com/images/f/f3/Salvage_Pile.png",
+                "tooltip": "The markers are possible spawn locations in Drizzlewood Coast.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lost_charr_supply_drop",
+                "label": "Drizzlewood Coast - Lost Charr Supply Drop",
+                "icon": "https://render.guildwars2.com/file/3EE14808378010C1725CE19EB199FDC10E755DEF/2292739.png",
+                "tooltip": "The markers are possible spawn locations in Drizzlewood Coast.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_hatched_chili_pepper_bush",
+                "label": "Grothmar Valley - Hatched Chili Pepper Bush",
+                "icon": "https://wiki.guildwars2.com/images/8/81/Hatched_Chili_Pepper_Bush.png",
+                "tooltip": "The markers are possible spawn locations in Grothmar Valley.",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "end_of_dragons",
+            "subcategoryTitle": "End of Dragons",
+            "icon": "https://wiki.guildwars2.com/images/3/36/EoD_icon_small.png",
+            "items": [
+              {
+                "id": "node_illuminating_seitung_province_achievement",
+                "label": "Seitung Province - Illuminating Seitung Province",
+                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Illuminating Seitung Province' achievement."
+              },
+              {
+                "id": "node_spiritual_childcare_achievement",
+                "label": "Seitung Province - Spiritual Childcare",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_light_these_streets_achievement",
+                "label": "New Kaineng City - Light These Streets",
+                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Light These Streets' achievement."
+              },
+              {
+                "id": "node_little_foxes_in_the_big_city_achievement",
+                "label": "New Kaineng City - Little Foxes in the Big City",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_petrified_echovald_sapling",
+                "label": "The Echovald Wilds - Petrified Echovald Sapling",
+                "icon": "https://render.guildwars2.com/file/F006736696D976F6D3B3C71AF811907D05949393/2595188.png",
+                "tooltip": "The markers are possible spawn locations in The Echovald Wilds.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lighting_the_echovald_wilds_achievement",
+                "label": "The Echovald Wilds - Lighting The Echovald Wilds",
+                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Lighting The Echovald Wilds' achievement."
+              },
+              {
+                "id": "node_what_did_the_shrine_guardian_say_achievement",
+                "label": "The Echovald Wilds - What Did the Shrine Guardians Say?",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_dragons_end_jadeite_vein",
+                "label": "Dragon's End - Jadeite Vein",
+                "icon": "https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png",
+                "tooltip": "The markers are possible spawn locations in Dragon's End.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lighting_dragons_end_achievement",
+                "label": "Dragon's End - Lighting Dragon's End",
+                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the ' Lighting Dragon's End' achievement."
+              },
+              {
+                "id": "node_dead_play_achievement",
+                "label": "Dragon's End - Dead Play",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_gyala_delve_jadeite_vein",
+                "label": "Gyala Delve - Jadeite Vein",
+                "icon": "https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_playing_with_the_infants_achievement",
+                "label": "Gyala Delve - Play with the Infants",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "secrets_of_the_obscure",
+            "subcategoryTitle": "Secrets of the Obscure",
+            "icon": "https://wiki.guildwars2.com/images/e/ea/SotO_icon_small.png",
+            "items": [
+              {
+                "id": "node_lesser_arcane_chest_chests",
+                "label": "Lesser Arcane Chests",
+                "icon": "https://wiki.guildwars2.com/images/8/8d/Ancient_Coin.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_greater_arcane_chest_chests",
+                "label": "Greater Arcane Chests",
+                "icon": "https://gw2ps.local/Assets/Icons/greater_arcane_chest.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_illuminating_skywatch_archipelago_achievement",
+                "label": "Skywatch Archipelago - Illuminating Skywatch Archipelago",
+                "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Illuminating Skywatch Archipelago' achievement"
+              },
+              {
+                "id": "node_rise_and_shrine_achievement",
+                "label": "Skywatch Archipelago - Rise and Shrine",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "hasColorPicker": true,
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression."
+              },
+              {
+                "id": "node_illuminating_amnytas_achievement",
+                "label": "Amnytas - Illuminating Amnytas",
+                "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Illuminating Amnytas' achievement"
+              },
+              {
+                "id": "node_fantastic_flying_foxes_achievement",
+                "label": "Amnytas - Fantastic Flying Foxes",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_illuminating_inner_nayos_achievement",
+                "label": "Inner Nayos - Illuminating Inner Nayos",
+                "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
+                "hasColorPicker": true,
+                "tooltip": "Light the lantern for progression towards the 'Illuminating Inner Nayos' achievement"
+              },
+              {
+                "id": "node_shrine_finder_achievement",
+                "label": "Inner Nayos - Shrine Finder",
+                "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
+                "tooltip": "Find the Shrine Guardian chest for achievement progression",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "janthir_wilds",
+            "subcategoryTitle": "Janthir Wilds",
+            "icon": "https://wiki.guildwars2.com/images/a/a4/JW_icon_small.png",
+            "items": [
+              {
+                "id": "node_honey_flower",
+                "label": "Lowland Shore - Honey Flower",
+                "icon": "https://wiki.guildwars2.com/images/d/da/Honey_Flower_%28node%29.png",
+                "tooltip": "The markers are possible spawn locations in Lowland Shore.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_lowland_pine_sapling",
+                "label": "Lowland Shore - Lowland Pine Sapling",
+                "icon": "https://wiki.guildwars2.com/images/8/87/Lowland_Pine_Sapling.png",
+                "tooltip": "The markers are possible spawn locations in Lowland Shore.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_titan_ore",
+                "label": "Janthir Syntri - Rotted Amber / Charged Titan Ore",
+                "icon": "https://wiki.guildwars2.com/images/a/ac/Charged_Titan_Ore_%28node%29.png",
+                "tooltip": "The markers are possible spawn locations of Rotted Titan Amber and Charged Titan Ore in Janthir Syntri.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_mursaat_obsidian",
+                "label": "Mistburned Barrens & Bava Nisos - Mursaat Obsidian",
+                "icon": "https://wiki.guildwars2.com/images/9/9c/Mursaat_Obsidian.png",
+                "tooltip": "The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_titan_heatstone",
+                "label": "Mistburned Barrens & Bava Nisos - Titan Heatstone",
+                "icon": "https://wiki.guildwars2.com/images/7/7f/Titan_Heatstone_Cluster.png",
+                "tooltip": "The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_minor_detected_treasure",
+                "label": "Detected Treasure",
+                "icon": "https://wiki.guildwars2.com/images/d/d4/Detected_Treasure.png",
+                "tooltip": "Use your Warclaw's 'Sniff' skill to find these",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_major_detected_treasure",
+                "label": "Major Detected Treasure",
+                "icon": "https://gw2ps.local/Assets/Icons/major_detected_treasure.png",
+                "tooltip": "Use your Warclaw's 'Sniff' skill to find these",
+                "hasColorPicker": true
+              }
+            ]
+          },
+          {
+            "subcategoryId": "visions_of_eternity",
+            "subcategoryTitle": "Visions of Eternity",
+            "icon": "https://wiki.guildwars2.com/images/2/25/VoE_icon_small.png",
+            "items": [
+              {
+                "id": "node_aetherlocation_treasure",
+                "label": "Aetherlocation Treasure",
+                "icon": "https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_magic_mirror",
+                "label": "Magic Mirror",
+                "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_node_small_obscure_chest_chests",
+                "label": "Small Obscure Chests",
+                "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
+                "tooltip": "Play the Magic Mirror mini-game for these to show up",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_medium_obscure_chest_chests",
+                "label": "Medium Obscure Chests",
+                "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
+                "tooltip": "Play the Magic Mirror mini-game for these to show up",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_large_obscure_chest_chests",
+                "label": "Large Obscure Chests",
+                "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
+                "tooltip": "Play the Magic Mirror mini-game for these to show up",
+                "hasColorPicker": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "categoryId": "festivals",
+        "categoryTitle": "Festivals",
+        "items": [
+          {
+            "id": "node_fireworks_launchers",
+            "label": "Dragon Bash - Fireworks Launchers",
+            "icon": "https://wiki.guildwars2.com/images/9/9e/Fireworks_%28Box_o%27_Fun_overhead_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_dragon_pinata",
+            "label": "Dragon Bash - Dragon Piñatas",
+            "icon": "https://wiki.guildwars2.com/images/8/8c/Dragon_Bash_Hologram_Projector.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_zephyrite_kite_basket",
+            "label": "Festival of the Four Winds - Zephyrite Kite Baskets",
+            "icon": "https://wiki.guildwars2.com/images/3/3a/Kite_Basket_Supplies.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_carving_pumpkin",
+            "label": "Halloween - Carving Pumpkins",
+            "icon": "https://wiki.guildwars2.com/images/9/92/Event_pumpkin_%28map_icon%29.png",
+            "hasColorPicker": true
+          },
+          {
+            "id": "node_orphan",
+            "label": "Wintersday - Orphans",
+            "icon": "https://wiki.guildwars2.com/images/5/5d/Event_Wintersday.png",
+            "hasColorPicker": true
+          }
+        ]
+      }
+    ]
+  }
+]
