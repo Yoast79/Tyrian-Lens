@@ -129,6 +129,22 @@
 				return 'node_npc_misc';
 			}
 
+			function resolveIconUrl(path) {
+				if (!path) return "https://gw2ps.local/Assets/Icons/poi_discovered.png";
+				if (path.startsWith("data:")) return path;
+				if (path.startsWith("http://") || path.startsWith("https://")) return path;
+				
+				// Resolve relative path
+				if (path.startsWith("Assets/")) return "https://gw2ps.local/" + path;
+				if (path.startsWith("/Assets/")) return "https://gw2ps.local" + path;
+				if (path.startsWith("../Assets/")) return "https://gw2ps.local/" + path.substring(3);
+				
+				// Fallback: if it's just a filename
+				if (!path.includes("/")) return "https://gw2ps.local/Assets/Icons/" + path;
+				
+				return path;
+			}
+
 			async function init() {
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
@@ -144,15 +160,29 @@
                 itemLocations = {};
                 itemCache = {};
 
-				const [bank, mats, inv, wallet, chars, mapData, farmingMarkers, npcCoordinates] = await Promise.all([
+				const isDevMode = window.location.hostname === "gw2ps.local" || window.location.hostname === "localhost";
+				const apiBase = isDevMode 
+					? "https://gw2ps.local/Data/" 
+					: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+
+				const altFiles = [
+					"nodes_wood.json", "nodes_achievements.json", "nodes_chests.json", 
+					"nodes_map_specific.json", "nodes_ore.json", "nodes_plants.json",
+					"nodes_bounty.json", "nodes_festivals.json", "nodes_fishing.json",
+					"nodes_miscellaneous.json", "nodes_mist_rift.json", "nodes_ranger_pets.json",
+					"nodes_service_npc.json", "nodes_world_events.json", "nodes_mastery_insight.json"
+				];
+
+				const altPromises = altFiles.map(file => fetchJSON(apiBase + file + "?t=" + Date.now()));
+
+				const [bank, mats, inv, wallet, chars, mapData, ...altResults] = await Promise.all([
 					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
-                    fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
+					fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey),
-					fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/map_data.json"),
-                    fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/farming_markers.json"),
-					fetchJSON("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/npc_coordinates.json").catch(() => null)
+					fetchJSON(apiBase + "map_data.json?t=" + Date.now()),
+					...altPromises
 				]);
 
                 if(bank) bank.forEach(i => { if(i) addLoc(i.id, "Bank", i.count); });
@@ -206,81 +236,115 @@
                     });
                 }
 
-                if(farmingMarkers) {
-                    farmingMarkers.forEach((m) => {
-                        if (!m.node) return;
-                        
-                        const isPet = m.type === 'node_ranger_pet' || m.node.includes("Juvenile");
-                        let layer = m.type || m.layer || "node_" + m.node.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '');
-                        if (m.layer) layer = m.layer;
-                        else if (m.type === 'node_ranger_pet') layer = 'node_ranger_pet';
-                        else if (m.yields && m.yields.includes("Ranger Pet")) layer = "node_ranger_pet";
-                        
-                        const id = 'farmnode_' + layer + '_' + m.node.replace(/[^a-z0-9]/gi, '_');
-                        if (!itemCache[id]) {
-                            itemCache[id] = {
-                                name: m.node,
-                                icon: m.icon || "https://gw2ps.local/Assets/Icons/map_scout.png",
-                                rarity: 'Basic',
-                                isMapLoc: true,
-                                isFarmingNode: true,
-                                isPet: isPet,
-                                layer: layer,
-                                pos: m.pos
-                            };
-                        }
-                        addLoc(id, isPet ? "RANGER PET" : "FARMING NODE", 1);
-                    });
-                }
+				// Process All Altitude/Marker Nodes from coordinate files
+				const nodeGroups = {};
+				const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+				const today = days[new Date().getUTCDay()];
 
-                if(npcCoordinates) {
-                    const uniqueYields = new Set();
-                    npcCoordinates.forEach((p, idx) => {
-                        if (!p.node) return;
-                        const service = (p.yields && p.yields[0]) ? p.yields[0] : 'Merchant';
-                        const layerKey = getNpcLayerKey(service);
-                        const id = 'npc_' + idx;
+				altResults.forEach((data, fileIdx) => {
+					if (!data) return;
+					const filename = altFiles[fileIdx];
+					const points = Array.isArray(data) ? data : (data.points || []);
 
-                        if (p.yields) {
-                            p.yields.forEach(y => {
-                                if (y) uniqueYields.add(y.trim());
-                            });
-                        }
+					points.forEach(p => {
+						if (!p) return;
+						const nodeName = p.node || p.name || '';
+						if (!nodeName) return;
 
-                        // Coordinates in npc_coordinates.json are [y, x].
-                        // Map actions (jumpToLocation, highlightLocation) expect [x, y].
-                        itemCache[id] = {
-                            name: p.node,
-                            icon: p.icon || 'https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png',
-                            rarity: 'Basic',
-                            isMapLoc: true,
-                            isNPC: true,
-                            pos: [p.pos[1], p.pos[0]],
-                            layer: layerKey
-                        };
-                        addLoc(id, service.toUpperCase(), 1);
-                    });
+						if (p.day && p.day !== today) return;
+						if (p.continent && p.continent !== 1) return;
 
-                    // Dynamic creation of yield group entries
-                    uniqueYields.forEach(yieldName => {
-                        const layerKey = getNpcLayerKey(yieldName);
-                        const slug = yieldName.toLowerCase().replace(/[^a-z0-9]/gi, '_');
-                        const id = 'npcgroup_' + layerKey + '_' + slug;
+						let layerKey = p.layer || p.type;
+						
+						if (!layerKey && nodeName) {
+							let slug = nodeName.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '');
+							const mapping = {
+								'rich_copper_vein': 'node_copper_ore',
+								'rich_iron_vein': 'node_iron_ore',
+								'rich_silver_vein': 'node_silver_ore',
+								'rich_gold_vein': 'node_gold_ore',
+								'rich_platinum_vein': 'node_platinum_ore',
+								'dragon_pata': 'node_dragon_pinata',
+								'dragon_piata': 'node_dragon_pinata'
+							};
+							layerKey = mapping[slug] || ("node_" + slug);
+						}
+						
+						if (p.yields && p.yields.includes("Ranger Pet")) {
+							layerKey = "node_ranger_pet";
+						}
+						if (filename === 'nodes_ranger_pets.json') {
+							layerKey = 'node_ranger_pet';
+						}
 
-                        const repNpc = npcCoordinates.find(p => p.yields && p.yields.includes(yieldName));
-                        const icon = (repNpc && repNpc.icon) ? repNpc.icon : 'https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png';
+						if (layerKey === 'node_npc_services') {
+							const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
+							layerKey = getNpcLayerKey(service);
+						}
 
-                        itemCache[id] = {
-                            name: yieldName,
-                            icon: icon,
-                            rarity: 'Basic',
-                            isMapLoc: true,
-                            isNPCGroup: true,
-                            layer: layerKey
-                        };
-                        addLoc(id, "NPC CATEGORY", 1);
-                    });
-                }
+						if (!layerKey) return;
+
+						const isPet = layerKey === 'node_ranger_pet' || nodeName.includes("Juvenile");
+						const cleanName = nodeName.replace(/[^a-z0-9]/gi, '_');
+						const id = 'farmnode_' + layerKey + '_' + cleanName;
+
+						if (!nodeGroups[id]) {
+							nodeGroups[id] = [];
+						}
+						nodeGroups[id].push({
+							node: nodeName,
+							icon: p.icon,
+							layer: layerKey,
+							pos: p.pos,
+							isPet: isPet,
+							sourceFile: filename,
+							yields: p.yields
+						});
+					});
+				});
+
+				// Build itemCache and locations for grouped nodes
+				Object.keys(nodeGroups).forEach(id => {
+					const group = nodeGroups[id];
+					const repNode = group[0];
+					const count = group.length;
+					const isSingle = count === 1;
+
+					let tag = "FARMING NODE";
+					if (repNode.isPet) {
+						tag = "RANGER PET";
+					} else if (repNode.sourceFile === "nodes_achievements.json") {
+						tag = "ACHIEVEMENT";
+					} else if (repNode.sourceFile === "nodes_chests.json") {
+						tag = "CHEST";
+					} else if (repNode.sourceFile === "nodes_service_npc.json") {
+						const service = (repNode.yields && repNode.yields[0]) ? repNode.yields[0] : 'NPC';
+						tag = service.toUpperCase();
+					} else if (repNode.sourceFile === "nodes_mastery_insight.json") {
+						tag = "MASTERY INSIGHT";
+					}
+
+					let finalIcon = resolveIconUrl(repNode.icon);
+					if (repNode.sourceFile === "nodes_service_npc.json" && !repNode.icon) {
+						finalIcon = 'https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png';
+					}
+
+					let pos = (isSingle && repNode.pos) ? repNode.pos : null;
+
+					itemCache[id] = {
+						name: repNode.node,
+						icon: finalIcon,
+						rarity: 'Basic',
+						isMapLoc: true,
+						isFarmingNode: !isSingle,
+						isPet: repNode.isPet,
+						isNPC: repNode.sourceFile === "nodes_service_npc.json",
+						layer: repNode.layer,
+						pos: pos
+					};
+
+					addLoc(id, tag, count);
+				});
 
                 // WvW Map POIs and Sectors
                 const wvwMaps = [38, 95, 96, 1099, 968, 350];
@@ -479,13 +543,13 @@
                             <button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" 
                                     onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" 
                                     onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" 
-                                    onclick="window.parent.postMessage({action:'jumpToLocation', x: ${x}, y: ${y}, isWvW: ${isWvW}}, '*')">
+                                    onclick="window.parent.postMessage({action:'jumpToLocation', x: ${x}, y: ${y}, isWvW: ${isWvW}, layerKey: '${item.layer}'}, '*')">
                                 JUMP
                             </button>
                             <button style="background: rgba(20,15,10,0.85); border: 1px solid #4a3b2a; color: #e2c07d; padding: 4px 10px; cursor: pointer; font-family: 'Crimson Text', serif; font-weight: bold; font-size: 11px; text-transform: uppercase; transition: 0.2s;" 
                                     onmouseover="this.style.borderColor='#e2c07d'; this.style.background='rgba(226, 192, 125, 0.1)'" 
                                     onmouseout="this.style.borderColor='#4a3b2a'; this.style.background='rgba(20,15,10,0.85)'" 
-                                    onclick="window.parent.postMessage({action:'highlightLocation', x: ${x}, y: ${y}, isPet: ${isPet}, isFarmingNode: ${isNPC}, markerIcon: '${item.icon}', markerName: '${item.name.replace(/'/g, "\\'")}', layerKey: '${item.layer}', isWvW: ${isWvW}}, '*')">
+                                    onclick="window.parent.postMessage({action:'highlightLocation', x: ${x}, y: ${y}, isPet: ${isPet}, isFarmingNode: ${!isNPC && !isPet && !isWvW}, markerIcon: '${item.icon}', markerName: '${item.name.replace(/'/g, "\\'")}', layerKey: '${item.layer}', isWvW: ${isWvW}}, '*')">
                                 HIGHLIGHT
                             </button>
                         </div>`;

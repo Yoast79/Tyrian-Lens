@@ -562,6 +562,7 @@
 		var playerAltitude = null;
 		var markers = [];
 		var subLayers = {};
+		var layerToSectionMap = {};
 		var activeHighlightMarker = null;
 		var activeTempIconMarker = null;
 		var activeHighlightTimeout = null;
@@ -654,36 +655,19 @@
 			'node_fishing_hole'
 		];
 
-		const independentNodes = [
-			'node_zone_portal', 'node_mist_rift', 'node_pact_supply_network_agent', 'node_ranger_pet',
-			'node_fishing_hole', 'node_historian_elisa',
-			'node_treasure_mushroom', 'node_matrix_cube_key', 'node_carving_pumpkin',
-			'node_sunken_chest_chests', 'node_dry_top_buried_locked_chest_chests', 'node_silverwastes_chests', 'node_lesser_arcane_chest_chests', 'node_greater_arcane_chest_chests','node_exalted_chest',
-			'node_airship_cargo', 'node_crystallized_supply_cache', 'node_noxious_seed_pod',
-			'node_shrine_guardian_achievement', 'node_minor_detected_treasure', 'node_aetherlocation_treasure',
-			'node_magic_mirror', 'node_node_small_obscure_chest_chests', 'node_medium_obscure_chest_chests', 'node_large_obscure_chest_chests', 'node_major_detected_treasure', 'node_world_boss',
-			'node_titan_ore', 'node_honey_flower', 'node_lowland_pine_sapling',
-			'node_titan_heatstone', 'node_mursaat_obsidian',
-			'node_zephyrite_kite_basket', 'node_fireworks_launchers', 'node_dragon_pinata', 'node_orphan',
-			'node_salvage_pile', 'node_hatched_chili_pepper_bush', 'node_jadeite_vein', 'node_petrified_echovald_sapling', 'node_bounty',
-			'node_bloodstone_crystal', 'node_petrified_stump', 'node_winterberry_bush', 'node_jade_fragment', 'node_primordal_orchid', 'node_orrian_oyster',
-			'node_difluorite_crystal', 'node_mistonium', 'node_kournan_supply_cache', 'node_dragon_crystal_node', 'node_mistborn_mote',
-			'node_eternal_ice', 'node_lost_charr_supply_drop', 'node_skritt_stash', 'node_crystal_desert_trade_cache_chests', 'node_crystal_desert_sand_pile_chests',
-			// Achievement node layers (independent from gathering master toggle)
-			'node_dry_top_coin_collector_achievement', 'node_silverwastes_lost_badges_achievement', 'node_silverwastes_golden_lost_badges_achievement',
-			'node_ember_bay_token_collector_achievement', 'node_draconis_mons_rock_collector_achievement', 'node_sirens_landing_storyteller_achievement',
-			'node_bleached_bones_achievement', 'node_lost_dwarven_chest_achievement', 'node_forgotten_debris_achievement',
-			'node_shadows_provisions_achievement', 'node_timeworn_bust_achievement', 'node_praise_joko_achievement',
-			'node_bjora_marches_treasure_hunter_achievement', 'node_illuminating_seitung_province_achievement', 'node_light_these_streets_achievement',
-			'node_lighting_the_echovald_wilds_achievement', 'node_lighting_dragons_end_achievement', 'node_illuminating_skywatch_archipelago_achievement',
-			'node_illuminating_amnytas_achievement', 'node_illuminating_inner_nayos_achievement', 'node_domain_of_istan_lost_to_time_achievement', 'node_auric_basin_no_mask_left_behind_achievement',
-			// NPC Service layers (all independent, toggled individually)
-			'node_npc_merchant', 'node_npc_armorsmith', 'node_npc_weaponsmith', 'node_npc_tailor',
-			'node_npc_chef', 'node_npc_leatherworker', 'node_npc_huntsman', 'node_npc_jeweler',
-			'node_npc_artificer', 'node_npc_gathering_merchant', 'node_npc_dungeon_merchant',
-			'node_npc_laurel_merchant', 'node_npc_guild_vault', 'node_npc_bank', 'node_npc_trading_post',
-			'node_npc_reinforce_armor', 'node_npc_guild_commendation', 'node_npc_misc'
-		];
+		function isIndependentNode(name) {
+			const section = layerToSectionMap[name];
+			if (section && section !== 'farming_nodes') return true;
+			
+			// Hardcoded fallbacks for built-in custom action layers
+			const defaultIndependent = [
+				'node_zone_portal', 'node_mist_rift', 'node_pact_supply_network_agent', 
+				'node_ranger_pet', 'node_fishing_hole', 'node_historian_elisa'
+			];
+			if (defaultIndependent.includes(name)) return true;
+			
+			return false;
+		}
 
 		// NPC service yields → sublayer key mapping
 		function getNpcLayerKey(service) {
@@ -722,15 +706,7 @@
 		}
 
 		function getMasterCategoryForLayer(key) {
-			const mapOptionsKeys = ['poi', 'waypoint', 'vista', 'heart', 'heropoint', 'mastery', 'node_zone_portal', 'personal_markers', 'region', 'map_text', 'sector', 'map_borders'];
-			const miscKeys = ['node_world_boss', 'node_mist_rift', 'node_bounty', 'node_ranger_pet', 'node_fishing_hole', 'node_treasure_mushroom', 'node_matrix_cube_key'];
-			if (mapOptionsKeys.includes(key)) {
-				return 'map-options';
-			} else if (miscKeys.includes(key)) {
-				return 'miscellaneous';
-			} else {
-				return 'farming_nodes';
-			}
+			return layerToSectionMap[key] || 'farming_nodes';
 		}
 
 		function isLayerEnabled(layerName) {
@@ -780,7 +756,7 @@
 
 			const customIcon = L.divIcon({
 				html: markerHtml,
-				className: 'altitude-div-icon',
+				className: 'altitude-div-icon layer-target-' + p.layer,
 				iconSize: [size, size],
 				iconAnchor: [anchor, anchor]
 			});
@@ -894,7 +870,7 @@
 			if (name === 'farming_nodes') {
 				Object.keys(subLayers).forEach(key => {
 					if (key.startsWith('node_')) {
-						if (independentNodes.includes(key)) return;
+						if (isIndependentNode(key)) return;
 						let individualVisible = layerToggles[key] !== false;
 						if (isVisible && individualVisible) map.addLayer(subLayers[key]);
 						else map.removeLayer(subLayers[key]);
@@ -905,7 +881,7 @@
 
 			if (subLayers[name]) {
 				if (name.startsWith('node_')) {
-					if (independentNodes.includes(name)) {
+					if (isIndependentNode(name)) {
 						if (isVisible) map.addLayer(subLayers[name]);
 						else map.removeLayer(subLayers[name]);
 					} else {
@@ -1128,6 +1104,8 @@
 
 		async function loadFlowingBorders() {
 			try {
+				let highlightColors = JSON.parse(localStorage.getItem('gw2_highlight_colors') || '{}');
+				let activeColor = highlightColors['map_borders'] || '#4a3b2a';
 				for (const floorId of BORDER_CONFIG.floors) {
 					const response = await fetch(`https://api.guildwars2.com/v2/continents/1/floors/${floorId}`);
 					if (!response.ok) continue;
@@ -1147,7 +1125,7 @@
 											return [finalY, finalX];
 										});
 										L.polygon(latlngs, {
-											color: BORDER_CONFIG.styles.color,
+											color: activeColor,
 											weight: BORDER_CONFIG.styles.weight,
 											fillOpacity: BORDER_CONFIG.styles.fillOpacity,
 											interactive: false,
@@ -1266,6 +1244,10 @@
 				window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
 			});
 			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+			m.on('click', () => {
+				const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent("Priory Historian Elisa")}&useskin=vector#Items_offered`;
+				window.parent.postMessage({ action: 'openWiki', url: wikiUrl }, '*');
+			});
 			
 			elisaLayer.addLayer(m);
 			elisaLayer.addTo(map);
@@ -1279,6 +1261,57 @@
 		// Disable right-click context menu (blocks "Inspect Element" and rummaging in the console)
 		document.addEventListener('contextmenu', event => event.preventDefault());
 
+		function buildLayerToSectionMap(sections) {
+			layerToSectionMap = {};
+			sections.forEach(section => {
+				if (section.categories) {
+					section.categories.forEach(cat => {
+						if (cat.items) {
+							cat.items.forEach(item => {
+								layerToSectionMap[item.id] = section.sectionId;
+							});
+						}
+						if (cat.subcategories) {
+							cat.subcategories.forEach(sub => {
+								if (sub.items) {
+									sub.items.forEach(item => {
+										layerToSectionMap[item.id] = section.sectionId;
+									});
+								}
+							});
+						}
+					});
+				}
+			});
+		}
+
+		var highlightStyleElement = null;
+
+		function applyIconHighlights(highlightColors) {
+			if (!highlightStyleElement) {
+				highlightStyleElement = document.createElement('style');
+				highlightStyleElement.id = 'dynamic-icon-highlights';
+				document.head.appendChild(highlightStyleElement);
+			}
+
+			let css = '';
+			Object.keys(highlightColors).forEach(itemId => {
+				const color = highlightColors[itemId];
+				if (color) {
+					css += `
+						.layer-target-${itemId} img,
+						img.layer-target-${itemId} {
+							border-radius: 50% !important;
+							outline: 3px solid ${color} !important;
+							outline-offset: 1px !important;
+							box-shadow: 0 0 10px ${color} !important;
+						}
+					`;
+				}
+			});
+			highlightStyleElement.innerHTML = css;
+		}
+
 		async function init() {
 			customMarkersLayer.clearLayers();
 			borderLayer.clearLayers();
@@ -1286,9 +1319,11 @@
 			Object.values(subLayers).forEach(l => { l.clearLayers(); map.removeLayer(l); });
 
 			let tempSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
-			if (tempSettings.borderColor) {
-				BORDER_CONFIG.styles.color = tempSettings.borderColor;
+			let highlightColors = JSON.parse(localStorage.getItem('gw2_highlight_colors') || '{}');
+			if (!highlightColors['map_borders'] && tempSettings.borderColor) {
+				highlightColors['map_borders'] = tempSettings.borderColor;
 			}
+			applyIconHighlights(highlightColors);
 
 			loadCustomMarkers();
 			loadFlowingBorders();
@@ -1337,11 +1372,22 @@
 					})
 				);
 
-				const [mRes, iRes, ...altResults] = await Promise.all([
+				const [mRes, iRes, oRes, ...altResults] = await Promise.all([
 					fetch(apiBase + "map_data.json?t=" + Date.now()).catch(() => null),
 					fetch(apiBase + "nodes_mastery_insight.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "map_options_structure.json?t=" + Date.now()).catch(() => null),
 					...altPromises
 				]);
+
+				if (oRes && oRes.ok) {
+					try {
+						const sections = await oRes.json();
+						buildLayerToSectionMap(sections);
+						console.log("[Altitude Engine] Dynamically built layerToSectionMap from options structure.");
+					} catch(err) {
+						console.error("[Altitude Engine] Error parsing map_options_structure.json:", err);
+					}
+				}
 
 				altitudeNodesData = altResults.flat().filter(p => p && p.pos);
 				console.log(`[Altitude Engine] Total active altitude nodes loaded: ${altitudeNodesData.length}`);
@@ -1411,14 +1457,14 @@
 					}
 
 					let currentScale = farmingScaleNodes.includes(layerKey) ? farmScale : locScale;
-					let baseSize = (layerKey === 'node_ranger_pet') ? 45 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+					let baseSize = (layerKey === 'node_pact_supply_network_agent') ? 32 : (layerKey === 'node_ranger_pet') ? 45 : (layerKey === 'node_fishing_hole') ? 32 : 24;
 					let size = Math.round(baseSize * currentScale);
 					let anchor = size / 2;
 					let iconUrl = resolveIconUrl(p.icon);
 
 					// Premium custom styled elements wrapped in altitude container
 					let markerHtml = '';
-					let customClass = 'altitude-div-icon';
+					let customClass = 'altitude-div-icon layer-target-' + layerKey;
 					if (layerKey === 'node_ranger_pet') {
 						let slug = p.node ? p.node.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '') : '';
 						customClass += ' pet-marker pet-' + slug;
@@ -1449,7 +1495,7 @@
 
 					// Set up premium custom dual-row tooltips for service NPCs, and standard tooltips for others
 					let tooltipText = p.day ? `${p.node} (${p.day.toUpperCase()})` : p.node;
-					if (layerKey.startsWith('node_npc_')) {
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
 						const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
 						tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${p.node}</div>`;
 						if (service) tooltipText += `<div style="color:#8a7a5f;font-size:11px;">${service}</div>`;
@@ -1464,7 +1510,7 @@
 					m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 
 					// Set up actions
-					if (layerKey.startsWith('node_npc_')) {
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
 						m.on('click', () => {
 							const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(p.node)}&useskin=vector#Items_offered`;
 							window.parent.postMessage({ action: 'openWiki', url: wikiUrl }, '*');
@@ -1498,7 +1544,7 @@
 						else if (p.name.includes("(SotO)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_soto.png";
 						else if (p.name.includes("(Tyria)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_tyria.png";
 
-						let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale] }) });
+						let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-mastery' }) });
 						m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Mastery Insight", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
 						m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 						let cCode = p.chat_code || p.chat_link;
@@ -1564,7 +1610,7 @@
 								else if (type === 'heropoint') iconPath = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
 							}
 
-							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale] }) });
+							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-' + type }) });
 							m.on('mouseover', e => {
 								var pt = map.mouseEventToContainerPoint(e.originalEvent);
 								let tooltipHtml = `<b>${p.name || "Map Point"}</b>`;
@@ -1612,6 +1658,15 @@
 			if (event.data && event.data.action === 'jumpToLocation') {
 				let x = event.data.x;
 				let y = event.data.y;
+				let layerKey = event.data.layerKey;
+				if (layerKey === 'node_historian_elisa') {
+					let activeWeek = getElisaActiveWeek();
+					let elisaData = ELISA_ROTATION[activeWeek];
+					if (elisaData) {
+						x = elisaData.pos[1];
+						y = elisaData.pos[0];
+					}
+				}
 				if (x !== undefined && y !== undefined) {
 					window.setTracking(false);
 					map.setView([parseFloat(y), parseFloat(x)], 6);
@@ -1625,6 +1680,15 @@
 				let markerIcon = event.data.markerIcon;
 				let layerKey = event.data.layerKey;
 				let markerName = event.data.markerName;
+				
+				if (layerKey === 'node_historian_elisa') {
+					let activeWeek = getElisaActiveWeek();
+					let elisaData = ELISA_ROTATION[activeWeek];
+					if (elisaData) {
+						x = elisaData.pos[1];
+						y = elisaData.pos[0];
+					}
+				}
 				
 				// Clear any previous active highlight and temporary clone immediately
 				if (activeHighlightTimeout) {
@@ -1719,10 +1783,37 @@
 			if (event.data && event.data.action === 'updateTheme') {
 				document.body.setAttribute('data-theme', event.data.theme);
 			}
+			if (event.data && event.data.action === 'changeItemHighlightColor') {
+				let highlightColors = JSON.parse(localStorage.getItem('gw2_highlight_colors') || '{}');
+				if (event.data.color) {
+					highlightColors[event.data.itemId] = event.data.color;
+				} else {
+					delete highlightColors[event.data.itemId];
+				}
+				localStorage.setItem('gw2_highlight_colors', JSON.stringify(highlightColors));
+				applyIconHighlights(highlightColors);
+
+				if (event.data.itemId === 'map_borders') {
+					let newColor = event.data.color || '#4a3b2a';
+					borderLayer.eachLayer(layer => {
+						if (layer.setStyle) layer.setStyle({ color: newColor });
+					});
+				}
+			}
 			if (event.data && event.data.action === 'changeMapBorderColor') {
-				BORDER_CONFIG.styles.color = event.data.color;
-				borderLayer.clearLayers();
-				loadFlowingBorders();
+				let highlightColors = JSON.parse(localStorage.getItem('gw2_highlight_colors') || '{}');
+				if (event.data.color) {
+					highlightColors['map_borders'] = event.data.color;
+				} else {
+					delete highlightColors['map_borders'];
+				}
+				localStorage.setItem('gw2_highlight_colors', JSON.stringify(highlightColors));
+				applyIconHighlights(highlightColors);
+
+				let newColor = event.data.color || '#4a3b2a';
+				borderLayer.eachLayer(layer => {
+					if (layer.setStyle) layer.setStyle({ color: newColor });
+				});
 			}
 			if (event.data && event.data.action === 'highlightLayer') {
 				let layerName = event.data.layer;

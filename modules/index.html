@@ -759,7 +759,7 @@
 							}
 						}
 					}
-					else if (data.action === 'changeMapBorderColor') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
+					else if (data.action === 'changeMapBorderColor' || data.action === 'changeItemHighlightColor') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
 					else if (data.action === 'jumpMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { let targetMap = data.map || 'map'; if (window.activeMap !== targetMap) { window.activeMap = targetMap; mapFrame.onload = function() { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') mapFrame.contentWindow.setTracking(false); mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {} }; mapFrame.src = targetMap + '.html?v=' + APP_VERSION; } else { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } } }
 					else if (data.action === 'copy') { navigator.clipboard.writeText(data.code); window.showToast("Copied Link"); }
 					else if (data.action === 'drag') { window.postToHost('drag'); }

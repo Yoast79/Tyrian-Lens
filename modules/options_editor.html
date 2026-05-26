@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>GW2 Map Options Editor Dashboard</title>
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+		<style>
+			:root {
+				--bg-panel: #0a0805;
+				--bg-editor: #0c0a07;
+				--bg-item: #15120d;
+				--bg-button: #1c1812;
+				--bg-hover: #262118;
+				--border-color: #4a3b2a;
+				--border-highlight: #e2c07d;
+				--text-primary: #e2c07d;
+				--text-light: #f5ebd5;
+				--text-muted: #8a7a5f;
+				--danger-color: #ff4a4a;
+				--success-color: #2ecc71;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				user-select: none;
+			}
+
+			body {
+				background-color: var(--bg-panel);
+				color: var(--text-light);
+				font-family: 'Outfit', sans-serif;
+				margin: 0;
+				padding: 0;
+				height: 100vh;
+				width: 100vw;
+				overflow: hidden;
+				position: relative;
+			}
+
+			/* Header Dashboard styling */
+			header {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 74px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 30px;
+				background: linear-gradient(180deg, rgba(16, 12, 8, 0.95) 0%, rgba(10, 8, 5, 0.9) 100%);
+				border-bottom: 2px solid var(--border-color);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+				z-index: 10;
+				box-sizing: border-box;
+			}
+
+			.logo-area {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+			}
+
+			.logo-title {
+				font-family: 'Crimson Text', serif;
+				font-size: 22px;
+				font-weight: 700;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				color: var(--text-primary);
+				text-shadow: 0 0 10px rgba(226, 192, 125, 0.3);
+			}
+
+			.logo-subtitle {
+				font-size: 11px;
+				color: var(--text-muted);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-top: 2px;
+			}
+
+			.action-group {
+				display: flex;
+				gap: 12px;
+			}
+
+			/* Buttons Custom Styling */
+			button {
+				background: var(--bg-button);
+				border: 1px solid var(--border-color);
+				color: var(--text-primary);
+				font-family: 'Outfit', sans-serif;
+				font-weight: 600;
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				padding: 10px 18px;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			button:hover {
+				background: var(--bg-hover);
+				border-color: var(--border-highlight);
+				color: var(--text-light);
+				box-shadow: 0 0 15px color-mix(in srgb, var(--border-highlight) 20%, transparent);
+				transform: translateY(-1px);
+			}
+
+			button.btn-primary {
+				background: linear-gradient(135deg, #4a3b2a 0%, #201710 100%);
+				border-color: var(--border-highlight);
+				color: var(--text-light);
+			}
+
+			button.btn-primary:hover {
+				background: linear-gradient(135deg, #614e38 0%, #2e2117 100%);
+				box-shadow: 0 0 20px rgba(226, 192, 125, 0.4);
+			}
+
+			button.btn-danger {
+				border-color: var(--danger-color);
+				color: var(--danger-color);
+			}
+
+			button.btn-danger:hover {
+				background: rgba(255, 74, 74, 0.1);
+				color: #fff;
+				box-shadow: 0 0 15px rgba(255, 74, 74, 0.3);
+			}
+
+			/* Main Workspace area */
+			.workspace {
+				position: absolute;
+				top: 74px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				overflow: hidden;
+			}
+
+			/* Visual Tree list editor */
+			.tree-editor-container {
+				flex: 1;
+				height: 100%;
+				max-height: 100%;
+				padding: 30px;
+				overflow-y: scroll !important;
+				background-color: var(--bg-editor);
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				box-sizing: border-box;
+			}
+
+			.tree-editor-container::-webkit-scrollbar { width: 8px; }
+			.tree-editor-container::-webkit-scrollbar-track { background: var(--bg-panel); }
+			.tree-editor-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+			.tree-editor-container::-webkit-scrollbar-thumb:hover { background: var(--border-highlight); }
+
+			.section-card {
+				background: rgba(21, 18, 13, 0.4);
+				border: 1px solid var(--border-color);
+				border-radius: 6px;
+				overflow: hidden;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				flex-shrink: 0;
+			}
+
+			.section-header {
+				background: linear-gradient(90deg, rgba(28, 24, 18, 0.9) 0%, rgba(10, 8, 5, 0.5) 100%);
+				padding: 15px 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid var(--border-color);
+			}
+
+			.section-info {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.section-drag-handle {
+				cursor: grab;
+				color: var(--text-muted);
+				font-size: 16px;
+			}
+
+			.section-title {
+				font-family: 'Crimson Text', serif;
+				font-size: 18px;
+				font-weight: bold;
+				color: var(--text-primary);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.section-items {
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+			}
+
+			/* Category Card styling */
+			.category-card {
+				background: rgba(10, 8, 5, 0.6);
+				border: 1px dashed var(--border-color);
+				border-radius: 4px;
+				overflow: hidden;
+				flex-shrink: 0;
+			}
+
+			.category-header {
+				padding: 10px 15px;
+				background: var(--bg-item);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid rgba(74, 59, 42, 0.4);
+			}
+
+			.category-title {
+				font-size: 13px;
+				font-weight: 600;
+				color: var(--text-light);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.category-title::before {
+				content: '▶';
+				font-size: 8px;
+				color: var(--text-primary);
+			}
+
+			.category-items-container {
+				padding: 15px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				min-height: 50px; /* Crucial for Sortable drag drop target */
+			}
+
+			/* Items grid item */
+			.item-node {
+				background: var(--bg-item);
+				border: 1px solid var(--border-color);
+				border-radius: 4px;
+				padding: 10px 15px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				flex-shrink: 0;
+			}
+
+			.item-node:hover {
+				border-color: var(--border-highlight);
+				background: var(--bg-hover);
+				box-shadow: 0 0 10px rgba(226, 192, 125, 0.1);
+			}
+
+			.item-node.selected {
+				border-color: var(--border-highlight);
+				background: var(--bg-hover);
+				box-shadow: inset 0 0 8px rgba(226, 192, 125, 0.15);
+			}
+
+			.item-node-info {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				max-width: 80%;
+			}
+
+			.item-drag-handle {
+				cursor: grab;
+				color: var(--text-muted);
+				font-size: 14px;
+			}
+
+			.item-icon {
+				width: 22px;
+				height: 22px;
+				object-fit: contain;
+				border-radius: 2px;
+				background: rgba(0, 0, 0, 0.3);
+			}
+
+			.item-label {
+				font-size: 13px;
+				font-weight: 500;
+				color: var(--text-light);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			.item-id {
+				font-size: 10px;
+				color: var(--text-muted);
+				font-family: monospace;
+				background: rgba(0, 0, 0, 0.2);
+				padding: 2px 5px;
+				border-radius: 2px;
+			}
+
+			/* Subcategory grouping within categories */
+			.subcategory-group {
+				border: 1px solid rgba(74, 59, 42, 0.2);
+				background: rgba(10, 8, 5, 0.4);
+				border-radius: 4px;
+				margin-top: 10px;
+				flex-shrink: 0;
+			}
+
+			.subcategory-header {
+				padding: 8px 12px;
+				background: rgba(28, 24, 18, 0.4);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid rgba(74, 59, 42, 0.15);
+			}
+
+			.subcategory-title {
+				font-size: 11px;
+				font-weight: 600;
+				color: #cbb07a;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			.subcategory-items-container {
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				min-height: 40px;
+			}
+
+			/* Inspector Form Column */
+			.inspector-panel {
+				width: 400px;
+				height: 100%;
+				max-height: 100%;
+				border-left: 2px solid var(--border-color);
+				background: linear-gradient(180deg, #0a0805 0%, #060503 100%);
+				display: flex;
+				flex-direction: column;
+				box-shadow: -4px 0 25px rgba(0, 0, 0, 0.5);
+			}
+
+			.inspector-header {
+				padding: 20px;
+				border-bottom: 1px solid var(--border-color);
+				background: rgba(21, 18, 13, 0.5);
+			}
+
+			.inspector-title {
+				font-family: 'Crimson Text', serif;
+				font-size: 18px;
+				font-weight: bold;
+				color: var(--text-primary);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.inspector-body {
+				flex: 1;
+				padding: 20px;
+				overflow-y: auto;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			.inspector-body::-webkit-scrollbar { width: 8px; }
+			.inspector-body::-webkit-scrollbar-track { background: var(--bg-panel); }
+			.inspector-body::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+			.inspector-body::-webkit-scrollbar-thumb:hover { background: var(--border-highlight); }
+
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			label.field-label {
+				font-size: 11px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: var(--text-muted);
+				letter-spacing: 1px;
+			}
+
+			input[type="text"], textarea, select {
+				background: #12100c;
+				border: 1px solid var(--border-color);
+				color: var(--text-light);
+				padding: 10px 12px;
+				font-family: 'Outfit', sans-serif;
+				font-size: 13px;
+				border-radius: 4px;
+				outline: none;
+				width: 100%;
+			}
+
+			input[type="text"]:focus, textarea:focus, select:focus {
+				border-color: var(--border-highlight);
+				box-shadow: 0 0 8px rgba(226, 192, 125, 0.2);
+			}
+
+			textarea {
+				resize: vertical;
+				min-height: 80px;
+			}
+
+			/* Switch/Checkbox elements styling */
+			.switch-group {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 12px 14px;
+				background: rgba(21, 18, 13, 0.3);
+				border: 1px solid rgba(74, 59, 42, 0.3);
+				border-radius: 4px;
+				cursor: pointer;
+			}
+
+			.switch-label-container {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+				max-width: 80%;
+			}
+
+			.switch-title {
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--text-light);
+			}
+
+			.switch-desc {
+				font-size: 10px;
+				color: var(--text-muted);
+			}
+
+			.toggle-checkbox {
+				display: none;
+			}
+
+			.visual-toggle-btn {
+				width: 38px;
+				height: 20px;
+				background: var(--bg-button);
+				border: 1px solid var(--border-color);
+				border-radius: 10px;
+				position: relative;
+				transition: 0.3s;
+				flex-shrink: 0;
+			}
+
+			.visual-toggle-btn::after {
+				content: '';
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				width: 14px;
+				height: 14px;
+				background: var(--text-muted);
+				border-radius: 50%;
+				transition: 0.3s;
+			}
+
+			.toggle-checkbox:checked + .visual-toggle-btn {
+				background: color-mix(in srgb, var(--border-highlight) 15%, transparent);
+				border-color: var(--border-highlight);
+			}
+
+			.toggle-checkbox:checked + .visual-toggle-btn::after {
+				transform: translateX(18px);
+				background: var(--border-highlight);
+			}
+
+			.empty-inspector-state {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				color: var(--text-muted);
+				text-align: center;
+				gap: 15px;
+				padding: 30px;
+			}
+
+			.empty-icon {
+				font-size: 40px;
+				opacity: 0.5;
+			}
+
+			/* Control actions toolbar */
+			.card-actions {
+				display: flex;
+				gap: 8px;
+			}
+
+			.card-actions button {
+				padding: 5px 10px;
+				font-size: 10px;
+			}
+
+			.card-actions button.btn-icon {
+				background: none;
+				border: none;
+				color: var(--text-muted);
+				padding: 4px;
+			}
+
+			.card-actions button.btn-icon:hover {
+				color: var(--text-primary);
+				background: none;
+				box-shadow: none;
+				transform: scale(1.1);
+			}
+
+			/* Modal Styling */
+			.modal-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(4px);
+				z-index: 100;
+				display: none;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.modal {
+				background: var(--bg-panel);
+				border: 1px solid var(--border-color);
+				border-radius: 6px;
+				width: 480px;
+				max-width: 90%;
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+				display: flex;
+				flex-direction: column;
+			}
+
+			.modal-header {
+				padding: 20px;
+				border-bottom: 1px solid var(--border-color);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.modal-title {
+				font-family: 'Crimson Text', serif;
+				font-size: 18px;
+				font-weight: 700;
+				color: var(--text-primary);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.modal-body {
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+			}
+
+			.modal-footer {
+				padding: 15px 20px;
+				border-top: 1px solid var(--border-color);
+				display: flex;
+				justify-content: flex-end;
+				gap: 12px;
+				background: rgba(21, 18, 13, 0.3);
+			}
+
+			/* Notification/Toast style */
+			.toast {
+				position: fixed;
+				bottom: 25px;
+				left: 50%;
+				transform: translateX(-50%) translateY(100px);
+				background: var(--bg-panel);
+				border: 1px solid var(--border-highlight);
+				padding: 12px 24px;
+				border-radius: 4px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), inset 0 0 4px rgba(226, 192, 125, 0.15);
+				color: var(--text-primary);
+				font-family: 'Outfit', sans-serif;
+				font-weight: 600;
+				font-size: 13px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				z-index: 1000;
+				transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			.toast.show {
+				transform: translateX(-50%) translateY(0);
+				opacity: 1;
+			}
+
+			/* Quick Drag and Drop placeholders styling */
+			.sortable-ghost {
+				opacity: 0.3;
+				border: 1px dashed var(--border-highlight) !important;
+				background: var(--bg-hover) !important;
+			}
+
+			.sortable-chosen {
+				border-color: var(--border-highlight) !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo-area">
+				<div>
+					<div class="logo-title">Tyrian Lens Panel Editor</div>
+					<div class="logo-subtitle" style="display: flex; gap: 15px; align-items: center;">
+						<span>Visual Map Options Structure Dashboard</span>
+						<span style="color: var(--border-highlight); font-weight: 600; background: rgba(226, 192, 125, 0.1); border: 1px solid rgba(226, 192, 125, 0.2); padding: 1px 8px; border-radius: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;" id="stats-counter">Sections: 0 | Categories: 0 | Items: 0</span>
+					</div>
+				</div>
+			</div>
+			<div class="action-group">
+				<button onclick="importJSONFile()" title="Import existing map_options_structure.json">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+					Import Structure
+				</button>
+				<button class="btn-primary" onclick="exportJSONFile()" title="Save and download map_options_structure.json">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+					Save &amp; Export JSON
+				</button>
+			</div>
+		</header>
+
+		<div class="workspace">
+			<!-- Main visual tree column -->
+			<div class="tree-editor-container" id="sections-editor-container">
+				<!-- Loaded dynamically -->
+			</div>
+
+			<!-- Right Column Form Editor -->
+			<div class="inspector-panel" id="item-inspector">
+				<div class="empty-inspector-state" id="inspector-empty-state">
+					<div class="empty-icon">✥</div>
+					<div>Select any Section, Category, or Item<br><span style="font-size: 11px; opacity:0.6;">to view and edit its detailed properties in this drawer.</span></div>
+				</div>
+				<div style="display: none; flex-direction: column; height: 100%;" id="inspector-form-state">
+					<div class="inspector-header">
+						<div class="inspector-title" id="inspector-header-title">Item Properties</div>
+					</div>
+					<div class="inspector-body">
+						<div class="form-group" id="group-id">
+							<label class="field-label" id="label-field-id">Unique Identifier (ID)</label>
+							<input type="text" id="field-id" placeholder="e.g. node_copper_ore" />
+						</div>
+						<div class="form-group">
+							<label class="field-label" id="label-field-label">Display Label</label>
+							<input type="text" id="field-label" placeholder="e.g. Copper Ore" />
+						</div>
+						<div class="form-group" id="group-icon">
+							<label class="field-label">Icon Image URL / Asset Path</label>
+							<input type="text" id="field-icon" placeholder="Assets/Icons/image.png or web URL" />
+						</div>
+						<div class="form-group" id="group-tooltip">
+							<label class="field-label">Tooltip / Hover Description</label>
+							<textarea id="field-tooltip" placeholder="Extra context shown when hovered in app."></textarea>
+						</div>
+
+						<div class="form-group" id="group-toggle-default">
+							<div class="switch-group" onclick="toggleCheckbox('field-default')">
+								<div class="switch-label-container">
+									<div class="switch-title">Default Enabled</div>
+									<div class="switch-desc">Should this checkbox be turned ON for first-time users?</div>
+								</div>
+								<input type="checkbox" id="field-default" class="toggle-checkbox" />
+								<div class="visual-toggle-btn"></div>
+							</div>
+						</div>
+
+						<div class="form-group" id="group-toggle-colorpicker">
+							<div class="switch-group" onclick="toggleCheckbox('field-colorpicker')">
+								<div class="switch-label-container">
+									<div class="switch-title">Show Color Picker</div>
+									<div class="switch-desc">Renders color swatch selection (useful for borders).</div>
+								</div>
+								<input type="checkbox" id="field-colorpicker" class="toggle-checkbox" />
+								<div class="visual-toggle-btn"></div>
+							</div>
+						</div>
+
+						<div class="form-group" id="group-custom-action">
+							<label class="field-label">Custom Action Bindings</label>
+							<select id="field-action">
+								<option value="">None (Standard Toggle)</option>
+								<option value="copyPSNA">Copy Pact Supply Agents Waypoints</option>
+							</select>
+						</div>
+
+						<button class="btn-danger" style="margin-top: 15px; justify-content: center;" onclick="deleteSelectedNode()">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+							Delete Element
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- New Category / Item Modal dialog -->
+		<div class="modal-overlay" id="add-modal">
+			<div class="modal">
+				<div class="modal-header">
+					<div class="modal-title" id="modal-title-text">Add New Element</div>
+					<button class="btn-icon" onclick="closeAddModal()">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group" id="modal-group-type">
+						<label class="field-label">Element Type</label>
+						<select id="modal-type" onchange="adjustModalFields()">
+							<option value="item">Menu Item Checkbox</option>
+							<option value="subcategory">Nested Subcategory</option>
+							<option value="category">Category Dropdown</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="field-label" id="modal-label-id">Unique ID</label>
+						<input type="text" id="modal-id" placeholder="e.g. node_my_item" />
+					</div>
+					<div class="form-group">
+						<label class="field-label" id="modal-label-title">Display Name</label>
+						<input type="text" id="modal-label" placeholder="e.g. My Item" />
+					</div>
+					<div class="form-group" id="modal-group-icon">
+						<label class="field-label">Icon Image URL / Asset Path</label>
+						<input type="text" id="modal-icon" placeholder="Optional icon path" />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button onclick="closeAddModal()">Cancel</button>
+					<button class="btn-primary" onclick="confirmAddNode()">Add Element</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Invisible File Input for JSON import -->
+		<input type="file" id="file-import-input" style="display: none;" accept=".json" onchange="handleFileImport(event)" />
+
+		<!-- Toast Notifications -->
+		<div class="toast" id="toast-notify">Success! Structure Saved.</div>
+
+		<script>
+			let menuData = [];
+			let selectedNode = null; // { type: 'item'|'category'|'section'|'subcategory', data: ref, parentArray: ref }
+
+			function resolveIconPath(iconUrl) {
+				if (!iconUrl) return '';
+				// If it's a C# custom local domain icon, convert it to a relative path so the local browser file preview can render it!
+				if (iconUrl.startsWith('https://gw2ps.local/')) {
+					return iconUrl.replace('https://gw2ps.local/', '../');
+				}
+				return iconUrl;
+			}
+
+			async function initDashboard() {
+				if (window.location.protocol === 'file:') {
+					showToast("Local file mode. Click 'Import Structure' to load map_options_structure.json.");
+					menuData = [];
+					renderTree();
+					return;
+				}
+				try {
+					const response = await fetch("../Data/map_options_structure.json?t=" + Date.now());
+					if (response.ok) {
+						menuData = await response.json();
+						showToast("Structure Loaded successfully!");
+					} else {
+						// Fallback default starting structure
+						menuData = [
+							{
+								"sectionId": "farming_nodes",
+								"sectionTitle": "Gathering Nodes",
+								"categories": []
+							}
+						];
+						showToast("Started with empty structure");
+					}
+					renderTree();
+				} catch (e) {
+					console.error("Dashboard Load Error:", e);
+					showToast("Error loading JSON file!");
+					menuData = [];
+					renderTree();
+				}
+			}
+
+			function showToast(msg) {
+				const toast = document.getElementById('toast-notify');
+				toast.innerText = msg;
+				toast.classList.add('show');
+				setTimeout(() => {
+					toast.classList.remove('show');
+				}, 2500);
+			}
+
+			// Render the dynamic JSON into visual interactive elements
+			function renderTree() {
+				try {
+					const container = document.getElementById('sections-editor-container');
+					container.innerHTML = '';
+
+					let sectionsCount = menuData.length;
+					let categoriesCount = 0;
+					let itemsCount = 0;
+
+					menuData.forEach((section, sIndex) => {
+						const sectionEl = document.createElement('div');
+						sectionEl.className = 'section-card';
+						sectionEl.dataset.index = sIndex;
+
+						let categoriesHtml = '';
+
+						const sectionHeader = `
+							<div class="section-header">
+								<div class="section-info">
+									<span class="section-title" onclick="selectNode('section', ${sIndex})">${section.sectionTitle}</span>
+									<span class="item-id">${section.sectionId}</span>
+								</div>
+								<div class="card-actions">
+									<button class="btn-primary" onclick="openAddModal('category', ${sIndex})">
+										<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+										Add Category
+									</button>
+								</div>
+							</div>
+						`;
+
+						const itemsEl = document.createElement('div');
+						itemsEl.className = 'section-items';
+						itemsEl.id = `section-items-${sIndex}`;
+
+						if (section.categories) {
+							categoriesCount += section.categories.length;
+							section.categories.forEach((cat, cIndex) => {
+								const catCard = document.createElement('div');
+								catCard.className = 'category-card';
+								catCard.dataset.index = cIndex;
+
+								const catHeader = document.createElement('div');
+								catHeader.className = 'category-header';
+								catHeader.innerHTML = `
+									<div class="category-title" onclick="selectNode('category', ${sIndex}, ${cIndex})">
+										<span class="category-drag-handle" style="cursor:grab; margin-right:8px; color:var(--text-muted); font-size:16px;">☰</span>
+										<span>${cat.categoryTitle}</span>
+										<span class="item-id">${cat.categoryId}</span>
+									</div>
+									<div class="card-actions">
+										<button onclick="openAddModal('subcategory', ${sIndex}, ${cIndex})">Add Subcategory</button>
+										<button onclick="openAddModal('item', ${sIndex}, ${cIndex})">Add Item</button>
+									</div>
+								`;
+								catCard.appendChild(catHeader);
+
+								const itemsContainer = document.createElement('div');
+								itemsContainer.className = 'category-items-container sortable-container';
+								itemsContainer.id = `items-cat-${sIndex}-${cIndex}`;
+								itemsContainer.dataset.sectionIndex = sIndex;
+								itemsContainer.dataset.categoryIndex = cIndex;
+
+								// Render items belonging to this category
+								if (cat.items) {
+									itemsCount += cat.items.length;
+									cat.items.forEach((item, iIndex) => {
+										const itemNode = renderItemNodeHtml(item, sIndex, cIndex, null, iIndex);
+										itemsContainer.appendChild(itemNode);
+									});
+								}
+
+								// Render subcategories inside categories
+								if (cat.subcategories) {
+									cat.subcategories.forEach((sub, subIndex) => {
+										const subCard = document.createElement('div');
+										subCard.className = 'subcategory-group';
+										subCard.dataset.index = subIndex;
+
+										const subHeader = document.createElement('div');
+										subHeader.className = 'subcategory-header';
+										subHeader.innerHTML = `
+											<div class="subcategory-title" onclick="selectNode('subcategory', ${sIndex}, ${cIndex}, ${subIndex})">
+												${sub.icon ? `<img src="${resolveIconPath(sub.icon)}" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;object-fit:contain;">` : ''}
+												<span>${sub.subcategoryTitle}</span>
+												<span class="item-id">${sub.subcategoryId}</span>
+											</div>
+											<div class="card-actions">
+												<button onclick="openAddModal('item', ${sIndex}, ${cIndex}, ${subIndex})">Add Item</button>
+											</div>
+										`;
+										subCard.appendChild(subHeader);
+
+										const subItemsContainer = document.createElement('div');
+										subItemsContainer.className = 'subcategory-items-container sortable-container';
+										subItemsContainer.id = `items-sub-${sIndex}-${cIndex}-${subIndex}`;
+										subItemsContainer.dataset.sectionIndex = sIndex;
+										subItemsContainer.dataset.categoryIndex = cIndex;
+										subItemsContainer.dataset.subcategoryIndex = subIndex;
+
+										if (sub.items) {
+											itemsCount += sub.items.length;
+											sub.items.forEach((item, iIndex) => {
+												const itemNode = renderItemNodeHtml(item, sIndex, cIndex, subIndex, iIndex);
+												subItemsContainer.appendChild(itemNode);
+											});
+										}
+
+										subCard.appendChild(subItemsContainer);
+										itemsContainer.appendChild(subCard);
+									});
+								}
+
+								catCard.appendChild(itemsContainer);
+								itemsEl.appendChild(catCard);
+							});
+						}
+
+						sectionEl.innerHTML = sectionHeader;
+						sectionEl.appendChild(itemsEl);
+						container.appendChild(sectionEl);
+					});
+
+					// Update UI stats banner
+					const statsEl = document.getElementById('stats-counter');
+					if (statsEl) {
+						statsEl.innerText = `Sections: ${sectionsCount} | Categories: ${categoriesCount} | Items: ${itemsCount}`;
+					}
+
+					initDragAndDrop();
+					highlightSelectedNode();
+				} catch (err) {
+					console.error("Visual Rendering Error:", err);
+					const container = document.getElementById('sections-editor-container');
+					if (container) {
+						container.innerHTML = `
+							<div style="background: rgba(255, 74, 74, 0.1); border: 1px solid var(--danger-color); border-radius: 6px; padding: 25px; color: var(--text-light); text-transform: none; font-family: sans-serif;">
+								<h3 style="color: var(--danger-color); margin-bottom: 12px; font-size: 16px;">✥ Visual Rendering Error</h3>
+								<p style="font-size: 13px; opacity: 0.9; margin-bottom: 15px;">An error occurred while compiling the dashboard options tree. This is usually due to missing Sortable library components or local security CSP policies.</p>
+								<pre style="background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-color); padding: 15px; border-radius: 4px; overflow-x: auto; font-family: monospace; font-size: 12px; color: #ff9999; line-height: 1.4; white-space: pre-wrap;">${err.stack || err.message}</pre>
+							</div>
+						`;
+					}
+				}
+			}
+
+			function renderItemNodeHtml(item, sIndex, cIndex, subIndex, iIndex) {
+				const itemNode = document.createElement('div');
+				itemNode.className = 'item-node';
+				itemNode.dataset.s = sIndex;
+				itemNode.dataset.c = cIndex;
+				if (subIndex !== null) itemNode.dataset.sub = subIndex;
+				itemNode.dataset.i = iIndex;
+				itemNode.onclick = (e) => {
+					e.stopPropagation();
+					selectNode('item', sIndex, cIndex, subIndex, iIndex);
+				};
+
+				const iconHtml = item.icon ? `<img class="item-icon" src="${resolveIconPath(item.icon)}">` : '<div class="item-icon" style="background:#000;"></div>';
+				
+				itemNode.innerHTML = `
+					<div class="item-node-info">
+						<span class="item-drag-handle">☰</span>
+						${iconHtml}
+						<span class="item-label">${item.label}</span>
+						<span class="item-id">${item.id}</span>
+					</div>
+					<div class="card-actions">
+						${item.defaultOn ? '<span style="color:#2ecc71;font-size:10px;font-weight:bold;text-transform:uppercase;">DEFAULT ON</span>' : ''}
+					</div>
+				`;
+				return itemNode;
+			}
+
+			// Initialize drag and drop on lists using SortableJS
+			function initDragAndDrop() {
+				if (typeof Sortable === 'undefined') {
+					console.warn("SortableJS is not loaded (likely offline or blocked). Drag-and-drop is disabled, but rendering is preserved.");
+					return;
+				}
+				
+				// 1. Item Sorting inside Categories (and dragging between them)
+				document.querySelectorAll('.sortable-container').forEach(el => {
+					new Sortable(el, {
+						group: 'shared-items', // Allows dragging items between categories
+						handle: '.item-drag-handle',
+						animation: 150,
+						ghostClass: 'sortable-ghost',
+						chosenClass: 'sortable-chosen',
+						onEnd: function (evt) {
+							// Update backing JSON arrays on drag completion
+							const fromContainer = evt.from;
+							const toContainer = evt.to;
+
+							const fromSection = parseInt(fromContainer.dataset.sectionIndex);
+							const fromCategory = parseInt(fromContainer.dataset.categoryIndex);
+							const fromSubcategory = fromContainer.dataset.subcategoryIndex !== undefined ? parseInt(fromContainer.dataset.subcategoryIndex) : null;
+
+							const toSection = parseInt(toContainer.dataset.sectionIndex);
+							const toCategory = parseInt(toContainer.dataset.categoryIndex);
+							const toSubcategory = toContainer.dataset.subcategoryIndex !== undefined ? parseInt(toContainer.dataset.subcategoryIndex) : null;
+
+							const oldIndex = evt.oldIndex;
+							const newIndex = evt.newIndex;
+
+							// Guard if same place
+							if (fromContainer === toContainer && oldIndex === newIndex) return;
+
+							// Get active source items array
+							let sourceArray;
+							if (fromSubcategory !== null) {
+								sourceArray = menuData[fromSection].categories[fromCategory].subcategories[fromSubcategory].items;
+							} else {
+								sourceArray = menuData[fromSection].categories[fromCategory].items;
+							}
+
+							// Splice item out
+							const [draggedItem] = sourceArray.splice(oldIndex, 1);
+
+							// Insert into target list array
+							let targetArray;
+							if (toSubcategory !== null) {
+								if (!menuData[toSection].categories[toCategory].subcategories[toSubcategory].items) {
+									menuData[toSection].categories[toCategory].subcategories[toSubcategory].items = [];
+								}
+								targetArray = menuData[toSection].categories[toCategory].subcategories[toSubcategory].items;
+							} else {
+								if (!menuData[toSection].categories[toCategory].items) {
+									menuData[toSection].categories[toCategory].items = [];
+								}
+								targetArray = menuData[toSection].categories[toCategory].items;
+							}
+
+							targetArray.splice(newIndex, 0, draggedItem);
+							
+							// Re-render visually to update indexes in DOM
+							renderTree();
+							showToast("Rearranged item successfully");
+						}
+					});
+				});
+
+				// 2. Category Sorting inside Sections (and dragging between them)
+				document.querySelectorAll('.section-items').forEach(el => {
+					new Sortable(el, {
+						group: 'section-categories',
+						handle: '.category-drag-handle',
+						animation: 150,
+						ghostClass: 'sortable-ghost',
+						chosenClass: 'sortable-chosen',
+						onEnd: function (evt) {
+							const fromSection = parseInt(evt.from.id.split('-')[2]);
+							const toSection = parseInt(evt.to.id.split('-')[2]);
+							const oldIndex = evt.oldIndex;
+							const newIndex = evt.newIndex;
+
+							// Guard if same place
+							if (fromSection === toSection && oldIndex === newIndex) return;
+
+							// Reorder categories in memory
+							const [draggedCategory] = menuData[fromSection].categories.splice(oldIndex, 1);
+							if (!menuData[toSection].categories) menuData[toSection].categories = [];
+							menuData[toSection].categories.splice(newIndex, 0, draggedCategory);
+
+							renderTree();
+							showToast("Rearranged category successfully");
+						}
+					});
+				});
+			}
+
+			// Select Node and populate inspector inputs
+			function selectNode(type, sIndex, cIndex = null, subIndex = null, iIndex = null) {
+				selectedNode = { type, sIndex, cIndex, subIndex, iIndex };
+
+				const formState = document.getElementById('inspector-form-state');
+				const emptyState = document.getElementById('inspector-empty-state');
+				formState.style.display = 'flex';
+				emptyState.style.display = 'none';
+
+				// Set header title
+				document.getElementById('inspector-header-title').innerText = `${type} Properties`;
+
+				// Show/hide fields based on type
+				document.getElementById('group-icon').style.display = (type === 'item' || type === 'subcategory') ? 'flex' : 'none';
+				document.getElementById('group-tooltip').style.display = type === 'item' ? 'flex' : 'none';
+				document.getElementById('group-toggle-default').style.display = type === 'item' ? 'flex' : 'none';
+				document.getElementById('group-toggle-colorpicker').style.display = type === 'item' ? 'flex' : 'none';
+				document.getElementById('group-custom-action').style.display = type === 'item' ? 'flex' : 'none';
+
+				// Set field labels
+				document.getElementById('label-field-id').innerText = type === 'section' ? 'Section ID' : type === 'category' ? 'Category ID' : type === 'subcategory' ? 'Subcategory ID' : 'Unique Identifier (ID)';
+				document.getElementById('label-field-label').innerText = type === 'section' ? 'Section Title' : type === 'category' ? 'Category Title' : type === 'subcategory' ? 'Subcategory Title' : 'Display Label';
+
+				// Populate values
+				let nodeData;
+				if (type === 'section') {
+					nodeData = menuData[sIndex];
+					document.getElementById('field-id').value = nodeData.sectionId;
+					document.getElementById('field-label').value = nodeData.sectionTitle;
+				} else if (type === 'category') {
+					nodeData = menuData[sIndex].categories[cIndex];
+					document.getElementById('field-id').value = nodeData.categoryId;
+					document.getElementById('field-label').value = nodeData.categoryTitle;
+				} else if (type === 'subcategory') {
+					nodeData = menuData[sIndex].categories[cIndex].subcategories[subIndex];
+					document.getElementById('field-id').value = nodeData.subcategoryId;
+					document.getElementById('field-label').value = nodeData.subcategoryTitle;
+					document.getElementById('field-icon').value = nodeData.icon || '';
+				} else if (type === 'item') {
+					if (subIndex !== null) {
+						nodeData = menuData[sIndex].categories[cIndex].subcategories[subIndex].items[iIndex];
+					} else {
+						nodeData = menuData[sIndex].categories[cIndex].items[iIndex];
+					}
+					document.getElementById('field-id').value = nodeData.id;
+					document.getElementById('field-label').value = nodeData.label;
+					document.getElementById('field-icon').value = nodeData.icon || '';
+					document.getElementById('field-tooltip').value = nodeData.tooltip || '';
+					document.getElementById('field-default').checked = !!nodeData.defaultOn;
+					document.getElementById('field-colorpicker').checked = !!nodeData.hasColorPicker;
+					document.getElementById('field-action').value = nodeData.customAction || '';
+				}
+
+				highlightSelectedNode();
+				setupInspectorChangeHandlers(nodeData);
+			}
+
+			function highlightSelectedNode() {
+				document.querySelectorAll('.item-node, .section-title, .category-title, .subcategory-title').forEach(el => {
+					el.classList.remove('selected');
+				});
+
+				if (!selectedNode) return;
+
+				const { type, sIndex, cIndex, subIndex, iIndex } = selectedNode;
+
+				if (type === 'item') {
+					let selector = `.item-node[data-s="${sIndex}"][data-c="${cIndex}"][data-i="${iIndex}"]`;
+					if (subIndex !== null) selector = `.item-node[data-s="${sIndex}"][data-c="${cIndex}"][data-sub="${subIndex}"][data-i="${iIndex}"]`;
+					const node = document.querySelector(selector);
+					if (node) node.classList.add('selected');
+				}
+			}
+
+			// Automatically apply changes made in the inspector to the backing JSON in memory
+			function setupInspectorChangeHandlers(nodeData) {
+				const fields = ['field-id', 'field-label', 'field-icon', 'field-tooltip', 'field-default', 'field-colorpicker', 'field-action'];
+				
+				fields.forEach(fieldId => {
+					const el = document.getElementById(fieldId);
+					el.oninput = el.onchange = () => {
+						const type = selectedNode.type;
+
+						if (type === 'section') {
+							if (fieldId === 'field-id') nodeData.sectionId = el.value;
+							if (fieldId === 'field-label') nodeData.sectionTitle = el.value;
+						} else if (type === 'category') {
+							if (fieldId === 'field-id') nodeData.categoryId = el.value;
+							if (fieldId === 'field-label') nodeData.categoryTitle = el.value;
+						} else if (type === 'subcategory') {
+							if (fieldId === 'field-id') nodeData.subcategoryId = el.value;
+							if (fieldId === 'field-label') nodeData.subcategoryTitle = el.value;
+							if (fieldId === 'field-icon') nodeData.icon = el.value;
+						} else if (type === 'item') {
+							if (fieldId === 'field-id') nodeData.id = el.value;
+							if (fieldId === 'field-label') nodeData.label = el.value;
+							if (fieldId === 'field-icon') nodeData.icon = el.value;
+							if (fieldId === 'field-tooltip') nodeData.tooltip = el.value;
+							if (fieldId === 'field-default') nodeData.defaultOn = el.checked;
+							if (fieldId === 'field-colorpicker') nodeData.hasColorPicker = el.checked;
+							if (fieldId === 'field-action') nodeData.customAction = el.value || undefined;
+						}
+
+						// Silently update only labels and IDs in DOM for speed
+						updateNodeLabelsInTree(selectedNode, nodeData);
+					};
+				});
+			}
+
+			function updateNodeLabelsInTree(selected, data) {
+				const { type, sIndex, cIndex, subIndex, iIndex } = selected;
+				if (type === 'item') {
+					let selector = `.item-node[data-s="${sIndex}"][data-c="${cIndex}"][data-i="${iIndex}"]`;
+					if (subIndex !== null) selector = `.item-node[data-s="${sIndex}"][data-c="${cIndex}"][data-sub="${subIndex}"][data-i="${iIndex}"]`;
+					const node = document.querySelector(selector);
+					if (node) {
+						const labelSpan = node.querySelector('.item-label');
+						const idSpan = node.querySelector('.item-id');
+						if (labelSpan) labelSpan.innerText = data.label;
+						if (idSpan) idSpan.innerText = data.id;
+						if (data.icon && node.querySelector('.item-icon')) {
+							node.querySelector('.item-icon').src = resolveIconPath(data.icon);
+						}
+					}
+				}
+			}
+
+			// Custom toggle element handler
+			function toggleCheckbox(id) {
+				const box = document.getElementById(id);
+				box.checked = !box.checked;
+				box.dispatchEvent(new Event('change'));
+			}
+
+			// Add element modal handling
+			let modalTargetContext = null; // { type, sIndex, cIndex, subIndex }
+
+			function openAddModal(type, sIndex, cIndex = null, subIndex = null) {
+				modalTargetContext = { type, sIndex, cIndex, subIndex };
+
+				const modal = document.getElementById('add-modal');
+				modal.style.display = 'flex';
+
+				const typeSelect = document.getElementById('modal-type');
+				
+				// Rebuild dropdown options dynamically based on context!
+				typeSelect.innerHTML = '';
+				if (cIndex === null) {
+					// Section level context: only allowed to add Category
+					typeSelect.innerHTML = '<option value="category">Category</option>';
+				} else {
+					// Category level context: can add Subcategory or Item
+					typeSelect.innerHTML = `
+						<option value="subcategory">Subcategory</option>
+						<option value="item">Item</option>
+					`;
+				}
+				
+				typeSelect.value = type;
+				typeSelect.disabled = false; // Enabled!
+
+				adjustModalFields();
+
+				document.getElementById('modal-id').value = '';
+				document.getElementById('modal-label').value = '';
+				document.getElementById('modal-icon').value = '';
+				document.getElementById('modal-id').focus();
+
+				typeSelect.onchange = () => {
+					modalTargetContext.type = typeSelect.value;
+					adjustModalFields();
+				};
+			}
+
+			function adjustModalFields() {
+				const type = document.getElementById('modal-type').value;
+				document.getElementById('modal-group-icon').style.display = (type === 'item' || type === 'subcategory') ? 'flex' : 'none';
+				
+				document.getElementById('modal-label-id').innerText = type === 'category' ? 'Category ID' : type === 'subcategory' ? 'Subcategory ID' : 'Unique ID';
+				document.getElementById('modal-label-title').innerText = type === 'category' ? 'Category Title' : type === 'subcategory' ? 'Subcategory Title' : 'Display Name';
+			}
+
+			function closeAddModal() {
+				document.getElementById('add-modal').style.display = 'none';
+				modalTargetContext = null;
+			}
+
+			function confirmAddNode() {
+				const id = document.getElementById('modal-id').value.trim();
+				const label = document.getElementById('modal-label').value.trim();
+				const icon = document.getElementById('modal-icon').value.trim();
+
+				if (!id || !label) {
+					alert("ID and Label are required!");
+					return;
+				}
+
+				const { type, sIndex, cIndex, subIndex } = modalTargetContext;
+
+				if (type === 'category') {
+					if (!menuData[sIndex].categories) menuData[sIndex].categories = [];
+					menuData[sIndex].categories.push({
+						categoryId: id,
+						categoryTitle: label,
+						items: []
+					});
+				} else if (type === 'subcategory') {
+					if (!menuData[sIndex].categories[cIndex].subcategories) {
+						menuData[sIndex].categories[cIndex].subcategories = [];
+					}
+					menuData[sIndex].categories[cIndex].subcategories.push({
+						subcategoryId: id,
+						subcategoryTitle: label,
+						icon: icon || undefined,
+						items: []
+					});
+				} else if (type === 'item') {
+					const newItem = {
+						id,
+						label,
+						icon: icon || undefined
+					};
+
+					if (subIndex !== null) {
+						if (!menuData[sIndex].categories[cIndex].subcategories[subIndex].items) {
+							menuData[sIndex].categories[cIndex].subcategories[subIndex].items = [];
+						}
+						menuData[sIndex].categories[cIndex].subcategories[subIndex].items.push(newItem);
+					} else {
+						if (!menuData[sIndex].categories[cIndex].items) {
+							menuData[sIndex].categories[cIndex].items = [];
+						}
+						menuData[sIndex].categories[cIndex].items.push(newItem);
+					}
+				}
+
+				closeAddModal();
+				renderTree();
+				showToast(`Added ${type} successfully!`);
+			}
+
+			function deleteSelectedNode() {
+				if (!selectedNode) return;
+				if (!confirm("Are you sure you want to delete this element and all its children?")) return;
+
+				const { type, sIndex, cIndex, subIndex, iIndex } = selectedNode;
+
+				if (type === 'section') {
+					menuData.splice(sIndex, 1);
+				} else if (type === 'category') {
+					menuData[sIndex].categories.splice(cIndex, 1);
+				} else if (type === 'subcategory') {
+					menuData[sIndex].categories[cIndex].subcategories.splice(subIndex, 1);
+				} else if (type === 'item') {
+					if (subIndex !== null) {
+						menuData[sIndex].categories[cIndex].subcategories[subIndex].items.splice(iIndex, 1);
+					} else {
+						menuData[sIndex].categories[cIndex].items.splice(iIndex, 1);
+					}
+				}
+
+				selectedNode = null;
+				document.getElementById('inspector-form-state').style.display = 'none';
+				document.getElementById('inspector-empty-state').style.display = 'flex';
+
+				renderTree();
+				showToast("Element Deleted!");
+			}
+
+			// Export file save workflow
+			function exportJSONFile() {
+				const jsonString = JSON.stringify(menuData, null, 2);
+				const blob = new Blob([jsonString], { type: "application/json" });
+				const url = URL.createObjectURL(blob);
+				
+				const a = document.createElement("a");
+				a.href = url;
+				a.download = "map_options_structure.json";
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+				URL.revokeObjectURL(url);
+
+				showToast("JSON structure exported successfully!");
+			}
+
+			// Import file load workflow
+			function importJSONFile() {
+				document.getElementById('file-import-input').click();
+			}
+
+			function handleFileImport(event) {
+				const file = event.target.files[0];
+				if (!file) return;
+
+				const reader = new FileReader();
+				reader.onload = function(e) {
+					try {
+						const data = JSON.parse(e.target.result);
+						// Basic structural validation
+						if (Array.isArray(data) && data.length > 0 && (data[0].sectionId || data[0].sectionTitle)) {
+							menuData = data;
+							selectedNode = null;
+							document.getElementById('inspector-form-state').style.display = 'none';
+							document.getElementById('inspector-empty-state').style.display = 'flex';
+							
+							renderTree();
+							showToast("Structure Imported!");
+						} else {
+							alert("Invalid JSON format! Must match map_options_structure.json format.");
+						}
+					} catch(err) {
+						alert("Failed to parse JSON file!");
+					}
+				};
+				reader.readAsText(file);
+				event.target.value = ''; // Reset file input
+			}
+
+			window.onload = initDashboard;
+		</script>
+	</body>
+</html>
