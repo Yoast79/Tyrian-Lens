@@ -12,9 +12,11 @@ using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
-using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
+using DiscordRPC;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GW2PS
 {
@@ -24,6 +26,15 @@ namespace GW2PS
         private IGw2Client gw2Client = new Gw2Client();
         private System.Windows.Forms.Timer gpsTimer = new System.Windows.Forms.Timer();
         private bool isWikiIntegrated = true;
+
+        private DiscordRpcClient? discordClient;
+        private bool isDiscordRpcEnabled = false;
+        private string lastCharacterName = "";
+        private DateTime sessionStartTime;
+        private int discordTickCounter = 0;
+        private int lastPresenceMapId = -1;
+        private string lastPresenceCharName = "";
+        private string currentMapName = "Tyria";
 
         private int lastMapId = -1;
         private double mapRectX, mapRectY, mapRectW, mapRectH;
@@ -44,7 +55,7 @@ namespace GW2PS
         
         private NotifyIcon notifyIcon;
 
-        public static void LogError(Exception ex)
+        public static void LogError(Exception? ex)
         {
             try
             {
@@ -151,7 +162,12 @@ namespace GW2PS
             if (!initialized) return;
 
             mapView.CoreWebView2.Settings.IsStatusBarEnabled = false;
+#if DEBUG
+            mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = true;
+            mapView.CoreWebView2.Settings.AreDevToolsEnabled = true;
+#else
             mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
+#endif
 
             mapView.CoreWebView2.NewWindowRequested += (s, e) =>
             {
@@ -167,7 +183,21 @@ namespace GW2PS
             };
 
             string localFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) ?? AppDomain.CurrentDomain.BaseDirectory;
+
+#if DEBUG
+            // In Debug mode, map gw2ps.local directly to the project source root folder
+            string debugRoot = Path.GetFullPath(Path.Combine(localFolder, @"..\..\.."));
+            if (Directory.Exists(debugRoot))
+            {
+                mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", debugRoot, CoreWebView2HostResourceAccessKind.Allow);
+            }
+            else
+            {
+                mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", localFolder, CoreWebView2HostResourceAccessKind.Allow);
+            }
+#else
             mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", localFolder, CoreWebView2HostResourceAccessKind.Allow);
+#endif
 
             mapView.CoreWebView2.WebMessageReceived += (s, e) => {
                 string? msg = null;
@@ -233,12 +263,16 @@ namespace GW2PS
                     {
                         try {
                             var json = System.Text.Json.JsonDocument.Parse(cleanJson);
-                            if (json.RootElement.TryGetProperty("action", out var act)) {
-                                string actionStr = act.GetString();
-                                if (actionStr == "trayNotification") {
-                                    string title = json.RootElement.GetProperty("title").GetString();
-                                    string text = json.RootElement.GetProperty("text").GetString();
-                                    notifyIcon.ShowBalloonTip(5000, title, text, ToolTipIcon.Info);
+                             if (json.RootElement.TryGetProperty("action", out var act)) {
+                                 string actionStr = act.GetString() ?? "";
+                                 if (actionStr == "trayNotification") {
+                                     string title = json.RootElement.GetProperty("title").GetString() ?? "";
+                                     string text = json.RootElement.GetProperty("text").GetString() ?? "";
+                                     notifyIcon.ShowBalloonTip(5000, title, text, ToolTipIcon.Info);
+                                 }
+                                else if (actionStr == "setDiscordRpcEnabled") {
+                                    bool enabled = json.RootElement.GetProperty("value").GetBoolean();
+                                    SetDiscordRpcEnabled(enabled);
                                 }
                                 else if (actionStr == "openLogFolder") {
                                     string srcLogPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "error_log.txt");
@@ -247,9 +281,47 @@ namespace GW2PS
                                     }
                                     
                                     string destLogPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "tyrian_lens_log.txt");
-                                    File.Copy(srcLogPath, destLogPath, true);
-                                    mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('TYRIAN_LENS_LOG.TXT SAVED TO DESKTOP');");
+                                     File.Copy(srcLogPath, destLogPath, true);
+                                     _ = mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('TYRIAN_LENS_LOG.TXT SAVED TO DESKTOP');");
+                                 }
+#if DEBUG
+                                 else if (actionStr == "devDeleteMarker") {
+                                     string file = json.RootElement.GetProperty("file").GetString() ?? "farming_markers.json";
+                                     var pos = json.RootElement.GetProperty("pos");
+                                     double px = pos[0].GetDouble();
+                                     double py = pos[1].GetDouble();
+                                     DevDeleteMarker(file, px, py);
+                                     _ = mapView.CoreWebView2.ExecuteScriptAsync($"if(window.showToast) window.showToast('MARKER DELETED FROM {file.ToUpper()}');");
+                                     _ = mapView.CoreWebView2.ExecuteScriptAsync("var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.reloadMarkers) frame.contentWindow.reloadMarkers();");
+                                 }
+                                else if (actionStr == "devDeleteCategory") {
+                                    string file = json.RootElement.GetProperty("file").GetString() ?? "farming_markers.json";
+                                    string layer = json.RootElement.GetProperty("layer").GetString() ?? "";
+                                    DevDeleteCategory(file, layer);
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync($"if(window.showToast) window.showToast('CATEGORY {layer.ToUpper()} DELETED');");
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync("var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.reloadMarkers) frame.contentWindow.reloadMarkers();");
                                 }
+                                else if (actionStr == "devShiftCategory128") {
+                                    string file = json.RootElement.GetProperty("file").GetString() ?? "farming_markers.json";
+                                    string layer = json.RootElement.GetProperty("layer").GetString() ?? "";
+                                    DevShiftCategory128(file, layer);
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync($"if(window.showToast) window.showToast('CATEGORY {layer.ToUpper()} SHIFTED +128 SOUTH');");
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync("var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.reloadMarkers) frame.contentWindow.reloadMarkers();");
+                                }
+                                else if (actionStr == "devMoveMarker") {
+                                    string file = json.RootElement.GetProperty("file").GetString() ?? "farming_markers.json";
+                                    var origPos = json.RootElement.GetProperty("origPos");
+                                    double ox = origPos[0].GetDouble();
+                                    double oy = origPos[1].GetDouble();
+                                    var newPos = json.RootElement.GetProperty("newPos");
+                                    double nx = newPos[0].GetDouble();
+                                    double ny = newPos[1].GetDouble();
+                                    double nz = json.RootElement.GetProperty("alt").GetDouble();
+                                    DevMoveMarker(file, ox, oy, nx, ny, nz);
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync($"if(window.showToast) window.showToast('MARKER MOVED');");
+                                    _ = mapView.CoreWebView2.ExecuteScriptAsync("var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.reloadMarkers) frame.contentWindow.reloadMarkers();");
+                                }
+#endif
                             }
                         } catch { }
                     }
@@ -279,7 +351,7 @@ namespace GW2PS
 
             try
             {
-                mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('SYNCING WITH DRF...');");
+                _ = mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('SYNCING WITH DRF...');");
 
                 Uri serverUri = new Uri("wss://drf.rs/ws");
 
@@ -293,14 +365,14 @@ namespace GW2PS
 
                 await drfSocket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
 
-                mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('DRF TRACKER ACTIVE!');");
+                _ = mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('DRF TRACKER ACTIVE!');");
 
-                var _ = Task.Run(ReceiveDRFData);
+                _ = Task.Run(ReceiveDRFData);
             }
             catch (Exception ex)
             {
                 string safeError = ex.Message.Replace("'", "\\'").Replace("\n", " ");
-                mapView.CoreWebView2.ExecuteScriptAsync($"window.showToast('DRF ERROR: {safeError}');");
+                _ = mapView.CoreWebView2.ExecuteScriptAsync($"window.showToast('DRF ERROR: {safeError}');");
             }
         }
 
@@ -339,6 +411,36 @@ namespace GW2PS
             {
                 var mumble = gw2Client.Mumble;
                 mumble.Update();
+
+                // Discord Rich Presence polling (throttled to avoid spam)
+                try
+                {
+                    if (isDiscordRpcEnabled && discordClient != null && !string.IsNullOrEmpty(mumble.RawIdentity))
+                    {
+                        discordTickCounter++;
+                        bool forceUpdate = false;
+                        
+                        string charName = mumble.CharacterName;
+                        int professionId = (int)mumble.Profession;
+                        int specId = mumble.Specialization;
+
+                        if (charName != lastPresenceCharName || mumble.MapId != lastPresenceMapId)
+                        {
+                            lastPresenceCharName = charName;
+                            lastPresenceMapId = mumble.MapId;
+                            forceUpdate = true;
+                        }
+
+                        // Update every 10 seconds (100 ticks of 100ms) or on forceUpdate
+                        if (forceUpdate || discordTickCounter >= 100)
+                        {
+                            discordTickCounter = 0;
+                            UpdateDiscordPresence(charName, professionId, specId);
+                        }
+                    }
+                }
+                catch { }
+
                 if (mumble.MapId == 0) return;
 
                 if (mumble.MapId != lastMapId)
@@ -353,7 +455,7 @@ namespace GW2PS
                     double avatarZInches = mumble.AvatarPosition.Z * 39.3700787;
                     double fX = contRectX + ((avatarXInches - mapRectX) / mapRectW * contRectW);
                     double fY = contRectY + ((1 - ((avatarZInches - mapRectY) / mapRectH)) * contRectH);
-                    string script = $"var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.updatePlayerLocation) frame.contentWindow.updatePlayerLocation({fX.ToString(CultureInfo.InvariantCulture)}, {fY.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.X.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.Z.ToString(CultureInfo.InvariantCulture)});";
+                    string script = $"var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.updatePlayerLocation) frame.contentWindow.updatePlayerLocation({fX.ToString(CultureInfo.InvariantCulture)}, {fY.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.X.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.Z.ToString(CultureInfo.InvariantCulture)}, {mumble.AvatarPosition.Y.ToString(CultureInfo.InvariantCulture)});";
                     mapView.CoreWebView2.ExecuteScriptAsync(script);
                 }
             }
@@ -365,6 +467,7 @@ namespace GW2PS
             try
             {
                 var mapData = await gw2Client.WebApi.V2.Maps.GetAsync(mapId);
+                currentMapName = mapData.Name;
                 mapRectX = mapData.MapRect.TopLeft.X;
                 mapRectY = mapData.MapRect.BottomRight.Y;
                 mapRectW = mapData.MapRect.BottomRight.X - mapData.MapRect.TopLeft.X;
@@ -376,5 +479,309 @@ namespace GW2PS
             }
             catch { }
         }
+
+        private void SetDiscordRpcEnabled(bool enabled)
+        {
+            isDiscordRpcEnabled = enabled;
+            if (enabled)
+            {
+                if (discordClient == null)
+                {
+                    // User's custom Client ID
+                    discordClient = new DiscordRpcClient("1507749876094472202");
+                    discordClient.Initialize();
+                    lastPresenceCharName = ""; // Force immediate presence refresh
+                    lastPresenceMapId = -1;
+                }
+            }
+            else
+            {
+                if (discordClient != null)
+                {
+                    try
+                    {
+                        discordClient.ClearPresence();
+                        discordClient.Dispose();
+                    }
+                    catch { }
+                    discordClient = null;
+                    lastPresenceCharName = "";
+                    lastPresenceMapId = -1;
+                }
+            }
+        }
+
+        private void UpdateDiscordPresence(string charName, int professionId, int specId)
+        {
+            if (discordClient == null || !isDiscordRpcEnabled) return;
+
+            if (string.IsNullOrEmpty(charName))
+            {
+                discordClient.SetPresence(new RichPresence()
+                {
+                    Details = "In Character Select",
+                    State = "Main Menu",
+                    Assets = new Assets()
+                    {
+                        LargeImageKey = "app_logo",
+                        LargeImageText = "Tyrian Lens"
+                    }
+                });
+                return;
+            }
+
+            if (charName != lastCharacterName)
+            {
+                lastCharacterName = charName;
+                sessionStartTime = DateTime.UtcNow;
+            }
+
+            string specName = GetSpecializationName(specId, professionId);
+            string baseProfName = GetBaseProfessionName(professionId);
+            string classDisplay = specId > 0 && specName != baseProfName ? $"{specName} ({baseProfName})" : baseProfName;
+            
+            string details = $"{charName}";
+            string state = $"Exploring {currentMapName}";
+
+            var presence = new RichPresence()
+            {
+                Details = details,
+                State = state,
+                Timestamps = new Timestamps()
+                {
+                    Start = sessionStartTime
+                },
+                Assets = new Assets()
+                {
+                    LargeImageKey = "app_logo",
+                    LargeImageText = "Tyrian Lens",
+                    SmallImageKey = specName.ToLowerInvariant(),
+                    SmallImageText = classDisplay
+                }
+            };
+
+            discordClient.SetPresence(presence);
+        }
+
+        private static string GetSpecializationName(int specId, int professionId)
+        {
+            return specId switch
+            {
+                // Guardian
+                5 => "Dragonhunter",
+                62 => "Firebrand",
+                65 => "Willbender",
+                // Warrior
+                18 => "Berserker",
+                61 => "Spellbreaker",
+                68 => "Bladesworn",
+                // Engineer
+                27 => "Scrapper",
+                58 => "Holosmith",
+                70 => "Mechanist",
+                // Ranger
+                30 => "Druid",
+                55 => "Soulbeast",
+                72 => "Untamed",
+                // Thief
+                52 => "Daredevil",
+                57 => "Deadeye",
+                71 => "Specter",
+                // Elementalist
+                48 => "Tempest",
+                56 => "Weaver",
+                73 => "Catalyst",
+                // Mesmer
+                40 => "Chronomancer",
+                59 => "Mirage",
+                66 => "Virtuoso",
+                // Necromancer
+                34 => "Reaper",
+                60 => "Scourge",
+                64 => "Harbinger",
+                // Revenant
+                14 => "Herald",
+                63 => "Renegade",
+                69 => "Vindicator",
+                // Fallback to base profession
+                _ => GetBaseProfessionName(professionId)
+            };
+        }
+
+        private static string GetBaseProfessionName(int professionId)
+        {
+            return professionId switch
+            {
+                1 => "Guardian",
+                2 => "Warrior",
+                3 => "Engineer",
+                4 => "Ranger",
+                5 => "Thief",
+                6 => "Elementalist",
+                7 => "Mesmer",
+                8 => "Necromancer",
+                9 => "Revenant",
+                _ => "Unknown Class"
+            };
+        }
+
+#if DEBUG
+        private string GetLocalDataFilePath(string filename)
+        {
+            string localFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) ?? AppDomain.CurrentDomain.BaseDirectory;
+            string dataPath = Path.GetFullPath(Path.Combine(localFolder, @"..\..\..\Data", filename));
+            if (!File.Exists(dataPath))
+            {
+                dataPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", filename);
+            }
+            return dataPath;
+        }
+
+        private void SaveJsonWithBackup(string filepath, string content)
+        {
+            try
+            {
+                string? dir = Path.GetDirectoryName(filepath);
+                if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir)) Directory.CreateDirectory(dir);
+
+                string backupPath = filepath + ".bak";
+                if (File.Exists(filepath))
+                {
+                    File.Copy(filepath, backupPath, true);
+                }
+                File.WriteAllText(filepath, content, Encoding.UTF8);
+            }
+            catch (Exception ex)
+            {
+                LogError(ex);
+            }
+        }
+
+        private void DevDeleteMarker(string filename, double posX, double posY)
+        {
+            string filepath = GetLocalDataFilePath(filename);
+            if (!File.Exists(filepath)) return;
+
+            string jsonContent = File.ReadAllText(filepath);
+            var array = JArray.Parse(jsonContent);
+            JObject? toRemove = null;
+
+            foreach (var item in array.Children<JObject>())
+            {
+                var pos = item["pos"] as JArray;
+                if (pos != null && pos.Count >= 2)
+                {
+                    double x = (double)pos[0];
+                    double y = (double)pos[1];
+                    if (Math.Abs(x - posX) < 0.15 && Math.Abs(y - posY) < 0.15)
+                    {
+                        toRemove = item;
+                        break;
+                    }
+                }
+            }
+
+            if (toRemove != null)
+            {
+                array.Remove(toRemove);
+                string updatedJson = JsonConvert.SerializeObject(array, Formatting.Indented);
+                SaveJsonWithBackup(filepath, updatedJson);
+            }
+        }
+
+        private void DevDeleteCategory(string filename, string category)
+        {
+            string filepath = GetLocalDataFilePath(filename);
+            if (!File.Exists(filepath)) return;
+
+            string jsonContent = File.ReadAllText(filepath);
+            var array = JArray.Parse(jsonContent);
+            var toRemoveList = new System.Collections.Generic.List<JObject>();
+
+            foreach (var item in array.Children<JObject>())
+            {
+                string? layer = item["layer"]?.ToString() ?? item["type"]?.ToString();
+                if (layer != null && string.Equals(layer, category, StringComparison.OrdinalIgnoreCase))
+                {
+                    toRemoveList.Add(item);
+                }
+            }
+
+            if (toRemoveList.Count > 0)
+            {
+                foreach (var item in toRemoveList)
+                {
+                    array.Remove(item);
+                }
+                string updatedJson = JsonConvert.SerializeObject(array, Formatting.Indented);
+                SaveJsonWithBackup(filepath, updatedJson);
+            }
+        }
+
+        private void DevShiftCategory128(string filename, string category)
+        {
+            string filepath = GetLocalDataFilePath(filename);
+            if (!File.Exists(filepath)) return;
+
+            string jsonContent = File.ReadAllText(filepath);
+            var array = JArray.Parse(jsonContent);
+            int shiftCount = 0;
+
+            foreach (var item in array.Children<JObject>())
+            {
+                string? layer = item["layer"]?.ToString() ?? item["type"]?.ToString();
+                if (layer != null && string.Equals(layer, category, StringComparison.OrdinalIgnoreCase))
+                {
+                    var pos = item["pos"] as JArray;
+                    if (pos != null && pos.Count >= 2)
+                    {
+                        double y = (double)pos[1];
+                        pos[1] = Math.Round((y + 128.0) * 10.0) / 10.0;
+                        shiftCount++;
+                    }
+                }
+            }
+
+            if (shiftCount > 0)
+            {
+                string updatedJson = JsonConvert.SerializeObject(array, Formatting.Indented);
+                SaveJsonWithBackup(filepath, updatedJson);
+            }
+        }
+
+        private void DevMoveMarker(string filename, double origX, double origY, double newX, double newY, double newZ)
+        {
+            string filepath = GetLocalDataFilePath(filename);
+            if (!File.Exists(filepath)) return;
+
+            string jsonContent = File.ReadAllText(filepath);
+            var array = JArray.Parse(jsonContent);
+            bool modified = false;
+
+            foreach (var item in array.Children<JObject>())
+            {
+                var pos = item["pos"] as JArray;
+                if (pos != null && pos.Count >= 2)
+                {
+                    double x = (double)pos[0];
+                    double y = (double)pos[1];
+                    if (Math.Abs(x - origX) < 0.15 && Math.Abs(y - origY) < 0.15)
+                    {
+                        pos[0] = Math.Round(newX * 10.0) / 10.0;
+                        pos[1] = Math.Round(newY * 10.0) / 10.0;
+                        item["alt"] = Math.Round(newZ * 100.0) / 100.0;
+                        modified = true;
+                        break;
+                    }
+                }
+            }
+
+            if (modified)
+            {
+                string updatedJson = JsonConvert.SerializeObject(array, Formatting.Indented);
+                SaveJsonWithBackup(filepath, updatedJson);
+            }
+        }
+#endif
     }
 }

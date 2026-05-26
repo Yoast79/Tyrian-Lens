@@ -7,9 +7,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationIcon>Assets\app_icon.ico</ApplicationIcon>
 		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<AssemblyName>Tyrian Lens</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="DiscordRichPresence" Version="1.6.1.70" />
 		<PackageReference Include="Gw2Sharp" Version="1.7.4" />
 		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3856.49" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
@@ -22,10 +24,10 @@
 		</Content>
 		
 		<!-- Static Data / Databases -->
-		<Content Include="Data\timers_config.json;Data\manifest.json">
+		<Content Include="Data\timers_config.json;Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-		<None Include="Data\**" Exclude="Data\timers_config.json;Data\manifest.json">
+		<None Include="Data\**" Exclude="Data\timers_config.json;Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</None>
 		

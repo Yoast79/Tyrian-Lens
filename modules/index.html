@@ -3,6 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Tyrian Lens</title>
+		<script>
+			window.showLoader = function(loaderId) {
+				const el = document.getElementById(loaderId);
+				if (el) el.classList.add('active');
+			};
+			window.hideLoader = function(loaderId) {
+				const el = document.getElementById(loaderId);
+				if (el) el.classList.remove('active');
+			};
+		</script>
 		<link rel="manifest" href="https://gw2ps.local/Data/manifest.json" />
         <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
@@ -239,17 +249,9 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.3.6";
+			const APP_VERSION = "1.3.7";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
-			window.showLoader = function(loaderId) {
-				const el = document.getElementById(loaderId);
-				if (el) el.classList.add('active');
-			};
-			window.hideLoader = function(loaderId) {
-				const el = document.getElementById(loaderId);
-				if (el) el.classList.remove('active');
-			};
 			window.pendingMapSwitch = null;
 			window.manualSwitchActive = false;
 			window.lastPlayerCoords = {x: 0, y: 0};
@@ -317,6 +319,12 @@
                         window.postToHost(JSON.stringify({action: 'updateDRFToken', token: savedDRFToken}));
                     }, 1500); 
                 }
+
+				if (settings.discordRpcEnabled) {
+					setTimeout(() => {
+						window.postToHost(JSON.stringify({action: 'setDiscordRpcEnabled', value: true}));
+					}, 2000);
+				}
 
 				// --- START UPDATE CHECKER ---
 				const REPO = "Yoast79/Tyrian-Lens";
@@ -772,6 +780,7 @@
                     else if (data.action === 'updateDRFToken') { window.postToHost(JSON.stringify(data)); }
                     else if (data.action === 'trayNotification') { window.postToHost(JSON.stringify(data)); }
                     else if (data.action === 'openLogFolder') { window.postToHost(JSON.stringify(data)); }
+                    else if (data.action === 'setDiscordRpcEnabled') { window.postToHost(JSON.stringify(data)); }
                     else if (data.action === 'updateTheme') {
                         document.body.setAttribute('data-theme', data.theme);
                         window.postToFrames(data);

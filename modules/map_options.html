@@ -41,6 +41,37 @@
 			.category-items { padding-left: 10px; display: none; margin-top: 5px; }
 			.category-items.open { display: block; }
 
+			/* Nested Subcategory Styling */
+			.nested-category-header {
+				font-size: 11px;
+				font-weight: bold;
+				cursor: pointer;
+				padding: 6px 0 6px 10px;
+				display: flex;
+				align-items: center;
+				border-bottom: 1px solid rgba(74, 59, 42, 0.15);
+				letter-spacing: 0.5px;
+				color: #cbb07a;
+				margin-top: 5px;
+			}
+			.nested-category-header::before {
+				content: '▶';
+				font-size: 7px;
+				margin-right: 6px;
+				transition: transform 0.3s;
+			}
+			.nested-category-header.open::before {
+				transform: rotate(90deg);
+			}
+			.nested-category-items {
+				padding-left: 20px;
+				display: none;
+				margin-top: 3px;
+			}
+			.nested-category-items.open {
+				display: block;
+			}
+
 			/* Toggle Switches */
 			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 6px 0; font-size: 12px; letter-spacing: 1px; cursor: pointer; }
 			.filter-option input { display: none; }
@@ -60,7 +91,7 @@
 
 			.hidden-node { display: none !important; }
 
-			/* Premium Guild Wars 2 Black & Gold Custom Tooltip */
+			/* Premium Guild Wars 2 Black and Gold Custom Tooltip */
 			[data-tooltip] {
 				position: relative;
 			}
@@ -111,7 +142,7 @@
 				transform: translate(-50%, 0);
 			}
 
-			/* Color Picker & Swatches from map_options.html */
+			/* Color Picker and Swatches from map_options.html */
 			.color-picker { display: flex; gap: 8px; padding: 0 0 10px 0; }
 			.color-swatch { width: 16px; height: 16px; border-radius: 50%; border: 1px solid var(--border-color, #4a3b2a); cursor: pointer; transition: 0.2s; }
 			.color-swatch:hover { border-color: var(--text-primary, #e2c07d); }
@@ -230,11 +261,11 @@
 		</div>
 		</div> <!-- end section-map-options -->
 
-		<div id="section-gathering-nodes">
+		<div id="section-farming_nodes">
 			<div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
 				<span>Gathering Nodes</span>
 				<label class="filter-option" style="padding: 0; margin: 0;">
-					<input type="checkbox" id="master-gathering-nodes" onchange="toggleMasterCategory('gathering-nodes', this.checked)">
+					<input type="checkbox" id="master-farming_nodes" onchange="toggleMasterCategory('farming_nodes', this.checked)">
 					<div class="toggle-btn" style="margin-right: 0;"></div>
 				</label>
 			</div>
@@ -245,43 +276,43 @@
 				<input type="checkbox" id="node_copper_ore" onchange="saveAndToggle('node_copper_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/6E17C5A65955239640743E48B30A3425FACA5D02/65925.png">
-						<span class="label-text">Rich Copper Vein</span>
+						<span class="label-text">Copper</span>
 					</label>
 			<label class="filter-option">
 				<input type="checkbox" id="node_iron_ore" onchange="saveAndToggle('node_iron_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/C1FD07F60E0B74C497761C1C014D03E402E60C6F/65927.png">
-						<span class="label-text">Rich Iron Vein</span>
+						<span class="label-text">Iron</span>
 					</label>
 			<label class="filter-option">
 				<input type="checkbox" id="node_silver_ore" onchange="saveAndToggle('node_silver_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/DA1D9FCF3006222DEE691016EFF8AEE162C3431D/65931.png">
-						<span class="label-text">Rich Silver Vein</span>
+						<span class="label-text">Silver</span>
 					</label>
 			<label class="filter-option">
 				<input type="checkbox" id="node_gold_ore" onchange="saveAndToggle('node_gold_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/D9C17CE765F921332DEBCA44681DFA2DA8586A36/65926.png">
-						<span class="label-text">Rich Gold Vein</span>
+						<span class="label-text">Gold</span>
 					</label>
 			<label class="filter-option">
 				<input type="checkbox" id="node_platinum_ore" onchange="saveAndToggle('node_platinum_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/413D7EE8CE04C0BC07C31A4B381EB6344150F849/65930.png">
-						<span class="label-text">Rich Platinum Vein</span>
+						<span class="label-text">Platinum</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_rich_mithril_vein" onchange="saveAndToggle('node_rich_mithril_vein', this.checked)">
+				<input type="checkbox" id="node_mithril_ore" onchange="saveAndToggle('node_mithril_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png">
-						<span class="label-text">Rich Mithril Vein</span>
+						<span class="label-text">Mithril</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_rich_orichalcum_vein" onchange="saveAndToggle('node_rich_orichalcum_vein', this.checked)">
+				<input type="checkbox" id="node_orichalcum_ore" onchange="saveAndToggle('node_orichalcum_ore', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png">
-						<span class="label-text">Rich Orichalcum Vein</span>
+						<span class="label-text">Orichalcum</span>
 					</label>
 			<label class="filter-option">
 				<input type="checkbox" id="node_quartz_crystal" onchange="saveAndToggle('node_quartz_crystal', this.checked)">
@@ -290,10 +321,10 @@
 						<span class="label-text">Quartz Crystal</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_rich_quartz_crystal_formation" onchange="saveAndToggle('node_rich_quartz_crystal_formation', this.checked)">
+				<input type="checkbox" id="node_rich_ore_vein" onchange="saveAndToggle('node_rich_ore_vein', this.checked)">
 					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/6D0737BD7FC3E270D67A9C0D214CCAB70A4C1B74/603252.png">
-						<span class="label-text">Rich Quartz Crystal Formation</span>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png">
+						<span class="label-text">Rich Uncategorized Veins</span>
 					</label>
 		</div>
 
@@ -334,305 +365,299 @@
 		<div class="category-header" id="head-plants" onclick="toggleCategory('cat-plants')">Plants</div>
 		<div class="category-items" id="cat-plants">
 			<label class="filter-option">
-				<input type="checkbox" id="node_lettuce" onchange="saveAndToggle('node_lettuce', this.checked)">
+				<input type="checkbox" id="node_lettuce_plants" onchange="saveAndToggle('node_lettuce_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/F370E14DE5C1FACE91D19F19FD65CD19C5F74F75/63317.png">
 						<span class="label-text">Lettuce</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_onions" onchange="saveAndToggle('node_onions', this.checked)">
+				<input type="checkbox" id="node_onion_plants" onchange="saveAndToggle('node_onion_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/62FEA707A3547EA74113C29A110B40B23501B75C/63115.png">
 						<span class="label-text">Onions</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_potato" onchange="saveAndToggle('node_potato', this.checked)">
+				<input type="checkbox" id="node_potato_plants" onchange="saveAndToggle('node_potato_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/24CE9454113F0609E6E9B655EF0670B40D5522EC/63245.png">
 						<span class="label-text">Potato</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_clam" onchange="saveAndToggle('node_clam', this.checked)">
+				<input type="checkbox" id="node_clam_plants" onchange="saveAndToggle('node_clam_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/6C2143352D3E0B4B45A3E01CE2FAFAB8D0D77C51/63364.png">
 						<span class="label-text">Clam</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_strawberry_patch" onchange="saveAndToggle('node_strawberry_patch', this.checked)">
+				<input type="checkbox" id="node_strawberry_plants" onchange="saveAndToggle('node_strawberry_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/FA03EA4891609320A6CE08069EABE7F65465EC09/63330.png">
 						<span class="label-text">Strawberry Patch</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_coral" onchange="saveAndToggle('node_coral', this.checked)">
+				<input type="checkbox" id="node_coral_plants" onchange="saveAndToggle('node_coral_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/E3EE022F17127B45FDFC266BDAD05033359BF9E2/221175.png">
 						<span class="label-text">Coral</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_seaweed" onchange="saveAndToggle('node_seaweed', this.checked)">
+				<input type="checkbox" id="node_seaweed_plants" onchange="saveAndToggle('node_seaweed_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/35C6906CCA6A0541383D5AE31E656456DC3418E5/63385.png">
 						<span class="label-text">Seaweed</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_sugar_pumpkin" onchange="saveAndToggle('node_sugar_pumpkin', this.checked)">
+				<input type="checkbox" id="node_sugar_pumpkin_plants" onchange="saveAndToggle('node_sugar_pumpkin_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/6ED9FE4CB6DCDA7F542718507DC33305FDD9A62C/63386.png">
 						<span class="label-text">Sugar Pumpkin</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_artichoke" onchange="saveAndToggle('node_artichoke', this.checked)">
+				<input type="checkbox" id="node_artichoke_plants" onchange="saveAndToggle('node_artichoke_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/3FF00D3CF70B4AB4E117040F541D384302E7D93E/219472.png">
 						<span class="label-text">Artichoke</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_asparagus" onchange="saveAndToggle('node_asparagus', this.checked)">
+				<input type="checkbox" id="node_asparagus_plants" onchange="saveAndToggle('node_asparagus_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/693F7207FB74B962DE327E355C18D680E0357965/219467.png">
 						<span class="label-text">Asparagus</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_passiflora" onchange="saveAndToggle('node_passiflora', this.checked)">
+				<input type="checkbox" id="node_passiflora_plants" onchange="saveAndToggle('node_passiflora_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/A3EF78BAC765FCBFBA41FE95A17839A3AA3AEDC8/511906.png">
 						<span class="label-text">Blooming Passiflora</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_toxic_seedlings" onchange="saveAndToggle('node_toxic_seedlings', this.checked)">
+				<input type="checkbox" id="node_toxic_seedling_plants" onchange="saveAndToggle('node_toxic_seedling_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/78B90364F0FA4806E6600DD260BE2EBC51D1431D/665773.png">
 						<span class="label-text">Toxic Seedlings</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_black_crocus" onchange="saveAndToggle('node_black_crocus', this.checked)">
+				<input type="checkbox" id="node_black_crocus_plants" onchange="saveAndToggle('node_black_crocus_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/FE1C9BB06AF7E83EDCBD655B030EB8EC00CBD350/219491.png">
 						<span class="label-text">Black Crocus</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_flax" onchange="saveAndToggle('node_flax', this.checked)">
+				<input type="checkbox" id="node_flax_plants" onchange="saveAndToggle('node_flax_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/481BDB30B60B08E759CCEF3FF10C9441D49BBB76/1203081.png">
 						<span class="label-text">Flax</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_mussels" onchange="saveAndToggle('node_mussels', this.checked)">
+				<input type="checkbox" id="node_mussels_plants" onchange="saveAndToggle('node_mussels_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/C8E60C9C5013DD03AA152A634615C5B1DF610E39/223191.png">
 						<span class="label-text">Mussels</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_omnomberries" onchange="saveAndToggle('node_omnomberries', this.checked)">
+				<input type="checkbox" id="node_omnomberry_plants" onchange="saveAndToggle('node_omnomberry_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/9C5457B024D9152906D808A53BFF67539BB94FA0/219396.png">
 						<span class="label-text">Omnomberries</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_orrian_truffle" onchange="saveAndToggle('node_orrian_truffle', this.checked)">
+				<input type="checkbox" id="node_orrian_truffle_plants" onchange="saveAndToggle('node_orrian_truffle_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/0AF0FD06192106D5D9C73A35A3E364CE6B4A1FC0/219489.png">
 						<span class="label-text">Orrian Truffle</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_sawgill_mushrooms" onchange="saveAndToggle('node_sawgill_mushrooms', this.checked)">
+				<input type="checkbox" id="node_sawgill_mushroom_plants" onchange="saveAndToggle('node_sawgill_mushroom_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/AAFF3F76320FCB0177550F2D6CBA22334D935AF1/1203082.png">
 						<span class="label-text">Sawgill Mushrooms</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_jungle_plants" onchange="saveAndToggle('node_jungle_plants', this.checked)">
+				<input type="checkbox" id="node_jungle_plants_plants" onchange="saveAndToggle('node_jungle_plants_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
 						<span class="label-text">Jungle Plants</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_verdant_herbs" onchange="saveAndToggle('node_verdant_herbs', this.checked)">
+				<input type="checkbox" id="node_verdant_herbs_plants" onchange="saveAndToggle('node_verdant_herbs_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
 						<span class="label-text">Verdant Herbs</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_desert_herbs" onchange="saveAndToggle('node_desert_herbs', this.checked)">
+				<input type="checkbox" id="node_desert_herbs_plants" onchange="saveAndToggle('node_desert_herbs_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
 						<span class="label-text">Desert Herbs</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_mixed_herbs" onchange="saveAndToggle('node_mixed_herbs', this.checked)">
+				<input type="checkbox" id="node_mixed_herbs_plants" onchange="saveAndToggle('node_mixed_herbs_plants', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
 						<span class="label-text">Mixed Herbs</span>
 					</label>
 			<label class="filter-option">
-				<input type="checkbox" id="node_mixed_vegetables" onchange="saveAndToggle('node_mixed_vegetables', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
-						<span class="label-text">Mixed Vegetables</span>
-					</label>
+				<input type="checkbox" id="node_mixed_vegetables_plants" onchange="saveAndToggle('node_mixed_vegetables_plants', this.checked)">
+				<div class="toggle-btn"></div>
+				<img class="node-icon" src="https://wiki.guildwars2.com/images/2/2d/Plant_resource_%28map_icon%29.png">
+				<span class="label-text">Mixed Vegetables</span>
+			</label>
 		</div>
+		<div class="category-header" id="head-currencies" onclick="toggleCategory('cat-currencies')">Living World Currencies</div>
+		<div class="category-items" id="cat-currencies">
+			<div class="nested-category-header" id="head-lws3" onclick="toggleCategory('cat-lws3')">Living World Season 3</div>
+			<div class="nested-category-items" id="cat-lws3">
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bloodstone Fen.">
+					<input type="checkbox" id="node_bloodstone_crystal" onchange="saveAndToggle('node_bloodstone_crystal', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png">
+							<span class="label-text">Bloodstone Crystals</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Ember Bay.">
+					<input type="checkbox" id="node_petrified_stump" onchange="saveAndToggle('node_petrified_stump', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png">
+							<span class="label-text">Petrified Stump</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bitterfrost Frontier.">
+					<input type="checkbox" id="node_winterberry_bush" onchange="saveAndToggle('node_winterberry_bush', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/6/68/Winterberry_Bush.png">
+							<span class="label-text">Winterberry Bush</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lake Dorric.">
+					<input type="checkbox" id="node_jade_fragment" onchange="saveAndToggle('node_jade_fragment', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6a/Jade_Fragments.png">
+							<span class="label-text">Jade Fragments</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Draconic Mons.">
+					<input type="checkbox" id="node_primordal_orchid" onchange="saveAndToggle('node_primordal_orchid', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c2/Primordial_Orchid.png">
+							<span class="label-text">Primordial Orchid</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Siren's Landing.">
+					<input type="checkbox" id="node_orrian_oyster" onchange="saveAndToggle('node_orrian_oyster', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Orrian_Oyster.png">
+							<span class="label-text">Orrian Oyster</span>
+						</label>
+			</div>
 
-		<div class="category-header" id="head-lws3" onclick="toggleCategory('cat-lws3')">Living World Season 3</div>
-		<div class="category-items" id="cat-lws3">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bloodstone Fen.">
-				<input type="checkbox" id="node_bloodstone_crystals" onchange="saveAndToggle('node_bloodstone_crystals', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/0DA92F9059C30EF00DBC6CB0D233F235E17F12DD/1465570.png">
-						<span class="label-text">Bloodstone Crystals (Blood Ruby)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Ember Bay.">
-				<input type="checkbox" id="node_petrified_stump" onchange="saveAndToggle('node_petrified_stump', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/EC4BA02B3BFEE603551B53BBF5305679AE700776/1493259.png">
-						<span class="label-text">Petrified Stump (Petrified Wood)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bitterfrost Frontier.">
-				<input type="checkbox" id="node_winterberry_bush" onchange="saveAndToggle('node_winterberry_bush', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/68/Winterberry_Bush.png">
-						<span class="label-text">Winterberry Bush (Fresh Winterberry)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lake Dorric.">
-				<input type="checkbox" id="node_jade_fragments" onchange="saveAndToggle('node_jade_fragments', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6a/Jade_Fragments.png">
-						<span class="label-text">Jade Fragments (Jade Shard)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Draconic Mons.">
-				<input type="checkbox" id="node_primordial_orchid" onchange="saveAndToggle('node_primordial_orchid', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c2/Primordial_Orchid.png">
-						<span class="label-text">Primordial Orchid (Fire Orchid Blossom)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Siren's Landing.">
-				<input type="checkbox" id="node_orrian_oyster" onchange="saveAndToggle('node_orrian_oyster', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Orrian_Oyster.png">
-						<span class="label-text">Orrian Oyster (Orrian Pearl)</span>
-					</label>
+			<div class="nested-category-header" id="head-lws4" onclick="toggleCategory('cat-lws4')">Living World Season 4</div>
+			<div class="nested-category-items" id="cat-lws4">
+				<label class="filter-option">
+					<input type="checkbox" id="node_difluorite_crystal" onchange="saveAndToggle('node_difluorite_crystal', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c7/Difluorite_Crystals.png">
+							<span class="label-text">Difluorite Crystals</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_mistonium" onchange="saveAndToggle('node_mistonium', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/8/89/Mistonium.png">
+							<span class="label-text">Mistonium</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_kournan_supply_cache" onchange="saveAndToggle('node_kournan_supply_cache', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/6/69/Kournan_Supply_Cache.png">
+							<span class="label-text">Kournan Supply Cache</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_dragon_crystal_node" onchange="saveAndToggle('node_dragon_crystal_node', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/3/32/Dragon_Crystal_Node.png">
+							<span class="label-text">Dragon Crystal Node</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_mistborn_mote" onchange="saveAndToggle('node_mistborn_mote', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f6/Mistborn_Mote_%28node%29.png">
+							<span class="label-text">Mistborn Mote</span>
+						</label>
+			</div>
+
+			<div class="nested-category-header" id="head-icebrood" onclick="toggleCategory('cat-icebrood')">Icebrood Saga</div>
+			<div class="nested-category-items" id="cat-icebrood">
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bjora Marches.">
+					<input type="checkbox" id="node_eternal_ice" onchange="saveAndToggle('node_eternal_ice', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png">
+							<span class="label-text">Eternal Ice</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Drizzlewood Coast.">
+					<input type="checkbox" id="node_salvage_pile" onchange="saveAndToggle('node_salvage_pile', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f3/Salvage_Pile.png">
+							<span class="label-text">Salvage Pile</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Grothmar Valley.">
+					<input type="checkbox" id="node_hatched_chili_pepper_bush" onchange="saveAndToggle('node_hatched_chili_pepper_bush', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/8/81/Hatched_Chili_Pepper_Bush.png">
+							<span class="label-text">Hatched Chili Pepper Bush</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Drizzlewood Coast.">
+					<input type="checkbox" id="node_lost_charr_supply_drop" onchange="saveAndToggle('node_lost_charr_supply_drop', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/3EE14808378010C1725CE19EB199FDC10E755DEF/2292739.png">
+							<span class="label-text">Lost Charr Supply Drop</span>
+						</label>
+			</div>
+
+			<div class="nested-category-header" id="head-janthir" onclick="toggleCategory('cat-janthir')">Janthir Wilds</div>
+			<div class="nested-category-items" id="cat-janthir">
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations of Rotted Titan Amber and Charged Titan Ore in Janthir Syntri.">
+					<input type="checkbox" id="node_titan_ore" onchange="saveAndToggle('node_titan_ore', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/a/ac/Charged_Titan_Ore_%28node%29.png">
+							<span class="label-text">Rotted Amber / Charged Titan Ore</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lowland Shore.">
+					<input type="checkbox" id="node_honey_flower" onchange="saveAndToggle('node_honey_flower', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/da/Honey_Flower_%28node%29.png">
+							<span class="label-text">Honey Flower</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lowland Shore.">
+					<input type="checkbox" id="node_lowland_pine_sapling" onchange="saveAndToggle('node_lowland_pine_sapling', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/8/87/Lowland_Pine_Sapling.png">
+							<span class="label-text">Lowland Pine Sapling</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens &amp; Bava Nisos.">
+					<input type="checkbox" id="node_titan_heatstone" onchange="saveAndToggle('node_titan_heatstone', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/7/7f/Titan_Heatstone_Cluster.png">
+							<span class="label-text">Titan Heatstone</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens &amp; Bava Nisos.">
+					<input type="checkbox" id="node_mursaat_obsidian" onchange="saveAndToggle('node_mursaat_obsidian', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/9/9c/Mursaat_Obsidian.png">
+							<span class="label-text">Mursaat Obsidian</span>
+						</label>
+			</div>
+
+			<div class="nested-category-header" id="head-eod" onclick="toggleCategory('cat-eod')">End of Dragons</div>
+			<div class="nested-category-items" id="cat-eod">
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in The Echovald Wilds.">
+					<input type="checkbox" id="node_petrified_echovald_sapling" onchange="saveAndToggle('node_petrified_echovald_sapling', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/F006736696D976F6D3B3C71AF811907D05949393/2595188.png">
+							<span class="label-text">Petrified Echovald Sapling</span>
+						</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragon's End.">
+					<input type="checkbox" id="node_jadeite_vein" onchange="saveAndToggle('node_jadeite_vein', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png">
+							<span class="label-text">Jadeite Vein</span>
+						</label>
+			</div>
 		</div>
-
-		<div class="category-header" id="head-lws4" onclick="toggleCategory('cat-lws4')">Living World Season 4</div>
-		<div class="category-items" id="cat-lws4">
-			<label class="filter-option">
-				<input type="checkbox" id="node_brandstone" onchange="saveAndToggle('node_brandstone', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/380A7E3B250B050C2C39B1106CA39AED65C8396B/1894933.png">
-						<span class="label-text">Brandstone (Kralkatite Ore)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Sandswept Isles.">
-				<input type="checkbox" id="node_difluorite_crystals" onchange="saveAndToggle('node_difluorite_crystals', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c7/Difluorite_Crystals.png">
-						<span class="label-text">Difluorite Crystals (Difluorite Crystal)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Jahai Bluffs.">
-				<input type="checkbox" id="node_mistonium" onchange="saveAndToggle('node_mistonium', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/89/Mistonium.png">
-						<span class="label-text">Mistonium (Lump of Mistonium)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Domain of Kourna.">
-				<input type="checkbox" id="node_kournan_supply_cache" onchange="saveAndToggle('node_kournan_supply_cache', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/69/Kournan_Supply_Cache.png">
-						<span class="label-text">Kournan Supply Cache (Inscribed Shard)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Thunderhead Peaks.">
-				<input type="checkbox" id="node_dragon_crystal_node" onchange="saveAndToggle('node_dragon_crystal_node', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/3/32/Dragon_Crystal_Node.png">
-						<span class="label-text">Dragon Crystal Node (Branded Mass)</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragonfall.">
-				<input type="checkbox" id="node_mistborn_mote" onchange="saveAndToggle('node_mistborn_mote', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f6/Mistborn_Mote_%28node%29.png">
-						<span class="label-text">Mistborn Mote (Mistborn Mote)</span>
-					</label>
-		</div>
-
-		<div class="category-header" id="head-icebrood" onclick="toggleCategory('cat-icebrood')">Icebrood Saga</div>
-		<div class="category-items" id="cat-icebrood">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Bjora Marches.">
-				<input type="checkbox" id="node_eternal_ice" onchange="saveAndToggle('node_eternal_ice', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f2/Eternal_Ice.png">
-						<span class="label-text">Eternal Ice</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Drizzlewood Coast.">
-				<input type="checkbox" id="node_salvage_pile" onchange="saveAndToggle('node_salvage_pile', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f3/Salvage_Pile.png">
-						<span class="label-text">Salvage Pile</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Grothmar Valley.">
-				<input type="checkbox" id="node_hatched_chili_pepper_bush" onchange="saveAndToggle('node_hatched_chili_pepper_bush', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/81/Hatched_Chili_Pepper_Bush.png">
-						<span class="label-text">Hatched Chili Pepper Bush</span>
-					</label>
-		</div>
-
-		<div class="category-header" id="head-janthir" onclick="toggleCategory('cat-janthir')">Janthir Wilds</div>
-		<div class="category-items" id="cat-janthir">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri. It can also be a Charged Titan Ore.">
-				<input type="checkbox" id="node_rotted_titan_amber" onchange="saveAndToggle('node_rotted_titan_amber', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/8b/Rotted_Titan_Amber_%28node%29.png">
-						<span class="label-text">Rotted Titan Amber </span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Janthir Syntri. It can also be a Rotted Titan Amber.">
-				<input type="checkbox" id="node_charged_titan_ore" onchange="saveAndToggle('node_charged_titan_ore', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/ac/Charged_Titan_Ore_%28node%29.png">
-						<span class="label-text">Charged Titan Ore</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lowland Shore.">
-				<input type="checkbox" id="node_honey_flower" onchange="saveAndToggle('node_honey_flower', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/da/Honey_Flower_%28node%29.png">
-						<span class="label-text">Honey Flower</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Lowland Shore.">
-				<input type="checkbox" id="node_lowland_pine_sapling" onchange="saveAndToggle('node_lowland_pine_sapling', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/87/Lowland_Pine_Sapling.png">
-						<span class="label-text">Lowland Pine Sapling</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.">
-				<input type="checkbox" id="node_titan_heatstone" onchange="saveAndToggle('node_titan_heatstone', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/7/7f/Titan_Heatstone_Cluster.png">
-						<span class="label-text">Titan Heatstone</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Mistburned Barrens & Bava Nisos.">
-				<input type="checkbox" id="node_mursaat_obsidian" onchange="saveAndToggle('node_mursaat_obsidian', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/9/9c/Mursaat_Obsidian.png">
-						<span class="label-text">Mursaat Obsidian</span>
-					</label>
-		</div>
-
-		<div class="category-header" id="head-eod" onclick="toggleCategory('cat-eod')">End of Dragons</div>
-		<div class="category-items" id="cat-eod">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in The Echovald Wilds.">
-				<input type="checkbox" id="node_petrified_echovald_sapling" onchange="saveAndToggle('node_petrified_echovald_sapling', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/F006736696D976F6D3B3C71AF811907D05949393/2595188.png">
-						<span class="label-text">Petrified Echovald Sapling</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragon's End.">
-				<input type="checkbox" id="node_jadeite_vein" onchange="saveAndToggle('node_jadeite_vein', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png">
-						<span class="label-text">Jadeite Vein</span>
-					</label>
-		</div>
-		</div> <!-- end section-gathering-nodes -->
-
-		<div id="section-miscellaneous">
+		</div> <!-- end section-farming_nodes -->		<div id="section-miscellaneous">
 			<div class="section-title" style="display: flex; justify-content: space-between; align-items: center;">
 				<span>Miscellaneous</span>
 				<label class="filter-option" style="padding: 0; margin: 0;">
@@ -642,337 +667,510 @@
 			</div>
 
 			<div class="category-header" id="head-hunting" onclick="toggleCategory('cat-hunting')">Hunting</div>
-		<div class="category-items" id="cat-hunting">
-			<label class="filter-option" data-tooltip="A green circle will indicate the currently active World Boss.">
-				<input type="checkbox" id="node_world_boss" onchange="saveAndToggle('node_world_boss', this.checked)">
+			<div class="category-items" id="cat-hunting">
+				<label class="filter-option" data-tooltip="A green circle will indicate the currently active World Boss.">
+					<input type="checkbox" id="node_world_boss" onchange="saveAndToggle('node_world_boss', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png">
-						<span class="label-text">World Bosses</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria.">
-				<input type="checkbox" id="node_mists_rift" onchange="saveAndToggle('node_mists_rift', this.checked)">
+					<span class="label-text">World Bosses</span>
+				</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria.">
+					<input type="checkbox" id="node_mist_rift" onchange="saveAndToggle('node_mist_rift', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1a/Mists_Rift_%28map_icon%29.png">
-						<span class="label-text">Mists Rifts</span>
-					</label>
-			
-			<label class="filter-option" data-tooltip="Pick up a bounty at the bounty-board first before they show up in your game.">
-				<input type="checkbox" id="node_bounty" onchange="saveAndToggle('node_bounty', this.checked)">
-				<div class="toggle-btn"></div>
-				<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6c/Bounty_Target_yellow_%28map_icon%29.png">
-			    	<span class="label-text">Bounties</span>
-		     	</label>
-
-			<label class="filter-option" data-tooltip="Individual pets can be searched in the Search menu.">
-				<input type="checkbox" id="node_ranger_pet" onchange="saveAndToggle('node_ranger_pet', this.checked)">
+					<span class="label-text">Mist Rifts</span>
+				</label>
+				<label class="filter-option" data-tooltip="Pick up a bounty at the bounty-board first before they show up in your game.">
+					<input type="checkbox" id="node_bounty" onchange="saveAndToggle('node_bounty', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6c/Bounty_Target_yellow_%28map_icon%29.png">
+					<span class="label-text">Bounties</span>
+				</label>
+				<label class="filter-option" data-tooltip="Individual pets can be searched in the Search menu.">
+					<input type="checkbox" id="node_ranger_pet" onchange="saveAndToggle('node_ranger_pet', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1e/Ranger_icon_small.png">
-						<span class="label-text">Ranger Pets</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria.">
-				<input type="checkbox" id="node_fishing_hole" onchange="saveAndToggle('node_fishing_hole', this.checked)">
+					<span class="label-text">Ranger Pets</span>
+				</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria.">
+					<input type="checkbox" id="node_fishing_hole" onchange="saveAndToggle('node_fishing_hole', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f3/Fish_resource_%28map_icon%29.png">
-						<span class="label-text">Fishing Holes</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations.">
-				<input type="checkbox" id="node_treasure_mushroom" onchange="saveAndToggle('node_treasure_mushroom', this.checked)">
+					<span class="label-text">Fishing Holes</span>
+				</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations.">
+					<input type="checkbox" id="node_treasure_mushroom" onchange="saveAndToggle('node_treasure_mushroom', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/E79141BDA89AE40E9D106DB41B2AF8EAFDA62ACE/1203248.png">
-						<span class="label-text">Treasure Mushroom</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in the Thaumanova Reactor in Metrica Province.">
-				<input type="checkbox" id="node_matrix_cube_key" onchange="saveAndToggle('node_matrix_cube_key', this.checked)">
+					<span class="label-text">Treasure Mushroom</span>
+				</label>
+				<label class="filter-option" data-tooltip="The markers are possible spawn locations in the Thaumanova Reactor in Metrica Province.">
+					<input type="checkbox" id="node_matrix_cube_key" onchange="saveAndToggle('node_matrix_cube_key', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/EFA4911B016A0D78A9A820B656635A71286C0207/65723.png">
-						<span class="label-text">Matrix Cube Key</span>
-					</label>
+					<span class="label-text">Matrix Cube Key</span>
+				</label>
+			</div>
 
-			
-		</div>
-
-		<div class="category-header" id="head-trading" onclick="toggleCategory('cat-trading')">Trading & Vendors</div>
-		<div class="category-items" id="cat-trading">
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_merchant" onchange="saveAndToggle('node_npc_merchant', this.checked)">
+			<div class="category-header" id="head-trading" onclick="toggleCategory('cat-trading')">Trading &amp; Vendors</div>
+			<div class="category-items" id="cat-trading">
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_merchant" onchange="saveAndToggle('node_npc_merchant', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/19/Merchant.png">
-						<span class="label-text">Merchants</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_gathering_merchant" onchange="saveAndToggle('node_npc_gathering_merchant', this.checked)">
+					<span class="label-text">Merchants</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_gathering_merchant" onchange="saveAndToggle('node_npc_gathering_merchant', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png">
-						<span class="label-text">Gathering Merchants</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_dungeon_merchant" onchange="saveAndToggle('node_npc_dungeon_merchant', this.checked)">
+					<span class="label-text">Gathering Merchants</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_dungeon_merchant" onchange="saveAndToggle('node_npc_dungeon_merchant', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png">
-						<span class="label-text">Dungeon Merchants</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_laurel_merchant" onchange="saveAndToggle('node_npc_laurel_merchant', this.checked)">
+					<span class="label-text">Dungeon Merchants</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_laurel_merchant" onchange="saveAndToggle('node_npc_laurel_merchant', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png">
-						<span class="label-text">Laurel Merchants</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_guild_commendation" onchange="saveAndToggle('node_npc_guild_commendation', this.checked)">
+					<span class="label-text">Laurel Merchants</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_guild_commendation" onchange="saveAndToggle('node_npc_guild_commendation', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png">
-						<span class="label-text">Guild Commendation Traders</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_bank" onchange="saveAndToggle('node_npc_bank', this.checked)">
+					<span class="label-text">Guild Commendation Traders</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_bank" onchange="saveAndToggle('node_npc_bank', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png">
-						<span class="label-text">Account Vault (Bank)</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_guild_vault" onchange="saveAndToggle('node_npc_guild_vault', this.checked)">
+					<span class="label-text">Account Vault (Bank)</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_guild_vault" onchange="saveAndToggle('node_npc_guild_vault', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png">
-						<span class="label-text">Guild Vault</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_trading_post" onchange="saveAndToggle('node_npc_trading_post', this.checked)">
+					<span class="label-text">Guild Vault</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_trading_post" onchange="saveAndToggle('node_npc_trading_post', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png">
-						<span class="label-text">Trading Post</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_reinforce_armor" onchange="saveAndToggle('node_npc_reinforce_armor', this.checked)">
+					<span class="label-text">Trading Post</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_reinforce_armor" onchange="saveAndToggle('node_npc_reinforce_armor', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png">
-						<span class="label-text">Reinforce Armor</span>
-					</label>
-
-			<div style="display: flex; align-items: center; gap: 5px;">
-				<label class="filter-option" data-tooltip="Toggles visibility of Pact Supply Agents (shows their active daily spawn spots in Tyria)" style="flex-grow: 1;">
-					<input type="checkbox" id="node_pact_supply_network_agent" onchange="saveAndToggle('node_pact_supply_network_agent', this.checked)">
+					<span class="label-text">Reinforce Armor</span>
+				</label>
+				<div style="display: flex; align-items: center; gap: 5px;">
+					<label class="filter-option" data-tooltip="Toggles visibility of Pact Supply Agents (shows their active daily spawn spots in Tyria)" style="flex-grow: 1;">
+						<input type="checkbox" id="node_pact_supply_network_agent" onchange="saveAndToggle('node_pact_supply_network_agent', this.checked)">
 						<div class="toggle-btn"></div>
 						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png">
-							<span class="label-text">Pact Supply Vendors</span>
-						</label>
-				<button class="copy-btn" title="Copy Waypoints" onclick="copyPSNAWaypoints()" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 2px 8px; cursor: pointer; font-size: 10px; border-radius: 3px;">
-					COPY WAYPOINTS
-				</button>
-			</div>
-
-			<label class="filter-option" data-tooltip="Toggles visibility of Priory Historian Elisa (shows her active weekly spawn spot in the Crystal Desert.)">
-				<input type="checkbox" id="node_historian_elisa" onchange="saveAndToggle('node_historian_elisa', this.checked)">
+						<span class="label-text">Pact Supply Agents</span>
+					</label>
+					<button class="copy-btn" title="Copy Waypoints" onclick="copyPSNAWaypoints()" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 2px 8px; cursor: pointer; font-size: 10px; border-radius: 3px;">
+						COPY WAYPOINTS
+					</button>
+				</div>
+				<label class="filter-option" data-tooltip="Toggles visibility of Priory Historian Elisa (shows her active weekly spawn spot in the Crystal Desert.)">
+					<input type="checkbox" id="node_historian_elisa" onchange="saveAndToggle('node_historian_elisa', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/19/Merchant.png">
-						<span class="label-text">Historian Elisa</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="Includes: Mystic Forge, Makeover Preview, Fractals of the Mists, Activity, Raid Rally Point, Jade Bot Workbench, Guild Commendation Trader, and other service NPCs.">
-				<input type="checkbox" id="node_npc_misc" onchange="saveAndToggle('node_npc_misc', this.checked)">
+					<span class="label-text">Historian Elisa</span>
+				</label>
+				<label class="filter-option" data-tooltip="Includes: Mystic Forge, Makeover Preview, Fractals of the Mists, and other services.">
+					<input type="checkbox" id="node_npc_misc" onchange="saveAndToggle('node_npc_misc', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png">
-						<span class="label-text">Other NPC Services</span>
-					</label>
-		</div>
+					<span class="label-text">Other Service NPCs</span>
+				</label>
+			</div>
 
-		<div class="category-header" id="head-crafting" onclick="toggleCategory('cat-crafting')">Crafting Vendors</div>
-		<div class="category-items" id="cat-crafting">
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_armorsmith" onchange="saveAndToggle('node_npc_armorsmith', this.checked)">
+			<div class="category-header" id="head-crafting" onclick="toggleCategory('cat-crafting')">Crafting Vendors</div>
+			<div class="category-items" id="cat-crafting">
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_armorsmith" onchange="saveAndToggle('node_npc_armorsmith', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d7/Armorsmithing_Station_%28map_icon%29.png">
-						<span class="label-text">Armorsmith</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_artificer" onchange="saveAndToggle('node_npc_artificer', this.checked)">
+					<span class="label-text">Armorsmith</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_artificer" onchange="saveAndToggle('node_npc_artificer', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/7/73/Artificing_Station_%28map_icon%29.png">
-						<span class="label-text">Artificer</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_chef" onchange="saveAndToggle('node_npc_chef', this.checked)">
+					<span class="label-text">Artificer</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_chef" onchange="saveAndToggle('node_npc_chef', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c4/Cooking_Station_%28map_icon%29.png">
-						<span class="label-text">Chef</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_huntsman" onchange="saveAndToggle('node_npc_huntsman', this.checked)">
+					<span class="label-text">Chef</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_huntsman" onchange="saveAndToggle('node_npc_huntsman', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1d/Huntsman%27s_Station_%28map_icon%29.png">
-						<span class="label-text">Huntsman</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_jeweler" onchange="saveAndToggle('node_npc_jeweler', this.checked)">
+					<span class="label-text">Huntsman</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_jeweler" onchange="saveAndToggle('node_npc_jeweler', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/b2/Jeweling_Station_%28map_icon%29.png">
-						<span class="label-text">Jeweler</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_leatherworker" onchange="saveAndToggle('node_npc_leatherworker', this.checked)">
+					<span class="label-text">Jeweler</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_leatherworker" onchange="saveAndToggle('node_npc_leatherworker', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/db/Leatherworking_Station_%28map_icon%29.png">
-						<span class="label-text">Leatherworker</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_tailor" onchange="saveAndToggle('node_npc_tailor', this.checked)">
+					<span class="label-text">Leatherworker</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_tailor" onchange="saveAndToggle('node_npc_tailor', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/12/Tailoring_Station_%28map_icon%29.png">
-						<span class="label-text">Tailor</span>
-					</label>
-			<label class="filter-option">
-				<input type="checkbox" id="node_npc_weaponsmith" onchange="saveAndToggle('node_npc_weaponsmith', this.checked)">
+					<span class="label-text">Tailor</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_npc_weaponsmith" onchange="saveAndToggle('node_npc_weaponsmith', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png">
-						<span class="label-text">Weaponsmith</span>
-					</label>
-		</div>
+					<span class="label-text">Weaponsmith</span>
+				</label>
+			</div>
 
-
-		<div class="category-header" id="head-chests" onclick="toggleCategory('cat-chests')">Chests & Loot</div>
-		<div class="category-items" id="cat-chests">
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria.">
-				<input type="checkbox" id="node_sunken_chest" onchange="saveAndToggle('node_sunken_chest', this.checked)">
+			<div class="category-header" id="head-chests" onclick="toggleCategory('cat-chests')">Chests &amp; Loot</div>
+			<div class="category-items" id="cat-chests">
+				<label class="filter-option">
+					<input type="checkbox" id="node_dry_top_buried_locked_chest_chests" onchange="saveAndToggle('node_dry_top_buried_locked_chest_chests', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
+					<span class="label-text">Dry Top Chests</span>
+				</label>
+				<label class="filter-option" data-tooltip="You need a Shovel to dig these up and a Bandit Key to open them">
+					<input type="checkbox" id="node_silverwastes_chests" onchange="saveAndToggle('node_silverwastes_chests', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
+					<span class="label-text">Silverwastes Chests</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_sunken_chest_chests" onchange="saveAndToggle('node_sunken_chest_chests', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://render.guildwars2.com/file/B5C303B0DDD7925DEC9DE039AF50C1570D9A17BF/1983548.png">
-						<span class="label-text">Sunken Chests</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dry Top.">
-				<input type="checkbox" id="node_dry_top_chest" onchange="saveAndToggle('node_dry_top_chest', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
-						<span class="label-text">Dry Top Chests</span>
-					</label>
-
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in The Silverwastes.">
-				<input type="checkbox" id="node_silverwastes_chest" onchange="saveAndToggle('node_silverwastes_chest', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
-						<span class="label-text">Silverwastes Chests</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Verdant Brink.">
-				<input type="checkbox" id="node_airship_cargo" onchange="saveAndToggle('node_airship_cargo', this.checked)">
+					<span class="label-text">Sunken Chests</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_airship_cargo" onchange="saveAndToggle('node_airship_cargo', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/14/Airship_Part.png">
-						<span class="label-text">Airship Cargo</span>
-					</label>	
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Auric Basin.">
-				<input type="checkbox" id="node_exalted_chest" onchange="saveAndToggle('node_exalted_chest', this.checked)">
+					<span class="label-text">Airship Cargo</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_exalted_chest" onchange="saveAndToggle('node_exalted_chest', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/1/14/Lump_of_Aurillium.png">
-						<span class="label-text">Exalted Chests</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Tangled Depths.">
-				<input type="checkbox" id="node_crystallized_supply_cache" onchange="saveAndToggle('node_crystallized_supply_cache', this.checked)">
+					<span class="label-text">Exalted Chests</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_crystallized_supply_cache" onchange="saveAndToggle('node_crystallized_supply_cache', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/b4/Ley_Line_Crystal.png">
-						<span class="label-text">Crystallized Supply Cache</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations in Dragon's Stand.">
-				<input type="checkbox" id="node_noxious_seed_pod" onchange="saveAndToggle('node_noxious_seed_pod', this.checked)">
+					<span class="label-text">Crystallized Supply Caches</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_noxious_seed_pod" onchange="saveAndToggle('node_noxious_seed_pod', this.checked)">
 					<div class="toggle-btn"></div>
 					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/61/Heirloom_Seed_Pouch.png">
-						<span class="label-text">Noxious Seed Pod</span>
-					</label>
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Secrets of the Obscure.">
-				<input type="checkbox" id="node_greater_arcane_chest" onchange="saveAndToggle('node_greater_arcane_chest', this.checked)">
+					<span class="label-text">Noxious Seed Pods</span>
+				</label>
+				<label class="filter-option" data-tooltip="Toggles visibility of Skritt Stashes.">
+					<input type="checkbox" id="node_skritt_stash" onchange="saveAndToggle('node_skritt_stash', this.checked)">
 					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/8d/Ancient_Coin.png">
+					<img class="node-icon" src="https://render.guildwars2.com/file/B8100541BD56F4D5EBDC3AF96925CA494CC54760/1493437.png">
+					<span class="label-text">Skritt Stashes</span>
+				</label>
+				<label class="filter-option" data-tooltip="Toggles visibility of Trade Caches.">
+					<input type="checkbox" id="node_crystal_desert_trade_cache_chests" onchange="saveAndToggle('node_crystal_desert_trade_cache_chests', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/7CD20D4B072AD23F97202F05E4130CF8A4B069C5/69116.png">
+							<span class="label-text">Trade Caches</span>
+						</label>
+				<label class="filter-option" data-tooltip="Toggles visibility of Sand Piles.">
+					<input type="checkbox" id="node_crystal_desert_sand_pile_chests" onchange="saveAndToggle('node_crystal_desert_sand_pile_chests', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://render.guildwars2.com/file/497B6B6311E0B8D900CE59E063E1E296A6FE9E57/1766467.png">
+							<span class="label-text">Sand Piles</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_aetherlocation_treasure" onchange="saveAndToggle('node_aetherlocation_treasure', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png">
+							<span class="label-text">Aetherlocation Treasure</span>
+						</label>
+			</div>
+
+			<div class="nested-category-header" id="head-arcanechests" onclick="toggleCategory('cat-arcanechests')">
+				<img class="node-icon" src="https://gw2ps.local/Assets/Icons/greater_arcane_chest.png" style="vertical-align: middle; margin-right: 6px;">
+					<span style="font-size: 1.2em; vertical-align: middle;">Arcane Chests</span>
+				</div>
+
+			<div class="nested-category-items" id="cat-arcanechests">
+				<label class="filter-option">
+					<input type="checkbox" id="node_lesser_arcane_chest_chests" onchange="saveAndToggle('node_lesser_arcane_chest_chests', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/8/8d/Ancient_Coin.png">
+							<span class="label-text">Lesser Arcane Chests</span>
+						</label>
+
+				<label class="filter-option">
+					<input type="checkbox" id="node_greater_arcane_chest_chests" onchange="saveAndToggle('node_greater_arcane_chest_chests', this.checked)">
+						<div class="toggle-btn"></div>
 						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/greater_arcane_chest.png">
-						<span class="label-text">Arcane Chests</span>
-					</label>
+							<span class="label-text">Greater Arcane Chests</span>
+						</label>
+			</div>
 
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Secrets of the Obscure.">
-				<input type="checkbox" id="node_shrine_guardian_chest" onchange="saveAndToggle('node_shrine_guardian_chest', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png">
-						<span class="label-text">Shrine Guardian Chest</span>
-					</label>
+			<div class="nested-category-header" id="head-detectedtreasures" onclick="toggleCategory('cat-detectedtreasures')">
+				<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d4/Detected_Treasure.png" style="vertical-align: middle; margin-right: 6px;">
+					<span style="font-size: 1.2em; vertical-align: middle;">Detected Treasures</span>
+				</div>
 
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Janthir Wilds. Use your Warclaw's 'Sniff' skill to find these.">
-				<input type="checkbox" id="node_detected_treasure" onchange="saveAndToggle('node_detected_treasure', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d4/Detected_Treasure.png">
-						<span class="label-text">Detected Treasure</span>
-					</label>
+			<div class="nested-category-items" id="cat-detectedtreasures">
+				<label class="filter-option" data-tooltip="Use your Warclaw's 'Sniff' skill to find these">
+					<input type="checkbox" id="node_minor_detected_treasure" onchange="saveAndToggle('node_minor_detected_treasure', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d4/Detected_Treasure.png">
+							<span class="label-text">Detected Treasure</span>
+						</label>
 
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Janthir Wilds. Use your Warclaw's 'Sniff' skill to find these.">
-				<input type="checkbox" id="node_major_detected_treasure" onchange="saveAndToggle('node_major_detected_treasure', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/major_detected_treasure.png">
-						<span class="label-text">Major Detected Treasure</span>
-					</label>
+				<label class="filter-option" data-tooltip="Use your Warclaw's 'Sniff' skill to find these">
+					<input type="checkbox" id="node_major_detected_treasure" onchange="saveAndToggle('node_major_detected_treasure', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/major_detected_treasure.png">
+							<span class="label-text">Major Detected Treasure</span>
+						</label>
+			</div>
+			
+			<div class="nested-category-header" id="head-magicmirrors" onclick="toggleCategory('cat-magicmirrors')">
+				<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png" style="vertical-align: middle; margin-right: 6px;">
+					<span style="font-size: 1.2em; vertical-align: middle;">Magic Mirrors</span>
+				</div>
 
-			<label class="filter-option" data-tooltip="The markers are possible spawn locations across Tyria. Use your Skimmer's 'Activate Aetherlocation' skill to find these.">
-				<input type="checkbox" id="node_aetherlocation_treasure" onchange="saveAndToggle('node_aetherlocation_treasure', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png">
-						<span class="label-text">Aetherlocation Treasure</span>
-					</label>
-
-
-			<label class="filter-option" data-tooltip="The markers are spawn locations across Visions of Eternity.">
-					<input type="checkbox" id="node_magic_mirrors" onchange="saveAndToggle('node_magic_mirrors', this.checked)">
+			<div class="nested-category-items" id="cat-magicmirrors">
+				<label class="filter-option">
+					<input type="checkbox" id="node_magic_mirror" onchange="saveAndToggle('node_magic_mirror', this.checked)">
 						<div class="toggle-btn"></div>
 						<img class="node-icon" src="https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png">
-							<span class="label-text">Magic Mirrors</span>
+							<span class="label-text">Magic Mirror</span>
 						</label>
-			<div style="border-left: 2px solid #4a3b2a; margin-left: 10px; padding-left: 10px; margin-top: 5px; margin-bottom: 5px;">
-				<label class="filter-option" data-tooltip="The markers are spawn locations across Visions of Eternity.">
-					<input type="checkbox" id="node_obscure_chest" onchange="saveAndToggle('node_obscure_chest', this.checked)">
+
+				<label class="filter-option" data-tooltip="Play the Magic Mirror mini-game for these to show up">
+					<input type="checkbox" id="node_node_small_obscure_chest_chests" onchange="saveAndToggle('node_node_small_obscure_chest_chests', this.checked)">
 						<div class="toggle-btn"></div>
-						<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
-							<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_medium.png">
-								<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_large.png">
-							<span class="label-text">Obscure Chests</span>
+						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_small.png">
+							<span class="label-text">Small Obscure Chests</span>
 						</label>
+
+				<label class="filter-option" data-tooltip="Play the Magic Mirror mini-game for these to show up">
+					<input type="checkbox" id="node_medium_obscure_chest_chests" onchange="saveAndToggle('node_medium_obscure_chest_chests', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_medium.png">
+							<span class="label-text">Medium Obscure Chests</span>
+						</label>
+
+				<label class="filter-option" data-tooltip="Play the Magic Mirror mini-game for these to show up">
+					<input type="checkbox" id="node_large_obscure_chest_chests" onchange="saveAndToggle('node_large_obscure_chest_chests', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://gw2ps.local/Assets/Icons/obscure_chest_large.png">
+							<span class="label-text">Large Obscure Chests</span>
+						</label>
+			</div>
+
+			<div class="category-header" id="head-achievements" onclick="toggleCategory('cat-achievements')">Achievements</div>
+			<div class="category-items" id="cat-achievements">
+				<label class="filter-option">
+					<input type="checkbox" id="node_dry_top_coin_collector_achievement" onchange="saveAndToggle('node_dry_top_coin_collector_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d6/Dry_Top.png">
+					<span class="label-text">Dry Top - Coin Collector</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_silverwastes_lost_badges_achievement" onchange="saveAndToggle('node_silverwastes_lost_badges_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/a8/The_Silverwastes.png">
+					<span class="label-text">Silverwastes - Lost Badges</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_silverwastes_golden_lost_badges_achievement" onchange="saveAndToggle('node_silverwastes_golden_lost_badges_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/a/a8/The_Silverwastes.png">
+					<span class="label-text">Silverwastes - Golden Lost Badges</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_auric_basin_no_mask_left_behind_achievement" onchange="saveAndToggle('node_auric_basin_no_mask_left_behind_achievement', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/9/9a/Uplifted.png">
+							<span class="label-text">Auric Basin - No Mask Left Behind</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_ember_bay_token_collector_achievement" onchange="saveAndToggle('node_ember_bay_token_collector_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/4/4a/Rising_Flames.png">
+					<span class="label-text">Ember Bay - Token Collector</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_draconis_mons_rock_collector_achievement" onchange="saveAndToggle('node_draconis_mons_rock_collector_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/ba/Awakened_alarmed_%28Forearmed_Is_Forewarned_map_icon%29.png">
+					<span class="label-text">Draconic Mons - Rock Collector</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_sirens_landing_storyteller_achievement" onchange="saveAndToggle('node_sirens_landing_storyteller_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/8/87/Guide_to_Waterproofing.png">
+					<span class="label-text">Siren's Landing - Story Teller</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_bleached_bones_achievement" onchange="saveAndToggle('node_bleached_bones_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png">
+					<span class="label-text">Crystal Oasis - Bleached Bones</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_lost_dwarven_chest_achievement" onchange="saveAndToggle('node_lost_dwarven_chest_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png">
+					<span class="label-text">Desert Highlands - Dwarven Remnants</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_forgotten_debris_achievement" onchange="saveAndToggle('node_forgotten_debris_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png">
+					<span class="label-text">Elon Riverlands - Forgotten Debris</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_shadows_provisions_achievement" onchange="saveAndToggle('node_shadows_provisions_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png">
+					<span class="label-text">The Desolation - Shadows Provisions</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_timeworn_bust_achievement" onchange="saveAndToggle('node_timeworn_bust_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png">
+					<span class="label-text">Domain of Vabbi - Scourge Buster</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_praise_joko_achievement" onchange="saveAndToggle('node_praise_joko_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/b/b8/Domain_of_Vabbi.png">
+					<span class="label-text">Domain of Vabbi - Praise Joko!</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_domain_of_istan_lost_to_time_achievement" onchange="saveAndToggle('node_domain_of_istan_lost_to_time_achievement', this.checked)">
+						<div class="toggle-btn"></div>
+						<img class="node-icon" src="https://wiki.guildwars2.com/images/7/77/Daybreak.png">
+							<span class="label-text">Domain of Istan - Lost to Time</span>
+						</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_bjora_marches_treasure_hunter_achievement" onchange="saveAndToggle('node_bjora_marches_treasure_hunter_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png">
+					<span class="label-text">Bjora Marches - Bjora Marches Treasure Hunter</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_shrine_guardian_achievement" onchange="saveAndToggle('node_shrine_guardian_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png">
+					<span class="label-text">Shrine Guardian Achievements</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_illuminating_seitung_province_achievement" onchange="saveAndToggle('node_illuminating_seitung_province_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">Seitung Province - Illuminating Seitung Province</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_light_these_streets_achievement" onchange="saveAndToggle('node_light_these_streets_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">New Kaineng City - Light These Streets</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_lighting_the_echovald_wilds_achievement" onchange="saveAndToggle('node_lighting_the_echovald_wilds_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">The Echovald Wilds - Lighting The Echovald Wilds</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_lighting_dragons_end_achievement" onchange="saveAndToggle('node_lighting_dragons_end_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">Dragon's End - Lighting Dragon's End</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_illuminating_skywatch_archipelago_achievement" onchange="saveAndToggle('node_illuminating_skywatch_archipelago_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">Skywatch Archipelago - Illuminating Skywatch Archipelago</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_illuminating_amnytas_achievement" onchange="saveAndToggle('node_illuminating_amnytas_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">Amnytas - Illuminating Amnytas</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_illuminating_inner_nayos_achievement" onchange="saveAndToggle('node_illuminating_inner_nayos_achievement', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://gw2ps.local/Assets/Icons/starlight_lantern.png">
+					<span class="label-text">Inner Nayos - Illuminating Inner Nayos</span>
+				</label>
+			</div>
+
+			<div class="category-header" id="head-festivals" onclick="toggleCategory('cat-festivals')">Festivals</div>
+			<div class="category-items" id="cat-festivals">
+				<label class="filter-option">
+					<input type="checkbox" id="node_fireworks_launchers" onchange="saveAndToggle('node_fireworks_launchers', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/9/9e/Fireworks_%28Box_o%27_Fun_overhead_icon%29.png">
+					<span class="label-text">Dragon Bash - Fireworks Launchers</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_dragon_pinata" onchange="saveAndToggle('node_dragon_pinata', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d3/Dragon_Bash_Feats.png">
+					<span class="label-text">Dragon Bash - Dragon Piñatas</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_zephyrite_kite_basket" onchange="saveAndToggle('node_zephyrite_kite_basket', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/0/05/Four_Winds_Customs.png">
+					<span class="label-text">Festival of the Four Winds - Zephyrite Kite Baskets</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_carving_pumpkin" onchange="saveAndToggle('node_carving_pumpkin', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/51/Shadow_of_the_Mad_King.png">
+					<span class="label-text">Halloween - Carving Pumpkins</span>
+				</label>
+				<label class="filter-option">
+					<input type="checkbox" id="node_orphan" onchange="saveAndToggle('node_orphan', this.checked)">
+					<div class="toggle-btn"></div>
+					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/5e/Wintersday_achievement.png">
+					<span class="label-text">Wintersday - Orphans</span>
+				</label>
 			</div>
 		</div>
 
-		<div class="category-header" id="head-festivals" onclick="toggleCategory('cat-festivals')">Festivals</div>
-		<div class="category-items" id="cat-festivals">
-			<label class="filter-option">
-				<input type="checkbox" id="node_fireworks_launchers" onchange="saveAndToggle('node_fireworks_launchers', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/6/63/Dragon_Bash_%28achievements%29.png">
-						<span class="label-text">Dragon Bash - Fireworks Launchers</span>
-					</label>
-
-			<label class="filter-option">
-				<input type="checkbox" id="node_dragon_pinata" onchange="saveAndToggle('node_dragon_pinata', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/d/d3/Dragon_Bash_Feats.png">
-						<span class="label-text">Dragon Bash - Dragon Piñatas</span>
-					</label>
-
-			<label class="filter-option">
-				<input type="checkbox" id="node_zephyrite_kite_basket" onchange="saveAndToggle('node_zephyrite_kite_basket', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/0/05/Four_Winds_Customs.png">
-						<span class="label-text">Festival of the Four Winds - Zephyrite Kite Baskets</span>
-					</label>
-
-			<label class="filter-option">
-				<input type="checkbox" id="node_carving_pumpkin" onchange="saveAndToggle('node_carving_pumpkin', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/51/Shadow_of_the_Mad_King.png">
-						<span class="label-text">Halloween - Carving Pumpkins</span>
-					</label>
-
-			<label class="filter-option">
-				<input type="checkbox" id="node_orphan" onchange="saveAndToggle('node_orphan', this.checked)">
-					<div class="toggle-btn"></div>
-					<img class="node-icon" src="https://wiki.guildwars2.com/images/5/5e/Wintersday_achievement.png">
-						<span class="label-text">Wintersday - Orphans</span>
-					</label>
-		</div>
-		</div> <!-- end section-miscellaneous -->
-
 		<script>
+			// <![CDATA[
 			function toggleCategory(id) {
 			const items = document.getElementById(id);
 			const header = document.getElementById('head-' + id.split('-')[1]);
@@ -1047,7 +1245,7 @@
 					const sectionWrapper = el.closest('[id^="section-"]');
 					if (sectionWrapper) {
 						const sectionName = sectionWrapper.id.replace('section-', '');
-						const masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"gathering-nodes":true,"miscellaneous":true}');
+						const masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"farming_nodes":true,"miscellaneous":true}');
 						isMasterOn = masterToggles[sectionName] !== false;
 					}
 				}
@@ -1072,11 +1270,17 @@
 					else s.classList.remove('active');
 				});
 			}
-
-			function toggleMasterCategory(section, isChecked) {
-				let masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"gathering-nodes":true,"miscellaneous":true}');
+				function toggleMasterCategory(section, isChecked) {
+				let masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"farming_nodes":true,"miscellaneous":true}');
 				masterToggles[section] = isChecked;
 				localStorage.setItem('gw2_master_toggles', JSON.stringify(masterToggles));
+
+				// Also save it to gw2_map_settings if it's a map UI key (like farming_nodes)
+				if (section === 'farming_nodes') {
+					let mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
+					mapSettings['farming_nodes'] = isChecked;
+					localStorage.setItem('gw2_map_settings', JSON.stringify(mapSettings));
+				}
 
 				const container = document.getElementById(`section-${section}`);
 				if (container) {
@@ -1090,6 +1294,9 @@
 						window.parent.postMessage({ action: 'toggleMapLayer', name: el.id, isVisible: finalVisible }, '*');
 					});
 				}
+
+				// Post the master category toggle state directly to the map!
+				window.parent.postMessage({ action: 'toggleMapLayer', name: section, isVisible: isChecked }, '*');
 			}
 
 			function restoreCategories() {
@@ -1104,10 +1311,13 @@
 				});
 			}
 
+			// Disable right-click context menu (blocks "Inspect Element" and rummaging in the console)
+			document.addEventListener('contextmenu', event => event.preventDefault());
+
 			window.onload = () => {
 				const mapSettings = JSON.parse(localStorage.getItem('gw2_map_settings') || '{}');
 				const markerSettings = JSON.parse(localStorage.getItem('gw2_marker_settings') || '{}');
-				const masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"gathering-nodes":true,"miscellaneous":true}');
+				const masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"farming_nodes":true,"miscellaneous":true}');
 
 				// Force farming_nodes master toggle to true to ensure independent node toggles work flawlessly
 				mapSettings['farming_nodes'] = true;
@@ -1166,7 +1376,7 @@
 				});
 
 				// Initialize Master Toggles UI and Disabled state
-				['map-options', 'gathering-nodes', 'miscellaneous'].forEach(section => {
+				['map-options', 'farming_nodes', 'miscellaneous'].forEach(section => {
 					const isChecked = masterToggles[section] !== false;
 					const masterEl = document.getElementById(`master-${section}`);
 					if (masterEl) masterEl.checked = isChecked;
@@ -1187,21 +1397,23 @@
                     document.body.setAttribute('data-theme', e.data.theme);
                 }
             });
+			// ]]>
 		</script>
 		<script>
+			// <![CDATA[
 			async function copyPSNAWaypoints() {
 			window.parent.postMessage({ action: 'toast', msg: 'SYNCING WITH ROTATION TABLE...' }, "*");
 
 			// DATA SOURCE: Verified 7-Day Fixed Location Table (Wiki Reference)
 			// Each index (0-6) represents the day of the week (Sunday-Saturday)
 			const rotation = {
-				0: ["[&BIkHAAA=]", "[&BDoBAAA=]", "[&BO4CAAA=]", "[&BC0AAAA=]", "[&BIUCAAA=]", "[&BCECAAA=]"], // Sunday
-				1: ["[&BIcHAAA=]", "[&BEwDAAA=]", "[&BNIEAAA=]", "[&BKYBAAA=]", "[&BIMCAAA=]", "[&BA8CAAA=]"], // Monday
-				2: ["[&BH8HAAA=]", "[&BEgAAAA=]", "[&BKgCAAA=]", "[&BBEAAAA=]", "[&BGQCAAA=]", "[&BIMBAAA=]"], // Tuesday
-				3: ["[&BHoHAAA=]", "[&BLQDAAA=]", "[&BCEDAAA=]", "[&BKYAAAA=]", "[&BLQAAAA=]", "[&BFEDAAA=]"], // Wednesday
-				4: ["[&BH8HAAA=]", "[&BF0AAAA=]", "[&BO4CAAA=]", "[&BEUDAAA=]", "[&BJcBAAA=]", "[&BOcBAAA=]"], // Thursday
-				5: ["[&BJcHAAA=]", "[&BMwCAAA=]", "[&BKYCAAA=]", "[&BNUGAAA=]", "[&BHsBAAA=]", "[&BNMAAAA=]"], // Friday
-				6: ["[&BH8HAAA=]", "[&BNMCAAA=]", "[&BB8DAAA=]", "[&BJIBAAA=]", "[&BE8CAAA=]", "[&BF8BAAA=]"]  // Saturday
+				0: ["[\x26BIkHAAA=]", "[\x26BDoBAAA=]", "[\x26BO4CAAA=]", "[\x26BC0AAAA=]", "[\x26BIUCAAA=]", "[\x26BCECAAA=]"], // Sunday
+				1: ["[\x26BIcHAAA=]", "[\x26BEwDAAA=]", "[\x26BNIEAAA=]", "[\x26BKYBAAA=]", "[\x26BIMCAAA=]", "[\x26BA8CAAA=]"], // Monday
+				2: ["[\x26BH8HAAA=]", "[\x26BEgAAAA=]", "[\x26BKgCAAA=]", "[\x26BBEAAAA=]", "[\x26BGQCAAA=]", "[\x26BIMBAAA=]"], // Tuesday
+				3: ["[\x26BHoHAAA=]", "[\x26BLQDAAA=]", "[\x26BCEDAAA=]", "[\x26BKYAAAA=]", "[\x26BLQAAAA=]", "[\x26BFEDAAA=]"], // Wednesday
+				4: ["[\x26BH8HAAA=]", "[\x26BF0AAAA=]", "[\x26BO4CAAA=]", "[\x26BEUDAAA=]", "[\x26BJcBAAA=]", "[\x26BOcBAAA=]"], // Thursday
+				5: ["[\x26BJcHAAA=]", "[\x26BMwCAAA=]", "[\x26BKYCAAA=]", "[\x26BNUGAAA=]", "[\x26BHsBAAA=]", "[\x26BNMAAAA=]"], // Friday
+				6: ["[\x26BH8HAAA=]", "[\x26BNMCAAA=]", "[\x26BB8DAAA=]", "[\x26BJIBAAA=]", "[\x26BE8CAAA=]", "[\x26BF8BAAA=]"]  // Saturday
 			};
 
 			try {
@@ -1229,7 +1441,7 @@
         window.parent.postMessage({ action: 'toast', msg: 'ROTATION SYNC ERROR' }, "*");
     }
 }
-
+			// ]]>
 		</script>
 	</body>
 </html>
