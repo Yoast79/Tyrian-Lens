@@ -7163,6 +7163,18 @@
         "icon":  "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
         "layer":  "node_npc_reinforce_armor"
     },
+	{
+        "pos":  [
+                    5106,
+                    62492
+                ],
+        "node":  "Reinforce Armor",
+        "yields":  [
+                       "Reinforce Armor"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
+        "layer":  "node_npc_reinforce_armor"
+    },
     {
         "pos":  [
                     44086,
