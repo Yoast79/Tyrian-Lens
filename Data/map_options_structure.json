@@ -507,9 +507,20 @@
                 "hasColorPicker": true
               },
               {
+                "id": "node_npc_map_collector",
+                "label": "Special Currency Collectors",
+                "icon": "https://wiki.guildwars2.com/images/6/69/Zeghai_of_the_Lost.png"
+              },
+              {
                 "id": "node_npc_reinforce_armor",
                 "label": "Reinforce Armor",
                 "icon": "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_npc_makeover_preview",
+                "label": "Makeover Preview",
+                "icon": "https://wiki.guildwars2.com/images/e/e8/Makeover_Preview.png",
                 "hasColorPicker": true
               },
               {
@@ -949,7 +960,7 @@
               {
                 "id": "node_illuminating_seitung_province_achievement",
                 "label": "Seitung Province - Illuminating Seitung Province",
-                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "icon": "https://wiki.guildwars2.com/images/0/0a/Beckon_the_Skies_overhead.png",
                 "hasColorPicker": true,
                 "tooltip": "Light the lantern for progression towards the 'Illuminating Seitung Province' achievement."
               },
@@ -963,7 +974,7 @@
               {
                 "id": "node_light_these_streets_achievement",
                 "label": "New Kaineng City - Light These Streets",
-                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "icon": "https://wiki.guildwars2.com/images/0/0a/Beckon_the_Skies_overhead.png",
                 "hasColorPicker": true,
                 "tooltip": "Light the lantern for progression towards the 'Light These Streets' achievement."
               },
@@ -984,7 +995,7 @@
               {
                 "id": "node_lighting_the_echovald_wilds_achievement",
                 "label": "The Echovald Wilds - Lighting The Echovald Wilds",
-                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "icon": "https://wiki.guildwars2.com/images/0/0a/Beckon_the_Skies_overhead.png",
                 "hasColorPicker": true,
                 "tooltip": "Light the lantern for progression towards the 'Lighting The Echovald Wilds' achievement."
               },
@@ -1005,7 +1016,7 @@
               {
                 "id": "node_lighting_dragons_end_achievement",
                 "label": "Dragon's End - Lighting Dragon's End",
-                "icon": "https://wiki.guildwars2.com/images/2/25/2645641.png",
+                "icon": "https://wiki.guildwars2.com/images/0/0a/Beckon_the_Skies_overhead.png",
                 "hasColorPicker": true,
                 "tooltip": "Light the lantern for progression towards the ' Lighting Dragon's End' achievement."
               },
