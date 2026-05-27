@@ -160,7 +160,7 @@
                 itemLocations = {};
                 itemCache = {};
 
-				const isDevMode = window.location.hostname === "gw2ps.local" || window.location.hostname === "localhost";
+				const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 				const apiBase = isDevMode 
 					? "https://gw2ps.local/Data/" 
 					: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
@@ -248,7 +248,10 @@
 
 					points.forEach(p => {
 						if (!p) return;
-						const nodeName = p.node || p.name || '';
+						let nodeName = p.node || p.name || '';
+						if (filename === 'nodes_mastery_insight.json' && p.desc) {
+							nodeName = p.desc;
+						}
 						if (!nodeName) return;
 
 						if (p.day && p.day !== today) return;

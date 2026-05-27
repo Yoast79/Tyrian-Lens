@@ -471,6 +471,161 @@
 		.prompt-btn.danger {
 			color: #ff4a4a;
 		}
+
+		/* Glassmorphic Node Reporting Modal */
+		.report-overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.75);
+			backdrop-filter: blur(5px);
+			z-index: 25000;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			pointer-events: auto !important;
+		}
+
+		.report-overlay.active {
+			display: flex;
+			opacity: 1;
+		}
+
+		.report-card {
+			background: rgba(15, 12, 8, 0.95);
+			border: 1px solid #e2c07d;
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(226, 192, 125, 0.2);
+			width: 440px;
+			padding: 25px;
+			font-family: "Crimson Text", serif;
+			letter-spacing: 1px;
+			transform: scale(0.9);
+			transition: transform 0.3s ease;
+		}
+
+		.report-tutorial {
+			color: #8a7a5f;
+			font-size: 13px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+			text-align: justify;
+			text-transform: none;
+		}
+
+		.report-overlay.active .report-card {
+			transform: scale(1);
+		}
+
+		.report-title {
+			color: #e2c07d;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-bottom: 1px solid #4a3b2a;
+			padding-bottom: 8px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.report-group {
+			margin-bottom: 15px;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}
+
+		.report-label {
+			color: #8a7a5f;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.report-input {
+			background: rgba(26, 21, 16, 0.8);
+			border: 1px solid #4a3b2a;
+			color: #ffffff;
+			padding: 8px 10px;
+			font-size: 13px;
+			font-family: inherit;
+			outline: none;
+			transition: border-color 0.2s;
+		}
+
+		.report-input:focus {
+			border-color: #e2c07d;
+		}
+
+		.report-row {
+			display: flex;
+			gap: 10px;
+		}
+
+		.report-row .report-group {
+			flex: 1;
+		}
+
+		.report-btn-row {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+		}
+
+		.report-btn {
+			flex: 1;
+			background: #1a1510;
+			border: 1px solid #4a3b2a;
+			color: #e2c07d;
+			padding: 10px;
+			font-size: 13px;
+			font-weight: bold;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-family: inherit;
+			transition: all 0.2s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+		}
+
+		.report-btn:hover:not(:disabled) {
+			background: #2a221a;
+			border-color: #e2c07d;
+			color: #ffffff;
+		}
+
+		.report-btn:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		.report-btn.secondary {
+			background: transparent;
+			color: #8a7a5f;
+		}
+
+		.report-btn.secondary:hover {
+			border-color: #8a7a5f;
+			color: #ffffff;
+		}
+
+		.report-btn.grab {
+			background: rgba(226, 192, 125, 0.15);
+			border-color: #e2c07d;
+			font-size: 12px;
+			padding: 8px;
+			margin-bottom: 15px;
+			width: 100%;
+		}
+
+		.report-btn.grab:hover {
+			background: rgba(226, 192, 125, 0.3);
+		}
 	</style>
 </head>
 
@@ -495,7 +650,28 @@
 		<button class="prompt-btn" onclick="cancelRemoveMarker()">Cancel</button>
 	</div>
 
-	<div id="coord-hud">
+	<!-- Missing Coordinate Reporter Modal -->
+	<div id="report-modal" class="report-overlay">
+		<div class="report-card">
+			<div class="report-title">Report Node Coordinate</div>
+			
+			<div class="report-tutorial">
+				Please stand directly on top of the target node in-game, enter its name below, and click Submit. Telemetry and coordinates are captured automatically.
+			</div>
+
+			<div class="report-group" style="margin-bottom: 20px;">
+				<span class="report-label">Node Name / Description</span>
+				<input type="text" id="rep-node-name" class="report-input" placeholder="e.g. Rich Platinum Ore, Elisa, etc." />
+			</div>
+
+			<div class="report-btn-row">
+				<button id="rep-cancel-btn" class="report-btn secondary" onclick="closeReportModal()">Cancel</button>
+				<button id="rep-submit-btn" class="report-btn" onclick="submitCoordinateReport()">Submit Report</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="coord-hud" style="pointer-events: auto !important;">
 		<div>
 			PLAYER: <span id="p-x" class="coord-val">0</span>, <span id="p-y" class="coord-val">0</span>
 		</div>
@@ -505,6 +681,9 @@
 		<div style="font-size: 10px; color: #888; margin-top: 6px; text-transform: uppercase; display: flex; gap: 24px;">
 			<span>ALTITUDE: <span id="p-z" class="coord-val">0</span></span>
 			<span>TRACKING: <span id="track-status" style="color:#00ff00;">ON</span></span>
+		</div>
+		<div style="margin-top: 8px; border-top: 1px solid #4a3b2a; padding-top: 8px;">
+			<button class="prompt-btn" style="width: 100%; margin: 0; padding: 4px;" onclick="openReportModal()">Report Node</button>
 		</div>
 	</div>
 
@@ -606,11 +785,29 @@
 			
 			if (isPet) {
 				iconUrl = "https://gw2ps.local/Assets/RangerPetIcons/ranger_icon.png";
-			} else if (!iconUrl) {
-				// Fallback to dynamic data fields or default icon
-				if (firstMarker.options.data && firstMarker.options.data.icon) {
-					iconUrl = firstMarker.options.data.icon;
-				} else {
+			} else {
+				if (firstMarker.options.data) {
+					const d = firstMarker.options.data;
+					if (d.category === 'mastery_insights' || d.layer === 'node_mastery_insight') {
+						let exp = (d.expac || "").toLowerCase();
+						iconUrl = "https://gw2ps.local/Assets/Icons/mi_tyria.png";
+						if (exp === "hot") iconUrl = "https://gw2ps.local/Assets/Icons/mi_hot.png";
+						else if (exp === "pof") iconUrl = "https://gw2ps.local/Assets/Icons/mi_pof.png";
+						else if (exp === "ibs") iconUrl = "https://gw2ps.local/Assets/Icons/mi_ibs.png";
+						else if (exp === "voe") iconUrl = "https://gw2ps.local/Assets/Icons/mi_voe.png";
+						else if (exp === "eod") iconUrl = "https://gw2ps.local/Assets/Icons/mi_eod.png";
+						else if (exp === "jw") iconUrl = "https://gw2ps.local/Assets/Icons/mi_jw.png";
+						else if (exp === "soto") iconUrl = "https://gw2ps.local/Assets/Icons/mi_soto.png";
+					} else if (d.icon) {
+						iconUrl = d.icon;
+					}
+				}
+				
+				if (!iconUrl && firstMarker.options.icon && firstMarker.options.icon.options) {
+					iconUrl = firstMarker.options.icon.options.iconUrl || "";
+				}
+				
+				if (!iconUrl) {
 					iconUrl = "https://gw2ps.local/Assets/Icons/poi_discovered.png";
 				}
 			}
@@ -1253,13 +1450,22 @@
 			elisaLayer.addTo(map);
 		}
 
-		var isDevMode = window.location.hostname === "gw2ps.local" || window.location.hostname === "localhost";
+		var isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 		var apiBase = isDevMode 
 			? "https://gw2ps.local/Data/" 
 			: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
 
 		// Disable right-click context menu (blocks "Inspect Element" and rummaging in the console)
 		document.addEventListener('contextmenu', event => event.preventDefault());
+
+		// Block common inspector hotkeys (F12, Ctrl+Shift+I/J/C, Ctrl+U)
+		document.addEventListener('keydown', event => {
+			if (event.key === 'F12' || 
+				(event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C')) || 
+				(event.ctrlKey && event.key === 'U')) {
+				event.preventDefault();
+			}
+		});
 
 		function buildLayerToSectionMap(sections) {
 			layerToSectionMap = {};
@@ -1312,7 +1518,116 @@
 			highlightStyleElement.innerHTML = css;
 		}
 
+		let completedAchievements = new Set();
+		let masteryPointsData = null;
+
+		async function fetchCompletedAchievements() {
+			const activeKey = localStorage.getItem('gw2_active_key');
+			if (!activeKey) {
+				console.log("[Masteries] No active key found, skipping completed check.");
+				return;
+			}
+			try {
+				const response = await fetch("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey);
+				if (response.ok) {
+					const data = await response.json();
+					completedAchievements = new Set(
+						data.filter(item => item.done === true || (item.current && item.max && item.current >= item.max)).map(item => item.id)
+					);
+					console.log(`[Masteries] Loaded ${completedAchievements.size} completed achievements.`);
+				}
+			} catch (e) {
+				console.error("[Masteries] Failed to fetch achievements:", e);
+			}
+		}
+
+		function renderMasteryInsights() {
+			if (!subLayers['mastery']) {
+				subLayers['mastery'] = L.markerClusterGroup({ disableClusteringAtZoom: 6, maxClusterRadius: 40, showCoverageOnHover: false, iconCreateFunction: createClusterIcon });
+			}
+			subLayers['mastery'].clearLayers();
+			
+			if (!masteryPointsData) return;
+			
+			const hideCompleted = localStorage.getItem('gw2_hide_completed_mastery') === 'true';
+			const points = Array.isArray(masteryPointsData) ? masteryPointsData : (masteryPointsData.points || []);
+			
+			points.forEach(p => {
+				const achId = p.achievement_id || p.achievementId;
+				const isCompleted = achId && completedAchievements.has(parseInt(achId));
+				
+				if (isCompleted && hideCompleted) {
+					return; // Skip rendering completed points entirely!
+				}
+				
+				let pName = p.node || p.name || "Mastery Insight";
+				let exp = (p.expac || "").toLowerCase();
+				let iconPath = "https://gw2ps.local/Assets/Icons/mi_tyria.png";
+				if (exp === "hot" || pName.includes("(HoT)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_hot.png";
+				else if (exp === "pof" || pName.includes("(PoF)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_pof.png";
+				else if (exp === "ibs" || pName.includes("(IBS)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_ibs.png";
+				else if (exp === "voe" || pName.includes("(VoE)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_voe.png";
+				else if (exp === "eod" || pName.includes("(EoD)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_eod.png";
+				else if (exp === "jw" || pName.includes("(JW)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_jw.png";
+				else if (exp === "soto" || pName.includes("(SotO)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_soto.png";
+
+				let customIcon;
+				if (isCompleted) {
+					const scale = locScale;
+					const size = 24 * scale;
+					const anchor = 12 * scale;
+					const checkSize = 12 * scale;
+					
+					const markerHtml = `
+						<div style="position: relative; width: ${size}px; height: ${size}px; overflow: visible !important;">
+							<img src="${iconPath}" style="width: ${size}px; height: ${size}px; display: block;" />
+							<img src="https://gw2ps.local/Assets/Icons/fish_caught.png" style="position: absolute; top: -3px; right: -3px; width: ${checkSize}px; height: ${checkSize}px; z-index: 1000; filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8));" />
+						</div>`;
+					
+					customIcon = L.divIcon({
+						html: markerHtml,
+						className: 'layer-target-mastery completed-mastery',
+						iconSize: [size, size],
+						iconAnchor: [anchor, anchor]
+					});
+				} else {
+					customIcon = L.icon({
+						iconUrl: iconPath,
+						iconSize: [24 * locScale, 24 * locScale],
+						iconAnchor: [12 * locScale, 12 * locScale],
+						className: 'layer-target-mastery'
+					});
+				}
+
+				let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: customIcon, data: p });
+				m.on('mouseover', e => { 
+					var pt = map.mouseEventToContainerPoint(e.originalEvent); 
+					let tooltipHtml = `<b>Mastery Insight</b>`;
+					if (p.desc) {
+						tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</span>`;
+					}
+					window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*"); 
+				});
+				m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+				let cCode = p.chat_code || p.chat_link;
+				if (cCode && cCode.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(cCode); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
+
+				m.addTo(subLayers['mastery']);
+			});
+			
+			if (isLayerEnabled('mastery')) {
+				map.addLayer(subLayers['mastery']);
+			} else {
+				map.removeLayer(subLayers['mastery']);
+			}
+		}
+
+		window.toggleHideCompletedMastery = function (isHidden) {
+			renderMasteryInsights();
+		};
+
 		async function init() {
+			await fetchCompletedAchievements();
 			customMarkersLayer.clearLayers();
 			borderLayer.clearLayers();
 			Object.values(layerMap).forEach(l => { l.clearLayers(); map.removeLayer(l); });
@@ -1499,7 +1814,11 @@
 						const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
 						tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${p.node}</div>`;
 						if (service) tooltipText += `<div style="color:#8a7a5f;font-size:11px;">${service}</div>`;
+						if (p.desc) tooltipText += `<div style="color:#8a8a8a;font-size:11px;margin-top:2px;text-transform:none;">${p.desc}</div>`;
 					} else {
+						if (p.desc) {
+							tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${tooltipText}</div><div style="color:#8a7a5f;font-size:11px;text-transform:none;">${p.desc}</div>`;
+						}
 						if (p.no_underwater) tooltipText += ` <img src="${p.no_underwater}" style="width:16px;height:16px;vertical-align:middle;margin-left:5px;" />`;
 					}
 
@@ -1531,30 +1850,8 @@
 
 				// 1. Mastery Insights
 				if (iRes && iRes.ok) {
-					const iData = await iRes.json();
-					const points = Array.isArray(iData) ? iData : (iData.points || []);
-					points.forEach(p => {
-						let iconPath = "https://gw2ps.local/Assets/Icons/mastery_icon.png";
-						if (p.name.includes("(PoF)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_pof.png";
-						else if (p.name.includes("(HoT)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_hot.png";
-						else if (p.name.includes("(IBS)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_ibs.png";
-						else if (p.name.includes("(VoE)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_voe.png";
-						else if (p.name.includes("(EoD)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_eod.png";
-						else if (p.name.includes("(JW)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_jw.png";
-						else if (p.name.includes("(SotO)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_soto.png";
-						else if (p.name.includes("(Tyria)")) iconPath = "https://gw2ps.local/Assets/Icons/mi_tyria.png";
-
-						let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-mastery' }) });
-						m.on('mouseover', e => { var pt = map.mouseEventToContainerPoint(e.originalEvent); window.parent.postMessage({ action: 'showTooltip', text: p.name || "Mastery Insight", x: pt.x, y: pt.y, offsetTop: 45 }, "*"); });
-						m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
-						let cCode = p.chat_code || p.chat_link;
-						if (cCode && cCode.trim() !== "") m.on('click', () => { navigator.clipboard.writeText(cCode); window.parent.postMessage({ action: 'toast', msg: 'CHATLINK COPIED' }, "*"); });
-
-						if (!subLayers['mastery']) {
-							subLayers['mastery'] = L.markerClusterGroup({ disableClusteringAtZoom: 6, maxClusterRadius: 40, showCoverageOnHover: false, iconCreateFunction: createClusterIcon });
-						}
-						m.addTo(subLayers['mastery']);
-					});
+					masteryPointsData = await iRes.json();
+					renderMasteryInsights();
 				}
 
 				// 4. Standard Map Data (POIs, Labels, etc.)
@@ -1652,6 +1949,12 @@
 		init();
 
 		window.addEventListener("message", function (event) {
+			if (event.data && event.data.action === 'toggleHideCompletedMastery') {
+				window.toggleHideCompletedMastery(event.data.isHidden);
+			}
+			if (event.data && event.data.action === 'switchAccount') {
+				fetchCompletedAchievements().then(() => renderMasteryInsights());
+			}
 			if (event.data && event.data.action === 'toggleMapLayer') {
 				window.toggleMapLayer(event.data.name, event.data.isVisible);
 			}
@@ -2013,6 +2316,137 @@
 			console.error("Unhandled Promise Rejection:", e.reason);
 			window.parent.postMessage({ action: 'toast', msg: 'PROMISE ERROR: ' + (e.reason ? e.reason.message || e.reason : 'Unknown'), persistent: true }, "*");
 		});
+
+		// --- MISSING COORDINATE REPORTER LOGIC ---
+		window.currentMapId = null;
+		window.currentMapName = "";
+
+		function getExpac(mapId, mapName) {
+			const id = parseInt(mapId);
+			if ([1043, 1045, 1052, 1068, 1155, 1165, 1175, 1178, 1185, 1195, 1203, 1206].includes(id)) return "hot";
+			if ([1210, 1211, 1224, 1225, 1226, 1228, 1248, 1250, 1263, 1271, 1317].includes(id)) return "pof";
+			if ([1330, 1343, 1370, 1384].includes(id)) return "ibs";
+			if ([1422, 1428, 1438, 1442, 1452, 1462].includes(id)) return "eod";
+			if ([1484, 1485, 1494].includes(id)) return "soto";
+			if ([1519, 1520].includes(id)) return "jw";
+
+			const name = (mapName || "").toLowerCase();
+			if (name.includes("verdant brink") || name.includes("auric basin") || name.includes("tangled depths") || name.includes("dragon's stand") || name.includes("bitterfrost") || name.includes("ember bay") || name.includes("lake doric") || name.includes("draconis") || name.includes("siren's")) return "hot";
+			if (name.includes("oasis") || name.includes("highlands") || name.includes("riverlands") || name.includes("desolation") || name.includes("vabbi") || name.includes("istan") || name.includes("sandswept") || name.includes("kourna") || name.includes("jahai") || name.includes("thunderhead") || name.includes("dragonfall")) return "pof";
+			if (name.includes("grothmar") || name.includes("bjora") || name.includes("drizzlewood")) return "ibs";
+			if (name.includes("seitung") || name.includes("kaineng") || name.includes("echovald") || name.includes("dragon's end") || name.includes("gyala")) return "eod";
+			if (name.includes("skywatch") || name.includes("amnytas") || name.includes("nayos")) return "soto";
+			if (name.includes("lowland") || name.includes("syntri")) return "jw";
+
+			return "core";
+		}
+
+		function getCategory(nodeName) {
+			const name = (nodeName || "").toLowerCase();
+			if (name.includes("chest") || name.includes("coffer") || name.includes("casket") || name.includes("cache")) return "chests";
+			if (name.includes("ore") || name.includes("vein") || name.includes("copper") || name.includes("iron") || name.includes("silver") || name.includes("gold") || name.includes("platinum") || name.includes("mithril") || name.includes("orichalcum")) return "ore";
+			if (name.includes("sapling") || name.includes("wood") || name.includes("log")) return "wood";
+			if (name.includes("plant") || name.includes("vegetable") || name.includes("herb") || name.includes("flax") || name.includes("farm") || name.includes("lettuce") || name.includes("cabbage") || name.includes("berry") || name.includes("grape") || name.includes("melon")) return "plants";
+			if (name.includes("pet") || name.includes("juvenile")) return "ranger_pets";
+			return "map_specific";
+		}
+
+		function getIcon(nodeName, category) {
+			const name = (nodeName || "").toLowerCase();
+			if (category === "chests") return "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png";
+			if (category === "ore") {
+				if (name.includes("rich")) return "https://wiki.guildwars2.com/images/b/b3/Rich_ore_node_icon.png";
+				return "https://render.guildwars2.com/file/C7E13105A754F639BB6C7A439F06CF45C9EB1C18/2595189.png";
+			}
+			if (category === "wood") return "https://wiki.guildwars2.com/images/0/03/Wood_Log.png";
+			if (category === "ranger_pets") return "https://gw2ps.local/Assets/RangerPetIcons/ranger_icon.png";
+			return "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png";
+		}
+
+		window.openReportModal = function() {
+			const modal = document.getElementById('report-modal');
+			modal.classList.add('active');
+			
+			// Clear node name input for a clean slate
+			document.getElementById('rep-node-name').value = '';
+		};
+
+		window.closeReportModal = function() {
+			const modal = document.getElementById('report-modal');
+			modal.classList.remove('active');
+		};
+
+		window.submitCoordinateReport = function() {
+			const nodeName = document.getElementById('rep-node-name').value.trim();
+
+			if (!nodeName) {
+				window.parent.postMessage({ action: 'toast', msg: 'ERROR: NODE NAME REQUIRED.' }, "*");
+				return;
+			}
+
+			// Ensure live telemetry player position is active
+			if (!playerPos) {
+				window.parent.postMessage({ action: 'toast', msg: 'ERROR: NO TELEMETRY AVAILABLE. STAND ON THE NODE IN-GAME FIRST.' }, "*");
+				return;
+			}
+
+			const submitBtn = document.getElementById('rep-submit-btn');
+			const cancelBtn = document.getElementById('rep-cancel-btn');
+			submitBtn.disabled = true;
+			cancelBtn.disabled = true;
+			submitBtn.innerText = 'SENDING...';
+
+			// Hardcoded active Web App URL to prevent old cached URLs in localStorage from overriding it
+			const scriptUrl = "https://script.google.com/macros/s/AKfycbxmydcD3Pesd6oJUm_BC4GRL7g9wMmEJUctpAftOo3v-cJnogUjG99Vl7MYVE-utoop/exec";
+
+			// Automatic extraction from telemetry data
+			const x = Math.round(playerPos[1] * 10) / 10;
+			const y = Math.round(playerPos[0] * 10) / 10;
+			const z = playerAltitude !== null ? Math.round(playerAltitude) : 0;
+			const mapName = window.currentMapName || "";
+			const expac = getExpac(window.currentMapId, mapName);
+
+			// Construct the simple, clean JSON format exactly as requested by the user
+			const dbEntry = {
+				pos: [x, y],
+				node: nodeName,
+				yields: [""],
+				icon: "",
+				alt: z,
+				map_id: parseInt(window.currentMapId) || 0,
+				map_name: mapName,
+				expac: expac,
+				category: "",
+				layer: "",
+				desc: ""
+			};
+
+			// Build final Discord payload wrapping the entry in a copyable JSON markdown code block
+			const discordPayload = {
+				username: "Tyrian Lens Scout",
+				avatar_url: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Assets/app_icon.ico",
+				content: "```json\n" + JSON.stringify(dbEntry, null, 4) + "\n```"
+			};
+
+			fetch(scriptUrl, {
+				method: 'POST',
+				mode: 'no-cors',
+				headers: {
+					'Content-Type': 'text/plain;charset=utf-8'
+				},
+				body: JSON.stringify(discordPayload)
+			}).then(() => {
+				window.parent.postMessage({ action: 'toast', msg: 'REPORT SENT SUCCESSFULLY! THANK YOU FOR CONTRIBUTING!' }, "*");
+				closeReportModal();
+			}).catch(err => {
+				console.error("Report transmission failed:", err);
+				window.parent.postMessage({ action: 'toast', msg: 'ERROR: REPORT TRANSMISSION FAILED. CHECK INTERNET.' }, "*");
+			}).finally(() => {
+				submitBtn.disabled = false;
+				cancelBtn.disabled = false;
+				submitBtn.innerText = 'SUBMIT REPORT';
+			});
+		};
 
 		document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 		/*]]>*/

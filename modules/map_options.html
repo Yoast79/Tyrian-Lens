@@ -192,7 +192,7 @@
 
 			async function loadDynamicSections() {
 				try {
-					const isDevMode = window.location.hostname === "gw2ps.local" || window.location.hostname === "localhost";
+					const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 					const apiBase = isDevMode 
 						? "https://gw2ps.local/Data/" 
 						: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
@@ -303,6 +303,24 @@
 					</div>`;
 				}
 
+				// For Mastery Insights, render with "hide completed" checkbox
+				if (item.id === 'mastery') {
+					const iconHtml = item.icon ? `<img class="node-icon" src="${item.icon}">` : '';
+					return `
+					<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 10px;">
+						<label class="filter-option"${tooltipAttr} style="margin: 0; padding: 6px 0; flex-grow: 1; display: flex; align-items: center;">
+							<input type="checkbox" id="${item.id}" onchange="saveAndToggle('${item.id}', this.checked)">
+							<div class="toggle-btn"></div>
+							${iconHtml}
+							<span class="label-text">${item.label}</span>
+						</label>
+						<label style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--text-muted, #8a7a5f); cursor: pointer; text-transform: uppercase; flex-shrink: 0; user-select: none;">
+							<input type="checkbox" id="hide-completed-mastery" onchange="toggleHideCompletedMastery(this.checked)" style="display: inline-block; cursor: pointer; width: 12px; height: 12px; accent-color: var(--border-highlight, #e2c07d); margin: 0;">
+							<span>hide completed</span>
+						</label>
+					</div>`;
+				}
+
 				// Standard items (with optional icons)
 				const iconHtml = item.icon ? `<img class="node-icon" src="${item.icon}">` : '';
 				return `
@@ -402,6 +420,11 @@
 
 				let finalVisible = isMasterOn && isVisible;
 				window.parent.postMessage({ action: 'toggleMapLayer', name: name, isVisible: finalVisible }, '*');
+			}
+
+			function toggleHideCompletedMastery(checked) {
+				localStorage.setItem('gw2_hide_completed_mastery', checked);
+				window.parent.postMessage({ action: 'toggleHideCompletedMastery', isHidden: checked }, '*');
 			}
 
 			function setItemColor(itemId, color) {
@@ -550,6 +573,12 @@
 
 				restoreCategories();
 				document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
+
+				// Initialize hide completed mastery checkbox state
+				const hideCompleted = localStorage.getItem('gw2_hide_completed_mastery') === 'true';
+				const hideCheckbox = document.getElementById('hide-completed-mastery');
+				if (hideCheckbox) hideCheckbox.checked = hideCompleted;
+				window.parent.postMessage({ action: 'toggleHideCompletedMastery', isHidden: hideCompleted }, '*');
 			}
 
 			window.onload = () => {
