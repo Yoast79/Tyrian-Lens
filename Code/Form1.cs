@@ -162,12 +162,8 @@ namespace GW2PS
             if (!initialized) return;
 
             mapView.CoreWebView2.Settings.IsStatusBarEnabled = false;
-#if DEBUG
-            mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = true;
-            mapView.CoreWebView2.Settings.AreDevToolsEnabled = true;
-#else
             mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
-#endif
+            mapView.CoreWebView2.Settings.AreDevToolsEnabled = false;
 
             mapView.CoreWebView2.NewWindowRequested += (s, e) =>
             {
@@ -197,6 +193,12 @@ namespace GW2PS
             }
 #else
             mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", localFolder, CoreWebView2HostResourceAccessKind.Allow);
+#endif
+
+#if DEBUG
+            _ = mapView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.isDevMode = true;");
+#else
+            _ = mapView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync("window.isDevMode = false;");
 #endif
 
             mapView.CoreWebView2.WebMessageReceived += (s, e) => {
@@ -476,6 +478,13 @@ namespace GW2PS
                 contRectY = mapData.ContinentRect.TopLeft.Y;
                 contRectW = mapData.ContinentRect.BottomRight.X - mapData.ContinentRect.TopLeft.X;
                 contRectH = mapData.ContinentRect.BottomRight.Y - mapData.ContinentRect.TopLeft.Y;
+
+                this.Invoke((MethodInvoker)delegate {
+                    if (mapView.CoreWebView2 != null)
+                    {
+                        _ = mapView.CoreWebView2.ExecuteScriptAsync($"var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow) {{ frame.contentWindow.currentMapId = {mapId}; frame.contentWindow.currentMapName = '{currentMapName.Replace("'", "\\'")}'; }}");
+                    }
+                });
             }
             catch { }
         }

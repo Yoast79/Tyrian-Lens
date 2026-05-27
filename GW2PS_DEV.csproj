@@ -38,8 +38,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Remove="temp\**" />
-		<Compile Remove="temp\**" />
+		<None Remove="temp\**;scratch\**" />
+		<Compile Remove="temp\**;scratch\**" />
 	</ItemGroup>
 
 </Project>

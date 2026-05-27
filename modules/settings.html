@@ -76,13 +76,7 @@
 			</label>
 		</div>
 
-		<div class="setting-control">
-			<span class="label">Large UI Scale</span>
-			<label class="toggle-switch">
-				<input type="checkbox" id="pref-scale" onchange="updateSetting('uiScaleLarge', this.checked)" />
-				<span class="slider"></span>
-			</label>
-		</div>
+
 
 		<div class="setting-control">
 			<span class="label">Integrated Wiki View</span>
@@ -179,7 +173,7 @@
 				localStorage.setItem('gw2_settings', JSON.stringify(settings));
 				
 				if (key === 'onTop') sendAction('setAlwaysOnTop', val);
-				if (key === 'uiScaleLarge') sendAction('uiScaleChanged', val ? 'large' : 'default');
+
 				if (key === 'wikiIntegrated') sendAction('wikiPreferenceChanged', val);
 				if (key === 'defaultChar') sendAction('preferredCharChanged', val);
 				if (key === 'discordRpcEnabled') sendAction('setDiscordRpcEnabled', val);
@@ -276,7 +270,7 @@
 
 			// Initialize Toggles and Settings
 			document.getElementById('pref-ontop').checked = settings.onTop || false;
-			document.getElementById('pref-scale').checked = settings.uiScaleLarge || false;
+
 			document.getElementById('pref-wiki').checked = settings.wikiIntegrated ?? true;
             document.getElementById('pref-systray').checked = localStorage.getItem('gw2_systray_notifications') === 'true';
             document.getElementById('pref-discordrpc').checked = settings.discordRpcEnabled || false;

@@ -249,7 +249,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.3.7";
+			const APP_VERSION = "1.3.8";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -302,16 +302,16 @@
                         }
                     }, 500);
                 }
-				
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
-				if (settings.uiScaleLarge) {
-                    document.body.classList.add('ui-large');
-					document.getElementById('side-panel').classList.add('ui-large');
-					document.getElementById('side-panel-right').classList.add('ui-large');
-					document.getElementById('menu-container').classList.add('ui-large');
-					const menuFrame = document.getElementById('menu-frame');
-					if(menuFrame) menuFrame.addEventListener('load', () => menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'large'}, '*'));
-				}
+				settings.uiScaleLarge = true;
+				localStorage.setItem('gw2_settings', JSON.stringify(settings));
+
+				document.body.classList.add('ui-large');
+				document.getElementById('side-panel').classList.add('ui-large');
+				document.getElementById('side-panel-right').classList.add('ui-large');
+				document.getElementById('menu-container').classList.add('ui-large');
+				const menuFrame = document.getElementById('menu-frame');
+				if(menuFrame) menuFrame.addEventListener('load', () => menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'large'}, '*'));
 
                 const savedDRFToken = localStorage.getItem('gw2_drf_token');
                 if (savedDRFToken) {
@@ -759,7 +759,7 @@
 							}
 						}
 					}
-					else if (data.action === 'changeMapBorderColor' || data.action === 'changeItemHighlightColor') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
+					else if (data.action === 'changeMapBorderColor' || data.action === 'changeItemHighlightColor' || data.action === 'toggleHideCompletedMastery') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
 					else if (data.action === 'jumpMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { let targetMap = data.map || 'map'; if (window.activeMap !== targetMap) { window.activeMap = targetMap; mapFrame.onload = function() { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') mapFrame.contentWindow.setTracking(false); mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {} }; mapFrame.src = targetMap + '.html?v=' + APP_VERSION; } else { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } } }
 					else if (data.action === 'copy') { navigator.clipboard.writeText(data.code); window.showToast("Copied Link"); }
 					else if (data.action === 'drag') { window.postToHost('drag'); }
