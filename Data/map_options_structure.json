@@ -812,20 +812,6 @@
             "icon": "https://wiki.guildwars2.com/images/6/62/PoF_icon_small.png",
             "items": [
               {
-                "id": "node_crystal_desert_trade_cache_chests",
-                "label": "Trade Caches",
-                "icon": "https://render.guildwars2.com/file/7CD20D4B072AD23F97202F05E4130CF8A4B069C5/69116.png",
-                "tooltip": "Toggles visibility of Trade Caches.",
-                "hasColorPicker": true
-              },
-              {
-                "id": "node_crystal_desert_sand_pile_chests",
-                "label": "Sand Piles",
-                "icon": "https://render.guildwars2.com/file/497B6B6311E0B8D900CE59E063E1E296A6FE9E57/1766467.png",
-                "tooltip": "Toggles visibility of Sand Piles.",
-                "hasColorPicker": true
-              },
-              {
                 "id": "node_bleached_bones_achievement",
                 "label": "Crystal Oasis - Bleached Bones",
                 "icon": "https://wiki.guildwars2.com/images/f/f4/Trade_Contract.png",
@@ -868,6 +854,20 @@
             "subcategoryTitle": "Living World Season 4",
             "icon": "https://wiki.guildwars2.com/images/a/a1/Living_World_Season_4_logo.png",
             "items": [
+              {
+                "id": "node_crystal_desert_trade_cache_chests",
+                "label": "Trade Caches",
+                "icon": "https://render.guildwars2.com/file/7CD20D4B072AD23F97202F05E4130CF8A4B069C5/69116.png",
+                "tooltip": "Toggles visibility of Trade Caches.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_crystal_desert_sand_pile_chests",
+                "label": "Sand Piles",
+                "icon": "https://render.guildwars2.com/file/497B6B6311E0B8D900CE59E063E1E296A6FE9E57/1766467.png",
+                "tooltip": "Toggles visibility of Sand Piles.",
+                "hasColorPicker": true
+              },
               {
                 "id": "node_difluorite_crystal",
                 "label": "Sandswept Isles - Difluorite Crystals",
@@ -1061,7 +1061,7 @@
               },
               {
                 "id": "node_illuminating_skywatch_archipelago_achievement",
-                "label": "Skywatch Archipelago - Illuminating Skywatch Archipelago",
+                "label": "Skywatch Archipelago - Illuminating Skywatch",
                 "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
                 "hasColorPicker": true,
                 "tooltip": "Light the lantern for progression towards the 'Illuminating Skywatch Archipelago' achievement"
