@@ -183,7 +183,7 @@ namespace GW2PS
 #if DEBUG
             // In Debug mode, map gw2ps.local directly to the project source root folder
             string debugRoot = Path.GetFullPath(Path.Combine(localFolder, @"..\..\.."));
-            if (Directory.Exists(debugRoot))
+            if (Directory.Exists(debugRoot) && File.Exists(Path.Combine(debugRoot, "GW2PS_DEV.csproj")))
             {
                 mapView.CoreWebView2.SetVirtualHostNameToFolderMapping("gw2ps.local", debugRoot, CoreWebView2HostResourceAccessKind.Allow);
             }
