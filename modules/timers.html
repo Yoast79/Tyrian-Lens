@@ -463,8 +463,14 @@
 
 				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
 				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+                
+                const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
+                const apiBase = isDevMode 
+                    ? "https://gw2ps.local/Data/" 
+                    : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+
                 try {
-                    const response = await fetch("https://gw2ps.local/Data/timers_config.json?t=" + Date.now(), { cache: "no-store" });
+                    const response = await fetch(apiBase + "timers_config.json?t=" + Date.now(), { cache: "no-store" });
                     if (response.ok) {
                         schedule = await response.json();
                         schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
@@ -565,6 +571,70 @@
                     
                     let totalReturn = isActive ? ((ev.d || 1) * 60) : totalSecs;
                     return { active: isActive, remain: remainMs / 1000, total: totalReturn, next: target / 1000 };
+                }
+
+                if (ev.n && ev.n.startsWith("Day/Night Cycle")) {
+                    const c = currentTotalMin % 120;
+                    let cycleName = "TYRIA";
+                    let nextTransition = 0;
+                    let nextPhase = "";
+                    let currentPhase = "";
+                    
+                    if (ev.desc && ev.desc.includes("Expansion global")) {
+                        cycleName = "CANTHA";
+                        if (c >= 25 && c < 35) {
+                            currentPhase = "DAWN"; nextTransition = 35; nextPhase = "DAY";
+                        } else if (c >= 35 && c < 105) {
+                            currentPhase = "DAY"; nextTransition = 105; nextPhase = "DUSK";
+                        } else if (c >= 105 && c < 115) {
+                            currentPhase = "DUSK"; nextTransition = 115; nextPhase = "NIGHT";
+                        } else {
+                            currentPhase = "NIGHT";
+                            nextTransition = c < 25 ? 25 : 145;
+                            nextPhase = "DAWN";
+                        }
+                    } else if (ev.desc && ev.desc.includes("Local cycle")) {
+                        cycleName = "CASTORA";
+                        if (c >= 25 && c < 35) {
+                            currentPhase = "DAWN"; nextTransition = 35; nextPhase = "DAY";
+                        } else if (c >= 35 && c < 85) {
+                            currentPhase = "DAY"; nextTransition = 85; nextPhase = "DUSK";
+                        } else if (c >= 85 && c < 95) {
+                            currentPhase = "DUSK"; nextTransition = 95; nextPhase = "NIGHT";
+                        } else {
+                            currentPhase = "NIGHT";
+                            nextTransition = c < 25 ? 25 : 145;
+                            nextPhase = "DAWN";
+                        }
+                    } else {
+                        cycleName = "TYRIA";
+                        if (c >= 25 && c < 30) {
+                            currentPhase = "DAWN"; nextTransition = 30; nextPhase = "DAY";
+                        } else if (c >= 30 && c < 100) {
+                            currentPhase = "DAY"; nextTransition = 100; nextPhase = "DUSK";
+                        } else if (c >= 100 && c < 105) {
+                            currentPhase = "DUSK"; nextTransition = 105; nextPhase = "NIGHT";
+                        } else {
+                            currentPhase = "NIGHT";
+                            nextTransition = c < 25 ? 25 : 145;
+                            nextPhase = "DAWN";
+                        }
+                    }
+                    
+                    let remainMins = nextTransition - c;
+                    if (remainMins < 0) remainMins += 120;
+                    const remainSecs = remainMins * 60;
+                    
+                    return {
+                        active: false,
+                        remain: remainSecs,
+                        total: 120 * 60,
+                        next: (currentTotalMin + remainMins) % 1440,
+                        isDayNight: true,
+                        cycleName: cycleName,
+                        currentPhase: currentPhase,
+                        nextPhase: nextPhase
+                    };
                 }
 
 				let startMins = ev.exact ? ev.exact : [];
@@ -678,7 +748,7 @@
 							const id = `ev-${sIdx}-${item.ev.n.replace(/\s+/g, '-')}`;
                             let deleteBtn = item.ev.isCustom ? `<button class="wp-btn" onclick="event.stopPropagation(); promptDelete('${item.ev.id}')">DEL</button>` : '';
                             
-							let showWp = item.ev.wp && item.ev.n !== "Daily Reset" && item.ev.n !== "Day/Night Cycle";
+							let showWp = item.ev.wp && item.ev.n !== "Daily Reset" && !item.ev.n.startsWith("Day/Night Cycle");
 							let copyBtn = (item.ev.isCustom || !showWp) ? '' : `<button class="wp-btn" onclick="event.stopPropagation(); window.parent.postMessage({action:'copy', code:'${item.ev.wp || ''}'}, '*')">COPY WP</button>`;
                             
 							let clickAction = item.ev.isCustom ? '' : `onclick="handleEventClick('${item.ev.n.replace(/'/g, "\\'")}')"`;
@@ -718,9 +788,20 @@
 						if(!card) return;
 						let isSAB = ev.n === "Super Adventure Festival";
 						const isTracked = !!trackedTimers[ev.n];
-						card.className = "event-card" + (state.active ? " active-state" : (state.remain <= 900 ? " imminent-state" : "")) + (isSAB ? " sab-glitch" : "") + (isTracked ? " tracked-state" : "");
-						document.getElementById(id+'-stat').innerText = state.active ? "ACTIVE" : "STARTS IN " + formatCountdown(state.remain);
-						document.getElementById(id+'-stat').className = "event-status" + (state.active ? " active-text" : (state.remain <= 900 ? " imminent-text" : ""));
+						
+						let cardClass = "event-card" + (state.active ? " active-state" : (state.remain <= 900 ? " imminent-state" : "")) + (isSAB ? " sab-glitch" : "") + (isTracked ? " tracked-state" : "");
+						let statusText = state.active ? "ACTIVE" : "STARTS IN " + formatCountdown(state.remain);
+						let statusClass = "event-status" + (state.active ? " active-text" : (state.remain <= 900 ? " imminent-text" : ""));
+						
+						if (state.isDayNight) {
+							cardClass = "event-card" + (state.remain <= 300 ? " imminent-state" : "") + (isTracked ? " tracked-state" : "");
+							statusText = `${state.currentPhase} | ${state.nextPhase} IN ${formatCountdown(state.remain)}`;
+							statusClass = "event-status" + (state.remain <= 300 ? " imminent-text" : "");
+						}
+						
+						card.className = cardClass;
+						document.getElementById(id+'-stat').innerText = statusText;
+						document.getElementById(id+'-stat').className = statusClass;
 						document.getElementById(id+'-time').innerText = formatCountdown(state.remain);
 						if (syncCounter % 10 === 0) document.getElementById(id+'-fill').style.width = (100 - ((state.remain / state.total) * 100)) + "%";
 					});
@@ -802,22 +883,64 @@
                                 if (ev.n === name) {
                                     const state = getEventState(ev, totalMin);
                                     watchlistData.push({ name: name, state: state });
-
-                                    if (localStorage.getItem('gw2_timer_tracker_visible') === 'true') {
+                                     if (localStorage.getItem('gw2_timer_tracker_visible') === 'true') {
 										const rem = Math.round(state.remain);
 										const remMin = Math.floor(rem / 60);
-										const freq = (localStorage.getItem('gw2_timer_frequency') || '15,10,5,0').split(',').map(Number);
-                                        
-                                        if (!state.active) {
+										
+										if (state.isDayNight) {
+											const freq = (localStorage.getItem('gw2_timer_frequency') || '15,10,5,0').split(',').map(Number);
 											freq.forEach(f => {
-												if(f > 0 && remMin === f && !alertHistory[name + '-' + f]) {
-													window.parent.postMessage({action:'eventPop', msg: name + " IN " + f + " MIN"}, '*');
-                                                    if (localStorage.getItem('gw2_systray_notifications') === 'true') {
-                                                        window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " in " + f + " minutes"}, '*');
-                                                    }
-													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
-													alertHistory[name + '-' + f] = true;
-													setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
+												if (remMin === f && !alertHistory[name + '-' + state.cycleName + '-' + state.nextPhase + '-' + f]) {
+													let msgText = "";
+													if (f === 0) {
+														msgText = `${state.cycleName} Day/Night Cycle: Transitioning to ${state.nextPhase}!`;
+													} else {
+														msgText = `${state.cycleName} Day/Night Cycle: ${state.nextPhase} in ${f} minutes!`;
+													}
+													
+													window.parent.postMessage({action:'eventPop', msg: msgText}, '*');
+													if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+														window.parent.postMessage({action:'trayNotification', title: 'Day/Night Alert', text: msgText}, '*');
+													}
+													playTimerNotification(localStorage.getItem('gw2_timer_sound'), msgText);
+													
+													alertHistory[name + '-' + state.cycleName + '-' + state.nextPhase + '-' + f] = true;
+													setTimeout(()=> delete alertHistory[name + '-' + state.cycleName + '-' + state.nextPhase + '-' + f], 65000);
+												}
+											});
+										} else {
+											const freq = (localStorage.getItem('gw2_timer_frequency') || '15,10,5,0').split(',').map(Number);
+											if (!state.active) {
+												freq.forEach(f => {
+													if(f > 0 && remMin === f && !alertHistory[name + '-' + f]) {
+														window.parent.postMessage({action:'eventPop', msg: name + " IN " + f + " MIN"}, '*');
+														if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+															window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " in " + f + " minutes"}, '*');
+														}
+														playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
+														alertHistory[name + '-' + f] = true;
+														setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
+
+														if (alertOnceTimers[name]) {
+															delete alertOnceTimers[name];
+															localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
+															delete trackedTimers[name];
+															localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
+															setTimeout(() => renderView(true), 100);
+														}
+													}
+												});
+											} else {
+												const elapsed = Math.round(state.total - state.remain);
+												if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
+													window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
+													if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+														window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " is ACTIVE!"}, '*');
+													}
+													let soundOverride = (name === "Tequatl the Sunless") ? "https://gw2ps.local/Assets/Sounds/something_in_the_water.mp3" : null;
+													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
+													alertHistory[name + '-0'] = true;
+													setTimeout(()=> delete alertHistory[name + '-0'], 5000);
 
 													if (alertOnceTimers[name]) {
 														delete alertOnceTimers[name];
@@ -827,29 +950,9 @@
 														setTimeout(() => renderView(true), 100);
 													}
 												}
-											});
-                                        } else {
-                                            const elapsed = Math.round(state.total - state.remain);
-                                            if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
-                                                window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
-                                                if (localStorage.getItem('gw2_systray_notifications') === 'true') {
-                                                    window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " is ACTIVE!"}, '*');
-                                                }
-												let soundOverride = (name === "Tequatl the Sunless") ? "https://gw2ps.local/Assets/Sounds/something_in_the_water.mp3" : null;
-                                                playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
-                                                alertHistory[name + '-0'] = true;
-                                                setTimeout(()=> delete alertHistory[name + '-0'], 5000);
-
-												if (alertOnceTimers[name]) {
-													delete alertOnceTimers[name];
-													localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
-													delete trackedTimers[name];
-													localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
-													setTimeout(() => renderView(true), 100);
-												}
-                                            }
-                                        }
-                                    }
+											}
+										}
+                                     }
                                 }
                             });
                         });

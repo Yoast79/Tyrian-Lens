@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bug &amp; Feature Reporter</title>
+    <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+    <style>
+        * { 
+            cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        body { 
+            background: transparent; 
+            color: var(--text-primary); 
+            font-family: "Crimson Text", serif; 
+            padding: 25px; 
+            overflow-y: auto; 
+            overflow-x: hidden; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            text-transform: uppercase; 
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+
+        .section-title { 
+            font-size: 16px; 
+            letter-spacing: 2px; 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 5px; 
+            margin: 20px 0 15px 0; 
+            color: var(--text-muted); 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .label { 
+            font-size: 12px; 
+            color: var(--text-primary); 
+            letter-spacing: 1px; 
+            font-weight: bold;
+        }
+
+        .input-field {
+            background: rgba(10, 8, 5, 0.95);
+            border: 1px solid var(--border-color);
+            color: var(--text-bright, #fff);
+            padding: 10px;
+            font-family: inherit;
+            font-size: 13px;
+            width: 100%;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            text-transform: none;
+        }
+
+        .input-field:focus {
+            border-color: var(--border-highlight);
+            box-shadow: 0 0 5px rgba(226, 192, 125, 0.2);
+        }
+
+        select.input-field {
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        textarea.input-field {
+            resize: vertical;
+            min-height: 80px;
+            font-family: inherit;
+        }
+
+        .btn { 
+            width: 100%; 
+            background: var(--bg-button); 
+            border: 1px solid var(--border-color); 
+            color: var(--text-primary); 
+            padding: 12px; 
+            text-transform: uppercase; 
+            font-size: 11px; 
+            transition: 0.2s; 
+            cursor: pointer; 
+            margin-bottom: 8px; 
+            font-family: inherit; 
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn:hover:not(.disabled) { 
+            background: var(--bg-button-hover); 
+            color: var(--text-button-hover); 
+            border-color: var(--border-highlight); 
+        }
+        .btn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .btn-grab {
+            background: rgba(226, 192, 125, 0.1);
+            border-color: var(--border-color);
+            padding: 8px 12px;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        .btn-submit {
+            margin-top: 15px;
+            background: var(--bg-button);
+            border-color: var(--border-highlight);
+        }
+
+        .conditional-container {
+            display: none;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-note {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: none;
+            line-height: 1.4;
+            margin-top: 2px;
+            font-style: italic;
+        }
+
+        .toast-banner {
+            background: rgba(10, 8, 5, 0.98);
+            border: 1px solid var(--border-highlight);
+            color: var(--text-primary);
+            padding: 10px 15px;
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Thank-you popup overlay */
+        #success-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            z-index: 50000;
+            align-items: center;
+            justify-content: center;
+        }
+        #success-overlay.visible {
+            display: flex;
+        }
+        #success-card {
+            background: rgba(12, 10, 6, 0.98);
+            border: 1px solid var(--border-highlight, #e2c07d);
+            box-shadow: 0 0 30px rgba(0,0,0,0.9), 0 0 15px rgba(226,192,125,0.15);
+            padding: 32px 28px 24px;
+            width: 300px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        #success-card .success-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        #success-card .success-title {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text-primary, #e2c07d);
+            margin-bottom: 8px;
+        }
+        #success-card .success-body {
+            font-size: 11px;
+            color: var(--text-muted, #8a7a5f);
+            letter-spacing: 1px;
+            line-height: 1.6;
+            text-transform: none;
+            margin-bottom: 22px;
+        }
+        #success-card .success-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .btn-discord {
+            background: var(--bg-button);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 16px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.2s;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .btn-discord:hover {
+            background: var(--bg-button-hover);
+            color: var(--text-button-hover);
+            border-color: var(--border-highlight);
+        }
+        .btn-discord img {
+            width: 16px;
+            height: 16px;
+            opacity: 0.85;
+        }
+        .btn-ok {
+            background: transparent;
+            border: 1px solid var(--border-color, #4a3b2a);
+            color: var(--text-muted, #8a7a5f);
+            padding: 10px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            width: 100%;
+        }
+        .btn-ok:hover {
+            border-color: var(--text-primary, #e2c07d);
+            color: var(--text-primary, #e2c07d);
+        }
+    </style>
+</head>
+<body data-theme="human">
+
+    <!-- Thank-you popup -->
+    <div id="success-overlay">
+        <div id="success-card">
+            <div class="success-title">Thank You!</div>
+            <div class="success-body">
+                Your report has been submitted successfully.<br>
+                We appreciate you taking the time to help improve Tyrian Lens!
+            </div>
+            <div class="success-btns">
+                <button class="btn-discord" onclick="openDiscord()">
+                    <img src="https://gw2ps.local/Assets/Icons/discord-icon.png" alt="Discord" />
+                    Join the Discord Server
+                </button>
+                <button class="btn-ok" onclick="closeSuccessPopup()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header/Title -->
+    <div class="section-title">
+        <span>Report Bug / Feature</span>
+    </div>
+
+    <div id="toast-msg" class="toast-banner"></div>
+
+    <!-- Report Type -->
+    <div class="form-group">
+        <span class="label">I want to report a:</span>
+        <select id="report-type" class="input-field" onchange="toggleReportType(this.value)">
+            <option value="bug">Bug / Defect</option>
+            <option value="feature">Feature Request</option>
+        </select>
+    </div>
+
+    <!-- Affected Module -->
+    <div class="form-group">
+        <span class="label">What module is affected?</span>
+        <select id="affected-module" class="input-field">
+            <option value="Overworld Map">Overworld Map</option>
+            <option value="WvW Map">WvW Map</option>
+            <option value="Event Timers">Event Timers</option>
+            <option value="Weekly Clears">Weekly Clears</option>
+            <option value="Farming Nodes">Farming Nodes</option>
+            <option value="Fishing Assistant">Fishing Assistant</option>
+            <option value="Hero Panel / Builds">Hero Panel / Builds</option>
+            <option value="Inventory / Bank">Inventory / Bank</option>
+            <option value="API Keys / Settings">API Keys / Settings</option>
+            <option value="General System / Other">General System / Other</option>
+        </select>
+    </div>
+
+    <!-- Bug-specific Reproduction Flow -->
+    <div id="bug-flow-container" class="conditional-container" style="display: block;">
+        <!-- Misplaced Marker Question -->
+        <div class="form-group">
+            <span class="label">Is this regarding a misplaced map marker?</span>
+            <select id="misplaced-marker" class="input-field" onchange="toggleMarkerCoords(this.value)">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+
+        <!-- Coordinates of Misplaced Marker -->
+        <div id="coords-container" class="conditional-container form-group">
+            <span class="label">Coordinates of misplaced marker</span>
+            <input type="text" id="marker-coords" class="input-field" placeholder="e.g. 12345.6, 7890.1, 12" />
+            <button class="btn btn-grab" onclick="grabCoordinates()">Grab Current Position</button>
+            <span class="info-note">Stand on the node/marker location in-game first.</span>
+        </div>
+
+        <!-- How can you reproduce the bug -->
+        <div class="form-group">
+            <span class="label">How can you reproduce the bug?</span>
+            <textarea id="reproduce-steps" class="input-field" placeholder="Describe the steps to trigger this bug..."></textarea>
+        </div>
+    </div>
+
+    <!-- Description of Bug/Feature -->
+    <div class="form-group">
+        <span id="desc-label" class="label">Describe the bug</span>
+        <textarea id="description" class="input-field" required placeholder="Please describe the issue in detail..."></textarea>
+    </div>
+
+    <!-- Upload/Link Screenshot -->
+    <div class="form-group">
+        <span class="label">Screenshot Link (Imgur, Discord, etc.)</span>
+        <input type="text" id="screenshot-url" class="input-field" placeholder="https://imgur.com/..." />
+    </div>
+
+    <!-- Additional Information -->
+    <div class="form-group">
+        <span class="label">Additional information</span>
+        <textarea id="additional-info" class="input-field" placeholder="Any extra system context or notes..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="btn-submit" class="btn btn-submit" onclick="submitReport()">Submit Report</button>
+
+    <script>
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbzhEJ2SOzEMCIKdQVZvHhCuwkAwPdwrWc1INZgDxh2tZVERVkuz1mCkMbyDtjoLzNk6LA/exec";
+        const DISCORD_URL = "https://discord.gg/7pWPzV6Rt4";
+
+        document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
+
+        // Telemetry is still needed for the "Grab Current Position" feature (misplaced marker)
+        function grabTelemetry() {
+            let tel = { x: null, y: null, z: null };
+            try {
+                const parentWin = window.parent;
+                if (parentWin) {
+                    if (parentWin.lastPlayerCoords) {
+                        tel.x = Math.round(parentWin.lastPlayerCoords.x * 10) / 10;
+                        tel.y = Math.round(parentWin.lastPlayerCoords.y * 10) / 10;
+                    }
+                    const mapFrame = parentWin.document.getElementById('map-frame');
+                    if (mapFrame && mapFrame.contentWindow) {
+                        const mapWin = mapFrame.contentWindow;
+                        if (mapWin.playerPos) {
+                            tel.x = Math.round(mapWin.playerPos[1] * 10) / 10;
+                            tel.y = Math.round(mapWin.playerPos[0] * 10) / 10;
+                        }
+                        if (mapWin.playerAltitude !== undefined && mapWin.playerAltitude !== null) {
+                            tel.z = Math.round(mapWin.playerAltitude);
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error("Telemetry error:", e);
+            }
+            return tel;
+        }
+
+        function toggleReportType(type) {
+            const bugFlow = document.getElementById('bug-flow-container');
+            const descLabel = document.getElementById('desc-label');
+            const descInput = document.getElementById('description');
+
+            if (type === 'bug') {
+                bugFlow.style.display = 'block';
+                descLabel.innerText = "Describe the bug";
+                descInput.placeholder = "Please describe the issue in detail...";
+            } else {
+                bugFlow.style.display = 'none';
+                descLabel.innerText = "Describe the feature request";
+                descInput.placeholder = "Describe the features you would like to see added...";
+            }
+        }
+
+        function toggleMarkerCoords(val) {
+            const coordsCont = document.getElementById('coords-container');
+            coordsCont.style.display = val === 'yes' ? 'block' : 'none';
+        }
+
+        function grabCoordinates() {
+            const tel = grabTelemetry();
+            if (tel.x !== null && tel.y !== null) {
+                const zVal = tel.z !== null ? tel.z : 0;
+                document.getElementById('marker-coords').value = `${tel.x}, ${tel.y}, ${zVal}`;
+                showToast("Coordinates grabbed successfully!");
+            } else {
+                showToast("No telemetry coordinates available! Are you in-game?", true);
+            }
+        }
+
+        function showToast(msg, isError = false) {
+            const toast = document.getElementById('toast-msg');
+            toast.innerText = msg.toUpperCase();
+            toast.style.display = 'block';
+            toast.style.borderColor = isError ? 'var(--danger-color)' : 'var(--border-highlight)';
+            toast.style.color = isError ? 'var(--danger-color)' : 'var(--text-primary)';
+            setTimeout(() => { toast.style.display = 'none'; }, 5000);
+        }
+
+        function openDiscord() {
+            // Open via parent host to avoid iframe restrictions
+            try {
+                window.parent.postMessage({ action: 'openWiki', url: DISCORD_URL }, '*');
+            } catch(e) {
+                window.open(DISCORD_URL, '_blank');
+            }
+        }
+
+        function closeSuccessPopup() {
+            document.getElementById('success-overlay').classList.remove('visible');
+            // Close the side panel
+            if (window.parent && typeof window.parent.closeRightPanel === 'function') {
+                window.parent.closeRightPanel();
+            }
+        }
+
+        function showSuccessPopup() {
+            document.getElementById('success-overlay').classList.add('visible');
+        }
+
+        function submitReport() {
+            const type = document.getElementById('report-type').value;
+            const affectedModule = document.getElementById('affected-module').value;
+            const desc = document.getElementById('description').value.trim();
+            const screenshot = document.getElementById('screenshot-url').value.trim();
+            const addInfo = document.getElementById('additional-info').value.trim();
+
+            if (!desc) {
+                showToast("Description field is required!", true);
+                return;
+            }
+
+            const isBug = (type === 'bug');
+            const isMisplaced = isBug && (document.getElementById('misplaced-marker').value === 'yes');
+            const coords = isMisplaced ? document.getElementById('marker-coords').value.trim() : null;
+            const steps = isBug ? document.getElementById('reproduce-steps').value.trim() : null;
+
+            const submitBtn = document.getElementById('btn-submit');
+            submitBtn.classList.add('disabled');
+            submitBtn.innerText = "Sending Report...";
+
+            const color = isBug ? 16730182 : 38655; // Red vs Cyan
+            const title = isBug ? "🚨 New Bug / Defect Report" : "💡 New Feature Request";
+
+            const fields = [
+                { name: "📋 Affected Module", value: affectedModule, inline: true }
+            ];
+
+            if (isBug) {
+                fields.push({ name: "📍 Misplaced Map Marker?", value: isMisplaced ? "Yes" : "No", inline: true });
+                if (isMisplaced && coords) {
+                    fields.push({ name: "🌐 Coordinates of Misplaced Marker", value: `\`${coords}\``, inline: false });
+                }
+                if (steps) {
+                    fields.push({ name: "🔄 Steps to Reproduce", value: steps, inline: false });
+                }
+            }
+
+            fields.push({ name: isBug ? "📝 Description of Bug" : "📝 Description of Feature", value: desc, inline: false });
+
+            if (addInfo) {
+                fields.push({ name: "ℹ️ Additional Info", value: addInfo, inline: false });
+            }
+
+            const appVersion = (window.parent && window.parent.APP_VERSION) || "1.3.8";
+            const embed = {
+                title: title,
+                color: color,
+                fields: fields,
+                footer: {
+                    text: `Tyrian Lens v${appVersion} • Client OS: Windows • ${new Date().toISOString()}`,
+                    icon_url: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Assets/app_icon.ico"
+                }
+            };
+
+            if (screenshot) {
+                if (screenshot.match(/\.(jpeg|jpg|gif|png|webp)/i) || screenshot.includes("cdn.discordapp.com") || screenshot.includes("imgur.com")) {
+                    embed.image = { url: screenshot };
+                } else {
+                    fields.push({ name: "🖼️ Screenshot Link", value: screenshot, inline: false });
+                }
+            }
+
+            const discordPayload = {
+                username: "Tyrian Lens Reporter",
+                avatar_url: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Assets/app_icon.ico",
+                embeds: [embed]
+            };
+
+            fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(discordPayload)
+            }).then(() => {
+                // Clear fields
+                document.getElementById('description').value = "";
+                document.getElementById('screenshot-url').value = "";
+                document.getElementById('additional-info').value = "";
+                if (document.getElementById('reproduce-steps')) document.getElementById('reproduce-steps').value = "";
+                if (document.getElementById('marker-coords')) document.getElementById('marker-coords').value = "";
+                // Show thank-you popup
+                showSuccessPopup();
+            }).catch(err => {
+                console.error("Bug report transmission failed:", err);
+                showToast("Transmission failed! Check your internet.", true);
+            }).finally(() => {
+                submitBtn.classList.remove('disabled');
+                submitBtn.innerText = "Submit Report";
+            });
+        }
+
+        // Theme sync from parent
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.action === 'updateTheme') {
+                document.body.setAttribute('data-theme', event.data.theme);
+            }
+        });
+    </script>
+</body>
+</html>

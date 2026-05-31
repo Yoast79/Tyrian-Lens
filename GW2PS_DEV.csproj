@@ -24,10 +24,10 @@
 		</Content>
 		
 		<!-- Static Data / Databases -->
-		<Content Include="Data\timers_config.json;Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
+		<Content Include="Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-		<None Include="Data\**" Exclude="Data\timers_config.json;Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
+		<None Include="Data\**" Exclude="Data\manifest.json;Data\nodes_wood.json;Data\nodes_achievements.json;Data\nodes_chests.json;Data\nodes_map_specific.json;Data\nodes_ore.json;Data\nodes_plants.json">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</None>
 		

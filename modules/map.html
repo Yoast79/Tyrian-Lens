@@ -105,15 +105,70 @@
 			text-transform: none;
 		}
 
-		.compass-container {
+		.hud-compass-wrapper {
 			position: fixed;
-			bottom: 30px;
+			bottom: 20px;
 			right: 30px;
 			z-index: 9000;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 6px;
+			pointer-events: none;
+		}
+
+		.compass-container {
+			position: relative;
 			width: 130px;
 			height: 130px;
 			background: url("https://gw2ps.local/Assets/Icons/Map_navigation_compass.png") center/contain no-repeat;
 			pointer-events: none;
+		}
+
+		#map-clock-hud {
+			background: rgba(10, 8, 5, 0.85);
+			border: 1px solid #4a3b2a;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(226, 192, 125, 0.1);
+			border-radius: 4px;
+			padding: 4px 8px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 120px;
+			color: #e2c07d;
+			font-family: "Crimson Text", serif;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+			pointer-events: auto !important;
+		}
+
+		#map-clock-time {
+			font-size: 13px;
+			font-weight: bold;
+			font-family: monospace;
+			color: #ffffff;
+		}
+
+		#map-time-of-day {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			margin-top: 4px;
+			font-size: 10px;
+			font-weight: bold;
+			border-top: 1px solid #4a3b2a;
+			padding-top: 4px;
+			width: 100%;
+			justify-content: center;
+		}
+
+		#tod-icon svg {
+			width: 14px;
+			height: 14px;
+			display: block;
+			filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 		}
 
 		#compass-glow {
@@ -687,29 +742,38 @@
 		</div>
 	</div>
 
-	<div class="compass-container">
-		<div id="compass-glow"></div>
-		<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Track Player', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Central Tyria')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Central Tyria', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Crystal Desert')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Crystal Desert', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Cantha')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Cantha', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Heart of Maguuma')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Heart of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="bottom:10px; left:10px;" onclick="jump('Castora')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Castora', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
-		<div class="nav-hitbox" style="top:10px; left:10px;" onclick="jump('Horn of Maguuma')"
-			onmouseover="window.parent.postMessage({action:'showTooltip', text:'Horn of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
-			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+	<div class="hud-compass-wrapper">
+		<div class="compass-container">
+			<div id="compass-glow"></div>
+			<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Track Player', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Central Tyria')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Central Tyria', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Crystal Desert')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Crystal Desert', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Cantha')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Cantha', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Heart of Maguuma')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Heart of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="bottom:10px; left:10px;" onclick="jump('Castora')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Castora', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+			<div class="nav-hitbox" style="top:10px; left:10px;" onclick="jump('Horn of Maguuma')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Horn of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
+		</div>
+		<div id="map-clock-hud" style="pointer-events: auto !important;">
+			<div id="map-clock-time">00:00:00</div>
+			<div id="map-time-of-day">
+				<span id="tod-icon"></span>
+				<span id="tod-text" style="color: #ffffff;">TYRIA: DAY</span>
+			</div>
+		</div>
 	</div>
 
 	<script>
@@ -915,6 +979,14 @@
 				isVisible = defaultOnKeys.includes(toggleKey);
 			}
 			
+			// Custom cross-toggle override: World Bosses are active if EITHER node_world_boss OR node_event_group is enabled!
+			if (toggleKey === 'node_world_boss') {
+				let bossVisible = isVisible;
+				let groupVisible = layerToggles['node_event_group'];
+				if (groupVisible === undefined) groupVisible = false;
+				isVisible = bossVisible || groupVisible;
+			}
+			
 			const masterCat = getMasterCategoryForLayer(toggleKey);
 			let masterToggles = JSON.parse(localStorage.getItem('gw2_master_toggles') || '{"map-options":true,"farming_nodes":true,"miscellaneous":true}');
 			const isMasterOn = masterToggles[masterCat] !== false;
@@ -1090,6 +1162,15 @@
 					else map.removeLayer(subLayers[name]);
 				}
 			}
+
+			if (name === 'node_event_group') {
+				let worldBossActive = isLayerEnabled('node_world_boss');
+				if (subLayers['node_world_boss']) {
+					if (worldBossActive) map.addLayer(subLayers['node_world_boss']);
+					else map.removeLayer(subLayers['node_world_boss']);
+				}
+			}
+
 			if (typeof updateAltitudeMarkersVisibility === 'function') {
 				updateAltitudeMarkersVisibility();
 			}
@@ -1668,10 +1749,11 @@
 					.then(res => {
 						if (res.ok) {
 							return res.json().then(data => {
-								console.log(`[Altitude Engine] Loaded ${file} successfully: ${data.length} nodes.`);
+								let nodesArray = Array.isArray(data) ? data : (data && data.value ? data.value : []);
+								console.log(`[Altitude Engine] Loaded ${file} successfully: ${nodesArray.length} nodes.`);
 								// Inject the source file name into each node for dynamic dev mode updates!
-								data.forEach(node => { node.sourceFile = file; });
-								return data;
+								nodesArray.forEach(node => { node.sourceFile = file; });
+								return nodesArray;
 							}).catch(err => {
 								console.error(`[Altitude Engine] Error parsing ${file} JSON:`, err);
 								return [];
@@ -1731,6 +1813,10 @@
 					if (p.day && p.day !== today) return;
 
 					let layerKey = p.layer || p.type;
+					if (layerKey === 'node_boss' || layerKey === 'node_event') {
+						layerKey = 'node_world_boss';
+					}
+					
 					
 					// Core layer resolutions and mappings
 					if (!layerKey && p.node) {
@@ -1805,19 +1891,21 @@
 						pane: 'iconPane',
 						interactive: true,
 						icon: customIcon,
+						bossName: p.bossName || p.event || p.node,
 						data: p
 					});
 
 					// Set up premium custom dual-row tooltips for service NPCs, and standard tooltips for others
-					let tooltipText = p.day ? `${p.node} (${p.day.toUpperCase()})` : p.node;
+					let mainTitle = p.event || p.node || "Event";
+					let tooltipText = p.day ? `${mainTitle} (${p.day.toUpperCase()})` : mainTitle;
 					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
 						const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
-						tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${p.node}</div>`;
+						tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${mainTitle}</div>`;
 						if (service) tooltipText += `<div style="color:#8a7a5f;font-size:11px;">${service}</div>`;
 						if (p.desc) tooltipText += `<div style="color:#8a8a8a;font-size:11px;margin-top:2px;text-transform:none;">${p.desc}</div>`;
 					} else {
 						if (p.desc) {
-							tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${tooltipText}</div><div style="color:#8a7a5f;font-size:11px;text-transform:none;">${p.desc}</div>`;
+							tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${mainTitle}</div><div style="color:#8a7a5f;font-size:11px;text-transform:none;">${p.desc}</div>`;
 						}
 						if (p.no_underwater) tooltipText += ` <img src="${p.no_underwater}" style="width:16px;height:16px;vertical-align:middle;margin-left:5px;" />`;
 					}
@@ -1838,6 +1926,11 @@
 						m.on('click', () => {
 							navigator.clipboard.writeText(p.chat_code);
 							window.parent.postMessage({ action: 'toast', msg: 'WAYPOINT COPIED' }, "*");
+						});
+					} else if (layerKey === 'node_world_boss' || layerKey.startsWith('node_event_')) {
+						m.on('click', () => {
+							const wikiTitle = p.event || p.node;
+							window.parent.postMessage({ action: 'openWiki', title: wikiTitle }, '*');
 						});
 					}
 
@@ -2447,6 +2540,149 @@
 				submitBtn.innerText = 'SUBMIT REPORT';
 			});
 		};
+
+		// --- TIMEZONE-AWARE MAP COMPASS CLOCK ENGINE ---
+		function tickCompassClock() {
+			const now = new Date();
+			const prefTz = localStorage.getItem('gw2_pref_timezone') || 'local';
+			const opt = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+			if (prefTz !== 'local') opt.timeZone = prefTz;
+			
+			let timeStr = "";
+			try {
+				timeStr = now.toLocaleTimeString([], opt);
+			} catch (e) {
+				delete opt.timeZone;
+				timeStr = now.toLocaleTimeString([], opt);
+			}
+			
+			const clockTimeEl = document.getElementById('map-clock-time');
+			if (clockTimeEl) {
+				clockTimeEl.innerText = timeStr;
+			}
+
+			// Localized Day/Night Cycle calculation
+			updateCompassDayNight();
+		}
+
+		const SVG_DAWN = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="dawnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+					<stop offset="0%" stop-color="#ff7e5f"/>
+					<stop offset="100%" stop-color="#feb47b"/>
+				</linearGradient>
+			</defs>
+			<circle cx="8" cy="8" r="4.2" fill="url(#dawnGrad)" />
+			<line x1="1" y1="12" x2="15" y2="12" stroke="#e2c07d" stroke-width="1.5" stroke-linecap="round"/>
+			<line x1="8" y1="2" x2="8" y2="3" stroke="#ff7e5f" stroke-width="1.2" stroke-linecap="round"/>
+			<line x1="3.5" y1="3.5" x2="4.5" y2="4.5" stroke="#ff7e5f" stroke-width="1.2" stroke-linecap="round"/>
+			<line x1="12.5" y1="3.5" x2="11.5" y2="4.5" stroke="#ff7e5f" stroke-width="1.2" stroke-linecap="round"/>
+		</svg>`;
+
+		const SVG_DAY = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="8" cy="8" r="4.5" fill="#f1c40f" />
+			<g stroke="#f1c40f" stroke-width="1.2" stroke-linecap="round">
+				<line x1="8" y1="1.5" x2="8" y2="2.5" />
+				<line x1="8" y1="13.5" x2="8" y2="14.5" />
+				<line x1="1.5" y1="8" x2="2.5" y2="8" />
+				<line x1="13.5" y1="8" x2="14.5" y2="8" />
+				<line x1="3.4" y1="3.4" x2="4.1" y2="4.1" />
+				<line x1="12.6" y1="12.6" x2="11.9" y2="11.9" />
+				<line x1="12.6" y1="3.4" x2="11.9" y2="4.1" />
+				<line x1="3.4" y1="12.6" x2="4.1" y2="11.9" />
+			</g>
+		</svg>`;
+
+		const SVG_DUSK = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<linearGradient id="duskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+					<stop offset="0%" stop-color="#e65c00"/>
+					<stop offset="100%" stop-color="#f9d423"/>
+				</linearGradient>
+			</defs>
+			<circle cx="8" cy="9.5" r="4.2" fill="url(#duskGrad)" />
+			<line x1="1" y1="12" x2="15" y2="12" stroke="#e2c07d" stroke-width="1.5" stroke-linecap="round"/>
+			<line x1="8" y1="3.5" x2="8" y2="4.5" stroke="#e65c00" stroke-width="1.2" stroke-linecap="round"/>
+			<line x1="3.5" y1="5.5" x2="4.5" y2="6.5" stroke="#e65c00" stroke-width="1.2" stroke-linecap="round"/>
+			<line x1="12.5" y1="5.5" x2="11.5" y2="6.5" stroke="#e65c00" stroke-width="1.2" stroke-linecap="round"/>
+		</svg>`;
+
+		const SVG_NIGHT = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12.1 9.6c-.2.1-.5.1-.7.1-2.4 0-4.3-1.9-4.3-4.3 0-.9.3-1.8.8-2.5-.2-.1-.5-.1-.8-.1-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4c2.2 0 4.1-1.3 4.9-3.2-.3-.1-.5-.5-.2-.8z" fill="#a5f3fc" />
+			<g fill="#38bdf8" opacity="0.8">
+				<polygon points="12,2 12.3,2.7 13,3 12.3,3.3 12,4 11.7,3.3 11,3 11.7,2.7" />
+				<polygon points="4,11 4.2,11.4 4.6,11.6 4.2,11.8 4,12.2 3.8,11.8 3.4,11.6 3.8,11.4" />
+			</g>
+		</svg>`;
+
+		function updateCompassDayNight() {
+			const now = new Date();
+			const totalMin = now.getUTCHours() * 60 + now.getUTCMinutes() + (now.getUTCSeconds() / 60);
+			const c = totalMin % 120;
+			
+			// Detect cycle based on player Pos (defaulting to Tyria if playerPos is not loaded yet)
+			let cycle = "TYRIA";
+			if (playerPos && playerPos.length >= 2) {
+				const px = playerPos[1];
+				if (px >= 80000) {
+					cycle = "CANTHA";
+				} else if (px >= 50000 && px < 80000) {
+					cycle = "CASTORA";
+				}
+			}
+			
+			let phase = "";
+			let svgIcon = "";
+			
+			if (cycle === "CANTHA") {
+				if (c >= 25 && c < 35) {
+					phase = "DAWN"; svgIcon = SVG_DAWN;
+				} else if (c >= 35 && c < 105) {
+					phase = "DAY"; svgIcon = SVG_DAY;
+				} else if (c >= 105 && c < 115) {
+					phase = "DUSK"; svgIcon = SVG_DUSK;
+				} else {
+					phase = "NIGHT"; svgIcon = SVG_NIGHT;
+				}
+			} else if (cycle === "CASTORA") {
+				if (c >= 25 && c < 35) {
+					phase = "DAWN"; svgIcon = SVG_DAWN;
+				} else if (c >= 35 && c < 85) {
+					phase = "DAY"; svgIcon = SVG_DAY;
+				} else if (c >= 85 && c < 95) {
+					phase = "DUSK"; svgIcon = SVG_DUSK;
+				} else {
+					phase = "NIGHT"; svgIcon = SVG_NIGHT;
+				}
+			} else {
+				// TYRIA
+				if (c >= 25 && c < 30) {
+					phase = "DAWN"; svgIcon = SVG_DAWN;
+				} else if (c >= 30 && c < 100) {
+					phase = "DAY"; svgIcon = SVG_DAY;
+				} else if (c >= 100 && c < 105) {
+					phase = "DUSK"; svgIcon = SVG_DUSK;
+				} else {
+					phase = "NIGHT"; svgIcon = SVG_NIGHT;
+				}
+			}
+			
+			const iconEl = document.getElementById('tod-icon');
+			const textEl = document.getElementById('tod-text');
+			
+			if (iconEl) iconEl.innerHTML = svgIcon;
+			if (textEl) {
+				textEl.innerText = `${cycle}: ${phase}`;
+				// Stylize phase colors slightly for ultra-premium look
+				if (phase === "DAY") textEl.style.color = "#ffe066";
+				else if (phase === "NIGHT") textEl.style.color = "#a5f3fc";
+				else if (phase === "DAWN") textEl.style.color = "#ffb37e";
+				else if (phase === "DUSK") textEl.style.color = "#ff8533";
+			}
+		}
+
+		setInterval(tickCompassClock, 1000);
+		tickCompassClock();
 
 		document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 		/*]]>*/

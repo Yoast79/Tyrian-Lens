@@ -88,12 +88,13 @@
                 const container = document.getElementById('clears-container');
                 container.innerHTML = '';
 
-                const [allRaids, accRaids, accStrikes, allDungeons, accDungeons] = await Promise.all([
+                const [allRaids, accRaids, accStrikes, allDungeons, accDungeons, accAchievements] = await Promise.all([
                     fetchJSON('https://api.guildwars2.com/v2/raids?ids=all'),
                     fetchJSON(`https://api.guildwars2.com/v2/account/raids?access_token=${activeKey}`),
                     fetchJSON(`https://api.guildwars2.com/v2/account/strikes?access_token=${activeKey}`),
                     fetchJSON('https://api.guildwars2.com/v2/dungeons?ids=all'),
-                    fetchJSON(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`)
+                    fetchJSON(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`),
+                    fetchJSON(`https://api.guildwars2.com/v2/account/achievements?access_token=${activeKey}`)
                 ]);
 
                 // RAIDS
@@ -229,6 +230,118 @@
                 <div class="clear-cat">
                     <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">DUNGEONS</span></div>
                     <div class="cat-content" style="padding:10px;">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
+                </div>`;                // WEEKLY RIFTS
+                const RIFT_ROTATION = {
+                    1: [ { name: "Straits of Devastation", id: 7067 }, { name: "Elon Riverlands", id: 7060 }, { name: "Domain of Istan", id: 7028 } ],
+                    2: [ { name: "Sparkfly Fen", id: 7247 }, { name: "Tangled Depths", id: 6996 }, { name: "Sandswept Isles", id: 7181 } ],
+                    3: [ { name: "Bloodtide Coast", id: 7109 }, { name: "Lake Doric", id: 7108 }, { name: "Domain of Vabbi", id: 7023 } ],
+                    4: [ { name: "Frostgorge Sound", id: 7620 }, { name: "Ember Bay", id: 7628 }, { name: "Seitung Province", id: 7634 } ],
+                    5: [ { name: "Iron Marches", id: 7607 }, { name: "Verdant Brink", id: 7602 }, { name: "Bitterfrost Frontier", id: 7618 } ],
+                    6: [ { name: "Mount Maelstrom", id: 7061 }, { name: "Jahai Bluffs", id: 7704 }, { name: "New Kaineng City", id: 7662 } ],
+                    7: [ { name: "Malchor's Leap", id: 7713 }, { name: "Bloodstone Fen", id: 7692 }, { name: "Desert Highlands", id: 7659 } ],
+                    8: [ { name: "Fireheart Rise", id: 7660 }, { name: "Dry Top", id: 7679 }, { name: "Auric Basin", id: 7663 } ],
+                    9: [ { name: "Cursed Shore", id: 7168 }, { name: "Southsun Cove", id: 7040 }, { name: "Crystal Oasis", id: 7088 } ],
+                    10: [ { name: "Mount Maelstrom", id: 7061 }, { name: "Lake Doric", id: 7108 }, { name: "Domain of Vabbi", id: 7023 } ],
+                    11: [ { name: "Timberline Falls", id: 7064 }, { name: "Thunderhead Peaks", id: 7078 }, { name: "Echovald Wilds", id: 7044 } ]
+                };
+
+                const RIFT_SOTO_PERM = [
+                    { name: "Skywatch Archipelago", id: 7075 },
+                    { name: "Amnytas", id: 7072 },
+                    { name: "Inner Nayos", id: 7655 }
+                ];
+
+                const RIFT_JW_PERM = [
+                    { name: "Lowland Shore", id: 8201 },
+                    { name: "Janthir Syntri", id: 8257 },
+                    { name: "Mistburned Barrens", id: 8571 },
+                    { name: "Bava Nisos", id: 8766 }
+                ];
+
+                function getWeeklyRotationWeekIndex() {
+                    const epoch = Date.UTC(2023, 10, 6, 7, 30, 0); // Monday Nov 6, 2023 07:30 UTC
+                    const now = Date.now();
+                    const elapsedWeeks = (now - epoch) / (7 * 24 * 60 * 60 * 1000);
+                    return (Math.floor(elapsedWeeks) % 11) + 1;
+                }
+
+                let riftsHtml = '';
+                const wIdx = getWeeklyRotationWeekIndex();
+                const activeRotating = RIFT_ROTATION[wIdx] || [];
+                const sotoActiveMaps = [...RIFT_SOTO_PERM, ...activeRotating];
+                
+                // Group 1: Secrets of the Obscure & Core
+                let sotoCleared = 0;
+                let sotoTotal = sotoActiveMaps.length;
+                let sotoHtml = '';
+                
+                sotoActiveMaps.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) sotoCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 5;
+                    const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
+                    
+                    sotoHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                        <span class="clear-name">${m.name}</span>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let sotoProgressHtml = sotoCleared === sotoTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${sotoCleared}/${sotoTotal}</span>`;
+
+                riftsHtml += `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                        <span class="sub-title">Secrets of the Obscure & Core (Week ${wIdx})</span>
+                        ${sotoProgressHtml}
+                    </div>
+                    <div class="cat-content" style="display:none; padding:0; gap:0;">
+                        ${sotoHtml}
+                    </div>
+                </div>`;
+
+                // Group 2: Janthir Wilds
+                let jwCleared = 0;
+                let jwTotal = RIFT_JW_PERM.length;
+                let jwHtml = '';
+                
+                RIFT_JW_PERM.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) jwCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 5;
+                    const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
+                    
+                    jwHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                        <span class="clear-name">${m.name}</span>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let jwProgressHtml = jwCleared === jwTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${jwCleared}/${jwTotal}</span>`;
+
+                riftsHtml += `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                        <span class="sub-title">Janthir Wilds</span>
+                        ${jwProgressHtml}
+                    </div>
+                    <div class="cat-content" style="display:none; padding:0; gap:0;">
+                        ${jwHtml}
+                    </div>
+                </div>`;
+
+                container.innerHTML += `
+                <div class="clear-cat">
+                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">WEEKLY RIFT HUNTING</span></div>
+                    <div class="cat-content" style="padding:10px;">${riftsHtml}</div>
                 </div>`;
 
                 document.getElementById('loader').style.display = 'none';
@@ -245,6 +358,28 @@
                     document.body.setAttribute('data-theme', e.data.theme);
                 }
             });
+
+            function getNextWeeklyReset() {
+                const now = new Date();
+                const reset = new Date();
+                reset.setUTCHours(7, 30, 0, 0);
+                
+                const day = now.getUTCDay();
+                let daysToMonday = (1 - day + 7) % 7;
+                if (daysToMonday === 0 && (now.getUTCHours() > 7 || (now.getUTCHours() === 7 && now.getUTCMinutes() >= 30))) {
+                    daysToMonday = 7;
+                }
+                reset.setUTCDate(now.getUTCDate() + daysToMonday);
+                return reset;
+            }
+
+            let nextResetTime = getNextWeeklyReset().getTime();
+            setInterval(() => {
+                if (Date.now() >= nextResetTime) {
+                    nextResetTime = getNextWeeklyReset().getTime();
+                    init();
+                }
+            }, 60000); // Check every minute
 
             init();
             /*]]>*/

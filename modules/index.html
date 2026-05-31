@@ -249,7 +249,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.3.8";
+			const APP_VERSION = "1.3.9";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -764,6 +764,7 @@
 					else if (data.action === 'copy') { navigator.clipboard.writeText(data.code); window.showToast("Copied Link"); }
 					else if (data.action === 'drag') { window.postToHost('drag'); }
 					else if (data.action === 'resize') { window.postToHost('resize'); }
+					else if (data.action === 'openBugModal') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage({ action: 'openBugModal' }, '*'); }
 					else if (data.action === 'reloadMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { mapFrame.src = window.activeMap + '.html?v=' + APP_VERSION; } }
 					else if (data.action === 'switchMap') {
 						const mapFrame = document.getElementById('map-frame');
@@ -776,7 +777,7 @@
 						}
 					}
 					else if (data.action === 'uiScaleChanged') { if (data.value === 'large') document.body.classList.add('ui-large'); else document.body.classList.remove('ui-large'); const panels = [document.getElementById('side-panel'), document.getElementById('side-panel-right')]; panels.forEach(p => { if (data.value === 'large') p.classList.add('ui-large'); else p.classList.remove('ui-large'); }); const menuContainer = document.getElementById('menu-container'); const menuFrame = document.getElementById('menu-frame'); if (data.value === 'large') { menuContainer.classList.add('ui-large'); if(menuFrame && menuFrame.contentWindow) menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'large'}, '*'); } else { menuContainer.classList.remove('ui-large'); if(menuFrame && menuFrame.contentWindow) menuFrame.contentWindow.postMessage({action:'uiScaleChanged', value:'default'}, '*'); } }
-					else if (data.action === 'toggleMenu') { if (data.menu === 'Help & Support') { window.toggleSidePanel('help', true); } else if (data.menu === 'Settings') { window.toggleSidePanel('settings', true); } else if (data.menu === 'API Settings') { window.toggleSidePanel('api_management', true); } else { let mod = data.menu.toLowerCase().replace(/ /g, '_'); if (mod === 'map_options' && window.activeMap === 'wvw_map') { mod = 'wvw_map_options'; } window.toggleSidePanel(mod, false); } }
+					else if (data.action === 'toggleMenu') { if (data.menu === 'Help & Support') { window.toggleSidePanel('help', true); } else if (data.menu === 'Bug Report') { window.toggleSidePanel('bug_report', true); } else if (data.menu === 'Settings') { window.toggleSidePanel('settings', true); } else if (data.menu === 'API Settings') { window.toggleSidePanel('api_management', true); } else { let mod = data.menu.toLowerCase().replace(/ /g, '_'); if (mod === 'map_options' && window.activeMap === 'wvw_map') { mod = 'wvw_map_options'; } window.toggleSidePanel(mod, false); } }
                     else if (data.action === 'updateDRFToken') { window.postToHost(JSON.stringify(data)); }
                     else if (data.action === 'trayNotification') { window.postToHost(JSON.stringify(data)); }
                     else if (data.action === 'openLogFolder') { window.postToHost(JSON.stringify(data)); }

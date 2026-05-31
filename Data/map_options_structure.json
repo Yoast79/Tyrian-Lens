@@ -359,9 +359,27 @@
         "items": [
           {
             "id": "node_world_boss",
-            "label": "World Bosses",
+            "label": "Bosses & Champions",
             "icon": "https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png",
-            "tooltip": "A green circle will indicate the currently active World Boss."
+            "tooltip": "A green pulsing circle will indicate when the World Boss is active."
+          },
+          {
+            "id": "node_event_group",
+            "label": "Group Events",
+            "icon": "https://wiki.guildwars2.com/images/6/67/Event_swords_%28map_icon%29.png",
+            "tooltip": "Show or hide group-scaled dynamic events."
+          },
+          {
+            "id": "node_event_standard",
+            "label": "Dynamic Events",
+            "icon": "https://wiki.guildwars2.com/images/b/bc/Event_star_%28map_icon%29.png",
+            "tooltip": "Show or hide standard dynamic events."
+          },
+          {
+            "id": "node_event_gathering",
+            "label": "Other Events",
+            "icon": "https://wiki.guildwars2.com/images/a/a2/Event_collect_%28map_icon%29.png",
+            "tooltip": "Show or hide collection, escort, and interactive hand events."
           },
           {
             "id": "node_mist_rift",

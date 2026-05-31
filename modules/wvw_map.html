@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -28,9 +28,46 @@
 			}
 			.coord-val { color: #ffffff; font-weight: bold; }
 
+			.hud-compass-wrapper {
+				position: fixed;
+				bottom: 15px;
+				right: 30px;
+				z-index: 9000;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 4px;
+				pointer-events: none;
+			}
 			.compass-container {
-			position: fixed; bottom: 30px; right: 30px; z-index: 9000; width: 130px; height: 130px;
-			background: url("https://gw2ps.local/Assets/Icons/wvw_map_navigation_compass.png") center/contain no-repeat; pointer-events: none;
+				position: relative;
+				width: 130px;
+				height: 130px;
+				background: url("https://gw2ps.local/Assets/Icons/wvw_map_navigation_compass.png") center/contain no-repeat;
+				pointer-events: none;
+			}
+			#map-clock-hud {
+				background: var(--bg-panel, rgba(10, 8, 5, 0.85));
+				border: 1px solid var(--border-color, #4a3b2a);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 5px rgba(226, 192, 125, 0.1);
+				border-radius: 4px;
+				padding: 3px 8px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100px;
+				color: var(--text-primary, #e2c07d);
+				font-family: "Crimson Text", serif;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+			}
+			#map-clock-time {
+				font-size: 12px;
+				font-weight: bold;
+				font-family: monospace;
+				color: #ffffff;
 			}
 			#compass-glow {
 			position: absolute; top: 48px; left: 48px; width: 34px; height: 34px; border-radius: 50%;
@@ -137,15 +174,20 @@
 			</div>
 		</div>
 
-		<div class="compass-container">
-			<div id="compass-glow"></div>
-			<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)" onmouseover="showTip('Track Player', event)" onmouseout="hideTip()"></div>
-			<div id="nav-eotm" class="nav-hitbox" style="top:0px; left:0px;" onclick="jump('Edge of the Mists')" onmouseover="showTip('Edge of the Mists', event)" onmouseout="hideTip()"></div>
-			<div id="nav-green" class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Green Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
-			<div id="nav-blue" class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Blue Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
-			<div id="nav-eb" class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Eternal Battlegrounds')" onmouseover="showTip('Eternal Battlegrounds', event)" onmouseout="hideTip()"></div>
-			<div id="nav-red" class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Red Desert Borderlands')" onmouseover="showTip(this.dataset.name || 'Desert Borderlands', event)" onmouseout="hideTip()"></div>
-			<div id="nav-pvp" class="nav-hitbox" style="bottom:0px; right:0px;" onclick="jump('Heart of the Mists')" onmouseover="showTip('Heart of the Mists', event)" onmouseout="hideTip()"></div>
+		<div class="hud-compass-wrapper">
+			<div class="compass-container">
+				<div id="compass-glow"></div>
+				<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)" onmouseover="showTip('Track Player', event)" onmouseout="hideTip()"></div>
+				<div id="nav-eotm" class="nav-hitbox" style="top:0px; left:0px;" onclick="jump('Edge of the Mists')" onmouseover="showTip('Edge of the Mists', event)" onmouseout="hideTip()"></div>
+				<div id="nav-green" class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Green Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
+				<div id="nav-blue" class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Blue Alpine Borderlands')" onmouseover="showTip(this.dataset.name || 'Alpine Borderlands', event)" onmouseout="hideTip()"></div>
+				<div id="nav-eb" class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Eternal Battlegrounds')" onmouseover="showTip('Eternal Battlegrounds', event)" onmouseout="hideTip()"></div>
+				<div id="nav-red" class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Red Desert Borderlands')" onmouseover="showTip(this.dataset.name || 'Desert Borderlands', event)" onmouseout="hideTip()"></div>
+				<div id="nav-pvp" class="nav-hitbox" style="bottom:0px; right:0px;" onclick="jump('Heart of the Mists')" onmouseover="showTip('Heart of the Mists', event)" onmouseout="hideTip()"></div>
+			</div>
+			<div id="map-clock-hud" style="pointer-events: auto !important;">
+				<div id="map-clock-time">00:00:00</div>
+			</div>
 		</div>
 
 		<script>
@@ -657,6 +699,30 @@
 				}
 			});
 			initWvW();
+			// --- TIMEZONE-AWARE MAP COMPASS CLOCK ENGINE ---
+			function tickCompassClock() {
+				const now = new Date();
+				const prefTz = localStorage.getItem('gw2_pref_timezone') || 'local';
+				const opt = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+				if (prefTz !== 'local') opt.timeZone = prefTz;
+				
+				let timeStr = "";
+				try {
+					timeStr = now.toLocaleTimeString([], opt);
+				} catch (e) {
+					delete opt.timeZone;
+					timeStr = now.toLocaleTimeString([], opt);
+				}
+				
+				const clockTimeEl = document.getElementById('map-clock-time');
+				if (clockTimeEl) {
+					clockTimeEl.innerText = timeStr;
+				}
+			}
+			
+			setInterval(tickCompassClock, 1000);
+			tickCompassClock();
+
 			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
 			/*]]>*/
 		</script>

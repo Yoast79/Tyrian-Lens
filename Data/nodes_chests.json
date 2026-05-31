@@ -19621,6 +19621,24 @@
 },
 {
     "pos": [
+        24237.8,
+        24240.8
+    ],
+    "node": "Greater Arcane Chest",
+    "yields": [
+        "Greater Arcane Chest"
+    ],
+    "icon": "https://gw2ps.local/Assets/Icons/greater_arcane_chest.png",
+    "alt": 619,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "chests",
+    "layer": "node_greater_arcane_chest_chests",
+    "desc": ""
+},
+{
+    "pos": [
         23912.7,
         23638
     ],
