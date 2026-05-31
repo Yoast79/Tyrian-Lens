@@ -178,7 +178,7 @@ namespace GW2PS
                 }
             };
 
-            string localFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) ?? AppDomain.CurrentDomain.BaseDirectory;
+            string localFolder = AppDomain.CurrentDomain.BaseDirectory;
 
 #if DEBUG
             // In Debug mode, map gw2ps.local directly to the project source root folder
