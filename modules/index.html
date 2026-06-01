@@ -217,6 +217,14 @@
 				</div>
 				<div id="fishing-wvl-content" style="display: flex; flex-direction: column; gap: 10px;"></div>
 			</div>
+
+			<div id="clears-watchlist" style="background: rgba(10, 8, 5, 0.95); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.8); flex-shrink: 0;">
+				<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:5px;">
+					<span style="font-size:11px; font-weight:bold; letter-spacing:1px;">CLEARS WATCHLIST</span>
+					<span style="cursor:pointer; color:#8a7a5f; font-size:14px;" onclick="closeClearsWatchlist()">&#10006;</span>
+				</div>
+				<div id="clears-wvl-content" style="display: flex; flex-direction: column; gap: 5px;"></div>
+			</div>
 		</div>
 
 		<div id="side-panel">
@@ -365,6 +373,7 @@
 				}
 
 				checkReleaseUpdate();
+				window.pollClearsWatchlist();
 				// --- END UPDATE CHECKER ---
 			});
 
@@ -427,6 +436,39 @@
                     try { timersFrame.contentWindow.document.getElementById('timer-persistent-toggle').checked = false; } catch(e) {}
                 }
             }
+
+            window.closeClearsWatchlist = function() {
+                document.getElementById('clears-watchlist').style.display = 'none';
+                localStorage.setItem('gw2_clears_watchlist_visible', 'false');
+                window.postToFrames({ action: 'clearsWatchlistClosed' });
+            };
+
+            window.pollClearsWatchlist = function() {
+                const watched = JSON.parse(localStorage.getItem('gw2_watched_clears') || '[]');
+                const isVisible = localStorage.getItem('gw2_clears_watchlist_visible') === 'true';
+                const container = document.getElementById('clears-watchlist');
+                
+                if (watched.length === 0 || !isVisible) {
+                    container.style.display = 'none';
+                    return;
+                }
+                
+                container.style.display = 'block';
+                const content = document.getElementById('clears-wvl-content');
+                const clearsStatus = JSON.parse(localStorage.getItem('gw2_clears_status') || '{}');
+                
+                let html = '';
+                watched.forEach(id => {
+                    const item = clearsStatus[id] || { name: id.replace(/_/g, ' '), isDone: false, cat: 'UNKNOWN' };
+                    const color = item.isDone ? "#1A9306" : "#ff4a4a";
+                    const statusText = item.isDone ? "CLEARED" : "UNCLEARED";
+                    html += `<div class="track-item" style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(74, 59, 42, 0.3); padding: 4px 0;">
+                        <div class="track-title" style="margin-bottom:0; max-width: 180px; font-size:11px;">${item.name.toUpperCase()}</div>
+                        <div style="font-size:11px; color:${color}; font-weight:bold;">${statusText}</div>
+                    </div>`;
+                });
+                content.innerHTML = html;
+            };
 
 			window.showMapSwitchPopup = function(targetMap) {
 				const popup = document.getElementById("map-switch-popup");
@@ -718,6 +760,7 @@
 						}
 					}
 					else if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
+					else if (data.action === 'refreshClearsWatchlist') window.pollClearsWatchlist();
 					else if (data.action === 'hideTooltip') document.getElementById("global-tooltip").style.display = "none";
 					else if (data.action === 'toast') window.showToast(data.msg, data.persistent);
 					else if (data.action === 'eventPop') window.showEventPop(data.msg);

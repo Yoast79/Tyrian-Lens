@@ -32,7 +32,12 @@
 			.clear-item { display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(10,8,5,0.4); border-top: 1px solid var(--border-color, #2a2015); align-items: center; cursor: pointer; transition: 0.2s; }
 			.clear-item:first-child { border-top: none; }
 			.clear-item:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
+			.clear-item-left { display: flex; align-items: center; gap: 8px; }
 			.clear-name { font-size: 11px; color: var(--text-primary, #e2c07d); transition: 0.2s; }
+
+			.watch-star { font-size: 14px; color: var(--text-muted, #8a7a5f); transition: 0.2s; cursor: pointer; user-select: none; line-height: 1; }
+			.watch-star:hover { color: var(--text-primary, #e2c07d); transform: scale(1.2); }
+			.watch-star.active { color: #ffd700 !important; text-shadow: 0 0 5px #ffd700; }
 
 			.clear-status { font-size: 10px; font-weight: bold; }
 			.status-done { color: #1A9306; }
@@ -46,6 +51,7 @@
 			body.ui-large .clear-status { font-size: 12px; }
 			body.ui-large .progress-text { font-size: 13px; }
 			body.ui-large .progress-done { font-size: 16px; }
+			body.ui-large .watch-star { font-size: 17px; }
 		</style>
 	</head>
 	<body>
@@ -75,18 +81,38 @@
                 return str.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
             }
 
-            async function init() {
+            window.toggleWatch = function(e, id, name, cat) {
+                e.stopPropagation();
+                let watched = JSON.parse(localStorage.getItem('gw2_watched_clears') || '[]');
+                const star = e.currentTarget;
+                
+                if (watched.includes(id)) {
+                    watched = watched.filter(wId => wId !== id);
+                    star.classList.remove('active');
+                    star.innerHTML = '☆';
+                } else {
+                    watched.push(id);
+                    star.classList.add('active');
+                    star.innerHTML = '★';
+                    localStorage.setItem('gw2_clears_watchlist_visible', 'true');
+                }
+                
+                localStorage.setItem('gw2_watched_clears', JSON.stringify(watched));
+                window.parent.postMessage({ action: 'refreshClearsWatchlist' }, '*');
+            };
+
+            async function init(isAutoRefresh = false) {
                 const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
                 if (settings.uiScaleLarge) document.body.classList.add('ui-large');
                 
                 if (!activeKey) return;
 
-                document.getElementById('loader').style.display = 'flex';
-                document.getElementById('ui-root').style.display = 'none';
-
-                // Explicitly wipe the container to free DOM memory
-                const container = document.getElementById('clears-container');
-                container.innerHTML = '';
+                if (!isAutoRefresh) {
+                    document.getElementById('loader').style.display = 'flex';
+                    document.getElementById('ui-root').style.display = 'none';
+                    const container = document.getElementById('clears-container');
+                    container.innerHTML = '';
+                }
 
                 const [allRaids, accRaids, accStrikes, allDungeons, accDungeons, accAchievements] = await Promise.all([
                     fetchJSON('https://api.guildwars2.com/v2/raids?ids=all'),
@@ -96,6 +122,9 @@
                     fetchJSON(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`),
                     fetchJSON(`https://api.guildwars2.com/v2/account/achievements?access_token=${activeKey}`)
                 ]);
+
+                let clearsStatus = {};
+                let watched = JSON.parse(localStorage.getItem('gw2_watched_clears') || '[]');
 
                 // RAIDS
                 let raidsHtml = '';
@@ -110,9 +139,17 @@
                             w.events.forEach(e => {
                                 const isDone = accRaids && accRaids.includes(e.id);
                                 if (isDone) wingCleared++;
+                                
+                                const displayName = formatName(e.id);
+                                clearsStatus[e.id] = { name: displayName, isDone: isDone, cat: 'RAIDS' };
+                                const isWatched = watched.includes(e.id);
+
                                 eventsHtml += `
-                                <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${formatName(e.id)}' }, '*')">
-                                    <span class="clear-name">${formatName(e.id)}</span>
+                                <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
+                                    <div class="clear-item-left">
+                                        <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName}', 'RAIDS')">${isWatched ? '★' : '☆'}</span>
+                                        <span class="clear-name">${displayName}</span>
+                                    </div>
                                     <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
                                 </div>`;
                             });
@@ -134,7 +171,7 @@
                     });
                 }
                 
-                container.innerHTML += `
+                let combinedHtml = `
                 <div class="clear-cat">
                     <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">RAIDS</span></div>
                     <div class="cat-content" style="padding:10px;">${raidsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load raids.</div>'}</div>
@@ -156,9 +193,17 @@
                     strikes.forEach(s => {
                         const isDone = accStrikes && accStrikes.includes(s);
                         if (isDone) catCleared++;
+
+                        const displayName = formatName(s);
+                        clearsStatus[s] = { name: displayName, isDone: isDone, cat: 'STRIKES' };
+                        const isWatched = watched.includes(s);
+
                         sHtml += `
-                        <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${formatName(s)}' }, '*')">
-                            <span class="clear-name">${formatName(s)}</span>
+                        <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
+                            <div class="clear-item-left">
+                                <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName}', 'STRIKES')">${isWatched ? '★' : '☆'}</span>
+                                <span class="clear-name">${displayName}</span>
+                            </div>
                             <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
                         </div>`;
                     });
@@ -177,7 +222,7 @@
                     </div>`;
                 }
 
-                container.innerHTML += `
+                combinedHtml += `
                 <div class="clear-cat">
                     <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">STRIKE MISSIONS</span></div>
                     <div class="cat-content" style="padding:10px;">${strikesHtml}</div>
@@ -204,11 +249,17 @@
                                 else pathName = formatName(p.id);
                             }
 
+                            clearsStatus[p.id] = { name: pathName, isDone: isDone, cat: 'DUNGEONS' };
+                            const isWatched = watched.includes(p.id);
+
                             pHtml += `
                             <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${pathName}' }, '*')">
-                                <span class="clear-name">${pathName}</span>
+                                <div class="clear-item-left">
+                                    <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName}', 'DUNGEONS')">${isWatched ? '★' : '☆'}</span>
+                                    <span class="clear-name">${pathName}</span>
+                                </div>
                                 <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
-                                </div>`;
+                            </div>`;
                         });
 
                         let progressHtml = dCleared === dTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${dCleared}/${dTotal}</span>`;
@@ -226,11 +277,13 @@
                     });
                 }
 
-                container.innerHTML += `
+                combinedHtml += `
                 <div class="clear-cat">
                     <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">DUNGEONS</span></div>
                     <div class="cat-content" style="padding:10px;">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
-                </div>`;                // WEEKLY RIFTS
+                </div>`;
+
+                // WEEKLY RIFTS
                 const RIFT_ROTATION = {
                     1: [ { name: "Straits of Devastation", id: 7067 }, { name: "Elon Riverlands", id: 7060 }, { name: "Domain of Istan", id: 7028 } ],
                     2: [ { name: "Sparkfly Fen", id: 7247 }, { name: "Tangled Depths", id: 6996 }, { name: "Sandswept Isles", id: 7181 } ],
@@ -284,9 +337,16 @@
                     const maxCount = playerProg ? playerProg.max : 5;
                     const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
                     
+                    const riftName = m.name + " Rift";
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS' };
+                    const isWatched = watched.includes(m.id);
+
                     sotoHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
-                        <span class="clear-name">${m.name}</span>
+                        <div class="clear-item-left">
+                            <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')">${isWatched ? '★' : '☆'}</span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
                     </div>`;
                 });
@@ -318,9 +378,16 @@
                     const maxCount = playerProg ? playerProg.max : 5;
                     const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
                     
+                    const riftName = m.name + " Rift";
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS' };
+                    const isWatched = watched.includes(m.id);
+
                     jwHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
-                        <span class="clear-name">${m.name}</span>
+                        <div class="clear-item-left">
+                            <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')">${isWatched ? '★' : '☆'}</span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
                     </div>`;
                 });
@@ -338,14 +405,23 @@
                     </div>
                 </div>`;
 
-                container.innerHTML += `
+                combinedHtml += `
                 <div class="clear-cat">
                     <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">WEEKLY RIFT HUNTING</span></div>
                     <div class="cat-content" style="padding:10px;">${riftsHtml}</div>
                 </div>`;
 
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('ui-root').style.display = 'flex';
+                // Save dynamic API state into local storage to support the parent overlay
+                localStorage.setItem('gw2_clears_status', JSON.stringify(clearsStatus));
+                window.parent.postMessage({ action: 'refreshClearsWatchlist' }, '*');
+
+                const container = document.getElementById('clears-container');
+                container.innerHTML = combinedHtml;
+
+                if (!isAutoRefresh) {
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('ui-root').style.display = 'flex';
+                }
             }
 
             window.addEventListener('message', (e) => { 
@@ -356,6 +432,10 @@
                 }
                 if (e.data && e.data.action === 'updateTheme') {
                     document.body.setAttribute('data-theme', e.data.theme);
+                }
+                if (e.data && e.data.action === 'clearsWatchlistClosed') {
+                    // Update star displays to reflect closing/unwatching
+                    init(true);
                 }
             });
 
@@ -379,7 +459,14 @@
                     nextResetTime = getNextWeeklyReset().getTime();
                     init();
                 }
-            }, 60000); // Check every minute
+            }, 60000); // Check reset every minute
+
+            // Auto-refresh the clears data in background every minute while the document is active
+            setInterval(() => {
+                if (document.visibilityState === 'visible') {
+                    init(true);
+                }
+            }, 60000);
 
             init();
             /*]]>*/
