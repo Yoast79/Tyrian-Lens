@@ -35,9 +35,9 @@
 			.clear-item-left { display: flex; align-items: center; gap: 8px; }
 			.clear-name { font-size: 11px; color: var(--text-primary, #e2c07d); transition: 0.2s; }
 
-			.watch-star { font-size: 14px; color: var(--text-muted, #8a7a5f); transition: 0.2s; cursor: pointer; user-select: none; line-height: 1; }
-			.watch-star:hover { color: var(--text-primary, #e2c07d); transform: scale(1.2); }
-			.watch-star.active { color: #ffd700 !important; text-shadow: 0 0 5px #ffd700; }
+			.star-btn { cursor: pointer; width: 16px; height: 16px; opacity: 0.3; transition: 0.2s; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; flex-shrink: 0; display: inline-block; }
+			.star-btn:hover { opacity: 0.7; transform: scale(1.1); }
+			.star-btn.active { opacity: 1 !important; }
 
 			.clear-status { font-size: 10px; font-weight: bold; }
 			.status-done { color: #1A9306; }
@@ -51,7 +51,7 @@
 			body.ui-large .clear-status { font-size: 12px; }
 			body.ui-large .progress-text { font-size: 13px; }
 			body.ui-large .progress-done { font-size: 16px; }
-			body.ui-large .watch-star { font-size: 17px; }
+			body.ui-large .star-btn { width: 20px; height: 20px; }
 		</style>
 	</head>
 	<body>
@@ -89,11 +89,9 @@
                 if (watched.includes(id)) {
                     watched = watched.filter(wId => wId !== id);
                     star.classList.remove('active');
-                    star.innerHTML = '☆';
                 } else {
                     watched.push(id);
                     star.classList.add('active');
-                    star.innerHTML = '★';
                     localStorage.setItem('gw2_clears_watchlist_visible', 'true');
                 }
                 
@@ -147,7 +145,7 @@
                                 eventsHtml += `
                                 <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
                                     <div class="clear-item-left">
-                                        <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName}', 'RAIDS')">${isWatched ? '★' : '☆'}</span>
+                                        <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName}', 'RAIDS')"></span>
                                         <span class="clear-name">${displayName}</span>
                                     </div>
                                     <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -201,7 +199,7 @@
                         sHtml += `
                         <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
                             <div class="clear-item-left">
-                                <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName}', 'STRIKES')">${isWatched ? '★' : '☆'}</span>
+                                <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName}', 'STRIKES')"></span>
                                 <span class="clear-name">${displayName}</span>
                             </div>
                             <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -255,7 +253,7 @@
                             pHtml += `
                             <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${pathName}' }, '*')">
                                 <div class="clear-item-left">
-                                    <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName}', 'DUNGEONS')">${isWatched ? '★' : '☆'}</span>
+                                    <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName}', 'DUNGEONS')"></span>
                                     <span class="clear-name">${pathName}</span>
                                 </div>
                                 <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -344,7 +342,7 @@
                     sotoHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')">${isWatched ? '★' : '☆'}</span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -385,7 +383,7 @@
                     jwHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="watch-star ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')">${isWatched ? '★' : '☆'}</span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
