@@ -3817,6 +3817,24 @@
 },
 {
     "pos": [
+        54820.5,
+        25519
+    ],
+    "node": "Mithril",
+    "yields": [
+        "Mithril Ore"
+    ],
+    "icon": "https://render.guildwars2.com/file/E90FE803CDC205CDEB13FE03694D4D04757ACF5D/65928.png",
+    "alt": 49,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "ore",
+    "layer": "node_mithril_ore",
+    "desc": "Rich Mithril Vein"
+},
+{
+    "pos": [
         53117.1,
         38986.2
     ],

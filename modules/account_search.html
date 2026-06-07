@@ -173,17 +173,34 @@
 					"nodes_service_npc.json", "nodes_world_events.json", "nodes_mastery_insight.json"
 				];
 
+				const mapFiles = [
+					"nodes_zone_portals_map.json", "nodes_hearts_map.json", "nodes_heropoints_map.json",
+					"nodes_maps_map.json", "nodes_regions_map.json", "nodes_sectors_map.json",
+					"nodes_pois_map.json", "nodes_vistas_map.json", "nodes_waypoints_map.json"
+				];
+
+				const mapPromises = mapFiles.map(file => fetchJSON(apiBase + file + "?t=" + Date.now()));
 				const altPromises = altFiles.map(file => fetchJSON(apiBase + file + "?t=" + Date.now()));
 
-				const [bank, mats, inv, wallet, chars, mapData, ...altResults] = await Promise.all([
+				const [bank, mats, inv, wallet, chars, ...allData] = await Promise.all([
 					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
 					fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey),
-					fetchJSON(apiBase + "map_data.json?t=" + Date.now()),
+					...mapPromises,
 					...altPromises
 				]);
+
+				const mapResults = allData.slice(0, mapFiles.length);
+				const altResults = allData.slice(mapFiles.length);
+
+				const mapDataPoints = [];
+				mapResults.forEach(arr => {
+					if (arr && Array.isArray(arr)) {
+						mapDataPoints.push(...arr);
+					}
+				});
 
                 if(bank) bank.forEach(i => { if(i) addLoc(i.id, "Bank", i.count); });
                 if(mats) mats.forEach(i => { if(i) addLoc(i.id, "Material Storage", i.count); });
@@ -205,8 +222,8 @@
                     });
                 }
 
-                if(mapData && mapData.points) {
-                    mapData.points.forEach((p, idx) => {
+                if(mapDataPoints.length > 0) {
+                    mapDataPoints.forEach((p, idx) => {
                         const id = 'maploc_' + idx;
                         const t = p.type ? p.type.toLowerCase() : "";
                         let mapIcon = p.icon || "https://gw2ps.local/Assets/Icons/map_scout.png";
@@ -229,7 +246,7 @@
                             rarity: 'Basic',
                             isMapLoc: true,
                             isWvW: false,
-                            pos: p.pos,
+                            pos: p.coord || p.pos,
                             layer: t
                         };
                         addLoc(id, label, 1);
