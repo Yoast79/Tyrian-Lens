@@ -66,9 +66,47 @@
 			body.ui-large .badge { font-size: 14px; padding: 6px 12px; }
 			body.ui-large .badge img { width: 24px; height: 24px; }
 			body.ui-large .total-playtime { font-size: 18px; }
+
+			#confetti-canvas {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 10000;
+			}
+			#birthday-modal {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: var(--bg-panel, rgba(15, 12, 10, 0.98));
+				border: 2px solid var(--text-primary, #e2c07d);
+				padding: 25px;
+				z-index: 10001;
+				box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+				width: 380px;
+				text-align: center;
+				font-family: "Crimson Text", serif;
+				border-radius: 4px;
+				animation: modalFadeIn 0.3s ease-out;
+			}
+			@keyframes modalFadeIn {
+				from { opacity: 0; transform: translate(-50%, -48%) scale(0.96); }
+				to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+			}
 		</style>
 	</head>
 	<body>
+		<canvas id="confetti-canvas"></canvas>
+
+		<div id="birthday-modal">
+			<div style="font-size: 22px; font-weight: bold; color: var(--text-primary, #e2c07d); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px;">HAPPY BIRTHDAY!</div>
+			<div id="birthday-message" style="font-size: 16px; color: #fff; margin-bottom: 25px; line-height: 1.4; text-transform: uppercase;">Happy birthday!</div>
+			<button class="audit-btn" style="font-size: 13px; padding: 6px 18px; font-weight: bold;" onclick="closeBirthdayModal()">Celebrate!</button>
+		</div>
 
 		<div class="account-summary">
 			<div class="total-playtime" id="acc-total-time">Total Playtime: 0 HRS</div>
@@ -249,6 +287,27 @@
 						`;
 						list.appendChild(card);
 					}
+
+					// Check birthdays
+					birthdayQueue = [];
+					const today = new Date();
+					chars.forEach(c => {
+						const birth = new Date(c.created);
+						if (birth.getDate() === today.getDate() && birth.getMonth() === today.getMonth()) {
+							let celebrated = JSON.parse(sessionStorage.getItem('gw2_celebrated_birthdays') || '[]');
+							if (!celebrated.includes(c.name)) {
+								celebrated.push(c.name);
+								sessionStorage.setItem('gw2_celebrated_birthdays', JSON.stringify(celebrated));
+								const age = today.getFullYear() - birth.getFullYear();
+								if (age > 0) {
+									birthdayQueue.push({ name: c.name, age: age });
+								}
+							}
+						}
+					});
+					if (birthdayQueue.length > 0) {
+						setTimeout(processBirthdayQueue, 500);
+					}
 				} catch (err) {
 					list.innerHTML = `
 					<div class="loading" style="color:#f44;">
@@ -257,6 +316,98 @@
 						</div>`;
 				}
 			}
+
+			let birthdayQueue = [];
+			let confettiParticles = [];
+			let confettiAnimId = null;
+
+			function getOrdinalSuffix(num) {
+				const j = num % 10, k = num % 100;
+				if (j === 1 && k !== 11) return num + "st";
+				if (j === 2 && k !== 12) return num + "nd";
+				if (j === 3 && k !== 13) return num + "rd";
+				return num + "th";
+			}
+
+			function triggerConfetti() {
+				const canvas = document.getElementById('confetti-canvas');
+				if (!canvas) return;
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				const ctx = canvas.getContext('2d');
+				confettiParticles = [];
+				for (let i = 0; i < 150; i++) {
+					confettiParticles.push({
+						x: Math.random() * canvas.width,
+						y: Math.random() * canvas.height - canvas.height,
+						vx: (Math.random() - 0.5) * 6,
+						vy: Math.random() * 5 + 4,
+						size: Math.random() * 6 + 4,
+						color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+						rotation: Math.random() * 360,
+						rotationSpeed: (Math.random() - 0.5) * 10
+					});
+				}
+				if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
+				
+				function anim() {
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					let alive = false;
+					confettiParticles.forEach(p => {
+						p.x += p.vx;
+						p.y += p.vy;
+						p.vy += 0.02; // gravity
+						p.rotation += p.rotationSpeed;
+						
+						ctx.save();
+						ctx.translate(p.x, p.y);
+						ctx.rotate(p.rotation * Math.PI / 180);
+						ctx.fillStyle = p.color;
+						ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+						ctx.restore();
+						
+						if (p.y < canvas.height + 20) alive = true;
+					});
+					if (alive) {
+						confettiAnimId = requestAnimationFrame(anim);
+					} else {
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+					}
+				}
+				anim();
+			}
+
+			function playConfettiSound() {
+				try {
+					const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+					const vol = settings.masterVolume !== undefined ? (settings.masterVolume / 100) : 1.0;
+					const audio = new Audio("https://gw2ps.local/Assets/Sounds/choya_pop.mp3");
+					audio.volume = vol;
+					audio.play().catch(e => console.error("Confetti sound blocked or failed:", e));
+				} catch (e) {
+					console.error("Error playing birthday sound:", e);
+				}
+			}
+
+			function processBirthdayQueue() {
+				if (birthdayQueue.length === 0) return;
+				const item = birthdayQueue.shift();
+				
+				const modal = document.getElementById('birthday-modal');
+				const msg = document.getElementById('birthday-message');
+				if (modal && msg) {
+					msg.innerText = `Happy ${getOrdinalSuffix(item.age)} birthday ${item.name}!`;
+					modal.style.display = 'block';
+					triggerConfetti();
+					playConfettiSound();
+				}
+			}
+
+			window.closeBirthdayModal = function() {
+				const modal = document.getElementById('birthday-modal');
+				if (modal) modal.style.display = 'none';
+				setTimeout(processBirthdayQueue, 200);
+			};
 
 			window.addEventListener('message', (e) => {
 				if (e.data && e.data.action === 'switchAccount') init();
