@@ -1,0 +1,11 @@
+{
+  "active": true,
+  "motds": [
+    {
+      "id": "motd_npc_coords",
+      "title": "NPC coordinates wanted!",
+      "message": "<div style='text-align: center;'>I want to keep filling the list of  NPC's and their coordinates.<br> Please, if you see a missing NPC, stand exactly on top of it.<br> Use the <span class='motd-highlight-btn'>Report Node</span> button and use the name of the NPC as <strong>Node Name</strong>. Thank you!",
+      "active": true
+    }
+  ]
+}

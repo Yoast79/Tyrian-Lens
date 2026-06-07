@@ -1,0 +1,3302 @@
+﻿[
+    {
+        "pos":  [
+                    53149.6,
+                    32997.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Foreman's Gear can be found on the ground at Dostoev Sky Peak. Interacting with it spawns the foreman and his crew.",
+        "wiki":  "Foreman's Gear"
+    },
+    {
+        "pos":  [
+                    54055.3,
+                    32781.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Preserved Footprint can be found inside The Wide Expanse of Dredgehaunt Cliffs. Interacting with it triggers the Defeat the ancient jotun spirits hero challenge.",
+        "wiki":  "Preserved Footprint"
+    },
+    {
+        "pos":  [
+                    54427.2,
+                    34466.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Dwarven Relic in the Dociu Excavation in the Dredgehaunt Cliffs. It is reached by walking through the dredge tunnels in the southeast corner of the map. It is guarded by a Veteran Dredge.",
+        "wiki":  "Dwarven Relic (Dredgehaunt Cliffs)"
+    },
+    {
+        "pos":  [
+                    52340.7,
+                    33646.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Kakkilak can be found within Dissun's Mine. The entrance to the cave complex is on the snowy plain in Steelbrachen, not against the mountainside. Interact with her for the hero challenge.",
+        "wiki":  "Kakkilak"
+    },
+    {
+        "pos":  [
+                    53436.7,
+                    32267.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Jotun Holy Site is a site where the presence of the elder jotun spirits can be felt. Communing with it awards the player one hero point.",
+        "wiki":  "Jotun Holy Site"
+    },
+    {
+        "pos":  [
+                    54366.7,
+                    32335.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Shiniest Skritt Treasure is a hero challenge located in Ratatosk, a skritt outpost in Dredgehaunt Cliffs. To gain the hero point, one must commune with the treasure. It is usually guarded by a Veteran Cave Spider and its minions.",
+        "wiki":  "Shiniest Skritt Treasure"
+    },
+    {
+        "pos":  [
+                    51656.5,
+                    32015.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This unique Steam Portal is a permanent portal to a potential future, unattached to a mechanical gate like most other Steam Portals.",
+        "wiki":  "Steam Portal (hero challenge)"
+    },
+    {
+        "pos":  [
+                    50515.1,
+                    31062.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Heart of the Priory is a vast collection of levitating, rotating stone tablets.",
+        "wiki":  "Heart of the Priory"
+    },
+    {
+        "pos":  [
+                    52067.1,
+                    29792.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Dwarven Relic found within Underburg talks about the fate of the dwarves.",
+        "wiki":  "Dwarven Relic (Lornar's Pass)"
+    },
+    {
+        "pos":  [
+                    51120.3,
+                    33192.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Peg Leg is a hero challenge NPC located in False Lake.",
+        "wiki":  "Peg Leg (NPC)"
+    },
+    {
+        "pos":  [
+                    52087,
+                    32228.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Grenth's Door is an old statue of Grenth located within an abandoned temple, the Reaper's Gate.",
+        "wiki":  "Grenth's Door (object)"
+    },
+    {
+        "pos":  [
+                    50987.3,
+                    29766.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Skillet is a skritt who wants to smash you with his pet Smashy.",
+        "wiki":  "Skillet"
+    },
+    {
+        "pos":  [
+                    52080.4,
+                    30234.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Frozen Portal used by an ice imp and ice elementals can be found in northern Lornar's Pass. Similar portals are used by the icebrood elsewhere.",
+        "wiki":  "Frozen Portal"
+    },
+    {
+        "pos":  [
+                    50764.2,
+                    30796.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mysterious Meat is a hero challenge object located in a Fleshreaver-infested cave in the Durmand Priory area of Lornar's Pass.",
+        "wiki":  "Mysterious Meat"
+    },
+    {
+        "pos":  [
+                    50800.1,
+                    32849.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Lionguard Mette looks for a sparring partner, providing a hero challenge in Stonescatter Wash.",
+        "wiki":  "Lionguard Mette"
+    },
+    {
+        "pos":  [
+                    55298.3,
+                    27996.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Bjord's Banner stands at the end of a small path atop Svanir's Dome. Triggering the banner will start Defeat Bjord and his crew.",
+        "wiki":  "Bjord's Banner"
+    },
+    {
+        "pos":  [
+                    56076.2,
+                    27909.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Ancient Cave Spring flows forth in the depths of Warmspring Grotto in Solitude Vale. The path leading to its soothing waters is guarded by several Veteran Cave Spiders that would hinder your progress.",
+        "wiki":  "Ancient Cave Spring (Wayfarer Foothills)"
+    },
+    {
+        "pos":  [
+                    54778.7,
+                    29728.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Burrisson the Blue is half-naked norn at The Shadowhorns. Characters must speak to him, then defeat him in combat, to earn a hero point.",
+        "wiki":  "Burrisson the Blue"
+    },
+    {
+        "pos":  [
+                    56180,
+                    31347.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Bear Shaman Marga is enjoying the simple life in a cave over in Kresdor Kenning. To find her cave, start from the  Grawlenfjord Waypoint —  and follow the river north. The river will then branch to the east into a cave. Swim into the cave, diving under the water where it is blocked and emerging on the other side in the cave.",
+        "wiki":  "Bear Shaman Marga"
+    },
+    {
+        "pos":  [
+                    55726.6,
+                    28806.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Some Aging Ale Barrels are maturing in the Lostvyrm Cave, which is located halfway between Dolyak Pass and Hunter's Lake. Fight past the many wurms to sneak a swig and the challenge, though perhaps not the taste, may be rewarding. After taking a sample from the barrel, a Cold Filtered Wurm Tincture will be placed in your inventory. To receive the hero point you must consume this item.",
+        "wiki":  "Aging Ale Barrels"
+    },
+    {
+        "pos":  [
+                    55293.2,
+                    30793.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Issormir's Body rests in the snowy arena of Hangrammr Climb, still attesting to the mighty clash that felled it. Commune with this place of power to complete its hero challenge.",
+        "wiki":  "Issormir's Body"
+    },
+    {
+        "pos":  [
+                    56121,
+                    29038.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Corrupted Spike juts out from the ground at a Sons of Svanir encampment near Hunter's Lake. Unleashing its frozen wrath summons forth a Veteran Elder Icebrood Troll and two Icebrood Minions. Destroy them, and the Defeat the elder icebrood troll and his minions hero challenge will be complete.",
+        "wiki":  "Corrupted Spike"
+    },
+    {
+        "pos":  [
+                    56170.1,
+                    30132.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Blane the Insane represents the Sons of Svanir of Hermit's Watch. Players must defeat him to earn a hero point.",
+        "wiki":  "Blane the Insane"
+    },
+    {
+        "pos":  [
+                    53634.6,
+                    36478.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Cooroo is quaggan at Naui Waters. He is the initiator of the hero challenge Fight Cooroo's Crab.",
+        "wiki":  "Cooroo"
+    },
+    {
+        "pos":  [
+                    53191.2,
+                    37687.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Bullablopp is willing to recount the plights of the quaggans from the Unending Ocean to those who will listen.",
+        "wiki":  "Bullablopp"
+    },
+    {
+        "pos":  [
+                    51869.4,
+                    36455.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Interacting with the Ritual Tribal Paint hidden deep inside Candle Chimney will provide Grawl Paint, an item granting one hero point.",
+        "wiki":  "Ritual Tribal Paint"
+    },
+    {
+        "pos":  [
+                    53788.3,
+                    35912
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Strange Energy Source is a hero challenge located at the The Great Oouo Point of Interest in the Guilty Tears area in Timberline Falls. It is located in a small asuran lab in the shape of a face.",
+        "wiki":  "Strange Energy Source"
+    },
+    {
+        "pos":  [
+                    51757.4,
+                    37001.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ural's Delve is a communing hero challenge in Ural's Delve.",
+        "wiki":  "Ural's Delve (hero challenge)"
+    },
+    {
+        "pos":  [
+                    53846.1,
+                    24828.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Frost Portal used by icebrood can be found in Drakkar Spurs. Similar portals are used by the icebrood elsewhere.",
+        "wiki":  "Frost Portal"
+    },
+    {
+        "pos":  [
+                    55519.8,
+                    25764
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Shaman Okamuk starts the Defeat Okamuk hero challenge in Despond Precipice.",
+        "wiki":  "Shaman Okamuk"
+    },
+    {
+        "pos":  [
+                    54214.3,
+                    26534.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Flowing Ice is a kodan found in Talabaroop Waves, on the east side of the track that rings the ship, up a staircase. Defeat him in order to earn a Hero point.",
+        "wiki":  "Flowing Ice"
+    },
+    {
+        "pos":  [
+                    53857.6,
+                    27485.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Miner Voss is a dredge eager to learn the ways of fighting of the other races. He is found slightly north of the Groznev Waypoint, after walking down the ramp from the, turning west, and heading through the tunnel.",
+        "wiki":  "Miner Voss"
+    },
+    {
+        "pos":  [
+                    55908.4,
+                    26678.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Eulda Soulseer is a hero challenge NPC found in Yakkington's Toil.",
+        "wiki":  "Eulda Soulseer"
+    },
+    {
+        "pos":  [
+                    55208.7,
+                    25038.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Commune with the Glacial Trench is a hero challenge located in a cavern in Watchful Fjord. Simply swim to the bottom of the ocean floor to reach this hero point. There are three poisonous urchins that should be cleared out before you attempt to commune with the point, or else they will interrupt you.",
+        "wiki":  "Glacial Trench"
+    },
+    {
+        "pos":  [
+                    54246.4,
+                    26256.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Talooboo is a quaggan in Talabaroop Waves that is confident in the strength of the shark he has trained. Talk to Talooboo to fight the shark and earn a hero point, .",
+        "wiki":  "Talooboo"
+    },
+    {
+        "pos":  [
+                    50727.1,
+                    28293.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Razorwing's Nest is fiercely guarded in the western reach of Snowden Drifts. Provocation will result in Razorwing and three of her griffon brood to attack. Fend off the attack and the Hero challenge will be completed.",
+        "wiki":  "Razorwing's Nest"
+    },
+    {
+        "pos":  [
+                    50605.5,
+                    29392.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Grawl Totem of Glisterice Caves hovers above a small grawl encampment in Snowden Drifts.",
+        "wiki":  "Grawl Totem"
+    },
+    {
+        "pos":  [
+                    53538.8,
+                    27732
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Stinging Wind is waiting north of Lost Child's Sorrow Waypoint. Speak with him to begin his challenge to earn a hero point.",
+        "wiki":  "Stinging Wind"
+    },
+    {
+        "pos":  [
+                    54299.9,
+                    29506.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Devotee of Owl is one of the last followers of the deceased spirit of Owl found at Owl's Abattoir.",
+        "wiki":  "Devotee of Owl"
+    },
+    {
+        "pos":  [
+                    51690.3,
+                    27829.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Corvin the Skaald is a skaald offering a riddle to adventurers. As a child, he was saved by Eir Stegalkin and brought to Hoelbrak, saving his life and leading him to become a great skaald.",
+        "wiki":  "Corvin the Skaald"
+    },
+    {
+        "pos":  [
+                    51003.4,
+                    27843.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Raven Shaman's Power Source is carefully tucked away in an upper cavern of Darkhoof Heights. The entrance is to the west side of the centaur village (see map in the side bar). The event Slay the evil Raven shaman, Vilnia Shadowsong, and her helper must be completed to access the hero point.",
+        "wiki":  "Raven Shaman's Power Source"
+    },
+    {
+        "pos":  [
+                    59961.1,
+                    31202.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Ethereal Vanguard Monument stands quiet beneath an outcropping in Devast District. Awakening its power summons Captain Mattox and three Ethereal Vanguard soldiers back to be battled. Defeat Captain Mattox and the hero point will be granted.",
+        "wiki":  "Ethereal Vanguard Monument"
+    },
+    {
+        "pos":  [
+                    59687.9,
+                    31293.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Centurion Micka Thickblood is a member of the Blood Legion that challenges players to a fight when they interact with her. Defeat her to earn a hero point.",
+        "wiki":  "Centurion Micka Thickblood"
+    },
+    {
+        "pos":  [
+                    61198.2,
+                    30422.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The submerged Ruins of Ascalon City rest deep in the lake. A Veteran Bog Skale might have taken to its stony remains, but the site's latent energies remain a tempting reward for adventurers in the area.",
+        "wiki":  "Ruins of Ascalon City"
+    },
+    {
+        "pos":  [
+                    58093.2,
+                    30128.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Centurion Titus Gearclaw is looking for a sparring partner in Tela Range. Best him in some friendly combat to complete his hero challenge.",
+        "wiki":  "Centurion Titus Gearclaw"
+    },
+    {
+        "pos":  [
+                    61425,
+                    30034.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ascalonian Ruins can be found deep into the ghost infested area. Several Veteran ghosts guard the way to it.",
+        "wiki":  "Ascalonian Ruins"
+    },
+    {
+        "pos":  [
+                    59273.7,
+                    31978.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Effigy Core is left within a guarded cave near Lake Adorea to draw adventurers to help test a new Veteran Prototype Effigy.",
+        "wiki":  "Effigy Core"
+    },
+    {
+        "pos":  [
+                    63169,
+                    31000
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A large Searing Crystal, worshiped by nearby grawl as the Tail of the Star God remains as a testament to the Searing.",
+        "wiki":  "Searing Crystal"
+    },
+    {
+        "pos":  [
+                    62274.9,
+                    28731.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tucked into a small cave, the Birthplace of the Vigil marks the location of Almorra's Massacre. Contemplate over the defining event to complete this hero challenge.",
+        "wiki":  "Birthplace of the Vigil"
+    },
+    {
+        "pos":  [
+                    62228.5,
+                    29872.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fane Skinchisel is a charr sentinel stationed at the sentinel camp near Brandview Waypoint in the Blazeridge Mountains. Players who don't back down from a sparring bout and prove their worth will complete her hero challenge.",
+        "wiki":  "Fane Skinchisel"
+    },
+    {
+        "pos":  [
+                    63901.7,
+                    29836.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The remnants of a campfire in Heretic Plain warns of danger in the area. Defeat the Marmox Packleader and his pack to pacify the area and complete this hero challenge.",
+        "wiki":  "Campfire (hero challenge)"
+    },
+    {
+        "pos":  [
+                    62585.2,
+                    30664.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "In the center of the Wreckage of Serenity stand the ruins of Serenity Temple. Though destroyed hundreds of years ago in the Searing, the intrepid adventurer can channel the hallowed legacy and complete this hero challenge.",
+        "wiki":  "Serenity Temple"
+    },
+    {
+        "pos":  [
+                    63510.6,
+                    35111.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Krunko Bugtender is an ogre found in Hautclaire Vale. Entering her proximity will initiate the Defeat Krunko Bugtender hero challenge .",
+        "wiki":  "Krunko Bugtender"
+    },
+    {
+        "pos":  [
+                    62345.1,
+                    35601.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gwen's Grave is the gravestone of Gwen Thackeray and a Hero Challenge in the Stronghold of Ebonhawke. It is located in the memorial at the top of the Defender's Field cemetery. Her headstone is flanked on both sides by Memorial Plaques. It can be used as a place of power for charging Quartz Crystal.",
+        "wiki":  "Gwen's Grave"
+    },
+    {
+        "pos":  [
+                    64342,
+                    33143.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Scrabclaw's Roost is the home of Veteran Matriarch Scrabclaw and her flock.",
+        "wiki":  "Scrabclaw's Roost"
+    },
+    {
+        "pos":  [
+                    61807.6,
+                    35399.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fallen Angel Gretel is a member of the Fallen Angels stationed in the Stronghold of Ebonhawke and a hero challenge NPC who offers to spar with the player.",
+        "wiki":  "Fallen Angel Gretel"
+    },
+    {
+        "pos":  [
+                    61590,
+                    32788.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This Pile of Stones is the grave of the sylvari, Killeen.",
+        "wiki":  "Pile of Stones"
+    },
+    {
+        "pos":  [
+                    58540.1,
+                    26095.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Flame Core is a hero challenge object located in Keeper's Sanctum. Players interacting with this object will start the Defeat Smolderjaw and His Warband event.",
+        "wiki":  "Flame Core"
+    },
+    {
+        "pos":  [
+                    58626.9,
+                    25654.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Burning Forest is a Hero Challenge located in Simurgh Timberland. Players will need to overcome various flaming creatures to commune with this volcanic vent.",
+        "wiki":  "Burning Forest (hero challenge)"
+    },
+    {
+        "pos":  [
+                    56882.8,
+                    26399.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Chieftain Inpetla is the start NPC for the Defeat Chieftain Inpetla hero challenge in the Rustbowl.",
+        "wiki":  "Chieftain Inpetla"
+    },
+    {
+        "pos":  [
+                    57909.4,
+                    26460.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tribune Sorya Fatekiller is an Ash Legion Tribune in charge of Ash forces in Fireheart Rise fighting the Flame Legion.",
+        "wiki":  "Tribune Sorya Fatekiller"
+    },
+    {
+        "pos":  [
+                    59265.9,
+                    26742.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Steelbeak's Nest is found in the Fuller Cistern.",
+        "wiki":  "Steelbeak's Nest"
+    },
+    {
+        "pos":  [
+                    58532.8,
+                    24998.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Marse Scythetail is a member of the Order of Whispers located in Liberation Dell who has heard about the player's character and wishes to spar with them. Defeating him will award a hero point.",
+        "wiki":  "Marse Scythetail"
+    },
+    {
+        "pos":  [
+                    59243.2,
+                    26130
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Flame Castrum is a hero challenge located in Sloven Pitch. Communing with the volcanic vent awards players with a hero point.",
+        "wiki":  "Flame Castrum"
+    },
+    {
+        "pos":  [
+                    60408.3,
+                    27889
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Imp Power Essence is a stone that is tied to Emberclaw.",
+        "wiki":  "Imp Power Essence"
+    },
+    {
+        "pos":  [
+                    60998.7,
+                    28304.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Zzzig is an ogre found in Lamprey Grottoes that, as a means of staying awake, challenges the player to a duel. Defeat him to earn a hero point.",
+        "wiki":  "Zzzig"
+    },
+    {
+        "pos":  [
+                    60433.6,
+                    27141.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sharky Longears is a golemancer who starts the hero challenge Defeat Sharky Longears and Thundernation P70X near Lake Carnifex.",
+        "wiki":  "Sharky Longears"
+    },
+    {
+        "pos":  [
+                    61196.6,
+                    27820
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Crusader Arevir Soulhammer is a member of the Vigil that quizzes people about General Almorra Soulkeeper. Answer her correctly to earn a hero point.",
+        "wiki":  "Crusader Arevir Soulhammer"
+    },
+    {
+        "pos":  [
+                    60935.5,
+                    29598.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Searing Cauldrons were the tools used by the charr led by Flame Legion to bring forth the Searing in 1070 AE.",
+        "wiki":  "Searing Cauldron"
+    },
+    {
+        "pos":  [
+                    61875.4,
+                    27354.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Branded Waterfall resides to the north of Lake Desolann, feeding the lake with corrupted water.",
+        "wiki":  "Branded Waterfall"
+    },
+    {
+        "pos":  [
+                    58857.8,
+                    27994.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Warning: Bogfang the Skale sign can be found on the larger of two small islands in northern Blackblade Lake. Interacting with it will spawn Bogfang.",
+        "wiki":  "Warning: Bogfang the Skale"
+    },
+    {
+        "pos":  [
+                    57872.8,
+                    28935.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Roj the Rowdy Butcher resides in the The Blasted Moors. Defeat him in combat to complete his challenge.",
+        "wiki":  "Roj the Rowdy Butcher"
+    },
+    {
+        "pos":  [
+                    58400.3,
+                    29022
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Rancher-in-Training Poisonswill is a charr cub and rancher in training. He has an apple-loving pet bull of which he might be over-confident of in its abilities.",
+        "wiki":  "Rancher-in-Training Poisonswill"
+    },
+    {
+        "pos":  [
+                    58329.3,
+                    27772.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veruta Beefhawker is a strange charr hiding in an isolated cave who offers players her Tasty Meat which, upon consuming the item, will grant a hero point.",
+        "wiki":  "Veruta Beefhawker"
+    },
+    {
+        "pos":  [
+                    57862.2,
+                    28642.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ascalonian Aqueduct is a hero challenge in The Blasted Moors. The blood-borne energies reside within the Old Grendich Aqueduct, beneath the Grendich Ruins. Though now hidden away below the ground, empty wells and lakeside passages still allow access to these older ruins. It can be used as a place of power for charging Quartz Crystals.",
+        "wiki":  "Ascalonian Aqueduct"
+    },
+    {
+        "pos":  [
+                    57305.7,
+                    27852.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sharptail's Nest is found high in the devourer-filled Gram Hills. Disturbing the nest will summon Veteran Sharptail and two of her brood to attack. Defeat them to rise to the challenge.",
+        "wiki":  "Sharptail's Nest"
+    },
+    {
+        "pos":  [
+                    56487.7,
+                    28455.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Shaman Purda is a norn shaman of the Snow Leopard. She can be found in Charrgate Haven in the Halrunting Plains and defeating her earns the player a hero point.",
+        "wiki":  "Shaman Purda"
+    },
+    {
+        "pos":  [
+                    58714.1,
+                    29731.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Remains of the Northern Wall are part of the Northern Wall which once stood in defense of Ascalon from the charr horde. Thrust high in the air, its remnant energies shine in grim reminder as ghosts of Ascalon's fallen now wander in the ruins.",
+        "wiki":  "Remains of the Northern Wall"
+    },
+    {
+        "pos":  [
+                    47752.3,
+                    40642.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ancient Sentry of Balthazar Statue is a hero challenge veteran battle in Triumph Plaza.",
+        "wiki":  "Ancient Sentry of Balthazar Statue"
+    },
+    {
+        "pos":  [
+                    47379.4,
+                    39712.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Statue of Lyssa can be found in the northwest corner of Elysium Beach. Depending on whether Zhaitan controls the Temple of Balthazar, the foes encountered may be elementals or risen.",
+        "wiki":  "Statue of Lyssa (Elysium Beach)"
+    },
+    {
+        "pos":  [
+                    47872.8,
+                    41090.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This Statue of Balthazar is found at the altar of the Cathedral of Glorious Victory. It is difficult to reach when the area is controlled by risen due to the firestorms razing the area.",
+        "wiki":  "Statue of Balthazar (Cathedral of Glorious Victory)"
+    },
+    {
+        "pos":  [
+                    47551.6,
+                    40292.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Grenth's Graveyard is a communing hero challenge in The Bloodtrough. Approaching it from the west provides a smaller number of enemies to defeat before being able to commune.",
+        "wiki":  "Grenth's Graveyard"
+    },
+    {
+        "pos":  [
+                    50070.7,
+                    40060.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Priory Magister looks for a sparring partner, providing a hero challenge in Fort Trinity.",
+        "wiki":  "Priory Magister (hero challenge)"
+    },
+    {
+        "pos":  [
+                    47563.3,
+                    41241.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Veteran Risen Spectral Guard starts a hero challenge in the Cathedral of Glorious Victory.",
+        "wiki":  "Veteran Risen Spectral Guard"
+    },
+    {
+        "pos":  [
+                    49203.8,
+                    40678.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Two books can be found in The Vizier's Tower, both of which are the journals of a researcher who had climbed the tower to study Vizier Khilbron.",
+        "wiki":  "Book (The Vizier's Tower)"
+    },
+    {
+        "pos":  [
+                    48028.9,
+                    40335.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Vigil Tactician is looking for a sparring partner in Triumph Plaza, providing a hero challenge.",
+        "wiki":  "Vigil Tactician (hero challenge)"
+    },
+    {
+        "pos":  [
+                    48789.4,
+                    39472.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Lost Conservatory is a communing hero challenge in Strait of Sacrilege.",
+        "wiki":  "Lost Conservatory"
+    },
+    {
+        "pos":  [
+                    49377.8,
+                    40315
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sunken Ship is a communing hero challenge in Strait of Sacrilege.",
+        "wiki":  "Sunken Ship"
+    },
+    {
+        "pos":  [
+                    48640.8,
+                    39592.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Melandru is a communing type hero challenge located on the edge of The Royal Forum, deep beneath the ocean surface. Spirits of Sorrow watch over the statue while the statue is untainted by Zhaitan's influence.",
+        "wiki":  "Statue of Melandru (Strait of Sacrilege)"
+    },
+    {
+        "pos":  [
+                    48267.3,
+                    40610.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Statue of Dwayna is encountered en-route to the Pact Rally Point on the southern invasion path.",
+        "wiki":  "Statue of Dwayna (Triumph Plaza)"
+    },
+    {
+        "pos":  [
+                    43139.6,
+                    45060.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Grenth is located at the altar in the Cathedral of Silence. It is a commune type hero challenge.",
+        "wiki":  "Statue of Grenth (Cathedral of Silence)"
+    },
+    {
+        "pos":  [
+                    44082,
+                    43094.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Melandru is a communing type hero challenge encountered in the Cathedral of Verdance.",
+        "wiki":  "Statue of Melandru (Cathedral of Verdance)"
+    },
+    {
+        "pos":  [
+                    44686.4,
+                    43266.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gallow's Hang is a place of power hero challenge nearby the Point of Interest of the same name.",
+        "wiki":  "Gallow's Hang (hero challenge)"
+    },
+    {
+        "pos":  [
+                    44467.3,
+                    45300
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Spectral Hammer is an Orrian hammer lying on the ground in an old beached and rotting ship within Desmina's Hallows. Interacting with it causes it to come to life, and upon defeating it will award a hero point.",
+        "wiki":  "Spectral Hammer"
+    },
+    {
+        "pos":  [
+                    43777.5,
+                    43525.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Plaque of Ewan lies in the center of Village of Ewan, commemorating the village.",
+        "wiki":  "Plaque of Ewan"
+    },
+    {
+        "pos":  [
+                    44028.3,
+                    42216
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Explorer Brothmirr Rockslide is a member of the Durmand Priory willing to duel nearby adventurers.",
+        "wiki":  "Explorer Brothmirr Rockslide"
+    },
+    {
+        "pos":  [
+                    43210.6,
+                    44114.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Harbinger Torch is a communing hero challenge in Graven Cay.",
+        "wiki":  "Harbinger Torch (object)"
+    },
+    {
+        "pos":  [
+                    43710.2,
+                    44444.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Pristine Chest is found in the depths of The Shipyard. It contains Sunken Rations. Consuming these gives a hero point.",
+        "wiki":  "Pristine Chest"
+    },
+    {
+        "pos":  [
+                    43126.3,
+                    43568.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Captain's Log is a hero challenge found submerged within The Wreck of the Golden Vanity in the depths of the Harrowed Sea. Reading it gives a hero point.",
+        "wiki":  "Captain's Log"
+    },
+    {
+        "pos":  [
+                    44389.9,
+                    43758.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Inscribed Casket resides within the Orrian royal tombs for one of the ancient heroic kings, though the name of the king is unknown.",
+        "wiki":  "Inscribed Casket"
+    },
+    {
+        "pos":  [
+                    43140.8,
+                    42076.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Strange Ring Structures lie embedded in the northern coast of the Cursed Shore.",
+        "wiki":  "Strange Ring Structures"
+    },
+    {
+        "pos":  [
+                    44023.2,
+                    45444.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mysterious Egg is a hero challenge at the southernmost edge of the Mausollus Sea, Cursed Shore.",
+        "wiki":  "Mysterious Egg"
+    },
+    {
+        "pos":  [
+                    44151.8,
+                    44777
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Pixi is a hero challenge NPC in Cursed Shore, by Sharn's Free Camp.",
+        "wiki":  "Pixi"
+    },
+    {
+        "pos":  [
+                    43877.8,
+                    43778.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fortuna Dirgecaller is a hero challenge found within Meddler's Summit in Compass Plaza.",
+        "wiki":  "Fortuna Dirgecaller"
+    },
+    {
+        "pos":  [
+                    43868.2,
+                    42679.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Spectral Sword is an Orrian sword found lying on the ground in the labyrinth within Winterknell Isle. Interacting with it causes it to come to life, and upon defeating it will award a hero point.",
+        "wiki":  "Spectral Sword (hero challenge)"
+    },
+    {
+        "pos":  [
+                    43584.1,
+                    41952.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Balthazar can be found in the northwest corner of the Fields of Gold, looking south towards the gladiator's arena. It is a commune type hero challenge.",
+        "wiki":  "Statue of Balthazar (Fields of Gold)"
+    },
+    {
+        "pos":  [
+                    43300.7,
+                    44320.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Melandru is a communing type hero challenge encountered in the center of Graven Cay, dedicated to the goddess Melandru.",
+        "wiki":  "Statue of Melandru (Graven Cay)"
+    },
+    {
+        "pos":  [
+                    44585.1,
+                    41117.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "King's Altar is an altar dedicated to the kings of Orr. It is situated underground in the King's Passage, north of Doric's Waypoint.",
+        "wiki":  "King's Altar"
+    },
+    {
+        "pos":  [
+                    44788.4,
+                    40582.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Altar of Dwayna is the altar of the Cathedral of Zephyrs, also known as the Altar of Tempests.",
+        "wiki":  "Altar of Dwayna"
+    },
+    {
+        "pos":  [
+                    45595.1,
+                    41238.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Enchanted Orrian Bow is lying on the ground near to the Bayt Fallahin point of interest in the Garden of Ilya.",
+        "wiki":  "Enchanted Orrian Bow"
+    },
+    {
+        "pos":  [
+                    45909.9,
+                    40312.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Altar of Lyssa is the altar of the Cathedral of Eternal Radiance, also known as the Altar of Lies.",
+        "wiki":  "Altar of Lyssa"
+    },
+    {
+        "pos":  [
+                    44620,
+                    40509.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Explorer Cinnia is a Durmand Priory explorer who has begun studying Orrian lore. Talking to her will award a hero point.",
+        "wiki":  "Explorer Cinnia"
+    },
+    {
+        "pos":  [
+                    46732.7,
+                    40180.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Metal Forest is a hero challenge in the Wealdwood on the Pyrite Peninsula. The forest was turned to gold by an ancient and mysterious golden orb of light. The properties of the orb are completely unknown, and an interest to both the Pact and the Inquest.",
+        "wiki":  "Metal Forest"
+    },
+    {
+        "pos":  [
+                    45746.6,
+                    40276.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Alexandra Duet is a Pact member in Augur's Grotto that challenges adventurers to a duel in return for a hero point if she is defeated. Her quotes and attacks identify her as an Order of Whispers member and a mesmer.",
+        "wiki":  "Alexandra Duet"
+    },
+    {
+        "pos":  [
+                    45229.8,
+                    40419.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Memory of Dhuum's Last Stand is the location where Grenth overthrew Dhuum, the former God of Death, with the aid of the Seven Heroes. It is located in the ossuary of the Cathedral of Eternal Radiance.",
+        "wiki":  "Memory of Dhuum's Last Stand"
+    },
+    {
+        "pos":  [
+                    46299.9,
+                    40343.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Old Jar lies next to the broken, skeletal remains of a ship. Interacting with it gives an Unidentified Beverage.",
+        "wiki":  "Old Jar"
+    },
+    {
+        "pos":  [
+                    44155.7,
+                    41241.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Looah is a Hero challenge NPC found at Snaketail Inlet, who gives a hero point upon being defeated.",
+        "wiki":  "Looah"
+    },
+    {
+        "pos":  [
+                    44997.5,
+                    41263.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Statue of Dwayna is found along the southern edge of the Karst Plains. It is a commune type hero challenge.",
+        "wiki":  "Statue of Dwayna (Karst Plains)"
+    },
+    {
+        "pos":  [
+                    43715.2,
+                    41311
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Grenth overlooks the water in the southwest of the Drowned Brine. It is a commune type hero challenge with several risen foes, including a veteran, nearby.",
+        "wiki":  "Statue of Grenth (Drowned Brine)"
+    },
+    {
+        "pos":  [
+                    44472.2,
+                    40376.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Statue of Melandru is a communing type hero challenge located beneath the overhang of Sculptor's End just below the surface of Whisper Bay. There is a diving location directly above it. It will become corrupted if the Cathedral of Zephyrs becomes contested or is under Zhaitan's control.",
+        "wiki":  "Statue of Melandru (Whisper Bay)"
+    },
+    {
+        "pos":  [
+                    45428.7,
+                    39946.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Statue of Lyssa can be found on the northern slopes of the Blighted Arch, looking out to sea. Depending on whether Zhaitan controls the Cathedral of Eternal Radiance, the foes encountered may be elementals or risen.",
+        "wiki":  "Statue of Lyssa (Blighted Arch)"
+    },
+    {
+        "pos":  [
+                    46064.8,
+                    41219.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Statue of Balthazar can be found on the road between Pagga's Camp and the Village of Wren. It is a commune type hero challenge.",
+        "wiki":  "Statue of Balthazar (Valley of Lyss)"
+    },
+    {
+        "pos":  [
+                    45135.5,
+                    29863.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The submerged ruins of the Temple of the Ages rest in the water of Godslost Swamp. A Veteran Marsh Drake may have taken to its stony remains, but the site's latent energies remain a tempting reward for adventurers in the area.",
+        "wiki":  "Temple of the Ages (hero challenge)"
+    },
+    {
+        "pos":  [
+                    42717.7,
+                    29510.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Erts Jug of Power Unguent[sic] sits in Veteran Ert and Burt's cave at the head of Pinion Trail. If one can tire Ert out, a sample of Ert's Unguent from the jar is an... interesting, if foul, reward. The unguent is placed into your inventory after interacting with the hero challenge and the hero point is received when it is consumed, which can be done at any time. The use of the unguent also provides a green tint to your character for some time.[verification requested]",
+        "wiki":  "Erts Jug of Power Unguent"
+    },
+    {
+        "pos":  [
+                    45877.8,
+                    30152.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The swirling energies of the Tamini Place of Power are a grim reminder of centaur cruelty in southeast Queensdale. Take justice to the Veteran Tamini Chieftain and his accompanying centaur horde—only then can an adventurer hear its cries in peace.",
+        "wiki":  "Tamini Place of Power"
+    },
+    {
+        "pos":  [
+                    43193.8,
+                    29475
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Bandit Loot can be found tucked at the base of a tree in Altar Brook Vale. Franklin Quickblade and two of his friends won't let it go without a fight.",
+        "wiki":  "Bandit Loot"
+    },
+    {
+        "pos":  [
+                    44471.7,
+                    29021.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Chhk the Windmill King is a confused skritt who believes himself the \"Windmill King\". Defeat him to earn a hero point.",
+        "wiki":  "Chhk the Windmill King"
+    },
+    {
+        "pos":  [
+                    44180.7,
+                    29045.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A remnant pillar of Earthen Magic floats in the center of Scaver Plateau, marking the blasted site of a previous battle. Commune with this place of power and complete its hero challenge.",
+        "wiki":  "Earthen Magic"
+    },
+    {
+        "pos":  [
+                    46085.9,
+                    28351.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Carnie Jeb mans a tent at the Beetletun carnival grounds in Queensdale. Step right up and win a battle to complete his Hero challenge to earn a hero point.",
+        "wiki":  "Carnie Jeb"
+    },
+    {
+        "pos":  [
+                    46963.2,
+                    28526.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Hidden Falls is a communing style hero challenge in Bonerattler Caverns.",
+        "wiki":  "Hidden Falls"
+    },
+    {
+        "pos":  [
+                    49181.1,
+                    28221.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Dolyak's Rest is an ancient place where Old Dolyaks go to die, leaving carcasses and bones to litter the area around it.",
+        "wiki":  "Dolyak's Rest"
+    },
+    {
+        "pos":  [
+                    48869.5,
+                    28029.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Craig Sensay provides a hero challenge in Wildspine Hills. After talking to him, you must destroy the nearby ballista.",
+        "wiki":  "Craig Sensay"
+    },
+    {
+        "pos":  [
+                    49296.3,
+                    26324.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Ancient War Stones are magic stones tied to the Warbeasts. Interacting with it triggers a hero challenge.",
+        "wiki":  "Ancient War Stones"
+    },
+    {
+        "pos":  [
+                    46404.4,
+                    26447.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Harathi Forward Post lies across the bridge from Seraph's Landing, among ruined buildings. Commune with this place of power to complete its hero challenge.",
+        "wiki":  "Harathi Forward Post"
+    },
+    {
+        "pos":  [
+                    47296.6,
+                    26354.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Conspicuous Feather Pile is a hero challenge located in Greenflin Plateau, north of the Seraph camp.",
+        "wiki":  "Conspicuous Feather Pile"
+    },
+    {
+        "pos":  [
+                    42521.8,
+                    32041.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Centaur Gathering Site is embedded in the heart of Meremoot Hill. Its energies are guarded by hostile centaurs; only after they are defeated can someone tap into its power.",
+        "wiki":  "Centaur Gathering Site"
+    },
+    {
+        "pos":  [
+                    43900,
+                    31900.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tocatl awaits on Viathan's Arm above the Eukaryan Caves, to give Ol' Stinky a test run.",
+        "wiki":  "Tocatl"
+    },
+    {
+        "pos":  [
+                    46129.6,
+                    32149.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Master Elementalist Dylane starts the Hero challenge Defeat Merkessa the Fire Elemental.",
+        "wiki":  "Master Elementalist Dylane"
+    },
+    {
+        "pos":  [
+                    46121,
+                    30971.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Enchanted Meat Rack is set in the back of Draithor's Demesnes. Its strange contents are guarded by a Veteran Draithor's Wurm; killing the wurm will allow the character to obtain Draithor's Lab's Powerfully Weird Meat off the rack.",
+        "wiki":  "Enchanted Meat Rack"
+    },
+    {
+        "pos":  [
+                    46052.3,
+                    30563.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Eternal Portal is a hero challenge found in Blackroot Cut. The portal to the Underworld gapes large in the narrow eastern alcove of the swamp, and listening to its whispers will spawn an Aatxe and a pair of Shades to defeat.",
+        "wiki":  "Eternal Portal"
+    },
+    {
+        "pos":  [
+                    50307.1,
+                    30255.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Softly Glowing Light floats in a cave in the eastern mountains of Gendarran Fields. Its refreshing qualities have attracted Ettins that must be dealt with before reaching its power.",
+        "wiki":  "Softly Glowing Light"
+    },
+    {
+        "pos":  [
+                    48683.2,
+                    29643.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Klakka the Brain is on a half-sunken ship in the southern Brigantine Isles with Jaxx the Ram and Sunshine. She's either looking for a fight or some fun—show her your moves and complete her Hero challenge.",
+        "wiki":  "Klakka the Brain"
+    },
+    {
+        "pos":  [
+                    46435.4,
+                    28737
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ooze Analyzer XH-9333 has been brewing something special in the ooze-populated waters of the upper Hezran Outcrops. Fight or run through the Veteran Translucent Oozes around the falls to acquire a taste of the Prototype Ooze Concentrate Tincture and complete the Hero challenge.",
+        "wiki":  "Ooze Analyzer XH-9333"
+    },
+    {
+        "pos":  [
+                    48169.5,
+                    29750.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Willoo is a quaggan in Lake Gendarr trying to rage. Helping Willoo do so and defeating him will award a hero point.",
+        "wiki":  "Willoo"
+    },
+    {
+        "pos":  [
+                    49305.2,
+                    28956.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Warmaster Yulia has been following your legend. Test your strength against her to complete the Hero challenge.",
+        "wiki":  "Warmaster Yulia"
+    },
+    {
+        "pos":  [
+                    46333.7,
+                    30370.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ancient Cave Spring is a communing hero challenge hidden within Melandru's Cenote in Stonebore Vaults, and is guarded by a Veteran Cave Spider.",
+        "wiki":  "Ancient Cave Spring (Gendarran Fields)"
+    },
+    {
+        "pos":  [
+                    47136.6,
+                    29954.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A brightly-colored Oakheart Seed has taken root on the hills of the Talajian Piedmont. Choosing to undertake its challenge will summon forth a Veteran Ancient Oakheart and two Oakheart Saplings.",
+        "wiki":  "Oakheart Seed"
+    },
+    {
+        "pos":  [
+                    50261.5,
+                    34193.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Defeat the River Drake Broodmother is a level 50 hero challenge in Mentecki Pass. It is triggered by approaching the River Drake Hatchlings when the character has not earned this hero point.",
+        "wiki":  "Defeat the River Drake Broodmother"
+    },
+    {
+        "pos":  [
+                    49084.6,
+                    32912.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Deputy Crackshot is a member of the Lionguard at Stormbluff Beacon. She gives the hero challenge to hit 3 targets with her cannons.",
+        "wiki":  "Deputy Crackshot"
+    },
+    {
+        "pos":  [
+                    48881,
+                    33504.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Beckoning Force is a pool of water imbued with magic. It is located inside, at the bottom of one of the crashed pirate ships. The stairways leading to the pool of water blend in with their backgrounds and environment; thus, it's tricky to see at first glance. It may only be reached once the gates are opened during the The Campaign Against Taidha Covington event, which starts once every 3 hours.",
+        "wiki":  "Beckoning Force"
+    },
+    {
+        "pos":  [
+                    49517.4,
+                    32845.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Agent Xinn is a hero challenge NPC in northeast Stormbluff Isle. She is waiting in the cave entrance to the Chantry of Secrets near Deadend Waypoint. Defeat her to earn a hero point.",
+        "wiki":  "Agent Xinn"
+    },
+    {
+        "pos":  [
+                    49044.7,
+                    34981.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Krait Place of Power can be found deep within the Flooded Castavall.",
+        "wiki":  "Krait Place of Power"
+    },
+    {
+        "pos":  [
+                    48508.9,
+                    35012.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Two-Eye Ignatl is a hylek pirate in Mournful Depths that challenges passersby to a duel, awarding a hero point. See Defeat Two-Eye Ignatl the Pirate for the hero challenge event.",
+        "wiki":  "Two-Eye Ignatl"
+    },
+    {
+        "pos":  [
+                    42207.5,
+                    35722.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This Waterfall in Ogham Wilds is a place of importance to the sylvari, being similar to a place in the Dream of Dreams.",
+        "wiki":  "Waterfall"
+    },
+    {
+        "pos":  [
+                    43798.2,
+                    32934.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Krait Altar hero challenge can be found underwater beneath Slaver's Deeps in northern Quetzal Bay, where the krait sacrifice slaves as a ritual to their prophets.",
+        "wiki":  "Krait Altar"
+    },
+    {
+        "pos":  [
+                    43786.6,
+                    35732.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Morgan's Orchid is an unusual plant found in Morgan's Spiral with beautiful blossoms used to obtain a hero point.",
+        "wiki":  "Morgan's Orchid"
+    },
+    {
+        "pos":  [
+                    43915.5,
+                    34182.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Swift Arrow is a tengu looking to pass on his knowledge of battle to travelers passing by the door to the  Dominion of Winds in Caledon Forest. Defeat him to gain in his knowledge, and complete the hero challenge.",
+        "wiki":  "Swift Arrow"
+    },
+    {
+        "pos":  [
+                    43234.8,
+                    34980.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mysterious Patch of Ground is in Glencarn Sperrins, north-east of Brigid's Overlook Waypoint. It is the trigger for Defeat the Veteran Ancient Maguuma Wurm and Its Hatchlings hero challenge.",
+        "wiki":  "Mysterious Patch of Ground"
+    },
+    {
+        "pos":  [
+                    42400.2,
+                    32859.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Powerful Darkness can be found near Banshee's Keen hiding some Nightmare Courtiers in Wychmire Swamp. It triggers Defeat the Knight of Sorrows and Her Attendants.",
+        "wiki":  "Powerful Darkness"
+    },
+    {
+        "pos":  [
+                    43983.7,
+                    35119.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Dark Thorn Patch can be found inside the Briarthorn Den of Morgan's Spiral. Interacting with it triggers the Defeat the Thorn Wolf Scariel and Its Pack hero challenge.",
+        "wiki":  "Dark Thorn Patch"
+    },
+    {
+        "pos":  [
+                    41714.5,
+                    33789.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Black Ice 4444 is an Inquest holographic training golem found in the Inquest Outer Complex.",
+        "wiki":  "Black Ice 4444"
+    },
+    {
+        "pos":  [
+                    41951.6,
+                    35461.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Councillor Oola was a brilliant asura who specialised in creating constructs—humanoid magical creations, of which golems are but one.",
+        "wiki":  "Oola"
+    },
+    {
+        "pos":  [
+                    41507.5,
+                    34980.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Cuatl Health Goo is a container within Cuatl Morass that holds Cuatl Tonics.",
+        "wiki":  "Cuatl Health Goo"
+    },
+    {
+        "pos":  [
+                    41006,
+                    35158.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Suspicious Control Panel is a hero challenge object found in Michoan Marsh that, upon interacting with it, starts Defeat Golemancer Gitt and His Prototype Golems.",
+        "wiki":  "Suspicious Control Panel"
+    },
+    {
+        "pos":  [
+                    40465.6,
+                    33759
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ancient Elemental Fire Energy can be found outside the north-east of the Thaumanova Reactor complex. When interacted with, it spawns one Veteran Ancient Ember and two Ancient Ember Minions.",
+        "wiki":  "Ancient Elemental Fire Energy"
+    },
+    {
+        "pos":  [
+                    40031.8,
+                    35761.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Arcanic Interferometer is a asuran control console. Interacting with this object begins the hero challenge Defeat Master Genius Jettz and His Assistants.",
+        "wiki":  "Arcanic Interferometer"
+    },
+    {
+        "pos":  [
+                    41792.2,
+                    34532.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Luminates Plant is the core and generators of the actual power plant in Metrica Province. It is not obvious how to get to this hero challenge. It cannot be reached from the top floor of the plant, where the main entrance and stair leads. Instead, take the lower northwest entrance, located northeast of the road intersection and directly south of the Hexane Regrade renown heart. The hero challenge is at the end of a long corridor, guarded by a Veteran Air Elemental.",
+        "wiki":  "Luminates Plant (object)"
+    },
+    {
+        "pos":  [
+                    41226.9,
+                    36240.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Utcua is a hylek warrior of the Durotl tribe in Loch Jezt.",
+        "wiki":  "Utcua"
+    },
+    {
+        "pos":  [
+                    39021.2,
+                    32871.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Lady Grimassi is a human that players can talk to in order to receive a Toxal Bog Stew, which, when consumed, will grant players a hero point.",
+        "wiki":  "Lady Grimassi"
+    },
+    {
+        "pos":  [
+                    39588.4,
+                    33438.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Henge of Denravi is a communing hero challenge in Brisban Wildlands.",
+        "wiki":  "Henge of Denravi"
+    },
+    {
+        "pos":  [
+                    40237.8,
+                    32958.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Seraph Soldier Michella patrols the Koga Ruins.",
+        "wiki":  "Seraph Soldier Michella"
+    },
+    {
+        "pos":  [
+                    40258.1,
+                    31194.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Defeating a Restless Arboreal Spirit is the objective of a hero challenge in Hidden Lake.",
+        "wiki":  "Restless Arboreal Spirit"
+    },
+    {
+        "pos":  [
+                    39217.8,
+                    32768.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Thaumacore Energy Source is a hero challenge located in the Duskstruck Moors.",
+        "wiki":  "Thaumacore Energy Source"
+    },
+    {
+        "pos":  [
+                    41303.6,
+                    31940.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Super Shiny Thing is an object that belongs to a king skritt. Interacting with it will start the Defeat Schotakk the Shiny King and His Band event.",
+        "wiki":  "Super Shiny Thing"
+    },
+    {
+        "pos":  [
+                    40758.4,
+                    32016.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Keg of Skrittsburgh Special can be found in Skrittsburgh, providing a Bottle of Skrittsburgh Special to those curious enough to try it.",
+        "wiki":  "Keg of Skrittsburgh Special"
+    },
+    {
+        "pos":  [
+                    40959.9,
+                    32270.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Inventor Shminkta is a skritt with a power suit.",
+        "wiki":  "Inventor Shminkta"
+    },
+    {
+        "pos":  [
+                    53729.5,
+                    37888.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "IQ1800 LX is a semi-transparent, malfunctioning holographic golem found in the Zone Green of the Infinite Coil Reactor area of Mount Maelstrom, which rewards a hero point for defeating it.",
+        "wiki":  "IQ1800 LX"
+    },
+    {
+        "pos":  [
+                    53635.1,
+                    40048.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Petil is one of the fiercest warrior of the Tzanopl Grounds.",
+        "wiki":  "Petil"
+    },
+    {
+        "pos":  [
+                    52919.7,
+                    39694.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Urrahn The Hunter is a powerful largos hunter who dwells in an underwater volcanic cave beneath an island in Mount Maelstrom. He is very secretive beyond wanting to test the player's skills. He has a hero challenge Defeat Urrahn the Hunter.",
+        "wiki":  "Urrahn The Hunter"
+    },
+    {
+        "pos":  [
+                    53643.6,
+                    39219.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tarkkakt is a skritt on the shore of the the Mire Sea.",
+        "wiki":  "Tarkkakt"
+    },
+    {
+        "pos":  [
+                    51766.5,
+                    39307.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Heart of the Volcano is a hero challenge located in the center of Maelstrom's Bile.",
+        "wiki":  "Heart of the Volcano (object)"
+    },
+    {
+        "pos":  [
+                    53353.1,
+                    38851.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Droknah's Relic is a communion hero point located at the Sunken Droknah.",
+        "wiki":  "Droknah's Relic"
+    },
+    {
+        "pos":  [
+                    50842.6,
+                    39866.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Scribbles in the Dirt can be found in the southwest corner of Mount Maelstrom, at Murkvale. Interacting with it will begin the hero challenge Defeat Venomspinner and her devourer brood.",
+        "wiki":  "Scribbles in the Dirt"
+    },
+    {
+        "pos":  [
+                    48205.6,
+                    35994.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Hylek Chief is a hylek found inside the Uzanarin Depths.",
+        "wiki":  "Veteran Hylek Chief"
+    },
+    {
+        "pos":  [
+                    49937.2,
+                    36287.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ancient Energy Source is a communing hero challenge within a spider-infested cave in Saltflood Mire, located south and west of Saltflood Waypoint in water beneath tree roots.",
+        "wiki":  "Ancient Energy Source"
+    },
+    {
+        "pos":  [
+                    49055.4,
+                    37981.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gilbert's Treasure Map is found in southern Aleem's Penance. Taking this map will result in attack of the ghosts of Captain Gilbert and two Gilbert's Crew. Fend off their attack and the hero challenge will be completed.",
+        "wiki":  "Gilbert's Treasure Map"
+    },
+    {
+        "pos":  [
+                    48938,
+                    36957.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Orrian Tomb lies in ruin at the bottom of the lake in Leeshore Gauntlet.",
+        "wiki":  "Orrian Tomb"
+    },
+    {
+        "pos":  [
+                    49645.9,
+                    35505.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Spooky Luka the Disbeliever offers a hero point challenge. She does not aggro until the challenge dialogue is completed, so the two or three Ghostly Pirate Fighters in her vicinity can be dispatched at leisure. Luka herself is no harder than an ordinary Veteran Ghostly Pirate Fighter.",
+        "wiki":  "Spooky Luka the Disbeliever"
+    },
+    {
+        "pos":  [
+                    49140.5,
+                    37188.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ancient Shark Pistrix's corpse can be found in an underwater cave just northwest of the Shrine of Usharr. The entrance to the cave is found in a pool of water to the southeast of the skill challenge icon. Simply interacting with Pistrix's corpse will complete the Hero challenge.",
+        "wiki":  "Ancient Shark Pistrix"
+    },
+    {
+        "pos":  [
+                    35986.5,
+                    37399.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "In a cave beneath the Central Advance Camp, aggressive mushrooms line the rocky interior and attack any trespassers. Enter towards the south and glide in above the lethal vines that line the bottom of the map to commune with this hero challenge.",
+        "wiki":  "Mushroom Grotto"
+    },
+    {
+        "pos":  [
+                    36539.2,
+                    37126.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Spider Nest can be found in Wyvern Scar, guarded by spiders drawn to its ley-energy.",
+        "wiki":  "Spider Nest (hero challenge)"
+    },
+    {
+        "pos":  [
+                    35297,
+                    36722.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Near the north lane in Dragon's Stand is an abandoned set of Exalted ruins that has been overtaken by the jungle. A pylon still stands among the ruins, however, full of power. Communing with this place of power will net the player 10 hero points.",
+        "wiki":  "Exalted Pylon"
+    },
+    {
+        "pos":  [
+                    35003.4,
+                    37222.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Stavemaster Adryn's Pod is the Blighting Tree pod that creates new bodies for Legendary Stavemaster Adryn to be reborn in.",
+        "wiki":  "Stavemaster Adryn's Pod"
+    },
+    {
+        "pos":  [
+                    35734.7,
+                    37811.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Blademaster Diarmid's Pod is the Blighting Tree pod that creates new bodies for Legendary Blademaster Diarmid to be reborn in.",
+        "wiki":  "Blademaster Diarmid's Pod"
+    },
+    {
+        "pos":  [
+                    36077.2,
+                    38100
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Axemaster Hareth's Pod is the Blighting Tree pod that creates new bodies for Legendary Axemaster Hareth to be reborn in.",
+        "wiki":  "Axemaster Hareth's Pod"
+    },
+    {
+        "pos":  [
+                    34154.2,
+                    37852.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Dragon Overlook is the Hero Challenge located near Serenity's Cove in Dragon's Stand.",
+        "wiki":  "Dragon Overlook"
+    },
+    {
+        "pos":  [
+                    33779.3,
+                    35184.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Balthazar's Statue is an overgrown statue of Balthazar located in the long-abandoned temple known as Balthazar's Rest.",
+        "wiki":  "Balthazar's Statue"
+    },
+    {
+        "pos":  [
+                    35203.8,
+                    33511
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Notice to Trespassers is located in a small Quetzal village above the jungle floor that can be accessed by heading north from Eastwatch Waypoint and jumping up the mushroom-cliff path. The village is guarded by several Veteran Quetzal Warriors and Veteran Quetzal Scouts. Interacting with the Notice will trigger a group event that spawns Champion Commander Razorwing along with two Veteran Razorwing Guards. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Notice to Trespassers"
+    },
+    {
+        "pos":  [
+                    34861.8,
+                    32648.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "High in the cliffs of Burnisher Quarry is a collection of energy with which the player can commune to complete this hero challenge.",
+        "wiki":  "Burnisher Quarry (hero challenge)"
+    },
+    {
+        "pos":  [
+                    34537.1,
+                    33280.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "On the ground floor of the jungle in the heart of the Arrowhead Vale is a Suspicious Orichalcum Node. Interacting with it allows you to start the event Defeat the champion arrowhead. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Suspicious Orichalcum"
+    },
+    {
+        "pos":  [
+                    34502.6,
+                    33717.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Exalted Overlook is a hero challenge in Auric Basin. You can reach it by gliding down from the Northgate of Tarir, the Forgotten City.",
+        "wiki":  "Exalted Overlook"
+    },
+    {
+        "pos":  [
+                    34279.1,
+                    33722.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Champion Tarnished Sage is found at the beginning of the trial rooms beneath Tarir, the Forgotten City, opposite the Tarnished Traitor. To reach him, hop down into the hole by the Forgotten City Waypoint. After this challenge has been completed for the first time, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Champion Tarnished Sage"
+    },
+    {
+        "pos":  [
+                    33642.2,
+                    32992.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "At the jungle's floor in Tarnished Treetop, a group of Young Mushrooms lays out in the open, waiting for so much as a poke from adventurers. Upon interaction, a Champion Mushroom King will spawn from the mushrooms, and the defeat the mushroom king event will start. Complete the event within 10 minutes to obtain 10 hero points. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Young Mushrooms"
+    },
+    {
+        "pos":  [
+                    35249,
+                    34548.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Up in the cliff's face, in a small cave, a Mordrem Flower rests among a small group of Mordrem Bombers. Interaction with the flower will trigger the group event Defeat the vinetooth. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Mordrem Flower"
+    },
+    {
+        "pos":  [
+                    34750.8,
+                    35273.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Away in a cave, this Egg Clutch rests, waiting for any unwary adventurers to try and grab them. Interaction will trigger a group event in which the Champion Chak Lobber and her two brood members must be killed within 10 minutes to receive the hero points. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Egg Clutch (Auric Basin)"
+    },
+    {
+        "pos":  [
+                    33608,
+                    33213.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Toxin-Cured Hog is an object found in a cave west of Westwatch Patch. If Westwatch has not yet been powered up, then vines will block the path towards the cave from the south. It is however possible to drop down into the cave from the north - players can either glide south from the  Wanderer's Waypoint — , or walk northeast from Westwatch and circle back westwards, before dropping in above the hog. Interaction with the hog will replace all the character's skills and take away any passive effects.",
+        "wiki":  "Toxin-Cured Hog"
+    },
+    {
+        "pos":  [
+                    33372.7,
+                    34432.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Ancient Golem Part rests high in the cliffs of Auric Basin awaiting unwary explorers. Interaction with the part triggers the group event: Defeat the ancient golem recovery squad. This event spawns at least three golems that must be killed within 10 minutes for the hero points. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Ancient Golem Part"
+    },
+    {
+        "pos":  [
+                    35635.2,
+                    35669.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Within the caves of Tangled Depths grows a small Nightthistle Bloom which awaits challengers. Interaction with the bloom will trigger the group event   Kill the Mordrem champion (80). It spawns a random Mordrem Guard champion who then spawns two random, normal Mordrem Guard who also attack challengers. Defeat the champion within five minutes to complete the challenge. You can interact with the bloom as many times as you want, respawning a random champion and killing it to complete the event. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Nightthistle Bloom"
+    },
+    {
+        "pos":  [
+                    37294,
+                    34723.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Hidden away in a cave guarded by many aggressive mushroom named foes stand a proud couple of royalty, a Veteran Mushroom King and a Veteran Mushroom Queen who seem to guard this spore cloud. Kill them and commune with this point to complete the hero challenge.",
+        "wiki":  "Mushroom Spore Cloud"
+    },
+    {
+        "pos":  [
+                    36047.9,
+                    34304.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The center of the Chak Hatchery is full of ley-energy that fosters the newborn Chak. To enter, use the Nuhoch Wallow at the end of the Nuhoch Lane or swim through the underwater tunnels, exiting in the northwest.  Fight or run through chak that guard the hatchery to commune with this point in the center of the cave to complete the hero challenge. Itzel Poison Lore must be trained to survive the cave as it is full of poisonous clouds which kill players within seconds otherwise. The group event Kill the enraged chak overlord spawns in the center of the cave around the point. If alive and in combat, commune may be difficult. It is perhaps easier/recommended to approach cautiously opposite the champion without pulling aggro, allowing the challenge to be completed without killing the champ.",
+        "wiki":  "Chak Hatchery"
+    },
+    {
+        "pos":  [
+                    36204.6,
+                    35778.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Feeding off the ley energy in the Ogre Lane, a small Egg Clutch waits for travelers to disturb it. Interaction with this clutch will trigger a group event which spawns a Champion Chak Blitzer and two normal Chak which must be killed within 10 minutes to complete the challenge.",
+        "wiki":  "Egg Clutch (Tangled Depths)"
+    },
+    {
+        "pos":  [
+                    37670.4,
+                    34205.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Ancient Power Core is the base of a large machine found in the abandoned lab from the personal story. The lab can be accessed by swimming from Rata Novus Waypoint. Exalted Markings is required to make it through the underwater tunnel.",
+        "wiki":  "Ancient Power Core"
+    },
+    {
+        "pos":  [
+                    36053.1,
+                    35454.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Guano-Incubated Spider Eggs can be found high in the darkness of the Deeproot Sink caves. Unbeknownst to adventurers, a dark alliance has been formed between the Cave Spiders and Vampire Beasts of the cave. Interacting with the eggs will begin the associated hero challenge event.",
+        "wiki":  "Guano-Incubated Spider Eggs"
+    },
+    {
+        "pos":  [
+                    35825.9,
+                    35022.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Champion Wayward Troll is a powerful Cave Troll leading his brethren living in the labyrinthian cave system located in the Tangled Descent. He must be defeated to complete the Troll Runestone hero challenge.",
+        "wiki":  "Champion Wayward Troll"
+    },
+    {
+        "pos":  [
+                    36629.6,
+                    34364.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Inquisitor's Campsite can be found up a small ramp north of the Teku Nuhoch outpost, in an aggressive Zintl hylek camp. Interacting with it triggers the Hero challenge group event Defeat the Zintl inquisitor, which spawns Champion Zintl Inquisitor and two normal warriors that must be killed within the 10 minute time limit for the challenge's completion. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Inquisitor's Campsite"
+    },
+    {
+        "pos":  [
+                    37492.9,
+                    35081.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "In the mushroom cave of Rata Novus, in a small rocky cave are a cluster of Newborn Mushrooms. Interaction with them will trigger the group event Defeat the Champion Mushroom Queen which must be completed within 10 minutes to complete the hero challenge. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Newborn Mushrooms"
+    },
+    {
+        "pos":  [
+                    35976.9,
+                    35372
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Deep in the murky, water-filled tunnels underneath Tangled Depths await many aggressive fish and creatures for unwary adventurers. Players can carry an Exalted Beacon crystal through the water to inflict Fear upon aggressive creatures who come too close and make themselves immune to the piranha infested water. Commune with the Jellyfish Grotto at the tunnel's deepest point to complete the challenge.",
+        "wiki":  "Jellyfish Grotto"
+    },
+    {
+        "pos":  [
+                    36119.6,
+                    35181.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "High in the cliffs of Tangled Depths, a beautiful waterfall fuels the jungle's waters below. At its top is a commune point that will complete the Gilded River hero challenge upon interaction.",
+        "wiki":  "Gilded River"
+    },
+    {
+        "pos":  [
+                    34289.9,
+                    31934.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Ancient Tree is slowly being torn apart by the ravages of the Elder Dragon, the core rotting and falling apart. Deep in the core of the tree, Coztic Bladedancers and Coztic Shadowleapers wait for the intrepid adventurer, harbingers of Mordremoth's all-consuming creep through the jungle. Witness the destruction of nature to complete this hero challenge.",
+        "wiki":  "Ancient Tree"
+    },
+    {
+        "pos":  [
+                    35956.2,
+                    32442.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Ancient Fighting Pit Hero Challenge is perched high above The Waking Tomb.",
+        "wiki":  "Ancient Fighting Pit"
+    },
+    {
+        "pos":  [
+                    35920,
+                    31805.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "At the bottom of the Creeping Crevasse, this Nightthistle Blossom awaits any challengers. Upon triggering the Hero Challenge, a Group Event will spawn one veteran Mordrem and four normal Mordrem. All must be killed within 10 minutes to obtain 10 Hero Points. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Nightthistle Blossom"
+    },
+    {
+        "pos":  [
+                    35803,
+                    31241.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Wyvern Nesting Grounds is a commune hero challenge in Wyvern Cliffs.",
+        "wiki":  "Wyvern Nesting Grounds"
+    },
+    {
+        "pos":  [
+                    33959.4,
+                    31433.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Cliffside Ruins Hero Challenge in Broken Bluffs offers a view of the Precarious Ruin in The Doomteeth.",
+        "wiki":  "Cliffside Ruins"
+    },
+    {
+        "pos":  [
+                    34818.6,
+                    31959.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "On a small ledge at the very bottom of the map in Thistlevine Ravine, this Abyssal Depths is a gathering of Mordremoth's energy simply waiting to be used. Commune with this place of power to complete the hero challenge.",
+        "wiki":  "Abyssal Depths"
+    },
+    {
+        "pos":  [
+                    35532.5,
+                    31513.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "On a small ledge carved into the cliff's face is a small Nuhoch outpost filled with Nuhoch Alchemical Energy. This place of power awaits any experienced adventurers to commune with it to earn 10 hero points. To reach it, from the Pact Encampment Waypoint head east, and then use the Nuhoch Wallows to traverse down to the ledge where you will find a simple communing hero challenge. Alternatively, drop off the edge of the cliff from above and glide down onto the ledge.",
+        "wiki":  "Nuhoch Alchemical Energy"
+    },
+    {
+        "pos":  [
+                    34410,
+                    32122
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Pact Airship Wreckage can be found scattered in the Canopy over Noble Crash Site.",
+        "wiki":  "Pact Airship Wreckage"
+    },
+    {
+        "pos":  [
+                    33844.1,
+                    31965.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Security Console is in the Canopy over Ordnance Corps, northwest of Faren's Flyer Waypoint. It is the trigger for Defeat the Mark I Golem hero challenge. Note the golem is a champion and the event spawns Heal-o-Tron mobs, making it difficult to solo. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Security Console"
+    },
+    {
+        "pos":  [
+                    35277.7,
+                    31386.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Pile of Guano is a large pile of bat guano found in the Canopy over Pact Encampment, west of Last Leap Point of Interest. It is the trigger for Defeat the vampire beasts hero challenge. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Pile of Guano"
+    },
+    {
+        "pos":  [
+                    33794.1,
+                    32319.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Coztic Itzel Belongings is near the portal to Auric Basin from Verdant Brink, North-East of Treacherous Paths Waypoint. It is the trigger for Defeat the Coztic Itzel homesteaders hero challenge. After this challenge has been completed for hero points, it can then be activated and completed daily for map currency, experience and additional rewards.",
+        "wiki":  "Coztic Itzel Belongings"
+    },
+    {
+        "pos":  [
+                    37625.6,
+                    33421.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ley Line Hub is a hero challenge located in the far east of the Cavern of the Shining Lights in Dry Top.",
+        "wiki":  "Ley Line Hub (hero challenge)"
+    },
+    {
+        "pos":  [
+                    37153.8,
+                    32157.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mending Waters is a hero challenge located in the Uplands Oasis area in Dry Top, at the top of the waterfall. The Mending Waters effect is present at the bottom of the waterfall, healing players who take fall damage.",
+        "wiki":  "Mending Waters"
+    },
+    {
+        "pos":  [
+                    38150.9,
+                    32820.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Wreckage of Zephyrite Crystal Garden is a hero challenge located in the Prospect Valley area of Dry Top.",
+        "wiki":  "Wreckage of Zephyrite Crystal Garden"
+    },
+    {
+        "pos":  [
+                    37532.1,
+                    32794.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Hruugar Ironhaunch is a centaur meditating in a cave near Restoration Refuge. Talking to him in his grove will begin a hero challenge.",
+        "wiki":  "Hruugar Ironhaunch"
+    },
+    {
+        "pos":  [
+                    37112.8,
+                    32819.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Cliff Peak is a hero challenge located on the eastern edge of Challenger Cliffs. Players must make use of an air Aspect crystal in order to reach it.",
+        "wiki":  "Cliff Peak"
+    },
+    {
+        "pos":  [
+                    37353.7,
+                    31538
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Strange Pillar is a hero challenge located in Central Silverwastes.",
+        "wiki":  "Strange Pillar"
+    },
+    {
+        "pos":  [
+                    36908.3,
+                    30999.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Fragrant Cactus is a hero point challenge located in Desperate Passage. Interacting with it rewards a Fragrant Cactus Fruit, which can be consumed to gain a hero point.",
+        "wiki":  "Fragrant Cactus"
+    },
+    {
+        "pos":  [
+                    38266.8,
+                    31340.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Northern Shelf Elemental is a powerful Dust Mite Twister found in Northeastern Silverwastes that players can challenge to gain a Hero point.",
+        "wiki":  "Veteran Northern Shelf Elemental"
+    },
+    {
+        "pos":  [
+                    37799.2,
+                    30642.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sacred Stones is a hero challenge located in the Far Silverwastes.",
+        "wiki":  "Sacred Stones"
+    },
+    {
+        "pos":  [
+                    38328.4,
+                    31222.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Skritt Ledge is a hero challenge located in the skritt caves below Northeastern Silverwastes.",
+        "wiki":  "Skritt Ledge"
+    },
+    {
+        "pos":  [
+                    36955.6,
+                    31479.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fallen Asura is a hero challenge in Vinewrath Tangle. Interacting with it rewards a Mysterious Elixir, which can be consumed at any time to gain a hero point. This challenge is normally only accessible during Time Out (meta event), following successful completion of Mordrem Vinewrath. However, a Springer can jump over the vines blocking entry to the room.",
+        "wiki":  "Fallen Asura"
+    },
+    {
+        "pos":  [
+                    33962.2,
+                    102148
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Quarry Overlook is a communing hero point located on a balcony overlooking Residential District of the Xunlai Jade Quarry.",
+        "wiki":  "Quarry Overlook"
+    },
+    {
+        "pos":  [
+                    34441.4,
+                    103193
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Quarry Platform is a communing hero point located near Miner's Folly in the Flooded Basin.",
+        "wiki":  "Quarry Platform"
+    },
+    {
+        "pos":  [
+                    34930.7,
+                    103939
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Hatchery Play Pond is a communing hero point located in the Juno Hatchery.",
+        "wiki":  "Hatchery Play Pond"
+    },
+    {
+        "pos":  [
+                    34331.8,
+                    104188
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Harvest Complex Pavilion is a communing hero point located near the Harvest Temple.",
+        "wiki":  "Harvest Complex Pavilion"
+    },
+    {
+        "pos":  [
+                    34398.8,
+                    102217
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Roaring Waterfall is a communing hero challenge above The Green Grotto in Archipelagos Rim.",
+        "wiki":  "Roaring Waterfall"
+    },
+    {
+        "pos":  [
+                    34132.4,
+                    104279
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Harvest Temple Main Entrance is a communing hero point located near the Harvest Temple.",
+        "wiki":  "Harvest Temple Main Entrance"
+    },
+    {
+        "pos":  [
+                    29819.2,
+                    101109
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tsuko Talonedge is a Kestrel trainer found in the training area in Arborstone. She can be fought after the Base of Operations mastery is upgraded.",
+        "wiki":  "Tsuko Talonedge"
+    },
+    {
+        "pos":  [
+                    26032.6,
+                    99071.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Engineer Hu is a Xunlai Jade technician working in Baedal Hill he is also a repeatable hero challenge.",
+        "wiki":  "Engineer Hu"
+    },
+    {
+        "pos":  [
+                    28630.9,
+                    99381.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Purist Necromancer is a repeatable hero challenge in Grub Lane.",
+        "wiki":  "Veteran Purist Necromancer (hero challenge)"
+    },
+    {
+        "pos":  [
+                    28363.1,
+                    98585.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Old Kaineng Ruins is a communing hero challenge in Old Kaineng. It is guarded by a random elite Unchained Risen. This may be an Elite Unchained Acolyte, Devastator, Mage, or Sentinel.",
+        "wiki":  "Old Kaineng Ruins"
+    },
+    {
+        "pos":  [
+                    26136.5,
+                    100129
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Ministry of Archives is a communing hero challenge in Soojung Heights. It is guarded by a random elite Purist.",
+        "wiki":  "Ministry of Archives (hero challenge)"
+    },
+    {
+        "pos":  [
+                    26003.3,
+                    99379.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Jade Monument is a hero challenge located in the Power Plant area of New Kaineng City, overlooking the Jade Monument.",
+        "wiki":  "Jade Monument (hero challenge)"
+    },
+    {
+        "pos":  [
+                    28273.4,
+                    100390
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The New Kaineng City Limits is a hero challenge located in the Petrified Woods area of New Kaineng City. It is guarded by a random elite Speaker.",
+        "wiki":  "New Kaineng City Limits"
+    },
+    {
+        "pos":  [
+                    27665.1,
+                    98756
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Lab District Terrace is a communing hero challenge in North Lab. It is guarded by a random Elite Jade Brotherhood member.",
+        "wiki":  "Lab District Terrace"
+    },
+    {
+        "pos":  [
+                    27302.7,
+                    98813
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Garden Scaffolding is a communing hero challenge in Bori Ward.",
+        "wiki":  "Garden Scaffolding"
+    },
+    {
+        "pos":  [
+                    25520.2,
+                    100604
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sotdae Landing Lookout is a communing hero challenge in Sotdae Landing. It is near the top of a building structure.",
+        "wiki":  "Sotdae Landing Lookout"
+    },
+    {
+        "pos":  [
+                    22226.2,
+                    102476
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Jade Bulwark is a repeatable hero challenge on the Training Grounds in Seitung Province.",
+        "wiki":  "Veteran Jade Bulwark"
+    },
+    {
+        "pos":  [
+                    23730.2,
+                    101104
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Old Bell Shrine is found in Haiju Plains, over the bridge directly south of Haiju Docks Waypoint. It is the trigger for Defeat the Kirin hero challenge that is repeatable.",
+        "wiki":  "Old Bell Shrine"
+    },
+    {
+        "pos":  [
+                    23893.3,
+                    102167
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Cliffside Memorial Bell is a hero challenge in Zen Daijun. It's located east of the  Spirit Vestibule — , guarded by several Speaker Ritualists and a random elite Speaker.",
+        "wiki":  "Cliffside Memorial Bell"
+    },
+    {
+        "pos":  [
+                    22559.2,
+                    102221
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Bloom of Seitung is a communing hero challenge within Seitung Harbor underneath a tree.",
+        "wiki":  "Bloom of Seitung"
+    },
+    {
+        "pos":  [
+                    24684.9,
+                    102456
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Village Overlook is a communing hero challenge in Eastern Wilds. It is at the top of a rocky spire.",
+        "wiki":  "Village Overlook (Eastern Wilds)"
+    },
+    {
+        "pos":  [
+                    22029.2,
+                    101971
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Village Overlook is a communing hero challenge in Shing Jea Monastery. It's located east of the  Monastery Temple.",
+        "wiki":  "Village Overlook (Shing Jea Monastery)"
+    },
+    {
+        "pos":  [
+                    22402.9,
+                    101554
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Dog Statue is a communing hero challenge in Shinota Shore. It's located north of the  Shrine of Reverence. It is guarded by several Aetherblade including a random elite.",
+        "wiki":  "Dog Statue (hero point)"
+    },
+    {
+        "pos":  [
+                    22792,
+                    100671
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Haiju Hatchery is a communing hero challenge in Shinota Shore. It can be reached by diving in the basin of Fish Hatchery.",
+        "wiki":  "Haiju Hatchery"
+    },
+    {
+        "pos":  [
+                    22935.8,
+                    101724
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Source of the Springs is a communing hero challenge in Shinota Shore.",
+        "wiki":  "Source of the Springs"
+    },
+    {
+        "pos":  [
+                    31342.4,
+                    103307
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Submerged Cathedral is a communing hero challenge in Lake Lutgardis.",
+        "wiki":  "Submerged Cathedral"
+    },
+    {
+        "pos":  [
+                    29986.6,
+                    102130
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "House zu Heltzer is a communing hero challenge in Zu Heltzer Historical Site.",
+        "wiki":  "House zu Heltzer (hero challenge)"
+    },
+    {
+        "pos":  [
+                    29662.5,
+                    102964
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Speaker Headquarters is a communing hero challenge in Warden's Folly.",
+        "wiki":  "Speaker Headquarters"
+    },
+    {
+        "pos":  [
+                    30533,
+                    101068
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gravestone of Lord Archek Brauer is a communing hero challenge in Zu Heltzer Historical Site. It's located in the back of the graveyard and does not require a mount to reach.  It is guarded by one of the following elites - Elite Unbound Spirit of Pain, Elite Canthan Spirit Archer, Elite Canthan Spirit Tahkayun, Elite Unbound Spirit of Destruction, Elite Unbound Spirit of Agony or Elite Canthan Spirit Swordsman.",
+        "wiki":  "Gravestone of Lord Archek Brauer"
+    },
+    {
+        "pos":  [
+                    32802.9,
+                    103255
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Village Overlook is a communing hero challenge in Mori Village. It's located in above the buildings of the top floor of the village and can be reached using a mount.",
+        "wiki":  "Village Overlook (Mori Village)"
+    },
+    {
+        "pos":  [
+                    30943.8,
+                    102259
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Xunlai Jade Junkyard Overlook is a communing hero challenge above the Xunlai Jade Junkyard. It is guarded by an Elite Brotherhood Scrapper, Elite Brotherhood Sharpshooter, Elite Brotherhood Pistoleer or Elite Brotherhood Junker.",
+        "wiki":  "Xunlai Jade Junkyard Overlook"
+    },
+    {
+        "pos":  [
+                    7907.09,
+                    59724.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A saurian nest with golem parts in it can be found on a high ledge in south Skyshroud Canopy. Interacting with it summons an Elite Tyrannus Man-Eater. Mesmers can reveal the illusion cast on the nest, exposing the Suspicious Egg.",
+        "wiki":  "Unnamed object (Skyshroud Canopy)"
+    },
+    {
+        "pos":  [
+                    9336.96,
+                    59059.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Raging Waterfall is a place of power—a communing type hero challenge in The Winding Passage, hidden behind a waterfall.",
+        "wiki":  "Raging Waterfall"
+    },
+    {
+        "pos":  [
+                    9019.85,
+                    59589
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Cave Overlook is a place of power—a communing type hero challenge in Shimmering Basin, east of the Foothold Bivouac Waypoint.",
+        "wiki":  "Cave Overlook"
+    },
+    {
+        "pos":  [
+                    8128.63,
+                    59317.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Serene Lily Pad is a place of power—a communing type hero challenge in Skyshroud Canopy, it is located to the west of the Lake of Lillies Point of Interest. It sits on top of a large lily pad on the lake.",
+        "wiki":  "Serene Lily Pad"
+    },
+    {
+        "pos":  [
+                    7053.69,
+                    59534.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Ley-Rich Roots is a place of power—a communing type hero challenge in Overgrown Thicket. It is nestled in between above-ground tree roots entwined around huge magic orbs.",
+        "wiki":  "Ley-Rich Roots"
+    },
+    {
+        "pos":  [
+                    7255.02,
+                    58711.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Glider's Ledge is a place of power—a communing type hero challenge in Cloister of Stars. It is located on a ledge west of the Priory Expedition Waypoint and can easiest be accessed by jumping on the nearby bouncing mushroom.",
+        "wiki":  "Glider's Ledge"
+    },
+    {
+        "pos":  [
+                    6918.73,
+                    58295.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Starry Moat is a place of power—a communing type hero challenge in Lost Basilica, it is located in the water under  Threshold of Heaven — .",
+        "wiki":  "Starry Moat"
+    },
+    {
+        "pos":  [
+                    7816.9,
+                    57761.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Stunning Peak is a place of power—a communing type hero challenge in Untamed Crags.",
+        "wiki":  "Stunning Peak"
+    },
+    {
+        "pos":  [
+                    8832.38,
+                    57813.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Scout's Overlook is a place of power—a communing type hero challenge in Command Complex, it is located at the east of Priority Specimen Containment from Inquest Command Complex. It overlooks the Inquest complex.",
+        "wiki":  "Scout's Overlook"
+    },
+    {
+        "pos":  [
+                    8576.5,
+                    58030.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Inquest Testing Room is a place of power—a communing type hero challenge in Command Complex, it is located within Inquest Command Complex. It is a room filled with tiny various experiments.",
+        "wiki":  "Inquest Testing Room"
+    },
+    {
+        "pos":  [
+                    9183.23,
+                    58744
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This Strange Pineapple Plant is a place of power—a communing type hero challenge, it can be found in Enchanting Grottoes near The Great Choya Race adventure.",
+        "wiki":  "Strange Pineapple Plant"
+    },
+    {
+        "pos":  [
+                    8428.72,
+                    58804.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gnarled Roots is a place of power—a communing type hero challenge in Tranquil Glen. It is  located above the  Twin Geysers — .",
+        "wiki":  "Gnarled Roots (hero challenge)"
+    },
+    {
+        "pos":  [
+                    8583.58,
+                    59402.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Makaela is standing by the river north-west of the Foothold Bivouac Waypoint. Speak with the fox to begin a challenge to earn a hero point.",
+        "wiki":  "Makaela"
+    },
+    {
+        "pos":  [
+                    8223.3,
+                    57672.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Damaged Inquest Surveillance Device is a hero challenge that can be found in Untamed Crags eastmost, next to the Secret Spring point of interest.",
+        "wiki":  "Damaged Inquest Surveillance Device"
+    },
+    {
+        "pos":  [
+                    7161.15,
+                    58511.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "This Strange Rock hero challenge can be found in Cloister of Stars north of The Fallen Gate.",
+        "wiki":  "Strange Rock (hero challenge)"
+    },
+    {
+        "pos":  [
+                    11222.7,
+                    59821.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Host Scott Bonnett offers a culinary hero challenge at Pub Canach.",
+        "wiki":  "Host Scott Bonnett"
+    },
+    {
+        "pos":  [
+                    9950.3,
+                    57683.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Castaway is a hero challenge NPC attempting to break into a locked chest. Helping her will almost inevitably lead to being jumpscared by a magical weapon.",
+        "wiki":  "Castaway (hero challenge)"
+    },
+    {
+        "pos":  [
+                    11485.2,
+                    58448.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Tyrian Alliance Lookout Point is a place of power—a communing type hero challenge in southern Soaring Sands.",
+        "wiki":  "Tyrian Alliance Lookout Point"
+    },
+    {
+        "pos":  [
+                    10627.2,
+                    58556.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mainland Verge is a place of power—a communing type hero challenge in Glimmering Arches. There is a bouncing mushroom just north of it to bring you up to the platform.",
+        "wiki":  "The Mainland Verge"
+    },
+    {
+        "pos":  [
+                    10309.5,
+                    58405.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Castoran Headland is a place of power—a communing type hero challenge on a plateau in Guarded Glades.",
+        "wiki":  "The Castoran Headland"
+    },
+    {
+        "pos":  [
+                    11797.8,
+                    59835.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Far-Flung Lost Ship is a place of power—a communing type hero challenge in eastern Jetsam Point, in the structure of Morningrise Prow which is a ship cast up onto some rocks.",
+        "wiki":  "Far-Flung Lost Ship"
+    },
+    {
+        "pos":  [
+                    11047.8,
+                    59135.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Surveillance Point is a place of power—a communing type hero challenge in west Hullgarden.",
+        "wiki":  "Surveillance Point"
+    },
+    {
+        "pos":  [
+                    10221.9,
+                    59451.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Freebooter's Stateroom is a place of power—a communing type hero challenge in a subterranean cave. From ground level, drop down into the waterfall basin at Hammerhart Battery and then head west into the caves to reach the hero challenge. If alive, pesky pirates will interrupt you as you attempt to commune.",
+        "wiki":  "Freebooter's Stateroom"
+    },
+    {
+        "pos":  [
+                    10147.4,
+                    60070.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Inquest Research Outpost is a place of power—a communing type hero challenge in Riddled Cove, it is located in the left cavern in the continuation of Inquest Subterranean Research Facility.",
+        "wiki":  "Inquest Research Outpost"
+    },
+    {
+        "pos":  [
+                    11494.6,
+                    60361.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Survivor's Lament Lookout is a place of power—a communing type hero challenge in southern Jetsam Point.",
+        "wiki":  "Survivor's Lament Lookout"
+    },
+    {
+        "pos":  [
+                    10835.8,
+                    59582
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fisher's Lookout Point is a place of power—a communing type hero challenge at the west side of Breezy Cay.",
+        "wiki":  "Fisher's Lookout Point"
+    },
+    {
+        "pos":  [
+                    9783.19,
+                    57836.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Shelterer's Backstage is a place of power—a communing type hero challenge in a ground level cave within Shoalstone. To reach it, start at Thornbloom Ravine at the coast, and follow the ravine northwest to the Congregation of the Sheltered. The hero challenge is on a stage overlooking the point of interest.",
+        "wiki":  "Shelterer's Backstage"
+    },
+    {
+        "pos":  [
+                    10037.4,
+                    60247.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Inquest Infinite Intelligence Interpreter is a hero challenge in Riddled Cove.",
+        "wiki":  "Inquest Infinite Intelligence Interpreter"
+    },
+    {
+        "pos":  [
+                    11719.4,
+                    59460.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Sad Freebooter is a hero challenge NPC located in northern Jetsam Point. Once cheered up, he becomes \"Freebooter Ajdin\" and can be seen with his mate, Castaway Bradley.",
+        "wiki":  "Sad Freebooter"
+    },
+    {
+        "pos":  [
+                    10406.1,
+                    59904.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Misplaced Inquest Box is a hero challenge in Riddled Cove, located in the right cavern in the continuation of the Inquest Subterranean Research Facility.",
+        "wiki":  "Misplaced Inquest Box"
+    },
+    {
+        "pos":  [
+                    59411.2,
+                    42953.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A Wind-Worn Bottle lies dormant in the Sifuri Sand Sea in the Crystal Oasis, beside a lone tree. Upon activation, it summons a strong magic-muddled djinn to fight.",
+        "wiki":  "Wind-Worn Bottle"
+    },
+    {
+        "pos":  [
+                    61880.5,
+                    42829.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Branded Pyramid is a communing hero challenge within the Maculate Fringe area in the Crystal Oasis.",
+        "wiki":  "Branded Pyramid"
+    },
+    {
+        "pos":  [
+                    60262.4,
+                    42652
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Unearthed Ruins is a communing hero challenge in Hatari Tablelands.",
+        "wiki":  "Unearthed Ruins"
+    },
+    {
+        "pos":  [
+                    59015.7,
+                    44685.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Confessor Opeyemi is an Awakened found at the Amnoon Southern Outskirts.",
+        "wiki":  "Veteran Confessor Opeyemi"
+    },
+    {
+        "pos":  [
+                    58349.9,
+                    42464.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Abandoned Forged Ore is a hero challenge in The Sinking Ruins. It summons a Veteran Forged Vanguard to fight.",
+        "wiki":  "Abandoned Forged Ore"
+    },
+    {
+        "pos":  [
+                    61685.9,
+                    40953.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A large Branded Crystal can be found resting atop an ogre tower. It can be reached by going through The Sunderlands, or, alternatively, by heading south from the Tomb of the Primeval Kings with a Springer.",
+        "wiki":  "Branded Crystal (hero challenge)"
+    },
+    {
+        "pos":  [
+                    57847.3,
+                    40587.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Jubua the Wildfire is a Djinn found in Fortune's Vale.",
+        "wiki":  "Veteran Jubua the Wildfire"
+    },
+    {
+        "pos":  [
+                    59955.9,
+                    41461.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "A pile of Dusty Bones lies in the Salt Flats in the Desert Highlands, that upon activation, spawn a Veteran Dust Tornado. It can be reached by using a Raptor mount and jumping over the cliffs north of the Cavalier Express Parcel Run activity.",
+        "wiki":  "Dusty Bones"
+    },
+    {
+        "pos":  [
+                    61646.2,
+                    41907.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Glint's Lair is the crystal remains of the former home of the dragon Glint. It can be reached by scaling the walls near the nearby point of interest of the same name with a Springer.",
+        "wiki":  "Glint's Lair (hero challenge)"
+    },
+    {
+        "pos":  [
+                    60879.1,
+                    39907.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Glowing Campfire is a communing hero challenge in the Lifeblood Ravine, near the Lifeblood Falls.",
+        "wiki":  "Glowing Campfire"
+    },
+    {
+        "pos":  [
+                    62002.3,
+                    40639.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "An Eternal Fire can be found near the eastern portion of the entrance to the Tomb of the Primeval Kings. It can be reached by scaling the eastern walls, through The Sunderlands.",
+        "wiki":  "Eternal Fire"
+    },
+    {
+        "pos":  [
+                    60448.8,
+                    40666.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Yandra Stonetusk is looking for a sparring partner, providing a hero challenge in the Lommuld Kraal within the Auburn Hills.",
+        "wiki":  "Veteran Yandra Stonetusk"
+    },
+    {
+        "pos":  [
+                    58796.1,
+                    52558.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Gnarled Tree is a hero challenge in Broken Shelf. It summons a Veteran Giant Jacaranda to fight.",
+        "wiki":  "Gnarled Tree"
+    },
+    {
+        "pos":  [
+                    61167.3,
+                    51061.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Shanna the Valorous is a hero challenge ghost found on a rocky outcrop northwest of the Lair of the Forgotten.",
+        "wiki":  "Shanna the Valorous"
+    },
+    {
+        "pos":  [
+                    58470.6,
+                    49147.8
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Broken Egg is a hero challenge in Acrid Springs. It summons a Veteran Sulfur-Crazed Matriarch and 3 Young Harpies to fight.",
+        "wiki":  "Broken Egg"
+    },
+    {
+        "pos":  [
+                    60757,
+                    50065.7
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Awakened Wanderer is a canid Hero Challenge in the Poisoned Outcrops",
+        "wiki":  "Awakened Wanderer"
+    },
+    {
+        "pos":  [
+                    59039.2,
+                    51507.9
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Mouth of Torment marks the entrance to the Realm of Torment, as encountered in the original Guild Wars. The Forged have taken the precaution of lining the floor with mesh to prevent people falling into it.",
+        "wiki":  "The Mouth of Torment (hero challenge)"
+    },
+    {
+        "pos":  [
+                    60478.3,
+                    52855.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Bone Palace is a communing hero challenge in Joko's Domain.",
+        "wiki":  "The Bone Palace (hero challenge)"
+    },
+    {
+        "pos":  [
+                    61115.1,
+                    47270.5
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fallen Giant is a communing hero challenge in Arid Gladefields. This is the remains of the Lonely Vigil which had fallen 250 years ago. The statue's feet rest in Elon Flow, and its head, chest, and arms rest in Arid Gladefields",
+        "wiki":  "Fallen Giant"
+    },
+    {
+        "pos":  [
+                    58541.8,
+                    47924.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Throne of Pellentia is an ancient throne within the Shallows of Despair, providing a hero challenge in the Elon Riverlands.",
+        "wiki":  "Throne of Pellentia (hero challenge)"
+    },
+    {
+        "pos":  [
+                    61776.5,
+                    45062.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The Branded Relic is the statue of a Forgotten enclosed in a branded crystal in the northeastern corner of the Ustulate Barrens in the Elon Riverlands. Examining it summons a Veteran Branded Forgotten Priest to fight.",
+        "wiki":  "Branded Relic"
+    },
+    {
+        "pos":  [
+                    59211.3,
+                    45653.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Veteran Trunt is a giant found in an isolated camp in the Elon Riverlands.",
+        "wiki":  "Veteran Trunt"
+    },
+    {
+        "pos":  [
+                    59434.2,
+                    47021
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Lohrashi the Mournful is a human ghost found southeast of the Skimmer Ranch.",
+        "wiki":  "Lohrashi the Mournful"
+    },
+    {
+        "pos":  [
+                    61247.1,
+                    45316.1
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Forgotten Shrine is a communing hero challenge in Skyward Reach in Elon Riverlands.",
+        "wiki":  "Forgotten Shrine"
+    },
+    {
+        "pos":  [
+                    59932.9,
+                    46196.3
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "The General's Grave is a combat hero challenge in The Quickmire. Like most graves in the Crystal Desert, the inhabitant is still available to greet you with a trial by combat.",
+        "wiki":  "General's Grave"
+    },
+    {
+        "pos":  [
+                    58418.3,
+                    45196.6
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Fresh Meat is a combat hero challenge in Deadlock Sweep. Attempting to take the meat will cause the player to be attacked by sand lions",
+        "wiki":  "Fresh Meat"
+    },
+    {
+        "pos":  [
+                    66223.2,
+                    54492.2
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Master Tahiq is the headmaster of House Ventura.",
+        "wiki":  "Master Tahiq"
+    },
+    {
+        "pos":  [
+                    67931,
+                    53490
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Hunter Glorg is an ogre seeking adventurers' aid. His pet Malletgob has fallen afoul of the Branded corruption and needs to be put out of her misery.",
+        "wiki":  "Hunter Glorg"
+    },
+    {
+        "pos":  [
+                    64719.3,
+                    55172.4
+                ],
+        "name":  "Hero Point",
+        "type":  "heropoint",
+        "desc":  "Mother Tharwa keeps vigil over a recently deceased relative along with her large, extended family, and wishes for you to fight its Awakened members so that they are better prepared for their court appearance, should they need to confront the judges in defense of the family.",
+        "wiki":  "Mother Tharwa"
+    }
+]

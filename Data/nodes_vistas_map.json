@@ -1,0 +1,4576 @@
+﻿[
+    {
+        "pos":  [
+                    53139,
+                    32387.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53443.2,
+                    31642.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52477.6,
+                    34432
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52435,
+                    32510.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53292.4,
+                    33080.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52664.3,
+                    31757
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53715.7,
+                    34145.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54036.3,
+                    34281.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51071.3,
+                    33172.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BA4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50860.7,
+                    30377.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BA8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51579.6,
+                    32121.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51997.4,
+                    32602.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50618.4,
+                    34167.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50754.3,
+                    31459.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51329.7,
+                    33198.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51739.6,
+                    30442.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BK4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51209.8,
+                    29976.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BK8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51973.3,
+                    34231.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55329.3,
+                    31045.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55804.1,
+                    31037.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55011.6,
+                    30205.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55736.9,
+                    29830.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54950.5,
+                    29753.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55050.2,
+                    30657.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55357.9,
+                    28993.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54656.2,
+                    32011
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56054.1,
+                    30207.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55486.7,
+                    28197
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52216.8,
+                    35097.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53534.5,
+                    36290.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53393.5,
+                    37054.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52165.9,
+                    36022.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52754.5,
+                    34817.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52353.8,
+                    36265.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54299.5,
+                    27014.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55943.9,
+                    26313.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53621.3,
+                    26717.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53742.4,
+                    27250.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56108.8,
+                    26694
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54427.8,
+                    25574.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53902.3,
+                    25669.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56116.4,
+                    25691.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54148.4,
+                    28900
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BM8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50818.9,
+                    29102.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54108.5,
+                    27807.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51382.7,
+                    28334.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54163,
+                    29365.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54353,
+                    28554
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52710.3,
+                    30523.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54080.3,
+                    30393
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54155.6,
+                    30981.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53860.1,
+                    30898.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53513.5,
+                    30198.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BK0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53676.5,
+                    24218.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55140.1,
+                    23438.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIYJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55119.3,
+                    23972.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIcJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53938.7,
+                    23499.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIsJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55900.1,
+                    24499.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BI4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57903.2,
+                    37291.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKQLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57588.4,
+                    35308.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKgLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56603.4,
+                    38185.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56883.2,
+                    37059.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56619.6,
+                    35003.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLgLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58720.9,
+                    35183.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL8LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57928.3,
+                    36491.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58821.7,
+                    17722.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59147.4,
+                    18559.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57723.5,
+                    17615.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BC8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57493.7,
+                    18380
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56466.7,
+                    18832.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDgMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56201.2,
+                    17296.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56688.6,
+                    17741.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56950.6,
+                    17126
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52035.7,
+                    20483
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50662.6,
+                    20171.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50818.2,
+                    21168.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51859.2,
+                    21374.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFUMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51488.4,
+                    20715.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFgMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51063.6,
+                    21951.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50350.2,
+                    21974.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51773.8,
+                    21809.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF0MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51226.6,
+                    20990.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50404.4,
+                    20350.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGoMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51724.2,
+                    19594.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51113.8,
+                    19074
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51201,
+                    19495.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50726.1,
+                    19479.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHgMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51842.1,
+                    18583.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH0MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51030.1,
+                    18511.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58848,
+                    30260.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58547.2,
+                    31267.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59459.9,
+                    31813.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59392.6,
+                    30824.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60088,
+                    30260.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60898.2,
+                    31606.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61535,
+                    30897.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61797.1,
+                    30080.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60492.4,
+                    30833.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60864.1,
+                    30205.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63080.3,
+                    30873.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62859.2,
+                    29159.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62355,
+                    29516.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63690.7,
+                    32263
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63799.8,
+                    31828.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62042.5,
+                    35502.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62422.1,
+                    33176
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63622.8,
+                    33791.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64021.9,
+                    34696.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62130.3,
+                    34461.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63310.7,
+                    34496.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57829.9,
+                    27127.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57214.9,
+                    25713
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59525.3,
+                    27350.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58632.8,
+                    27190.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58439.8,
+                    26376.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59031.7,
+                    25388.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58874.4,
+                    26240.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57886.3,
+                    25708.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60606.1,
+                    29702.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61493.5,
+                    28231.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60487.1,
+                    26070
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61257.2,
+                    27293.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61704.5,
+                    26428.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60624.7,
+                    27317.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDoGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60084.7,
+                    29769.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60240.2,
+                    26144
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58740.6,
+                    29717.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57825.7,
+                    28926
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59092.3,
+                    29196.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56532.7,
+                    29856.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57701,
+                    29710.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59648.7,
+                    29356.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58636.2,
+                    27859.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57888.8,
+                    27914.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59646,
+                    27885.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56875.9,
+                    28461.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57510.7,
+                    31014.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56862.1,
+                    31450.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56618.5,
+                    30814.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57170.7,
+                    30240
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57018.4,
+                    31063.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61558,
+                    19168.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60983.4,
+                    19677.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60898.6,
+                    18994.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAAMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60321.1,
+                    18080
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60905,
+                    18397.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAgMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61135.1,
+                    18093.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62299.7,
+                    19061.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBAMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61011.2,
+                    17587.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBMMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60537.8,
+                    19052.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62220.4,
+                    18221.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49702.3,
+                    39994.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49206.6,
+                    39884.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47955.9,
+                    40541.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50377.5,
+                    40548.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49175.5,
+                    40670.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49630.2,
+                    40893.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43927.5,
+                    45206
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43789.3,
+                    44259.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43283,
+                    42840.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44088.6,
+                    43799.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44030.2,
+                    42181.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLoGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44528.2,
+                    40371
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46055.2,
+                    39635.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46749.3,
+                    40881.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45328.4,
+                    40579.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43411.6,
+                    41035.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48238.5,
+                    42587.7
+                ],
+        "name":  "Mosaic Bower",
+        "type":  "vista",
+        "chat_code":  "[&BNwJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48982.7,
+                    41843.3
+                ],
+        "name":  "The Arm of Abaddon",
+        "type":  "vista",
+        "chat_code":  "[&BN4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47484.3,
+                    42304.8
+                ],
+        "name":  "Updraft Alley",
+        "type":  "vista",
+        "chat_code":  "[&BN8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49389.8,
+                    42721.4
+                ],
+        "name":  "Ruined Panorama",
+        "type":  "vista",
+        "chat_code":  "[&BPQJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43090,
+                    28127.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43093.7,
+                    30157.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45043,
+                    29064.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43559.9,
+                    28989.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45993.8,
+                    28528.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42882.6,
+                    29808.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43184.7,
+                    29210
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44895.7,
+                    29797
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44143.4,
+                    28849.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46952.3,
+                    28497.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48181.2,
+                    27601.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48917.4,
+                    27823.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46872.3,
+                    27382.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46641.5,
+                    26677.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAoGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47922.5,
+                    26690.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48187.4,
+                    26515.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48839.1,
+                    27309.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BA0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44139.5,
+                    27319.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43799.5,
+                    26893.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43437.7,
+                    27407
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44139.8,
+                    26527
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43549.8,
+                    27610.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44482,
+                    26832.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43022.3,
+                    32384.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45500.5,
+                    31819.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44987.2,
+                    31568.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44240.3,
+                    31312.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45696.1,
+                    31016.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44955.7,
+                    31080
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42612.4,
+                    30613.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45989.3,
+                    32223.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43406.9,
+                    31586.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47655.9,
+                    29577.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47912.6,
+                    28792.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48634.2,
+                    29977.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49343.7,
+                    29918.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49694.5,
+                    30300.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48447.3,
+                    29559.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BO0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49050,
+                    29060.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BO4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47028.5,
+                    29713.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BO8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49864.3,
+                    31173.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48640.1,
+                    31134.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49430.6,
+                    31388.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49599.9,
+                    31317
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48486.6,
+                    31168.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48634.5,
+                    32094.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48194,
+                    30972.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48941.6,
+                    31674.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48992,
+                    31210.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50086.2,
+                    31987.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49705.5,
+                    31935.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49919.9,
+                    32377.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BC0GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50271.3,
+                    35016.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BC4GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48650.8,
+                    35403.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BC8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49312.1,
+                    34320.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49284,
+                    32935.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49980,
+                    32921.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48777.9,
+                    33523.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46108.2,
+                    27516.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45652,
+                    25620.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJMJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45043.9,
+                    26027.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45108.8,
+                    26826.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45302.8,
+                    27713.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45891.3,
+                    27066.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45677.5,
+                    26058.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKkJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45688.5,
+                    25784.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKoJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45869,
+                    26107.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLIJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42723.4,
+                    34183.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43549.6,
+                    32974.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43413.9,
+                    34648.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42313,
+                    35695.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43439.9,
+                    36204.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43286.2,
+                    33831
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42726.5,
+                    33821.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42572.5,
+                    35045.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41453.4,
+                    35248.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40282.6,
+                    36642.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41124.2,
+                    34781.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40810.2,
+                    36484.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40624.9,
+                    36550.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40802,
+                    35459.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40744.3,
+                    34113
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41531.1,
+                    33791
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41739,
+                    36111.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39981.5,
+                    31002
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41883.8,
+                    32368.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40367.2,
+                    32961.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMQFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39617.8,
+                    33443.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMUFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40573.1,
+                    32144.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMYFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41080.6,
+                    33229.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41139.2,
+                    32709.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43289.1,
+                    37469.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43267.3,
+                    37539.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43050.4,
+                    37263.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43135.8,
+                    37070.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43154.5,
+                    37498.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43373.4,
+                    37343.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38728.7,
+                    37124
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMkFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38892.9,
+                    37044.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMoFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38177,
+                    38461.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMsFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38838.9,
+                    37075.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMwFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38721,
+                    37261.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BM0FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53329.5,
+                    39368.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKYGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50964.3,
+                    38685.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51906.9,
+                    39240
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53159.3,
+                    38254.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53406.8,
+                    40025
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKoGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53822.3,
+                    39416.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51273.6,
+                    38957.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50163.9,
+                    36021.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48440.4,
+                    36547.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48881,
+                    36632.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48173,
+                    38019.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHoGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48525.6,
+                    38002.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHsGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36789.7,
+                    37351.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35364.6,
+                    37135.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36062.6,
+                    36929.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35863.2,
+                    37440.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34244.1,
+                    38137.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36402.1,
+                    37841.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35229.9,
+                    36727.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMsIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34969.1,
+                    34389.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33677,
+                    34331.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG0IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33818.8,
+                    33210.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34515.8,
+                    34224.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34856.7,
+                    33891.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMkIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34785.8,
+                    32725
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38267.4,
+                    35244.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBYIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36144.7,
+                    34816.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38140.5,
+                    35752.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36215.1,
+                    35323.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKYIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36867.2,
+                    34756.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37705.1,
+                    34689.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35803.3,
+                    32350.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34804,
+                    31697.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36010.8,
+                    31163
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34118.9,
+                    31549.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLsIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36361.8,
+                    32065.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNkIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33981.3,
+                    31377.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36112.2,
+                    29634.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BA8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35325.3,
+                    30781.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36069.2,
+                    30539.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35350,
+                    30685.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BE0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37648.9,
+                    33015
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHcHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38092.7,
+                    33023
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHgHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37275.3,
+                    32571.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIEHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37374.5,
+                    33348.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIQHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37603.8,
+                    32300.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36869.2,
+                    33157.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37124.3,
+                    30979.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKEHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37667.4,
+                    31456.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKIHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38015.2,
+                    31865.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKMHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37873.3,
+                    30839.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKQHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38382.2,
+                    31686.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37893.8,
+                    31402.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKgHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37133.7,
+                    31780
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLkHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56184.3,
+                    62099.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57794.2,
+                    62714.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAwLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57783.1,
+                    61963.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBALAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56601.1,
+                    60415.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55893.6,
+                    60795.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBwLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58079.4,
+                    61597
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB0LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40637.8,
+                    23111.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40951,
+                    22488
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40491.1,
+                    22964.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42438.1,
+                    22165.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOwOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42804.1,
+                    22426.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42539.6,
+                    22500.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPwOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41732.7,
+                    22803.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42865.5,
+                    23668.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39805.8,
+                    15777.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLIOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40905.9,
+                    16833.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMMOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40008.9,
+                    16254.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38618.3,
+                    15923.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNgOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40598.5,
+                    14638.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41075.3,
+                    16348.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39095.2,
+                    14667.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPgOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40656.6,
+                    15545.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BP0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37137.4,
+                    11059.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGYPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37014.3,
+                    12266.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGcPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37835.8,
+                    11631.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34531.1,
+                    11635
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35683.8,
+                    12624.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFcPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34843.9,
+                    10658.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFgPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38093.7,
+                    46558
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38319.7,
+                    46275.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGQJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38262.2,
+                    45321.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38881.5,
+                    46103.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40081.7,
+                    45729.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38990.4,
+                    46540.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHMJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39406.1,
+                    45368.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHYJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36804.6,
+                    42410.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36899.3,
+                    41191.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLsJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36193.9,
+                    41874.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36103.4,
+                    41884.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36427.7,
+                    41033.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMIJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33696.5,
+                    103166
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34960.6,
+                    103939
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34125.5,
+                    105376
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34464.9,
+                    102301
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34680.6,
+                    102731
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26894.1,
+                    99380.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    28252.9,
+                    98693.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    28006.9,
+                    99317.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDcNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25695.5,
+                    99111
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    28179.5,
+                    99577
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24679.3,
+                    101370
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BI8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22871.4,
+                    102317
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21757.3,
+                    102267
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAwNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23862.4,
+                    101346
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22162.2,
+                    101136
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEUNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32141.4,
+                    102950
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOoMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32838,
+                    101561
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAcNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30377,
+                    101113
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    31220.8,
+                    101086
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCsNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29546,
+                    103081
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37874.4,
+                    102542
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ8NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37686.3,
+                    103802
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38256.6,
+                    101758
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24103.4,
+                    22577.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24349.8,
+                    22308.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23641.7,
+                    22054.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27003,
+                    24360.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24854.4,
+                    23090.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN0NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24298.7,
+                    23486.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOsNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26200.4,
+                    23775.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPgNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25983,
+                    23360.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBwOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23822.9,
+                    23105.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24967,
+                    23798.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24836.8,
+                    24585.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFEOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23899.7,
+                    20625.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLENAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24292,
+                    20249.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BM4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24578.6,
+                    21381.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25078.7,
+                    20561.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23418.2,
+                    19321.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAEOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24960.3,
+                    19409.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23058.4,
+                    20279.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEUOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24634.7,
+                    19727.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22588.7,
+                    23228.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22490.4,
+                    22313.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGAOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22470.3,
+                    23787
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGEOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21321.9,
+                    22222.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHEOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    20892.4,
+                    23178
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21283.5,
+                    22630.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    20237.9,
+                    22784.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJIOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7144.89,
+                    59617
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7817.17,
+                    58253.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJYPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    6879.61,
+                    58010
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    8657.25,
+                    57837.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BK4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    8283.83,
+                    59374.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BM0PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11565.5,
+                    58990
+                ],
+        "name":  "Hullgarden Vista",
+        "type":  "vista",
+        "chat_code":  "[&BHIPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    10171.1,
+                    59299.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJMPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    9754.64,
+                    58797.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKgPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11743.8,
+                    59839.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    10318.9,
+                    59323.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMIPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11184.1,
+                    59730.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58346.9,
+                    43131.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAYKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59934.1,
+                    43807.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAgKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61707.8,
+                    43900.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BC4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58973.9,
+                    42872
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61475.1,
+                    42898.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60028.3,
+                    43169
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHYKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57989.4,
+                    43898.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58596.8,
+                    43937.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60698.1,
+                    43156.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60172.6,
+                    42837.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60162.6,
+                    42042.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPwJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57734.3,
+                    40796
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60153.5,
+                    41583.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59409,
+                    40339.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58269.1,
+                    41500.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61709.9,
+                    41484.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61384.6,
+                    40632.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60806.2,
+                    39999.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58954.6,
+                    41925
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BKkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58797.7,
+                    41766.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57951.8,
+                    41570.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59430.7,
+                    52396.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58521.1,
+                    49167.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61396.3,
+                    51036.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BF4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59891.8,
+                    48411.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGgKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59165.2,
+                    50680.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58976,
+                    51531.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60354.9,
+                    49066
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60443.5,
+                    49770.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJ8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60441.6,
+                    52337.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61203.6,
+                    48770.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59215.1,
+                    47358.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPcJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60100.5,
+                    46100.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BBAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60740,
+                    45510.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59585.8,
+                    45285.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60576.6,
+                    46710.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BE8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58610.1,
+                    45210.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60582.3,
+                    47702.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58688.8,
+                    47789.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BK0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58509.2,
+                    45898.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BLIKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61114.7,
+                    47139.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66512.5,
+                    53707.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BAAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    67722.9,
+                    52876
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BB4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    68258.1,
+                    54227.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BCQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64672.9,
+                    54917.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHkKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    68123.6,
+                    54977.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66143.6,
+                    54897
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BH8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64797.5,
+                    53179.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    68225.6,
+                    53728.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BL4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63951.6,
+                    53533.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BO4KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64377.6,
+                    54497.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BPMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54585.7,
+                    56121.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52676.2,
+                    57583.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BDwLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54623.6,
+                    57694
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEELAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52786.8,
+                    56400.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65570.4,
+                    61974.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BEoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65365.5,
+                    61519.5
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BE8LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64368.8,
+                    60818.8
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BFsLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65760.2,
+                    63074.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGQLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65511.7,
+                    58789.4
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66819.4,
+                    56747.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BGwLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65519.8,
+                    57802.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BG8LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65289,
+                    57124.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BHILAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63808,
+                    57323.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIELAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66298.5,
+                    57677.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BIcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66902,
+                    58316.2
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BJYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46309.6,
+                    49426.7
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BMwLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46758.4,
+                    48817.9
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46844.8,
+                    50313.1
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BNYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44860.5,
+                    50817.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BN8LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46251.1,
+                    50601.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44421.7,
+                    49793.6
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44809.1,
+                    48665.3
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45724.6,
+                    48972
+                ],
+        "type":  "vista",
+        "chat_code":  "[&BOkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5058.59,
+                    62736
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BOAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4755.91,
+                    60312
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BOoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3418.12,
+                    62534.1
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BO0PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4500.1,
+                    61647.3
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BPQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4122.26,
+                    60763.8
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BPUPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5307.32,
+                    60805.1
+                ],
+        "name":  "Vista",
+        "type":  "vista",
+        "chat_code":  "[&BAQQAAA=]",
+        "desc":  ""
+    }
+]

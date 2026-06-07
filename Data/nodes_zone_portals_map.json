@@ -1,0 +1,1902 @@
+﻿[
+    {
+        "pos":  [
+                    47176,
+                    34545
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Tyria"
+    },
+    {
+        "pos":  [
+                    38880,
+                    37221
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Metrica Province"
+    },
+    {
+        "pos":  [
+                    38864,
+                    37243
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Idea Incubation Lab"
+    },
+    {
+        "pos":  [
+                    38842,
+                    37240
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Dawnside Quay"
+    },
+    {
+        "pos":  [
+                    38770,
+                    36916
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    38564,
+                    37192
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Antidawn Anchorage"
+    },
+    {
+        "pos":  [
+                    38540,
+                    37187
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Snaff Memorial Lab"
+    },
+    {
+        "pos":  [
+                    38542,
+                    37153
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Applied Development Lab (Home)"
+    },
+    {
+        "pos":  [
+                    38059,
+                    38269
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Sum"
+    },
+    {
+        "pos":  [
+                    38176,
+                    37229
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Sum"
+    },
+    {
+        "pos":  [
+                    38713,
+                    37875
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Sum"
+    },
+    {
+        "pos":  [
+                    38282,
+                    38151
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Sum"
+    },
+    {
+        "pos":  [
+                    49322,
+                    31144
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Sum"
+    },
+    {
+        "pos":  [
+                    57853,
+                    21834
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Asura gate destinations to cities and personal instances"
+    },
+    {
+        "pos":  [
+                    49361,
+                    31051
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Divinity's Reach"
+    },
+    {
+        "pos":  [
+                    44109,
+                    27388
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49386,
+                    31028
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Arborstone"
+    },
+    {
+        "pos":  [
+                    29838,
+                    101565
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49414,
+                    31048
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Southsun Cove"
+    },
+    {
+        "pos":  [
+                    46640,
+                    36716
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49433,
+                    31065
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to The Wizard's Tower"
+    },
+    {
+        "pos":  [
+                    24568,
+                    22330
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49448,
+                    31083
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Hoelbrak"
+    },
+    {
+        "pos":  [
+                    53267,
+                    30657
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49433,
+                    31183
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Black Citadel"
+    },
+    {
+        "pos":  [
+                    56817,
+                    30444
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49390,
+                    31201
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to The Grove"
+    },
+    {
+        "pos":  [
+                    43218,
+                    37295
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49391,
+                    31112
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Castora (Shipwreck Strand)"
+    },
+    {
+        "pos":  [
+                    11774,
+                    57830
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Lion's Arch"
+    },
+    {
+        "pos":  [
+                    49415,
+                    31734
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Heart of the Mist (PvP)"
+    },
+    {
+        "pos":  [
+                    49392,
+                    31889
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Mistlock Observatory (Fractals)"
+    },
+    {
+        "pos":  [
+                    49467,
+                    31873
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Alpine Borderlands (WvW)"
+    },
+    {
+        "pos":  [
+                    49469,
+                    31920
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Desert Borderlands (WvW)"
+    },
+    {
+        "pos":  [
+                    49421,
+                    31972
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Alpine Borderlands (WvW)"
+    },
+    {
+        "pos":  [
+                    49346,
+                    31965
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Eternal Battleground (WvW)"
+    },
+    {
+        "pos":  [
+                    49309,
+                    31899
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Edge of the Mists (WvW)"
+    },
+    {
+        "pos":  [
+                    49325,
+                    31849
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Obsidian Sanctum (WvW)"
+    },
+    {
+        "pos":  [
+                    44031,
+                    26972
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Mistburned Barrens"
+    },
+    {
+        "pos":  [
+                    34269,
+                    11530
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Divinity's Reach"
+    },
+    {
+        "pos":  [
+                    44706,
+                    27351
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Ebonhawke"
+    },
+    {
+        "pos":  [
+                    61833,
+                    34803
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Divinity's Reach"
+    },
+    {
+        "pos":  [
+                    49474,
+                    29003
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Fort Trinity"
+    },
+    {
+        "pos":  [
+                    50159,
+                    39779
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Vigil Keep"
+    },
+    {
+        "pos":  [
+                    50187,
+                    39773
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Chantry of Secrets (Instance)"
+    },
+    {
+        "pos":  [
+                    50210,
+                    39786
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Durmand Priory"
+    },
+    {
+        "pos":  [
+                    50584,
+                    31383
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Fort Trinity"
+    },
+    {
+        "pos":  [
+                    38994,
+                    46342
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Rata Novus (Instance)"
+    },
+    {
+        "pos":  [
+                    42934,
+                    23713
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to The Wizard's Tower"
+    },
+    {
+        "pos":  [
+                    42970,
+                    23713
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "desc":  "Portal to Divinity's Reach"
+    },
+    {
+        "pos":  [
+                    44998.9,
+                    30279.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34600,
+                    30965
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33718,
+                    31035
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26836,
+                    24638
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To The Wizard's Tower"
+    },
+    {
+        "pos":  [
+                    24102,
+                    22618
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Skywatch Archipelago"
+    },
+    {
+        "pos":  [
+                    24102,
+                    22068
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Amnytas"
+    },
+    {
+        "pos":  [
+                    23917,
+                    21201
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To The Wizard's Tower"
+    },
+    {
+        "pos":  [
+                    23641,
+                    22326
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Inner Nayos"
+    },
+    {
+        "pos":  [
+                    22288,
+                    23857
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To The Wizard's Tower"
+    },
+    {
+        "pos":  [
+                    7275,
+                    59711
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4325,
+                    62903
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33652,
+                    32412
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35123,
+                    35170
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35711,
+                    34684
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35674,
+                    35873
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36506,
+                    31632
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33568,
+                    32626
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36563,
+                    36173
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43249.7,
+                    30184.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46083.4,
+                    28865.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43787.4,
+                    28198.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42266.1,
+                    31002.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43068.8,
+                    30575.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45009.7,
+                    30536
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46112.9,
+                    30617.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43865.2,
+                    32400.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47113.2,
+                    28515.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48514.6,
+                    28575.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40056.8,
+                    36431.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41886.7,
+                    34042.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40848.2,
+                    33658.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54145.5,
+                    24425
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40778.3,
+                    33273.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42009.5,
+                    32625.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41982.2,
+                    30929.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38811.8,
+                    33358.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46299.3,
+                    29075.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48489.3,
+                    28751.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47114.1,
+                    28727.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46342.4,
+                    30491.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48645.5,
+                    30591.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50244.7,
+                    30012.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50305,
+                    29135.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53702.8,
+                    31375.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52394.9,
+                    32631.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53434.6,
+                    34218.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43002.9,
+                    37027
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51801.2,
+                    34444.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50572.6,
+                    34208.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52105.9,
+                    32966.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50562.4,
+                    32386.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50563.2,
+                    31510.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50531.9,
+                    29990.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51865.1,
+                    29789.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54408.2,
+                    27969.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.5,
+                    27774.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50552.2,
+                    29133.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51940,
+                    29567.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56472.9,
+                    26087
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54096.5,
+                    24632.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55828.6,
+                    27543.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53813,
+                    27586
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55880.2,
+                    27839.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56114.4,
+                    28349.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54807.7,
+                    28183.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54923.9,
+                    30878.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59822.7,
+                    27139.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56770.4,
+                    26129
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61863.1,
+                    28835.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60959.2,
+                    29867.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60009.2,
+                    27147.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63691.1,
+                    32555.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62252.9,
+                    32521
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62044,
+                    31272.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62087.6,
+                    28999.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53381.9,
+                    34508.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51954.1,
+                    34536.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52299.5,
+                    37469.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50659.3,
+                    38002.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52353.3,
+                    37692.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50643.4,
+                    39712.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50123.7,
+                    35612
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48298.2,
+                    35585.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49749.2,
+                    38598.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50400.6,
+                    38181
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49746.6,
+                    38939
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50446.4,
+                    39922.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47352.9,
+                    40919.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47116.6,
+                    40989.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44694.9,
+                    41506.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44505.1,
+                    41738.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44013.7,
+                    27984.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44661.5,
+                    26849.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38628.7,
+                    31669.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36934.5,
+                    31878.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54187.7,
+                    30777.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53856.8,
+                    30971.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50210.2,
+                    31412
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48892.7,
+                    30772.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49586.4,
+                    32138.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42217.2,
+                    32572.6
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42694.9,
+                    36287.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43824.9,
+                    32453.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42211.1,
+                    33918.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63694.3,
+                    32825.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62209.1,
+                    32742.9
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49530.2,
+                    32181.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50303.6,
+                    32338.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49468.7,
+                    32875.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50023.2,
+                    35167
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48313.1,
+                    35084.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50366.7,
+                    34054
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46148.7,
+                    26455
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46153.1,
+                    26455.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44991.3,
+                    26973.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46639.9,
+                    36717.4
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57805.8,
+                    30611.2
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57068.9,
+                    30073.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59606.3,
+                    29884.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56856.5,
+                    29846.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56458,
+                    28382.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61862.9,
+                    31227.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60988.1,
+                    30032.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59487.4,
+                    30052.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58040.5,
+                    30789.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    9687.8,
+                    58153.5
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    9507,
+                    59197
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61546,
+                    44484
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61010,
+                    44999
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60094,
+                    48026
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60094,
+                    48288
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60704,
+                    42476
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23884.1,
+                    100479.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25038.9,
+                    99776.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32927.6,
+                    102087.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33193.9,
+                    102085.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24044.8,
+                    22414.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24160.9,
+                    22414.1
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42998.5,
+                    22696.7
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60708,
+                    42184
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    }
+]

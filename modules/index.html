@@ -193,6 +193,18 @@
 			<button class="popup-btn" onclick="cancelMapSwitch()">No</button>
 		</div>
 
+		<!-- Message of the Day (MOTD) Popup -->
+		<div id="motd-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:1000000; align-items:center; justify-content:center; padding:20px;">
+			<div style="background: var(--bg-panel, rgba(15,12,10,0.98)); border: 2px solid var(--text-primary, #e2c07d); max-width: 500px; width: 100%; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.9); display:flex; flex-direction:column; position:relative; text-align: center; border-radius: 4px;">
+				<div style="font-size: 20px; font-weight: bold; color: var(--text-primary, #e2c07d); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; font-family: 'Crimson Text', serif; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px;" id="motd-title">Message of the Day</div>
+				<div style="font-size: 14px; color: var(--text-muted, #dcb36b); line-height: 1.6; margin-bottom: 25px; max-height: 250px; overflow-y: auto; text-align: left; padding-right: 5px; white-space: pre-wrap; font-family: 'Crimson Text', serif;" id="motd-message">Loading message...</div>
+				<div style="display: flex; justify-content: center; gap: 15px;">
+					<button class="popup-btn" style="margin:0;" onclick="closeMotd(true)">Don't Show Again</button>
+					<button class="popup-btn" style="margin:0;" onclick="closeMotd(false)">Close</button>
+				</div>
+			</div>
+		</div>
+
 		<div id="right-overlay-container">
 			<div id="achievement-tracker">
 				<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:5px;">
@@ -220,7 +232,7 @@
 
 			<div id="clears-watchlist" style="background: rgba(10, 8, 5, 0.95); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.8); flex-shrink: 0;">
 				<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #4a3b2a; padding-bottom:5px; margin-bottom:5px;">
-					<span style="font-size:11px; font-weight:bold; letter-spacing:1px;">CLEARS WATCHLIST</span>
+					<span style="font-size:11px; font-weight:bold; letter-spacing:1px;">WEEKLY CLEARS</span>
 					<span style="cursor:pointer; color:#8a7a5f; font-size:14px;" onclick="closeClearsWatchlist()">&#10006;</span>
 				</div>
 				<div id="clears-wvl-content" style="display: flex; flex-direction: column; gap: 5px;"></div>
@@ -306,7 +318,10 @@
                     setTimeout(() => {
                         if (splash) {
                             splash.style.opacity = '0';
-                            setTimeout(() => splash.style.display = 'none', 800);
+                            setTimeout(() => {
+                                splash.style.display = 'none';
+                                checkMotd();
+                            }, 800);
                         }
                     }, 500);
                 }
@@ -461,13 +476,74 @@
                 watched.forEach(id => {
                     const item = clearsStatus[id] || { name: id.replace(/_/g, ' '), isDone: false, cat: 'UNKNOWN' };
                     const color = item.isDone ? "#1A9306" : "#ff4a4a";
-                    const statusText = item.isDone ? "CLEARED" : "UNCLEARED";
+                    let statusText = item.isDone ? "CLEARED" : "UNCLEARED";
+                    if (item.progress !== undefined && item.max !== undefined) {
+                        statusText = item.isDone ? "CLEARED" : `${item.progress}/${item.max}`;
+                    }
                     html += `<div class="track-item" style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(74, 59, 42, 0.3); padding: 4px 0;">
                         <div class="track-title" style="margin-bottom:0; max-width: 180px; font-size:11px;">${item.name.toUpperCase()}</div>
                         <div style="font-size:11px; color:${color}; font-weight:bold;">${statusText}</div>
                     </div>`;
                 });
                 content.innerHTML = html;
+            };
+
+            window.syncClearsWatchlistBackground = async function() {
+                const activeKey = localStorage.getItem('gw2_active_key');
+                const isVisible = localStorage.getItem('gw2_clears_watchlist_visible') === 'true';
+                const watched = JSON.parse(localStorage.getItem('gw2_watched_clears') || '[]');
+                if (!activeKey || !isVisible || watched.length === 0) return;
+
+                try {
+                    const [accRaids, accStrikes, accDungeons, accAchievements] = await Promise.all([
+                        fetch(`https://api.guildwars2.com/v2/account/raids?access_token=${activeKey}`).then(r => r.ok ? r.json() : null),
+                        fetch(`https://api.guildwars2.com/v2/account/strikes?access_token=${activeKey}`).then(r => r.ok ? r.json() : null),
+                        fetch(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`).then(r => r.ok ? r.json() : null),
+                        fetch(`https://api.guildwars2.com/v2/account/achievements?access_token=${activeKey}`).then(r => r.ok ? r.json() : null)
+                    ]);
+
+                    const clearsStatus = JSON.parse(localStorage.getItem('gw2_clears_status') || '{}');
+                    let updated = false;
+
+                    watched.forEach(id => {
+                        if (clearsStatus[id]) {
+                            const isNumeric = /^\d+$/.test(id);
+                            if (isNumeric) {
+                                if (accAchievements) {
+                                    const achId = parseInt(id);
+                                    const playerProg = accAchievements.find(a => a.id === achId);
+                                    const isDone = playerProg ? playerProg.done : false;
+                                    const progress = playerProg ? playerProg.current : 0;
+                                    const max = playerProg ? playerProg.max : 5;
+                                    if (clearsStatus[id].isDone !== isDone || clearsStatus[id].progress !== progress || clearsStatus[id].max !== max) {
+                                        clearsStatus[id].isDone = isDone;
+                                        clearsStatus[id].progress = progress;
+                                        clearsStatus[id].max = max;
+                                        updated = true;
+                                    }
+                                }
+                            } else {
+                                let isDone = false;
+                                if (accRaids && accRaids.includes(id)) isDone = true;
+                                else if (accStrikes && accStrikes.includes(id)) isDone = true;
+                                else if (accDungeons && accDungeons.includes(id)) isDone = true;
+
+                                if (clearsStatus[id].isDone !== isDone) {
+                                    clearsStatus[id].isDone = isDone;
+                                    updated = true;
+                                }
+                            }
+                        }
+                    });
+
+                    if (updated) {
+                        localStorage.setItem('gw2_clears_status', JSON.stringify(clearsStatus));
+                        window.pollClearsWatchlist();
+                        window.postToFrames({ action: 'clearsWatchlistClosed' });
+                    }
+                } catch (e) {
+                    console.error("Background clears watchlist sync failed", e);
+                }
             };
 
 			window.showMapSwitchPopup = function(targetMap) {
@@ -923,12 +999,53 @@
                 } catch (e) { console.error("Sync failed", e); }
             }
 
+            async function checkMotd() {
+                try {
+                    const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
+                    const apiBase = isDevMode 
+                        ? "https://gw2ps.local/Data/" 
+                        : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+
+                    const res = await fetch(apiBase + 'motd.json', { cache: "no-store" });
+                    if (!res.ok) return;
+                    
+                    const data = await res.json();
+                    if (!data || data.active === false || !data.motds) return;
+                    
+                    const activeMotd = data.motds.find(m => m.active === true);
+                    if (!activeMotd || !activeMotd.id || !activeMotd.message) return;
+                    
+                    const isSeen = localStorage.getItem('gw2_seen_motd_' + activeMotd.id) === 'true';
+                    if (isSeen) return;
+                    
+                    document.getElementById('motd-title').innerText = activeMotd.title || "MESSAGE OF THE DAY";
+                    document.getElementById('motd-message').innerHTML = activeMotd.message;
+                    
+                    window.currentActiveMotdId = activeMotd.id;
+                    
+                    const popup = document.getElementById('motd-popup');
+                    if (popup) popup.style.display = 'flex';
+                } catch(e) {
+                    console.log("MOTD check skipped or failed:", e);
+                }
+            }
+
+            window.closeMotd = function(dontShowAgain) {
+                if (dontShowAgain && window.currentActiveMotdId) {
+                    localStorage.setItem('gw2_seen_motd_' + window.currentActiveMotdId, 'true');
+                }
+                const popup = document.getElementById('motd-popup');
+                if (popup) popup.style.display = 'none';
+            };
+
 			if (isTrackerVisible) window.toggleTrackerOverlay(true);
 			setInterval(pollTrackerProgress, 30000);
 			setInterval(checkDeliveries, 60000);
             setInterval(() => syncAccountData(), 300000); // Sync every 5 minutes
+            setInterval(window.syncClearsWatchlistBackground, 60000); // Sync clears watchlist every minute
 			setTimeout(checkDeliveries, 1500);
             setTimeout(() => syncAccountData(), 2000); // Initial sync after load
+            setTimeout(() => window.syncClearsWatchlistBackground(), 3500); // Initial clears watchlist sync
 			document.addEventListener('contextmenu', e => e.preventDefault());
 			/*]]>*/
 		</script>

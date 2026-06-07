@@ -1775,7 +1775,106 @@
                 navigator.clipboard.writeText("[&" + btoa(String.fromCharCode.apply(null, bytes)) + "]").then(() => this.showToast("Build code copied!"));
             },
 
-            shareBuild() { navigator.clipboard.writeText("[&" + btoa(unescape(encodeURIComponent(JSON.stringify(this.state)))) + "]").then(() => this.showToast("Share code copied!")); },
+            compressState(state) {
+                const compact = { n: state.name, p: state.profession };
+                const eq = {};
+                const slotMap = {
+                    Helm: 'H', Shoulders: 'S', Coat: 'C', Gloves: 'G', Leggings: 'L', Boots: 'B',
+                    Backpack: 'Bp', Accessory1: 'A1', Accessory2: 'A2', Relic: 'Re', Amulet: 'Am',
+                    Ring1: 'R1', Ring2: 'R2', JadeBot: 'Jb', HelmAquatic: 'Ha',
+                    WeaponA1: 'WA1', WeaponA2: 'WA2', WeaponB1: 'WB1', WeaponB2: 'WB2',
+                    WeaponAquaticA: 'WQa', WeaponAquaticB: 'WQb'
+                };
+                for (const [slot, data] of Object.entries(state.equipment || {})) {
+                    if (!data) continue;
+                    const sData = {};
+                    if (data.id !== null && data.id !== undefined) sData.i = data.id;
+                    if (data.stat) sData.s = data.stat;
+                    if (data.rune !== null && data.rune !== undefined) sData.r = data.rune;
+                    if (data.rune2 !== null && data.rune2 !== undefined) sData.r2 = data.rune2;
+                    if (data.infusion1) sData.f1 = data.infusion1;
+                    if (data.infusion2) sData.f2 = data.infusion2;
+                    if (data.infusion3) sData.f3 = data.infusion3;
+                    if (data.vit) sData.v = data.vit;
+                    if (Object.keys(sData).length > 0) eq[slotMap[slot] || slot] = sData;
+                }
+                if (Object.keys(eq).length > 0) compact.e = eq;
+                if (state.traits) {
+                    compact.t = state.traits.map(t => {
+                        if (!t.spec && (t.traits || []).every(x => x === null)) return null;
+                        return [t.spec, ...(t.traits || [null, null, null])];
+                    });
+                    while (compact.t.length > 0 && compact.t[compact.t.length - 1] === null) compact.t.pop();
+                }
+                if (state.skills) {
+                    const sk = {};
+                    const skMap = { Heal: 'h', Utility1: 'u1', Utility2: 'u2', Utility3: 'u3', Elite: 'e' };
+                    ['land', 'water'].forEach(env => {
+                        if (state.skills[env]) {
+                            const eData = {};
+                            ['Heal', 'Utility1', 'Utility2', 'Utility3', 'Elite'].forEach(k => {
+                                const val = state.skills[env][k];
+                                if (val !== null && val !== undefined) eData[skMap[k] || k] = val;
+                            });
+                            if (Object.keys(eData).length > 0) sk[env[0]] = eData;
+                        }
+                    });
+                    if (Object.keys(sk).length > 0) compact.s = sk;
+                }
+                return compact;
+            },
+
+            decompressState(compact) {
+                if (compact.profession) return compact;
+                const state = {
+                    name: compact.n || "New Build", profession: compact.p, equipment: {},
+                    traits: [{ spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }],
+                    skills: { land: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null }, water: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null } }
+                };
+                const slots = ['Helm', 'Shoulders', 'Coat', 'Gloves', 'Leggings', 'Boots', 'Backpack', 'Accessory1', 'Accessory2', 'Relic', 'Amulet', 'Ring1', 'Ring2', 'JadeBot', 'HelmAquatic', 'WeaponA1', 'WeaponA2', 'WeaponB1', 'WeaponB2', 'WeaponAquaticA', 'WeaponAquaticB'];
+                slots.forEach(slot => {
+                    if (slot === 'JadeBot') state.equipment.JadeBot = { id: null, vit: 0 };
+                    else state.equipment[slot] = { id: null, stat: null, rune: null, rune2: null, infusion1: null, infusion2: null, infusion3: null };
+                });
+                const revMap = { H: 'Helm', S: 'Shoulders', C: 'Coat', G: 'Gloves', L: 'Leggings', B: 'Boots', Bp: 'Backpack', A1: 'Accessory1', A2: 'Accessory2', Re: 'Relic', Am: 'Amulet', R1: 'Ring1', R2: 'Ring2', Jb: 'JadeBot', Ha: 'HelmAquatic', WA1: 'WeaponA1', WA2: 'WeaponA2', WB1: 'WeaponB1', WB2: 'WeaponB2', WQa: 'WeaponAquaticA', WQb: 'WeaponAquaticB' };
+                if (compact.e) {
+                    for (const [sSlot, data] of Object.entries(compact.e)) {
+                        const slot = revMap[sSlot] || sSlot;
+                        if (!state.equipment[slot]) continue;
+                        if (slot === 'JadeBot') {
+                            state.equipment.JadeBot = { id: data.i !== undefined ? data.i : null, vit: data.v !== undefined ? data.v : 0 };
+                        } else {
+                            state.equipment[slot] = {
+                                id: data.i !== undefined ? data.i : null, stat: data.s || null, rune: data.r !== undefined ? data.r : null, rune2: data.r2 !== undefined ? data.r2 : null,
+                                infusion1: data.f1 || null, infusion2: data.f2 || null, infusion3: data.f3 || null
+                            };
+                        }
+                    }
+                }
+                if (compact.t && Array.isArray(compact.t)) {
+                    for (let i = 0; i < 3; i++) {
+                        const tD = compact.t[i];
+                        if (tD && Array.isArray(tD)) {
+                            state.traits[i] = { spec: tD[0] !== undefined ? tD[0] : null, traits: [tD[1] !== undefined ? tD[1] : null, tD[2] !== undefined ? tD[2] : null, tD[3] !== undefined ? tD[3] : null] };
+                        }
+                    }
+                }
+                if (compact.s) {
+                    const skMap = { Heal: 'h', Utility1: 'u1', Utility2: 'u2', Utility3: 'u3', Elite: 'e' };
+                    ['land', 'water'].forEach(env => {
+                        const eData = compact.s[env[0]];
+                        if (eData) {
+                            ['Heal', 'Utility1', 'Utility2', 'Utility3', 'Elite'].forEach(k => {
+                                const skey = skMap[k];
+                                if (eData[skey] !== undefined) state.skills[env][k] = eData[skey];
+                            });
+                        }
+                    });
+                }
+                return state;
+            },
+
+            shareBuild() { navigator.clipboard.writeText("[&" + btoa(unescape(encodeURIComponent(JSON.stringify(this.compressState(this.state))))) + "]").then(() => this.showToast("Share code copied!")); },
 
             importCode(code) {
                 if (!code.startsWith('[&') || !code.endsWith(']')) return this.showToast("Invalid code format.");
@@ -1793,7 +1892,7 @@
                         for (let i = 0; i < 5; i++) ps.push(read(8 + i * 2).then(id => this.state.skills.land[ks[i]] = id), read(18 + i * 2).then(id => this.state.skills.water[ks[i]] = id));
                         Promise.all(ps).then(() => { this.loadSavedSkills().then(() => { this.renderSkills(); this.saveLastState(); }); });
                     });
-                } else { try { const imp = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = imp; document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
+                } else { try { const parsed = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = this.decompressState(parsed); document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
             }
         };
         window.PLANNER.init();

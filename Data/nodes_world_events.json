@@ -12259,6 +12259,21 @@
         "node":  "Repel invading Branded, and kill them near the charging crystals to fill the resonance crystal",
         "layer":  "node_event_gathering"
     },
+	{
+        "pos":  [
+                    54300.0,
+                    30570.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/3/3f/Dragon_Bash.png",
+        "map_id":  0,
+        "map_name":  "Hoelbrak",
+        "expac":  "core",
+        "category":  "open_world_event",
+        "desc":  "Dragon Bash Event",
+        "event":  "The moa race begins soon. Place your bets with Tigg now",
+        "node":  "The moa race begins soon. Place your bets with Tigg now",
+        "layer":  "node_event_gathering"
+    },
     {
         "pos":  [
                     51656.0,
@@ -13779,6 +13794,111 @@
         "event":  "Work together to destroy all targets while mounted on your warclaw",
         "node":  "Work together to destroy all targets while mounted on your warclaw",
         "layer":  "node_event_standard"
+    },
+	{
+        "pos":  [
+                    36777.0,
+                    15288.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6a/Event_shield_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "The Western Landing Thumper is an object that needs to be built from the Western Landing Thumper Construction Site.",
+        "event":  "Western Landing Thumper",
+        "node":  "Western Landing Thumper",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    37192.0,
+                    15088.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6a/Event_shield_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "The Maw of Balrior Thumper is an object that needs to be built from the Maw of Balrior Thumper Construction Site.",
+        "event":  "Maw of Balrior Thumper",
+        "node":  "Maw of Balrior Thumper",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    37328.0,
+                    14761.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6a/Event_shield_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "The Northern Landing Thumper is an object that needs to be built from the Northern Landing Thumper Construction Site.",
+        "event":  "Northern Landing Thumper",
+        "node":  "Northern Landing Thumper",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    37611.0,
+                    15193.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6a/Event_shield_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "The Balrior Cavern Thumper is an object that needs to be built from the Balrior Cavern Thumper Construction Site..",
+        "event":  "Balrior Cavern Thumper",
+        "node":  "Balrior Cavern Thumper",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    37499.0,
+                    15745.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6a/Event_shield_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "The Southern Landing Thumper is an object that needs to be built from the Balrior Cavern Thumper Construction Site.",
+        "event":  "Southern Landing Thumper",
+        "node":  "Southern Landing Thumper",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    37175.0,
+                    15535.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/2/26/Event_flag_green_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "Gather essence from calibration thumpers and return it to base camp to increase synchronization.",
+        "event":  "Defend base camp",
+        "node":  "Defend base camp",
+        "layer":  "node_event_group"
+    },
+	{
+        "pos":  [
+                    36893.0,
+                    16054.0
+                ],
+        "icon":  "https://wiki.guildwars2.com/images/2/20/Event_star_red_%28map_icon%29.png",
+        "map_id":  0,
+        "map_name":  "Mount Balrior",
+        "expac":  "jw",
+        "category":  "convergence_event",
+        "desc":  "Speak with Distant Memory to begin.",
+        "event":  "Convergence: Mount Balrior",
+        "node":  "Convergence: Mount Balrior",
+        "layer":  "node_event_group"
     },
     {
         "pos":  [

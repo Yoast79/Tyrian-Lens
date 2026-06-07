@@ -610,7 +610,15 @@
             function confirmDelete() { if (investToDelete) { investments = investments.filter(i => i.uuid !== investToDelete); localStorage.setItem('tp_investments', JSON.stringify(investments)); pollInvestments(); } cancelDelete(); }
             function cancelDelete() { investToDelete = null; document.getElementById('delete-confirm-modal').style.display = 'none'; }
 			async function calcGold() { let val = document.getElementById('ex-gold').value, data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=" + ((val||0)*10000)); document.getElementById('res-gem').innerHTML = data ? data.quantity.toLocaleString() : 'ERR'; }
-			async function calcGem() { let val = document.getElementById('ex-gem').value, data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=" + (val||0)); document.getElementById('res-gold').innerHTML = data ? formatCoin(data.quantity) : 'ERR'; }
+			async function calcGem() {
+				let val = parseInt(document.getElementById('ex-gem').value) || 0;
+				if (val <= 0) {
+					document.getElementById('res-gold').innerHTML = '---';
+					return;
+				}
+				let data = await fetchJSON("https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=1000000");
+				document.getElementById('res-gold').innerHTML = data ? formatCoin(val * data.coins_per_gem) : 'ERR';
+			}
 
 			async function calcSmartCrafting(type) {
 				const resultsDiv = document.getElementById(`crafting-${type}-results`);

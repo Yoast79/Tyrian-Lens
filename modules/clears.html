@@ -43,6 +43,14 @@
 			.status-done { color: #1A9306; }
 			.status-uncleared { color: #ff4a4a; }
 
+			/* Compact Toggles */
+			.fancy-toggle { position: relative; display: inline-block; width: 28px; height: 14px; vertical-align: middle; }
+			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
+			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); transition: .3s; border-radius: 20px; }
+			.slider:before { position: absolute; content: ""; height: 10px; width: 10px; left: 2px; bottom: 1px; background-color: var(--border-color, #4a3b2a); transition: .3s; border-radius: 50%; }
+			input:checked + .slider { background-color: var(--text-primary, #e2c07d); border-color: var(--text-primary, #e2c07d); }
+			input:checked + .slider:before { transform: translateX(13px); background-color: #000; }
+
 			/* Large UI Scaling Overrides */
 			body.ui-large .section-title { font-size: 20px; }
 			body.ui-large .cat-title { font-size: 14px; }
@@ -52,15 +60,35 @@
 			body.ui-large .progress-text { font-size: 13px; }
 			body.ui-large .progress-done { font-size: 16px; }
 			body.ui-large .star-btn { width: 20px; height: 20px; }
+			body.ui-large .fancy-toggle { width: 34px; height: 18px; }
+			body.ui-large .slider:before { height: 14px; width: 14px; left: 2px; bottom: 1px; }
+			body.ui-large input:checked + .slider:before { transform: translateX(16px); }
 		</style>
 	</head>
 	<body>
 		<div id="ui-root" style="display:none; height:100%; flex-direction: column;">
 			<div class="header-row">
 				<div class="section-title">Weekly Clears</div>
-				<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='var(--text-primary, #e2c07d)';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-muted, #8a7a5f)';" onclick="init()">Refresh</button>
+				<div style="display: flex; align-items: center; gap: 15px;">
+					<div style="display: flex; align-items: center; gap: 8px;">
+						<span style="font-size: 10px; font-weight: bold; color: var(--text-muted, #8a7a5f); letter-spacing: 1px;">Watchlist on Screen</span>
+						<label class="fancy-toggle">
+							<input type="checkbox" id="clears-watchlist-toggle" onchange="toggleWatchlistOnScreen(this.checked)" />
+							<span class="slider"></span>
+						</label>
+					</div>
+					<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='#fff';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-primary, #e2c07d)';" onclick="showWatchlistModal()">Watchlist</button>
+				</div>
 			</div>
 			<div id="clears-container" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
+		</div>
+
+		<div id="watchlist-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10,8,5,0.95); z-index:1000; padding:15px; flex-direction:column; border:1px solid var(--border-color, #4a3b2a);">
+			<div class="header-row">
+				<div class="section-title">Watchlist Overview</div>
+				<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='var(--text-primary, #e2c07d)';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-muted, #8a7a5f)';" onclick="closeWatchlistModal()">Close</button>
+			</div>
+			<div id="watchlist-modal-content" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
 		</div>
 
 		<div id="loader" class="loading">
@@ -99,11 +127,81 @@
                 window.parent.postMessage({ action: 'refreshClearsWatchlist' }, '*');
             };
 
+            window.showWatchlistModal = function() {
+                const modal = document.getElementById('watchlist-modal');
+                if (!modal) return;
+                
+                window.refreshWatchlistModal();
+                modal.style.display = 'flex';
+            };
+
+            window.refreshWatchlistModal = function() {
+                const content = document.getElementById('watchlist-modal-content');
+                if (!content) return;
+                
+                const watched = JSON.parse(localStorage.getItem('gw2_watched_clears') || '[]');
+                const clearsStatus = JSON.parse(localStorage.getItem('gw2_clears_status') || '{}');
+                
+                if (watched.length === 0) {
+                    content.innerHTML = '<div style="font-size:11px; color:var(--text-muted, #8a7a5f); padding: 30px; text-align:center; letter-spacing: 1px;">No items on your watchlist.<br><br>Click the X-Ray icons next to items to watch them.</div>';
+                } else {
+                    let html = '';
+                    watched.forEach(id => {
+                        const status = clearsStatus[id];
+                        if (status) {
+                            let statusText = status.isDone ? 'CLEARED' : 'UNCLEARED';
+                            if (status.progress !== undefined && status.max !== undefined) {
+                                statusText = status.isDone ? 'CLEARED' : `${status.progress}/${status.max}`;
+                            }
+                            html += `
+                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${status.name}' }, '*')">
+                                <div class="clear-item-left">
+                                    <span class="star-btn active" onclick="toggleWatch(event, '${id}', '${status.name}', '${status.cat}'); setTimeout(refreshWatchlistModal, 50);"></span>
+                                    <span class="clear-name">${status.name} (${status.cat})</span>
+                                </div>
+                                <span class="clear-status ${status.isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                            </div>`;
+                        }
+                    });
+                    content.innerHTML = html;
+                }
+            };
+            
+            window.closeWatchlistModal = function() {
+                const modal = document.getElementById('watchlist-modal');
+                if (modal) modal.style.display = 'none';
+                init(true); // refresh main view to update stars and watchlist state
+            };
+
+            window.toggleWatchlistOnScreen = function(checked) {
+                localStorage.setItem('gw2_clears_watchlist_visible', checked ? 'true' : 'false');
+                window.parent.postMessage({ action: 'refreshClearsWatchlist' }, '*');
+            };
+
+            window.toggleCat = function(header, key) {
+                const content = header.nextElementSibling;
+                const isClosed = content.style.display === 'none';
+                content.style.display = isClosed ? 'flex' : 'none';
+                
+                const saved = JSON.parse(localStorage.getItem('gw2_clears_menu_states') || '{}');
+                saved[key] = isClosed; // true if open, false if closed
+                localStorage.setItem('gw2_clears_menu_states', JSON.stringify(saved));
+            };
+
             async function init(isAutoRefresh = false) {
                 const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
                 if (settings.uiScaleLarge) document.body.classList.add('ui-large');
                 
+                const isWatchlistVisible = localStorage.getItem('gw2_clears_watchlist_visible') === 'true';
+                const toggleBtn = document.getElementById('clears-watchlist-toggle');
+                if (toggleBtn) {
+                    toggleBtn.checked = isWatchlistVisible;
+                }
+
                 if (!activeKey) return;
+
+                // Load menu states from localStorage
+                const menuStates = JSON.parse(localStorage.getItem('gw2_clears_menu_states') || '{}');
 
                 if (!isAutoRefresh) {
                     document.getElementById('loader').style.display = 'flex';
@@ -154,13 +252,16 @@
 
                             let progressHtml = wingCleared === wingTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${wingCleared}/${wingTotal}</span>`;
 
+                            const subTitle = `Wing ${wingNum}: ${formatName(w.id)}`;
+                            const isSubOpen = menuStates['sub_' + subTitle.trim()] === true; // default to closed (false)
+
                             raidsHtml += `
                             <div class="sub-cat">
-                                <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
-                                    <span class="sub-title">Wing ${wingNum}: ${formatName(w.id)}</span>
+                                <div class="sub-header" onclick="toggleCat(this, 'sub_${subTitle.replace(/'/g, "\\'")}')">
+                                    <span class="sub-title">${subTitle}</span>
                                     ${progressHtml}
                                 </div>
-                                <div class="cat-content" style="display:none; padding:0; gap:0;">
+                                <div class="cat-content" style="${isSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                                     ${eventsHtml}
                                 </div>
                             </div>`;
@@ -169,10 +270,11 @@
                     });
                 }
                 
+                const isRaidsOpen = menuStates['cat_RAIDS'] !== false; // default to open (true)
                 let combinedHtml = `
                 <div class="clear-cat">
-                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">RAIDS</span></div>
-                    <div class="cat-content" style="padding:10px;">${raidsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load raids.</div>'}</div>
+                    <div class="cat-header" onclick="toggleCat(this, 'cat_RAIDS')"><span class="cat-title">RAIDS</span></div>
+                    <div class="cat-content" style="padding:10px;${isRaidsOpen ? '' : ' display:none;'}">${raidsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load raids.</div>'}</div>
                 </div>`;
 
                 // STRIKES
@@ -208,22 +310,24 @@
 
                     let progressHtml = catCleared === catTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${catCleared}/${catTotal}</span>`;
 
+                    const isSubOpen = menuStates['sub_' + catName.trim()] === true; // default to closed (false)
                     strikesHtml += `
                     <div class="sub-cat">
-                        <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
+                        <div class="sub-header" onclick="toggleCat(this, 'sub_${catName.replace(/'/g, "\\'")}')">
                             <span class="sub-title">${catName}</span>
                             ${progressHtml}
                         </div>
-                        <div class="cat-content" style="display:none; padding:0; gap:0;">
+                        <div class="cat-content" style="${isSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                             ${sHtml}
                         </div>
                     </div>`;
                 }
 
+                const isStrikesOpen = menuStates['cat_STRIKES'] !== false; // default to open (true)
                 combinedHtml += `
                 <div class="clear-cat">
-                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">STRIKE MISSIONS</span></div>
-                    <div class="cat-content" style="padding:10px;">${strikesHtml}</div>
+                    <div class="cat-header" onclick="toggleCat(this, 'cat_STRIKES')"><span class="cat-title">STRIKE MISSIONS</span></div>
+                    <div class="cat-content" style="padding:10px;${isStrikesOpen ? '' : ' display:none;'}">${strikesHtml}</div>
                 </div>`;
 
                 // DUNGEONS
@@ -262,23 +366,26 @@
 
                         let progressHtml = dCleared === dTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${dCleared}/${dTotal}</span>`;
 
+                        const subTitle = formatName(d.id);
+                        const isSubOpen = menuStates['sub_' + subTitle.trim()] === true; // default to closed (false)
                         dungeonsHtml += `
                         <div class="sub-cat">
-                            <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
-                                <span class="sub-title">${formatName(d.id)}</span>
+                            <div class="sub-header" onclick="toggleCat(this, 'sub_${subTitle.replace(/'/g, "\\'")}')">
+                                <span class="sub-title">${subTitle}</span>
                                 ${progressHtml}
                             </div>
-                            <div class="cat-content" style="display:none; padding:0; gap:0;">
+                            <div class="cat-content" style="${isSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                                 ${pHtml}
                             </div>
                         </div>`;
                     });
                 }
 
+                const isDungeonsOpen = menuStates['cat_DUNGEONS'] !== false; // default to open (true)
                 combinedHtml += `
                 <div class="clear-cat">
-                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">DUNGEONS</span></div>
-                    <div class="cat-content" style="padding:10px;">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
+                    <div class="cat-header" onclick="toggleCat(this, 'cat_DUNGEONS')"><span class="cat-title">DUNGEONS</span></div>
+                    <div class="cat-content" style="padding:10px;${isDungeonsOpen ? '' : ' display:none;'}">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
                 </div>`;
 
                 // WEEKLY RIFTS
@@ -321,6 +428,27 @@
                 const activeRotating = RIFT_ROTATION[wIdx] || [];
                 const sotoActiveMaps = [...RIFT_SOTO_PERM, ...activeRotating];
                 
+                // Clean up weekly shifting entries from watchlist when the week flips
+                const activeRiftIds = new Set([
+                    ...RIFT_SOTO_PERM.map(m => String(m.id)),
+                    ...activeRotating.map(m => String(m.id)),
+                    ...RIFT_JW_PERM.map(m => String(m.id))
+                ]);
+                let watchedCleaned = false;
+                watched = watched.filter(id => {
+                    const idStr = String(id);
+                    if (/^\d+$/.test(idStr)) {
+                        if (!activeRiftIds.has(idStr)) {
+                            watchedCleaned = true;
+                            return false;
+                        }
+                    }
+                    return true;
+                });
+                if (watchedCleaned) {
+                    localStorage.setItem('gw2_watched_clears', JSON.stringify(watched));
+                }
+                
                 // Group 1: Secrets of the Obscure & Core
                 let sotoCleared = 0;
                 let sotoTotal = sotoActiveMaps.length;
@@ -333,11 +461,11 @@
                     
                     const progressCount = playerProg ? playerProg.current : 0;
                     const maxCount = playerProg ? playerProg.max : 5;
-                    const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
                     
                     const riftName = m.name + " Rift";
-                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS' };
-                    const isWatched = watched.includes(m.id);
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
 
                     sotoHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
@@ -351,13 +479,15 @@
 
                 let sotoProgressHtml = sotoCleared === sotoTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${sotoCleared}/${sotoTotal}</span>`;
 
+                const sotoSubTitle = `Secrets of the Obscure & Core (Week ${wIdx})`;
+                const isSotoSubOpen = menuStates['sub_' + sotoSubTitle.trim()] === true; // default to closed (false)
                 riftsHtml += `
                 <div class="sub-cat">
-                    <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
-                        <span class="sub-title">Secrets of the Obscure & Core (Week ${wIdx})</span>
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${sotoSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${sotoSubTitle}</span>
                         ${sotoProgressHtml}
                     </div>
-                    <div class="cat-content" style="display:none; padding:0; gap:0;">
+                    <div class="cat-content" style="${isSotoSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                         ${sotoHtml}
                     </div>
                 </div>`;
@@ -374,11 +504,11 @@
                     
                     const progressCount = playerProg ? playerProg.current : 0;
                     const maxCount = playerProg ? playerProg.max : 5;
-                    const statusText = isDone ? 'CLEARED (5/5)' : `${progressCount}/${maxCount} UNCLEARED`;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
                     
                     const riftName = m.name + " Rift";
-                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS' };
-                    const isWatched = watched.includes(m.id);
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
 
                     jwHtml += `
                     <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
@@ -392,21 +522,24 @@
 
                 let jwProgressHtml = jwCleared === jwTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${jwCleared}/${jwTotal}</span>`;
 
+                const jwSubTitle = `Janthir Wilds`;
+                const isJwSubOpen = menuStates['sub_' + jwSubTitle.trim()] === true; // default to closed (false)
                 riftsHtml += `
                 <div class="sub-cat">
-                    <div class="sub-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';">
-                        <span class="sub-title">Janthir Wilds</span>
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${jwSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${jwSubTitle}</span>
                         ${jwProgressHtml}
                     </div>
-                    <div class="cat-content" style="display:none; padding:0; gap:0;">
+                    <div class="cat-content" style="${isJwSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                         ${jwHtml}
                     </div>
                 </div>`;
 
+                const isRiftsOpen = menuStates['cat_RIFTS'] !== false; // default to open (true)
                 combinedHtml += `
                 <div class="clear-cat">
-                    <div class="cat-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'flex' : 'none';"><span class="cat-title">WEEKLY RIFT HUNTING</span></div>
-                    <div class="cat-content" style="padding:10px;">${riftsHtml}</div>
+                    <div class="cat-header" onclick="toggleCat(this, 'cat_RIFTS')"><span class="cat-title">WEEKLY RIFT HUNTING</span></div>
+                    <div class="cat-content" style="padding:10px;${isRiftsOpen ? '' : ' display:none;'}">${riftsHtml}</div>
                 </div>`;
 
                 // Save dynamic API state into local storage to support the parent overlay
@@ -415,6 +548,12 @@
 
                 const container = document.getElementById('clears-container');
                 container.innerHTML = combinedHtml;
+
+                // Refresh watchlist modal if it's currently open
+                const modal = document.getElementById('watchlist-modal');
+                if (modal && modal.style.display === 'flex') {
+                    window.refreshWatchlistModal();
+                }
 
                 if (!isAutoRefresh) {
                     document.getElementById('loader').style.display = 'none';

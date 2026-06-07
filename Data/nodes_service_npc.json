@@ -20,7 +20,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -44,7 +44,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
 	{
@@ -56,7 +56,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -92,7 +92,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -116,7 +116,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -128,7 +128,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -140,7 +140,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -152,7 +152,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -164,7 +164,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -176,7 +176,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -284,7 +284,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -296,7 +296,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -332,7 +332,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -344,7 +344,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -356,7 +356,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -368,7 +368,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -380,7 +380,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -452,7 +452,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -560,7 +560,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -632,7 +632,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -644,7 +644,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -656,7 +656,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -896,7 +896,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -968,7 +968,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -980,7 +980,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -992,7 +992,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1028,7 +1028,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -1040,7 +1040,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1052,7 +1052,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1076,7 +1076,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -1100,7 +1100,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -1112,7 +1112,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -1124,7 +1124,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1136,7 +1136,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1172,7 +1172,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1196,7 +1196,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1280,7 +1280,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1508,7 +1508,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1688,7 +1688,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -1712,7 +1712,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1772,7 +1772,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -1796,7 +1796,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -2096,7 +2096,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -2132,7 +2132,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -2480,7 +2480,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -2492,7 +2492,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -2528,7 +2528,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -2540,7 +2540,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -2576,7 +2576,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -2588,7 +2588,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -2612,7 +2612,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -2672,7 +2672,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -2696,7 +2696,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -2708,7 +2708,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -2732,7 +2732,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -2780,7 +2780,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3032,7 +3032,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3104,7 +3104,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -3272,7 +3272,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3284,7 +3284,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -3332,7 +3332,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -3344,7 +3344,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3512,7 +3512,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -3548,7 +3548,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3596,7 +3596,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -3608,7 +3608,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -3680,7 +3680,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4064,7 +4064,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4076,7 +4076,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4088,7 +4088,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4112,7 +4112,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4232,7 +4232,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4376,7 +4376,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4388,7 +4388,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4592,7 +4592,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4616,7 +4616,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4724,7 +4724,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -4736,7 +4736,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -4976,7 +4976,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5120,7 +5120,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5144,7 +5144,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5312,7 +5312,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5348,7 +5348,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5396,7 +5396,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5540,7 +5540,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5552,7 +5552,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5564,7 +5564,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5576,7 +5576,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5588,7 +5588,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5600,7 +5600,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5624,7 +5624,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -5636,7 +5636,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5708,7 +5708,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5864,7 +5864,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -5924,7 +5924,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -6320,7 +6320,7 @@
         "yields":  [
                        "Vendor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "icon":  "https://wiki.guildwars2.com/images/9/92/Weaponsmith_%28map_icon%29.png",
         "layer":  "node_npc_merchant"
     },
     {
@@ -6464,7 +6464,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -6536,7 +6536,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -6740,7 +6740,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -6800,7 +6800,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -6848,7 +6848,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -6992,7 +6992,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -7004,7 +7004,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7028,7 +7028,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7184,7 +7184,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -7232,7 +7232,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7424,7 +7424,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7472,7 +7472,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -7520,7 +7520,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7544,7 +7544,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -7568,7 +7568,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -7592,7 +7592,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -7604,7 +7604,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7628,7 +7628,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -7664,7 +7664,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -7676,7 +7676,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -7688,7 +7688,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -7700,7 +7700,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -7712,7 +7712,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -7916,7 +7916,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8000,7 +8000,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8036,7 +8036,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8048,7 +8048,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8120,7 +8120,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8132,7 +8132,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8192,7 +8192,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8204,7 +8204,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8300,7 +8300,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8384,7 +8384,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8396,7 +8396,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8468,7 +8468,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8552,7 +8552,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8588,7 +8588,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8804,7 +8804,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -8816,7 +8816,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8948,7 +8948,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -8960,7 +8960,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -9032,7 +9032,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -9044,7 +9044,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9164,7 +9164,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9176,7 +9176,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -9200,7 +9200,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9224,7 +9224,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -9236,7 +9236,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9380,7 +9380,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -9392,7 +9392,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9452,7 +9452,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -9464,7 +9464,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10244,7 +10244,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10256,7 +10256,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10340,7 +10340,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10352,7 +10352,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10436,7 +10436,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10520,7 +10520,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10532,7 +10532,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10712,7 +10712,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10796,7 +10796,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10808,7 +10808,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -10856,7 +10856,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -10880,7 +10880,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -10892,7 +10892,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -11108,7 +11108,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -11120,7 +11120,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -11132,7 +11132,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -11156,7 +11156,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -11204,7 +11204,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -11384,7 +11384,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -11420,7 +11420,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -11528,7 +11528,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -11540,7 +11540,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -11588,7 +11588,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -11612,7 +11612,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -11624,7 +11624,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -11648,7 +11648,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -11732,7 +11732,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -11744,7 +11744,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -11864,7 +11864,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -11876,7 +11876,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -11888,7 +11888,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -11900,7 +11900,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -11912,7 +11912,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -11936,7 +11936,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -11960,7 +11960,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -11972,7 +11972,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -11984,7 +11984,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -11996,7 +11996,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -12056,7 +12056,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12068,7 +12068,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -12308,7 +12308,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12380,7 +12380,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12404,7 +12404,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12428,7 +12428,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -12824,7 +12824,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -12836,7 +12836,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12860,7 +12860,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -12884,7 +12884,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -12896,7 +12896,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -12908,7 +12908,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -12920,7 +12920,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -12932,7 +12932,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -12944,7 +12944,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -12956,7 +12956,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -13160,7 +13160,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -13172,7 +13172,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -13292,7 +13292,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -13328,7 +13328,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -13340,7 +13340,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -13460,7 +13460,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -13508,7 +13508,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -13592,7 +13592,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -13640,7 +13640,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -13916,7 +13916,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -13928,7 +13928,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14084,7 +14084,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14096,7 +14096,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -14204,7 +14204,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -14276,7 +14276,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14396,7 +14396,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -14408,7 +14408,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14516,7 +14516,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -14528,7 +14528,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -14540,7 +14540,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -14552,7 +14552,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -14564,7 +14564,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -14600,7 +14600,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -14612,7 +14612,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -14624,7 +14624,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14696,7 +14696,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -14816,7 +14816,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -15020,7 +15020,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -15044,7 +15044,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -15236,7 +15236,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -15272,7 +15272,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -15392,7 +15392,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -15440,7 +15440,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -15692,7 +15692,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -15704,7 +15704,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16040,7 +16040,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16088,7 +16088,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -16220,7 +16220,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16232,7 +16232,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -16268,7 +16268,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16364,7 +16364,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -16388,7 +16388,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16400,7 +16400,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16580,7 +16580,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -16712,7 +16712,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -16796,7 +16796,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -16820,7 +16820,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -16832,7 +16832,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -16868,7 +16868,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -16940,7 +16940,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -16952,7 +16952,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17240,7 +17240,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -17264,7 +17264,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17276,7 +17276,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17408,7 +17408,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -17420,7 +17420,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17480,7 +17480,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -17492,7 +17492,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -17504,7 +17504,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -17516,7 +17516,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -17528,7 +17528,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -17552,7 +17552,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -17564,7 +17564,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17576,7 +17576,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -17720,7 +17720,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -17732,7 +17732,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18032,7 +18032,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18056,7 +18056,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18068,7 +18068,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18080,7 +18080,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18152,7 +18152,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18176,7 +18176,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18260,7 +18260,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18284,7 +18284,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18428,7 +18428,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18452,7 +18452,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18692,7 +18692,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -18740,7 +18740,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18788,7 +18788,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -18812,7 +18812,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19004,7 +19004,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19028,7 +19028,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19208,7 +19208,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19244,7 +19244,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19364,7 +19364,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19400,7 +19400,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19448,7 +19448,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19460,7 +19460,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19496,7 +19496,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19508,7 +19508,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19880,7 +19880,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -19892,7 +19892,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -19928,7 +19928,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -20000,7 +20000,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20036,7 +20036,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -20072,7 +20072,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20084,7 +20084,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -20156,7 +20156,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20180,7 +20180,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -20492,7 +20492,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -20516,7 +20516,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20528,7 +20528,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20804,7 +20804,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -20864,7 +20864,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -21188,7 +21188,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -21260,7 +21260,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -21500,7 +21500,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -21548,7 +21548,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -21656,7 +21656,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -21740,7 +21740,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -21764,7 +21764,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -21788,7 +21788,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -22172,7 +22172,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -22208,7 +22208,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -22448,7 +22448,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -22460,7 +22460,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -22736,7 +22736,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -23480,7 +23480,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -24224,7 +24224,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -24320,7 +24320,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -24548,7 +24548,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -24572,7 +24572,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -24584,7 +24584,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -24596,7 +24596,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -24608,7 +24608,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -24620,7 +24620,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -24788,7 +24788,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -24800,7 +24800,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -24956,7 +24956,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -25424,7 +25424,7 @@
         "yields":  [
                        "Black Lion Chest Merchant"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "icon":  "https://wiki.guildwars2.com/images/a/a4/Black_Lion_Chest_Merchant.png",
         "layer":  "node_npc_merchant"
     },
 	{
@@ -25436,7 +25436,7 @@
         "yields":  [
                        "Black Lion Chest Merchant"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "icon":  "https://wiki.guildwars2.com/images/a/a4/Black_Lion_Chest_Merchant.png",
         "layer":  "node_npc_merchant"
     },
     {
@@ -25520,7 +25520,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -25556,7 +25556,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -25568,7 +25568,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -25580,7 +25580,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -25604,7 +25604,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -25616,7 +25616,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -25628,7 +25628,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -25640,7 +25640,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -25736,7 +25736,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -25748,7 +25748,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26108,7 +26108,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26120,7 +26120,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -26132,7 +26132,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -26144,7 +26144,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -26156,7 +26156,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26168,20 +26168,8 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
-    },
-    {
-        "pos":  [
-                    49577,
-                    29214
-                ],
-        "node":  "Camar Swiftsteel",
-        "yields":  [
-                       "Gathering Merchant"
-                   ],
-        "icon":  "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
-        "layer":  "node_npc_gathering_merchant"
     },
     {
         "pos":  [
@@ -26204,7 +26192,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -26216,7 +26204,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -26228,7 +26216,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -26240,7 +26228,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -26468,7 +26456,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -26480,7 +26468,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26492,7 +26480,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -26504,7 +26492,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26516,7 +26504,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -26528,7 +26516,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -26552,7 +26540,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -26564,7 +26552,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -26588,7 +26576,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -26600,7 +26588,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26612,7 +26600,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -26624,7 +26612,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -26636,7 +26624,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -26648,7 +26636,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26660,7 +26648,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -26672,7 +26660,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26696,7 +26684,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26720,7 +26708,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -26744,7 +26732,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26852,7 +26840,7 @@
         "yields":  [
                        "Artificer"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/e/ee/Master_Artificer.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
         "layer":  "node_npc_artificer"
     },
     {
@@ -26876,7 +26864,7 @@
         "yields":  [
                        "Armorsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/5/55/Master_Armorsmith.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_armorsmith"
     },
     {
@@ -26888,7 +26876,7 @@
         "yields":  [
                        "Huntsman"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/b/bf/Master_Huntsman.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
         "layer":  "node_npc_huntsman"
     },
     {
@@ -26912,7 +26900,7 @@
         "yields":  [
                        "Tailor"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/f/fb/Master_Tailor.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
         "layer":  "node_npc_tailor"
     },
     {
@@ -26924,7 +26912,7 @@
         "yields":  [
                        "Leatherworker"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/c/c2/Master_Leatherworker.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
         "layer":  "node_npc_leatherworker"
     },
     {
@@ -26936,7 +26924,7 @@
         "yields":  [
                        "Weaponsmith"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/3/3a/Master_Weaponsmith.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
         "layer":  "node_npc_weaponsmith"
     },
     {
@@ -26960,7 +26948,7 @@
         "yields":  [
                        "Jeweler"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/1/1d/Master_Jeweler.png",
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
         "layer":  "node_npc_jeweler"
     },
     {
@@ -27044,7 +27032,7 @@
         "yields":  [
                        "Chef"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/7/76/Master_Chef.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
         "layer":  "node_npc_chef"
     },
     {
@@ -27111,6 +27099,18 @@
         "pos":  [
                     47314,
                     34469
+                ],
+        "node":  "Mystic Forge Attendant",
+        "yields":  [
+                       "Mystic Forge"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
+        "layer":  "node_npc_misc"
+    },
+	{
+        "pos":  [
+                    49598,
+                    29194
                 ],
         "node":  "Mystic Forge Attendant",
         "yields":  [
@@ -27236,7 +27236,7 @@
         "yields":  [
                        "Merchant"
                    ],
-        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "icon":  "https://wiki.guildwars2.com/images/archive/6/67/20221025215418%21Jade_Bot_Workbench_%28map_icon%29.png",
         "layer":  "node_npc_merchant"
     },
 	{
@@ -27291,6 +27291,18 @@
         "pos":  [
                     47016,
                     34455
+                ],
+        "node":  "Raid Rally Point",
+        "yields":  [
+                       "Raid Rally Point"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/8/86/Raid_%28map_icon%29.png",
+        "layer":  "node_npc_misc"
+    },
+	{
+        "pos":  [
+                    49594,
+                    29257
                 ],
         "node":  "Raid Rally Point",
         "yields":  [
@@ -28007,6 +28019,820 @@
         "day":  "sat",
         "layer":  "node_pact_supply_network_agent"
     },
+	{
+        "pos":  [
+                    58188,
+                    44224
+                ],
+        "node":  "Adak",
+        "yields":  [
+                       "Bank"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
+        "layer":  "node_npc_bank"
+    },
+    {
+        "pos":  [
+                    58170,
+                    44272
+                ],
+        "node":  "Ahman",
+        "yields":  [
+                       "Gathering Merchant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+        "layer":  "node_npc_gathering_merchant"
+    },
+    {
+        "pos":  [
+                    58115.2,
+                    44244.3
+                ],
+        "node":  "Baasim",
+        "yields":  [
+                       "Activity"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
+        "layer":  "node_npc_activity"
+    },
+    {
+        "pos":  [
+                    58168.2,
+                    44283.5
+                ],
+        "node":  "Ihsan",
+        "yields":  [
+                       "Makeover Preview"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/e/e8/Makeover_Preview.png",
+        "layer":  "node_npc_makeover_preview"
+    },
+    {
+        "pos":  [
+                    58237.6,
+                    44243.5
+                ],
+        "node":  "Ihsan",
+        "yields":  [
+                       "Merchant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+    {
+        "pos":  [
+                    58247.5,
+                    44253.4
+                ],
+        "node":  "Jale",
+        "yields":  [
+                       "Laurel Merchant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
+        "layer":  "node_npc_laurel_merchant"
+    },
+	{
+        "pos":  [
+                    58173,
+                    44444
+                ],
+        "node":  "Mystic Forge Attendant",
+        "yields":  [
+                       "Mystic Forge"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
+        "layer":  "node_npc_misc"
+    },
+	{
+        "pos":  [
+                    58149,
+                    44233
+                ],
+        "node":  "Jade Bot Merchant",
+        "yields":  [
+                       "Merchant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/archive/6/67/20221025215418%21Jade_Bot_Workbench_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+	{
+        "pos":  [
+                    58168,
+                    44227
+                ],
+        "node":  "Black Lion Exchange Specialist",
+        "yields":  [
+                       "Vendor"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/a/a7/Guild_Trader_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+	{
+        "pos":  [
+                    58230,
+                    44236
+                ],
+        "node":  "Reinforce Armor",
+        "yields":  [
+                       "Reinforce Armor"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
+        "layer":  "node_npc_reinforce_armor"
+    },
+    {
+        "pos":  [
+                    58171.8,
+                    44222.6
+                ],
+        "node":  "Kameela",
+        "yields":  [
+                       "Weaponsmith"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/a/a6/Weaponsmith.png",
+        "layer":  "node_npc_weaponsmith"
+    },
+    {
+        "pos":  [
+                    58248,
+                    44241
+                ],
+        "node":  "Mehmet",
+        "yields":  [
+                       "Merchant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+    {
+        "pos":  [
+                    58180.9,
+                    44219.6
+                ],
+        "node":  "Rahma",
+        "yields":  [
+                       "Trading Post"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
+        "layer":  "node_npc_trading_post"
+    },
+    {
+        "pos":  [
+                    58109,
+                    44377.9
+                ],
+        "node":  "Rifaah",
+        "yields":  [
+                       "Asura Gate Attendant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+	{
+        "pos":  [
+                    49594,
+                    29254
+                ],
+        "node":  "Helmsman",
+        "yields":  [
+                       "Asura Gate Attendant"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/6/6c/Asura_gate_%28map_icon%29.png",
+        "layer":  "node_npc_merchant"
+    },
+    {
+        "pos":  [
+                    58204,
+                    44344
+                ],
+        "node":  "Cemil",
+        "yields":  [
+                       "Chef"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
+        "layer":  "node_npc_chef"
+    },
+    {
+        "pos":  [
+                    58156,
+                    44339
+                ],
+        "node":  "Duman",
+        "yields":  [
+                       "Tailor"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
+        "layer":  "node_npc_tailor"
+    },
+    {
+        "pos":  [
+                    58217,
+                    44318
+                ],
+        "node":  "Eren",
+        "yields":  [
+                       "Artificer"
+                   ],
+        "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
+        "layer":  "node_npc_artificer"
+    },
+    {
+        "pos":  [
+                    58144,
+                    44282
+                ],
+        "node":  "Fatih",
+        "yields":  [
+                       "Jeweler"
+                   ],
+        "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
+        "layer":  "node_npc_jeweler"
+    },
+    {
+        "pos":  [
+                    58213,
+                    44283
+                ],
+        "node":  "Hakki",
+        "yields":  [
+                       "Huntsman"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
+        "layer":  "node_npc_huntsman"
+    },
+    {
+        "pos":  [
+                    58140,
+                    44306
+                ],
+        "node":  "Mada",
+        "yields":  [
+                       "Leatherworker"
+                   ],
+        "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
+        "layer":  "node_npc_leatherworker"
+    },
+    {
+        "pos":  [
+                    58161,
+                    44316
+                ],
+        "node":  "Rauf",
+        "yields":  [
+                       "Weaponsmith"
+                   ],
+        "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+        "layer":  "node_npc_weaponsmith"
+    },
+    {
+        "pos":  [
+                    58193,
+                    44309
+                ],
+        "node":  "Tahiya",
+        "yields":  [
+                       "Armorsmith"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
+        "layer":  "node_npc_armorsmith"
+    },
+    {
+        "pos":  [
+                    58246.1,
+                    44372.3
+                ],
+        "node":  "Najwa",
+        "yields":  [
+                       "Guild Vault"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
+        "layer":  "node_npc_guild_vault"
+    },
+    {
+        "pos":  [
+                    58239.4,
+                    44377.9
+                ],
+        "node":  "Yucel",
+        "yields":  [
+                       "Guild Commendation Trader"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png",
+        "layer":  "node_npc_guild_commendation"
+    },
+    {
+        "pos":  [
+                    58334.1,
+                    44027.7
+                ],
+        "node":  "Dealer",
+        "yields":  [
+                       "Card Dealer"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/7/7a/Ectoplasm_vendor.png",
+        "layer":  "node_npc_merchant"
+    },
+	{
+        "pos":  [
+                    58159.1,
+                    44311.7
+                ],
+        "node":  "Dealer",
+        "yields":  [
+                       "Card Dealer"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/7/7a/Ectoplasm_vendor.png",
+        "layer":  "node_npc_merchant"
+    },
+	{
+        "pos":  [
+                    58257,
+                    44345
+                ],
+        "node":  "Raid Rally Point",
+        "yields":  [
+                       "Raid Rally Point"
+                   ],
+        "icon":  "https://wiki.guildwars2.com/images/8/86/Raid_%28map_icon%29.png",
+        "layer":  "node_npc_misc"
+    },
+	{
+            "pos": [44225.1, 27468.9],
+            "node": "Abram",
+            "yields": ["Leatherworker"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
+            "layer": "node_npc_leatherworker"
+        },
+        {
+            "pos": [43898.2, 27511.3],
+            "node": "Brencis",
+            "yields": ["Armorsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_armorsmith"
+        },
+        {
+            "pos": [44167.9, 27486.7],
+            "node": "Gambil",
+            "yields": ["Huntsman"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
+            "layer": "node_npc_huntsman"
+        },
+        {
+            "pos": [43870.6, 27487.3],
+            "node": "Hyasinth",
+            "yields": ["Tailor"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
+            "layer": "node_npc_tailor"
+        },
+        {
+            "pos": [43929.9, 27478.3],
+            "node": "Lirun",
+            "yields": ["Jeweler"],
+            "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
+            "layer": "node_npc_jeweler"
+        },
+        {
+            "pos": [44113.4, 27512.4],
+            "node": "Mathael",
+            "yields": ["Weaponsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [43806.4, 27447.3],
+            "node": "Sage",
+            "yields": ["Chef"],
+            "icon": "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
+            "layer": "node_npc_chef"
+        },
+        {
+            "pos": [44094.8, 27580.4],
+            "node": "Salanda",
+            "yields": ["Bank"],
+            "icon": "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
+            "layer": "node_npc_bank"
+        },
+        {
+            "pos": [44142.7, 27499.3],
+            "node": "Salim",
+            "yields": ["Artificer"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
+            "layer": "node_npc_artificer"
+        },
+        {
+            "pos": [43428, 26993],
+            "node": "Jess",
+            "yields": ["Gathering Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_gathering_merchant"
+        },
+        {
+            "pos": [43403, 27011],
+            "node": "Hunter",
+            "yields": ["Weaponsmith (vendor)"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "Divinity_MISSING_NO_WIKI_COORDS": [
+                "Aesthetician (Makeover Preview)",
+                "Armorsmith (vendor)",
+                "Black Lion Chest Merchant",
+                "Black Lion Exchange Specialist",
+                "Black Lion Trader",
+                "Laurel Merchant",
+                "Merchant",
+                "Mystic Forge Attendant",
+                "Seraph Tinkerer (Reinforce Armor)",
+                "Jade Bot (merchant)",
+                "Guild Banker",
+                "Guild Officer (Guild Commendation Trader)"
+            ]
+        }, 
+		{
+            "pos": [37920.7, 46353.8],
+            "node": "Circus Castaway",
+            "yields": ["Makeover Preview"],
+            "icon": "https://wiki.guildwars2.com/images/e/e8/Makeover_Preview.png",
+            "layer": "node_npc_makeover_preview"
+        },
+        {
+            "pos": [37927.1, 46376.6],
+            "node": "Kirak, Black Lion Trader",
+            "yields": ["Trading Post"],
+            "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
+            "layer": "node_npc_trading_post"
+        },
+        {
+            "pos": [37968, 46313],
+            "node": "Torell",
+            "yields": ["Gathering Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_gathering_merchant"
+        },
+        {
+            "pos": [37947.4, 46304.2],
+            "node": "Palm-Reader Arla",
+            "yields": ["Artificer"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
+            "layer": "node_npc_artificer"
+        },
+        {
+            "pos": [37956.4, 46306.8],
+            "node": "Gottlieb the Gunslinger",
+            "yields": ["Huntsman"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
+            "layer": "node_npc_huntsman"
+        },
+        {
+            "pos": [37944.5, 46352.1],
+            "node": "Hawker Annika",
+            "yields": ["Activity"],
+            "icon": "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
+            "layer": "node_npc_activity"
+        },
+        {
+            "pos": [37914.7, 46287.2],
+            "node": "Monteco, the Maitre'd",
+            "yields": ["Asura Gate"],
+            "icon": "https://wiki.guildwars2.com/images/a/a2/Asura_Gate_%28map_icon%29.png",
+            "layer": "node_npc_gate"
+        },
+        {
+            "Lav Lounge MISSING_NO_WIKI_COORDS": [
+                "Dorian (Bank)",
+                "Varka (Laurel Merchant)",
+                "Darla (Trading Post)",
+                "Handy Hartmann (Reinforce Armor)",
+                "Costumer Marla (Tailor)",
+                "Gareth the Skelk Tamer (Weaponsmith)",
+                "Iris the Invincible (Armorsmith)",
+                "Kathleen (Chef)",
+                "The Dazzling Lucia (Jeweler)",
+                "Turlisson (Leatherworker)",
+                "High-Flying Frieda (Guild Commendation Trader)",
+                "The Magnificent Malpholio (Guild Bank)",
+                "Black Lion Chest Merchant",
+                "Black Lion Exchange Specialist",
+                "Mystic Forge Attendant",
+                "Laurel Merchant",
+                "Jade Bot (merchant)"
+            ]
+        },
+		{
+            "pos": [34516.3, 32413.5],
+            "node": "Warmaster Searle",
+            "yields": ["Asura Gate"],
+            "icon": "https://wiki.guildwars2.com/images/a/a2/Asura_Gate_%28map_icon%29.png",
+            "layer": "node_npc_gate"
+        },
+        {
+            "pos": [34570.9, 32469.5],
+            "node": "Aesthetician Krista",
+            "yields": ["Makeover Preview"],
+            "icon": "https://wiki.guildwars2.com/images/e/e8/Makeover_Preview.png",
+            "layer": "node_npc_makeover_preview"
+        },
+        {
+            "pos": [34566.8, 32473.7],
+            "node": "Myrrina",
+            "yields": ["Armorsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_armorsmith"
+        },
+        {
+            "pos": [34560.3, 32465.8],
+            "node": "Laurel Merchant",
+            "yields": ["Laurel Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_laurel_merchant"
+        },
+        {
+            "pos": [34579.3, 32461.8],
+            "node": "Eridwen",
+            "yields": ["Artificer"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
+            "layer": "node_npc_artificer"
+        },
+        {
+            "pos": [34553.6, 32441.4],
+            "node": "Mystic Forge Attendant",
+            "yields": ["Mystic Forge"],
+            "icon": "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
+            "layer": "node_npc_mystic_forge"
+        },
+        {
+            "pos": [34546.2, 32450.7],
+            "node": "Bwonn",
+            "yields": ["Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+            "layer": "node_npc_merchant"
+        },
+        {
+            "pos": [34563.5, 32437.2],
+            "node": "Tik'sip",
+            "yields": ["Chef"],
+            "icon": "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
+            "layer": "node_npc_chef"
+        },
+        {
+            "pos": [34555.8, 32432.4],
+            "node": "Nigel Lawden",
+            "yields": ["Armorsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_armorsmith"
+        },
+        {
+            "pos": [34550.7, 32421.3],
+            "node": "Black Lion Exchange Specialist",
+            "yields": ["Exchange Specialist"],
+            "icon": "https://wiki.guildwars2.com/images/a/a7/Guild_Trader_%28map_icon%29.png",
+            "layer": "node_npc_trading_post"
+        },
+        {
+            "pos": [34542.0, 32441.2],
+            "node": "Black Lion Weapons Specialist",
+            "yields": ["Weaponsmith (vendor)"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [34536.0, 32421.9],
+            "node": "Black Lion Trader",
+            "yields": ["Trading Post"],
+            "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
+            "layer": "node_npc_trading_post"
+        },
+        {
+            "pos": [34528.5, 32414.4],
+            "node": "Banker",
+            "yields": ["Bank"],
+            "icon": "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
+            "layer": "node_npc_bank"
+        },
+        {
+            "pos": [34498, 32428],
+            "node": "Gwynnet",
+            "yields": ["Gathering Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_gathering_merchant"
+        },
+        {
+            "pos": [34500.9, 32434.8],
+            "node": "Serica",
+            "yields": ["Tailor"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
+            "layer": "node_npc_tailor"
+        },
+        {
+            "pos": [34486, 32414],
+            "node": "Kozz",
+            "yields": ["Leatherworker"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
+            "layer": "node_npc_leatherworker"
+        },
+        {
+            "pos": [34504.3, 32451.6],
+            "node": "Atalia Steelshaper",
+            "yields": ["Weaponsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [34500.9, 32467.6],
+            "node": "Black Lion Chest Merchant",
+            "yields": ["Black Lion Chest Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+            "layer": "node_npc_merchant"
+        },
+        {
+            "pos": [34549.9, 32504.7],
+            "node": "Kiklink",
+            "yields": ["Jeweler"],
+            "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
+            "layer": "node_npc_jeweler"
+        },
+        {
+            "pos": [34557.5, 32499.0],
+            "node": "Larana Siegebreak",
+            "yields": ["Weaponsmith (vendor)"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [34571.0, 32498.8],
+            "node": "Annil Hidestrike",
+            "yields": ["Huntsman"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
+            "layer": "node_npc_huntsman"
+        },
+        {
+            "pos": [34568.1, 32483.4],
+            "node": "Guild Banker",
+            "yields": ["Guild Bank"],
+            "icon": "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
+            "layer": "node_npc_guild_vault"
+        },
+        {
+            "pos": [34552.5, 32503.8],
+            "node": "Guild Officer",
+            "yields": ["Guild Commendation Trader"],
+            "icon": "https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png",
+            "layer": "node_npc_guild_vault"
+        },
+        {
+            "pos": [34502.4, 32470.5],
+            "node": "Jade Bot",
+            "yields": ["Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/archive/6/67/20221025215418%21Jade_Bot_Workbench_%28map_icon%29.png",
+            "layer": "node_npc_merchant"
+        },
+        {
+            "pos": [49598, 29261],
+            "node": "Helmsman",
+            "yields": ["Asura Gate"],
+            "icon": "https://wiki.guildwars2.com/images/a/a2/Asura_Gate_%28map_icon%29.png",
+            "layer": "node_npc_gate"
+        },
+        {
+            "pos": [49607, 29333],
+            "node": "Guild Officer",
+            "yields": ["Guild Commendation Trader"],
+            "icon": "https://wiki.guildwars2.com/images/f/f6/Guild_Commendation_Trader_%28map_icon%29.png",
+            "layer": "node_npc_guild_vault"
+        },
+        {
+            "pos": [49597, 29334],
+            "node": "Guild Banker",
+            "yields": ["Guild Bank"],
+            "icon": "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
+            "layer": "node_npc_guild_vault"
+        },
+        {
+            "pos": [49593, 29275],
+            "node": "Edinna Linhoft",
+            "yields": ["Activity"],
+            "icon": "https://wiki.guildwars2.com/images/2/27/Activity_%28map_icon%29.png",
+            "layer": "node_npc_activity"
+        },
+        {
+            "pos": [49590, 29299],
+            "node": "Aesthetician",
+            "yields": ["Makeover Preview"],
+            "icon": "https://wiki.guildwars2.com/images/e/e8/Makeover_Preview.png",
+            "layer": "node_npc_makeover_preview"
+        },
+        {
+            "pos": [49579, 29207],
+            "node": "SRV 3296",
+            "yields": ["Reinforce Armor"],
+            "icon": "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
+            "layer": "node_npc_reinforce_armor"
+        },
+        {
+            "pos": [49598, 29194],
+            "node": "Mystic Forge Attendant",
+            "yields": ["Mystic Forge"],
+            "icon": "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
+            "layer": "node_npc_mystic_forge"
+        },
+        {
+            "pos": [49585, 29215],
+            "node": "Laurel Merchant",
+            "yields": ["Laurel Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_laurel_merchant"
+        },
+        {
+            "pos": [49600, 29205],
+            "node": "Black Lion Exchange Specialist",
+            "yields": ["Exchange Specialist"],
+            "icon": "https://wiki.guildwars2.com/images/a/a7/Guild_Trader_%28map_icon%29.png",
+            "layer": "node_npc_trading_post"
+        },
+        {
+            "pos": [49578, 29214],
+            "node": "Camar Swiftsteel",
+            "yields": ["Gathering Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/1/16/Gathering_Merchant_%28map_icon%29.png",
+            "layer": "node_npc_gathering_merchant"
+        },
+        {
+            "pos": [49576, 29204],
+            "node": "Black Lion Weapons Specialist",
+            "yields": ["Weaponsmith (vendor)"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [49592, 29237],
+            "node": "Merchant",
+            "yields": ["Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
+            "layer": "node_npc_merchant"
+        },
+        {
+            "pos": [49590, 29212],
+            "node": "Jade Bot",
+            "yields": ["Merchant"],
+            "icon": "https://wiki.guildwars2.com/images/archive/6/67/20221025215418%21Jade_Bot_Workbench_%28map_icon%29.png",
+            "layer": "node_npc_merchant"
+        },
+        {
+            "pos": [49581, 29222],
+            "node": "Ceridwen",
+            "yields": ["Artificer"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
+            "layer": "node_npc_artificer"
+        },
+        {
+            "pos": [49599, 29220],
+            "node": "Drogan Delwan",
+            "yields": ["Armorsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_armorsmith"
+        },
+        {
+            "pos": [49589, 29248],
+            "node": "Klicktick",
+            "yields": ["Jeweler"],
+            "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
+            "layer": "node_npc_jeweler"
+        },
+        {
+            "pos": [49583, 29231],
+            "node": "Linna Hideslicer",
+            "yields": ["Huntsman"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
+            "layer": "node_npc_huntsman"
+        },
+        {
+            "pos": [49598, 29248],
+            "node": "Siptikk",
+            "yields": ["Chef"],
+            "icon": "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
+            "layer": "node_npc_chef"
+        },
+        {
+            "pos": [49586, 29240],
+            "node": "Skuda Ironshaper",
+            "yields": ["Weaponsmith"],
+            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
+            "layer": "node_npc_weaponsmith"
+        },
+        {
+            "pos": [49599, 29238],
+            "node": "STITCH-3487",
+            "yields": ["Tailor"],
+            "icon": "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
+            "layer": "node_npc_tailor"
+        },
+        {
+            "pos": [49599, 29230],
+            "node": "Zokk",
+            "yields": ["Leatherworker"],
+            "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
+            "layer": "node_npc_leatherworker"
+        },
     {
         "pos":  [
                     59485.8,

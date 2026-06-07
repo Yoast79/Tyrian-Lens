@@ -46094,6 +46094,33 @@
     },
 	{
         "pos": [
+            24044.8,
+            22414.8
+        ],
+        "name": "Zone Portal",
+        "type": "node_zone_portal",
+        "icon": "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            24160.9,
+            22414.1
+        ],
+        "name": "Zone Portal",
+        "type": "node_zone_portal",
+        "icon": "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png"
+    },
+	{
+        "pos": [
+            42998.5,
+            22696.7
+        ],
+        "name": "Zone Portal",
+        "type": "node_zone_portal",
+        "icon": "https://wiki.guildwars2.com/images/e/e7/Strike_Mission_%28map_icon%29.png"
+    },
+	{
+        "pos": [
             60708,
             42184
         ],

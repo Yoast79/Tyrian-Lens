@@ -1,0 +1,6812 @@
+﻿[
+    {
+        "pos":  [
+                    52889.5,
+                    34117.4
+                ],
+        "name":  "Tribulation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.1,
+                    34290.6
+                ],
+        "name":  "Frostland Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54008.3,
+                    34034.7
+                ],
+        "name":  "Dociu Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53816.4,
+                    33263.4
+                ],
+        "name":  "Seven Pines Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53452.6,
+                    33489.3
+                ],
+        "name":  "Grey Road Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52704.6,
+                    33489
+                ],
+        "name":  "Steelbrachen Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52451.1,
+                    32695
+                ],
+        "name":  "Toran Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53075.5,
+                    32429
+                ],
+        "name":  "Hessdallen Kenning Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53574.8,
+                    32721.3
+                ],
+        "name":  "Kenning Testing Ground Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.4,
+                    32611.5
+                ],
+        "name":  "Wide Expanse Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54326,
+                    32033.7
+                ],
+        "name":  "Nottowr Fault Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53932.7,
+                    32128
+                ],
+        "name":  "Mountain's Tail Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53573.7,
+                    31649.5
+                ],
+        "name":  "Graupel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53272,
+                    31898.2
+                ],
+        "name":  "Havfrue Basin Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52909.4,
+                    31809.3
+                ],
+        "name":  "Travelen's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52690.2,
+                    32156.4
+                ],
+        "name":  "Wyrmblood Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54213.2,
+                    33707.6
+                ],
+        "name":  "Granite Citadel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52536.4,
+                    34075.8
+                ],
+        "name":  "Sorrow's Embrace Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51845.7,
+                    34059.2
+                ],
+        "name":  "Vanjir's Stead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50668.5,
+                    34081.7
+                ],
+        "name":  "Demon's Maw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52020.8,
+                    33007.3
+                ],
+        "name":  "Winterthaw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50784.6,
+                    33228.2
+                ],
+        "name":  "False Lake Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50639.8,
+                    31314.6
+                ],
+        "name":  "Durmand Priory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52056.5,
+                    31606.6
+                ],
+        "name":  "Lamentation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51805.2,
+                    29889.8
+                ],
+        "name":  "Thunderhorns Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50626.1,
+                    30078.8
+                ],
+        "name":  "Nentor Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51206.3,
+                    33631.4
+                ],
+        "name":  "Guutra's Homestead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50628.5,
+                    32378.5
+                ],
+        "name":  "Stonescatter Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51645.7,
+                    30941.5
+                ],
+        "name":  "Pinnacle Enclave Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51209.3,
+                    30480.4
+                ],
+        "name":  "Mistriven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51056.6,
+                    30097.8
+                ],
+        "name":  "Icedevil's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51039.1,
+                    31474.2
+                ],
+        "name":  "Refuge Peak Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51275.9,
+                    31883.9
+                ],
+        "name":  "Afgar's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51134.7,
+                    32776.7
+                ],
+        "name":  "Cascade Bridge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51595.9,
+                    32519.3
+                ],
+        "name":  "False River Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55359.6,
+                    31736.8
+                ],
+        "name":  "Outcast's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55448.9,
+                    31216.7
+                ],
+        "name":  "Hero's Moot Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55046.6,
+                    30964.6
+                ],
+        "name":  "Horncall Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55963.4,
+                    30568.8
+                ],
+        "name":  "Darkriven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55498.1,
+                    30284.9
+                ],
+        "name":  "Taigan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54895.2,
+                    29732.1
+                ],
+        "name":  "Zelechor Hot Springs Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55115.6,
+                    29004.9
+                ],
+        "name":  "Halvaunt Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55215,
+                    28608.5
+                ],
+        "name":  "Crossroads Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54887.3,
+                    28256.2
+                ],
+        "name":  "Dawnrise Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56027.3,
+                    28351
+                ],
+        "name":  "Dolyak Pass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55858.5,
+                    27924.5
+                ],
+        "name":  "Solitude Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55447.5,
+                    29750.6
+                ],
+        "name":  "Twinspur Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55920.1,
+                    29598.3
+                ],
+        "name":  "Vendrake's Homestead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55653.5,
+                    28713.6
+                ],
+        "name":  "Lostvyrm Cave Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55803.7,
+                    29098
+                ],
+        "name":  "Krennak's Homestead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55876.8,
+                    31453.7
+                ],
+        "name":  "Grawlenfjord Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54936.8,
+                    30511.5
+                ],
+        "name":  "Osenfold Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52275,
+                    37557
+                ],
+        "name":  "Talus Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52703.3,
+                    37372.2
+                ],
+        "name":  "Serpent Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.3,
+                    37497.4
+                ],
+        "name":  "Okarinoo Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53745.1,
+                    37076.3
+                ],
+        "name":  "Coil Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.5,
+                    36599.4
+                ],
+        "name":  "Scale Strand Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52965.4,
+                    36940.2
+                ],
+        "name":  "Nonmoa Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53209.3,
+                    36483.8
+                ],
+        "name":  "Eztlitl Grounds Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52444.4,
+                    36753.5
+                ],
+        "name":  "Gyre Rapids Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.3,
+                    35949.1
+                ],
+        "name":  "Valance Tutory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53439,
+                    35899
+                ],
+        "name":  "Ogduk Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53844.9,
+                    35324.5
+                ],
+        "name":  "Foundation 86 Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53082.4,
+                    35437.1
+                ],
+        "name":  "White Paper Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52594.4,
+                    35193.1
+                ],
+        "name":  "Gentle River Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52241.5,
+                    35598
+                ],
+        "name":  "Thistlereed Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51953.9,
+                    34727.6
+                ],
+        "name":  "Krongar Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53185.3,
+                    34786.5
+                ],
+        "name":  "Iron Veil Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52237.6,
+                    37073
+                ],
+        "name":  "Rankor Ruins Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52216.5,
+                    36527.9
+                ],
+        "name":  "Concordia Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52877.6,
+                    36203
+                ],
+        "name":  "Stromkarl Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55832.5,
+                    27488.8
+                ],
+        "name":  "Arundon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53880.3,
+                    27565.6
+                ],
+        "name":  "Groznev Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56297.6,
+                    25884.3
+                ],
+        "name":  "Earthshake Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56257,
+                    24846.5
+                ],
+        "name":  "Path of Starry Skies Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55232.5,
+                    25529.5
+                ],
+        "name":  "Slough of Despond Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55565.2,
+                    24986.9
+                ],
+        "name":  "Watchful Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54544.7,
+                    25299.3
+                ],
+        "name":  "Ice Floe Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54000.9,
+                    25497.3
+                ],
+        "name":  "Dimotiki Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54299.8,
+                    26253.5
+                ],
+        "name":  "Twoloop Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54678,
+                    26989
+                ],
+        "name":  "Skyheight Steading Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55396.3,
+                    27075.7
+                ],
+        "name":  "Highpeaks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55253.1,
+                    26550.2
+                ],
+        "name":  "Ridgerock Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56003.8,
+                    26623.4
+                ],
+        "name":  "Yak's Bend Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54078.8,
+                    26667
+                ],
+        "name":  "Blue Ice Shining Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53572.2,
+                    24661.7
+                ],
+        "name":  "Drakkar Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55227.5,
+                    25187.3
+                ],
+        "name":  "Honor of the Waves Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50594.5,
+                    29086.7
+                ],
+        "name":  "Skradden Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51814.5,
+                    29365.7
+                ],
+        "name":  "Lornar's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54345,
+                    28046.1
+                ],
+        "name":  "Highpass Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53547.3,
+                    27818.1
+                ],
+        "name":  "Lost Child's Sorrow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50671.9,
+                    28144.8
+                ],
+        "name":  "Scholar's Cleft Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51750.4,
+                    28038.1
+                ],
+        "name":  "Isenfall Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51949.2,
+                    28780.2
+                ],
+        "name":  "Snowdrift Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50685.3,
+                    28500
+                ],
+        "name":  "Seraph Outriders' Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52847.1,
+                    28438.8
+                ],
+        "name":  "Torstvedt Homestead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53033.4,
+                    29370.5
+                ],
+        "name":  "Exile Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53043.1,
+                    27821.2
+                ],
+        "name":  "Njordstead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53004.5,
+                    28147.1
+                ],
+        "name":  "Soderhem Steading Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53674.4,
+                    28568.6
+                ],
+        "name":  "Snowhawk Landing Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53976.1,
+                    29098.1
+                ],
+        "name":  "Reaver's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54246.6,
+                    29308.1
+                ],
+        "name":  "Owl Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50879.9,
+                    29308.6
+                ],
+        "name":  "Podaga Steading Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51256.5,
+                    28735.8
+                ],
+        "name":  "Frozen Sweeps Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52374.3,
+                    29244.8
+                ],
+        "name":  "Valslake Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50591.8,
+                    28282.2
+                ],
+        "name":  "Angvar's Trove Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53776.2,
+                    30500.3
+                ],
+        "name":  "Might and Main Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53676.8,
+                    30665
+                ],
+        "name":  "Trade Commons Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53455.7,
+                    30395.9
+                ],
+        "name":  "Snow Leopard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53794,
+                    30172.8
+                ],
+        "name":  "Raven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54089.7,
+                    30286.9
+                ],
+        "name":  "Bear Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54035.5,
+                    30693.3
+                ],
+        "name":  "Wolf Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54270.7,
+                    30009.9
+                ],
+        "name":  "Shelter Rock Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54262.6,
+                    30542.2
+                ],
+        "name":  "Legends Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54174,
+                    30922.2
+                ],
+        "name":  "Eastern Watchpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53839.8,
+                    31018.3
+                ],
+        "name":  "Southern Watchpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53314,
+                    30660.6
+                ],
+        "name":  "Peeta's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53048.7,
+                    30340
+                ],
+        "name":  "Hero's Compass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53493.1,
+                    30988.7
+                ],
+        "name":  "Great Lodge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53655.5,
+                    30804.9
+                ],
+        "name":  "Upper Balcony Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54983.6,
+                    23969.6
+                ],
+        "name":  "Sorrow's Eclipse Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.6,
+                    24385.5
+                ],
+        "name":  "Koda's Welcome Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56733,
+                    37407.9
+                ],
+        "name":  "Revolution's Heart Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56677.9,
+                    35196.4
+                ],
+        "name":  "Observation Deck Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58149.9,
+                    36959.7
+                ],
+        "name":  "Moorage Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58328.5,
+                    35778.5
+                ],
+        "name":  "History's End Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58936.7,
+                    18318.8
+                ],
+        "name":  "Jora's Keep Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56616.3,
+                    17814.7
+                ],
+        "name":  "Still Waters Speaking Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57864.6,
+                    21794.7
+                ],
+        "name":  "Eye of the North Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50992.2,
+                    21878.1
+                ],
+        "name":  "Base Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50443.8,
+                    19441.1
+                ],
+        "name":  "Forward Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58481.7,
+                    31031.6
+                ],
+        "name":  "Vir's Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58138.5,
+                    30589.8
+                ],
+        "name":  "Smokestead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58121.9,
+                    30173.2
+                ],
+        "name":  "Greysteel Armory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59561.4,
+                    30217.7
+                ],
+        "name":  "Martyr's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59160.5,
+                    30929.8
+                ],
+        "name":  "Temperus Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59821.2,
+                    31407
+                ],
+        "name":  "Ashford Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59366.9,
+                    31491.5
+                ],
+        "name":  "Adorea Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60433,
+                    30432.8
+                ],
+        "name":  "Ascalonian Catacombs Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60987.2,
+                    30152.3
+                ],
+        "name":  "Ascalon City Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61513.2,
+                    30819
+                ],
+        "name":  "Watchcrag Tower Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61694.1,
+                    31267.3
+                ],
+        "name":  "Duskrend Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60860,
+                    31342.2
+                ],
+        "name":  "Irondock Shipyard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58845,
+                    30602.5
+                ],
+        "name":  "Feritas Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58482.8,
+                    31545.8
+                ],
+        "name":  "Guardpoint Decimus Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59896.2,
+                    30718.6
+                ],
+        "name":  "Spirit Hunter Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61161.7,
+                    31717.8
+                ],
+        "name":  "Loreclaw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60922.9,
+                    30687.9
+                ],
+        "name":  "Phasmatis Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58552.5,
+                    31813.9
+                ],
+        "name":  "Langmar Estate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62150.3,
+                    31333
+                ],
+        "name":  "The Last Whiskey Bar Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62510.5,
+                    31608.6
+                ],
+        "name":  "Steeleye Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62505.5,
+                    32210.4
+                ],
+        "name":  "Tumok's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63630.5,
+                    32491.7
+                ],
+        "name":  "Twin Sisters Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63393.2,
+                    31557
+                ],
+        "name":  "Behem Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63517.7,
+                    30176.8
+                ],
+        "name":  "Expanse Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62905.8,
+                    29835.6
+                ],
+        "name":  "Guardian Stone Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63697.8,
+                    29769
+                ],
+        "name":  "Lunk Kraal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63481,
+                    29114.8
+                ],
+        "name":  "Terra Carorunda Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62776,
+                    29006.3
+                ],
+        "name":  "Brokentooth Maw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62128,
+                    28960.8
+                ],
+        "name":  "Kindling Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62222.5,
+                    29920.2
+                ],
+        "name":  "Brandview Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62795.1,
+                    30751.6
+                ],
+        "name":  "Refuge Sanctum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62591.4,
+                    29268.2
+                ],
+        "name":  "Lowland Burns Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63533,
+                    30772.8
+                ],
+        "name":  "Gastor Gullet Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62378,
+                    30660.8
+                ],
+        "name":  "Kinar Fort Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63344.8,
+                    32096.6
+                ],
+        "name":  "Splintercrest Fort Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62872.7,
+                    31804.3
+                ],
+        "name":  "Soot Road Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62124,
+                    34784.3
+                ],
+        "name":  "Hawkgates Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64080.4,
+                    34496.6
+                ],
+        "name":  "Deathblade's Watch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63103.9,
+                    33728.1
+                ],
+        "name":  "Summit Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61792.4,
+                    34406.1
+                ],
+        "name":  "Tyler's Bivouac Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62073.2,
+                    32995.4
+                ],
+        "name":  "Tenaebron Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63570.6,
+                    32957.4
+                ],
+        "name":  "Rosko's Campsite Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62633.5,
+                    33391.2
+                ],
+        "name":  "Skoll's Bivouac Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61744.7,
+                    33678.2
+                ],
+        "name":  "Helliot Mine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63866.4,
+                    33374.5
+                ],
+        "name":  "Fangfury Watch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62564.3,
+                    33973.4
+                ],
+        "name":  "Vulture's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63112.9,
+                    34430.4
+                ],
+        "name":  "Wreckage of Bloodgorge Watch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63654.3,
+                    34933.9
+                ],
+        "name":  "Ogre Road Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62942.9,
+                    35338.2
+                ],
+        "name":  "Forlorn Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61782.8,
+                    35261.6
+                ],
+        "name":  "Fallen Angels Garrison Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62781.8,
+                    34729.2
+                ],
+        "name":  "Spotter's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62364.5,
+                    35184.1
+                ],
+        "name":  "Kestrel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62592.5,
+                    32994.5
+                ],
+        "name":  "Thunderbreak Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59744.8,
+                    27162.5
+                ],
+        "name":  "Sati Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58967.9,
+                    26938.7
+                ],
+        "name":  "Pig Iron Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59385.2,
+                    27359.9
+                ],
+        "name":  "Tuyere Command Post Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58629.5,
+                    27336.5
+                ],
+        "name":  "Severed Breach Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59569.1,
+                    26192.2
+                ],
+        "name":  "Breaktooth's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57895.6,
+                    26719.1
+                ],
+        "name":  "Havoc Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58054.7,
+                    27217.1
+                ],
+        "name":  "Vidius Castrum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57161.4,
+                    26998.7
+                ],
+        "name":  "Apostate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56822.4,
+                    26176.7
+                ],
+        "name":  "Rustbowl Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57651.7,
+                    26176
+                ],
+        "name":  "Switchback Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.7,
+                    25165.5
+                ],
+        "name":  "Icespear's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57537.6,
+                    24911.1
+                ],
+        "name":  "Snow Ridge Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57974.5,
+                    25299.2
+                ],
+        "name":  "Vorgas Garrison Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58498,
+                    25047.9
+                ],
+        "name":  "Forlorn Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58584.2,
+                    25384.2
+                ],
+        "name":  "Senecus Castrum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58958.5,
+                    25673.9
+                ],
+        "name":  "Simurgh Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58275.5,
+                    25871.4
+                ],
+        "name":  "Keeper's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59682.4,
+                    25151.3
+                ],
+        "name":  "The Citadel of Flame Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60940.6,
+                    29823.3
+                ],
+        "name":  "Dewclaw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61524,
+                    29597.6
+                ],
+        "name":  "Bloodfin Lake Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60281.4,
+                    29394.2
+                ],
+        "name":  "Old Piken Ruins Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61117.5,
+                    28788.7
+                ],
+        "name":  "Warhound Village Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61816.4,
+                    28806.8
+                ],
+        "name":  "Hellion Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60585.8,
+                    28536.8
+                ],
+        "name":  "Village of Scalecatch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60204.9,
+                    28157.2
+                ],
+        "name":  "Sleekfur Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61229.2,
+                    28081.3
+                ],
+        "name":  "Brandwatch Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61167.5,
+                    26997
+                ],
+        "name":  "Viper's Run Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60641.9,
+                    27418.5
+                ],
+        "name":  "Town of Cowlfang's Star Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60046.1,
+                    27207.5
+                ],
+        "name":  "Bulwark Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60750.2,
+                    26949.7
+                ],
+        "name":  "Firewatch Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676,
+                    26282.4
+                ],
+        "name":  "Gladefall Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61638.1,
+                    26437.9
+                ],
+        "name":  "Grostogg's Kraal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56554.4,
+                    28444.8
+                ],
+        "name":  "Charrgate Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57831,
+                    28790.4
+                ],
+        "name":  "Blasted Moors Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58955.1,
+                    28564.2
+                ],
+        "name":  "Bloodsaw Mill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58763,
+                    27859.9
+                ],
+        "name":  "Font of Rhand Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57747.5,
+                    29572.9
+                ],
+        "name":  "Nageling Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56935.2,
+                    29685.9
+                ],
+        "name":  "Nolan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56907.8,
+                    29191.4
+                ],
+        "name":  "Oldgate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57093.4,
+                    28347.1
+                ],
+        "name":  "Butcher's Block Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57506.1,
+                    29097.4
+                ],
+        "name":  "Charradis Estate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58484.2,
+                    29675.7
+                ],
+        "name":  "Breached Wall Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59357.6,
+                    28078.3
+                ],
+        "name":  "Incendio Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59653.9,
+                    29083.6
+                ],
+        "name":  "Nemus Grove Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59470.4,
+                    29828.4
+                ],
+        "name":  "Breachwater Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58480.3,
+                    28979.9
+                ],
+        "name":  "Dawnright Estate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57433.4,
+                    28086.1
+                ],
+        "name":  "Bloodcliff Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59490.3,
+                    28565
+                ],
+        "name":  "Sanctum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58937.2,
+                    29193.2
+                ],
+        "name":  "Redreave Mill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58193.5,
+                    28258
+                ],
+        "name":  "Manbane's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58744.2,
+                    28271.8
+                ],
+        "name":  "Blackblade Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.3,
+                    31106.2
+                ],
+        "name":  "Gladium Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57733.4,
+                    30623.3
+                ],
+        "name":  "Mustering Ground Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57138,
+                    30368.3
+                ],
+        "name":  "Memorial Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57379.1,
+                    30254.9
+                ],
+        "name":  "Factorium Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57030,
+                    30146.9
+                ],
+        "name":  "Diessa Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56831.1,
+                    30474.5
+                ],
+        "name":  "Ligacus Aquilo Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57039.2,
+                    30536.1
+                ],
+        "name":  "Bane Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57367.3,
+                    30552.9
+                ],
+        "name":  "Hero's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56879.8,
+                    31208.5
+                ],
+        "name":  "Ruins of Rin Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57089,
+                    30642.5
+                ],
+        "name":  "Imperator's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57222,
+                    30898.1
+                ],
+        "name":  "Junker's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56605.1,
+                    30513.3
+                ],
+        "name":  "Haunted Nolani Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61288.2,
+                    19612.2
+                ],
+        "name":  "Wardowns Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61726.3,
+                    18513.4
+                ],
+        "name":  "Dalada Forest Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60426.8,
+                    18848.4
+                ],
+        "name":  "Blood Keep Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49731,
+                    38998.8
+                ],
+        "name":  "Bramble Pass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49122,
+                    39051.6
+                ],
+        "name":  "Signal Peak Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50061.3,
+                    40004.1
+                ],
+        "name":  "Fort Trinity Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50385.3,
+                    39950.2
+                ],
+        "name":  "Thorn Pass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49929,
+                    40404.1
+                ],
+        "name":  "Thunderhead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49380.2,
+                    40962.5
+                ],
+        "name":  "Broken Spit Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49072.5,
+                    40068.6
+                ],
+        "name":  "Vesper Bell Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48538,
+                    39525.4
+                ],
+        "name":  "Royal Forum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48348.7,
+                    39852.1
+                ],
+        "name":  "Brassclaw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47602.2,
+                    40251.9
+                ],
+        "name":  "Antheneum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48531.7,
+                    40341.5
+                ],
+        "name":  "Conquest Marina Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48935.9,
+                    40697.2
+                ],
+        "name":  "Lone Post Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48532.5,
+                    41315.8
+                ],
+        "name":  "Waywarde Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48249.8,
+                    40845.8
+                ],
+        "name":  "Xenarius Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47819.1,
+                    40959.7
+                ],
+        "name":  "Glorious Victory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47420.5,
+                    40811.6
+                ],
+        "name":  "Sentry Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48072.4,
+                    40387.3
+                ],
+        "name":  "Rally Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50065.2,
+                    39284.9
+                ],
+        "name":  "Plinth Timberland Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49736.8,
+                    39268.3
+                ],
+        "name":  "Underbelly Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47706.6,
+                    39501.8
+                ],
+        "name":  "Dire Shoal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44523.8,
+                    41785.7
+                ],
+        "name":  "Pursuit Pass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43631.7,
+                    42391.8
+                ],
+        "name":  "R&D Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44208.5,
+                    42598.4
+                ],
+        "name":  "Penitent Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43265.7,
+                    42875.5
+                ],
+        "name":  "Gavbeorn's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43953.6,
+                    43173.1
+                ],
+        "name":  "Verdance Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44476.2,
+                    42973.6
+                ],
+        "name":  "Shelter's Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44339.4,
+                    43403.7
+                ],
+        "name":  "Jofast's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43853.8,
+                    43751.8
+                ],
+        "name":  "Meddler's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43741.1,
+                    44276.6
+                ],
+        "name":  "Anchorage Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44754.9,
+                    44115.3
+                ],
+        "name":  "Arah Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44087.2,
+                    42138.6
+                ],
+        "name":  "Caer Shadowfain Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43289.7,
+                    45056.9
+                ],
+        "name":  "Murdered Dreams Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44616.1,
+                    45441.1
+                ],
+        "name":  "Shipwreck Rock Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46866.4,
+                    41177.4
+                ],
+        "name":  "Pagga's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    41268.2
+                ],
+        "name":  "Doric's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46874.7,
+                    40461.2
+                ],
+        "name":  "Waste Hollows Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46387.6,
+                    40821.8
+                ],
+        "name":  "Colonnade Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46178.6,
+                    41237.6
+                ],
+        "name":  "Valley of Lyss Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46013.5,
+                    39946.8
+                ],
+        "name":  "Union Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45494.9,
+                    40742.5
+                ],
+        "name":  "Wren Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45969.5,
+                    40323.2
+                ],
+        "name":  "Lyssa Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45132.2,
+                    40523.1
+                ],
+        "name":  "Blighted Arch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    40123.4
+                ],
+        "name":  "Murmur Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44888.7,
+                    40702.6
+                ],
+        "name":  "Tempest Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43931.2,
+                    39953.1
+                ],
+        "name":  "Versoconjouring Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44489.3,
+                    40825.3
+                ],
+        "name":  "Lights Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49392.5,
+                    42605
+                ],
+        "name":  "Camp Reclamation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43728.4,
+                    28589.9
+                ],
+        "name":  "Shaemoor Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43356.9,
+                    28720.8
+                ],
+        "name":  "Fields Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44094.9,
+                    28803.7
+                ],
+        "name":  "Garrison Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43584.3,
+                    29518.7
+                ],
+        "name":  "Crossing Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44548.8,
+                    29806.5
+                ],
+        "name":  "Phinney Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42996.3,
+                    29695.9
+                ],
+        "name":  "Vale Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44239.4,
+                    30073.2
+                ],
+        "name":  "Heartwood Pass Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43482,
+                    29972.5
+                ],
+        "name":  "Claypool Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44959.4,
+                    30336.3
+                ],
+        "name":  "Swamplost Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45150.5,
+                    29080.3
+                ],
+        "name":  "Krytan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44714.8,
+                    28616.8
+                ],
+        "name":  "Ojon's Lumbermill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45967.6,
+                    28419.5
+                ],
+        "name":  "Beetletun Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45690.6,
+                    29146.2
+                ],
+        "name":  "Tunwatch Redoubt Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45274.7,
+                    29755
+                ],
+        "name":  "Godslost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42863.9,
+                    28509.6
+                ],
+        "name":  "Orchard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44145.3,
+                    29193.7
+                ],
+        "name":  "Scaver Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47173.8,
+                    28233.9
+                ],
+        "name":  "Faun's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48489.3,
+                    28515.4
+                ],
+        "name":  "Shieldbluff Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46569.9,
+                    26596.1
+                ],
+        "name":  "Seraph's Landing Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46897.9,
+                    27366.9
+                ],
+        "name":  "Wynchona Rally Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49048.1,
+                    27956.6
+                ],
+        "name":  "Grey Gritta's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47627.1,
+                    28497
+                ],
+        "name":  "Nightguard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46506.2,
+                    27638.7
+                ],
+        "name":  "Demetra Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47862.6,
+                    27455.2
+                ],
+        "name":  "Recovery Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48543.8,
+                    27299.1
+                ],
+        "name":  "Barricade Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47779.3,
+                    26802.1
+                ],
+        "name":  "Trebusha's Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47384.1,
+                    26626.6
+                ],
+        "name":  "Bridgewatch Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48031.8,
+                    26413.9
+                ],
+        "name":  "Junction Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48809.3,
+                    26174.8
+                ],
+        "name":  "Cloven Hoof Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46498.7,
+                    26140.6
+                ],
+        "name":  "Arca Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47559.2,
+                    26139.4
+                ],
+        "name":  "Arcallion Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43995.6,
+                    27954
+                ],
+        "name":  "Dwayna Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44043.5,
+                    26498.9
+                ],
+        "name":  "Grenth Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44637.7,
+                    27624.8
+                ],
+        "name":  "Kormir Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44660.4,
+                    26885
+                ],
+        "name":  "Lyssa Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43376.3,
+                    27570.9
+                ],
+        "name":  "Melandru Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43389.5,
+                    26850.3
+                ],
+        "name":  "Balthazar Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44036,
+                    27193.3
+                ],
+        "name":  "Palace Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43917.3,
+                    27584.1
+                ],
+        "name":  "Commons Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44410.5,
+                    27239.1
+                ],
+        "name":  "Rurikton Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43628.3,
+                    27229.6
+                ],
+        "name":  "Crown Pavilion Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43818.9,
+                    26866.1
+                ],
+        "name":  "Ossan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44266.4,
+                    26928.4
+                ],
+        "name":  "Salma Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44048,
+                    27570.5
+                ],
+        "name":  "Ministers Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42695.1,
+                    30680.5
+                ],
+        "name":  "Fort Salma Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42759.5,
+                    31679.2
+                ],
+        "name":  "Overlord's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42299.7,
+                    31027.5
+                ],
+        "name":  "Halacon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45163.2,
+                    30664
+                ],
+        "name":  "Sojourner's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45766.9,
+                    30799.6
+                ],
+        "name":  "Delanian Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43537.7,
+                    32163.9
+                ],
+        "name":  "Ireko Tradecamp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42841,
+                    32330.2
+                ],
+        "name":  "Shadowheart Site Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43833.9,
+                    31419.4
+                ],
+        "name":  "Viathan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45999,
+                    31579.6
+                ],
+        "name":  "Darkwound Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45528.3,
+                    31950.6
+                ],
+        "name":  "Cereboth Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44742.9,
+                    32051.8
+                ],
+        "name":  "Overlake Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44843,
+                    31380.9
+                ],
+        "name":  "Kessex Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44559.4,
+                    30633.6
+                ],
+        "name":  "Cavernhold Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43589.1,
+                    30655.8
+                ],
+        "name":  "Greyhoof Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45432.8,
+                    31161
+                ],
+        "name":  "Earthworks Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44257.8,
+                    30860.3
+                ],
+        "name":  "Gap Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46449.5,
+                    30416.7
+                ],
+        "name":  "Traveler's Dale Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.7,
+                    29131.4
+                ],
+        "name":  "Stoneguard Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48027,
+                    30390
+                ],
+        "name":  "Broadhollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48089,
+                    29884.4
+                ],
+        "name":  "Oogooth Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48668.1,
+                    30456
+                ],
+        "name":  "Cornucopian Fields Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48551.5,
+                    28867.2
+                ],
+        "name":  "Provern Shore Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50046.1,
+                    29938
+                ],
+        "name":  "Junction Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50142.9,
+                    29190.2
+                ],
+        "name":  "Winter Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46693.6,
+                    30206
+                ],
+        "name":  "First Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46734.4,
+                    29727.6
+                ],
+        "name":  "Talajian Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47155.5,
+                    28761.6
+                ],
+        "name":  "Blood Hill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47004.9,
+                    29558.9
+                ],
+        "name":  "Nebo Terrace Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47695.4,
+                    29692.5
+                ],
+        "name":  "Ascalon Settlement Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48224.9,
+                    29350.5
+                ],
+        "name":  "Northfields Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48875.6,
+                    29957.1
+                ],
+        "name":  "Applenook Hamlet Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49506.9,
+                    28945.7
+                ],
+        "name":  "Vigil Keep Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49981.6,
+                    30510.4
+                ],
+        "name":  "Icegate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49351.5,
+                    29825.7
+                ],
+        "name":  "Almuten Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47324.9,
+                    30117.2
+                ],
+        "name":  "Lionbridge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49697.7,
+                    29287.1
+                ],
+        "name":  "Snowblind Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48632.1,
+                    29278
+                ],
+        "name":  "Brigantine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47358.7,
+                    29501
+                ],
+        "name":  "Bloodfields Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48571,
+                    30868.4
+                ],
+        "name":  "Commodore's Quarter Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49927.1,
+                    31138.4
+                ],
+        "name":  "Guild Bluff Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49619.8,
+                    32044.1
+                ],
+        "name":  "Bloodcoast Ward Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48996.8,
+                    31853.2
+                ],
+        "name":  "Claw Island Portage Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49063.6,
+                    30911
+                ],
+        "name":  "Trader's Forum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49309.1,
+                    31222.8
+                ],
+        "name":  "Gate Hub Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48229.9,
+                    31688.5
+                ],
+        "name":  "Diverse Ledges Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48402.5,
+                    31156.5
+                ],
+        "name":  "Western Ward Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48663.5,
+                    31395.1
+                ],
+        "name":  "Sanctum Harbor Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49457.3,
+                    31700
+                ],
+        "name":  "Fort Marriner Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49749.7,
+                    30961.2
+                ],
+        "name":  "Eastern Ward Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50162.3,
+                    31436.3
+                ],
+        "name":  "Cavern Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49957.1,
+                    31690.5
+                ],
+        "name":  "Farshore Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49515.9,
+                    32337.6
+                ],
+        "name":  "Archen Foreland Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48753.2,
+                    32780
+                ],
+        "name":  "Sorrowful Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49245,
+                    33072.2
+                ],
+        "name":  "Stormbluff Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50112.6,
+                    32532.3
+                ],
+        "name":  "Marshwatch Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49985.5,
+                    33404.8
+                ],
+        "name":  "Remanda Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48915.9,
+                    33772.2
+                ],
+        "name":  "Laughing Gull Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48357.9,
+                    34155
+                ],
+        "name":  "Barrier Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49401.4,
+                    34071.5
+                ],
+        "name":  "Firthside Vigil Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50197.2,
+                    34085.1
+                ],
+        "name":  "Lostwreck Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50184.3,
+                    34696.1
+                ],
+        "name":  "Bogside Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48993.3,
+                    34736.1
+                ],
+        "name":  "Mournful Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48999.2,
+                    34955
+                ],
+        "name":  "Castavall Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48315,
+                    35172.4
+                ],
+        "name":  "Jelako Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50033.1,
+                    35244.4
+                ],
+        "name":  "Whisperwill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49550.2,
+                    32792.4
+                ],
+        "name":  "Deadend Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45546,
+                    35647.4
+                ],
+        "name":  "Lion Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46637.7,
+                    35611.8
+                ],
+        "name":  "Pride Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46589.2,
+                    36791.8
+                ],
+        "name":  "Pearl Islet Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45605.9,
+                    36766.5
+                ],
+        "name":  "Camp Karka Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44683.5,
+                    36898.4
+                ],
+        "name":  "Owain's Refuge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.5,
+                    36069.5
+                ],
+        "name":  "Kiel's Outpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49331.4,
+                    32136.9
+                ],
+        "name":  "Aerodrome Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45004.7,
+                    27001.9
+                ],
+        "name":  "Doric's Landing Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45006,
+                    25823.3
+                ],
+        "name":  "Red Leaf Retreat Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46062.5,
+                    27237.5
+                ],
+        "name":  "Lakeside Bazaar Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42723.9,
+                    36217.2
+                ],
+        "name":  "Astorea Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43729.7,
+                    35620.3
+                ],
+        "name":  "Spiral Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42620.1,
+                    35734.6
+                ],
+        "name":  "Caer Astorea Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42534.7,
+                    35459.8
+                ],
+        "name":  "Gleaner's Cove Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43061.2,
+                    35067.5
+                ],
+        "name":  "Brigid's Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43759.5,
+                    34975.3
+                ],
+        "name":  "Sperrins Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42869.2,
+                    34533
+                ],
+        "name":  "Mabon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42302.5,
+                    33993.5
+                ],
+        "name":  "Town of Cathal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42659.5,
+                    33826.3
+                ],
+        "name":  "Caledon Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43593.9,
+                    34162.9
+                ],
+        "name":  "Titan's Staircase Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42446.1,
+                    33409
+                ],
+        "name":  "Falias Thorp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43345.5,
+                    33197.9
+                ],
+        "name":  "Hamlet of Annwen Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43487.8,
+                    32858.3
+                ],
+        "name":  "Kraitbane Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42252.6,
+                    32679.8
+                ],
+        "name":  "Wychmire Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43019,
+                    35643
+                ],
+        "name":  "Wardenhurst Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42884.2,
+                    33154.5
+                ],
+        "name":  "Lionguard Waystation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42351.3,
+                    32964.6
+                ],
+        "name":  "Twilight Arbor Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43515.9,
+                    35981.1
+                ],
+        "name":  "Sleive's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40171.7,
+                    36402.5
+                ],
+        "name":  "Soren Draa Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41201.9,
+                    36636.2
+                ],
+        "name":  "Jeztar Falls Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41739.1,
+                    36013.3
+                ],
+        "name":  "Akk Wilds Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40758.4,
+                    35412.8
+                ],
+        "name":  "Rana Landing Complex Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41281.5,
+                    34770.2
+                ],
+        "name":  "Arterium Haven Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41822.1,
+                    34087.5
+                ],
+        "name":  "Hexane Regrade Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40577.9,
+                    34465.8
+                ],
+        "name":  "Survivor's Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40840.7,
+                    33722.1
+                ],
+        "name":  "Muridian Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41307.6,
+                    35437.2
+                ],
+        "name":  "Desider Atum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40388.2,
+                    35749.2
+                ],
+        "name":  "Old Golem Factory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41036.1,
+                    36064.2
+                ],
+        "name":  "Loch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40094.7,
+                    34617.4
+                ],
+        "name":  "Anthill Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40694.4,
+                    35000.4
+                ],
+        "name":  "Michotl Grounds Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.1,
+                    35125.7
+                ],
+        "name":  "Cuatl Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41015.8,
+                    34337.7
+                ],
+        "name":  "Artergon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40631.8,
+                    36216.7
+                ],
+        "name":  "Hydrone Unit Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41833.6,
+                    32676.5
+                ],
+        "name":  "Watchful Source Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.4,
+                    31191.8
+                ],
+        "name":  "Wendon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    32459.5
+                ],
+        "name":  "Tunnels Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41311,
+                    32306.9
+                ],
+        "name":  "Hillstead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41275.2,
+                    31983.9
+                ],
+        "name":  "East End Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40165.6,
+                    31856.7
+                ],
+        "name":  "Brilitine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40190.6,
+                    31059.9
+                ],
+        "name":  "Seraph Observers Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39175.1,
+                    31346.1
+                ],
+        "name":  "Gallowfields Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38992.5,
+                    32509
+                ],
+        "name":  "Triforge Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40015.9,
+                    32542.8
+                ],
+        "name":  "Ulta Metamagicals Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40733.6,
+                    33298.8
+                ],
+        "name":  "Mrot Boru Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39870.1,
+                    33051.4
+                ],
+        "name":  "Mirkrise Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38936.7,
+                    31509.4
+                ],
+        "name":  "Proxemics Lab Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43050.6,
+                    37063.8
+                ],
+        "name":  "Caledon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43161.8,
+                    37494.4
+                ],
+        "name":  "Upper Commons Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43171.8,
+                    37445.5
+                ],
+        "name":  "Reckoner's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43213.5,
+                    37448.8
+                ],
+        "name":  "Ronan's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38851.9,
+                    37177.6
+                ],
+        "name":  "Metrical Court Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38775.1,
+                    36969.6
+                ],
+        "name":  "Magustan Court Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38581.5,
+                    37130
+                ],
+        "name":  "Magicat Court Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38702.5,
+                    37961.4
+                ],
+        "name":  "Incubation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47322,
+                    34668
+                ],
+        "name":  "Mistlock Sanctuary Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38742.8,
+                    37098.1
+                ],
+        "name":  "Accountancy Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38854.5,
+                    37110.4
+                ],
+        "name":  "Apprentice Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38598.7,
+                    37064.6
+                ],
+        "name":  "Research Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38745.7,
+                    37235.7
+                ],
+        "name":  "Auxiliary Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38102.1,
+                    38251
+                ],
+        "name":  "Port Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50740.4,
+                    39671.9
+                ],
+        "name":  "Murkvale Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50706.2,
+                    38116.2
+                ],
+        "name":  "Govoran Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51007.6,
+                    38441.5
+                ],
+        "name":  "Criterion Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51326.6,
+                    38959.6
+                ],
+        "name":  "Firebreak Fort Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51296,
+                    39360.4
+                ],
+        "name":  "Spaecia Illogica Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51797.3,
+                    38107.5
+                ],
+        "name":  "Bard's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51987.3,
+                    39515.1
+                ],
+        "name":  "Maelstrom's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.5,
+                    38540
+                ],
+        "name":  "Ashen Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52453.3,
+                    39564.9
+                ],
+        "name":  "Avernan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52372.1,
+                    37859.2
+                ],
+        "name":  "Broken Arrow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52794.1,
+                    38992.3
+                ],
+        "name":  "Oxbow Isle Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53195,
+                    39622.9
+                ],
+        "name":  "Irwin Isle Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52967.7,
+                    37946.5
+                ],
+        "name":  "Gauntlet Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53917.5,
+                    39300.4
+                ],
+        "name":  "Old Sledge Site Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54220.8,
+                    40050.6
+                ],
+        "name":  "Judgment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51773.1,
+                    39890.5
+                ],
+        "name":  "Magmatic Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.2,
+                    38322.7
+                ],
+        "name":  "Crucible of Eternity Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48420,
+                    35663.5
+                ],
+        "name":  "Orvar's Glen Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49607.4,
+                    35721.8
+                ],
+        "name":  "Fort Cadence Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50128.7,
+                    35786.4
+                ],
+        "name":  "Braggi's Stead Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50075.9,
+                    36234.5
+                ],
+        "name":  "Saltflood Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49239.5,
+                    36452.3
+                ],
+        "name":  "Zintl Holy Grounds Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48721.9,
+                    36264.1
+                ],
+        "name":  "Ocean's Gullet Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48297.4,
+                    37012.5
+                ],
+        "name":  "Forvar's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49398.3,
+                    37058.2
+                ],
+        "name":  "Toade's Head Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50234.1,
+                    37084
+                ],
+        "name":  "Flamefrog Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50229.3,
+                    38119.2
+                ],
+        "name":  "Darkweather Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49789.8,
+                    38320.4
+                ],
+        "name":  "Brackwater Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49164.7,
+                    37688.1
+                ],
+        "name":  "Aleem's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48647.6,
+                    38360.6
+                ],
+        "name":  "Splintered Coast Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48380.7,
+                    37754
+                ],
+        "name":  "Brooloonu Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49822.3,
+                    37647.4
+                ],
+        "name":  "Dryground Village Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49260.1,
+                    38212.2
+                ],
+        "name":  "Caer Brier Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49626.8,
+                    35965.8
+                ],
+        "name":  "Mire Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39109.2
+                ],
+        "name":  "Bazaar Docks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39277.5
+                ],
+        "name":  "Sky Docks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36204.7,
+                    36974.5
+                ],
+        "name":  "Central Forward Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36986.7,
+                    37143
+                ],
+        "name":  "Southern Forward Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35730.2,
+                    36555.7
+                ],
+        "name":  "Northern Forward Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36118.5,
+                    37357.4
+                ],
+        "name":  "Central Advance Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35648.7,
+                    38076.6
+                ],
+        "name":  "Dragon's Domain Southern Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36654.2,
+                    37490.9
+                ],
+        "name":  "Southern Advance Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35435.9,
+                    37715
+                ],
+        "name":  "Dragon's Domain Central Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34756.5,
+                    37366.8
+                ],
+        "name":  "Dragon's Domain Northern Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35531.9,
+                    36790.1
+                ],
+        "name":  "Northern Advance Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34318.4,
+                    33966.2
+                ],
+        "name":  "Forgotten City Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33672.4,
+                    32820.5
+                ],
+        "name":  "Wanderer's Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34402.5,
+                    33143.6
+                ],
+        "name":  "Northwatch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34227.8,
+                    34590.9
+                ],
+        "name":  "Southwatch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33703.9,
+                    33522.1
+                ],
+        "name":  "Westwatch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34864.1,
+                    35025
+                ],
+        "name":  "Chak Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35047.7,
+                    33802.8
+                ],
+        "name":  "Eastwatch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36673.7,
+                    35237.7
+                ],
+        "name":  "Ogre Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37246.5,
+                    35515.6
+                ],
+        "name":  "Ley-Line Confluence Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37974.7,
+                    35495.3
+                ],
+        "name":  "SCAR Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37716.8,
+                    34709.8
+                ],
+        "name":  "Rata Novus Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37039.4,
+                    34324.5
+                ],
+        "name":  "Teku Nuhoch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35826,
+                    34605.7
+                ],
+        "name":  "Order of Whispers Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35651.7,
+                    35858.9
+                ],
+        "name":  "Dragon's Passage Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34501.6,
+                    31503.7
+                ],
+        "name":  "Mellaggan's Valor Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36479.7,
+                    31660.6
+                ],
+        "name":  "Shipwreck Peak Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36032.8,
+                    31135.7
+                ],
+        "name":  "Jaka Itzel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34083.3,
+                    32201.2
+                ],
+        "name":  "Faren's Flyer Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35554.9,
+                    32384.1
+                ],
+        "name":  "Shrouded Ruins Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33681.2,
+                    32396.7
+                ],
+        "name":  "Treacherous Path Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33684.6,
+                    29911.2
+                ],
+        "name":  "Canyon Dig Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33951.8,
+                    30648.6
+                ],
+        "name":  "Riverside Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34211.1,
+                    29897.3
+                ],
+        "name":  "Upper Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcIAAA=]",
+        "desc":  "requires further exploration"
+    },
+    {
+        "pos":  [
+                    34612.9,
+                    30938.2
+                ],
+        "name":  "Shrine Tunnel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34234.5,
+                    30347.5
+                ],
+        "name":  "Central Precipice Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34786.5,
+                    30849.3
+                ],
+        "name":  "Sandstone Coliseum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35511.3,
+                    30577.1
+                ],
+        "name":  "Depths of the Maw Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35827.6,
+                    30738.4
+                ],
+        "name":  "Ground Zero Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35212.1,
+                    30583.8
+                ],
+        "name":  "Soulkeeper's Airship Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35482.2,
+                    30692.4
+                ],
+        "name":  "Zealot's Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.4,
+                    32717.8
+                ],
+        "name":  "Prosperity Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38299.1,
+                    33089
+                ],
+        "name":  "Dry Top Entry Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36895,
+                    32688.1
+                ],
+        "name":  "Vine Bridge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37730.7,
+                    32727.2
+                ],
+        "name":  "Restoration Refuge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36713.1,
+                    32755.1
+                ],
+        "name":  "Repair Station Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38451.1,
+                    31736.5
+                ],
+        "name":  "Camp Resolve Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37668.8,
+                    32070.6
+                ],
+        "name":  "Hidden Depths Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38233.6,
+                    31107.6
+                ],
+        "name":  "Drydock Grotto Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55830.2,
+                    60838.7
+                ],
+        "name":  "Astralarium Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57792.9,
+                    61028.3
+                ],
+        "name":  "Chalon Docks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56265.3,
+                    62042.9
+                ],
+        "name":  "Champion's Dawn Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42924.4,
+                    22729.7
+                ],
+        "name":  "Harvest Den Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41475.2,
+                    23594.3
+                ],
+        "name":  "Hot Springs Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43186.1,
+                    21873.1
+                ],
+        "name":  "Harvest Shore Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    22900.7
+                ],
+        "name":  "Journeykin Outpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42951.9,
+                    23723.2
+                ],
+        "name":  "Astral Ward Moon Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41864.4,
+                    22647.7
+                ],
+        "name":  "Autumn's Vale Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40824.6,
+                    16638.4
+                ],
+        "name":  "Forager's Hunt Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39306.1,
+                    16382.6
+                ],
+        "name":  "Festering Basin Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40127.6,
+                    14659.2
+                ],
+        "name":  "Stricken Plains Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39237.2,
+                    15524.6
+                ],
+        "name":  "Sanguine Crater Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36051.3,
+                    11654.2
+                ],
+        "name":  "Mantle's Arrival Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.2,
+                    12288.6
+                ],
+        "name":  "Hidden Nodule Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BG0PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34312.3,
+                    11578
+                ],
+        "name":  "Alliance Staging Ground",
+        "type":  "waypoint",
+        "chat_code":  "[&BFAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40203.4,
+                    45862.7
+                ],
+        "name":  "Scratch Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38980.3,
+                    46425.7
+                ],
+        "name":  "Promontory Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39809.1,
+                    45114.6
+                ],
+        "name":  "Crumbling Trail Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38284.7,
+                    46256.3
+                ],
+        "name":  "Castaway Circus Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36016.2,
+                    41919.2
+                ],
+        "name":  "Mariner Landing Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37310,
+                    41714.3
+                ],
+        "name":  "Heathen's Hold Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36589.4,
+                    41018.7
+                ],
+        "name":  "Ancient Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21852.2,
+                    104468
+                ],
+        "name":  "Reflection Docks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Reflection Crystal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Reflection Arena Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4MAAA=]",
+        "desc":  "after building the arena"
+    },
+    {
+        "pos":  [
+                    34181,
+                    103953
+                ],
+        "name":  "Harvest Complex Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKAMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33825.5,
+                    102383
+                ],
+        "name":  "Jade Quarry Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34126,
+                    105319
+                ],
+        "name":  "Frozen Sea Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33392,
+                    104381
+                ],
+        "name":  "Brotherhood Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBENAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34978.6,
+                    104479
+                ],
+        "name":  "Speakers Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29844.8,
+                    101425
+                ],
+        "name":  "Arborstone Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29851.8,
+                    100973
+                ],
+        "name":  "Club Canach Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25472.8,
+                    99591.6
+                ],
+        "name":  "Promenade Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25946,
+                    98633
+                ],
+        "name":  "Garden Heights Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26674.2,
+                    99438.3
+                ],
+        "name":  "Ministry Ward Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27869.7,
+                    99381
+                ],
+        "name":  "Lutgardis Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22949.4,
+                    102166
+                ],
+        "name":  "Village Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21672.7,
+                    102058
+                ],
+        "name":  "Monastery Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23637.6,
+                    100727
+                ],
+        "name":  "Haiju Docks Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23191.2,
+                    101452
+                ],
+        "name":  "Daigo Ward Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30896.1,
+                    101005
+                ],
+        "name":  "Junkyard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32842,
+                    103030
+                ],
+        "name":  "Mori Village Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30020.8,
+                    102042
+                ],
+        "name":  "Waypoint zu Heltzer",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30311.7,
+                    102714
+                ],
+        "name":  "Kropa Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32675.6,
+                    101324
+                ],
+        "name":  "Qinkai Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32767.6,
+                    102107
+                ],
+        "name":  "Jade Gate Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37423.6,
+                    102153
+                ],
+        "name":  "Behemoth's Gap Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37815,
+                    103075
+                ],
+        "name":  "Luxon Terminus Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38285.3,
+                    101596
+                ],
+        "name":  "Jadepillar Point Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37631.4,
+                    100871
+                ],
+        "name":  "Park Mining Ops Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24102.9,
+                    22231.4
+                ],
+        "name":  "Tower Courtyard Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24327.1,
+                    23532.9
+                ],
+        "name":  "Droknar's Light Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26331.3,
+                    23073.8
+                ],
+        "name":  "Rata Novus Promenade Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25830,
+                    24166.2
+                ],
+        "name":  "Astral Ward Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26976.9,
+                    23979.3
+                ],
+        "name":  "Garenhoff Refugee Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26836.3,
+                    24387.4
+                ],
+        "name":  "Beacon of Ages Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25402.1,
+                    23927.5
+                ],
+        "name":  "Kestrel's Vow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25559.4,
+                    22867.4
+                ],
+        "name":  "Observation Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25172.4,
+                    20160.5
+                ],
+        "name":  "Bastion of Strength Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24086.1,
+                    19983.7
+                ],
+        "name":  "Bastion of the Celestial Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23898.1,
+                    21158.7
+                ],
+        "name":  "Bastion of the Natural Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23750.8,
+                    19530.4
+                ],
+        "name":  "Bastion of Balance Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25159,
+                    21075.9
+                ],
+        "name":  "Bastion of Knowledge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23134.7,
+                    20587.4
+                ],
+        "name":  "Bastion of the Obscure Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22367.2,
+                    23760.7
+                ],
+        "name":  "Astral Ward Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21733.5,
+                    22801.1
+                ],
+        "name":  "Forward Bivouac Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7748.18,
+                    58054.1
+                ],
+        "name":  "Hunter's Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7618.46,
+                    58835.9
+                ],
+        "name":  "Priory Expedition Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    8698.36,
+                    59533.1
+                ],
+        "name":  "Foothold Bivouac Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11173,
+                    59803.2
+                ],
+        "name":  "Pub Canach Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11740,
+                    57967.3
+                ],
+        "name":  "Dark Leviathan Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11661.4,
+                    59029.4
+                ],
+        "name":  "Hullgarden Pier Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60972.9,
+                    43251.6
+                ],
+        "name":  "Temple of Kormir Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61588.6,
+                    44187.2
+                ],
+        "name":  "Destiny's Gorge Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58615.4,
+                    43742.9
+                ],
+        "name":  "Amnoon Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    40452.9
+                ],
+        "name":  "Lommuld Kraal Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676.5,
+                    42149.4
+                ],
+        "name":  "Makali Outpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59352.1,
+                    41882.9
+                ],
+        "name":  "Brightwater Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59604.9,
+                    40332.9
+                ],
+        "name":  "Highjump Ranch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57691.8,
+                    40331.8
+                ],
+        "name":  "Derelict Delve Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64453.1,
+                    52290.7
+                ],
+        "name":  "Cavern Overlook Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64611,
+                    51738
+                ],
+        "name":  "Windswept Arena Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIKAAA=]",
+        "desc":  "requires arena restoration 2"
+    },
+    {
+        "pos":  [
+                    65172.6,
+                    51485.6
+                ],
+        "name":  "Vantage Dome Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcKAAA=]",
+        "desc":  "requires further exploration"
+    },
+    {
+        "pos":  [
+                    64843.8,
+                    51650.5
+                ],
+        "name":  "Haven Terrace Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60886.5,
+                    52307.6
+                ],
+        "name":  "Joko's Domain Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60442.7,
+                    50248.3
+                ],
+        "name":  "The Scourgeway Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59123.2,
+                    52734.9
+                ],
+        "name":  "Sand Jackal Run Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59187.1,
+                    50521.2
+                ],
+        "name":  "The Darklands Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61423.3,
+                    51140.4
+                ],
+        "name":  "Lair of the Forgotten Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60080.7,
+                    48404.7
+                ],
+        "name":  "Bonestrand Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60363.6,
+                    46367.2
+                ],
+        "name":  "Olishar's Oasis Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61075,
+                    45581
+                ],
+        "name":  "Augury's Shadow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59093.8,
+                    46548.8
+                ],
+        "name":  "Skimmer Ranch Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BGcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66421.2,
+                    54770.7
+                ],
+        "name":  "Vehtendi Academy Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65111.6,
+                    54720.3
+                ],
+        "name":  "Necropolis Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    67375.7,
+                    53930.7
+                ],
+        "name":  "Market Ruins Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63792.2,
+                    52749.9
+                ],
+        "name":  "Cragged Vale Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65531.2,
+                    53474.3
+                ],
+        "name":  "Seborhin Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64290.5,
+                    53303.7
+                ],
+        "name":  "Vehjin Palace Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54424.7,
+                    57340
+                ],
+        "name":  "Anniogel Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53327,
+                    56442.8
+                ],
+        "name":  "Atholma Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66016.1,
+                    61284.5
+                ],
+        "name":  "Apizmic Grounds Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFALAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64765.1,
+                    61579.3
+                ],
+        "name":  "Allied Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66572.2,
+                    58608.9
+                ],
+        "name":  "Yatendi Village Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64761.5,
+                    59142.4
+                ],
+        "name":  "Soul's Vendetta Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63986.3,
+                    57861
+                ],
+        "name":  "Venta Pass Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66277.1,
+                    56515.4
+                ],
+        "name":  "Reclaimed Chantry Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44863.7,
+                    50382
+                ],
+        "name":  "The Underworld Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNELAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46579,
+                    50768.9
+                ],
+        "name":  "Melandru's Lost Domain Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNILAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44341.9,
+                    48961.8
+                ],
+        "name":  "Burning Forest Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35973,
+                    33210
+                ],
+        "name":  "Central Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35727,
+                    33286
+                ],
+        "name":  "Arena Tower Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQIAAA=]",
+        "desc":  "requires guild arena"
+    },
+    {
+        "pos":  [
+                    36293,
+                    33455
+                ],
+        "name":  "Cavern Mine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIIAAA=]",
+        "desc":  "requires guild mine"
+    },
+    {
+        "pos":  [
+                    35393,
+                    33662
+                ],
+        "name":  "Surface Tunnel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35911,
+                    32706
+                ],
+        "name":  "Waterfall Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEIAAA=]",
+        "desc":  "requires further exploration"
+    },
+    {
+        "pos":  [
+                    3804.34,
+                    60931.1
+                ],
+        "name":  "Deepwood Outpost Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4867.48,
+                    61003.2
+                ],
+        "name":  "Sanctum Exterior Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3722.91,
+                    61850.8
+                ],
+        "name":  "Temple of Abnegation Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5162.33,
+                    62438.5
+                ],
+        "name":  "Pilgrim's Rest Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwPAAA=]",
+        "desc":  ""
+    }
+]

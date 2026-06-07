@@ -355,7 +355,7 @@ namespace GW2PS
             {
                 _ = mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('SYNCING WITH DRF...');");
 
-                Uri serverUri = new Uri("wss://drf.rs/ws");
+                Uri serverUri = new Uri("wss://drf.rs/ws/");
 
                 // 1. Connect first (No subprotocols or special headers needed here per GitHub code)
                 await drfSocket.ConnectAsync(serverUri, CancellationToken.None);
@@ -399,12 +399,22 @@ namespace GW2PS
                         string jsonMessage = Encoding.UTF8.GetString(ms.ToArray());
 
                         this.Invoke((MethodInvoker)delegate {
-                            mapView.CoreWebView2.PostWebMessageAsJson(jsonMessage);
+                            try
+                            {
+                                mapView.CoreWebView2.PostWebMessageAsJson(jsonMessage);
+                            }
+                            catch (Exception ex)
+                            {
+                                LogError(ex);
+                            }
                         });
                     }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                LogError(ex);
+            }
         }
 
         private void GpsTimer_Tick(object? sender, EventArgs e)

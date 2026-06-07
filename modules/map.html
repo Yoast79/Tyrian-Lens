@@ -1769,8 +1769,20 @@
 					})
 				);
 
-				const [mRes, iRes, oRes, ...altResults] = await Promise.all([
-					fetch(apiBase + "map_data.json?t=" + Date.now()).catch(() => null),
+				const [
+					portalRes, heartRes, heroRes, mapsRes, regionsRes, sectorsRes, poisRes, vistasRes, waypointsRes,
+					iRes, oRes,
+					...altResults
+				] = await Promise.all([
+					fetch(apiBase + "nodes_zone_portals_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_hearts_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_heropoints_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_maps_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_regions_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_sectors_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_pois_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_vistas_map.json?t=" + Date.now()).catch(() => null),
+					fetch(apiBase + "nodes_waypoints_map.json?t=" + Date.now()).catch(() => null),
 					fetch(apiBase + "nodes_mastery_insight.json?t=" + Date.now()).catch(() => null),
 					fetch(apiBase + "map_options_structure.json?t=" + Date.now()).catch(() => null),
 					...altPromises
@@ -1948,12 +1960,36 @@
 				}
 
 				// 4. Standard Map Data (POIs, Labels, etc.)
-				if (mRes && mRes.ok) {
-					const data = await mRes.json();
+				const mapDataPoints = [];
+				const mapDataFiles = [
+					{ res: portalRes, name: "nodes_zone_portals_map.json" },
+					{ res: heartRes, name: "nodes_hearts_map.json" },
+					{ res: heroRes, name: "nodes_heropoints_map.json" },
+					{ res: mapsRes, name: "nodes_maps_map.json" },
+					{ res: regionsRes, name: "nodes_regions_map.json" },
+					{ res: sectorsRes, name: "nodes_sectors_map.json" },
+					{ res: poisRes, name: "nodes_pois_map.json" },
+					{ res: vistasRes, name: "nodes_vistas_map.json" },
+					{ res: waypointsRes, name: "nodes_waypoints_map.json" }
+				];
+				for (const item of mapDataFiles) {
+					if (item.res && item.res.ok) {
+						try {
+							const arr = await item.res.json();
+							if (Array.isArray(arr)) {
+								mapDataPoints.push(...arr);
+							}
+						} catch (err) {
+							console.error(`Error parsing ${item.name}:`, err);
+						}
+					}
+				}
+
+				if (mapDataPoints.length > 0) {
 					const typeMap = { 'landmark': 'poi', 'waypoint': 'waypoint', 'vista': 'vista', 'heart': 'heart', 'skill': 'heropoint', 'heropoint': 'heropoint', 'mastery': 'mastery' };
 					const labelMapKeys = { 'region': 'region', 'map': 'map_text', 'sector': 'sector' };
 
-					data.points.forEach(p => {
+					mapDataPoints.forEach(p => {
 						let rawType = p.type.toLowerCase();
 						let type = typeMap[rawType] || rawType;
 						let labelKey = labelMapKeys[rawType];
@@ -1965,7 +2001,7 @@
 							});
 							if (p.description || p.desc) {
 								let tooltipHtml = `<div style="text-align: center; font-family: 'Crimson Text', serif; font-size: 13px; color: #e2c07d; line-height: 1.4; padding: 4px; max-width: 250px;">
-									<div style="font-weight: bold; font-size: 15px; margin-bottom: 4px; letter-spacing: 1px; border-bottom: 1px solid #4a3b2a; padding-bottom: 2px; text-transform: uppercase;">${p.name}</div>
+									<div style="font-size: 15px; margin-bottom: 4px; letter-spacing: 1px; border-bottom: 1px solid #4a3b2a; padding-bottom: 2px; text-transform: uppercase;">${p.name}</div>
 									<div style="color: #fff; font-size: 12px; text-transform: none;">${p.description || p.desc}</div>
 								</div>`;
 								l.on('mouseover', e => {
@@ -2003,13 +2039,43 @@
 							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-' + type }) });
 							m.on('mouseover', e => {
 								var pt = map.mouseEventToContainerPoint(e.originalEvent);
-								let tooltipHtml = `<b>${p.name || "Map Point"}</b>`;
-								if (p.description || p.desc) {
-									tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.description || p.desc}</span>`;
+								let tooltipHtml = `<div style="color:#e2c07d; font-size:13px; margin-bottom:2px;">${p.name || "Vista"}</div>`;
+								if (p.desc) {
+									tooltipHtml += `<div style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</div>`;
 								}
 								window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
 							});
 							m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
+
+							// Handle clicks: waypoint/POI copies chatlink, heart opens wiki page
+							if (type === 'waypoint' || type === 'poi') {
+								if (p.chat_code) {
+									m.on('click', () => {
+										try {
+											navigator.clipboard.writeText(p.chat_code);
+										} catch (e) {}
+										window.parent.postMessage("copy:" + p.chat_code, "*");
+										window.parent.postMessage({ action: 'toast', msg: type === 'waypoint' ? 'WAYPOINT COPIED' : 'POI COPIED' }, "*");
+									});
+								}
+							} else if (type === 'heart') {
+								m.on('click', () => {
+									let wikiTitle = p.desc || p.name;
+									if (wikiTitle) {
+										if (wikiTitle.endsWith('.')) {
+											wikiTitle = wikiTitle.slice(0, -1);
+										}
+										window.parent.postMessage({ action: 'openWiki', title: wikiTitle }, '*');
+									}
+								});
+							} else if (type === 'heropoint') {
+								m.on('click', () => {
+									if (p.wiki) {
+										window.parent.postMessage({ action: 'openWiki', title: p.wiki }, '*');
+									}
+								});
+							}
+
 							m.addTo(subLayers[type]);
 						}
 					});
