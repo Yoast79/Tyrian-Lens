@@ -603,7 +603,7 @@ namespace GW2PS
                 55 => "Soulbeast",
                 72 => "Untamed",
                 // Thief
-                52 => "Daredevil",
+                7 => "Daredevil",
                 57 => "Deadeye",
                 71 => "Specter",
                 // Elementalist
@@ -619,7 +619,7 @@ namespace GW2PS
                 60 => "Scourge",
                 64 => "Harbinger",
                 // Revenant
-                14 => "Herald",
+                52 => "Herald",
                 63 => "Renegade",
                 69 => "Vindicator",
                 // Fallback to base profession
