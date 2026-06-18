@@ -45,14 +45,10 @@ Built with a high-performance **C# / .NET 9** core and a modern **WebView2** fro
 
 ## <img src="https://i.imgur.com/EaTJGmb.png" width="24" height="24"> Getting Started
 
-### Prerequisites
-*   [.NET 9 Runtime](https://dotnet.microsoft.com/download/dotnet/9.0)
-*   [WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) (usually included with Windows 10/11)
-
 ### Setup
 1.  Download the latest release.
 2.  Launch `TyrianLens.exe`.
-3.  Add your **Guild Wars 2 API Key** (requires `account`, `inventories`, `characters`, `tradingpost`, `progression`, and `unlocks` permissions) via the in-app settings.
+3.  Add your **Guild Wars 2 API Key** via the in-app settings.
 
 ---
 
