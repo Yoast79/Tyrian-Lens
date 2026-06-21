@@ -4,6 +4,7 @@
 
 Built with a high-performance **C# / .NET 9** core and a modern **WebView2** front-end, it offers a seamless, premium experience for both casual explorers and hardcore legendary hunters.
 
+[Visit the Tyrian Lens Website](https://tyrianlens.com/)
 ---
 
 ## <img src="https://i.imgur.com/zjWWdT7.png" width="24" height="24"> Key Features
