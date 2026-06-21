@@ -234,7 +234,7 @@
 			<div class="main-layout">
 				<div id="nav-panel" class="nav-panel">
 					<div style="position: relative;">
-						<input type="text" id="event-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+						<input type="text" id="event-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)" autocomplete="off">
 							<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('event-search').value=''; handleSearch('');">X</span>
 						</div>
 				</div>
@@ -920,27 +920,21 @@
 														playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " in " + f + " minutes");
 														alertHistory[name + '-' + f] = true;
 														setTimeout(()=> delete alertHistory[name + '-' + f], 65000);
-
-														if (alertOnceTimers[name]) {
-															delete alertOnceTimers[name];
-															localStorage.setItem('gw2_alert_once_timers', JSON.stringify(alertOnceTimers));
-															delete trackedTimers[name];
-															localStorage.setItem('gw2_tracked_timers', JSON.stringify(trackedTimers));
-															setTimeout(() => renderView(true), 100);
-														}
 													}
 												});
 											} else {
 												const elapsed = Math.round(state.total - state.remain);
-												if (elapsed === 0 && !alertHistory[name + '-0'] && freq.includes(0)) {
-													window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
-													if (localStorage.getItem('gw2_systray_notifications') === 'true') {
-														window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " is ACTIVE!"}, '*');
+												if (elapsed >= 0 && elapsed < 10 && !alertHistory[name + '-0']) {
+													if (freq.includes(0)) {
+														window.parent.postMessage({action:'eventPop', msg: name + " IS ACTIVE"}, '*');
+														if (localStorage.getItem('gw2_systray_notifications') === 'true') {
+															window.parent.postMessage({action:'trayNotification', title: 'Timer Alert', text: name + " is ACTIVE!"}, '*');
+														}
+														let soundOverride = (name === "Tequatl the Sunless") ? "https://gw2ps.local/Assets/Sounds/something_in_the_water.mp3" : null;
+														playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
 													}
-													let soundOverride = (name === "Tequatl the Sunless") ? "https://gw2ps.local/Assets/Sounds/something_in_the_water.mp3" : null;
-													playTimerNotification(localStorage.getItem('gw2_timer_sound'), name + " is active", soundOverride);
 													alertHistory[name + '-0'] = true;
-													setTimeout(()=> delete alertHistory[name + '-0'], 5000);
+													setTimeout(()=> delete alertHistory[name + '-0'], 60000);
 
 													if (alertOnceTimers[name]) {
 														delete alertOnceTimers[name];

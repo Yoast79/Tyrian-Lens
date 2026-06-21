@@ -269,7 +269,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.4.0";
+			const APP_VERSION = "1.4.1";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -514,7 +514,7 @@
                                     const playerProg = accAchievements.find(a => a.id === achId);
                                     const isDone = playerProg ? playerProg.done : false;
                                     const progress = playerProg ? playerProg.current : 0;
-                                    const max = playerProg ? playerProg.max : 5;
+                                    const max = playerProg ? playerProg.max : ([8448, 7706].includes(achId) ? 3 : 5);
                                     if (clearsStatus[id].isDone !== isDone || clearsStatus[id].progress !== progress || clearsStatus[id].max !== max) {
                                         clearsStatus[id].isDone = isDone;
                                         clearsStatus[id].progress = progress;

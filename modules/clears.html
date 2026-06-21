@@ -101,8 +101,17 @@
 			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
             let activeKey = localStorage.getItem('gw2_active_key');
 
-            async function fetchJSON(url) {
-                try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+            async function fetchJSON(url, timeoutMs = 8000) {
+                const controller = new AbortController();
+                const id = setTimeout(() => controller.abort(), timeoutMs);
+                try {
+                    const r = await fetch(url, { signal: controller.signal });
+                    clearTimeout(id);
+                    return r.ok ? await r.json() : null;
+                } catch(e) {
+                    clearTimeout(id);
+                    return null;
+                }
             }
 
             function formatName(str) {
@@ -388,6 +397,61 @@
                     <div class="cat-content" style="padding:10px;${isDungeonsOpen ? '' : ' display:none;'}">${dungeonsHtml || '<div style="font-size:11px; color:#8a7a5f;">Failed to load dungeons.</div>'}</div>
                 </div>`;
 
+                // CONVERGENCE
+                const CONVERGENCE_ITEMS = [
+                    { name: "Mount Balrior", id: 8448 },
+                    { name: "Outer Nyos", id: 7706 }
+                ];
+
+                let convCleared = 0;
+                let convTotal = CONVERGENCE_ITEMS.length;
+                let convHtml = '';
+                
+                CONVERGENCE_ITEMS.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) convCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 3;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
+                    
+                    clearsStatus[m.id] = { name: m.name, isDone: isDone, cat: 'CONVERGENCE', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
+
+                    convHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                        <div class="clear-item-left">
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${m.name}', 'CONVERGENCE')"></span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let convProgressHtml = convCleared === convTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${convCleared}/${convTotal}</span>`;
+
+                const convSubTitle = `Weekly Convergences`;
+                const isConvSubOpen = menuStates['sub_' + convSubTitle.trim()] === true; // default to closed (false)
+                
+                let convergenceCatHtml = `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${convSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${convSubTitle}</span>
+                        ${convProgressHtml}
+                    </div>
+                    <div class="cat-content" style="${isConvSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
+                        ${convHtml}
+                    </div>
+                </div>`;
+
+                const isConvergenceOpen = menuStates['cat_CONVERGENCE'] !== false; // default to open (true)
+                combinedHtml += `
+                <div class="clear-cat">
+                    <div class="cat-header" onclick="toggleCat(this, 'cat_CONVERGENCE')"><span class="cat-title">CONVERGENCE</span></div>
+                    <div class="cat-content" style="padding:10px;${isConvergenceOpen ? '' : ' display:none;'}">${convergenceCatHtml}</div>
+                </div>`;
+
                 // WEEKLY RIFTS
                 const RIFT_ROTATION = {
                     1: [ { name: "Straits of Devastation", id: 7067 }, { name: "Elon Riverlands", id: 7060 }, { name: "Domain of Istan", id: 7028 } ],
@@ -416,6 +480,12 @@
                     { name: "Bava Nisos", id: 8766 }
                 ];
 
+                const RIFT_VOE_PERM = [
+                    { name: "Shipwreck Strand", id: 8980 },
+                    { name: "Starlit Weald", id: 8892 },
+                    { name: "Eternity's Garden", id: 9303 }
+                ];
+
                 function getWeeklyRotationWeekIndex() {
                     const epoch = Date.UTC(2023, 10, 6, 7, 30, 0); // Monday Nov 6, 2023 07:30 UTC
                     const now = Date.now();
@@ -426,18 +496,20 @@
                 let riftsHtml = '';
                 const wIdx = getWeeklyRotationWeekIndex();
                 const activeRotating = RIFT_ROTATION[wIdx] || [];
-                const sotoActiveMaps = [...RIFT_SOTO_PERM, ...activeRotating];
                 
                 // Clean up weekly shifting entries from watchlist when the week flips
                 const activeRiftIds = new Set([
                     ...RIFT_SOTO_PERM.map(m => String(m.id)),
                     ...activeRotating.map(m => String(m.id)),
-                    ...RIFT_JW_PERM.map(m => String(m.id))
+                    ...RIFT_JW_PERM.map(m => String(m.id)),
+                    ...RIFT_VOE_PERM.map(m => String(m.id))
                 ]);
+                const activeConvIds = new Set(CONVERGENCE_ITEMS.map(m => String(m.id)));
                 let watchedCleaned = false;
                 watched = watched.filter(id => {
                     const idStr = String(id);
                     if (/^\d+$/.test(idStr)) {
+                        if (activeConvIds.has(idStr)) return true;
                         if (!activeRiftIds.has(idStr)) {
                             watchedCleaned = true;
                             return false;
@@ -449,12 +521,12 @@
                     localStorage.setItem('gw2_watched_clears', JSON.stringify(watched));
                 }
                 
-                // Group 1: Secrets of the Obscure & Core
+                // Group 1: Secrets of the Obscure
                 let sotoCleared = 0;
-                let sotoTotal = sotoActiveMaps.length;
+                let sotoTotal = RIFT_SOTO_PERM.length;
                 let sotoHtml = '';
                 
-                sotoActiveMaps.forEach(m => {
+                RIFT_SOTO_PERM.forEach(m => {
                     const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
                     const isDone = playerProg ? playerProg.done : false;
                     if (isDone) sotoCleared++;
@@ -479,7 +551,7 @@
 
                 let sotoProgressHtml = sotoCleared === sotoTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${sotoCleared}/${sotoTotal}</span>`;
 
-                const sotoSubTitle = `Secrets of the Obscure & Core (Week ${wIdx})`;
+                const sotoSubTitle = `Secrets of the Obscure`;
                 const isSotoSubOpen = menuStates['sub_' + sotoSubTitle.trim()] === true; // default to closed (false)
                 riftsHtml += `
                 <div class="sub-cat">
@@ -492,7 +564,50 @@
                     </div>
                 </div>`;
 
-                // Group 2: Janthir Wilds
+                // Group 2: Rotating Maps
+                let rotatingCleared = 0;
+                let rotatingTotal = activeRotating.length;
+                let rotatingHtml = '';
+                
+                activeRotating.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) rotatingCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 5;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
+                    
+                    const riftName = m.name + " Rift";
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
+
+                    rotatingHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                        <div class="clear-item-left">
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let rotatingProgressHtml = rotatingCleared === rotatingTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${rotatingCleared}/${rotatingTotal}</span>`;
+
+                const rotatingSubTitle = `Rotating Maps`;
+                const isRotatingSubOpen = menuStates['sub_' + rotatingSubTitle.trim()] === true; // default to closed (false)
+                riftsHtml += `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${rotatingSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${rotatingSubTitle}</span>
+                        ${rotatingProgressHtml}
+                    </div>
+                    <div class="cat-content" style="${isRotatingSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
+                        ${rotatingHtml}
+                    </div>
+                </div>`;
+
+                // Group 3: Janthir Wilds
                 let jwCleared = 0;
                 let jwTotal = RIFT_JW_PERM.length;
                 let jwHtml = '';
@@ -532,6 +647,49 @@
                     </div>
                     <div class="cat-content" style="${isJwSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                         ${jwHtml}
+                    </div>
+                </div>`;
+
+                // Group 4: Visions of Eternity
+                let voeCleared = 0;
+                let voeTotal = RIFT_VOE_PERM.length;
+                let voeHtml = '';
+                
+                RIFT_VOE_PERM.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) voeCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 5;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
+                    
+                    const riftName = m.name + " Rift";
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
+
+                    voeHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                        <div class="clear-item-left">
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let voeProgressHtml = voeCleared === voeTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${voeCleared}/${voeTotal}</span>`;
+
+                const voeSubTitle = `Visions of Eternity`;
+                const isVoeSubOpen = menuStates['sub_' + voeSubTitle.trim()] === true; // default to closed (false)
+                riftsHtml += `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${voeSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${voeSubTitle}</span>
+                        ${voeProgressHtml}
+                    </div>
+                    <div class="cat-content" style="${isVoeSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
+                        ${voeHtml}
                     </div>
                 </div>`;
 

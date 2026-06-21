@@ -91,8 +91,29 @@
 		<script>
 			/*<![CDATA[*/
 			let activeKey = localStorage.getItem('gw2_active_key');
-			let itemCache = {};
+			
+			// Setup parent-frame-backed and local-storage-persisted cache
+			if (!window.parent.globalItemCache) {
+				window.parent.globalItemCache = {};
+				try {
+					const cachedData = localStorage.getItem('gw2_item_metadata_cache');
+					if (cachedData) {
+						window.parent.globalItemCache = JSON.parse(cachedData);
+					}
+				} catch(e) {
+					console.error("Failed to parse gw2_item_metadata_cache", e);
+				}
+			}
+			let itemCache = window.parent.globalItemCache;
             let itemLocations = {}; // { itemId: { "Bank": count } }
+
+			function saveItemCache() {
+				try {
+					localStorage.setItem('gw2_item_metadata_cache', JSON.stringify(window.parent.globalItemCache));
+				} catch(e) {
+					console.error("Failed to save gw2_item_metadata_cache", e);
+				}
+			}
 
 			async function fetchJSON(url) {
 				try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
@@ -154,11 +175,9 @@
 				document.getElementById('loader').style.display = 'flex';
 				document.getElementById('ui-root').style.display = 'none';
 				
-                // Explicitly clear memory before rebuilding
+                // Explicitly clear dynamic data before rebuilding
                 itemLocations = null;
-                itemCache = null;
                 itemLocations = {};
-                itemCache = {};
 
 				const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 				const apiBase = isDevMode 
@@ -179,8 +198,8 @@
 					"nodes_pois_map.json", "nodes_vistas_map.json", "nodes_waypoints_map.json"
 				];
 
-				const mapPromises = mapFiles.map(file => fetchJSON(apiBase + file + "?t=" + Date.now()));
-				const altPromises = altFiles.map(file => fetchJSON(apiBase + file + "?t=" + Date.now()));
+				const mapPromises = mapFiles.map(file => fetchJSON(apiBase + file));
+				const altPromises = altFiles.map(file => fetchJSON(apiBase + file));
 
 				const [bank, mats, inv, wallet, chars, ...allData] = await Promise.all([
 					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
@@ -449,20 +468,46 @@
                 const itemIds = keys.filter(k => !k.toString().startsWith('curr_') && !k.toString().startsWith('maploc_') && !k.toString().startsWith('wvwloc_') && !k.toString().startsWith('farmnode_') && !k.toString().startsWith('npc_') && !k.toString().startsWith('npcgroup_'));
                 const currIds = keys.filter(k => k.toString().startsWith('curr_')).map(k => k.replace('curr_', ''));
 
-                // Fetch Items
-                for (let i = 0; i < itemIds.length; i += 200) {
-                    document.getElementById('loader-text').innerText = `INDEXING ITEMS (${Math.round((i/itemIds.length)*100)}%)...`;
-                    const chunk = itemIds.slice(i, i+200);
-                    const data = await fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
-                    if(data) data.forEach(it => itemCache[it.id] = it);
+                // Fetch Items (Only those missing from cache, parallelized in chunks of 200)
+                const missingIds = itemIds.filter(id => !itemCache[id]);
+                if (missingIds.length > 0) {
+                    const chunks = [];
+                    for (let i = 0; i < missingIds.length; i += 200) {
+                        chunks.push(missingIds.slice(i, i + 200));
+                    }
+                    
+                    const chunkPromises = chunks.map((chunk, index) => {
+                        const pct = Math.round((index / chunks.length) * 100);
+                        document.getElementById('loader-text').innerText = `INDEXING NEW ITEMS (${pct}%)...`;
+                        return fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+                    });
+                    
+                    const results = await Promise.all(chunkPromises);
+                    let cacheUpdated = false;
+                    results.forEach(data => {
+                        if (data) {
+                            data.forEach(it => {
+                                itemCache[it.id] = it;
+                                cacheUpdated = true;
+                            });
+                        }
+                    });
+                    
+                    if (cacheUpdated) {
+                        saveItemCache();
+                    }
                 }
 
-                // Fetch Currencies
-                if (currIds.length > 0) {
-                    const cData = await fetchJSON(`https://api.guildwars2.com/v2/currencies?ids=${currIds.join(',')}`);
-                    if(cData) cData.forEach(c => {
-                        itemCache['curr_' + c.id] = { name: c.name, icon: c.icon, rarity: 'Currency', isCurrency: true };
-                    });
+                // Fetch Currencies (Only those missing from cache)
+                const missingCurrIds = currIds.filter(id => !itemCache['curr_' + id]);
+                if (missingCurrIds.length > 0) {
+                    const cData = await fetchJSON(`https://api.guildwars2.com/v2/currencies?ids=${missingCurrIds.join(',')}`);
+                    if (cData) {
+                        cData.forEach(c => {
+                            itemCache['curr_' + c.id] = { name: c.name, icon: c.icon, rarity: 'Currency', isCurrency: true };
+                        });
+                        saveItemCache();
+                    }
                 }
 
 				document.getElementById('loader').style.display = 'none';
