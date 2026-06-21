@@ -1,9 +1,7 @@
 name: Tyrian Lens High-Fidelity Notifier
-
 on:
   release:
     types: [published]
-
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -15,7 +13,6 @@ jobs:
         run: |
           python3 -c "
           import os, json, urllib.request
-
           # Get variables from GitHub environment
           event_path = os.environ['GITHUB_EVENT_PATH']
           with open(event_path, 'r') as f:
@@ -25,7 +22,6 @@ jobs:
           version = event_data['release']['tag_name']
           body = event_data['release']['body']
           url = event_data['release']['html_url']
-
           payload = {
               'username': 'Tyrian Lens Update',
               'avatar_url': 'https://i.imgur.com/HmyYArl.png',
@@ -33,14 +29,13 @@ jobs:
               'allowed_mentions': { 'parse': ['roles', 'everyone', 'users'] },
               'embeds': [{
                   'title': f'Version Release: {version}',
-                  'description': f'**Changelog:**\n{body}',
+                  'description': f'**Changelog:**\n{body}\n\n **[Download from Website](https://tyrianlens.com/download)** | **[View on GitHub]({url})**',
                   'url': url,
                   'color': 14860413,
                   'thumbnail': { 'url': 'https://i.imgur.com/HmyYArl.png' },
                   'footer': { 'text': 'Tyrian Lens - Professional GW2 Utility' }
               }]
           }
-
           try:
               req = urllib.request.Request(
                   os.environ['DISCORD_WEBHOOK'], 
