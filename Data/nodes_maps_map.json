@@ -1828,6 +1828,57 @@
         "mastery_icon":  "",
         "desc":  "Raid Wing 8 & Convergence"
     },
+	{
+        "pos":  [
+                    47016,
+                    31320
+                ],
+        "name":  "Dominion of Winds",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+	{
+        "pos":  [
+                    48880,
+                    44488
+                ],
+        "name":  "Scavenger's Causeway",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+	{
+        "pos":  [
+                    45968,
+                    42952
+                ],
+        "name":  "City of Arah",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
     {
         "pos":  [
                     36208,
