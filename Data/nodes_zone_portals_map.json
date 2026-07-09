@@ -1961,6 +1961,46 @@
     },
 	{
         "pos":  [
+                    35361,
+                    33680
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "Portal to Auric Basin"
+    },
+	{
+        "pos":  [
+                    34788,
+                    33681
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "Portal To Gilded Hollow (Guild Hall)"
+    },
+	{
+        "pos":  [
+                    38751,
+                    31988
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+	{
+        "pos":  [
+                    38322,
+                    33126
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  ""
+    },
+	{
+        "pos":  [
                     58027,
                     43731
                 ],

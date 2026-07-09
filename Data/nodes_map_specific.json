@@ -64006,5 +64006,3119 @@
     "category": "map_specific",
     "layer": "node_noxious_seed_pod",
     "desc": ""
-}
+},
+{
+        "pos": [
+            22301,
+            23270.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 201,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22336.5,
+            23258.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 225,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22289.3,
+            23205.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 233,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22220.4,
+            23202.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 226,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22262,
+            23140
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 256,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22267.8,
+            23096.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 256,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22310.9,
+            23088.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 254,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22073.8,
+            22509.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 245,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22047.3,
+            22524.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 253,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22031.6,
+            22548.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 258,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21979.4,
+            22556.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 270,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21910.7,
+            22489.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 263,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21914.2,
+            22457.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 270,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21938.1,
+            22459.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 260,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21964.8,
+            22448.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 270,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22495.8,
+            22301.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 260,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22502.1,
+            22275.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 273,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22506.2,
+            22259.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 282,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22508.9,
+            22245.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 288,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22511.9,
+            22232
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 297,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22517.9,
+            22206.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 308,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22523.1,
+            22185.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 317,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22807.5,
+            22742.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 316,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22816.2,
+            22838.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 336,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22746.7,
+            22732.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 321,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22705.9,
+            22834.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 323,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22762.4,
+            22873
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 303,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22682.8,
+            22815.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 284,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22769.8,
+            22754.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 282,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22791.7,
+            22871.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 271,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22823.7,
+            22826.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 258,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22704.7,
+            22737.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 260,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22832,
+            22858.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 240,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21856,
+            22315.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 378,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21889.6,
+            22281.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 401,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21887.4,
+            22347.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 401,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21917.9,
+            22332.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 413,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21880,
+            22292.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 434,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21983.7,
+            22314.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 441,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21998.5,
+            22255.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 449,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22028.9,
+            22269.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 476,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21964.1,
+            22301.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 468,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21909.6,
+            22317.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 500,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21903.6,
+            22375.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 486,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21856.8,
+            22315.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 475,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21839.6,
+            22368.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 461,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21532.8,
+            23148
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 232,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21338.5,
+            23095.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 225,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21241.3,
+            22925.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 361,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21247.5,
+            22741.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 422,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21363.6,
+            22771.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 434,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21515.8,
+            22867.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 455,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21613.1,
+            22985.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 462,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21611.6,
+            23086.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 458,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21503,
+            23115.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 459,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21390.8,
+            23089.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 449,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21232.5,
+            22945.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 423,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21163.2,
+            22867
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 413,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21153.4,
+            22793.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 410,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21104.5,
+            22466.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 307,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21174.1,
+            23465.5
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 248,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21219.6,
+            23470.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 248,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21228.5,
+            23511.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 267,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21169.9,
+            23511.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 269,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21149.3,
+            23482.9
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 279,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21145.9,
+            23467.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 280,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21225.6,
+            23455.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 358,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21164.4,
+            23500.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 377,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21147.1,
+            23482.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 367,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            21267.8,
+            23432.4
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 311,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22059.2,
+            22315.3
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 263,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22228.8,
+            23690.7
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 315,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22241.7,
+            23619.2
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 321,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22255.9,
+            23545.6
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 327,
+        "map_id": 1526,
+        "map_name": "Inner Nayos",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            42078.2,
+            38200.8
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 18,
+        "map_id": 536,
+        "map_name": "A Vision of Darkness",
+        "expac": "core",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            42091.4,
+            38190.1
+        ],
+        "node": "Calcified Gasp",
+        "yields": [
+            "Calcified Gasp"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
+        "alt": 21,
+        "map_id": 536,
+        "map_name": "A Vision of Darkness",
+        "expac": "core",
+        "category": "map_specific",
+        "layer": "node_calcified_gasp",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22911.9,
+            20906.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 496,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22911.9,
+            20906.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 463,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22912,
+            20906.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 430,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22912,
+            20906.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 397,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22971.6,
+            21015.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 366,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22971.7,
+            21057
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 340,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            22971.7,
+            21098.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 315,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23253.3,
+            21507.9
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 277,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23231.2,
+            21507.9
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 290,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23204.7,
+            21507.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 303,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23182.8,
+            21507.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 314,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23162.1,
+            21507.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 325,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23141.2,
+            21507.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 334,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24152.9,
+            19515.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 459,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24194.7,
+            19515.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 484,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24236.2,
+            19515.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 494,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24277.9,
+            19515.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 484,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24319.7,
+            19515.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 459,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24202.1,
+            19328.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 397,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24107,
+            19329.1
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 445,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24121.1,
+            19351.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 419,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24158.1,
+            19426.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 432,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24135.1,
+            19496.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 417,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24122.1,
+            19489.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 392,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24200.3,
+            19472.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 394,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24159,
+            19381.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 363,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24199.1,
+            19490.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 362,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24245.2,
+            19631.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 376,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24259.9,
+            19674.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 384,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24237.6,
+            19595.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 400,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24203,
+            19618.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 432,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24239.7,
+            19719.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 445,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24268,
+            19842.1
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 436,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24281.5,
+            19795.3
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 407,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24287.4,
+            19712.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 419,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            25202.9,
+            20309.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 322,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            25083.8,
+            20336.1
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 313,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            25066.5,
+            20340.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 294,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24952.5,
+            20313.1
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 306,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24800.2,
+            20307.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 297,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24911.8,
+            20295.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 362,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24870.2,
+            20362.2
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 349,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24828.6,
+            20429.1
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 336,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24511.2,
+            20678.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 278,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24517.6,
+            20706
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 303,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24504,
+            20807.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 304,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24538.1,
+            20821.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 289,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24557.9,
+            21073.2
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 225,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24590.4,
+            21033.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 249,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24665,
+            21059.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 227,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24727.4,
+            21102.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 250,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24725.9,
+            21283.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 229,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24767.6,
+            21283.6
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 255,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24809.3,
+            21283.5
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 280,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24808.1,
+            21414.9
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 256,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24771.5,
+            21370.9
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 231,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24766.6,
+            21421.4
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 219,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24779.4,
+            21458.8
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 237,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24764.4,
+            21465
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 213,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            25297.6,
+            20353.7
+        ],
+        "node": "Pinch of Stardust",
+        "yields": [
+            "Pinch of Stardust"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+        "alt": 299,
+        "map_id": 1517,
+        "map_name": "Amnytas",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_pinch_of_stardust",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24122,
+            23327.3
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 484,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24230.3,
+            23561.3
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 563,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24230.3,
+            23602.3
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 580,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24256.9,
+            23633.5
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 594,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24297.1,
+            23640.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 615,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24332.6,
+            23620.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 635,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24346.6,
+            23581.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 651,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24332.4,
+            23543.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 656,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24296.9,
+            23522.6
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 662,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24256.6,
+            23529.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 669,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24149.9,
+            23271.1
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 599,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24147,
+            23272.5
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 614,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24148.4,
+            23271.5
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 628,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24078.9,
+            23306.6
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 644,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24053.1,
+            23315.9
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 660,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24007.8,
+            23333.5
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 678,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23985.8,
+            23290.9
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 702,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23975.6,
+            23291.3
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 718,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23961.7,
+            23293.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 730,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23970.2,
+            23243.1
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 727,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23942.7,
+            23239.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 745,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23917.5,
+            23234.7
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 762,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23919.2,
+            23234.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 779,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23865.1,
+            23175.9
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 796,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23845.7,
+            23165.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 808,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23840.6,
+            23144.5
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 817,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23812.2,
+            23120.6
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 822,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24047.3,
+            23186.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 824,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24004.3,
+            23193.6
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 808,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            23963.1,
+            23199.8
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 793,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24131.6,
+            23350.4
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24155.3,
+            23360.3
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24179,
+            23350.7
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24188.4,
+            23326.6
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24178.9,
+            23303.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24155.4,
+            23293.4
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    },
+    {
+        "pos": [
+            24131.4,
+            23303.2
+        ],
+        "node": "Static Charge",
+        "yields": [
+            "Static Charge"
+        ],
+        "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+        "alt": 483,
+        "map_id": 1510,
+        "map_name": "Skywatch Archipelago",
+        "expac": "soto",
+        "category": "map_specific",
+        "layer": "node_static_charge",
+        "desc": ""
+    }
 ]
