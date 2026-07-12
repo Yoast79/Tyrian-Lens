@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<style>
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10, 8, 5, 0.3)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
+			::-webkit-scrollbar-thumb:hover { background: var(--text-primary, #e2c07d); }
+			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
+			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 20px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; margin: 0; text-transform: uppercase; }
+
+			.branding-wrap { text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-color, #4a3b2a); flex-shrink: 0; }
+			.branding-icon { width: 120px; height: auto; filter: drop-shadow(0 0 15px rgba(226, 192, 125, 0.2)); }
+			.version-tag { font-size: 11px; color: var(--text-muted, #8a7a5f); letter-spacing: 3px; margin-top: 10px; font-weight: bold; }
+
+			#help-container { flex: 1 1 auto; overflow-y: auto; padding-right: 5px; }
+
+			.help-cat { margin-bottom: 10px; border: 1px solid var(--border-color, #2a2015); background: var(--bg-panel, rgba(0,0,0,0.4)); }
+			.cat-header { background: var(--bg-button, #1a1510); padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; border-bottom: 1px solid var(--border-color, #2a2015); transition: 0.2s; }
+			.cat-header:hover { border-color: var(--border-highlight, #e2c07d) !important; box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
+			.cat-title { font-size: 13px; letter-spacing: 1px; color: var(--text-primary, #e2c07d); font-weight: bold; }
+			.cat-icon { font-size: 12px; color: var(--border-color, #4a3b2a); transition: 0.3s; }
+			.cat-header.active .cat-icon { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
+
+			.cat-content { padding: 15px; display: none; background: var(--bg-panel, rgba(15,12,10,0.6)); font-size: 12px; color: var(--text-muted, #dcb36b); text-transform: none; line-height: 1.5; }
+			.cat-content h4 { color: var(--text-primary, #e2c07d); margin: 0 0 5px 0; font-size: 13px; text-transform: uppercase; border-bottom: 1px dashed var(--border-color, #332a1e); padding-bottom: 3px; }
+			.cat-content p { margin: 0 0 12px 0; }
+			.cat-content p:last-child { margin-bottom: 0; }
+			.cat-content ul { margin: 0 0 10px 0; padding-left: 20px; }
+			.cat-content li { margin-bottom: 4px; }
+			.highlight { color: #fff; font-weight: bold; }
+
+			.shortcut-grid { display: grid; grid-template-columns: 1fr auto; gap: 8px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #332a1e); padding: 10px; margin-bottom: 10px; }
+			.shortcut-row { font-size: 11px; color: var(--text-muted, #8a7a5f); text-transform: uppercase; letter-spacing: 1px; }
+			.shortcut-key { font-size: 11px; color: var(--text-primary, #e2c07d); font-weight: bold; background: rgba(226, 192, 125, 0.1); padding: 2px 6px; border: 1px solid var(--border-color, #4a3b2a); border-radius: 2px; }
+
+			.discord-btn, .website-btn {
+			margin-top: 15px;
+			background: var(--bg-panel, rgba(20, 15, 10, 0.8));
+			border: 1px solid var(--border-color, #4a3b2a);
+			color: var(--text-primary, #e2c07d);
+			padding: 12px;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			text-decoration: none;
+			font-weight: bold;
+			letter-spacing: 2px;
+			font-size: 12px;
+			position: relative;
+			overflow: hidden;
+			}
+			.discord-btn:hover, .website-btn:hover {
+			background: rgba(226, 192, 125, 0.08);
+			border-color: var(--text-primary, #e2c07d);
+			color: #fff;
+			box-shadow: inset 0 0 15px rgba(226, 192, 125, 0.1), 0 0 10px rgba(226, 192, 125, 0.2);
+			}
+
+			.discord-icon, .website-icon {
+			width: 24px;
+			height: auto;
+			opacity: 0.8;
+			transition: all 0.3s ease;
+			filter: drop-shadow(0 0 2px rgba(226, 192, 125, 0.4));
+			}
+
+			.discord-btn:hover .discord-icon, .website-btn:hover .website-icon {
+			opacity: 1;
+			filter: drop-shadow(0 0 8px rgba(226, 192, 125, 0.8));
+			transform: scale(1.1);
+			}
+
+			.donation-box { margin-top: 10px; background: var(--bg-panel, rgba(20, 15, 10, 0.8)); border: 1px solid var(--text-primary, #e2c07d); padding: 15px; text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.5); flex-shrink: 0; }
+			.donation-text { font-size: 11px; color: var(--text-muted, #dcb36b); margin-bottom: 10px; font-style: italic; text-transform: none; line-height: 1.4; }
+			.donation-acc { font-size: 14px; font-weight: bold; color: #fff; letter-spacing: 2px; background: rgba(226, 192, 125, 0.1); padding: 5px 10px; display: inline-block; border: 1px solid var(--border-color, #4a3b2a); }
+
+			body.ui-large .cat-title { font-size: 15px; }
+			body.ui-large .cat-content { font-size: 14px; }
+			body.ui-large .cat-content h4 { font-size: 15px; }
+			body.ui-large .shortcut-row, body.ui-large .shortcut-key { font-size: 13px; }
+			body.ui-large .discord-btn, body.ui-large .website-btn { font-size: 14px; }
+			body.ui-large .donation-text { font-size: 13px; }
+			body.ui-large .donation-acc { font-size: 16px; }
+		</style>
+	</head>
+	<body>
+		<div class="branding-wrap">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="branding-icon" alt="Tyrian Lens Logo" />
+			<div class="version-tag" id="version-display">TYRIAN LENS - v1.3.2</div>
+		</div>
+
+		<div id="help-container">
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">ACCOUNT CONNECTION & KEY SETTINGS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>API Key Integration</h4>
+					<p>
+						Tyrian Lens requires a Guild Wars 2 API key to display your account data securely. Create a key at the official ArenaNet account portal. For full functionality, your key requires the following permissions: <span class="highlight">account</span>, <span class="highlight">inventories</span>, <span class="highlight">characters</span>, <span class="highlight">progression</span>, <span class="highlight">wallet</span>, <span class="highlight">unlocks</span>, and <span class="highlight">trading</span>.
+					</p>
+					<h4>Visual Customization & Scale</h4>
+					<p>
+						Adjust scaling preferences and select interface themes (Sylvari, Asura, Charr, Norn, Human) within settings. Left-hand panels (Map, Timers, Farming) and right-hand panels (Wiki, API, Settings) act independently, allowing you to run layouts on both sides of the screen simultaneously.
+					</p>
+					<h4>DRF Live Loot Integration</h4>
+					<p>
+						(Optional) Link the Farming Tracker with the Drop Research Facilities (DRF) addon to enable live drop tracking. This automatically logs all item drops during grinding sessions without delay. The tracker will still work without this, but you have to wait for the GW2 API to refresh.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">INTERACTIVE MAPS & GPS NAVIGATION</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Mumble Link Client Integration</h4>
+					<p>
+						The Leaflet-powered maps use Guild Wars 2 Mumble Link data for live location services. The map automatically snaps to your active character's location, tracks coordinate changes, and shifts between Tyria and WvW layers in real time.
+					</p>
+					<h4>Interactive Map Overlays</h4>
+					<p>
+						Use the map options panel to toggle many icons on the map like: gathering nodes, chests, ranger pet locations, service NPCs and many more! Clicking a NPC icon will show you the items they are selling.
+					</p>
+					<h4>Personal Map Markers</h4>
+					<p>
+						You can place custom icons directly onto the map. Use <span class="highlight">ALT + LEFT CLICK</span> to drop a waypoint, and click directly on the placed marker to remove it.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">ACCOUNT WIDE STORAGE & SEARCH</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Unified Account Search</h4>
+					<p>
+						Search and filter your entire bank, material storage, shared slots, and individual character inventories simultaneously from a single search box.
+					</p>
+					<h4>Character Roster & Inventories</h4>
+					<p>
+						Check bag slots, equipment, birthday countdowns, and playtime across your entire character roster without having to swap characters in-game.
+					</p>
+					<h4>Material Storage & Wardrobes</h4>
+					<p>
+						Browse account-wide collections, skin unlocks, and crafting material quantities. Click on items to open their official Guild Wars 2 Wiki entries.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">HERO PANEL & BUILD THEORYCRAFTING</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Live Hero Equipment & Attributes</h4>
+					<p>
+						Inspect equipped weapons, armor, and accessories. Dynamic tooltips supply full item stats and match item rarity colors.
+					</p>
+					<h4>Specializations & Builds</h4>
+					<p>
+						View slotted specializations, selected traits, and active utility skills. You can review your loaded template properties directly in the interface.
+					</p>
+					<h4>Interactive Build Planner</h4>
+					<p>
+						Plan your builds and theorycraft gear sets using the layout editor. Check custom trait lines, stats distributions, and utility combinations. Share them easily with your friends.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">TRADING POST & ECONOMY DATA</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Delivery Box Notification</h4>
+					<p>
+						The Trading Post navigation icon updates to a notification graphic when you have items or gold waiting. Hover over the icon to display an exact breakdown of total waiting items and formatted coin values.
+					</p>
+					<h4>Investment Charts & Markets</h4>
+					<p>
+						Track buy and sell orders, historical price updates, and active TP listings. The portfolio tracker plots profit and return-on-investment (ROI) charts for saved item investments.
+					</p>
+					<h4>Smart Crafting Engine</h4>
+					<p>
+						Calculate net crafting profits by cross-referencing live market pricing against materials already inside your personal bank and material storage.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">EVENTS, BOSSES & PROGRESSION</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Meta Watchlist & Boss Timers</h4>
+					<p>
+						Monitor world boss schedules and active meta timelines. Click <img src="https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png" style="height: 1.1em; vertical-align: middle; margin: 0 4px;" /> on any boss card to add it to your permanent countdown watchlist overlay.
+					</p>
+					<h4>Achievements Dashboard</h4>
+					<p>
+						Track overall achievements. The dashboard displays progress meters by category, along with completion details for individual achievement tiers.
+					</p>
+					<h4>Weekly Boss Clears</h4>
+					<p>
+						Keep tabs on your raids, strike missions, and dungeon progress. The matrix updates automatically to show completed and remaining targets for the weekly cycle.
+					</p>
+					<h4>Session Farming Tracker</h4>
+					<p>
+						Start grinding sessions to record gold-per-hour, total currency fluctuations, and logged item drops in real-time (when the DRF module is installed).
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">CREDITS & LEGAL DISCLAIMERS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content">
+					<h4>Copyright Notice</h4>
+					<p>
+						All Guild Wars 2 assets, imagery, and API content are owned by ArenaNet and NCSOFT.
+					</p>
+					<h4>Software Architecture</h4>
+					<p>
+						Built using C#, .NET 9, WebView2 runtime interfaces and Leaflet JS.
+					</p>
+					<h4>Core Dependencies</h4>
+					<p>
+						Powered by the Gw2Sharp library for local Mumble Link integration.
+					</p>
+					<h4>Inspirations</h4>
+					<p>
+						Inspired by the work of gw2efficiency, gw2navi, and drf.rs.
+					</p>
+					<h4>Coordinate Contributions</h4>
+					<p>
+						Map coordinate files provided by Lady Elyssa and Tekkit.
+					</p>
+				</div>
+			</div>
+
+			<div class="help-cat">
+				<div class="cat-header" onclick="toggleHelp(this)">
+					<span class="cat-title">HOTKEYS & SHORTCUT CONTROLS</span>
+					<span class="cat-icon">▼</span>
+				</div>
+				<div class="cat-content" style="padding: 10px;">
+					<div class="shortcut-grid">
+						<div class="shortcut-row">REFRESH APPLICATION</div>
+						<div class="shortcut-key">F5</div>
+						<div class="shortcut-row">MOVE APPLICATION WINDOW</div>
+						<div class="shortcut-key">DRAG MENU BAR</div>
+						<div class="shortcut-row">RESIZE APPLICATION</div>
+						<div class="shortcut-key">DRAG BOTTOM RIGHT CORNER</div>
+						<div class="shortcut-row">PLACE CUSTOM WAYPOINT</div>
+						<div class="shortcut-key">ALT + LEFT CLICK</div>
+						<div class="shortcut-row">DELETE WAYPOINT</div>
+						<div class="shortcut-key">LEFT CLICK MARKER</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="https://discord.gg/7pWPzV6Rt4" target="_blank" class="discord-btn">
+			<img src="https://gw2ps.local/Assets/Icons/discord-icon.png" class="discord-icon" alt="Discord Logo">
+			JOIN THE DISCORD SERVER
+		</a>
+
+		<a href="https://tyrianlens.com" target="_blank" class="website-btn" style="margin-top: 10px;">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="website-icon" alt="Tyrian Lens Logo">
+			VISIT THE OFFICIAL WEBSITE
+		</a>
+
+		<div class="donation-box">
+			<div class="donation-text">If Tyrian Lens has enhanced your journey through Tyria, show your appreciation by donating some items or gold.</div>
+			<div class="donation-acc">Yoast.8572</div>
+		</div>
+
+		<script>
+			document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
+
+			function toggleHelp(btn) {
+			const content = btn.nextElementSibling;
+			const isActive = btn.classList.contains('active');
+			if (!isActive) {
+			btn.classList.add('active');
+			content.style.display = 'block';
+			} else {
+			btn.classList.remove('active');
+			content.style.display = 'none';
+			}
+			}
+
+			window.addEventListener('message', (e) => {
+			if (e.data && e.data.action === 'updateTheme') {
+				document.body.setAttribute('data-theme', e.data.theme);
+			}
+			else if (e.data.action === 'uiScaleChanged') {
+			if (e.data.value === 'large') document.body.classList.add('ui-large');
+			else document.body.classList.remove('ui-large');
+			}
+			});
+
+			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+			// Dynamically sync version with parent shell
+			const versionDisplay = document.getElementById('version-display');
+			if (versionDisplay && window.parent && window.parent.APP_VERSION) {
+				versionDisplay.innerText = `TYRIAN LENS - ${window.parent.APP_VERSION}`;
+			}
+		</script>
+	</body>
+</html>
