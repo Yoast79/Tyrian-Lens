@@ -25,18 +25,18 @@ async function loadArmorData(el, index) {
 
     content.innerHTML = '<div class="loading-text">SYNCING DATA...</div>';
 
-    // PATIENT RETRY LOOP: Specifically looks for masterIndex[cite: 18]
+    // PATIENT RETRY LOOP: Specifically looks for indexes.gear
     if (!index || !index.items) {
         let attempts = 0;
         armorSyncInterval = setInterval(() => {
             attempts++;
-            const targetIndex = window.masterIndex; 
+            const targetIndex = indexes.gear; 
             if (targetIndex && targetIndex.items) {
                 clearInterval(armorSyncInterval);
                 loadArmorData(el, targetIndex);
             } else if (attempts > 30) {
                 clearInterval(armorSyncInterval);
-                content.innerHTML = '<div class="loading-text">LOAD FAILED: MASTER INDEX MISSING</div>';
+                content.innerHTML = '<div class="loading-text">LOAD FAILED: GEAR INDEX MISSING</div>';
             }
         }, 300);
         return;

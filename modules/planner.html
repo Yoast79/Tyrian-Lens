@@ -1078,7 +1078,7 @@
                         document.getElementById('build-name').value = this.state.name;
 
                         try {
-                            const res = await fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}`);
+                            const res = await fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`);
                             this.cache.profData = await res.json();
                         } catch (e) { }
 
@@ -1161,21 +1161,23 @@
                 if (fact.icon) html += '<img src="' + fact.icon + '" style="width:16px; height:16px; object-fit:contain;">';
                 else html += '<div style="width:16px; height:16px;"></div>';
 
+                const label = fact.text || fact.target || fact.type || "";
+
                 if (fact.type === 'Damage') {
                     const powerVal = parseInt(document.getElementById('val-Power').innerText.replace(/,/g, '')) || 1000;
                     let calculatedDmg = Math.round((fact.dmg_multiplier * powerVal * 1000) / 2600);
                     html += 'Damage: ' + (fact.hit_count > 1 ? fact.hit_count + 'x ' : '') + '<span style="color:#ffaa00;">' + (calculatedDmg || "Calculated") + '</span>';
                 }
-                else if (fact.type === 'Number') html += fact.text + ': ' + fact.value;
-                else if (fact.type === 'Distance' || fact.type === 'Radius') html += fact.text + ': ' + fact.distance;
-                else if (fact.type === 'Time') html += fact.text + ': ' + fact.duration + 's';
-                else if (fact.type === 'Buff' || fact.type === 'PrefixedBuff') html += (fact.status || '') + (fact.duration ? ' (' + fact.duration + 's)' : '') + (fact.apply_count > 1 ? ' x' + fact.apply_count : '') + (fact.description ? ' - ' + fact.description : '');
-                else if (fact.type === 'AttributeAdjust') html += fact.text + ': +' + fact.value;
-                else if (fact.type === 'Percent') html += fact.text + ': ' + fact.percent + '%';
+                else if (fact.type === 'Number') html += label + ': ' + fact.value;
+                else if (fact.type === 'Distance' || fact.type === 'Radius') html += label + ': ' + fact.distance;
+                else if (fact.type === 'Time') html += label + ': ' + fact.duration + 's';
+                else if (fact.type === 'Buff' || fact.type === 'PrefixedBuff') html += (fact.status || label || '') + (fact.duration ? ' (' + fact.duration + 's)' : '') + (fact.apply_count > 1 ? ' x' + fact.apply_count : '') + (fact.description ? ' - ' + fact.description : '');
+                else if (fact.type === 'AttributeAdjust') html += label + ': +' + fact.value;
+                else if (fact.type === 'Percent') html += label + ': ' + fact.percent + '%';
                 else if (fact.type === 'ComboField') html += 'Combo Field: ' + fact.field_type;
                 else if (fact.type === 'ComboFinisher') html += 'Combo Finisher: ' + fact.finisher_type + ' (' + fact.percent + '%)';
                 else if (fact.type === 'Unblockable') html += 'Unblockable';
-                else html += (fact.text || fact.type);
+                else html += label;
                 html += '</div>';
                 return html;
             },
@@ -1203,6 +1205,23 @@
                     tr.facts.forEach(f => { tt += this.formatFact(f); });
                     tt += '</div>';
                 }
+                if (tr.skills && tr.skills.length > 0) {
+                    tr.skills.forEach(sk => {
+                        tt += `<div style="margin-top:10px; border-top:1px solid #332a1e; padding-top:8px;">`;
+                        tt += `<div style="display:flex; gap:10px; margin-bottom:5px;">`;
+                        tt += `<img src="${sk.icon}" style="width:24px; height:24px; border:1px solid #332a1e; flex-shrink:0;">`;
+                        tt += `<div style="display:flex; flex-direction:column;">`;
+                        tt += `<span style="color:#f0dca5; font-weight:bold; font-size:13px; margin-bottom:2px;">${sk.name}</span>`;
+                        if (sk.description) tt += `<span style="color:#aaa; font-size:11px; margin-bottom:4px; white-space:pre-wrap; font-family:sans-serif;">${sk.description.replace(/<[^>]*>?/gm, '')}</span>`;
+                        tt += `</div></div>`;
+                        if (sk.facts && sk.facts.length > 0) {
+                            tt += `<div style="display:flex; flex-direction:column; gap:2px; padding-left:10px;">`;
+                            sk.facts.forEach(f => { tt += this.formatFact(f); });
+                            tt += `</div>`;
+                        }
+                        tt += `</div>`;
+                    });
+                }
                 return tt;
             },
 
@@ -1218,8 +1237,10 @@
                 document.getElementById('class-select').onchange = (e) => this.loadClass(e.target.value);
                 document.getElementById('btn-swap-land').onclick = () => { this.wsetLand = this.wsetLand === 1 ? 2 : 1; this.env = 'land'; this.updateView(); };
                 document.getElementById('btn-swap-water').onclick = () => { this.wsetWater = this.wsetWater === 1 ? 2 : 1; this.env = 'water'; this.updateView(); };
-                document.getElementById('btn-env-land').onclick = () => { this.env = 'land'; this.updateView(); };
-                document.getElementById('btn-env-water').onclick = () => { this.env = 'water'; this.updateView(); };
+                const btnEnvLand = document.getElementById('btn-env-land');
+                if (btnEnvLand) btnEnvLand.onclick = () => { this.env = 'land'; this.updateView(); };
+                const btnEnvWater = document.getElementById('btn-env-water');
+                if (btnEnvWater) btnEnvWater.onclick = () => { this.env = 'water'; this.updateView(); };
                 document.getElementById('btn-save').onclick = () => this.openSaveAs();
                 document.getElementById('btn-save-cancel').onclick = () => document.getElementById('save-as-modal').style.display = 'none';
                 document.getElementById('btn-save-confirm').onclick = () => this.confirmSave();
@@ -1306,7 +1327,7 @@
                 this.state.equipment.JadeBot = { id: null, vit: 0 };
                 this.state.skills = { land: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null }, water: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null } };
                 this.state.traits = [{ spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }];
-                try { const res = await fetch(`https://api.guildwars2.com/v2/professions/${className}`); this.cache.profData = await res.json(); } catch (e) { }
+                try { const res = await fetch(`https://api.guildwars2.com/v2/professions/${className}?v=2019-12-19T00:00:00Z`); this.cache.profData = await res.json(); } catch (e) { }
                 this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState();
             },
 
@@ -1759,20 +1780,49 @@
             },
 
             refreshLoadList() { const list = document.getElementById('saved-builds-list'); list.innerHTML = ''; Object.keys(JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}')).sort().forEach(name => { const opt = document.createElement('option'); opt.value = name; opt.innerText = name; list.appendChild(opt); }); },
-            handleModalLoad() { const name = document.getElementById('saved-builds-list').value; if (name) { const builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); if (builds[name]) { this.state = builds[name]; document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}`).then(res => res.json()).then(data => { this.cache.profData = data; return this.loadSavedSkills(); }).then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }).catch(e => console.log("Load error", e)); } document.getElementById('load-modal').style.display = 'none'; } },
+            handleModalLoad() { const name = document.getElementById('saved-builds-list').value; if (name) { const builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); if (builds[name]) { this.state = builds[name]; document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`).then(res => res.json()).then(data => { this.cache.profData = data; return this.loadSavedSkills(); }).then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }).catch(e => console.log("Load error", e)); } document.getElementById('load-modal').style.display = 'none'; } },
             deleteSavedBuild() { const name = document.getElementById('saved-builds-list').value; if (!name) return; let builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); delete builds[name]; localStorage.setItem('gw2_planner_builds', JSON.stringify(builds)); this.refreshLoadList(); },
 
+            copyToClipboard(text) {
+                const tryFallback = () => {
+                    const ta = document.createElement("textarea");
+                    ta.value = text;
+                    ta.style.position = "fixed";
+                    ta.style.opacity = "0";
+                    document.body.appendChild(ta);
+                    ta.focus();
+                    ta.select();
+                    try { document.execCommand('copy'); } catch (e) {}
+                    document.body.removeChild(ta);
+                };
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).catch(() => tryFallback());
+                } else {
+                    tryFallback();
+                }
+            },
+
             copyCode() {
-                if (!this.cache.profData) return;
+                if (!this.cache.profData) {
+                    this.showToast("Failed to copy: Profession data not loaded.");
+                    return;
+                }
                 const profId = { "Guardian": 1, "Warrior": 2, "Engineer": 3, "Ranger": 4, "Thief": 5, "Elementalist": 6, "Mesmer": 7, "Necromancer": 8, "Revenant": 9 }[this.state.profession] || 1;
                 let bytes = [0x0D, profId];
                 const getPId = (id) => { if (!id) return 0; const pair = this.cache.profData.skills_by_palette.find(p => p[1] === id); return pair ? pair[0] : 0; };
                 for (let i = 0; i < 3; i++) {
                     let s = this.state.traits[i]; if (s?.spec) { bytes.push(s.spec); let tByte = 0, sD = this.cache.specs[s.spec]; for (let j = 0; j < 3; j++) { let tId = s.traits[j], pos = tId && sD?.major_traits ? (sD.major_traits.indexOf(tId) % 3) + 1 : 0; tByte |= (pos << (j * 2)); } bytes.push(tByte); } else bytes.push(0, 0);
                 }
-                ['land', 'water'].forEach(e => ['Heal', 'Utility1', 'Utility2', 'Utility3', 'Elite'].forEach(k => { let pId = getPId(this.state.skills[e][k]); bytes.push(pId & 0xFF, (pId >> 8) & 0xFF); }));
-                for (let i = 0; i < 18; i++) bytes.push(0);
-                navigator.clipboard.writeText("[&" + btoa(String.fromCharCode.apply(null, bytes)) + "]").then(() => this.showToast("Build code copied!"));
+                ['Heal', 'Utility1', 'Utility2', 'Utility3', 'Elite'].forEach(k => {
+                    ['land', 'water'].forEach(e => {
+                        let pId = getPId(this.state.skills[e]?.[k]);
+                        bytes.push(pId & 0xFF, (pId >> 8) & 0xFF);
+                    });
+                });
+                for (let i = 0; i < 22; i++) bytes.push(0);
+                const code = "[&" + btoa(String.fromCharCode.apply(null, bytes)) + "]";
+                this.copyToClipboard(code);
+                window.parent.postMessage({ action: 'copy', code: code, msg: "Build code copied!" }, '*');
             },
 
             compressState(state) {
@@ -1874,7 +1924,11 @@
                 return state;
             },
 
-            shareBuild() { navigator.clipboard.writeText("[&" + btoa(unescape(encodeURIComponent(JSON.stringify(this.compressState(this.state))))) + "]").then(() => this.showToast("Share code copied!")); },
+            shareBuild() {
+                const code = "[&" + btoa(unescape(encodeURIComponent(JSON.stringify(this.compressState(this.state))))) + "]";
+                this.copyToClipboard(code);
+                window.parent.postMessage({ action: 'copy', code: code, msg: "Share code copied!" }, '*');
+            },
 
             importCode(code) {
                 if (!code.startsWith('[&') || !code.endsWith(']')) return this.showToast("Invalid code format.");
@@ -1892,7 +1946,7 @@
                         for (let i = 0; i < 5; i++) ps.push(read(8 + i * 2).then(id => this.state.skills.land[ks[i]] = id), read(18 + i * 2).then(id => this.state.skills.water[ks[i]] = id));
                         Promise.all(ps).then(() => { this.loadSavedSkills().then(() => { this.renderSkills(); this.saveLastState(); }); });
                     });
-                } else { try { const parsed = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = this.decompressState(parsed); document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
+                } else { try { const parsed = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = this.decompressState(parsed); document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
             }
         };
         window.PLANNER.init();

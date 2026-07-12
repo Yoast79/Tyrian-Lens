@@ -139,8 +139,12 @@
 
                 // 1. Load Personal Bank
                 const cachedBank = localStorage.getItem('gw2_cache_bank');
+                let loadedFromCache = false;
                 if (cachedBank && !forceRefresh) {
-                    try { bankDataGlobal = JSON.parse(cachedBank); } catch(e) { bankDataGlobal = []; }
+                    try { 
+                        bankDataGlobal = JSON.parse(cachedBank); 
+                        loadedFromCache = true;
+                    } catch(e) { bankDataGlobal = []; }
                 } else {
                     try {
                         const res = await fetch(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
@@ -149,6 +153,25 @@
                             localStorage.setItem('gw2_cache_bank', JSON.stringify(bankDataGlobal));
                         } else { console.error("Bank fetch failed", res.status); bankDataGlobal = []; }
                     } catch(e) { console.error("Bank fetch error", e); bankDataGlobal = []; }
+                }
+
+                if (loadedFromCache) {
+                    setTimeout(async () => {
+                        try {
+                            const res = await fetch(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
+                            if (res.ok) {
+                                bankDataGlobal = await res.json();
+                                localStorage.setItem('gw2_cache_bank', JSON.stringify(bankDataGlobal));
+                                
+                                const bankItemIds = bankDataGlobal.filter(i => i !== null).map(i => i.id);
+                                await Promise.all([
+                                    fetchItemDetails(bankItemIds),
+                                    fetchItemPrices(bankItemIds)
+                                ]);
+                                renderBank();
+                            }
+                        } catch(e) { console.error("Background bank refresh failed", e); }
+                    }, 200);
                 }
 
                 // 2. Load Guild Storage
@@ -452,10 +475,31 @@
 					tooltipText += `<span>STACK VALUE:</span><span>${formatCoin(stackValue)}</span>`;
 					tooltipText += `</div>`;
 
+					let lore = item.description || "";
+					if (!lore && item.details) {
+						lore = item.details.description || "";
+						if (!lore && item.details.infix_upgrade && item.details.infix_upgrade.buff) {
+							lore = item.details.infix_upgrade.buff.description || "";
+						}
+					}
+					if (lore) {
+						let cleanLore = lore.replace(/<[^>]*>?/gm, '').replace(/[\r\n]+/g, '<br />');
+						tooltipText += `<div style="margin-top:8px; color:#aaa; font-style:italic; font-size:13px; border-top:1px solid #444; padding-top:4px; text-transform:none;">"${cleanLore}"</div>`;
+					}
+
 					slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: tooltipText, x: e.clientX, y: e.clientY}, '*');
 					slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
 					slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
-					if (slot.count > 1) slotDiv.innerHTML += `<div class="item-count">${slot.count}</div>`;
+					let displayCount = 1;
+					if (slot.count > 1) {
+						displayCount = slot.count;
+					} else if (slot.charges) {
+						displayCount = slot.charges;
+					} else if (item.description) {
+						const match = item.description.match(/Starts with (\d+) charges/i);
+						if (match) displayCount = parseInt(match[1]);
+					}
+					if (displayCount > 1) slotDiv.innerHTML += `<div class="item-count">${displayCount}</div>`;
 					grid.appendChild(slotDiv);
 				});
 
@@ -493,7 +537,7 @@
 			}
 
 			window.addEventListener('message', (e) => {
-				if (e.data && e.data.action === 'accountDataRefreshed') initBank();
+				if (e.data && e.data.action === 'accountDataRefreshed') initBank(true);
 				if (e.data && e.data.action === 'updateTheme') {
 					document.body.setAttribute('data-theme', e.data.theme);
 				}

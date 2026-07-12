@@ -387,7 +387,16 @@
 					slotDiv.onmouseover = (e) => window.parent.postMessage({action:'showTooltip', text: UTILS.generateTooltip(item, slotData), x: e.clientX, y: e.clientY}, '*');
 					slotDiv.onmouseout = () => window.parent.postMessage({action:'hideTooltip'}, '*');
 					slotDiv.innerHTML = `<img class="item-icon" src="${item.icon}">`;
-					if (slotData.count > 1) slotDiv.innerHTML += `<div class="item-count">${slotData.count}</div>`;
+					let displayCount = 1;
+					if (slotData.count > 1) {
+						displayCount = slotData.count;
+					} else if (slotData.charges) {
+						displayCount = slotData.charges;
+					} else if (item.description) {
+						const match = item.description.match(/Starts with (\d+) charges/i);
+						if (match) displayCount = parseInt(match[1]);
+					}
+					if (displayCount > 1) slotDiv.innerHTML += `<div class="item-count">${displayCount}</div>`;
 				}
 				return slotDiv;
 			}

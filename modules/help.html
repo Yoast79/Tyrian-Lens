@@ -36,7 +36,7 @@
 			.shortcut-row { font-size: 11px; color: var(--text-muted, #8a7a5f); text-transform: uppercase; letter-spacing: 1px; }
 			.shortcut-key { font-size: 11px; color: var(--text-primary, #e2c07d); font-weight: bold; background: rgba(226, 192, 125, 0.1); padding: 2px 6px; border: 1px solid var(--border-color, #4a3b2a); border-radius: 2px; }
 
-			.discord-btn {
+			.discord-btn, .website-btn {
 			margin-top: 15px;
 			background: var(--bg-panel, rgba(20, 15, 10, 0.8));
 			border: 1px solid var(--border-color, #4a3b2a);
@@ -57,14 +57,14 @@
 			position: relative;
 			overflow: hidden;
 			}
-			.discord-btn:hover {
+			.discord-btn:hover, .website-btn:hover {
 			background: rgba(226, 192, 125, 0.08);
 			border-color: var(--text-primary, #e2c07d);
 			color: #fff;
 			box-shadow: inset 0 0 15px rgba(226, 192, 125, 0.1), 0 0 10px rgba(226, 192, 125, 0.2);
 			}
 
-			.discord-icon {
+			.discord-icon, .website-icon {
 			width: 24px;
 			height: auto;
 			opacity: 0.8;
@@ -72,7 +72,7 @@
 			filter: drop-shadow(0 0 2px rgba(226, 192, 125, 0.4));
 			}
 
-			.discord-btn:hover .discord-icon {
+			.discord-btn:hover .discord-icon, .website-btn:hover .website-icon {
 			opacity: 1;
 			filter: drop-shadow(0 0 8px rgba(226, 192, 125, 0.8));
 			transform: scale(1.1);
@@ -86,7 +86,7 @@
 			body.ui-large .cat-content { font-size: 14px; }
 			body.ui-large .cat-content h4 { font-size: 15px; }
 			body.ui-large .shortcut-row, body.ui-large .shortcut-key { font-size: 13px; }
-			body.ui-large .discord-btn { font-size: 14px; }
+			body.ui-large .discord-btn, body.ui-large .website-btn { font-size: 14px; }
 			body.ui-large .donation-text { font-size: 13px; }
 			body.ui-large .donation-acc { font-size: 16px; }
 		</style>
@@ -282,6 +282,11 @@
 		<a href="https://discord.gg/7pWPzV6Rt4" target="_blank" class="discord-btn">
 			<img src="https://gw2ps.local/Assets/Icons/discord-icon.png" class="discord-icon" alt="Discord Logo">
 			JOIN THE DISCORD SERVER
+		</a>
+
+		<a href="https://tyrianlens.com" target="_blank" class="website-btn" style="margin-top: 10px;">
+			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="website-icon" alt="Tyrian Lens Logo">
+			VISIT THE OFFICIAL WEBSITE
 		</a>
 
 		<div class="donation-box">

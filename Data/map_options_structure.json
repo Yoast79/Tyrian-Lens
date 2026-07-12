@@ -1092,6 +1092,12 @@
                 "tooltip": "Play with the Shrine Guardian Pup for achievement progression."
               },
               {
+                "id": "node_static_charge",
+                "label": "Skywatch Archipelago - Static Charge",
+                "icon": "https://wiki.guildwars2.com/images/a/a8/Static_Charge.png",
+                "hasColorPicker": true
+              },
+              {
                 "id": "node_illuminating_amnytas_achievement",
                 "label": "Amnytas - Illuminating Amnytas",
                 "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
@@ -1106,6 +1112,12 @@
                 "hasColorPicker": true
               },
               {
+                "id": "node_pinch_of_stardust",
+                "label": "Amnytas - Pinch of Stardust",
+                "icon": "https://wiki.guildwars2.com/images/5/5c/Pinch_of_Stardust.png",
+                "hasColorPicker": true
+              },
+              {
                 "id": "node_illuminating_inner_nayos_achievement",
                 "label": "Inner Nayos - Illuminating Inner Nayos",
                 "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
@@ -1117,6 +1129,12 @@
                 "label": "Inner Nayos - Shrine Finder",
                 "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
                 "tooltip": "Find the Shrine Guardian chest for achievement progression",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_calcified_gasp",
+                "label": "Inner Nayos - Calcified Gasp",
+                "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
                 "hasColorPicker": true
               }
             ]

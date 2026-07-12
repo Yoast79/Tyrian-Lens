@@ -249,14 +249,20 @@
             }
 
 			function checkUpdateBtn() {
-				if (localStorage.getItem('gw2_update_url')) {
-					document.getElementById('update-btn').style.display = 'block';
+				const btn = document.getElementById('update-btn');
+				if (btn) {
+					if (localStorage.getItem('gw2_update_url')) {
+						btn.style.display = 'block';
+					} else {
+						btn.style.display = 'none';
+					}
 				}
 			}
 
 			function openUpdateUrl() {
-				const url = localStorage.getItem('gw2_update_url');
-				if (url) window.open(url, '_blank');
+				if (localStorage.getItem('gw2_update_url')) {
+					window.open('https://tyrianlens.com/download/', '_blank');
+				}
 			}
 
 			window.addEventListener('message', function(event) {

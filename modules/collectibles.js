@@ -43,7 +43,7 @@ async function loadCollectiblesData(el, index) {
         let attempts = 0;
         collectiblesSyncInterval = setInterval(() => {
             attempts++;
-            const globalIndex = window.collectiblesIndex;
+            const globalIndex = indexes.appearance;
             if (globalIndex && globalIndex.items) {
                 clearInterval(collectiblesSyncInterval);
                 loadCollectiblesData(el, globalIndex);

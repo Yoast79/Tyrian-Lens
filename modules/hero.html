@@ -246,12 +246,15 @@
             };
             
             let bs = bTab.build.skills || {};
-            addSkill(bs.heal); addSkill(bs.utilities?.[0]); addSkill(bs.utilities?.[1]); addSkill(bs.utilities?.[2]); addSkill(bs.elite);
-            
             let aq = bTab.build.aquatic_skills || {};
-            addSkill(aq.heal); addSkill(aq.utilities?.[0]); addSkill(aq.utilities?.[1]); addSkill(aq.utilities?.[2]); addSkill(aq.elite);
             
-            for(let i=0; i<18; i++) bytes.push(0);
+            addSkill(bs.heal); addSkill(aq.heal);
+            addSkill(bs.utilities?.[0]); addSkill(aq.utilities?.[0]);
+            addSkill(bs.utilities?.[1]); addSkill(aq.utilities?.[1]);
+            addSkill(bs.utilities?.[2]); addSkill(aq.utilities?.[2]);
+            addSkill(bs.elite); addSkill(aq.elite);
+            
+            for(let i=0; i<22; i++) bytes.push(0);
             
             const b64 = btoa(String.fromCharCode.apply(null, bytes));
             const chatCode = "[&" + b64 + "]";
@@ -582,7 +585,7 @@
                 return facts.map(f => {
                     let fText = "", dur = f.duration ? `(${f.duration}s)` : '';
                     if (f.type === 'Buff' || f.type === 'Condition' || f.status) {
-                        fText = `<span style="color:#eee;">${f.status || f.text || f.type}${dur}</span>${f.description ? ': ' + f.description : ''}`;
+                        fText = `<span style="color:#eee;">${f.status || f.text || f.target || f.type}${dur}</span>${f.description ? ': ' + f.description : ''}`;
                     }
                     else if (f.type === 'Damage') {
                         // Extract current Power from the UI attributes display
@@ -596,7 +599,7 @@
                         fText = `Damage: ${(f.hit_count > 1 ? f.hit_count + 'x ' : '')}<span style="color:#ffaa00;">${calculatedDmg || "Calculated"}</span>`;
                     }
                     else if (f.type === 'Recharge') fText = `Recharge: ${f.value}s`;
-                    else fText = `${f.text || f.type}${dur}${f.value !== undefined ? ': ' + f.value : ''}`;
+                    else fText = `${f.text || f.target || f.type}${dur}${f.value !== undefined ? ': ' + f.value : ''}`;
                     
                     return `<div style="display:flex; align-items:center; gap:6px; margin-top:4px; font-size:11px; color:#aaa; white-space:normal; word-wrap:break-word;">${f.icon ? `<img src="${f.icon}" style="width:14px; height:14px; flex-shrink:0;" />` : ''}<span>${fText}</span></div>`;
                 }).join('');
@@ -610,6 +613,19 @@
                 if (linkedId && this.itemCache['skill_' + linkedId]) {
                     const l = this.itemCache['skill_' + linkedId];
                     h += `<div style="margin-top:10px; border-top:1px solid #4a3b2a; padding-top:8px;"><div style="color:#FFD700; font-weight:bold; font-size:12px;">${l.name}</div>${this.renderFacts(l.facts)}</div>`;
+                }
+                if (skill.skills && skill.skills.length > 0) {
+                    skill.skills.forEach(sk => {
+                        h += `<div style="margin-top:10px; border-top:1px solid #4a3b2a; padding-top:8px;">`;
+                        h += `<div style="display:flex; gap:10px; margin-bottom:5px;">`;
+                        h += `<img src="${sk.icon}" style="width:24px; height:24px; border:1px solid #4a3b2a; flex-shrink:0;">`;
+                        h += `<div style="display:flex; flex-direction:column;">`;
+                        h += `<span style="color:#FFD700; font-weight:bold; font-size:13px; margin-bottom:2px;">${sk.name}</span>`;
+                        if (sk.description) h += `<span style="color:#eee; font-size:11px; margin-bottom:4px; white-space:normal; font-family:sans-serif;">${this.cleanText(sk.description)}</span>`;
+                        h += `</div></div>`;
+                        h += this.renderFacts(sk.facts);
+                        h += `</div>`;
+                    });
                 }
                 h += `</div>`; return h;
             },
@@ -686,7 +702,7 @@
             const [tabs, buildTabs, prof] = await Promise.all([
                 UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/equipmenttabs?tabs=all&access_token=${activeKey}`),
                 UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/buildtabs?tabs=all&access_token=${activeKey}`),
-                UTILS.fetchSafe(`https://api.guildwars2.com/v2/professions/${fullData.profession}`)
+                UTILS.fetchSafe(`https://api.guildwars2.com/v2/professions/${fullData.profession}?v=2019-12-19T00:00:00Z`)
             ]);
             fullData.full_tabs = Array.isArray(tabs) ? tabs : [];
             fullData.build_tabs = Array.isArray(buildTabs) ? buildTabs : [];

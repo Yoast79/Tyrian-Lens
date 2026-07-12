@@ -44,6 +44,16 @@
 			.rarity-Fine { border-color: #62A4DA !important; }
 			.rarity-Currency { border-color: var(--text-primary, #e2c07d) !important; }
 
+			/* Toggle Switches */
+			.toggle-container { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-muted, #8a7a5f); cursor: pointer; user-select: none; letter-spacing: 1px; }
+			.toggle-switch { position: relative; width: 34px; height: 18px; background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); border-radius: 9px; transition: 0.2s; flex-shrink: 0; }
+			.toggle-switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; background: var(--border-color, #4a3b2a); border-radius: 50%; transition: 0.2s; }
+			.active .toggle-switch { border-color: var(--text-primary, #e2c07d); }
+			.active .toggle-switch::after { left: 18px; background: var(--text-primary, #e2c07d); }
+
+			.progress-container { width: 300px; height: 6px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-color, #4a3b2a); margin-top: 15px; border-radius: 3px; overflow: hidden; }
+			.progress-bar { width: 0%; height: 100%; background: var(--text-primary, #e2c07d); transition: width 0.2s ease; }
+
 			/* Large UI Scaling Overrides */
 			body.ui-large .section-title { font-size: 20px; }
 			body.ui-large .search-box { font-size: 16px; padding: 12px 35px 12px 12px; }
@@ -63,18 +73,22 @@
 					<span class="clear-btn" id="clear-search" onclick="document.getElementById('global-search').value=''; triggerSearch();">&times;</span>
 				</div>
 
-			<div style="display:flex; flex-direction: column; gap: 6px; margin-bottom: 15px; flex-shrink: 0; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 12px;">
-				<div style="display:flex; align-items:center; gap: 8px;">
-					<input type="checkbox" id="toggle-map-locs" checked="" onchange="filterSearch()" style="cursor:pointer;" />
-					<label for="toggle-map-locs" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW MAP LOCATIONS</label>
+			<div style="display:flex; flex-direction: column; gap: 8px; margin-bottom: 15px; flex-shrink: 0; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 12px;">
+				<div class="toggle-container active" id="toggle-map-locs" onclick="toggleOption('toggle-map-locs')">
+					<div class="toggle-switch"></div>
+					<span>SHOW MAP LOCATIONS</span>
 				</div>
-				<div style="display:flex; align-items:center; gap: 8px;">
-					<input type="checkbox" id="toggle-farming-markers" checked="" onchange="filterSearch()" style="cursor:pointer;" />
-					<label for="toggle-farming-markers" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW FARMING MARKERS</label>
+				<div class="toggle-container active" id="toggle-events" onclick="toggleOption('toggle-events')">
+					<div class="toggle-switch"></div>
+					<span>SHOW WORLD EVENTS</span>
 				</div>
-				<div style="display:flex; align-items:center; gap: 8px;">
-					<input type="checkbox" id="toggle-npcs" checked="" onchange="filterSearch()" style="cursor:pointer;" />
-					<label for="toggle-npcs" style="font-size: 11px; color: #8a7a5f; letter-spacing: 1px; cursor: pointer;">SHOW NPCs</label>
+				<div class="toggle-container active" id="toggle-farming-markers" onclick="toggleOption('toggle-farming-markers')">
+					<div class="toggle-switch"></div>
+					<span>SHOW FARMING MARKERS</span>
+				</div>
+				<div class="toggle-container active" id="toggle-npcs" onclick="toggleOption('toggle-npcs')">
+					<div class="toggle-switch"></div>
+					<span>SHOW NPCs</span>
 				</div>
 			</div>
 
@@ -86,6 +100,9 @@
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
 			<div id="loader-text">SCANNING TYRIA...</div>
+			<div class="progress-container">
+				<div id="loader-progress" class="progress-bar"></div>
+			</div>
 		</div>
 
 		<script>
@@ -172,6 +189,22 @@
 
 				if (!activeKey) return;
 
+				if (!window.parent.globalSearchCache) {
+					window.parent.globalSearchCache = null;
+				}
+				
+				const cache = window.parent.globalSearchCache;
+				if (cache && cache.apiKey === activeKey) {
+					itemCache = cache.itemCache;
+					itemLocations = cache.itemLocations;
+					document.getElementById('loader').style.display = 'none';
+					document.getElementById('ui-root').style.display = 'flex';
+					return;
+				}
+
+				const bar = document.getElementById('loader-progress');
+				if (bar) bar.style.width = '0%';
+
 				document.getElementById('loader').style.display = 'flex';
 				document.getElementById('ui-root').style.display = 'none';
 				
@@ -198,15 +231,27 @@
 					"nodes_pois_map.json", "nodes_vistas_map.json", "nodes_waypoints_map.json"
 				];
 
-				const mapPromises = mapFiles.map(file => fetchJSON(apiBase + file));
-				const altPromises = altFiles.map(file => fetchJSON(apiBase + file));
+				let completedRequests = 0;
+				const totalRequests = 5 + mapFiles.length + altFiles.length;
+
+				function updateProgress() {
+					completedRequests++;
+					const pct = Math.round((completedRequests / totalRequests) * 100);
+					const bar = document.getElementById('loader-progress');
+					if (bar) bar.style.width = pct + '%';
+				}
+
+				const track = p => p.then(res => { updateProgress(); return res; }).catch(() => { updateProgress(); return null; });
+
+				const mapPromises = mapFiles.map(file => track(fetchJSON(apiBase + file)));
+				const altPromises = altFiles.map(file => track(fetchJSON(apiBase + file)));
 
 				const [bank, mats, inv, wallet, chars, ...allData] = await Promise.all([
-					fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey),
-					fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey),
-					fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey),
-					fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey),
-					fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey),
+					track(fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey)),
+					track(fetchJSON("https://api.guildwars2.com/v2/account/materials?access_token=" + activeKey)),
+					track(fetchJSON("https://api.guildwars2.com/v2/account/inventory?access_token=" + activeKey)),
+					track(fetchJSON("https://api.guildwars2.com/v2/account/wallet?access_token=" + activeKey)),
+					track(fetchJSON("https://api.guildwars2.com/v2/characters?ids=all&access_token=" + activeKey)),
 					...mapPromises,
 					...altPromises
 				]);
@@ -281,6 +326,35 @@
 					if (!data) return;
 					const filename = altFiles[fileIdx];
 					const points = Array.isArray(data) ? data : (data.points || []);
+
+					if (filename === "nodes_world_events.json") {
+						points.forEach((p, idx) => {
+							if (!p) return;
+							const nodeName = p.event || p.node || p.name || '';
+							if (!nodeName) return;
+
+							const id = 'worldevent_' + idx;
+							const layerKey = p.layer || p.type || 'node_world_boss';
+							const isBoss = layerKey === 'node_world_boss';
+							const tag = isBoss ? 'WORLD BOSS' : 'EVENT';
+							
+							itemCache[id] = {
+								name: nodeName,
+								icon: resolveIconUrl(p.icon || 'https://wiki.guildwars2.com/images/b/bb/Event_boss_%28map_icon%29.png'),
+								rarity: 'Basic',
+								isMapLoc: true,
+								isEvent: true,
+								layer: layerKey,
+								pos: p.pos
+							};
+							
+							addLoc(id, tag, 1);
+							if (p.map_name) {
+								addLoc(id, p.map_name.toUpperCase(), 1);
+							}
+						});
+						return;
+					}
 
 					points.forEach(p => {
 						if (!p) return;
@@ -476,10 +550,16 @@
                         chunks.push(missingIds.slice(i, i + 200));
                     }
                     
+                    let completedChunks = 0;
                     const chunkPromises = chunks.map((chunk, index) => {
-                        const pct = Math.round((index / chunks.length) * 100);
-                        document.getElementById('loader-text').innerText = `INDEXING NEW ITEMS (${pct}%)...`;
-                        return fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+                        return fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`).then(res => {
+                            completedChunks++;
+                            const pct = Math.round((completedChunks / chunks.length) * 100);
+                            document.getElementById('loader-text').innerText = `INDEXING NEW ITEMS (${pct}%)...`;
+                            const bar = document.getElementById('loader-progress');
+                            if (bar) bar.style.width = pct + '%';
+                            return res;
+                        });
                     });
                     
                     const results = await Promise.all(chunkPromises);
@@ -510,6 +590,12 @@
                     }
                 }
 
+				window.parent.globalSearchCache = {
+					apiKey: activeKey,
+					itemCache: itemCache,
+					itemLocations: itemLocations
+				};
+
 				document.getElementById('loader').style.display = 'none';
 				document.getElementById('ui-root').style.display = 'flex';
 			}
@@ -533,6 +619,14 @@
                 return `x${count.toLocaleString()}`;
             }
 
+			window.toggleOption = function(id) {
+				const el = document.getElementById(id);
+				if (el) {
+					el.classList.toggle('active');
+					filterSearch();
+				}
+			};
+
             let searchTimeout;
             window.triggerSearch = function() {
                 clearTimeout(searchTimeout);
@@ -542,9 +636,10 @@
             window.filterSearch = function() {
                 const q = document.getElementById('global-search').value.toLowerCase().trim();
                 const res = document.getElementById('results-container');
-                const showMapLocs = document.getElementById('toggle-map-locs').checked;
-                const showFarming = document.getElementById('toggle-farming-markers').checked;
-                const showNPCs = document.getElementById('toggle-npcs').checked;
+                const showMapLocs = document.getElementById('toggle-map-locs').classList.contains('active');
+                const showEvents = document.getElementById('toggle-events').classList.contains('active');
+                const showFarming = document.getElementById('toggle-farming-markers').classList.contains('active');
+                const showNPCs = document.getElementById('toggle-npcs').classList.contains('active');
 
                 document.getElementById('clear-search').style.display = q === "" ? "none" : "block";
 
@@ -560,6 +655,9 @@
                     if (!item.name.toLowerCase().includes(q)) return false;
                     
                     if (item.isMapLoc) {
+                        if (item.isEvent) {
+                            return showEvents;
+                        }
                         if (item.isNPC || item.isNPCGroup) {
                             return showNPCs;
                         }

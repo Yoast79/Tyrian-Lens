@@ -269,7 +269,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.4.1";
+			const APP_VERSION = "1.4.4";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -363,7 +363,10 @@
 						const latestRelease = data[0];
 						const latestTag = latestRelease.tag_name;
 
-						if (latestTag !== APP_VERSION) {
+						const cleanLatest = latestTag.replace(/^v/i, '');
+						const cleanCurrent = APP_VERSION.replace(/^v/i, '');
+
+						if (cleanLatest !== cleanCurrent) {
 							localStorage.setItem('gw2_update_url', latestRelease.html_url);
 							window.postToFrames({ action: 'updateAvailable' });
 							
@@ -371,7 +374,7 @@
 							if (menu && menu.contentWindow) menu.contentWindow.postMessage({ action: 'updateAvailable' }, '*');
 
 							setTimeout(() => {
-								window.showToast(`UPDATE AVAILABLE: v${latestTag}`);
+								window.showToast(`UPDATE AVAILABLE: v${latestTag.replace(/^v/i, '')}`);
 								const toast = document.getElementById("toast-message");
 								if (toast) {
 									toast.style.cursor = "pointer";
@@ -381,6 +384,10 @@
 							}, 3500);
 						} else {
 							localStorage.removeItem('gw2_update_url');
+							window.postToFrames({ action: 'updateAvailable' });
+							
+							const menu = document.getElementById('menu-frame');
+							if (menu && menu.contentWindow) menu.contentWindow.postMessage({ action: 'updateAvailable' }, '*');
 						}
 					} catch (e) {
 						console.log("Update check skipped: GitHub API unreachable or rate-limited.");
@@ -880,7 +887,32 @@
 					}
 					else if (data.action === 'changeMapBorderColor' || data.action === 'changeItemHighlightColor' || data.action === 'toggleHideCompletedMastery') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); }
 					else if (data.action === 'jumpMap') { const mapFrame = document.getElementById('map-frame'); if (mapFrame) { let targetMap = data.map || 'map'; if (window.activeMap !== targetMap) { window.activeMap = targetMap; mapFrame.onload = function() { try { if (mapFrame.contentWindow && typeof mapFrame.contentWindow.setTracking === 'function') mapFrame.contentWindow.setTracking(false); mapFrame.contentWindow.postMessage(data, '*'); } catch(e) {} }; mapFrame.src = targetMap + '.html?v=' + APP_VERSION; } else { if (mapFrame.contentWindow) mapFrame.contentWindow.postMessage(data, '*'); } } }
-					else if (data.action === 'copy') { navigator.clipboard.writeText(data.code); window.showToast("Copied Link"); }
+					else if (data.action === 'copy') {
+						const code = data.code;
+						const tryFallback = () => {
+							const ta = document.createElement("textarea");
+							ta.value = code;
+							ta.style.position = "fixed";
+							ta.style.opacity = "0";
+							document.body.appendChild(ta);
+							ta.focus();
+							ta.select();
+							try {
+								document.execCommand('copy');
+								window.showToast(data.msg || "Copied Link");
+							} catch (e) {
+								window.showToast("Failed to copy link");
+							}
+							document.body.removeChild(ta);
+						};
+						if (navigator.clipboard && navigator.clipboard.writeText) {
+							navigator.clipboard.writeText(code)
+								.then(() => window.showToast(data.msg || "Copied Link"))
+								.catch(() => tryFallback());
+						} else {
+							tryFallback();
+						}
+					}
 					else if (data.action === 'drag') { window.postToHost('drag'); }
 					else if (data.action === 'resize') { window.postToHost('resize'); }
 					else if (data.action === 'openBugModal') { const mapFrame = document.getElementById('map-frame'); if (mapFrame && mapFrame.contentWindow) mapFrame.contentWindow.postMessage({ action: 'openBugModal' }, '*'); }

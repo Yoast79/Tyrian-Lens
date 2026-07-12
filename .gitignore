@@ -21,6 +21,17 @@ temp/
 *.pdb
 *.config
 *.json.user
+*.dll
+*.exe
+*.deps.json
+*.runtimeconfig.json
+/publish/
+/runtimes/
+/win-x64/
+/GW2PS/
+/scratch/
+desktop.ini
+Microsoft.Web.WebView2.*.xml
 
 # WebView2
 *.WebView2/

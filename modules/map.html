@@ -276,8 +276,8 @@
 		}
 
 		.pet-marker img {
-			width: 150% !important;
-			height: 150% !important;
+			width: 100% !important;
+			height: 100% !important;
 			border-radius: 50% !important;
 			object-fit: cover !important;
 		}
@@ -1012,7 +1012,7 @@
 
 		function updateMarkerIconWithIndicator(marker, p, indicatorUrl) {
 			let currentScale = farmingScaleNodes.includes(p.layer) ? farmScale : locScale;
-			let baseSize = (p.layer === 'node_ranger_pet') ? 45 : (p.layer === 'node_fishing_hole') ? 32 : 24;
+			let baseSize = (p.layer === 'node_ranger_pet') ? 32 : (p.layer === 'node_fishing_hole') ? 32 : 24;
 			let size = Math.round(baseSize * currentScale);
 			let anchor = size / 2;
 			let iconUrl = resolveIconUrl(p.icon);
@@ -1870,7 +1870,7 @@
 					}
 
 					let currentScale = farmingScaleNodes.includes(layerKey) ? farmScale : locScale;
-					let baseSize = (layerKey === 'node_pact_supply_network_agent') ? 32 : (layerKey === 'node_ranger_pet') ? 45 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+					let baseSize = (layerKey === 'node_pact_supply_network_agent') ? 32 : (layerKey === 'node_ranger_pet') ? 32 : (layerKey === 'node_fishing_hole') ? 32 : 24;
 					let size = Math.round(baseSize * currentScale);
 					let anchor = size / 2;
 					let iconUrl = resolveIconUrl(p.icon);
@@ -1881,7 +1881,7 @@
 					if (layerKey === 'node_ranger_pet') {
 						let slug = p.node ? p.node.toLowerCase().replace(/ñ/g, 'n').replace(/ /g, '_').replace(/[^a-z0-9_]/g, '') : '';
 						customClass += ' pet-marker pet-' + slug;
-						markerHtml = `<div class="altitude-marker-container" style="position: relative; width: ${size}px; height: ${size}px; overflow: visible !important;"><img src="${iconUrl}" style="width: 150% !important; height: 150% !important; border-radius: 50% !important; object-fit: cover !important; display: block !important;" /></div>`;
+						markerHtml = `<div class="altitude-marker-container" style="position: relative; width: ${size}px; height: ${size}px; overflow: visible !important;"><img src="${iconUrl}" style="width: 100% !important; height: 100% !important; transform: scale(1.5) !important; border-radius: 50% !important; object-fit: cover !important; display: block !important;" /></div>`;
 					} else if (layerKey === 'node_pact_supply_network_agent') {
 						markerHtml = `<div class="altitude-marker-container" style="position: relative; width: ${size}px; height: ${size}px; overflow: visible !important;">
 							<div class="psna-marker psna-highlight-active" style="width: ${size}px; height: ${size}px; border-radius: 50%; border: 2px solid #ffd700; background: rgba(10, 8, 5, 0.9); box-shadow: 0 0 10px #ffd700; display: flex; align-items: center; justify-content: center; overflow: hidden;">
@@ -2198,7 +2198,7 @@
 					
 					if (!isPermanentlyShown && markerIcon) {
 						let currentScale = locScale;
-						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 35 : (layerKey === 'node_fishing_hole') ? 32 : 24;
+						let baseSize = (layerKey === 'node_major_detected_treasure') ? 48 : (layerKey === 'node_ranger_pet') ? 24 : (layerKey === 'node_fishing_hole') ? 32 : 24;
 						
 						let customIcon;
 						if (isPet) {
@@ -2207,7 +2207,7 @@
 								className: 'pet-marker pet-' + slug,
 								iconSize: [baseSize * currentScale, baseSize * currentScale],
 								iconAnchor: [(baseSize / 2) * currentScale, (baseSize / 2) * currentScale],
-								html: `<img src="${markerIcon}" style="width:150% !important; height:150% !important; border-radius:50% !important; object-fit:cover !important;" />`
+								html: `<img src="${markerIcon}" style="width:100% !important; height:100% !important; transform:scale(1.5) !important; border-radius:50% !important; object-fit:cover !important;" />`
 							});
 						} else {
 							customIcon = L.icon({

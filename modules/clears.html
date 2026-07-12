@@ -163,9 +163,9 @@
                                 statusText = status.isDone ? 'CLEARED' : `${status.progress}/${status.max}`;
                             }
                             html += `
-                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${status.name}' }, '*')">
+                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${status.name.replace(/'/g, "\\'")}' }, '*')">
                                 <div class="clear-item-left">
-                                    <span class="star-btn active" onclick="toggleWatch(event, '${id}', '${status.name}', '${status.cat}'); setTimeout(refreshWatchlistModal, 50);"></span>
+                                    <span class="star-btn active" onclick="toggleWatch(event, '${id}', '${status.name.replace(/'/g, "\\'")}', '${status.cat}'); setTimeout(refreshWatchlistModal, 50);"></span>
                                     <span class="clear-name">${status.name} (${status.cat})</span>
                                 </div>
                                 <span class="clear-status ${status.isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -250,9 +250,9 @@
                                 const isWatched = watched.includes(e.id);
 
                                 eventsHtml += `
-                                <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
+                                <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName.replace(/'/g, "\\'")}' }, '*')">
                                     <div class="clear-item-left">
-                                        <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName}', 'RAIDS')"></span>
+                                        <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName.replace(/'/g, "\\'")}', 'RAIDS')"></span>
                                         <span class="clear-name">${displayName}</span>
                                     </div>
                                     <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -308,9 +308,9 @@
                         const isWatched = watched.includes(s);
 
                         sHtml += `
-                        <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName}' }, '*')">
+                        <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${displayName.replace(/'/g, "\\'")}' }, '*')">
                             <div class="clear-item-left">
-                                <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName}', 'STRIKES')"></span>
+                                <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName.replace(/'/g, "\\'")}', 'STRIKES')"></span>
                                 <span class="clear-name">${displayName}</span>
                             </div>
                             <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -364,9 +364,9 @@
                             const isWatched = watched.includes(p.id);
 
                             pHtml += `
-                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${pathName}' }, '*')">
+                            <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${pathName.replace(/'/g, "\\'")}' }, '*')">
                                 <div class="clear-item-left">
-                                    <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName}', 'DUNGEONS')"></span>
+                                    <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName.replace(/'/g, "\\'")}', 'DUNGEONS')"></span>
                                     <span class="clear-name">${pathName}</span>
                                 </div>
                                 <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
@@ -420,9 +420,9 @@
                     const isWatched = watched.includes(String(m.id));
 
                     convHtml += `
-                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name.replace(/'/g, "\\'")}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${m.name}', 'CONVERGENCE')"></span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${m.name.replace(/'/g, "\\'")}', 'CONVERGENCE')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -540,9 +540,9 @@
                     const isWatched = watched.includes(String(m.id));
 
                     sotoHtml += `
-                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name.replace(/'/g, "\\'")}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName.replace(/'/g, "\\'")}', 'RIFTS')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -561,49 +561,6 @@
                     </div>
                     <div class="cat-content" style="${isSotoSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                         ${sotoHtml}
-                    </div>
-                </div>`;
-
-                // Group 2: Rotating Maps
-                let rotatingCleared = 0;
-                let rotatingTotal = activeRotating.length;
-                let rotatingHtml = '';
-                
-                activeRotating.forEach(m => {
-                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
-                    const isDone = playerProg ? playerProg.done : false;
-                    if (isDone) rotatingCleared++;
-                    
-                    const progressCount = playerProg ? playerProg.current : 0;
-                    const maxCount = playerProg ? playerProg.max : 5;
-                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
-                    
-                    const riftName = m.name + " Rift";
-                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
-                    const isWatched = watched.includes(String(m.id));
-
-                    rotatingHtml += `
-                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
-                        <div class="clear-item-left">
-                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
-                            <span class="clear-name">${m.name}</span>
-                        </div>
-                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
-                    </div>`;
-                });
-
-                let rotatingProgressHtml = rotatingCleared === rotatingTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${rotatingCleared}/${rotatingTotal}</span>`;
-
-                const rotatingSubTitle = `Rotating Maps`;
-                const isRotatingSubOpen = menuStates['sub_' + rotatingSubTitle.trim()] === true; // default to closed (false)
-                riftsHtml += `
-                <div class="sub-cat">
-                    <div class="sub-header" onclick="toggleCat(this, 'sub_${rotatingSubTitle.replace(/'/g, "\\'")}')">
-                        <span class="sub-title">${rotatingSubTitle}</span>
-                        ${rotatingProgressHtml}
-                    </div>
-                    <div class="cat-content" style="${isRotatingSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
-                        ${rotatingHtml}
                     </div>
                 </div>`;
 
@@ -626,9 +583,9 @@
                     const isWatched = watched.includes(String(m.id));
 
                     jwHtml += `
-                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name.replace(/'/g, "\\'")}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName.replace(/'/g, "\\'")}', 'RIFTS')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -669,9 +626,9 @@
                     const isWatched = watched.includes(String(m.id));
 
                     voeHtml += `
-                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name}' }, '*')">
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name.replace(/'/g, "\\'")}' }, '*')">
                         <div class="clear-item-left">
-                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName}', 'RIFTS')"></span>
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName.replace(/'/g, "\\'")}', 'RIFTS')"></span>
                             <span class="clear-name">${m.name}</span>
                         </div>
                         <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
@@ -690,6 +647,49 @@
                     </div>
                     <div class="cat-content" style="${isVoeSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
                         ${voeHtml}
+                    </div>
+                </div>`;
+
+                // Group 2: Rotating Maps
+                let rotatingCleared = 0;
+                let rotatingTotal = activeRotating.length;
+                let rotatingHtml = '';
+                
+                activeRotating.forEach(m => {
+                    const playerProg = accAchievements ? accAchievements.find(a => a.id === m.id) : null;
+                    const isDone = playerProg ? playerProg.done : false;
+                    if (isDone) rotatingCleared++;
+                    
+                    const progressCount = playerProg ? playerProg.current : 0;
+                    const maxCount = playerProg ? playerProg.max : 5;
+                    const statusText = isDone ? 'CLEARED' : `${progressCount}/${maxCount}`;
+                    
+                    const riftName = m.name + " Rift";
+                    clearsStatus[m.id] = { name: riftName, isDone: isDone, cat: 'RIFTS', progress: progressCount, max: maxCount };
+                    const isWatched = watched.includes(String(m.id));
+
+                    rotatingHtml += `
+                    <div class="clear-item" onclick="window.parent.postMessage({ action: 'openWiki', title: '${m.name.replace(/'/g, "\\'")}' }, '*')">
+                        <div class="clear-item-left">
+                            <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${m.id}', '${riftName.replace(/'/g, "\\'")}', 'RIFTS')"></span>
+                            <span class="clear-name">${m.name}</span>
+                        </div>
+                        <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${statusText}</span>
+                    </div>`;
+                });
+
+                let rotatingProgressHtml = rotatingCleared === rotatingTotal ? `<span class="progress-done">✔</span>` : `<span class="progress-text">${rotatingCleared}/${rotatingTotal}</span>`;
+
+                const rotatingSubTitle = `Rotating Maps`;
+                const isRotatingSubOpen = menuStates['sub_' + rotatingSubTitle.trim()] === true; // default to closed (false)
+                riftsHtml += `
+                <div class="sub-cat">
+                    <div class="sub-header" onclick="toggleCat(this, 'sub_${rotatingSubTitle.replace(/'/g, "\\'")}')">
+                        <span class="sub-title">${rotatingSubTitle}</span>
+                        ${rotatingProgressHtml}
+                    </div>
+                    <div class="cat-content" style="${isRotatingSubOpen ? 'display:flex;' : 'display:none;'} padding:0; gap:0;">
+                        ${rotatingHtml}
                     </div>
                 </div>`;
 

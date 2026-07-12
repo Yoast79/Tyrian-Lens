@@ -87,7 +87,7 @@
 
 				try {
 					const allRes = await fetch('https://api.guildwars2.com/v2/currencies?ids=all');
-					masterCurrencyList = await allRes.json();
+					masterCurrencyList = (await allRes.json()).filter(curr => curr.name && curr.name.trim() !== "");
 
 					if (activeKey && !cachedWallet) {
 						const accRes = await fetch(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);

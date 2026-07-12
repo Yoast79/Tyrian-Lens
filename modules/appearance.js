@@ -97,7 +97,7 @@ async function loadAppearanceData(el, index) {
         let attempts = 0;
         appearanceSyncInterval = setInterval(() => {
             attempts++;
-            const globalIndex = window.appearanceIndex;
+            const globalIndex = indexes.appearance;
             if (globalIndex && globalIndex.items) {
                 clearInterval(appearanceSyncInterval);
                 loadAppearanceData(el, globalIndex);

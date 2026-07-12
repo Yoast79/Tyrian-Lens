@@ -355,7 +355,7 @@ namespace GW2PS
             {
                 _ = mapView.CoreWebView2.ExecuteScriptAsync("window.showToast('SYNCING WITH DRF...');");
 
-                Uri serverUri = new Uri("wss://drf.rs/ws/");
+                Uri serverUri = new Uri("wss://drf.rs/ws");
 
                 // 1. Connect first (No subprotocols or special headers needed here per GitHub code)
                 await drfSocket.ConnectAsync(serverUri, CancellationToken.None);

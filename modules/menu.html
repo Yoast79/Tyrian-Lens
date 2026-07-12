@@ -126,11 +126,14 @@
 			}
 
 			function checkUpdateIcon() {
-				if (localStorage.getItem('gw2_update_url')) {
-					const icon = document.getElementById('nav-settings-icon');
-					if (icon) {
+				const icon = document.getElementById('nav-settings-icon');
+				if (icon) {
+					if (localStorage.getItem('gw2_update_url')) {
 						icon.src = "https://gw2ps.local/Assets/MenuIcons/nav_settings_update.png";
 						icon.parentElement.onmouseover = function(e) { showTip('Update Available!', e); };
+					} else {
+						icon.src = "https://gw2ps.local/Assets/MenuIcons/nav_settings.png";
+						icon.parentElement.onmouseover = function(e) { showTip('Settings', e); };
 					}
 				}
 			}
