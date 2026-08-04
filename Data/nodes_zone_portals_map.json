@@ -2001,6 +2001,46 @@
     },
 	{
         "pos":  [
+                    37186.2,
+                    35959.8
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Dragon's Stand"
+    },
+	{
+        "pos":  [
+                    36933.2,
+                    36159
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Tangled Depths"
+    },
+	{
+        "pos":  [
+                    29388,
+                    101168
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Echovald Wilds"
+    },
+	{
+        "pos":  [
+                    28623,
+                    100556
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Arborstone"
+    },
+	{
+        "pos":  [
                     58027,
                     43731
                 ],

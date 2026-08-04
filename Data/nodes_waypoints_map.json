@@ -6799,7 +6799,27 @@
         "chat_code":  "[&BPoPAAA=]",
         "desc":  ""
     },
-    {
+	{
+        "pos":  [
+                    36649.7,
+                    36232.2
+                ],
+        "name":  "Pact Base Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAIAAA=]",
+        "desc":  ""
+    },
+	{
+        "pos":  [
+                    36809,
+                    36525.5
+                ],
+        "name":  "Pact Base Camp Southern Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoIAAA=]",
+        "desc":  ""
+    },
+	{
         "pos":  [
                     5162.33,
                     62438.5
