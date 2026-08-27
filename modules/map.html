@@ -955,7 +955,35 @@
 			return 'node_npc_misc';
 		}
 
-		L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+		var mapDetailLevel = mSettings.mapDetailLevel || "painterly";
+		var detailedLayer = null;
+		var painterlyLayer = null;
+
+		if (mapDetailLevel === "painterly") {
+			L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+		} else {
+			var targetZoom = parseInt(mapDetailLevel);
+			detailedLayer = L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, minNativeZoom: targetZoom, maxNativeZoom: targetZoom, maxZoom: 9 });
+			painterlyLayer = L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 6, maxZoom: 9 });
+
+			function updateTileLayer() {
+				var z = map.getZoom();
+				if (z >= 5) {
+					if (!map.hasLayer(detailedLayer)) {
+						detailedLayer.addTo(map);
+						map.removeLayer(painterlyLayer);
+					}
+				} else {
+					if (!map.hasLayer(painterlyLayer)) {
+						painterlyLayer.addTo(map);
+						map.removeLayer(detailedLayer);
+					}
+				}
+			}
+
+			updateTileLayer();
+			map.on("zoomend", updateTileLayer);
+		}
 		map.setView([31384, 49071], 4);
 
 		borderLayer.addTo(map);
@@ -1745,10 +1773,26 @@
 					"nodes_miscellaneous.json", "nodes_mist_rift.json", "nodes_ranger_pets.json",
 					"nodes_service_npc.json", "nodes_world_events.json"
 				];
-				const altPromises = altFiles.map(file => fetch(apiBase + file + "?t=" + Date.now())
+				async function fetchWithFallback(file) {
+					if (!isDevMode) {
+						try {
+							const r = await fetch("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/" + file + "?t=" + Date.now());
+							if (r && r.ok) return r;
+						} catch (e) {}
+					}
+					try {
+						const r = await fetch("https://gw2ps.local/Data/" + file + "?t=" + Date.now());
+						if (r && r.ok) return r;
+					} catch (e) {}
+					return null;
+				}
+
+				const altPromises = altFiles.map(file => fetchWithFallback(file)
 					.then(res => {
-						if (res.ok) {
-							return res.json().then(data => {
+						if (res && res.ok) {
+							return res.text().then(text => {
+								let cleanText = text.replace(/^\uFEFF/, '').trim();
+								let data = JSON.parse(cleanText);
 								let nodesArray = Array.isArray(data) ? data : (data && data.value ? data.value : []);
 								console.log(`[Altitude Engine] Loaded ${file} successfully: ${nodesArray.length} nodes.`);
 								// Inject the source file name into each node for dynamic dev mode updates!
@@ -1759,7 +1803,7 @@
 								return [];
 							});
 						} else {
-							console.error(`[Altitude Engine] Failed to load ${file}: HTTP status ${res.status}`);
+							console.error(`[Altitude Engine] Failed to load ${file}`);
 							return [];
 						}
 					})
@@ -1774,23 +1818,24 @@
 					iRes, oRes,
 					...altResults
 				] = await Promise.all([
-					fetch(apiBase + "nodes_zone_portals_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_hearts_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_heropoints_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_maps_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_regions_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_sectors_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_pois_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_vistas_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_waypoints_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_mastery_insight.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "map_options_structure.json?t=" + Date.now()).catch(() => null),
+					fetchWithFallback("nodes_zone_portals_map.json"),
+					fetchWithFallback("nodes_hearts_map.json"),
+					fetchWithFallback("nodes_heropoints_map.json"),
+					fetchWithFallback("nodes_maps_map.json"),
+					fetchWithFallback("nodes_regions_map.json"),
+					fetchWithFallback("nodes_sectors_map.json"),
+					fetchWithFallback("nodes_pois_map.json"),
+					fetchWithFallback("nodes_vistas_map.json"),
+					fetchWithFallback("nodes_waypoints_map.json"),
+					fetchWithFallback("nodes_mastery_insight.json"),
+					fetchWithFallback("map_options_structure.json"),
 					...altPromises
 				]);
 
 				if (oRes && oRes.ok) {
 					try {
-						const sections = await oRes.json();
+						const text = await oRes.text();
+						const sections = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 						buildLayerToSectionMap(sections);
 						console.log("[Altitude Engine] Dynamically built layerToSectionMap from options structure.");
 					} catch(err) {
@@ -1955,8 +2000,13 @@
 
 				// 1. Mastery Insights
 				if (iRes && iRes.ok) {
-					masteryPointsData = await iRes.json();
-					renderMasteryInsights();
+					try {
+						const text = await iRes.text();
+						masteryPointsData = JSON.parse(text.replace(/^\uFEFF/, '').trim());
+						renderMasteryInsights();
+					} catch(err) {
+						console.error("Error parsing nodes_mastery_insight.json:", err);
+					}
 				}
 
 				// 4. Standard Map Data (POIs, Labels, etc.)
@@ -1975,7 +2025,8 @@
 				for (const item of mapDataFiles) {
 					if (item.res && item.res.ok) {
 						try {
-							const arr = await item.res.json();
+							const text = await item.res.text();
+							const arr = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 							if (Array.isArray(arr)) {
 								mapDataPoints.push(...arr);
 							}

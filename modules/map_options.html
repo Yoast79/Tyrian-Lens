@@ -199,7 +199,8 @@
 
 					const response = await fetch(apiBase + "map_options_structure.json?t=" + Date.now());
 					if (!response.ok) throw new Error("Failed to load map options structure");
-					const sections = await response.json();
+					const text = await response.text();
+					const sections = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 
 					const container = document.getElementById('dynamic-sections-container');
 					let html = '';

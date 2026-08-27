@@ -133,7 +133,12 @@
 			}
 
 			async function fetchJSON(url) {
-				try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+				try {
+					const r = await fetch(url);
+					if (!r.ok) return null;
+					const text = await r.text();
+					return JSON.parse(text.replace(/^\uFEFF/, '').trim());
+				} catch(e) { return null; }
 			}
 
             function addLoc(id, locName, count) {

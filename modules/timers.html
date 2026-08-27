@@ -472,7 +472,8 @@
                 try {
                     const response = await fetch(apiBase + "timers_config.json?t=" + Date.now(), { cache: "no-store" });
                     if (response.ok) {
-                        schedule = await response.json();
+                        const text = await response.text();
+                        schedule = JSON.parse(text.replace(/^\uFEFF/, '').trim());
                         schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
                     }
                 } catch(e) { console.error("Failed to load timers JSON:", e); }
