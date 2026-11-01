@@ -8894,5 +8894,61 @@
         "icon": "https://gw2ps.local/Assets/RangerPetIcons/120px-Juvenile_Electric_Wyvern.png",
         "no_underwater": "https://wiki.guildwars2.com/images/a/a0/Not_available_underwater.png",
         "continent": 1
+    },
+	{
+        "pos": [
+            4395.8,
+            58794.5
+        ],
+        "node": "Vampire Bat",
+        "type": "node_ranger_pet",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://media.invisioncic.com/a311129/monthly_2021_04/p5ERYVB88HMIH.thumb.png.23f8c691babb069c6c592e7dfb978eb8.png",
+        "no_underwater": "https://wiki.guildwars2.com/images/a/a0/Not_available_underwater.png",
+        "continent": 1
+    },
+	{
+        "pos": [
+            4302.4,
+            58752.8
+        ],
+        "node": "Vampire Bat",
+        "type": "node_ranger_pet",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://media.invisioncic.com/a311129/monthly_2021_04/p5ERYVB88HMIH.thumb.png.23f8c691babb069c6c592e7dfb978eb8.png",
+        "no_underwater": "https://wiki.guildwars2.com/images/a/a0/Not_available_underwater.png",
+        "continent": 1
+    },
+	{
+        "pos": [
+            4290,
+            58928.5
+        ],
+        "node": "Vampire Bat",
+        "type": "node_ranger_pet",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://media.invisioncic.com/a311129/monthly_2021_04/p5ERYVB88HMIH.thumb.png.23f8c691babb069c6c592e7dfb978eb8.png",
+        "no_underwater": "https://wiki.guildwars2.com/images/a/a0/Not_available_underwater.png",
+        "continent": 1
+    },
+	{
+        "pos": [
+            4333.4,
+            58970.5
+        ],
+        "node": "Vampire Bat",
+        "type": "node_ranger_pet",
+        "yields": [
+            "Ranger Pet"
+        ],
+        "icon": "https://media.invisioncic.com/a311129/monthly_2021_04/p5ERYVB88HMIH.thumb.png.23f8c691babb069c6c592e7dfb978eb8.png",
+        "no_underwater": "https://wiki.guildwars2.com/images/a/a0/Not_available_underwater.png",
+        "continent": 1
     }
 	]

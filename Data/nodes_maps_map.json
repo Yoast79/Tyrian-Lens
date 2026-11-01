@@ -1403,6 +1403,23 @@
         "mastery_icon":  "mi_voe.png",
         "desc":  ""
     },
+	{
+        "pos":  [
+                    4724,
+                    58488
+                ],
+        "name":  "Leyspring Hollows",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  2,
+        "heropoints":  0,
+        "pois":  40,
+        "vistas":  6,
+        "masteries":  5,
+        "mastery_icon":  "mi_voe.png",
+        "desc":  ""
+    },
     {
         "pos":  [
                     39456,

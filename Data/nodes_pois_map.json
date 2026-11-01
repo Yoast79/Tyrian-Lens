@@ -19428,5 +19428,405 @@
         "type":  "landmark",
         "chat_code":  "[&BAkQAAA=]",
         "desc":  ""
+    },
+	{
+        "pos": [
+            3536.7,
+            58157.2
+        ],
+        "name": "Alliance Listening Post",
+        "type": "landmark",
+        "chat_code": "[&BBMQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4284.7,
+            58768.6
+        ],
+        "name": "Arbor of Lamentation",
+        "type": "landmark",
+        "chat_code": "[&BB4QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5254.3,
+            58835.1
+        ],
+        "name": "Attuning Chamber",
+        "type": "landmark",
+        "chat_code": "[&BCQQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3955,
+            58077.6
+        ],
+        "name": "Augmented Atelier",
+        "type": "landmark",
+        "chat_code": "[&BCkQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5843.3,
+            58430.4
+        ],
+        "name": "Chak Hive",
+        "type": "landmark",
+        "chat_code": "[&BAsQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3512.9,
+            59046.6
+        ],
+        "name": "Crystalline Crest",
+        "type": "landmark",
+        "chat_code": "[&BCEQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3612.9,
+            58578.5
+        ],
+        "name": "Crystalline Nidus",
+        "type": "landmark",
+        "chat_code": "[&BBcQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3745.5,
+            58924.4
+        ],
+        "name": "Dreaming Chambers",
+        "type": "landmark",
+        "chat_code": "[&BBUQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4544.4,
+            59214.6
+        ],
+        "name": "Ethereal Cascade",
+        "type": "landmark",
+        "chat_code": "[&BCYQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4649.1,
+            57848.7
+        ],
+        "name": "Exposed Ley Root",
+        "type": "landmark",
+        "chat_code": "[&BBQQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5501.4,
+            59454.7
+        ],
+        "name": "Flowstone Moor",
+        "type": "landmark",
+        "chat_code": "[&BCcQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4164.3,
+            58754.5
+        ],
+        "name": "Fool's Maze",
+        "type": "landmark",
+        "chat_code": "[&BAwQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3867.1,
+            59168.2
+        ],
+        "name": "Gloamlit Courtyard",
+        "type": "landmark",
+        "chat_code": "[&BDQQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3994,
+            58271.2
+        ],
+        "name": "Hidden Burrow",
+        "type": "landmark",
+        "chat_code": "[&BDMQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            6129.9,
+            59081.8
+        ],
+        "name": "Ley Altar",
+        "type": "landmark",
+        "chat_code": "[&BA0QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5856.9,
+            59088.1
+        ],
+        "name": "Ley Barbican",
+        "type": "landmark",
+        "chat_code": "[&BDIQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4284.2,
+            59435
+        ],
+        "name": "Leyspring Bore",
+        "type": "landmark",
+        "chat_code": "[&BCIQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3806.2,
+            58625.5
+        ],
+        "name": "Natural Arch",
+        "type": "landmark",
+        "chat_code": "[&BC0QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5292.9,
+            59290.3
+        ],
+        "name": "Path of the Uncloaked",
+        "type": "landmark",
+        "chat_code": "[&BC4QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3551.3,
+            59346.3
+        ],
+        "name": "Primus Minor",
+        "type": "landmark",
+        "chat_code": "[&BCwQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5258.3,
+            58475.6
+        ],
+        "name": "Primus Minor Research Annex",
+        "type": "landmark",
+        "chat_code": "[&BBwQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4707.2,
+            59586.6
+        ],
+        "name": "Proving Grounds",
+        "type": "landmark",
+        "chat_code": "[&BBIQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4232.7,
+            58524.6
+        ],
+        "name": "Sealed Vault",
+        "type": "landmark",
+        "chat_code": "[&BCoQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3412.6,
+            59361.9
+        ],
+        "name": "Seat of the Director",
+        "type": "landmark",
+        "chat_code": "[&BDAQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4284.9,
+            58945.9
+        ],
+        "name": "Sequen Cromatica",
+        "type": "landmark",
+        "chat_code": "[&BCAQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5423.8,
+            58330.9
+        ],
+        "name": "Skittering Corridor",
+        "type": "landmark",
+        "chat_code": "[&BCsQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4661.5,
+            58635.8
+        ],
+        "name": "Specimen Stage Alpha",
+        "type": "landmark",
+        "chat_code": "[&BCgQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4546.1,
+            58493.5
+        ],
+        "name": "Specimen Stage Beta",
+        "type": "landmark",
+        "chat_code": "[&BAoQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4657,
+            58366.8
+        ],
+        "name": "Specimen Stage Delta",
+        "type": "landmark",
+        "chat_code": "[&BDoQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4761.3,
+            58492.8
+        ],
+        "name": "Specimen Stage Gamma",
+        "type": "landmark",
+        "chat_code": "[&BDcQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5852.9,
+            59596.6
+        ],
+        "name": "Spirit's Descent",
+        "type": "landmark",
+        "chat_code": "[&BA8QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3614.5,
+            59410.8
+        ],
+        "name": "Storage Cellar",
+        "type": "landmark",
+        "chat_code": "[&BCUQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4802.7,
+            59112.9
+        ],
+        "name": "Subterranean Corridor",
+        "type": "landmark",
+        "chat_code": "[&BDUQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4255.1,
+            59174.3
+        ],
+        "name": "Tactician's Chantry",
+        "type": "landmark",
+        "chat_code": "[&BA4QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4647.2,
+            58006.4
+        ],
+        "name": "The Cannulae",
+        "type": "landmark",
+        "chat_code": "[&BBkQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4152.3,
+            58939
+        ],
+        "name": "The Dueling Halls",
+        "type": "landmark",
+        "chat_code": "[&BBEQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5605.8,
+            59340.5
+        ],
+        "name": "The Elder's Fruition",
+        "type": "landmark",
+        "chat_code": "[&BBsQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4288.6,
+            58730.2
+        ],
+        "name": "The Illuminated Path",
+        "type": "landmark",
+        "chat_code": "[&BCMQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3686.2,
+            57935.4
+        ],
+        "name": "The Scriptorium",
+        "type": "landmark",
+        "chat_code": "[&BC8QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3759.3,
+            58182.2
+        ],
+        "name": "Wailer's Pulpit",
+        "type": "landmark",
+        "chat_code": "[&BBoQAAA=]",
+        "desc": ""
     }
 ]

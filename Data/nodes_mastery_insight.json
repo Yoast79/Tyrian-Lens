@@ -5698,5 +5698,100 @@
     "category": "mastery_insights",
     "layer": "node_mastery_insight",
     "desc": "Ley-Drowned Quarry"
-  }
+  },
+  {
+        "pos": [
+            4164.6,
+            58608.5
+        ],
+        "node": "Mastery Insight",
+        "yields": [
+            "Mastery Point"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/mi_voe.png",
+        "alt": 16,
+        "map_id": 1633,
+        "map_name": "Leyspring Hollows",
+        "expac": "voe",
+        "category": "mastery_insights",
+        "layer": "node_mastery_insight",
+        "desc": "Navarium Core",
+        "achievement_id": "9406"
+    },
+    {
+        "pos": [
+            5740.9,
+            59383.4
+        ],
+        "node": "Mastery Insight",
+        "yields": [
+            "Mastery Point"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/mi_voe.png",
+        "alt": 129,
+        "map_id": 1633,
+        "map_name": "Leyspring Hollows",
+        "expac": "voe",
+        "category": "mastery_insights",
+        "layer": "node_mastery_insight",
+        "desc": "Sealed Vestibule",
+        "achievement_id": "9391"
+    },
+    {
+        "pos": [
+            4317.8,
+            59351.4
+        ],
+        "node": "Mastery Insight",
+        "yields": [
+            "Mastery Point"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/mi_voe.png",
+        "alt": 44,
+        "map_id": 1633,
+        "map_name": "Leyspring Hollows",
+        "expac": "voe",
+        "category": "mastery_insights",
+        "layer": "node_mastery_insight",
+        "desc": "The Auguratorium",
+        "achievement_id": "9364"
+    },
+    {
+        "pos": [
+            3969.8,
+            59310.7
+        ],
+        "node": "Mastery Insight",
+        "yields": [
+            "Mastery Point"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/mi_voe.png",
+        "alt": 31,
+        "map_id": 1633,
+        "map_name": "Leyspring Hollows",
+        "expac": "voe",
+        "category": "mastery_insights",
+        "layer": "node_mastery_insight",
+        "desc": "Ordnance Depot",
+        "achievement_id": "9359"
+    },
+    {
+        "pos": [
+            4711.3,
+            57932.9
+        ],
+        "node": "Mastery Insight",
+        "yields": [
+            "Mastery Point"
+        ],
+        "icon": "https://gw2ps.local/Assets/Icons/mi_voe.png",
+        "alt": 93,
+        "map_id": 1633,
+        "map_name": "Leyspring Hollows",
+        "expac": "voe",
+        "category": "mastery_insights",
+        "layer": "node_mastery_insight",
+        "desc": "Rooted Sanctuary",
+        "achievement_id": "9381"
+    }
 ]

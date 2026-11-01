@@ -4572,5 +4572,59 @@
         "type":  "vista",
         "chat_code":  "[&BAQQAAA=]",
         "desc":  ""
+    },
+	{
+        "pos": [
+            5811.8,
+            58465.8
+        ],
+        "type": "vista",
+        "chat_code": "[&BBAQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3827.8,
+            58639.9
+        ],
+        "type": "vista",
+        "chat_code": "[&BBgQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3816.2,
+            59095.3
+        ],
+        "type": "vista",
+        "chat_code": "[&BB0QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5827,
+            59238.5
+        ],
+        "type": "vista",
+        "chat_code": "[&BDEQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4670.6,
+            57729.4
+        ],
+        "type": "vista",
+        "chat_code": "[&BDgQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4822.6,
+            59672
+        ],
+        "type": "vista",
+        "chat_code": "[&BDkQAAA=]",
+        "desc": ""
     }
 ]

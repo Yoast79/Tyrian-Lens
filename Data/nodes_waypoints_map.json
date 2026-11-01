@@ -6828,5 +6828,35 @@
         "type":  "waypoint",
         "chat_code":  "[&BPwPAAA=]",
         "desc":  ""
+    },
+	{
+        "pos": [
+            3657.8,
+            58080.6
+        ],
+        "name": "Doyen's Adytum Waypoint",
+        "type": "waypoint",
+        "chat_code": "[&BB8QAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4953.2,
+            59329.6
+        ],
+        "name": "Hall of Assemblage Waypoint",
+        "type": "waypoint",
+        "chat_code": "[&BDYQAAA=]",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5819.8,
+            59557.2
+        ],
+        "name": "Sealed Vestibule Waypoint",
+        "type": "waypoint",
+        "chat_code": "[&BBYQAAA=]",
+        "desc": ""
     }
 ]

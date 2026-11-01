@@ -2048,5 +2048,25 @@
         "type":  "node_zone_portal",
         "icon":  "https://wiki.guildwars2.com/images/e/e3/Transport_Facilitator_%28map_icon%29.png",
         "desc":  "Ship to Domain of Istan (one way trip)"
+    },
+	{
+        "pos":  [
+                    5863.4,
+                    59622.3
+                ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Eternity's Garden"
+    },
+	{
+        "pos":  [
+                    4565.5,
+                    60265.9
+                    ],
+        "name":  "Zone Portal",
+        "type":  "node_zone_portal",
+        "icon":  "https://wiki.guildwars2.com/images/a/ae/Asura_gate_starter_area_%28map_icon%29.png",
+        "desc":  "To Leyspring Hollows"
     }
 ]

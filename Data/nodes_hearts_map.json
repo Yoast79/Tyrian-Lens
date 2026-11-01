@@ -1548,5 +1548,25 @@
         "type":  "heart",
         "chat_code":  "[&BNABAAA=]",
         "desc":  "Assist the Stewards of Galdra around the forge."
+    },
+	{
+        "pos": [
+            3587.4,
+            59446.6
+        ],
+        "name": "Renown Heart",
+        "type": "heart",
+        "chat_code": "[&BNEBAAA=]",
+        "desc": "Assist Astral Ward Agent Snarlcrow and his associates in sabotaging the Inquest base of operations in Leyspring Hollows."
+    },
+    {
+        "pos": [
+            5118.2,
+            59287.9
+        ],
+        "name": "Renown Heart",
+        "type": "heart",
+        "chat_code": "[&BNIBAAA=]",
+        "desc": "Train with alliance forces and assist around camp to prepare yourself for the fight ahead."
     }
 ]

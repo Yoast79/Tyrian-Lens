@@ -12166,5 +12166,86 @@
         "name":  "Temple of the Blessed Mantle",
         "type":  "sector",
         "desc":  ""
+    },
+	{
+        "pos": [
+            3801,
+            58362.3
+        ],
+        "name": "Doyen's Adytum",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4662.2,
+            58442.8
+        ],
+        "name": "Navarium Core",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4327.3,
+            57924.5
+        ],
+        "name": "Rooted Sanctuary",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            3725.2,
+            59348
+        ],
+        "name": "Ordnance Depot",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4775,
+            59378.9
+        ],
+        "name": "Hall of Assemblage",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            4290.7,
+            59069.9
+        ],
+        "name": "The Auguratorium",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5787.1,
+            59320.7
+        ],
+        "name": "Sealed Vestibule",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5373.8,
+            58800.2
+        ],
+        "name": "Ley Distributary",
+        "type": "sector",
+        "desc": ""
+    },
+    {
+        "pos": [
+            5690.1,
+            58432.7
+        ],
+        "name": "Infested Sluiceways",
+        "type": "sector",
+        "desc": ""
     }
 ]
