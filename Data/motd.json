@@ -2,9 +2,9 @@
   "active": true,
   "motds": [
     {
-      "id": "motd_npc_coords",
-      "title": "NPC coordinates wanted!",
-      "message": "<div style='text-align: center;'>I want to keep filling the list of  NPC's and their coordinates.<br> Please, if you see a missing NPC, stand exactly on top of it.<br> Use the <span class='motd-highlight-btn'>Report Node</span> button and use the name of the NPC as <strong>Node Name</strong>. Thank you!",
+      "id": "motd_v1_4_5_coords",
+      "title": "Leyspring Hollows Coordinates",
+      "message": "<div style='text-align: center;'>I have updated the map with the coordinates for</div> <br><div style='text-align: center;'><span class='motd-highlight-btn'>POI's</span> <span class='motd-highlight-btn'>Waypoints</span> <span class='motd-highlight-btn'>MAstery Insights</span> <span class='motd-highlight-btn'>Hearts</span></div><br><div style='text-align: center;'>In the Leyspring Hollow map.</div><br><div style='text-align: center;'>If you see any missing coordinates, please report them with the <span class='motd-highlight-btn'>Report Node</span> button in the bottom left.</div>",
       "active": true
     }
   ]
