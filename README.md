@@ -77,4 +77,4 @@ Built with a high-performance **C# / .NET 9** core and a modern **WebView2** fro
 <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-color-icon.png"  width="16" height="16">  [Join the Discord Server](https://discord.tyrianlens.com)
 
 **If Tyrian Lens has enhanced your journey through Tyria, show your appreciation by donating some items or gold.**
-**Yoast.8572**
+**Yoast.8572** (EU Server)
