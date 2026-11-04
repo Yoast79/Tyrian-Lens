@@ -1717,7 +1717,7 @@
 				let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: customIcon, data: p });
 				m.on('mouseover', e => { 
 					var pt = map.mouseEventToContainerPoint(e.originalEvent); 
-					let tooltipHtml = `<b>Mastery Insight</b>`;
+					let tooltipHtml = `<b>${window.DataLoader ? window.DataLoader.t('common.mastery_insight', 'Mastery Insight') : 'Mastery Insight'}</b>`;
 					if (p.desc) {
 						tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</span>`;
 					}
@@ -1962,7 +1962,7 @@
 					});
 
 					// Set up premium custom dual-row tooltips for service NPCs, and standard tooltips for others
-					let mainTitle = p.event || p.node || "Event";
+					let mainTitle = p.event || p.node || (window.DataLoader ? window.DataLoader.t('common.event', 'Event') : 'Event');
 					let tooltipText = p.day ? `${mainTitle} (${p.day.toUpperCase()})` : mainTitle;
 					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
 						const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
@@ -2099,7 +2099,11 @@
 							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-' + type }) });
 							m.on('mouseover', e => {
 								var pt = map.mouseEventToContainerPoint(e.originalEvent);
-								let tooltipHtml = `<div style="color:#e2c07d; font-size:13px; margin-bottom:2px;">${p.name || "Vista"}</div>`;
+								let defaultName = (type === 'heropoint' || rawType === 'heropoint') ? (window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point')
+									: (type === 'vista' || rawType === 'vista') ? (window.DataLoader ? window.DataLoader.t('common.vista', 'Vista') : 'Vista')
+									: (type === 'heart' || rawType === 'heart') ? (window.DataLoader ? window.DataLoader.t('common.heart', 'Renown Heart') : 'Renown Heart')
+									: (window.DataLoader ? window.DataLoader.t('common.point_of_interest', 'Point of Interest') : 'Point of Interest');
+								let tooltipHtml = `<div style="color:#e2c07d; font-size:13px; margin-bottom:2px;">${p.name || defaultName}</div>`;
 								if (p.desc) {
 									tooltipHtml += `<div style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</div>`;
 								}

@@ -272,7 +272,20 @@
     "yes": "Oui",
     "no": "Non",
     "ok": "OK",
-    "accept": "Accepter"
+    "accept": "Accepter",
+    "heropoint": "Point de héros",
+    "heropoints": "Points de héros",
+    "event": "Événement",
+    "world_boss": "Boss mondial",
+    "achievement": "Succès",
+    "mastery_insight": "Point de maîtrise",
+    "vista": "Panorama",
+    "waypoint": "Point de passage",
+    "point_of_interest": "Site remarquable",
+    "heart": "Cœur de renommée",
+    "chest": "Coffre",
+    "farming_node": "Nœud de récolte",
+    "ranger_pet": "Familier de rôdeur"
   },
   "map_options": {
     "sections": {

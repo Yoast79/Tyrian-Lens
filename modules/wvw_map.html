@@ -596,7 +596,7 @@
 						(data.skill_challenges || []).forEach(p => {
 							let iconUrl = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
 							let m = L.marker([p.coord[1], p.coord[0]], { pane: 'staticPane', icon: L.icon({ iconUrl: iconUrl, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
-							m.on('mouseover', e => showTip("Hero Point", e.originalEvent));
+							m.on('mouseover', e => showTip(window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point', e.originalEvent));
 							m.on('mouseout', hideTip);
 							subLayers['heropoint'].addLayer(m);
 						});

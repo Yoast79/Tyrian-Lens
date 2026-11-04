@@ -311,7 +311,11 @@
                         }
 
                         let label = t;
-                        if (label === 'landmark') label = 'POI';
+                        if (label === 'landmark' || label === 'poi') label = (window.DataLoader ? window.DataLoader.t('common.point_of_interest', 'POI') : 'POI').toUpperCase();
+                        else if (label === 'heropoint' || label === 'skill') label = (window.DataLoader ? window.DataLoader.t('common.heropoint', 'HERO POINT') : 'HERO POINT').toUpperCase();
+                        else if (label === 'waypoint') label = (window.DataLoader ? window.DataLoader.t('common.waypoint', 'WAYPOINT') : 'WAYPOINT').toUpperCase();
+                        else if (label === 'vista') label = (window.DataLoader ? window.DataLoader.t('common.vista', 'VISTA') : 'VISTA').toUpperCase();
+                        else if (label === 'heart') label = (window.DataLoader ? window.DataLoader.t('common.heart', 'HEART') : 'HEART').toUpperCase();
 
                         itemCache[id] = {
                             name: p.name || 'Unknown Location',
@@ -345,7 +349,7 @@
 							const id = 'worldevent_' + idx;
 							const layerKey = p.layer || p.type || 'node_world_boss';
 							const isBoss = layerKey === 'node_world_boss';
-							const tag = isBoss ? 'WORLD BOSS' : 'EVENT';
+							const tag = isBoss ? (window.DataLoader ? window.DataLoader.t('common.world_boss', 'WORLD BOSS') : 'WORLD BOSS').toUpperCase() : (window.DataLoader ? window.DataLoader.t('common.event', 'EVENT') : 'EVENT').toUpperCase();
 							
 							itemCache[id] = {
 								name: nodeName,
@@ -432,18 +436,18 @@
 					const count = group.length;
 					const isSingle = count === 1;
 
-					let tag = "FARMING NODE";
+					let tag = (window.DataLoader ? window.DataLoader.t('common.farming_node', 'FARMING NODE') : 'FARMING NODE').toUpperCase();
 					if (repNode.isPet) {
-						tag = "RANGER PET";
+						tag = (window.DataLoader ? window.DataLoader.t('common.ranger_pet', 'RANGER PET') : 'RANGER PET').toUpperCase();
 					} else if (repNode.sourceFile === "nodes_achievements.json") {
-						tag = "ACHIEVEMENT";
+						tag = (window.DataLoader ? window.DataLoader.t('common.achievement', 'ACHIEVEMENT') : 'ACHIEVEMENT').toUpperCase();
 					} else if (repNode.sourceFile === "nodes_chests.json") {
-						tag = "CHEST";
+						tag = (window.DataLoader ? window.DataLoader.t('common.chest', 'CHEST') : 'CHEST').toUpperCase();
 					} else if (repNode.sourceFile === "nodes_service_npc.json") {
 						const service = (repNode.yields && repNode.yields[0]) ? repNode.yields[0] : 'NPC';
 						tag = service.toUpperCase();
 					} else if (repNode.sourceFile === "nodes_mastery_insight.json") {
-						tag = "MASTERY INSIGHT";
+						tag = (window.DataLoader ? window.DataLoader.t('common.mastery_insight', 'MASTERY INSIGHT') : 'MASTERY INSIGHT').toUpperCase();
 					}
 
 					let finalIcon = resolveIconUrl(repNode.icon);
@@ -473,7 +477,6 @@
                 const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
                 const mapDefsRes = await fetchJSON(`https://api.guildwars2.com/v2/maps?ids=${wvwMaps.join(',')}&lang=${lang}`);
                 if (mapDefsRes) {
-                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
                     const wvwFloorPromises = mapDefsRes.map(mapDef => fetchJSON(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapDef.id}?lang=${lang}`));
                     const wvwFloors = await Promise.all(wvwFloorPromises);
                     
@@ -520,7 +523,6 @@
                 }
 
                 // WvW Map Objectives
-                const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
                 const wvwObjsRes = await fetchJSON("https://api.guildwars2.com/v2/wvw/objectives?ids=all&lang=" + lang);
                 if (wvwObjsRes) {
                     wvwObjsRes.forEach(obj => {

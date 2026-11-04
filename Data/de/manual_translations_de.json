@@ -272,7 +272,20 @@
     "yes": "Ja",
     "no": "Nein",
     "ok": "OK",
-    "accept": "Annehmen"
+    "accept": "Annehmen",
+    "heropoint": "Heldenpunkt",
+    "heropoints": "Heldenpunkte",
+    "event": "Event",
+    "world_boss": "Weltboss",
+    "achievement": "Erfolg",
+    "mastery_insight": "Beherrschungseinblick",
+    "vista": "Aussichtspunkt",
+    "waypoint": "Wegmarke",
+    "point_of_interest": "Sehenswürdigkeit",
+    "heart": "Aufgabe",
+    "chest": "Truhe",
+    "farming_node": "Ernteknoten",
+    "ranger_pet": "Waldläufer-Tiergefährte"
   },
   "map_options": {
     "sections": {

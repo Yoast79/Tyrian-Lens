@@ -272,7 +272,20 @@
     "yes": "Sí",
     "no": "No",
     "ok": "Aceptar",
-    "accept": "Aceptar"
+    "accept": "Aceptar",
+    "heropoint": "Punto de héroe",
+    "heropoints": "Puntos de héroe",
+    "event": "Evento",
+    "world_boss": "Jefe del mundo",
+    "achievement": "Logro",
+    "mastery_insight": "Punto de dominio",
+    "vista": "Vista",
+    "waypoint": "Punto de ruta",
+    "point_of_interest": "Punto de interés",
+    "heart": "Corazón de prestigio",
+    "chest": "Cofre",
+    "farming_node": "Nodo de recolección",
+    "ranger_pet": "Mascota del guardabosques"
   },
   "map_options": {
     "sections": {

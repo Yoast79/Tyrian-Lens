@@ -272,7 +272,20 @@
     "yes": "Yes",
     "no": "No",
     "ok": "OK",
-    "accept": "Accept"
+    "accept": "Accept",
+    "heropoint": "Hero Point",
+    "heropoints": "Hero Points",
+    "event": "Event",
+    "world_boss": "World Boss",
+    "achievement": "Achievement",
+    "mastery_insight": "Mastery Insight",
+    "vista": "Vista",
+    "waypoint": "Waypoint",
+    "point_of_interest": "Point of Interest",
+    "heart": "Renown Heart",
+    "chest": "Chest",
+    "farming_node": "Farming Node",
+    "ranger_pet": "Ranger Pet"
   },
   "wvw": {
     "compass_eotm": "Edge of the Mists",

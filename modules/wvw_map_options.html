@@ -5,8 +5,13 @@
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<script src="data_loader.js"></script>
 		<style>
+			html, body { scrollbar-width: thin; scrollbar-color: var(--border-color, #4a3b2a) var(--bg-panel, rgba(10, 8, 5, 0.3)); }
+			::-webkit-scrollbar { width: 6px; }
+			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10, 8, 5, 0.3)); }
+			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
+			::-webkit-scrollbar-thumb:hover { background: var(--text-primary, #e2c07d); }
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
-			body { margin: 0; background: transparent; padding: 20px; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; }
+			body { margin: 0; background: transparent; padding: 20px; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; overflow-x: hidden; overflow-y: auto; }
 			.section-title { font-size: 16px; font-weight: bold; border-bottom: 1px solid var(--border-color, #4a3b2a); margin: 15px 0; padding-bottom: 5px; letter-spacing: 1px; color: var(--text-muted, #8a7a5f); }
 			
 			.filter-option { display: flex; justify-content: flex-start; align-items: center; padding: 10px 0; font-size: 13px; letter-spacing: 1px; cursor: pointer; color: var(--text-primary, #e2c07d); }

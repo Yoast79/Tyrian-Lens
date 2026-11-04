@@ -269,18 +269,6 @@
 					const allIds = [...allToolIds, ...allUpgradeIds];
 					await fetchItems(allIds);
 
-					// Pre-fetch all gathering tool + glyph item data in batch
-					const allToolIds = new Set();
-					const allUpgradeIds = new Set();
-					chars.forEach(c => {
-						getCharGatheringTools(c).forEach(eq => {
-							allToolIds.add(eq.id);
-							if (eq.upgrades) eq.upgrades.forEach(u => allUpgradeIds.add(u));
-						});
-					});
-					const allIds = [...allToolIds, ...allUpgradeIds];
-					await fetchItems(allIds);
-
 					list.innerHTML = '';
 					
 					// Sort and render
