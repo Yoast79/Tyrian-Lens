@@ -1,0 +1,17 @@
+{
+    "active": true,
+    "motds": [
+        {
+            "id": "motd_v1_3_9_clears",
+            "title": "¡Lista de seguimiento actualizada!",
+            "message": "<div style='text-align: center;'><strong>Quiero seguir completando la lista de PNJs y sus coordenadas.</strong></div><br>Por favor, si ves un PNJ que falta, colócate <em>exactamente</em> encima y reporta el <span class='motd-highlight-btn'>Nodo</span> con el nombre del PNJ. <img class='inline-icon' style='width: 20px; height: 20px; vertical-align: middle; margin: 0 4px;' src='https://wiki.guildwars2.com/images/d/d2/Waypoint_%28map_icon%29.png' /><br><br><div style='text-align: center;'><u>¡Muchas gracias!</u></div>",
+            "active": false
+        },
+        {
+            "id": "motd_new_4530",
+            "title": "Actualización de coordenadas de Castora",
+            "message": "<div style='text-align: center;'>He actualizado los mapas de Castora con las coordenadas de</div> <br><div style='text-align: center;'><span class='motd-highlight-btn'>Puntos de interés</span> <span class='motd-highlight-btn'>Puntos de ruta</span> <span class='motd-highlight-btn'>Perspicacias de maestría</span> <span class='motd-highlight-btn'>Corazones</span></div><br><br><div style='text-align: center;'>Si ves alguna coordenada que falte, repórtala con el botón <span class='motd-highlight-btn'>Reportar nodo</span> en la parte inferior izquierda.</div>\n      ",
+            "active": true
+        }
+    ]
+}

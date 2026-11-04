@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/Leaflet/leaflet.css" />
+		<script src="data_loader.js"></script>
 		<script src="https://gw2ps.local/Assets/Leaflet/leaflet.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; }
@@ -132,27 +133,27 @@
 		<div id="marker-picker"></div>
 
 		<div id="marker-label-prompt" class="prompt-overlay">
-			<div style="color: #e2c07d; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Label Marker</div>
+			<div style="color: #e2c07d; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;" data-i18n="wvw.label_marker">Label Marker</div>
 			<input type="text" id="marker-label-input" style="background: #1a1510; border: 1px solid #4a3b2a; color: #fff; padding: 5px; width: 200px; margin-bottom: 15px; font-family: 'Crimson Text', serif;" />
 			<br>
-				<button class="prompt-btn" onclick="saveMarkerLabel()">Save</button>
-				<button class="prompt-btn" onclick="cancelMarkerLabel()">Cancel</button>
+				<button class="prompt-btn" onclick="saveMarkerLabel()" data-i18n="common.save">Save</button>
+				<button class="prompt-btn" onclick="cancelMarkerLabel()" data-i18n="common.cancel">Cancel</button>
 			</div>
 
 		<div id="marker-remove-prompt" class="prompt-overlay">
-			<div style="color: #e2c07d; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Remove Marker?</div>
-			<button class="prompt-btn danger" onclick="confirmRemoveMarker()">Remove</button>
-			<button class="prompt-btn" onclick="cancelRemoveMarker()">Cancel</button>
+			<div style="color: #e2c07d; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;" data-i18n="wvw.remove_marker">Remove Marker?</div>
+			<button class="prompt-btn danger" onclick="confirmRemoveMarker()" data-i18n="common.delete">Remove</button>
+			<button class="prompt-btn" onclick="cancelRemoveMarker()" data-i18n="common.cancel">Cancel</button>
 		</div>
 		<div id="coord-hud">
 			<div>
-				PLAYER: <span id="p-x" class="coord-val">0</span>, <span id="p-y" class="coord-val">0</span>
+				<span data-i18n="map.hud.player">PLAYER:</span> <span id="p-x" class="coord-val">0</span>, <span id="p-y" class="coord-val">0</span>
 			</div>
 			<div>
-				CURSOR: <span id="c-x" class="coord-val">0</span>, <span id="c-y" class="coord-val">0</span>
+				<span data-i18n="map.hud.cursor">CURSOR:</span> <span id="c-x" class="coord-val">0</span>, <span id="c-y" class="coord-val">0</span>
 			</div>
 			<div style="font-size: 10px; color: #888; margin-top: 4px; text-transform: uppercase;">
-				TRACKING: <span id="track-status" style="color:#00ff00;">ON</span>
+				<span data-i18n="map.hud.tracking">TRACKING:</span> <span id="track-status" style="color:#00ff00;" data-i18n="map.hud.on">ON</span>
 			</div>
 		</div>
 
@@ -212,13 +213,48 @@
 			map.createPane('customMarkerPane').style.zIndex = 850;
 			var customMarkersLayer = L.layerGroup().addTo(map);
 
-			L.tileLayer("https://tiles.guildwars2.com/2/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+			var mSettings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+			var mapDetailLevel = mSettings.mapDetailLevel || "painterly";
+			var detailedLayer = null;
+			var painterlyLayer = null;
+
+			if (mapDetailLevel === "painterly") {
+				L.tileLayer("https://tiles.guildwars2.com/2/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+			} else {
+				var targetZoom = parseInt(mapDetailLevel);
+				detailedLayer = L.tileLayer("https://tiles.guildwars2.com/2/1/{z}/{x}/{y}.jpg", { noWrap: true, minNativeZoom: targetZoom, maxNativeZoom: targetZoom, maxZoom: 9 });
+				painterlyLayer = L.tileLayer("https://tiles.guildwars2.com/2/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 6, maxZoom: 9 });
+
+				function updateTileLayer() {
+					var z = map.getZoom();
+					if (z >= 5) {
+						if (!map.hasLayer(detailedLayer)) {
+							detailedLayer.addTo(map);
+							map.removeLayer(painterlyLayer);
+						}
+					} else {
+						if (!map.hasLayer(painterlyLayer)) {
+							painterlyLayer.addTo(map);
+							map.removeLayer(detailedLayer);
+						}
+					}
+				}
+
+				updateTileLayer();
+				map.on("zoomend", updateTileLayer);
+			}
 			map.setView([10605, 14580], 4);
 			Object.values(subLayers).forEach(l => l.addTo(map));
 
 			var pMarker = L.marker([0, 0], { interactive: false, pane: 'playerPane', icon: L.divIcon({ className: 'player-icon-container', html: '<img id="pImg" src="https://gw2ps.local/Assets/Icons/player_icon.png" style="width:32px;height:32px;" />', iconSize: [32, 32], iconAnchor: [16, 16] }) }).addTo(map);
 
-			function showTip(txt, e) { window.parent.postMessage({action:'showTooltip', text:txt, x:e.clientX, y:e.clientY, offsetTop:45}, '*'); }
+			function showTip(txt, e) {
+				let text = txt;
+				if (window.DataLoader) {
+					text = window.DataLoader.t(txt, window.DataLoader.t('wvw.compass_' + txt.toLowerCase().replace(/ /g, '_'), window.DataLoader.t('wvw.' + txt, window.DataLoader.t('map.' + txt, txt))));
+				}
+				window.parent.postMessage({action:'showTooltip', text:text, x:e.clientX, y:e.clientY, offsetTop:45}, '*');
+			}
 			function hideTip() { window.parent.postMessage({action:'hideTooltip'}, '*'); }
 
 			window.toggleMapLayer = function(name, isVisible) {

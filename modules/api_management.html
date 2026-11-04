@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 4px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10, 8, 5, 0.3)); }
@@ -249,14 +250,60 @@
 				window.parent.postMessage({ action:'showTooltip', text: text, x: absoluteX, y: e.clientY, offsetTop: 45 }, '*');
 			}
 
+			async function applyApiI18n() {
+				if (!window.DataLoader || !window.DataLoader.loadTranslations) return;
+				await window.DataLoader.loadTranslations();
+				const t = window.DataLoader.t;
+
+				const nickInput = document.getElementById('api-nickname');
+				if (nickInput) nickInput.placeholder = t('api.placeholder_nickname', 'NICKNAME (E.G. MAIN)');
+				const apiInput = document.getElementById('api-input');
+				if (apiInput) apiInput.placeholder = t('api.placeholder_key', 'PASTE API KEY...');
+				const saveBtn = document.getElementById('save-btn');
+				if (saveBtn) saveBtn.innerText = t('api.btn_add', 'Add Account');
+
+				const drfInput = document.getElementById('drf-input');
+				if (drfInput) drfInput.placeholder = t('api.placeholder_drf', 'PASTE DRF TOKEN (FROM DRF.RS)...');
+				const drfSaveBtn = document.getElementById('drf-save-btn');
+				if (drfSaveBtn) drfSaveBtn.innerText = t('api.btn_link_drf', 'Link DRF Token');
+
+				const triggers = document.querySelectorAll('.hover-trigger');
+				if (triggers.length >= 2) {
+					triggers[0].innerText = t('api.how_drf', 'How to set up DRF');
+					triggers[1].innerText = t('api.how_api', 'How to set up an API key');
+				}
+
+				const modalTitle = document.querySelector('#confirm-modal > div:first-child');
+				if (modalTitle) modalTitle.innerText = t('api.modal_title', 'REMOVE ACCOUNT?');
+				const yesBtn = document.querySelector('.confirm-btn-row button:first-child');
+				if (yesBtn) yesBtn.innerText = t('api.btn_yes', 'YES');
+				const noBtn = document.querySelector('.confirm-btn-row button:last-child');
+				if (noBtn) noBtn.innerText = t('api.btn_no', 'NO');
+			}
+			applyApiI18n();
+
+			window.addEventListener('message', (e) => {
+				if (e.data && e.data.action === 'languageChanged') {
+					if (window.DataLoader && window.DataLoader.loadTranslations) {
+						window.DataLoader.loadTranslations(true).then(() => applyApiI18n());
+					}
+				}
+			});
+
 			function showTip(e) {
-				showCustomTip(e, "API keys grant Tyrian Lens read-only access to your Guild Wars 2 account. To begin, create a key at the official ArenaNet portal with your desired permissions, then paste it here. You can revoke this lens' access at any time by deleting the key.");
+				const tip = (window.DataLoader && window.DataLoader.t) 
+					? window.DataLoader.t('api.tip_api', "API keys grant Tyrian Lens read-only access to your Guild Wars 2 account. To begin, create a key at the official ArenaNet portal with your desired permissions, then paste it here. You can revoke this lens' access at any time by deleting the key.")
+					: "API keys grant Tyrian Lens read-only access to your Guild Wars 2 account. To begin, create a key at the official ArenaNet portal with your desired permissions, then paste it here. You can revoke this lens' access at any time by deleting the key.";
+				showCustomTip(e, tip);
 			}
 
 			function showDRFTip(e) {
-				showCustomTip(e, "DRF (Drop Research Facilities) allows real-time loot tracking. 1. Download the DRF addon from drf.rs and place it in your GW2 addons folder. 2. Create a token on their website and paste it here. 3. Real-time data will stream directly to your farming session.");
+				const tip = (window.DataLoader && window.DataLoader.t)
+					? window.DataLoader.t('api.tip_drf', "DRF (Drop Research Facilities) allows real-time loot tracking. 1. Download the DRF addon from drf.rs and place it in your GW2 addons folder. 2. Create a token on their website and paste it here. 3. Real-time data will stream directly to your farming session.")
+					: "DRF (Drop Research Facilities) allows real-time loot tracking. 1. Download the DRF addon from drf.rs and place it in your GW2 addons folder. 2. Create a token on their website and paste it here. 3. Real-time data will stream directly to your farming session.";
+				showCustomTip(e, tip);
 			}
-			
+
 			function hideTip() { window.parent.postMessage({action:'hideTooltip'}, '*'); }
 			render();
 			/*]]>*/

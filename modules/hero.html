@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -87,8 +88,8 @@
 			<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
 				<div class="template-row" id="template-tabs" style="margin-bottom: 0;"></div>
 				<div style="display:flex; gap:10px;">
-					<button class="btn" onclick="copyEquipmentCode()">Copy Equipment</button>
-					<button class="btn" onclick="exportToPlanner()">Save to Planner</button>
+					<button class="btn" onclick="copyEquipmentCode()" data-i18n="hero.copy_equip">Copy Equipment</button>
+					<button class="btn" onclick="exportToPlanner()" data-i18n="hero.save_to_planner">Save to Planner</button>
 				</div>
 			</div>
 			<div class="main-layout">
@@ -132,12 +133,12 @@
 
 				<div class="right-column">
 					<div class="attr-panel">
-						<div style="font-size: 13px; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 3px;">Attributes</div>
+						<div style="font-size: 13px; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 3px;" data-i18n="hero.attributes">Attributes</div>
 						<div class="attr-grid" id="attr-display"></div>
 					</div>
 
 					<div style="display: flex; justify-content: center; width: 100%;">
-						<button class="btn" onclick="copyBuildCode()">Copy Build</button>
+						<button class="btn" onclick="copyBuildCode()" data-i18n="hero.copy_build">Copy Build</button>
 					</div>
 
 					<div class="skills-panel">
@@ -726,7 +727,8 @@
             const uniqueStats = [...new Set(stats)].filter(id => id);
             if (uniqueStats.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStats.join(',')}`); sData?.forEach(s => UTILS.statCache[s.id] = s.name); }
             const uniqueItems = [...new Set(items)].filter(id => id && !UTILS.itemCache[id]);
-            for (let i = 0; i < uniqueItems.length; i += 100) { const iData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${uniqueItems.slice(i, i + 100).join(',')}`); iData?.forEach(it => UTILS.itemCache[it.id] = it); }
+            for (let i = 0; i < uniqueItems.length; i += 100) { const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+            const iData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${uniqueItems.slice(i, i + 100).join(',')}&lang=${lang}`); iData?.forEach(it => UTILS.itemCache[it.id] = it); }
             
             const uniqueSpecs = [...new Set(specIds)];
             if (uniqueSpecs.length) {

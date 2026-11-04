@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "pos":  [
                     52412.7,
@@ -1548,5 +1548,2495 @@
         "type":  "heart",
         "chat_code":  "[&BNABAAA=]",
         "desc":  "Assist the Stewards of Galdra around the forge."
+    },
+    {
+        "pos":  [
+                    3587.4,
+                    59446.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  "Assist Astral Ward Agent Snarlcrow and his associates in sabotaging the Inquest base of operations in Leyspring Hollows."
+    },
+    {
+        "pos":  [
+                    5118.2,
+                    59287.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNIBAAA=]",
+        "desc":  "Train with alliance forces and assist around camp to prepare yourself for the fight ahead."
+    },
+    {
+        "pos":  [
+                    52903.5,
+                    32422.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  "Help Antal the Patient impress the skritt in Kolkorensburg."
+    },
+    {
+        "pos":  [
+                    53394.2,
+                    33046.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  "Help the Priory thwart dredge excavation in Dostoev Sky Peak."
+    },
+    {
+        "pos":  [
+                    54217.1,
+                    33882.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAUAAAA=]",
+        "desc":  "Help Arcanist Vance study dwarven relics at Granite Citadel."
+    },
+    {
+        "pos":  [
+                    54050.4,
+                    34042.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  "Help Magister Roslin infiltrate Black Earth Mine."
+    },
+    {
+        "pos":  [
+                    53182.9,
+                    34145.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  "Help Explorer Brokkar sabotage dredge munitions."
+    },
+    {
+        "pos":  [
+                    52869.6,
+                    34177.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  "Help Magister Kathryn wound dredge forces."
+    },
+    {
+        "pos":  [
+                    52619.5,
+                    31987
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAkAAAA=]",
+        "desc":  "Protect the Snow Leopard shrine from the Svanir."
+    },
+    {
+        "pos":  [
+                    53612.3,
+                    32065.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAsAAAA=]",
+        "desc":  "Help the grawl stave off Svanir attacks."
+    },
+    {
+        "pos":  [
+                    51022.8,
+                    33177.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCcAAAA=]",
+        "desc":  "Help Queldip pillage pirates."
+    },
+    {
+        "pos":  [
+                    50811.1,
+                    33726.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCgAAAA=]",
+        "desc":  "Help Duidda hassle pirates."
+    },
+    {
+        "pos":  [
+                    51236.1,
+                    34200.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCkAAAA=]",
+        "desc":  "Help Researcher Bramm with his research equipment."
+    },
+    {
+        "pos":  [
+                    51538.2,
+                    32973.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCoAAAA=]",
+        "desc":  "Help Explorer Leandra find relics in Molitage Digs."
+    },
+    {
+        "pos":  [
+                    51918.3,
+                    33077.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCsAAAA=]",
+        "desc":  "Help Arcanist Kruppa with destroyers near Pinion Pass."
+    },
+    {
+        "pos":  [
+                    51925.9,
+                    33913.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCwAAAA=]",
+        "desc":  "Help Hunter Neida near Vanjir's Stead."
+    },
+    {
+        "pos":  [
+                    50857.3,
+                    31860.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BC0AAAA=]",
+        "desc":  "Help Herder Lyot maintain her dolyak ranch."
+    },
+    {
+        "pos":  [
+                    51025.1,
+                    30127.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BC8AAAA=]",
+        "desc":  "Help Kelgg with the mine's troubles."
+    },
+    {
+        "pos":  [
+                    51568.2,
+                    29968.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDAAAAA=]",
+        "desc":  "Help Hune manage the lodge."
+    },
+    {
+        "pos":  [
+                    51996.6,
+                    30820.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDEAAAA=]",
+        "desc":  "Help the Priory stop the dredge encroachment."
+    },
+    {
+        "pos":  [
+                    51932.1,
+                    31693.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDIAAAA=]",
+        "desc":  "Investigate and contain the expanding steam creature forces."
+    },
+    {
+        "pos":  [
+                    51187.1,
+                    32393.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDMAAAA=]",
+        "desc":  "Help Researcher Suki examine imps near Rocklair."
+    },
+    {
+        "pos":  [
+                    51201.7,
+                    30732.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDQAAAA=]",
+        "desc":  "Help Aurelio keep roads to the Priory safe from grawl."
+    },
+    {
+        "pos":  [
+                    52076.3,
+                    31601.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDUAAAA=]",
+        "desc":  "Help Agent Kaukiri trick the dredge into fighting steam creatures."
+    },
+    {
+        "pos":  [
+                    55240.1,
+                    28696.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDwAAAA=]",
+        "desc":  "Help the Lionguard keep Crossroads Haven safe."
+    },
+    {
+        "pos":  [
+                    55869.5,
+                    28673.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BD4AAAA=]",
+        "desc":  "Help Kevach maintain his lodge."
+    },
+    {
+        "pos":  [
+                    55209.9,
+                    30406.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BD8AAAA=]",
+        "desc":  "Help Bjarni honor the Spirit of Hare."
+    },
+    {
+        "pos":  [
+                    55722.3,
+                    30189.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  "Entertain and protect the children."
+    },
+    {
+        "pos":  [
+                    55519.2,
+                    29678.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  "Help the Lionguard protect the road through the Icesteppes."
+    },
+    {
+        "pos":  [
+                    55011,
+                    29348.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  "Help the miners in their search for ore by fighting the dredge."
+    },
+    {
+        "pos":  [
+                    56055.2,
+                    28366.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  "Help Maxtar Rapidstep capture dolyaks."
+    },
+    {
+        "pos":  [
+                    55256.6,
+                    29616.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  "Help Albin Chronicler trade with the jotun tribe."
+    },
+    {
+        "pos":  [
+                    52835.1,
+                    36192.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  "Help make Stromkarl Heights safe for travelers."
+    },
+    {
+        "pos":  [
+                    52212.5,
+                    36331.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  "Help the alliance of the Vigil and Priory."
+    },
+    {
+        "pos":  [
+                    52155.5,
+                    36012.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  "Help Goldenlight Hallow with their experiments."
+    },
+    {
+        "pos":  [
+                    53357.4,
+                    36582.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEkAAAA=]",
+        "desc":  "Help Ichtaca."
+    },
+    {
+        "pos":  [
+                    53659.6,
+                    37159
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEoAAAA=]",
+        "desc":  "Help the endangered quaggans."
+    },
+    {
+        "pos":  [
+                    52250,
+                    37333.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BE4AAAA=]",
+        "desc":  "Help Caer Evermore defeat the Risen in the region."
+    },
+    {
+        "pos":  [
+                    52229.1,
+                    36782.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BE8AAAA=]",
+        "desc":  "Help the Priory's excavation of the ruins."
+    },
+    {
+        "pos":  [
+                    52713.1,
+                    35988.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BFAAAAA=]",
+        "desc":  "Help Fionnghuala Scratch prepare their defenses."
+    },
+    {
+        "pos":  [
+                    55605.5,
+                    26716.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  "Help Scholar Inka research imps."
+    },
+    {
+        "pos":  [
+                    55317.5,
+                    26775.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BA0AAAA=]",
+        "desc":  "Help Tactician Sebastian against the Sons of Svanir."
+    },
+    {
+        "pos":  [
+                    54668.6,
+                    27472.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BA8AAAA=]",
+        "desc":  "Help Infinite Mind rally the forces of Blue Ice Station."
+    },
+    {
+        "pos":  [
+                    53895.5,
+                    25473.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  "Help Qualdup train Orsippus trainees for the Quaggan Games."
+    },
+    {
+        "pos":  [
+                    54245.6,
+                    25513.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  "Help Bladed Softness maintain Deep and Troubled Waters."
+    },
+    {
+        "pos":  [
+                    53984.7,
+                    25203.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  "Help Worthy Burden defeat icebrood in Drakkar Spurs."
+    },
+    {
+        "pos":  [
+                    55328.6,
+                    27277.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  "Help Pact Crusader D'Stolt fight the Sons of Svanir."
+    },
+    {
+        "pos":  [
+                    56068.1,
+                    27207.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  "Help Pact Explorer Erikk battle the Dragon Tribe grawl."
+    },
+    {
+        "pos":  [
+                    56276.9,
+                    24857.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBgAAAA=]",
+        "desc":  "Help Shifting Waves protect the kodan at Path of Starry Skies."
+    },
+    {
+        "pos":  [
+                    54094.4,
+                    28366.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBwAAAA=]",
+        "desc":  "Help hunters and travelers near the road."
+    },
+    {
+        "pos":  [
+                    54060.8,
+                    29497.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BB8AAAA=]",
+        "desc":  "Help Owl's followers."
+    },
+    {
+        "pos":  [
+                    50764,
+                    28513.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCEAAAA=]",
+        "desc":  "Help the Seraph outrider camp."
+    },
+    {
+        "pos":  [
+                    52722.4,
+                    29352.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCYAAAA=]",
+        "desc":  "Help quaggans settle into Urgulp."
+    },
+    {
+        "pos":  [
+                    55891.6,
+                    24288.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHEBAAA=]",
+        "desc":  "Help the quaggan farmers harvest food."
+    },
+    {
+        "pos":  [
+                    54373.5,
+                    23694
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  "Help protect the endangered snow griffons."
+    },
+    {
+        "pos":  [
+                    58180.9,
+                    37079.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLUBAAA=]",
+        "desc":  "Rally the Pact soldiers, corsairs, and Zephyrites."
+    },
+    {
+        "pos":  [
+                    58198.9,
+                    35900
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLYBAAA=]",
+        "desc":  "Help the Priory with their excavations."
+    },
+    {
+        "pos":  [
+                    56719.9,
+                    37616.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLgBAAA=]",
+        "desc":  "Help the cold and hungry dredge."
+    },
+    {
+        "pos":  [
+                    58614.5,
+                    30795.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  "Help Bryllana Deepmind thin out ghosts."
+    },
+    {
+        "pos":  [
+                    58389.6,
+                    31340.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  "Help Kyra Sharptracker thin out ghosts."
+    },
+    {
+        "pos":  [
+                    58362.9,
+                    30369.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  "Help Crucibis Forgeweld run the armory."
+    },
+    {
+        "pos":  [
+                    58699.5,
+                    30258.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  "Help Strum Bassclash secure Lake Feritas."
+    },
+    {
+        "pos":  [
+                    58538.1,
+                    30503.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  "Help Scar Stripeclaw organize the wrecking yard."
+    },
+    {
+        "pos":  [
+                    58945.8,
+                    30253.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGYAAAA=]",
+        "desc":  "Help Latera Painstorm fight the Flame Legion."
+    },
+    {
+        "pos":  [
+                    59193.8,
+                    30666.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGgAAAA=]",
+        "desc":  "Help the Blood Legion thin out nuisances."
+    },
+    {
+        "pos":  [
+                    60153.6,
+                    30257.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGkAAAA=]",
+        "desc":  "Help Sagum Relicseeker with his research."
+    },
+    {
+        "pos":  [
+                    60192.1,
+                    31160.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGoAAAA=]",
+        "desc":  "Help Gavros Spiritfoe thin out ghosts."
+    },
+    {
+        "pos":  [
+                    59479.5,
+                    31240.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGsAAAA=]",
+        "desc":  "Help Paenula train troops."
+    },
+    {
+        "pos":  [
+                    60620.4,
+                    31720.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGwAAAA=]",
+        "desc":  "Help Mei Hawkslayer disrupt separatist activity."
+    },
+    {
+        "pos":  [
+                    61743.1,
+                    31738.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BG4AAAA=]",
+        "desc":  "Help Researcher Irkz study skale poison."
+    },
+    {
+        "pos":  [
+                    61414.7,
+                    31056.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BG8AAAA=]",
+        "desc":  "Help Androchus thin out ogres."
+    },
+    {
+        "pos":  [
+                    60995.8,
+                    30111.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHAAAAA=]",
+        "desc":  "Help Ghyrtratus Fiendmauler retake Ascalon City."
+    },
+    {
+        "pos":  [
+                    58093.8,
+                    30516.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BFwBAAA=]",
+        "desc":  "Help Tolona Ironrustler with her farm."
+    },
+    {
+        "pos":  [
+                    62363.8,
+                    30181.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHEAAAA=]",
+        "desc":  "Help Sentinel Liharn disrupt the Inquest."
+    },
+    {
+        "pos":  [
+                    62989.5,
+                    30729.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHIAAAA=]",
+        "desc":  "Help Scholar Olenn trick the grawl around the Tail of the Star God."
+    },
+    {
+        "pos":  [
+                    62359.2,
+                    30576.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  "Help Sentinel Faithspotter deal with skritt."
+    },
+    {
+        "pos":  [
+                    63024.6,
+                    29343.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  "Help Wode with harpy research."
+    },
+    {
+        "pos":  [
+                    63508.1,
+                    30208.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHcAAAA=]",
+        "desc":  "Help the peaceful ogres of Degun Shun."
+    },
+    {
+        "pos":  [
+                    63172.7,
+                    32422.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHgAAAA=]",
+        "desc":  "Aid Ferrusatos Village's fishing operation and help them hunt down Separatists."
+    },
+    {
+        "pos":  [
+                    62650.9,
+                    31733.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHoAAAA=]",
+        "desc":  "Help the Iron Legion protect Steeleye Span from Branded creatures."
+    },
+    {
+        "pos":  [
+                    63406.8,
+                    31528.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHsAAAA=]",
+        "desc":  "Help the Ash Legion take out ogres."
+    },
+    {
+        "pos":  [
+                    62960.5,
+                    32244
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHwAAAA=]",
+        "desc":  "Help Torruh Sweptweave disrupt Separatist activities."
+    },
+    {
+        "pos":  [
+                    62187.6,
+                    32440.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BH0AAAA=]",
+        "desc":  "Help Sentinels instigate fights between ghosts and the Branded."
+    },
+    {
+        "pos":  [
+                    63616.8,
+                    29021.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BH8AAAA=]",
+        "desc":  "Help Jahr Duskrend disrupt Separatist activities."
+    },
+    {
+        "pos":  [
+                    61802,
+                    34353.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJsAAAA=]",
+        "desc":  "Help pacify Tyler's Bivouac for settlers."
+    },
+    {
+        "pos":  [
+                    62030.4,
+                    35066.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJ0AAAA=]",
+        "desc":  "Help the people of Ebonhawke."
+    },
+    {
+        "pos":  [
+                    61710.4,
+                    35329.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJ4AAAA=]",
+        "desc":  "Help Commander Varalyn and the Ebon Vanguard."
+    },
+    {
+        "pos":  [
+                    62555.2,
+                    35484.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJ8AAAA=]",
+        "desc":  "Help Foreman Boslo care for Blackwing Excavation."
+    },
+    {
+        "pos":  [
+                    63062.2,
+                    33114.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKAAAAA=]",
+        "desc":  "Help the Iron Legion disrupt Renegade operations."
+    },
+    {
+        "pos":  [
+                    63904.3,
+                    33088.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  "Help Rosko's ranchers protect the village."
+    },
+    {
+        "pos":  [
+                    63294.1,
+                    35489.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  "Help the Vanguard stall the ogre advance."
+    },
+    {
+        "pos":  [
+                    57965.5,
+                    26934.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIQAAAA=]",
+        "desc":  "Stop the Flame Legion from summoning embers."
+    },
+    {
+        "pos":  [
+                    57100.6,
+                    26711.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIUAAAA=]",
+        "desc":  "Help the Nrocroc tribe survive so close to Flame lands."
+    },
+    {
+        "pos":  [
+                    57015.9,
+                    27078.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIYAAAA=]",
+        "desc":  "Help the Tarstar tribe survive so close to Flame lands."
+    },
+    {
+        "pos":  [
+                    57080.2,
+                    27331.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIcAAAA=]",
+        "desc":  "Help the Wupwup tribe survive so close to Flame lands."
+    },
+    {
+        "pos":  [
+                    57162.6,
+                    25156.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIoAAAA=]",
+        "desc":  "Help Pact researchers with their experimental weapons."
+    },
+    {
+        "pos":  [
+                    58452.3,
+                    25058
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIwAAAA=]",
+        "desc":  "Help the Ash Legion disrupt the Flame Legion."
+    },
+    {
+        "pos":  [
+                    59004,
+                    25655.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BI0AAAA=]",
+        "desc":  "Help the Ash Legion strike at the heart of the Flame Legion."
+    },
+    {
+        "pos":  [
+                    61544.9,
+                    26437.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJAAAAA=]",
+        "desc":  "Help the ogres remove the Branded from their land."
+    },
+    {
+        "pos":  [
+                    61220.2,
+                    29082.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJMAAAA=]",
+        "desc":  "Help Kennelmaster Warsnout track the Separatists."
+    },
+    {
+        "pos":  [
+                    60149.4,
+                    28554.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJQAAAA=]",
+        "desc":  "Help Warden Scourgejaw run the prison quarry."
+    },
+    {
+        "pos":  [
+                    60155.7,
+                    28149.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJUAAAA=]",
+        "desc":  "Help the Sleekfur Warband defend the road at Soldier Mesa."
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    28908.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJoAAAA=]",
+        "desc":  "Help Braxa Scalehunter tend to the devourer nests."
+    },
+    {
+        "pos":  [
+                    56862.2,
+                    29498.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  "Assist the Iron Legion fighting ghosts."
+    },
+    {
+        "pos":  [
+                    58295.1,
+                    29445.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  "Help Rak Deathmane maintain Stonefall Estate."
+    },
+    {
+        "pos":  [
+                    58832.3,
+                    29198.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  "Protect Redreave Mill from Separatists."
+    },
+    {
+        "pos":  [
+                    59272.5,
+                    29385.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  "Help Raintimber Mill"
+    },
+    {
+        "pos":  [
+                    57864.1,
+                    29810.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  "Help Kastaz Strongpaw maintain his garden."
+    },
+    {
+        "pos":  [
+                    57444.3,
+                    29680.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  "Help the Ash Legion take out Separatists."
+    },
+    {
+        "pos":  [
+                    57368.7,
+                    29232.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  "Help Charradis Estate Ranchers attend to cattle"
+    },
+    {
+        "pos":  [
+                    57943.1,
+                    28805.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  "Help the Blood Legion combat ghost siege weapons."
+    },
+    {
+        "pos":  [
+                    44063.9,
+                    29886.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  "Help the Seraph protect Claypool from centaurs."
+    },
+    {
+        "pos":  [
+                    44087.8,
+                    29386.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  "Help Lexi Price protect the trade route."
+    },
+    {
+        "pos":  [
+                    43244.7,
+                    28723.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  "Help Diah tend her farm."
+    },
+    {
+        "pos":  [
+                    43236.7,
+                    28382.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  "Help Fisher Travis maintain the river."
+    },
+    {
+        "pos":  [
+                    43330.3,
+                    28324.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  "Help Foreman Flannum improve dam safety."
+    },
+    {
+        "pos":  [
+                    42822.6,
+                    28780
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  "Help Cassie around the moa ranch."
+    },
+    {
+        "pos":  [
+                    45750.9,
+                    28964.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  "Protect Beetletun farmers from Tamini centaurs."
+    },
+    {
+        "pos":  [
+                    45852.1,
+                    28430
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  "Help the citizens of Beetletun maintain their town."
+    },
+    {
+        "pos":  [
+                    44988.9,
+                    29668.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  "Help Historian Garrod investigate Godslost Swamp."
+    },
+    {
+        "pos":  [
+                    46524.6,
+                    26614.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMgAAAA=]",
+        "desc":  "Protect Seraph's Landing."
+    },
+    {
+        "pos":  [
+                    46944,
+                    27377.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMkAAAA=]",
+        "desc":  "Help the Seraph disrupt bandit activity."
+    },
+    {
+        "pos":  [
+                    47633.2,
+                    28431.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMoAAAA=]",
+        "desc":  "Help the Seraph at Nightguard Beach."
+    },
+    {
+        "pos":  [
+                    46550.3,
+                    27787.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMwAAAA=]",
+        "desc":  "Help Ket investigate the Ruins of Demetra."
+    },
+    {
+        "pos":  [
+                    48816.6,
+                    28501.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BM0AAAA=]",
+        "desc":  "Help Broil Cane disrupt centaurs."
+    },
+    {
+        "pos":  [
+                    48602,
+                    26658.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNEAAAA=]",
+        "desc":  "Help Forward Scout Luke disrupt centaur logistics."
+    },
+    {
+        "pos":  [
+                    48575.4,
+                    26289.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BNIAAAA=]",
+        "desc":  "Help Forward Scout Greta cause chaos in the Modniir homeland."
+    },
+    {
+        "pos":  [
+                    45251.6,
+                    30520.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  "Help Waldo Flood take revenge on local bandits."
+    },
+    {
+        "pos":  [
+                    45699.3,
+                    30872.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  "Help Lionguard Micah keep the Black Haven area safe for travelers."
+    },
+    {
+        "pos":  [
+                    44530.9,
+                    31238.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  "Help Engineer Gilli."
+    },
+    {
+        "pos":  [
+                    44718,
+                    30866.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  "Help Guard Barnaby."
+    },
+    {
+        "pos":  [
+                    44435.3,
+                    31656.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  "Help the fishers of Triskell Quay."
+    },
+    {
+        "pos":  [
+                    43762,
+                    31851.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  "Help Matlal collect truffles for her starving tribe."
+    },
+    {
+        "pos":  [
+                    43261.9,
+                    31270.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BP0AAAA=]",
+        "desc":  "Help Doolsileep protect Moogooloo Village."
+    },
+    {
+        "pos":  [
+                    42674.2,
+                    31653.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BP8AAAA=]",
+        "desc":  "Help Seraph Soldier Tripp."
+    },
+    {
+        "pos":  [
+                    43255.4,
+                    30775.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAABAAA=]",
+        "desc":  "Help Sergeant Rane."
+    },
+    {
+        "pos":  [
+                    46680.5,
+                    30234.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  "Help First Haven's residents deal with the undead."
+    },
+    {
+        "pos":  [
+                    46909.7,
+                    29178.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  "Help Bronson disrupt centaur troops."
+    },
+    {
+        "pos":  [
+                    48549.1,
+                    30135.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  "Help Milton Book and local farmers with their pirate and pest problems."
+    },
+    {
+        "pos":  [
+                    50096.1,
+                    29642.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  "Help Lionguard Rhyn drive the dredge away from Junction Haven."
+    },
+    {
+        "pos":  [
+                    50041.1,
+                    30031
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  "Assist the Lionguard and protect Junction Haven."
+    },
+    {
+        "pos":  [
+                    49858.3,
+                    29188.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  "Help Johan with his training duties at Vollym's battle pit."
+    },
+    {
+        "pos":  [
+                    48799.5,
+                    29079.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  "Help Mei Shadowwalker reclaim the Wiley pirates' stolen treasure."
+    },
+    {
+        "pos":  [
+                    48804.7,
+                    32335.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  "Help the Priory put ghost pirates to rest."
+    },
+    {
+        "pos":  [
+                    49403.2,
+                    32413.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  "Help the Lionguard keep drakes at bay."
+    },
+    {
+        "pos":  [
+                    49302.2,
+                    33460.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  "Help spy on the Crafty Corsairs."
+    },
+    {
+        "pos":  [
+                    49938.5,
+                    32927
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  "Help subvert the Bloody Buccaneers."
+    },
+    {
+        "pos":  [
+                    50315.3,
+                    33027.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  "Help maintain order in Moriarity's Hold."
+    },
+    {
+        "pos":  [
+                    48892.8,
+                    34072.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  "Help Arm the Quaggans"
+    },
+    {
+        "pos":  [
+                    48312.9,
+                    34864.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  "Help Shore up Hylek Defenses"
+    },
+    {
+        "pos":  [
+                    49450.6,
+                    34265
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMUAAAA=]",
+        "desc":  "Help the Vigil clear out the abandoned caves of Mole's Head"
+    },
+    {
+        "pos":  [
+                    50172,
+                    35218.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMcAAAA=]",
+        "desc":  "Help Cesseilia defend and research the oasis."
+    },
+    {
+        "pos":  [
+                    45987,
+                    27216.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  "Help Cin Fursarai around the Lakeside Bazaar."
+    },
+    {
+        "pos":  [
+                    45046.3,
+                    27359.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  "Aid the front-line defense of Doric's Landing"
+    },
+    {
+        "pos":  [
+                    45295.1,
+                    25681.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  "Help Noran around the Harvest Cascades."
+    },
+    {
+        "pos":  [
+                    45505.1,
+                    26809.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  "Help restore life to Saidra's Haven."
+    },
+    {
+        "pos":  [
+                    43631.5,
+                    35765.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAQBAAA=]",
+        "desc":  "Help Warden Brulians clear undead creatures from the area."
+    },
+    {
+        "pos":  [
+                    43346.3,
+                    35629.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAYBAAA=]",
+        "desc":  "Help Elain clear the spider cave."
+    },
+    {
+        "pos":  [
+                    43213.2,
+                    36021.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAcBAAA=]",
+        "desc":  "Help Danador manage his kennel."
+    },
+    {
+        "pos":  [
+                    43687.8,
+                    34009.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAgBAAA=]",
+        "desc":  "Help Yoal weaken the krait and recover kidnapped hylek."
+    },
+    {
+        "pos":  [
+                    43861.1,
+                    33619.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAkBAAA=]",
+        "desc":  "Help Fisher Leudap support the fishers of Soggorsort."
+    },
+    {
+        "pos":  [
+                    43669.5,
+                    34707.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAoBAAA=]",
+        "desc":  "Help the Atzintli and Zopatl tribes battle the krait."
+    },
+    {
+        "pos":  [
+                    42607.4,
+                    35408.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BAwBAAA=]",
+        "desc":  "Help Harvester Mavad manage the kelp harvest."
+    },
+    {
+        "pos":  [
+                    42699.2,
+                    34815
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BA0BAAA=]",
+        "desc":  "Help the Soundless deal with the Nightmare Court."
+    },
+    {
+        "pos":  [
+                    42579.4,
+                    34370.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BA4BAAA=]",
+        "desc":  "Help Tovar harass the Nightmare Court."
+    },
+    {
+        "pos":  [
+                    42814.8,
+                    34220.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BA8BAAA=]",
+        "desc":  "Help Zippti study the hyper-aggressive skritt."
+    },
+    {
+        "pos":  [
+                    42508.4,
+                    33255.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBABAAA=]",
+        "desc":  "Help the wardens in Wychmire Swamp."
+    },
+    {
+        "pos":  [
+                    42733.3,
+                    32826.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBEBAAA=]",
+        "desc":  "Help Lionguard Cern safeguard the road."
+    },
+    {
+        "pos":  [
+                    42998.5,
+                    35631.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBIBAAA=]",
+        "desc":  "Help Gemai support the wardens of Wardenhurst."
+    },
+    {
+        "pos":  [
+                    42631.7,
+                    35888
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBMBAAA=]",
+        "desc":  "Help defend Caer Astorea from the Nightmare Court."
+    },
+    {
+        "pos":  [
+                    42682.1,
+                    36129.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  "Help Delilah keep the farmer's fields safe."
+    },
+    {
+        "pos":  [
+                    41225.1,
+                    36275.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  "Help Blopp stop the Inquest from using hylek poison to drive lake creatures crazy."
+    },
+    {
+        "pos":  [
+                    40313.5,
+                    36000.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEMBAAA=]",
+        "desc":  "Help Shoon's salvage krewe deal with Inquest interference."
+    },
+    {
+        "pos":  [
+                    40787.3,
+                    35552.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEQBAAA=]",
+        "desc":  "Help Brill Alliance study the skritt."
+    },
+    {
+        "pos":  [
+                    41469.4,
+                    35671
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEUBAAA=]",
+        "desc":  "Help Hrouda maintain the ecosystem in spite of Dr. Bleent's research."
+    },
+    {
+        "pos":  [
+                    41830.1,
+                    35099.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEcBAAA=]",
+        "desc":  "Help the Lionguard keep the Cuatl hylek in check."
+    },
+    {
+        "pos":  [
+                    41063.7,
+                    35136.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEgBAAA=]",
+        "desc":  "Help the Michotl tribe."
+    },
+    {
+        "pos":  [
+                    41056.8,
+                    34336.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEkBAAA=]",
+        "desc":  "Help the Luminates plant krewe maintain the power grid."
+    },
+    {
+        "pos":  [
+                    41645.1,
+                    34131.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  "Help Peacemaker Owta disrupt the Inquest complex."
+    },
+    {
+        "pos":  [
+                    40478.5,
+                    34055.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  "Help the C.L.E.A.N. krewe."
+    },
+    {
+        "pos":  [
+                    41467.7,
+                    32511.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BC4BAAA=]",
+        "desc":  "Help the grub farmers in Skrittsburgh Hillstead."
+    },
+    {
+        "pos":  [
+                    41381.2,
+                    31738.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BC8BAAA=]",
+        "desc":  "Help the skritt defend Skrittsburgh East End."
+    },
+    {
+        "pos":  [
+                    41018,
+                    32695.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDABAAA=]",
+        "desc":  "Help the skritt experimenting in Skrittsburgh Tunnels."
+    },
+    {
+        "pos":  [
+                    41768.3,
+                    32260.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDEBAAA=]",
+        "desc":  "Help Leigheara protect the Revered Terebinth."
+    },
+    {
+        "pos":  [
+                    41904.6,
+                    31350.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  "Help the Seraph fight Willem's bandits."
+    },
+    {
+        "pos":  [
+                    40409.8,
+                    31235.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  "Help the cornered spies at Seraph Observers."
+    },
+    {
+        "pos":  [
+                    39141.1,
+                    31401.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  "Help the skritt challenge the bandits."
+    },
+    {
+        "pos":  [
+                    39012.1,
+                    32470.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  "Help Valiant Mathair secure Vandal's Claim."
+    },
+    {
+        "pos":  [
+                    39872.5,
+                    31921.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  "Help Peacemaker Klodi disperse the alliance of criminals."
+    },
+    {
+        "pos":  [
+                    53415.6,
+                    39775.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBYBAAA=]",
+        "desc":  "Help the Order of Whispers sabotage Inquest weapon tests on the hylek village of Tzanopl Grounds."
+    },
+    {
+        "pos":  [
+                    53963.6,
+                    39212.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBgBAAA=]",
+        "desc":  "Help Carmel cleanse the Inquest pollution."
+    },
+    {
+        "pos":  [
+                    51773.2,
+                    39934.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBkBAAA=]",
+        "desc":  "Help Ambr's krewe defend the lab."
+    },
+    {
+        "pos":  [
+                    51156.9,
+                    39652.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBoBAAA=]",
+        "desc":  "Help Pixtor test his weapons on the Risen in Murkvale."
+    },
+    {
+        "pos":  [
+                    52952.3,
+                    38001.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBsBAAA=]",
+        "desc":  "Help Zara secure and supply Gallant's Folly."
+    },
+    {
+        "pos":  [
+                    52216,
+                    37914.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BBwBAAA=]",
+        "desc":  "Help Pact soldiers secure a path to Orr."
+    },
+    {
+        "pos":  [
+                    54208.9,
+                    39832.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BB4BAAA=]",
+        "desc":  "Help Jenrys protect nature from the Inquest."
+    },
+    {
+        "pos":  [
+                    50829.6,
+                    38541.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BB8BAAA=]",
+        "desc":  "Help the Priory members excavate Rata Pten."
+    },
+    {
+        "pos":  [
+                    52745.9,
+                    39012.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCABAAA=]",
+        "desc":  "Help the Order of Whispers instigate a fight between krait and Risen."
+    },
+    {
+        "pos":  [
+                    48284.7,
+                    37055.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCEBAAA=]",
+        "desc":  "Help Admiral Clarinda Demard."
+    },
+    {
+        "pos":  [
+                    48995.4,
+                    36482.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCIBAAA=]",
+        "desc":  "Help Potatlan at the Western Shore."
+    },
+    {
+        "pos":  [
+                    49223.2,
+                    36780.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCMBAAA=]",
+        "desc":  "Help Cuadinti Prepare Southwatch Post."
+    },
+    {
+        "pos":  [
+                    48189.2,
+                    37539.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCYBAAA=]",
+        "desc":  "Protect the quaggans from the krait."
+    },
+    {
+        "pos":  [
+                    48608.1,
+                    38148.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCcBAAA=]",
+        "desc":  "Help Kamma test her experimental weapon."
+    },
+    {
+        "pos":  [
+                    48763.9,
+                    35870
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCgBAAA=]",
+        "desc":  "Help Costi Atl and his tribe hunt for termite larvae."
+    },
+    {
+        "pos":  [
+                    48738.6,
+                    36465.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCkBAAA=]",
+        "desc":  "Help Ayomichi slow the spread of Risen corruption"
+    },
+    {
+        "pos":  [
+                    48890.5,
+                    37582.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BCsBAAA=]",
+        "desc":  "Help the Wyld Hunt valiants to explore the shipwrecks."
+    },
+    {
+        "pos":  [
+                    49178.4,
+                    38175.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BC0BAAA=]",
+        "desc":  "Help Brannen maintain Caer Brier."
+    },
+    {
+        "pos":  [
+                    55682,
+                    60587.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  "Help the cause of dissenting Astralarium scholars."
+    },
+    {
+        "pos":  [
+                    40650.8,
+                    15575.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  "Help the kodan study and settle in the Janthir Syntri region."
+    },
+    {
+        "pos":  [
+                    37865.2,
+                    45616.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BGsBAAA=]",
+        "desc":  "Investigate the mursaat fortress"
+    },
+    {
+        "pos":  [
+                    40198.4,
+                    45949.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BG8BAAA=]",
+        "desc":  "Help the skritt encampment."
+    },
+    {
+        "pos":  [
+                    37357.6,
+                    41649.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  "Help the Prisoners"
+    },
+    {
+        "pos":  [
+                    36551.4,
+                    42395
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  "Help the scouting party."
+    },
+    {
+        "pos":  [
+                    27014.2,
+                    100171
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLkBAAA=]",
+        "desc":  "Help the tengu of Cobble Ward restore their district."
+    },
+    {
+        "pos":  [
+                    25993.2,
+                    98645.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BL8BAAA=]",
+        "desc":  "Help Xunlai Jade test and promote jade tech."
+    },
+    {
+        "pos":  [
+                    28286.6,
+                    99457.7
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMEBAAA=]",
+        "desc":  "Help the East Precinct protect Grub Lane."
+    },
+    {
+        "pos":  [
+                    22141.6,
+                    100957
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLoBAAA=]",
+        "desc":  "Assist the temple in its defense."
+    },
+    {
+        "pos":  [
+                    32752,
+                    103075
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLwBAAA=]",
+        "desc":  "Help out around Mori Village to gain the trust of the tengu who live there."
+    },
+    {
+        "pos":  [
+                    7780.8,
+                    57997.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  "Assist the hunters in maintaining their camp and protecting the wildlife from the Inquest."
+    },
+    {
+        "pos":  [
+                    7700,
+                    58870.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  "Assist the Durmand Priory in establishing and protecting their expedition."
+    },
+    {
+        "pos":  [
+                    11250.2,
+                    59716
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  "Help Pub Canach grow into a lucrative business."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  "Assist the castaways around Hullgarden."
+    },
+    {
+        "pos":  [
+                    10797.3,
+                    58207.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  "Help the Tyrian Alliance keep tabs on the Inquest and learn more about Castora's natural magics."
+    },
+    {
+        "pos":  [
+                    58473.4,
+                    43025.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  "Help Aksim care for and train raptors."
+    },
+    {
+        "pos":  [
+                    59701.4,
+                    40412.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  "Help out around Highjump Ranch."
+    },
+    {
+        "pos":  [
+                    60702.7,
+                    42042.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  "Help the Makali community."
+    },
+    {
+        "pos":  [
+                    59067.1,
+                    41441.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  "Help the Pricklepatch Hollow choya, or don't."
+    },
+    {
+        "pos":  [
+                    58343.1,
+                    43050.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJ4BAAA=]",
+        "desc":  "Help Aksim care for and train raptors."
+    },
+    {
+        "pos":  [
+                    59492.3,
+                    52606.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  "Help Drojkor, Spirit Squall, control jackals."
+    },
+    {
+        "pos":  [
+                    61504.2,
+                    51076.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  "Help Dunkoro assist local ghosts."
+    },
+    {
+        "pos":  [
+                    59786.6,
+                    48835
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJ8BAAA=]",
+        "desc":  "Help Tariq weaken the garrison."
+    },
+    {
+        "pos":  [
+                    59325.1,
+                    50678.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKIBAAA=]",
+        "desc":  "Help the Order of Shadows defend against the Forged."
+    },
+    {
+        "pos":  [
+                    60369.8,
+                    48571.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  "Help Kisha Odili keep the village running."
+    },
+    {
+        "pos":  [
+                    60662.8,
+                    46278.1
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  "Help Ebele prepare the way north for defectors."
+    },
+    {
+        "pos":  [
+                    61375.3,
+                    45643.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  "Help Adisa collect Slivers of Vlast from veteran Branded."
+    },
+    {
+        "pos":  [
+                    59168,
+                    46574.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  "Use a skimmer to help with training around the ranch."
+    },
+    {
+        "pos":  [
+                    60298.7,
+                    45312.2
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  "Help Follower Dawnwynn defeat Branded Forgotten at Augury Rock."
+    },
+    {
+        "pos":  [
+                    60704.6,
+                    46586.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJoBAAA=]",
+        "desc":  "Help Assistant Foreman Kofi keep the people of the Gladefields safe."
+    },
+    {
+        "pos":  [
+                    60820.4,
+                    45037
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJwBAAA=]",
+        "desc":  "Help Follower Xunn collect Forgotten Glyphs for decoding."
+    },
+    {
+        "pos":  [
+                    63797.9,
+                    53337.5
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  "Help the royals of Vehjin Palace."
+    },
+    {
+        "pos":  [
+                    64841.6,
+                    54777.4
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  "Help the living and the dead at the Necropolis."
+    },
+    {
+        "pos":  [
+                    64450.4,
+                    55266
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  "Help train the newly Awakened."
+    },
+    {
+        "pos":  [
+                    66390.2,
+                    55143.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  "Help the students of Vehtendi Academy."
+    },
+    {
+        "pos":  [
+                    54414.1,
+                    57417.9
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  "Help the Olmakhan slow the Inquest's expansion."
+    },
+    {
+        "pos":  [
+                    64452,
+                    61814.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  "Help distribute incoming supplies to the allied encampment."
+    },
+    {
+        "pos":  [
+                    65526.4,
+                    61986.8
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  "Help stabilize the front line."
+    },
+    {
+        "pos":  [
+                    65989.6,
+                    61252.6
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLEBAAA=]",
+        "desc":  "Help the critically endangered heket tribe."
+    },
+    {
+        "pos":  [
+                    64663.1,
+                    59066.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLMBAAA=]",
+        "desc":  "Prepare the Pact camp for battle."
+    },
+    {
+        "pos":  [
+                    66715.7,
+                    58414.3
+                ],
+        "name":  "Renown Heart",
+        "type":  "heart",
+        "chat_code":  "[&BLQBAAA=]",
+        "desc":  "Help the people of Yatendi village."
     }
 ]

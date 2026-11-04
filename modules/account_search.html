@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -69,7 +70,7 @@
 			</div>
 
 			<div class="search-container">
-				<input type="text" class="search-box" id="global-search" placeholder="SEARCH ANYTHING..." oninput="triggerSearch()" autocomplete="off">
+				<input type="text" class="search-box" id="global-search" data-i18n-ph="common.search_anything" placeholder="SEARCH ANYTHING..." oninput="triggerSearch()" autocomplete="off">
 					<span class="clear-btn" id="clear-search" onclick="document.getElementById('global-search').value=''; triggerSearch();">&times;</span>
 				</div>
 
@@ -113,7 +114,8 @@
 			if (!window.parent.globalItemCache) {
 				window.parent.globalItemCache = {};
 				try {
-					const cachedData = localStorage.getItem('gw2_item_metadata_cache');
+					const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+					const cachedData = localStorage.getItem('gw2_item_metadata_cache_' + lang) || localStorage.getItem('gw2_item_metadata_cache');
 					if (cachedData) {
 						window.parent.globalItemCache = JSON.parse(cachedData);
 					}
@@ -126,6 +128,8 @@
 
 			function saveItemCache() {
 				try {
+					const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+					localStorage.setItem('gw2_item_metadata_cache_' + lang, JSON.stringify(window.parent.globalItemCache));
 					localStorage.setItem('gw2_item_metadata_cache', JSON.stringify(window.parent.globalItemCache));
 				} catch(e) {
 					console.error("Failed to save gw2_item_metadata_cache", e);
@@ -133,7 +137,12 @@
 			}
 
 			async function fetchJSON(url) {
-				try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch(e) { return null; }
+				try {
+					const r = await fetch(url);
+					if (!r.ok) return null;
+					const text = await r.text();
+					return JSON.parse(text.replace(/^\uFEFF/, '').trim());
+				} catch(e) { return null; }
 			}
 
             function addLoc(id, locName, count) {
@@ -243,8 +252,8 @@
 
 				const track = p => p.then(res => { updateProgress(); return res; }).catch(() => { updateProgress(); return null; });
 
-				const mapPromises = mapFiles.map(file => track(fetchJSON(apiBase + file)));
-				const altPromises = altFiles.map(file => track(fetchJSON(apiBase + file)));
+				const mapPromises = mapFiles.map(file => track(window.DataLoader ? window.DataLoader.fetchDataJSON(file) : fetchJSON(apiBase + file)));
+				const altPromises = altFiles.map(file => track(window.DataLoader ? window.DataLoader.fetchDataJSON(file) : fetchJSON(apiBase + file)));
 
 				const [bank, mats, inv, wallet, chars, ...allData] = await Promise.all([
 					track(fetchJSON("https://api.guildwars2.com/v2/account/bank?access_token=" + activeKey)),
@@ -461,9 +470,11 @@
 
                 // WvW Map POIs and Sectors
                 const wvwMaps = [38, 95, 96, 1099, 968, 350];
-                const mapDefsRes = await fetchJSON(`https://api.guildwars2.com/v2/maps?ids=${wvwMaps.join(',')}`);
+                const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                const mapDefsRes = await fetchJSON(`https://api.guildwars2.com/v2/maps?ids=${wvwMaps.join(',')}&lang=${lang}`);
                 if (mapDefsRes) {
-                    const wvwFloorPromises = mapDefsRes.map(mapDef => fetchJSON(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapDef.id}`));
+                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                    const wvwFloorPromises = mapDefsRes.map(mapDef => fetchJSON(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapDef.id}?lang=${lang}`));
                     const wvwFloors = await Promise.all(wvwFloorPromises);
                     
                     wvwFloors.forEach(floor => {
@@ -509,7 +520,8 @@
                 }
 
                 // WvW Map Objectives
-                const wvwObjsRes = await fetchJSON("https://api.guildwars2.com/v2/wvw/objectives?ids=all");
+                const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                const wvwObjsRes = await fetchJSON("https://api.guildwars2.com/v2/wvw/objectives?ids=all&lang=" + lang);
                 if (wvwObjsRes) {
                     wvwObjsRes.forEach(obj => {
                         const rawCoord = obj.coord || obj.label_coord;
@@ -552,7 +564,8 @@
                     
                     let completedChunks = 0;
                     const chunkPromises = chunks.map((chunk, index) => {
-                        return fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`).then(res => {
+                        const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                        return fetchJSON(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}&lang=${lang}`).then(res => {
                             completedChunks++;
                             const pct = Math.round((completedChunks / chunks.length) * 100);
                             document.getElementById('loader-text').innerText = `INDEXING NEW ITEMS (${pct}%)...`;
@@ -581,7 +594,8 @@
                 // Fetch Currencies (Only those missing from cache)
                 const missingCurrIds = currIds.filter(id => !itemCache['curr_' + id]);
                 if (missingCurrIds.length > 0) {
-                    const cData = await fetchJSON(`https://api.guildwars2.com/v2/currencies?ids=${missingCurrIds.join(',')}`);
+                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                    const cData = await fetchJSON(`https://api.guildwars2.com/v2/currencies?ids=${missingCurrIds.join(',')}&lang=${lang}`);
                     if (cData) {
                         cData.forEach(c => {
                             itemCache['curr_' + c.id] = { name: c.name, icon: c.icon, rarity: 'Currency', isCurrency: true };
@@ -723,7 +737,7 @@
                     // Slot click handler - NPCs use the shopping anchor, all other items/locations use their normal page title
                     let onclickWiki = '';
                     if (item.isNPC) {
-                        onclickWiki = `window.parent.postMessage({ action: 'openWiki', url: 'https://wiki.guildwars2.com/index.php?title=' + encodeURIComponent('${item.name.replace(/'/g, "\\'")}') + '&useskin=vector#Items_offered' }, '*')`;
+                        onclickWiki = `window.parent.postMessage({ action: 'openWiki', url: 'https://wiki.guildwars2.com/index.php?title=' + encodeURIComponent('${item.name.replace(/'/g, "\\'")}') + '&useskin=vector-2022#Items_offered' }, '*')`;
                     } else {
                         onclickWiki = `window.parent.postMessage({ action: 'openWiki', title: '${item.name.replace(/'/g, "\\'")}' }, '*')`;
                     }
@@ -749,6 +763,7 @@
             };
 
 			window.addEventListener('message', (e) => { 
+				if (e.data.action === 'languageChanged') { init(); } 
 				if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
 				if (e.data.action === 'uiScaleChanged') {
 					if (e.data.value === 'large') document.body.classList.add('ui-large');

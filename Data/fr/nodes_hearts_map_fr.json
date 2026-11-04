@@ -1,0 +1,4042 @@
+[
+    {
+        "pos":  [
+                    52412.7,
+                    32988.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAEAAAA=]",
+        "desc":  "Aider Daphné à stopper l'invasion de la corruption."
+    },
+    {
+        "pos":  [
+                    54163.6,
+                    32112.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAIAAAA=]",
+        "desc":  "Aider les Skritts de Ratatosk."
+    },
+    {
+        "pos":  [
+                    52781.3,
+                    31794.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  "Défendre la Maison de Travelen contre les attaques de Svanirs."
+    },
+    {
+        "pos":  [
+                    50727.5,
+                    30382.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC4AAAA=]",
+        "desc":  "Faire en sorte que le camp de mineurs maintienne sa productivité."
+    },
+    {
+        "pos":  [
+                    55514.7,
+                    31765.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDYAAAA=]",
+        "desc":  "Honorer l'esprit du Loup."
+    },
+    {
+        "pos":  [
+                    55804.1,
+                    31126.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDcAAAA=]",
+        "desc":  "Honorer l'esprit de l'Ourse."
+    },
+    {
+        "pos":  [
+                    55443.4,
+                    31044.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDgAAAA=]",
+        "desc":  "Honorer l'esprit du Corbeau."
+    },
+    {
+        "pos":  [
+                    55062.6,
+                    31488.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDkAAAA=]",
+        "desc":  "Honorer l'esprit de la Panthère des neiges."
+    },
+    {
+        "pos":  [
+                    55989,
+                    31319
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDsAAAA=]",
+        "desc":  "Saboter le culte des Grawls."
+    },
+    {
+        "pos":  [
+                    55691.3,
+                    28127.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BD0AAAA=]",
+        "desc":  "Défier les serviteurs de Jormag, Dragon des glaces."
+    },
+    {
+        "pos":  [
+                    55767.2,
+                    29033.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  "Combattre la corruption du Dragon des glaces."
+    },
+    {
+        "pos":  [
+                    52142.1,
+                    34959.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEsAAAA=]",
+        "desc":  "Prendre part au Festibière."
+    },
+    {
+        "pos":  [
+                    53277,
+                    34780.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEwAAAA=]",
+        "desc":  "Perturber l'exploitation minière draguerre pour les agents de l'Ordre des Soupirs."
+    },
+    {
+        "pos":  [
+                    53557.4,
+                    35727.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BE0AAAA=]",
+        "desc":  "Disperser les Grawls anormalement agressifs."
+    },
+    {
+        "pos":  [
+                    54119.4,
+                    26550.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA4AAAA=]",
+        "desc":  "Apprendre les usages des Kodans."
+    },
+    {
+        "pos":  [
+                    53945,
+                    27504.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBkAAAA=]",
+        "desc":  "Aider Isaak le rebelle à semer les graines de la révolution draguerre."
+    },
+    {
+        "pos":  [
+                    53164.1,
+                    28110.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBoAAAA=]",
+        "desc":  "Aider les artisans de Soderhem."
+    },
+    {
+        "pos":  [
+                    52923.7,
+                    27791.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBsAAAA=]",
+        "desc":  "Protéger les terrains de chasse de Njordstead."
+    },
+    {
+        "pos":  [
+                    53357.1,
+                    28502.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB0AAAA=]",
+        "desc":  "Repousser la corruption."
+    },
+    {
+        "pos":  [
+                    53483.2,
+                    28690.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB4AAAA=]",
+        "desc":  "Aider Nadel de la Garde du Lion."
+    },
+    {
+        "pos":  [
+                    51112.5,
+                    28304.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCAAAAA=]",
+        "desc":  "Aider le Prieuré de Durmand à repousser les Centaures."
+    },
+    {
+        "pos":  [
+                    51440.7,
+                    28508.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCIAAAA=]",
+        "desc":  "Combattre les habitants de la Place de Jormabakke."
+    },
+    {
+        "pos":  [
+                    51395.9,
+                    29365.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCMAAAA=]",
+        "desc":  "Mettre des bâtons dans les roues des Draguerres de Molengrad."
+    },
+    {
+        "pos":  [
+                    51536.9,
+                    29401.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCQAAAA=]",
+        "desc":  "Impressionner les habitants de Mennerheim."
+    },
+    {
+        "pos":  [
+                    52224.2,
+                    28241.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCUAAAA=]",
+        "desc":  "S'opposer aux Grawls voleurs."
+    },
+    {
+        "pos":  [
+                    54977.3,
+                    23513.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHABAAA=]",
+        "desc":  "Occuper les Grawls afin qu'ils ne se tournent pas vers Jormag."
+    },
+    {
+        "pos":  [
+                    53646.7,
+                    24354.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  "Déstabiliser les Svanirs."
+    },
+    {
+        "pos":  [
+                    57132.8,
+                    35101.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLcBAAA=]",
+        "desc":  "Préparer vos forces pour l'assaut contre Kralkatorrik."
+    },
+    {
+        "pos":  [
+                    59187.5,
+                    31100.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGcAAAA=]",
+        "desc":  "Défendre le Fort de la Légion de Fer contre la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    60926.2,
+                    31295.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG0AAAA=]",
+        "desc":  "Aider Sesto Tranchecrâne dans sa tâche."
+    },
+    {
+        "pos":  [
+                    58056.4,
+                    30164.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BFsBAAA=]",
+        "desc":  "Débarrasser le site d'entraînement des nuisibles."
+    },
+    {
+        "pos":  [
+                    62739,
+                    30676.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHMAAAA=]",
+        "desc":  "Aider l'historienne Jinell dans ses recherches aux Décombres de la Sérénité."
+    },
+    {
+        "pos":  [
+                    62847.2,
+                    29077.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHQAAAA=]",
+        "desc":  "Aider les forces des Sentinelles contre les Draconides."
+    },
+    {
+        "pos":  [
+                    63624,
+                    32403.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHkAAAA=]",
+        "desc":  "Aider les soldats de la Légion et de l'Avant-garde d'Ebon contre les Ogres."
+    },
+    {
+        "pos":  [
+                    63702.8,
+                    29368.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH4AAAA=]",
+        "desc":  "Rejoindre la Légion des Cendres des Pitons mordorés dans les opérations discrètes."
+    },
+    {
+        "pos":  [
+                    62489.3,
+                    34325
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJwAAAA=]",
+        "desc":  "Retenir les insurgés."
+    },
+    {
+        "pos":  [
+                    63395.8,
+                    33625.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKEAAAA=]",
+        "desc":  "Aider la délégation charr."
+    },
+    {
+        "pos":  [
+                    63092.5,
+                    33933.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKIAAAA=]",
+        "desc":  "Soutenir la délégation humaine."
+    },
+    {
+        "pos":  [
+                    62364.1,
+                    33049.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKMAAAA=]",
+        "desc":  "Contenir la croissance du Stigmate du dragon."
+    },
+    {
+        "pos":  [
+                    61872.1,
+                    32945.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKQAAAA=]",
+        "desc":  "Aider les chercheurs dans leurs études du Stigmate."
+    },
+    {
+        "pos":  [
+                    63473.5,
+                    34958.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  "Harceler les Ogres du Kraal d'Oursefol."
+    },
+    {
+        "pos":  [
+                    59515.8,
+                    27409.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIAAAAA=]",
+        "desc":  "Aider à la maintenance du poste de commandement de Tuyère."
+    },
+    {
+        "pos":  [
+                    59387.8,
+                    26849.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIEAAAA=]",
+        "desc":  "Aider l'ingénieur Veretum."
+    },
+    {
+        "pos":  [
+                    58759.3,
+                    27479
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIIAAAA=]",
+        "desc":  "Purifier la magie de la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    57866.3,
+                    25777.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIgAAAA=]",
+        "desc":  "Aider la Légion des Cendres à la Faille de l'ombre."
+    },
+    {
+        "pos":  [
+                    57068.3,
+                    25722.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIkAAAA=]",
+        "desc":  "Aider les réfugiés kodans qui fuient vers la Pointe d'Haymal."
+    },
+    {
+        "pos":  [
+                    61393.1,
+                    28184
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BI4AAAA=]",
+        "desc":  "Combattre les Stigmatisés au Lac Desolann avec les sentinelles."
+    },
+    {
+        "pos":  [
+                    61193.9,
+                    27025.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BI8AAAA=]",
+        "desc":  "Aider les sentinelles qui patrouillent dans le Bois des larmes de cristal."
+    },
+    {
+        "pos":  [
+                    61688.2,
+                    28870.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJEAAAA=]",
+        "desc":  "Combattre les serviteurs voleurs de vie dans la Forêt d'Hellion."
+    },
+    {
+        "pos":  [
+                    61536.8,
+                    29632.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJIAAAA=]",
+        "desc":  "Aider la Légion de Fer à abattre le mur ascalonien."
+    },
+    {
+        "pos":  [
+                    60279.6,
+                    29622
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJYAAAA=]",
+        "desc":  "Aider le centurion Portefoy dans les Voûtes d'Echodalle."
+    },
+    {
+        "pos":  [
+                    60319.1,
+                    29265.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJcAAAA=]",
+        "desc":  "Aider la magistrate Tranchecrin à préserver les Ruines de Piken la vieille."
+    },
+    {
+        "pos":  [
+                    60723.1,
+                    27228.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJgAAAA=]",
+        "desc":  "Aider les Légions alliées qui partent à l'assaut des territoires de la Flamme."
+    },
+    {
+        "pos":  [
+                    60510.8,
+                    26594
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJkAAAA=]",
+        "desc":  "Aider la troupe du Brasier à attaquer la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    56958.6,
+                    29665.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  "Prêter main-forte à la Légion Sanglante."
+    },
+    {
+        "pos":  [
+                    56998.8,
+                    28459
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  "Aider Lakor Grisebabine à veiller au bon déroulement du Viandoberfest."
+    },
+    {
+        "pos":  [
+                    56723.2,
+                    28144.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  "Prêter main-forte à la Légion de Fer."
+    },
+    {
+        "pos":  [
+                    57798.2,
+                    27971
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  "Aider les ouvriers de la carrière."
+    },
+    {
+        "pos":  [
+                    58309.6,
+                    28645.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  "Aider Stout Sombresprit."
+    },
+    {
+        "pos":  [
+                    59141.8,
+                    28527.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  "Aider les ouvriers de la Scierie de Mortesciée."
+    },
+    {
+        "pos":  [
+                    59247.4,
+                    28157.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  "Prêter main-forte à la Légion des Cendres."
+    },
+    {
+        "pos":  [
+                    47771.9,
+                    42678.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  "Reprendre le reliquaire de Grenth."
+    },
+    {
+        "pos":  [
+                    47359.1,
+                    42320.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  "Reprendre le reliquaire de Dwayna."
+    },
+    {
+        "pos":  [
+                    48655.5,
+                    42554.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  "Reprendre le reliquaire de Melandru."
+    },
+    {
+        "pos":  [
+                    47546.6,
+                    41688.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  "Reprendre le reliquaire de Balthazar."
+    },
+    {
+        "pos":  [
+                    48593.9,
+                    41853.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  "Reprendre le reliquaire de Lyssa."
+    },
+    {
+        "pos":  [
+                    43550.7,
+                    30028
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  "S'entraîner avec la milice."
+    },
+    {
+        "pos":  [
+                    44142.2,
+                    28815.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  "Aider les Séraphins à la Garnison de Shaemoor."
+    },
+    {
+        "pos":  [
+                    42834.8,
+                    28302.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  "Aider Eda la fermière avec son verger."
+    },
+    {
+        "pos":  [
+                    45662.7,
+                    30062.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  "Fédérer les Ettins."
+    },
+    {
+        "pos":  [
+                    45225.9,
+                    29229.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  "Maintenir le monastère opérationnel."
+    },
+    {
+        "pos":  [
+                    44598.1,
+                    28755.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  "Aider Cardy la travailleuse et la Scierie d'Ojon."
+    },
+    {
+        "pos":  [
+                    45266.7,
+                    28533.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  "Aider Block le chasseur et le Pavillon de chasse."
+    },
+    {
+        "pos":  [
+                    45600.2,
+                    28218.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  "Aider Will et les autres pêcheurs de Beetletun."
+    },
+    {
+        "pos":  [
+                    48195.6,
+                    27360.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMsAAAA=]",
+        "desc":  "Semer le chaos parmi les Centaures."
+    },
+    {
+        "pos":  [
+                    49078.6,
+                    28027.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM4AAAA=]",
+        "desc":  "S'entraîner avec la Compagnie."
+    },
+    {
+        "pos":  [
+                    47470.4,
+                    25963.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM8AAAA=]",
+        "desc":  "Aider les Skritts aux Fouilles d'Arcallion."
+    },
+    {
+        "pos":  [
+                    47722.7,
+                    26260.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNAAAAA=]",
+        "desc":  "Attaquer les Centaures."
+    },
+    {
+        "pos":  [
+                    42830.3,
+                    32417.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  "Aider les protecteurs d'Ombrecœur."
+    },
+    {
+        "pos":  [
+                    44881.2,
+                    31979.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BP4AAAA=]",
+        "desc":  "Aider le Refuge d'Overlac à résoudre son problème d'Ettins."
+    },
+    {
+        "pos":  [
+                    42616.5,
+                    30737.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAEBAAA=]",
+        "desc":  "Prêter main-forte à Fort Salma."
+    },
+    {
+        "pos":  [
+                    43019.6,
+                    31943.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAIBAAA=]",
+        "desc":  "Aider Dianna en sapant les opérations de sauvetage des bandits."
+    },
+    {
+        "pos":  [
+                    45259.7,
+                    32172.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAMBAAA=]",
+        "desc":  "Aider Sangdo Prestaile."
+    },
+    {
+        "pos":  [
+                    46778.1,
+                    29544.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  "Secourir les Séraphins tombés dans les Champs du sang."
+    },
+    {
+        "pos":  [
+                    48503.7,
+                    29572.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  "Riposter contre les pirates au nom de Joukje."
+    },
+    {
+        "pos":  [
+                    47643.8,
+                    29732.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  "Soutenir les troupes en garnison dans la Colonie d'Ascalon."
+    },
+    {
+        "pos":  [
+                    49388.3,
+                    29919.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  "Maintenir l'ordre autour de la Résidence Almuten."
+    },
+    {
+        "pos":  [
+                    48305.2,
+                    34098.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  "Combattre le mystérieux mal quaggan."
+    },
+    {
+        "pos":  [
+                    48882.1,
+                    32956
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  "Saboter les expériences de l'Hydroposte d'Aquanarium."
+    },
+    {
+        "pos":  [
+                    48824.5,
+                    32639.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMQAAAA=]",
+        "desc":  "Enseigner l'élevage de crabes aux quaggans."
+    },
+    {
+        "pos":  [
+                    49623.1,
+                    34176.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMYAAAA=]",
+        "desc":  "Aider la croisée Aisling des Veilleurs à récupérer les territoires skritts perdus."
+    },
+    {
+        "pos":  [
+                    45565.3,
+                    27601.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  "Ramener la situation à la normale à Sylveglèbe-la-Neuve."
+    },
+    {
+        "pos":  [
+                    45918.2,
+                    26705.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  "Déstabiliser les forces du Blanc-Manteau qui occupent Fort Evennie."
+    },
+    {
+        "pos":  [
+                    43488.8,
+                    36061.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAUBAAA=]",
+        "desc":  "Aider Caillech la Vaillante à affronter les trépassés."
+    },
+    {
+        "pos":  [
+                    43680.6,
+                    32939.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAsBAAA=]",
+        "desc":  "Aider la garde du Lion Hester à sauver les esclaves des Profondeurs de l'Esclavagiste."
+    },
+    {
+        "pos":  [
+                    43797.6,
+                    35332
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBQBAAA=]",
+        "desc":  "Saboter la Cour des Cauchemars à l'Antre de Bercebruyère."
+    },
+    {
+        "pos":  [
+                    42261,
+                    36020.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBUBAAA=]",
+        "desc":  "Aider Arias à s'occuper de son jardin."
+    },
+    {
+        "pos":  [
+                    40428.5,
+                    36473.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  "Participer aux recherches en golemancie de Doola."
+    },
+    {
+        "pos":  [
+                    40969,
+                    36620.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  "Assister l'Opticalium dans ses études sur la foudre."
+    },
+    {
+        "pos":  [
+                    41638.1,
+                    36406.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  "Participer à la recherche sur le limon menée par Esotérisme - PR&T."
+    },
+    {
+        "pos":  [
+                    41794.5,
+                    36108.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEYBAAA=]",
+        "desc":  "Aider Parnna dans ses études de l'ancienne salle de transfert."
+    },
+    {
+        "pos":  [
+                    40496.8,
+                    34562.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  "Aider la coterie du chaos."
+    },
+    {
+        "pos":  [
+                    40809.4,
+                    36503.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  "Assister le professeur Gahf dans l'éducation de ses jeunes enfants."
+    },
+    {
+        "pos":  [
+                    41466.4,
+                    36744.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  "Aider le chercheur Kaii à gérer le tas de débris d'Incomp."
+    },
+    {
+        "pos":  [
+                    41927.1,
+                    32766
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDIBAAA=]",
+        "desc":  "Lutter contre la Cour des Cauchemars à la Pointe de Joy."
+    },
+    {
+        "pos":  [
+                    39720.1,
+                    32950.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDMBAAA=]",
+        "desc":  "Protéger les chercheurs du Prieuré de Durmand dans les Marais de Toxal."
+    },
+    {
+        "pos":  [
+                    40129.7,
+                    32571.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  "Aider la Métamagique d'Ulta à étudier les portails asuras."
+    },
+    {
+        "pos":  [
+                    41049.5,
+                    33151
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  "Les chercheurs d'Aethervolt ont besoin d'assistants temporaires."
+    },
+    {
+        "pos":  [
+                    40801.8,
+                    32906
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  "Empêcher l'Enqueste de menacer Mrot Boru."
+    },
+    {
+        "pos":  [
+                    41006.6,
+                    31228.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  "Contrer les bandits de Scotta."
+    },
+    {
+        "pos":  [
+                    39430.4,
+                    31414.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  "Infiltrer et saboter les bandits de Seanan."
+    },
+    {
+        "pos":  [
+                    51265.1,
+                    38975.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBcBAAA=]",
+        "desc":  "Aider la tacticienne Braisemanne à préparer Fort Barfeu contre l'offensive des trépassés."
+    },
+    {
+        "pos":  [
+                    51558.7,
+                    38065.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB0BAAA=]",
+        "desc":  "Aider les Skritts à dresser leurs fortifications."
+    },
+    {
+        "pos":  [
+                    49555.6,
+                    36223.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCQBAAA=]",
+        "desc":  "Aider Qoetl et les Ni-tlacua au Guet de Gardemarais."
+    },
+    {
+        "pos":  [
+                    49420.9,
+                    35765
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCUBAAA=]",
+        "desc":  "Aider Jezza et les Veilleurs à éliminer les trépassés de Fort Cadence."
+    },
+    {
+        "pos":  [
+                    49770.4,
+                    37672.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCoBAAA=]",
+        "desc":  "Sécuriser les environs du Village de Tersech."
+    },
+    {
+        "pos":  [
+                    49756.3,
+                    38236
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCwBAAA=]",
+        "desc":  "Sécuriser le village d'Ondesaline"
+    },
+    {
+        "pos":  [
+                    56240,
+                    62583.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  "Aider les opprimés de l'Aube du Champion au nom des Lanciers du soleil."
+    },
+    {
+        "pos":  [
+                    56649,
+                    60509.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  "Maintenir la paix et l'ordre au sein de la flottille corsaire."
+    },
+    {
+        "pos":  [
+                    42941,
+                    22848.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMIBAAA=]",
+        "desc":  "Aider les résidants kodans du Repaire des moissons"
+    },
+    {
+        "pos":  [
+                    11243,
+                    59713
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIIPAAA=]",
+        "desc":  "Help Pub Canach grow into a lucrative business"
+    },
+    {
+        "pos":  [
+                    40729.2,
+                    22882.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  "Aider les Kodans à mener leurs activités dans les Hautes terres effilées"
+    },
+    {
+        "pos":  [
+                    41839.8,
+                    22655.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  "Aider les Kodans près du Val d'automne"
+    },
+    {
+        "pos":  [
+                    40833.1,
+                    16662.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMMBAAA=]",
+        "desc":  "Aider les Kodans à entretenir leur camp."
+    },
+    {
+        "pos":  [
+                    39335.4,
+                    16439.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  "Aider les Kodans à étudier la corruption du Titan."
+    },
+    {
+        "pos":  [
+                    34387.7,
+                    11629.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  "Aider les personnes qui explorent les Landes de Feu-de-Brume en protégeant leur camp et en le maintenant en état de fonctionnement."
+    },
+    {
+        "pos":  [
+                    38226.1,
+                    46492
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGwBAAA=]",
+        "desc":  "Gagner la faveur du cirque"
+    },
+    {
+        "pos":  [
+                    39606.4,
+                    46353.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG0BAAA=]",
+        "desc":  "Aider les chercheurs asuras."
+    },
+    {
+        "pos":  [
+                    39522.9,
+                    45358.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG4BAAA=]",
+        "desc":  "Assister le scientifique Vratt"
+    },
+    {
+        "pos":  [
+                    36523.1,
+                    41035.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  "Aider les anciens golems."
+    },
+    {
+        "pos":  [
+                    36111.2,
+                    41541.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  "Infiltrer l'Enqueste."
+    },
+    {
+        "pos":  [
+                    24383,
+                    102235
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL4BAAA=]",
+        "desc":  "Montrer vos talents de pêche aux pêcheurs du village."
+    },
+    {
+        "pos":  [
+                    22152.7,
+                    102584
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMABAAA=]",
+        "desc":  "Entraînement du monastère"
+    },
+    {
+        "pos":  [
+                    31174.2,
+                    101304
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLsBAAA=]",
+        "desc":  "Infiltrer le quartier général de la Confrérie de Jade et saboter ses opérations."
+    },
+    {
+        "pos":  [
+                    29673.1,
+                    102889
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL0BAAA=]",
+        "desc":  "Saboter les opérations des Orateurs dans leur quartier général."
+    },
+    {
+        "pos":  [
+                    8694.33,
+                    59481.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  "Aidez vos alliés à établir un camp et à bien s'entendre."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  "Assist the castaways around Hullgarden."
+    },
+    {
+        "pos":  [
+                    10793,
+                    58215
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  "Help the Tyrian Alliance keep tabs on the Inquest."
+    },
+    {
+        "pos":  [
+                    59259,
+                    44140.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  "Aider les réfugiés du camp de Marifa."
+    },
+    {
+        "pos":  [
+                    61548.1,
+                    44114.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJsBAAA=]",
+        "desc":  "Aider les villageois de la Trace du zéphyr."
+    },
+    {
+        "pos":  [
+                    60977.9,
+                    43401.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ0BAAA=]",
+        "desc":  "Aider le Temple de Kormir."
+    },
+    {
+        "pos":  [
+                    60634,
+                    40643.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKABAAA=]",
+        "desc":  "Donner un coup de main au Kraal de Lommuld."
+    },
+    {
+        "pos":  [
+                    64053.2,
+                    53863.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  "Aider les éveillés dans les mines de Vehjin."
+    },
+    {
+        "pos":  [
+                    65090.5,
+                    53201.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  "Animer la fête."
+    },
+    {
+        "pos":  [
+                    65370.8,
+                    53457.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  "Assister la troupe de comédiens des Fous de Lyssa."
+    },
+    {
+        "pos":  [
+                    64323.2,
+                    54145.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJUBAAA=]",
+        "desc":  "Chasser les forgés qui occupent la fonderie."
+    },
+    {
+        "pos":  [
+                    54412,
+                    57420
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  "Help the Olmakhan slow the Inquest's expansion."
+    },
+    {
+        "pos":  [
+                    53355.3,
+                    56077
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  "Zone de chasse"
+    },
+    {
+        "pos":  [
+                    53552.1,
+                    56393.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  "Fermes d'Atholma"
+    },
+    {
+        "pos":  [
+                    54528.7,
+                    58709.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  "Saboter le labo de magnétisme."
+    },
+    {
+        "pos":  [
+                    63970.2,
+                    62666.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  "Protéger la ligne de ravitaillement du Débarcadère du corsaire."
+    },
+    {
+        "pos":  [
+                    64294.1,
+                    60688.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  "Remédier à la pénurie de nourriture dans les Pâturages d'Arkjok."
+    },
+    {
+        "pos":  [
+                    66561.9,
+                    56636.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLIBAAA=]",
+        "desc":  "Démarrer les dialogues entre les factions éloniennes."
+    },
+    {
+        "pos":  [
+                    5160.31,
+                    62548.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  "Participer aux missions de recherche et d'expédition autour du Repos du pèlerin."
+    },
+    {
+        "pos":  [
+                    4665.5,
+                    61492.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  "Aider les intendants de Galdra dans la forge."
+    },
+    {
+        "pos":  [
+                    3587.4,
+                    59446.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  "Aider l'agent de la Garde astrale Gronde-corneille et ses associés à saboter la base d'opérations de l'Enqueste dans les Crevasses aux sources des lignes de force."
+    },
+    {
+        "pos":  [
+                    5118.2,
+                    59287.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNIBAAA=]",
+        "desc":  "Vous entraîner avec les forces de l'alliance et offrir votre aide au camp pour vous préparer au combat à venir."
+    },
+    {
+        "pos":  [
+                    52903.5,
+                    32422.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  "Aider Antal le Patient à impressionner les Skritts à Kolkorensburg."
+    },
+    {
+        "pos":  [
+                    53394.2,
+                    33046.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  "Aider le Prieuré à lutter contre l'excavation draguerre au Pic céleste de Dostoev."
+    },
+    {
+        "pos":  [
+                    54217.1,
+                    33882.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAUAAAA=]",
+        "desc":  "Aider l'arcaniste Vance à étudier les reliques naines à la Citadelle de granite."
+    },
+    {
+        "pos":  [
+                    54050.4,
+                    34042.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  "Aider la magistrate Roslin à infiltrer la Mine de la Terre noire."
+    },
+    {
+        "pos":  [
+                    53182.9,
+                    34145.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  "Aider l'explorateur Brokkar à saboter les munitions draguerres."
+    },
+    {
+        "pos":  [
+                    52869.6,
+                    34177.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  "Aider la magistrate Kathryn à frapper les forces draguerres."
+    },
+    {
+        "pos":  [
+                    52619.5,
+                    31987
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAkAAAA=]",
+        "desc":  "Protéger le sanctuaire de la Panthère des neiges contre les Fils de Svanir."
+    },
+    {
+        "pos":  [
+                    53612.3,
+                    32065.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAsAAAA=]",
+        "desc":  "Aider les Grawls à repousser les attaques de Svanir."
+    },
+    {
+        "pos":  [
+                    51022.8,
+                    33177.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCcAAAA=]",
+        "desc":  "Aider Queldip à voler les pirates."
+    },
+    {
+        "pos":  [
+                    50811.1,
+                    33726.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCgAAAA=]",
+        "desc":  "Aider Duidda à harceler les pirates."
+    },
+    {
+        "pos":  [
+                    51236.1,
+                    34200.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCkAAAA=]",
+        "desc":  "Aider le chercheur Bramm à s'occuper de son équipement."
+    },
+    {
+        "pos":  [
+                    51538.2,
+                    32973.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCoAAAA=]",
+        "desc":  "Aider Leandra l'exploratrice à trouver des reliques dans les Excavations de Molitage."
+    },
+    {
+        "pos":  [
+                    51918.3,
+                    33077.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCsAAAA=]",
+        "desc":  "Aider l'arcaniste Kruppa à combattre les destructeurs près du Passage du Pinion."
+    },
+    {
+        "pos":  [
+                    51925.9,
+                    33913.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCwAAAA=]",
+        "desc":  "Aider la Chasseuse Neida près de la Maison de Vanjir."
+    },
+    {
+        "pos":  [
+                    50857.3,
+                    31860.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC0AAAA=]",
+        "desc":  "Aider l'éleveuse Lyot à gérer sa ferme de dolyaks."
+    },
+    {
+        "pos":  [
+                    51025.1,
+                    30127.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC8AAAA=]",
+        "desc":  "Aider Kelgg à résoudre ses problèmes à la mine."
+    },
+    {
+        "pos":  [
+                    51568.2,
+                    29968.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDAAAAA=]",
+        "desc":  "Aider Hune à s'occuper du pavillon."
+    },
+    {
+        "pos":  [
+                    51996.6,
+                    30820.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDEAAAA=]",
+        "desc":  "Aider le Prieuré à arrêter l'invasion draguerre."
+    },
+    {
+        "pos":  [
+                    51932.1,
+                    31693.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDIAAAA=]",
+        "desc":  "Enquêter sur l'invasion des créatures à vapeur et stopper cette invasion."
+    },
+    {
+        "pos":  [
+                    51187.1,
+                    32393.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDMAAAA=]",
+        "desc":  "Aider la chercheuse Suki à étudier les diablotins près d'Antreroche."
+    },
+    {
+        "pos":  [
+                    51201.7,
+                    30732.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDQAAAA=]",
+        "desc":  "Aider Aurelio à protéger les routes du Prieuré contre les Grawls."
+    },
+    {
+        "pos":  [
+                    52076.3,
+                    31601.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDUAAAA=]",
+        "desc":  "Aider l'agent Kaukiri à tromper les draguerres pour qu'ils attaquent les créatures à vapeur."
+    },
+    {
+        "pos":  [
+                    55240.1,
+                    28696.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDwAAAA=]",
+        "desc":  "Aider la Garde du Lion à protéger le Refuge du croisement."
+    },
+    {
+        "pos":  [
+                    55869.5,
+                    28673.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BD4AAAA=]",
+        "desc":  "Aider Kevach à entretenir son pavillon."
+    },
+    {
+        "pos":  [
+                    55209.9,
+                    30406.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BD8AAAA=]",
+        "desc":  "Aider Bjarni à honorer l'esprit de la Hase."
+    },
+    {
+        "pos":  [
+                    55722.3,
+                    30189.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  "Amuser et protéger les enfants."
+    },
+    {
+        "pos":  [
+                    55519.2,
+                    29678.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  "Aider la Garde du Lion à protéger la route des Steppes glacées."
+    },
+    {
+        "pos":  [
+                    55011,
+                    29348.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  "Aider les mineurs à chercher des minerais en combattant les Draguerres."
+    },
+    {
+        "pos":  [
+                    56055.2,
+                    28366.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  "Aider Maxtar Vivalure à capturer des dolyaks."
+    },
+    {
+        "pos":  [
+                    55256.6,
+                    29616.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  "Aider Albin le chroniqueur à commercer avec la tribu jotun."
+    },
+    {
+        "pos":  [
+                    52835.1,
+                    36192.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  "Contribuer à rendre les Hauteurs de Stromkarl praticables pour les voyageurs."
+    },
+    {
+        "pos":  [
+                    52212.5,
+                    36331.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  "Aider l'alliance des Veilleurs et du Prieuré."
+    },
+    {
+        "pos":  [
+                    52155.5,
+                    36012.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  "Aider le Temple de la lumière dorée à effectuer ses expériences."
+    },
+    {
+        "pos":  [
+                    53357.4,
+                    36582.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEkAAAA=]",
+        "desc":  "Aider Ichtaca."
+    },
+    {
+        "pos":  [
+                    53659.6,
+                    37159
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEoAAAA=]",
+        "desc":  "Aider les Quaggans en danger."
+    },
+    {
+        "pos":  [
+                    52250,
+                    37333.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BE4AAAA=]",
+        "desc":  "Aider Caer Pinède à vaincre les trépassés dans la région."
+    },
+    {
+        "pos":  [
+                    52229.1,
+                    36782.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BE8AAAA=]",
+        "desc":  "Participer à l'excavation des ruines du Prieuré."
+    },
+    {
+        "pos":  [
+                    52713.1,
+                    35988.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BFAAAAA=]",
+        "desc":  "Aider la Griffure de Fionnghuala à préparer ses défenses."
+    },
+    {
+        "pos":  [
+                    55605.5,
+                    26716.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  "Aider Inka l'érudite dans ses recherches sur les diablotins."
+    },
+    {
+        "pos":  [
+                    55317.5,
+                    26775.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA0AAAA=]",
+        "desc":  "Aider le tacticien Sebastian à affronter les Fils de Svanir."
+    },
+    {
+        "pos":  [
+                    54668.6,
+                    27472.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA8AAAA=]",
+        "desc":  "Aider Esprit infini à rallier les forces de la station de la Lumière froide."
+    },
+    {
+        "pos":  [
+                    53895.5,
+                    25473.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  "Aider Qualdup à entraîner les novices d'Orsippus pour les jeux quaggans."
+    },
+    {
+        "pos":  [
+                    54245.6,
+                    25513.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  "Aider Lame douce à conserver Eaux troubles et profondes."
+    },
+    {
+        "pos":  [
+                    53984.7,
+                    25203.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  "Aider Charge notable à vaincre les couvegivres aux Contreforts de Drakkar."
+    },
+    {
+        "pos":  [
+                    55328.6,
+                    27277.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  "Aider le Croisé du Pacte D'Stolt à combattre les Fils de Svanir."
+    },
+    {
+        "pos":  [
+                    56068.1,
+                    27207.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  "Aider l'Explorateur du Pacte Erikk à combattre les Grawls de la tribu du dragon."
+    },
+    {
+        "pos":  [
+                    56276.9,
+                    24857.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBgAAAA=]",
+        "desc":  "Aider Vagues mouvantes à protéger les Kodans au Sentier des Cieux étoilés."
+    },
+    {
+        "pos":  [
+                    54094.4,
+                    28366.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBwAAAA=]",
+        "desc":  "Aider les chasseurs et voyageurs à proximité de la route."
+    },
+    {
+        "pos":  [
+                    54060.8,
+                    29497.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB8AAAA=]",
+        "desc":  "Aider les disciples de la Chouette."
+    },
+    {
+        "pos":  [
+                    50764,
+                    28513.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCEAAAA=]",
+        "desc":  "Aider les Précurseurs séraphins."
+    },
+    {
+        "pos":  [
+                    52722.4,
+                    29352.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCYAAAA=]",
+        "desc":  "Aider les Quaggans à s'installer à Urgulp."
+    },
+    {
+        "pos":  [
+                    55891.6,
+                    24288.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHEBAAA=]",
+        "desc":  "Aider les fermiers quaggans à récolter de la nourriture."
+    },
+    {
+        "pos":  [
+                    54373.5,
+                    23694
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  "Aider à protéger les griffons de neige en danger."
+    },
+    {
+        "pos":  [
+                    58180.9,
+                    37079.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLUBAAA=]",
+        "desc":  "Rassembler les soldats du Pacte, les corsaires et les Zéphyrites."
+    },
+    {
+        "pos":  [
+                    58198.9,
+                    35900
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLYBAAA=]",
+        "desc":  "Aider le Prieuré dans ses fouilles."
+    },
+    {
+        "pos":  [
+                    56719.9,
+                    37616.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLgBAAA=]",
+        "desc":  "Aider les draguerres affamés et transis de froid."
+    },
+    {
+        "pos":  [
+                    58614.5,
+                    30795.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  "Aider Bryllana Vif-esprit à disperser les fantômes."
+    },
+    {
+        "pos":  [
+                    58389.6,
+                    31340.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  "Aider Kyra Traqueleste à disperser les fantômes."
+    },
+    {
+        "pos":  [
+                    58362.9,
+                    30369.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  "Aider Crucibis Souderon à tenir l'armurerie."
+    },
+    {
+        "pos":  [
+                    58699.5,
+                    30258.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  "Aider Strum Frappebasse à sécuriser le Lac Feritas."
+    },
+    {
+        "pos":  [
+                    58538.1,
+                    30503.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  "Aider Scar Raygrif à mettre de l'ordre au chantier de casse."
+    },
+    {
+        "pos":  [
+                    58945.8,
+                    30253.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGYAAAA=]",
+        "desc":  "Aider Latera Grêlepeine à combattre la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    59193.8,
+                    30666.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGgAAAA=]",
+        "desc":  "Aider la Légion Sanglante à disperser les nuisibles."
+    },
+    {
+        "pos":  [
+                    60153.6,
+                    30257.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGkAAAA=]",
+        "desc":  "Aider Sagum Traquartefact dans ses recherches."
+    },
+    {
+        "pos":  [
+                    60192.1,
+                    31160.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGoAAAA=]",
+        "desc":  "Aider Gavros Spiritueur à disperser les fantômes."
+    },
+    {
+        "pos":  [
+                    59479.5,
+                    31240.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGsAAAA=]",
+        "desc":  "Aider Paenula à entraîner les troupes."
+    },
+    {
+        "pos":  [
+                    60620.4,
+                    31720.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGwAAAA=]",
+        "desc":  "Aider Mei Tirfaucon à enrayer l'activité des Séparatistes."
+    },
+    {
+        "pos":  [
+                    61743.1,
+                    31738.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG4AAAA=]",
+        "desc":  "Aider le chercheur Irkz à étudier le venin d'écailleux."
+    },
+    {
+        "pos":  [
+                    61414.7,
+                    31056.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG8AAAA=]",
+        "desc":  "Aider Androchus à disperser les Ogres."
+    },
+    {
+        "pos":  [
+                    60995.8,
+                    30111.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHAAAAA=]",
+        "desc":  "Aider Ghyrtratus Broyfelon à reprendre la Cité d'Ascalon."
+    },
+    {
+        "pos":  [
+                    58093.8,
+                    30516.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BFwBAAA=]",
+        "desc":  "Aider Tolona Ferbétaille à sa ferme."
+    },
+    {
+        "pos":  [
+                    62363.8,
+                    30181.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHEAAAA=]",
+        "desc":  "Aider Liharn la Sentinelle à saboter l'Enqueste."
+    },
+    {
+        "pos":  [
+                    62989.5,
+                    30729.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHIAAAA=]",
+        "desc":  "Aider Olenn l'Erudit à piéger les Grawls du côté de la Pointe du dieu des astres."
+    },
+    {
+        "pos":  [
+                    62359.2,
+                    30576.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  "Aider la Sentinelle Dénichefoi à s'occuper des Skritts."
+    },
+    {
+        "pos":  [
+                    63024.6,
+                    29343.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  "Aider Wode dans ses recherches sur les Harpies."
+    },
+    {
+        "pos":  [
+                    63508.1,
+                    30208.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHcAAAA=]",
+        "desc":  "Aider les Ogres pacifiques de Degun Shun."
+    },
+    {
+        "pos":  [
+                    63172.7,
+                    32422.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHgAAAA=]",
+        "desc":  "Aider le Village de Ferrusatos à sauver sa pêche et aider ses habitants à pourchasser les Séparatistes."
+    },
+    {
+        "pos":  [
+                    62650.9,
+                    31733.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHoAAAA=]",
+        "desc":  "Aider la Légion de Fer à protéger la Travée de l'Œil-d'acier contre les Stigmatisés."
+    },
+    {
+        "pos":  [
+                    63406.8,
+                    31528.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHsAAAA=]",
+        "desc":  "Aider la Légion des Cendres à éliminer les Ogres !"
+    },
+    {
+        "pos":  [
+                    62960.5,
+                    32244
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHwAAAA=]",
+        "desc":  "Aider Torruh Tissenatte à saboter les activités des Séparatistes."
+    },
+    {
+        "pos":  [
+                    62187.6,
+                    32440.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH0AAAA=]",
+        "desc":  "Aider les Sentinelles à retourner les fantômes contre les Stigmatisés."
+    },
+    {
+        "pos":  [
+                    63616.8,
+                    29021.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH8AAAA=]",
+        "desc":  "Aider Jahr Scinde-nuit à saboter les activités des Séparatistes."
+    },
+    {
+        "pos":  [
+                    61802,
+                    34353.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJsAAAA=]",
+        "desc":  "Contribuer à rendre le Bivouac de Tyler praticable par les colons."
+    },
+    {
+        "pos":  [
+                    62030.4,
+                    35066.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ0AAAA=]",
+        "desc":  "Aider les habitants de Noirfaucon."
+    },
+    {
+        "pos":  [
+                    61710.4,
+                    35329.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ4AAAA=]",
+        "desc":  "Aider la commandante Varalyn et l'Avant-garde d'Ebon."
+    },
+    {
+        "pos":  [
+                    62555.2,
+                    35484.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ8AAAA=]",
+        "desc":  "Aider le contremaître Boslo à s'occuper du Trou de l'Aile noire."
+    },
+    {
+        "pos":  [
+                    63062.2,
+                    33114.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKAAAAA=]",
+        "desc":  "Aider la Légion de Fer à saboter les activités des Renégats."
+    },
+    {
+        "pos":  [
+                    63904.3,
+                    33088.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  "Aider les fermiers de Rosko à protéger le village."
+    },
+    {
+        "pos":  [
+                    63294.1,
+                    35489.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  "Aider l'Avant-garde à stopper l'avancée des Ogres."
+    },
+    {
+        "pos":  [
+                    57965.5,
+                    26934.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIQAAAA=]",
+        "desc":  "Empêcher la Légion de la Flamme d'invoquer des braises."
+    },
+    {
+        "pos":  [
+                    57100.6,
+                    26711.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIUAAAA=]",
+        "desc":  "Aider la tribu Nrocroc à survivre si près des terres de la Flamme."
+    },
+    {
+        "pos":  [
+                    57015.9,
+                    27078.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIYAAAA=]",
+        "desc":  "Aider la tribu Tarstar à survivre si près des terres de la Flamme."
+    },
+    {
+        "pos":  [
+                    57080.2,
+                    27331.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIcAAAA=]",
+        "desc":  "Aider la tribu Wupwup à survivre si près des terres de la Flamme."
+    },
+    {
+        "pos":  [
+                    57162.6,
+                    25156.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIoAAAA=]",
+        "desc":  "Aider les chercheurs du Pacte à développer leurs armes expérimentales."
+    },
+    {
+        "pos":  [
+                    58452.3,
+                    25058
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIwAAAA=]",
+        "desc":  "Aider la Légion des Cendres à faire obstacle à la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    59004,
+                    25655.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BI0AAAA=]",
+        "desc":  "Aider la Légion des Cendres à frapper au cœur de la Légion de la Flamme."
+    },
+    {
+        "pos":  [
+                    61544.9,
+                    26437.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJAAAAA=]",
+        "desc":  "Aider les Ogres à chasser les Stigmatisés de leurs terres."
+    },
+    {
+        "pos":  [
+                    61220.2,
+                    29082.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJMAAAA=]",
+        "desc":  "Aider le maître-chien Forteflerc à traquer les Séparatistes."
+    },
+    {
+        "pos":  [
+                    60149.4,
+                    28554.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJQAAAA=]",
+        "desc":  "Aider le Protecteur Mâchefléau à gérer la carrière de la prison."
+    },
+    {
+        "pos":  [
+                    60155.7,
+                    28149.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJUAAAA=]",
+        "desc":  "Aider la troupe Doucepelisse à défendre la route au Plateau du soldat."
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    28908.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJoAAAA=]",
+        "desc":  "Aider Braxa Chassécaille à s'occuper des nids de dévoreurs."
+    },
+    {
+        "pos":  [
+                    56862.2,
+                    29498.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  "Aider la Légion de Fer à combattre les fantômes."
+    },
+    {
+        "pos":  [
+                    58295.1,
+                    29445.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  "Aider Rak Mortecrin à s'occuper du Domaine de Chutepierre."
+    },
+    {
+        "pos":  [
+                    58832.3,
+                    29198.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  "Protéger la Scierie de Couperouge contre les Séparatistes."
+    },
+    {
+        "pos":  [
+                    59272.5,
+                    29385.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  "Prêter main-forte à la Scierie de Bûchepluie."
+    },
+    {
+        "pos":  [
+                    57864.1,
+                    29810.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  "Aider Kastaz Fortepatte à s'occuper de son jardin."
+    },
+    {
+        "pos":  [
+                    57444.3,
+                    29680.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  "Aider la Légion des Cendres à éliminer les Séparatistes."
+    },
+    {
+        "pos":  [
+                    57368.7,
+                    29232.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  "Aider les fermiers du Domaine de Charradis à s'occuper du bétail."
+    },
+    {
+        "pos":  [
+                    57943.1,
+                    28805.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  "Aider la Légion Sanglante à combattre les engins de siège des fantômes."
+    },
+    {
+        "pos":  [
+                    44063.9,
+                    29886.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  "Aider les Séraphins à protéger Claypool contre les Centaures."
+    },
+    {
+        "pos":  [
+                    44087.8,
+                    29386.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  "Aider Lexi Price à protéger la route commerciale."
+    },
+    {
+        "pos":  [
+                    43244.7,
+                    28723.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  "Aider Diah à s'occuper de sa ferme."
+    },
+    {
+        "pos":  [
+                    43236.7,
+                    28382.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  "Aider Travis le pêcheur à entretenir la rivière."
+    },
+    {
+        "pos":  [
+                    43330.3,
+                    28324.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  "Aider le contremaître Flannum à améliorer la sécurité du barrage."
+    },
+    {
+        "pos":  [
+                    42822.6,
+                    28780
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  "Aider Cassie du côté du Ranch à moas."
+    },
+    {
+        "pos":  [
+                    45750.9,
+                    28964.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  "Protéger les fermiers de Beetletun des Centaures taminis."
+    },
+    {
+        "pos":  [
+                    45852.1,
+                    28430
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  "Aider les citoyens de Beetletun à entretenir leur ville."
+    },
+    {
+        "pos":  [
+                    44988.9,
+                    29668.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  "Aider l'historien Garrod à explorer le Marais d'Anathema."
+    },
+    {
+        "pos":  [
+                    46524.6,
+                    26614.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMgAAAA=]",
+        "desc":  "Protéger le Plateau du Séraphin."
+    },
+    {
+        "pos":  [
+                    46944,
+                    27377.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMkAAAA=]",
+        "desc":  "Aider les Séraphins à saboter l'activité des bandits."
+    },
+    {
+        "pos":  [
+                    47633.2,
+                    28431.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMoAAAA=]",
+        "desc":  "Aider les Séraphins à la Plage de Gardenuit."
+    },
+    {
+        "pos":  [
+                    46550.3,
+                    27787.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMwAAAA=]",
+        "desc":  "Aider Ket à explorer les Ruines de Demetra."
+    },
+    {
+        "pos":  [
+                    48816.6,
+                    28501.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM0AAAA=]",
+        "desc":  "Aider Broil Cane à nuire aux Centaures."
+    },
+    {
+        "pos":  [
+                    48602,
+                    26658.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNEAAAA=]",
+        "desc":  "Aider l'éclaireur avancé Luke à perturber la logistique des Centaures."
+    },
+    {
+        "pos":  [
+                    48575.4,
+                    26289.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BNIAAAA=]",
+        "desc":  "Aider l'éclaireur avancé Greta à semer le chaos en terre modniir."
+    },
+    {
+        "pos":  [
+                    45251.6,
+                    30520.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  "Aider Waldo Flood à se venger des bandits de la région."
+    },
+    {
+        "pos":  [
+                    45699.3,
+                    30872.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  "Aider Micah de la Garde du Lion à protéger la zone autour du Refuge noir pour les voyageurs."
+    },
+    {
+        "pos":  [
+                    44530.9,
+                    31238.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  "Aider l'ingénieur Gilli."
+    },
+    {
+        "pos":  [
+                    44718,
+                    30866.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  "Aider le garde Barnaby."
+    },
+    {
+        "pos":  [
+                    44435.3,
+                    31656.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  "Venir en aide aux pêcheurs du Quai de Triskel."
+    },
+    {
+        "pos":  [
+                    43762,
+                    31851.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  "Aider Matlal à cueillir des truffes pour sa tribu affamée."
+    },
+    {
+        "pos":  [
+                    43261.9,
+                    31270.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BP0AAAA=]",
+        "desc":  "Aider Doolsileep à protéger le Village de Moogooloo."
+    },
+    {
+        "pos":  [
+                    42674.2,
+                    31653.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BP8AAAA=]",
+        "desc":  "Aider le soldat séraphin Tripp."
+    },
+    {
+        "pos":  [
+                    43255.4,
+                    30775.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAABAAA=]",
+        "desc":  "Aider le sergent Rane."
+    },
+    {
+        "pos":  [
+                    46680.5,
+                    30234.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  "Aider les habitants du Premier Refuge à affronter les morts-vivants."
+    },
+    {
+        "pos":  [
+                    46909.7,
+                    29178.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  "Aider Bronson à perturber les troupes centaures."
+    },
+    {
+        "pos":  [
+                    48549.1,
+                    30135.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  "Aider Milton Book et les fermiers des environs à lutter contre les pirates et les nuisibles."
+    },
+    {
+        "pos":  [
+                    50096.1,
+                    29642.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  "Aider la garde du Lion Rhyn à repousser les Draguerres qui attaquent le Refuge de la jonction."
+    },
+    {
+        "pos":  [
+                    50041.1,
+                    30031
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  "Aider la Garde du Lion et protéger le Refuge de la jonction."
+    },
+    {
+        "pos":  [
+                    49858.3,
+                    29188.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  "Aider Johan à effectuer ses corvées d'entraînement à la fosse à combats de Vollym."
+    },
+    {
+        "pos":  [
+                    48799.5,
+                    29079.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  "Aider Mei Foulbrum à récupérer le trésor volé des pirates de Wiley."
+    },
+    {
+        "pos":  [
+                    48804.7,
+                    32335.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  "Aider le Prieuré à calmer les pirates fantômes."
+    },
+    {
+        "pos":  [
+                    49403.2,
+                    32413.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  "Aider la Garde du Lion à tenir les drakes à distance."
+    },
+    {
+        "pos":  [
+                    49302.2,
+                    33460.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  "Contribuer à espionner les Corsaires rusés."
+    },
+    {
+        "pos":  [
+                    49938.5,
+                    32927
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  "Participer à la subversion des Boucaniers sanguinaires."
+    },
+    {
+        "pos":  [
+                    50315.3,
+                    33027.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  "Contribuer à maintenir l'ordre dans le Camp de Moriarty."
+    },
+    {
+        "pos":  [
+                    48892.8,
+                    34072.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  "Contribuer à armer les Quaggans."
+    },
+    {
+        "pos":  [
+                    48312.9,
+                    34864.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  "Participer à la consolidation des défenses hyleks."
+    },
+    {
+        "pos":  [
+                    49450.6,
+                    34265
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMUAAAA=]",
+        "desc":  "Aider les Veilleurs à nettoyer les grottes abandonnées de la Tête de taupe."
+    },
+    {
+        "pos":  [
+                    50172,
+                    35218.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMcAAAA=]",
+        "desc":  "Aider Cesseilia à défendre et explorer l'oasis."
+    },
+    {
+        "pos":  [
+                    45987,
+                    27216.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  "Aider Cin Fursarai près du Bazar lacustre."
+    },
+    {
+        "pos":  [
+                    45046.3,
+                    27359.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  "Aider les défenses du front au Débarcadère de Doric."
+    },
+    {
+        "pos":  [
+                    45295.1,
+                    25681.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  "Aider Noran aux Cascades nourricières."
+    },
+    {
+        "pos":  [
+                    45505.1,
+                    26809.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  "Ramener la vie au Refuge de Saidra."
+    },
+    {
+        "pos":  [
+                    43631.5,
+                    35765.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAQBAAA=]",
+        "desc":  "Aider le protecteur Brulians à débarrasser la zone des morts-vivants."
+    },
+    {
+        "pos":  [
+                    43346.3,
+                    35629.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAYBAAA=]",
+        "desc":  "Aider Elain à nettoyer la grotte aux araignées."
+    },
+    {
+        "pos":  [
+                    43213.2,
+                    36021.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAcBAAA=]",
+        "desc":  "Aider Danador à gérer son chenil."
+    },
+    {
+        "pos":  [
+                    43687.8,
+                    34009.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAgBAAA=]",
+        "desc":  "Aider Yoal à affaiblir les Kraits et à récupérer les Hyleks enlevés."
+    },
+    {
+        "pos":  [
+                    43861.1,
+                    33619.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAkBAAA=]",
+        "desc":  "Aider Leudap le pêcheur à soutenir ses collègues de Soggorsort."
+    },
+    {
+        "pos":  [
+                    43669.5,
+                    34707.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAoBAAA=]",
+        "desc":  "Aider Atzintli et la tribu Zopatl à affronter les Kraits."
+    },
+    {
+        "pos":  [
+                    42607.4,
+                    35408.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BAwBAAA=]",
+        "desc":  "Aider le récolteur Mavad à gérer la moisson de varech."
+    },
+    {
+        "pos":  [
+                    42699.2,
+                    34815
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA0BAAA=]",
+        "desc":  "Aider les Silencieux à s'occuper de la Cour des Cauchemars."
+    },
+    {
+        "pos":  [
+                    42579.4,
+                    34370.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA4BAAA=]",
+        "desc":  "Aider Tovar à harceler la Cour des Cauchemars."
+    },
+    {
+        "pos":  [
+                    42814.8,
+                    34220.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BA8BAAA=]",
+        "desc":  "Aider Zippti à étudier les Skritts très agressifs."
+    },
+    {
+        "pos":  [
+                    42508.4,
+                    33255.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBABAAA=]",
+        "desc":  "Aider les protecteurs dans le Marais de Wychmire."
+    },
+    {
+        "pos":  [
+                    42733.3,
+                    32826.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBEBAAA=]",
+        "desc":  "Aider la garde du Lion Cern à protéger la route."
+    },
+    {
+        "pos":  [
+                    42998.5,
+                    35631.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBIBAAA=]",
+        "desc":  "Aider Gemai à soutenir les protecteurs de Wardenhurst."
+    },
+    {
+        "pos":  [
+                    42631.7,
+                    35888
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBMBAAA=]",
+        "desc":  "Contribuer à défendre Caer Astorea face à la Cour des Cauchemars."
+    },
+    {
+        "pos":  [
+                    42682.1,
+                    36129.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  "Aider Delilah à protéger les champs de la ferme."
+    },
+    {
+        "pos":  [
+                    41225.1,
+                    36275.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  "Aider Blopp à empêcher l'Enqueste d'utiliser du poison hylek pour rendre folles les créatures du lac."
+    },
+    {
+        "pos":  [
+                    40313.5,
+                    36000.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEMBAAA=]",
+        "desc":  "Aider la coterie de recyclage de Shoon à empêcher l'intervention de l'Enqueste."
+    },
+    {
+        "pos":  [
+                    40787.3,
+                    35552.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEQBAAA=]",
+        "desc":  "Aider l'Alliance de Brill à étudier les Skritts."
+    },
+    {
+        "pos":  [
+                    41469.4,
+                    35671
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEUBAAA=]",
+        "desc":  "Aider Hrouda à maintenir l'écosystème malgré les recherches du docteur Bleent."
+    },
+    {
+        "pos":  [
+                    41830.1,
+                    35099.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEcBAAA=]",
+        "desc":  "Aider la Garde du Lion à mater les Hyleks Cuatl."
+    },
+    {
+        "pos":  [
+                    41063.7,
+                    35136.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEgBAAA=]",
+        "desc":  "Venir en aide à la tribu michotl."
+    },
+    {
+        "pos":  [
+                    41056.8,
+                    34336.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEkBAAA=]",
+        "desc":  "Aider la coterie de Luminaria à maintenir le réseau énergétique."
+    },
+    {
+        "pos":  [
+                    41645.1,
+                    34131.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  "Aider la Pacificatrice Owta à saboter le Complexe de l'Enqueste."
+    },
+    {
+        "pos":  [
+                    40478.5,
+                    34055.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  "Aider la coterie P.U.R.E."
+    },
+    {
+        "pos":  [
+                    41467.7,
+                    32511.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC4BAAA=]",
+        "desc":  "Venir en aide aux éleveurs de vers de la Colline de Skrittsburgh."
+    },
+    {
+        "pos":  [
+                    41381.2,
+                    31738.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC8BAAA=]",
+        "desc":  "Aider les Skritts à défendre l'Extrémité Est de Skrittsburgh."
+    },
+    {
+        "pos":  [
+                    41018,
+                    32695.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDABAAA=]",
+        "desc":  "Aider les Skritts qui font des expériences dans les Tunnels de Skrittsburgh."
+    },
+    {
+        "pos":  [
+                    41768.3,
+                    32260.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDEBAAA=]",
+        "desc":  "Aider Leigheara à protéger le Térébinthe révéré."
+    },
+    {
+        "pos":  [
+                    41904.6,
+                    31350.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  "Aider les Séraphins à combattre les bandits de Willem."
+    },
+    {
+        "pos":  [
+                    40409.8,
+                    31235.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  "Aider les espions en difficulté aux Observateurs séraphins."
+    },
+    {
+        "pos":  [
+                    39141.1,
+                    31401.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  "Aider les Skritts à défier les bandits."
+    },
+    {
+        "pos":  [
+                    39012.1,
+                    32470.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  "Aider le Vaillant Mathair à sécuriser la Terre du vandale."
+    },
+    {
+        "pos":  [
+                    39872.5,
+                    31921.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  "Aider la Pacificatrice Klodi à dissoudre l'alliance criminelle."
+    },
+    {
+        "pos":  [
+                    53415.6,
+                    39775.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBYBAAA=]",
+        "desc":  "Aider l'Ordre des Soupirs à saboter les tests d'armes que mène l'Enqueste dans le village hylek des Terres Tzanopls."
+    },
+    {
+        "pos":  [
+                    53963.6,
+                    39212.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBgBAAA=]",
+        "desc":  "Aider Carmel à nettoyer la pollution causée par l'Enqueste."
+    },
+    {
+        "pos":  [
+                    51773.2,
+                    39934.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBkBAAA=]",
+        "desc":  "Aider la coterie d'Ambr à défendre le laboratoire."
+    },
+    {
+        "pos":  [
+                    51156.9,
+                    39652.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBoBAAA=]",
+        "desc":  "Aider Pixtor à tester ses armes sur les trépassés de Valbrouillard."
+    },
+    {
+        "pos":  [
+                    52952.3,
+                    38001.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBsBAAA=]",
+        "desc":  "Aider Zara à sécuriser et à approvisionner la Folie du brave."
+    },
+    {
+        "pos":  [
+                    52216,
+                    37914.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BBwBAAA=]",
+        "desc":  "Aider les soldats du Pacte à se frayer un chemin jusqu'en Orr."
+    },
+    {
+        "pos":  [
+                    54208.9,
+                    39832.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB4BAAA=]",
+        "desc":  "Aider Jenrys à protéger la nature contre l'Enqueste."
+    },
+    {
+        "pos":  [
+                    50829.6,
+                    38541.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BB8BAAA=]",
+        "desc":  "Aider les membres du Prieuré à fouiller Rata Pten."
+    },
+    {
+        "pos":  [
+                    52745.9,
+                    39012.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCABAAA=]",
+        "desc":  "Aider l'Ordre des Soupirs à provoquer un conflit entre les Kraits et les Trépassés."
+    },
+    {
+        "pos":  [
+                    48284.7,
+                    37055.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCEBAAA=]",
+        "desc":  "Aider l'amirale Clarinda Demard."
+    },
+    {
+        "pos":  [
+                    48995.4,
+                    36482.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCIBAAA=]",
+        "desc":  "Aider Potatlan sur le rivage occidental."
+    },
+    {
+        "pos":  [
+                    49223.2,
+                    36780.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCMBAAA=]",
+        "desc":  "Aider Cuadinti à préparer le Poste du Guet du sud."
+    },
+    {
+        "pos":  [
+                    48189.2,
+                    37539.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCYBAAA=]",
+        "desc":  "Protéger les Quaggans contre les Kraits."
+    },
+    {
+        "pos":  [
+                    48608.1,
+                    38148.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCcBAAA=]",
+        "desc":  "Aider Kamma à tester son arme expérimentale."
+    },
+    {
+        "pos":  [
+                    48763.9,
+                    35870
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCgBAAA=]",
+        "desc":  "Aider Costi Atl et sa tribu à se procurer des larves de termite."
+    },
+    {
+        "pos":  [
+                    48738.6,
+                    36465.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCkBAAA=]",
+        "desc":  "Aider Ayomichi à ralentir la propagation de la corruption des trépassés"
+    },
+    {
+        "pos":  [
+                    48890.5,
+                    37582.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BCsBAAA=]",
+        "desc":  "Aider les Vaillants de la Grand-chasse à explorer les épaves."
+    },
+    {
+        "pos":  [
+                    49178.4,
+                    38175.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BC0BAAA=]",
+        "desc":  "Aider Brannen à tenir Caer Bruyère."
+    },
+    {
+        "pos":  [
+                    55682,
+                    60587.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  "Soutenir la cause des érudits dissidents de l'Astralarium."
+    },
+    {
+        "pos":  [
+                    40650.8,
+                    15575.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  "Aider les Kodans à s'installer dans la région de la Syntri de Janthir et à l'étudier."
+    },
+    {
+        "pos":  [
+                    37865.2,
+                    45616.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BGsBAAA=]",
+        "desc":  "Enquêter sur la forteresse mursaat"
+    },
+    {
+        "pos":  [
+                    40198.4,
+                    45949.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BG8BAAA=]",
+        "desc":  "Aider le campement skritt."
+    },
+    {
+        "pos":  [
+                    37357.6,
+                    41649.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  "Aider les prisonniers"
+    },
+    {
+        "pos":  [
+                    36551.4,
+                    42395
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  "Aider le groupe d'éclaireurs."
+    },
+    {
+        "pos":  [
+                    27014.2,
+                    100171
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLkBAAA=]",
+        "desc":  "Aider les Tengus du quartier des paveurs à réhabiliter leur quartier."
+    },
+    {
+        "pos":  [
+                    25993.2,
+                    98645.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BL8BAAA=]",
+        "desc":  "Aider Xunlai Jade à tester et promouvoir la technologie de jade."
+    },
+    {
+        "pos":  [
+                    28286.6,
+                    99457.7
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMEBAAA=]",
+        "desc":  "Aider le commissariat de l'est à protéger la Voie des Vers."
+    },
+    {
+        "pos":  [
+                    22141.6,
+                    100957
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLoBAAA=]",
+        "desc":  "Aider aux préparatifs défensifs du temple."
+    },
+    {
+        "pos":  [
+                    32752,
+                    103075
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLwBAAA=]",
+        "desc":  "Aider les Tengus qui résident au village de Mori pour gagner leur confiance."
+    },
+    {
+        "pos":  [
+                    7780.8,
+                    57997.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  "Aidez les chasseurs à entretenir leur camp et à protéger la faune face à l'Enqueste."
+    },
+    {
+        "pos":  [
+                    7700,
+                    58870.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  "Aidez le Prieuré de Durmand à établir et protéger une expédition."
+    },
+    {
+        "pos":  [
+                    11250.2,
+                    59716
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  "Aidez le Pub Canach à devenir une affaire lucrative."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  "Aider les naufragés dans les alentours de Goussardin."
+    },
+    {
+        "pos":  [
+                    10797.3,
+                    58207.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  "Aidez l'alliance tyrienne à garder un œil sur l'Enqueste et apprenez-en plus sur les magies naturelles de Castora."
+    },
+    {
+        "pos":  [
+                    58473.4,
+                    43025.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  "Aider Aksim à soigner et dresser les raptors."
+    },
+    {
+        "pos":  [
+                    59701.4,
+                    40412.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  "Donner un coup de main au ranch de Longsaut."
+    },
+    {
+        "pos":  [
+                    60702.7,
+                    42042.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  "Aider la communauté de Makali."
+    },
+    {
+        "pos":  [
+                    59067.1,
+                    41441.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  "Aidez la choya du creux de Piquezone ou ne le faites pas."
+    },
+    {
+        "pos":  [
+                    58343.1,
+                    43050.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ4BAAA=]",
+        "desc":  "Aider Aksim à soigner et dresser les raptors."
+    },
+    {
+        "pos":  [
+                    59492.3,
+                    52606.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  "Aidez Drojkor, le typhon spirituel, à contrôler les chacals."
+    },
+    {
+        "pos":  [
+                    61504.2,
+                    51076.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  "Aidez Dunkoro à porter assistance aux fantômes du coin."
+    },
+    {
+        "pos":  [
+                    59786.6,
+                    48835
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJ8BAAA=]",
+        "desc":  "Aider Tarik à affaiblir la garnison."
+    },
+    {
+        "pos":  [
+                    59325.1,
+                    50678.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKIBAAA=]",
+        "desc":  "Aider l'Ordre des ombres à se défendre contre les forgés."
+    },
+    {
+        "pos":  [
+                    60369.8,
+                    48571.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  "Aider Kisha Odili à continuer à faire fonctionner le village."
+    },
+    {
+        "pos":  [
+                    60662.8,
+                    46278.1
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  "Aidez Ebele à préparer la route vers le nord pour les déserteurs."
+    },
+    {
+        "pos":  [
+                    61375.3,
+                    45643.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  "Aider Adisa à récupérer des éclats de Vlast sur les stigmatisés vétérans."
+    },
+    {
+        "pos":  [
+                    59168,
+                    46574.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  "Utilisez un voldécume pour donner un coup de main au dressage au ranch."
+    },
+    {
+        "pos":  [
+                    60298.7,
+                    45312.2
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  "Aider l'adepte Dawnwynn à vaincre les Oubliés stigmatisés à la Roche de l'augure."
+    },
+    {
+        "pos":  [
+                    60704.6,
+                    46586.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJoBAAA=]",
+        "desc":  "Aidez le contremaître adjoint Kofi à protéger les gens des clairières arides."
+    },
+    {
+        "pos":  [
+                    60820.4,
+                    45037
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJwBAAA=]",
+        "desc":  "Aider le disciple Xunn à récupérer des glyphes des Oubliés pour les décoder."
+    },
+    {
+        "pos":  [
+                    63797.9,
+                    53337.5
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  "Aider les membres de la royauté au palais de Vehjin."
+    },
+    {
+        "pos":  [
+                    64841.6,
+                    54777.4
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  "Aider les vivants et les morts à la nécropole."
+    },
+    {
+        "pos":  [
+                    64450.4,
+                    55266
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  "Aider à entraîner les nouveaux éveillés."
+    },
+    {
+        "pos":  [
+                    66390.2,
+                    55143.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  "Aider les étudiants de l'académie des Vehtendi."
+    },
+    {
+        "pos":  [
+                    54414.1,
+                    57417.9
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  "Aider les Olmakhans à ralentir l'expansion de l'Enqueste."
+    },
+    {
+        "pos":  [
+                    64452,
+                    61814.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  "Aider à distribuer les ravitaillements au campement allié."
+    },
+    {
+        "pos":  [
+                    65526.4,
+                    61986.8
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  "Contribuer à stabiliser le front."
+    },
+    {
+        "pos":  [
+                    65989.6,
+                    61252.6
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLEBAAA=]",
+        "desc":  "Aider la tribu heket en grave danger."
+    },
+    {
+        "pos":  [
+                    64663.1,
+                    59066.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLMBAAA=]",
+        "desc":  "Préparer le campement du Pacte pour la bataille."
+    },
+    {
+        "pos":  [
+                    66715.7,
+                    58414.3
+                ],
+        "name":  "Tâche",
+        "type":  "heart",
+        "chat_code":  "[&BLQBAAA=]",
+        "desc":  "Aider les habitants du village de Yatendi."
+    }
+]

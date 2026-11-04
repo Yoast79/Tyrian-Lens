@@ -1,0 +1,6882 @@
+[
+    {
+        "pos":  [
+                    52889.5,
+                    34117.4
+                ],
+        "name":  "Wegmarke Trübsalriss",
+        "type":  "waypoint",
+        "chat_code":  "[&BFYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.1,
+                    34290.6
+                ],
+        "name":  "Wegmarke Frostland-Schmelze",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54008.3,
+                    34034.7
+                ],
+        "name":  "Wegmarke Dociu-Ausgrabung",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53816.4,
+                    33263.4
+                ],
+        "name":  "Wegmarke Sieben Kiefern",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53452.6,
+                    33489.3
+                ],
+        "name":  "Wegmarke Graue Straße",
+        "type":  "waypoint",
+        "chat_code":  "[&BFoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52704.6,
+                    33489
+                ],
+        "name":  "Wegmarke Stahlbrachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BFsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52451.1,
+                    32695
+                ],
+        "name":  "Wegmarke Toran-Senke",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53075.5,
+                    32429
+                ],
+        "name":  "Wegmarke Hessdallen Kenning",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53574.8,
+                    32721.3
+                ],
+        "name":  "Wegmarke Kenning-Testgelände",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.4,
+                    32611.5
+                ],
+        "name":  "Wegmarke Große Weite",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54326,
+                    32033.7
+                ],
+        "name":  "Wegmarke Nottowr-Bruch",
+        "type":  "waypoint",
+        "chat_code":  "[&BGACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53932.7,
+                    32128
+                ],
+        "name":  "Wegmarke Bergausläufer",
+        "type":  "waypoint",
+        "chat_code":  "[&BGECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53573.7,
+                    31649.5
+                ],
+        "name":  "Wegmarke Graupel-Kohn",
+        "type":  "waypoint",
+        "chat_code":  "[&BGICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53272,
+                    31898.2
+                ],
+        "name":  "Wegmarke Havfrue-Becken",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52909.4,
+                    31809.3
+                ],
+        "name":  "Travelens Wegmarke",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52690.2,
+                    32156.4
+                ],
+        "name":  "Wegmarke Wyrmblut",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54213.2,
+                    33707.6
+                ],
+        "name":  "Wegmarke Granitzitadelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52536.4,
+                    34075.8
+                ],
+        "name":  "Wegmarke Umarmung der Betrübnis",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51845.7,
+                    34059.2
+                ],
+        "name":  "Wegmarke Vanjirs Hof",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50668.5,
+                    34081.7
+                ],
+        "name":  "Wegmarke Dämonenschlund",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52020.8,
+                    33007.3
+                ],
+        "name":  "Wegmarke Wintertau-Schneefeld",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50784.6,
+                    33228.2
+                ],
+        "name":  "Wegmarke Falschsee",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50639.8,
+                    31314.6
+                ],
+        "name":  "Wegmarke Abtei Durmand",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52056.5,
+                    31606.6
+                ],
+        "name":  "Wegmarke See der Wehklagen",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51805.2,
+                    29889.8
+                ],
+        "name":  "Wegmarke Donnerhörner",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50626.1,
+                    30078.8
+                ],
+        "name":  "Wegmarke Nentor",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51206.3,
+                    33631.4
+                ],
+        "name":  "Wegmarke Guutras Heimstatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50628.5,
+                    32378.5
+                ],
+        "name":  "Wegmarke Steinstreu",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51645.7,
+                    30941.5
+                ],
+        "name":  "Wegmarke Gipfelenklave",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51209.3,
+                    30480.4
+                ],
+        "name":  "Wegmarke Nebelriss-Klamm",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51056.6,
+                    30097.8
+                ],
+        "name":  "Wegmarke Eisteufel",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51039.1,
+                    31474.2
+                ],
+        "name":  "Wegmarke Zufluchtgipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51275.9,
+                    31883.9
+                ],
+        "name":  "Wegmarke Afgars",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51134.7,
+                    32776.7
+                ],
+        "name":  "Wegmarke Kaskadenbrücke",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51595.9,
+                    32519.3
+                ],
+        "name":  "Wegmarke Falschfluss",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55359.6,
+                    31736.8
+                ],
+        "name":  "Wegmarke Geächtetenkluft",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55448.9,
+                    31216.7
+                ],
+        "name":  "Wegmarke Helden-Bierrat",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55046.6,
+                    30964.6
+                ],
+        "name":  "Wegmarke Hornruf-Krause",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55963.4,
+                    30568.8
+                ],
+        "name":  "Wegmarke Dunkelfluss-Klippen",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55498.1,
+                    30284.9
+                ],
+        "name":  "Wegmarke Taigan-Hain",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54895.2,
+                    29732.1
+                ],
+        "name":  "Wegmarke Zelechor-Thermalbad",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55115.6,
+                    29004.9
+                ],
+        "name":  "Wegmarke Halvaunt",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55215,
+                    28608.5
+                ],
+        "name":  "Wegmarke Kreuzungs-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54887.3,
+                    28256.2
+                ],
+        "name":  "Wegmarke Dämmerstieg-Pass",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56027.3,
+                    28351
+                ],
+        "name":  "Wegmarke Dolyak-Pass",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55858.5,
+                    27924.5
+                ],
+        "name":  "Wegmarke Einsamkeit",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55447.5,
+                    29750.6
+                ],
+        "name":  "Wegmarke Doppelsporn-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55920.1,
+                    29598.3
+                ],
+        "name":  "Wegmarke Vendrakes Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55653.5,
+                    28713.6
+                ],
+        "name":  "Wegmarke Findwurm-Höhle",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55803.7,
+                    29098
+                ],
+        "name":  "Wegmarke Krennaks Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55876.8,
+                    31453.7
+                ],
+        "name":  "Wegmarke Grawlenfjord",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54936.8,
+                    30511.5
+                ],
+        "name":  "Wegmarke Osenfold-Schneide",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52275,
+                    37557
+                ],
+        "name":  "Wegmarke Talus-Wassersturz",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52703.3,
+                    37372.2
+                ],
+        "name":  "Wegmarke Schlangensteine",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.3,
+                    37497.4
+                ],
+        "name":  "Wegmarke Okarinuu",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53745.1,
+                    37076.3
+                ],
+        "name":  "Wegmarke Höhle der Windung",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.5,
+                    36599.4
+                ],
+        "name":  "Wegmarke Schuppenstrand",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52965.4,
+                    36940.2
+                ],
+        "name":  "Wegmarke Nonmoa-See",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53209.3,
+                    36483.8
+                ],
+        "name":  "Wegmarke Eztlitl-Gründe",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52444.4,
+                    36753.5
+                ],
+        "name":  "Wegmarke Wirbelstromschnellen",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.3,
+                    35949.1
+                ],
+        "name":  "Wegmarke Vorsprunghut",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53439,
+                    35899
+                ],
+        "name":  "Wegmarke Ogduk",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53844.9,
+                    35324.5
+                ],
+        "name":  "Wegmarke Fundament 86",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53082.4,
+                    35437.1
+                ],
+        "name":  "Wegmarke Weißpapierhügel",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52594.4,
+                    35193.1
+                ],
+        "name":  "Wegmarke Sanfter Fluss",
+        "type":  "waypoint",
+        "chat_code":  "[&BFACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52241.5,
+                    35598
+                ],
+        "name":  "Wegmarke Distelschilfhain",
+        "type":  "waypoint",
+        "chat_code":  "[&BFECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51953.9,
+                    34727.6
+                ],
+        "name":  "Wegmarke Krongar-Pass",
+        "type":  "waypoint",
+        "chat_code":  "[&BFICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53185.3,
+                    34786.5
+                ],
+        "name":  "Wegmarke Eiserner Schleier",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52237.6,
+                    37073
+                ],
+        "name":  "Wegmarke Rankor-Ruinen",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52216.5,
+                    36527.9
+                ],
+        "name":  "Wegmarke Concordia",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52877.6,
+                    36203
+                ],
+        "name":  "Wegmarke Stromkarl",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55832.5,
+                    27488.8
+                ],
+        "name":  "Wegmarke Arundon",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53880.3,
+                    27565.6
+                ],
+        "name":  "Wegmarke Groznev",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56297.6,
+                    25884.3
+                ],
+        "name":  "Wegmarke Erdbeben",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56257,
+                    24846.5
+                ],
+        "name":  "Wegmarke Pfad der Sternenhimmel",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55232.5,
+                    25529.5
+                ],
+        "name":  "Wegmarke Pfuhl der Verzweiflung",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55565.2,
+                    24986.9
+                ],
+        "name":  "Wegmarke Wehrhaft",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54544.7,
+                    25299.3
+                ],
+        "name":  "Wegmarke Eisscholle",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54000.9,
+                    25497.3
+                ],
+        "name":  "Wegmarke Dimotiki",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54299.8,
+                    26253.5
+                ],
+        "name":  "Wegmarke Twoluup",
+        "type":  "waypoint",
+        "chat_code":  "[&BIACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54678,
+                    26989
+                ],
+        "name":  "Wegmarke Himmelshöh-Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BIECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55396.3,
+                    27075.7
+                ],
+        "name":  "Wegmarke Hochgipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BIICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55253.1,
+                    26550.2
+                ],
+        "name":  "Wegmarke Kammfelslager",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56003.8,
+                    26623.4
+                ],
+        "name":  "Wegmarke Yakbiegung",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54078.8,
+                    26667
+                ],
+        "name":  "Wegmarke Blaue Eisglanz",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53572.2,
+                    24661.7
+                ],
+        "name":  "Wegmarke Drakkar",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55227.5,
+                    25187.3
+                ],
+        "name":  "Wegmarke Zierde der Wogen",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50594.5,
+                    29086.7
+                ],
+        "name":  "Wegmarke Skradden",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51814.5,
+                    29365.7
+                ],
+        "name":  "Wegmarke Lornar",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54345,
+                    28046.1
+                ],
+        "name":  "Wegmarke Hochpass-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53547.3,
+                    27818.1
+                ],
+        "name":  "Wegmarke Die Leiden des verirrten Kindes",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50671.9,
+                    28144.8
+                ],
+        "name":  "Wegmarke Gelehrtenkluft",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51750.4,
+                    28038.1
+                ],
+        "name":  "Wegmarke Isenfall",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51949.2,
+                    28780.2
+                ],
+        "name":  "Wegmarke Schneeweh-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50685.3,
+                    28500
+                ],
+        "name":  "Wegmarke Seraphen-Vorreiter",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52847.1,
+                    28438.8
+                ],
+        "name":  "Wegmarke Torstvedt-Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53033.4,
+                    29370.5
+                ],
+        "name":  "Wegmarke Exil",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53043.1,
+                    27821.2
+                ],
+        "name":  "Wegmarke Njordhof",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53004.5,
+                    28147.1
+                ],
+        "name":  "Wegmarke Soderhem-Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53674.4,
+                    28568.6
+                ],
+        "name":  "Wegmarke Schneefalken-Posten",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53976.1,
+                    29098.1
+                ],
+        "name":  "Wegmarke Reißertal",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54246.6,
+                    29308.1
+                ],
+        "name":  "Wegmarke Eulenhütte",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50879.9,
+                    29308.6
+                ],
+        "name":  "Wegmarke Podaga-Gehöft",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51256.5,
+                    28735.8
+                ],
+        "name":  "Wegmarke Gefrorene Bögen",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52374.3,
+                    29244.8
+                ],
+        "name":  "Wegmarke Vals-See",
+        "type":  "waypoint",
+        "chat_code":  "[&BMADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50591.8,
+                    28282.2
+                ],
+        "name":  "Wegmarke Angvars Schatzkammer",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53776.2,
+                    30500.3
+                ],
+        "name":  "Wegmarke Platz der Macht",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53676.8,
+                    30665
+                ],
+        "name":  "Wegmarke Handelsdistrikt",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53455.7,
+                    30395.9
+                ],
+        "name":  "Wegmarke der Schneeleopardin",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53794,
+                    30172.8
+                ],
+        "name":  "Wegmarke des Raben",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54089.7,
+                    30286.9
+                ],
+        "name":  "Wegmarke der Bärin",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54035.5,
+                    30693.3
+                ],
+        "name":  "Wegmarke des Wolfs",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54270.7,
+                    30009.9
+                ],
+        "name":  "Wegmarke Zufluchtsfelsen",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54262.6,
+                    30542.2
+                ],
+        "name":  "Wegmarke Halle der Legenden",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54174,
+                    30922.2
+                ],
+        "name":  "Wegmarke Östlicher Wachposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53839.8,
+                    31018.3
+                ],
+        "name":  "Wegmarke Südlicher Wachposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53314,
+                    30660.6
+                ],
+        "name":  "Peetas Wegmarke",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53048.7,
+                    30340
+                ],
+        "name":  "Wegmarke Heldenzirkel",
+        "type":  "waypoint",
+        "chat_code":  "[&BJADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53493.1,
+                    30988.7
+                ],
+        "name":  "Wegmarke Große Halle",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53655.5,
+                    30804.9
+                ],
+        "name":  "Wegmarke Oberer Balkon",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54983.6,
+                    23969.6
+                ],
+        "name":  "Wegmarke Tiefste Betrübnis",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.6,
+                    24385.5
+                ],
+        "name":  "Wegmarke Willkommensgruß des Koda",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56733,
+                    37407.9
+                ],
+        "name":  "Wegmarke Herz der Revolution",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56677.9,
+                    35196.4
+                ],
+        "name":  "Wegmarke Aussichtsdeck",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58149.9,
+                    36959.7
+                ],
+        "name":  "Wegmarke Anlegestelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58328.5,
+                    35778.5
+                ],
+        "name":  "Wegmarke Ende der Geschichte",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58936.7,
+                    18318.8
+                ],
+        "name":  "Wegmarke Joras Feste",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56616.3,
+                    17814.7
+                ],
+        "name":  "Wegmarke Sprechen Stiller Wasser",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57864.6,
+                    21794.7
+                ],
+        "name":  "Wegmarke Auge des Nordens",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50992.2,
+                    21878.1
+                ],
+        "name":  "Wegmarke Basislager",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50443.8,
+                    19441.1
+                ],
+        "name":  "Wegmarke Vorstoßlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58481.7,
+                    31031.6
+                ],
+        "name":  "Wegmarke Virs Tor",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58138.5,
+                    30589.8
+                ],
+        "name":  "Wegmarke Rauchheim",
+        "type":  "waypoint",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58121.9,
+                    30173.2
+                ],
+        "name":  "Wegmarke Graustahl-Rüstkammer",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59561.4,
+                    30217.7
+                ],
+        "name":  "Wegmarke Märtyrer",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59160.5,
+                    30929.8
+                ],
+        "name":  "Wegmarke Temperusspitze",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59821.2,
+                    31407
+                ],
+        "name":  "Wegmarke Aschfurt",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59366.9,
+                    31491.5
+                ],
+        "name":  "Wegmarke Adorea",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60433,
+                    30432.8
+                ],
+        "name":  "Wegmarke Katakomben von Ascalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60987.2,
+                    30152.3
+                ],
+        "name":  "Wegmarke Stadt Ascalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61513.2,
+                    30819
+                ],
+        "name":  "Wegmarke Wächterfels-Turm",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61694.1,
+                    31267.3
+                ],
+        "name":  "Wegmarke Dämmerspalt-Aussichtspunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60860,
+                    31342.2
+                ],
+        "name":  "Wegmarke Eisendock-Werft",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58845,
+                    30602.5
+                ],
+        "name":  "Wegmarke Feritas",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58482.8,
+                    31545.8
+                ],
+        "name":  "Wegmarke Decimus Wachpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59896.2,
+                    30718.6
+                ],
+        "name":  "Wegmarke Geistjäger-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61161.7,
+                    31717.8
+                ],
+        "name":  "Wegmarke Sagenklaue",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60922.9,
+                    30687.9
+                ],
+        "name":  "Wegmarke Phasmatis",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58552.5,
+                    31813.9
+                ],
+        "name":  "Wegmarke Langmar-Anwesen",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62150.3,
+                    31333
+                ],
+        "name":  "Wegmarke Bar Zum Letzten Whiskey",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62510.5,
+                    31608.6
+                ],
+        "name":  "Wegmarke Stahlauge",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62505.5,
+                    32210.4
+                ],
+        "name":  "Wegmarke Tumok",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63630.5,
+                    32491.7
+                ],
+        "name":  "Wegmarke Zwillingsschwestern",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63393.2,
+                    31557
+                ],
+        "name":  "Wegmarke Behem",
+        "type":  "waypoint",
+        "chat_code":  "[&BP0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63517.7,
+                    30176.8
+                ],
+        "name":  "Wegmarke Weite",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62905.8,
+                    29835.6
+                ],
+        "name":  "Wegmarke Wächterstein",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63697.8,
+                    29769
+                ],
+        "name":  "Wegmarke Lunk-Kral",
+        "type":  "waypoint",
+        "chat_code":  "[&BAACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63481,
+                    29114.8
+                ],
+        "name":  "Wegmarke Terra Carorunda",
+        "type":  "waypoint",
+        "chat_code":  "[&BAECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62776,
+                    29006.3
+                ],
+        "name":  "Wegmarke Bruchzahn-Schlund",
+        "type":  "waypoint",
+        "chat_code":  "[&BAICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62128,
+                    28960.8
+                ],
+        "name":  "Wegmarke Kienspan",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62222.5,
+                    29920.2
+                ],
+        "name":  "Wegmarke Brandblick",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62795.1,
+                    30751.6
+                ],
+        "name":  "Wegmarke Zufluchtsrefugium",
+        "type":  "waypoint",
+        "chat_code":  "[&BAUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62591.4,
+                    29268.2
+                ],
+        "name":  "Wegmarke Tiefland-Brand",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63533,
+                    30772.8
+                ],
+        "name":  "Wegmarke Gastor-Schlund",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62378,
+                    30660.8
+                ],
+        "name":  "Wegmarke Kinar-Fort",
+        "type":  "waypoint",
+        "chat_code":  "[&BFADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63344.8,
+                    32096.6
+                ],
+        "name":  "Wegmarke Splitterkamm-Fort",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62872.7,
+                    31804.3
+                ],
+        "name":  "Wegmarke Rußstraße",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62124,
+                    34784.3
+                ],
+        "name":  "Wegmarke Die Falkentore",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64080.4,
+                    34496.6
+                ],
+        "name":  "Wegmarke Todesklingenwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63103.9,
+                    33728.1
+                ],
+        "name":  "Wegmarke Gipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61792.4,
+                    34406.1
+                ],
+        "name":  "Wegmarke Tylers Biwak",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62073.2,
+                    32995.4
+                ],
+        "name":  "Wegmarke Tenaebron-See",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63570.6,
+                    32957.4
+                ],
+        "name":  "Wegmarke Roskos Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62633.5,
+                    33391.2
+                ],
+        "name":  "Wegmarke Skolls Biwak",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61744.7,
+                    33678.2
+                ],
+        "name":  "Wegmarke Helliot-Mine",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63866.4,
+                    33374.5
+                ],
+        "name":  "Wegmarke Fangzornwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62564.3,
+                    33973.4
+                ],
+        "name":  "Wegmarke Geierbogen",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63112.9,
+                    34430.4
+                ],
+        "name":  "Wegmarke Trümmer der Blutschluchtwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63654.3,
+                    34933.9
+                ],
+        "name":  "Wegmarke Ogerstraße",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62942.9,
+                    35338.2
+                ],
+        "name":  "Wegmarke Verlorenes Tor",
+        "type":  "waypoint",
+        "chat_code":  "[&BFABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61782.8,
+                    35261.6
+                ],
+        "name":  "Wegmarke Festung der Gefallenen Engel",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62781.8,
+                    34729.2
+                ],
+        "name":  "Wegmarke Späher",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62364.5,
+                    35184.1
+                ],
+        "name":  "Wegmarke Kestrel",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62592.5,
+                    32994.5
+                ],
+        "name":  "Wegmarke Donnerbruch",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59744.8,
+                    27162.5
+                ],
+        "name":  "Wegmarke Sati",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58967.9,
+                    26938.7
+                ],
+        "name":  "Wegmarke Roheisen",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59385.2,
+                    27359.9
+                ],
+        "name":  "Wegmarke Tuyere-Kommandostelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58629.5,
+                    27336.5
+                ],
+        "name":  "Wegmarke Zerklüftete Bresche",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59569.1,
+                    26192.2
+                ],
+        "name":  "Wegmarke Bruchzahn",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57895.6,
+                    26719.1
+                ],
+        "name":  "Wegmarke Chaos",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58054.7,
+                    27217.1
+                ],
+        "name":  "Wegmarke Vidius Castrum",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57161.4,
+                    26998.7
+                ],
+        "name":  "Wegmarke Häretiker-Einöde",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56822.4,
+                    26176.7
+                ],
+        "name":  "Wegmarke Rostschale",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57651.7,
+                    26176
+                ],
+        "name":  "Wegmarke Serpentine",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.7,
+                    25165.5
+                ],
+        "name":  "Wegmarke Eisspeer",
+        "type":  "waypoint",
+        "chat_code":  "[&BCACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57537.6,
+                    24911.1
+                ],
+        "name":  "Wegmarke Schneegrat-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BCECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57974.5,
+                    25299.2
+                ],
+        "name":  "Wegmarke Vorgas-Festung",
+        "type":  "waypoint",
+        "chat_code":  "[&BCICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58498,
+                    25047.9
+                ],
+        "name":  "Wegmarke Verlorener Haufen",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58584.2,
+                    25384.2
+                ],
+        "name":  "Wegmarke Senecus Castrum",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58958.5,
+                    25673.9
+                ],
+        "name":  "Wegmarke Simurgh",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58275.5,
+                    25871.4
+                ],
+        "name":  "Wegmarke Hüter",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59682.4,
+                    25151.3
+                ],
+        "name":  "Wegmarke Flammenzitadelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60940.6,
+                    29823.3
+                ],
+        "name":  "Wegmarke Taukrallendorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61524,
+                    29597.6
+                ],
+        "name":  "Wegmarke Blutflossen-See",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60281.4,
+                    29394.2
+                ],
+        "name":  "Wegmarke Alte Pikenruinen",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61117.5,
+                    28788.7
+                ],
+        "name":  "Wegmarke Kriegshunddorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61816.4,
+                    28806.8
+                ],
+        "name":  "Wegmarke Teufelsbraten-Wald",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60585.8,
+                    28536.8
+                ],
+        "name":  "Wegmarke Dorf Schuppenfang",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60204.9,
+                    28157.2
+                ],
+        "name":  "Wegmarke Glanzfell-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61229.2,
+                    28081.3
+                ],
+        "name":  "Wegmarke Brandwacht-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61167.5,
+                    26997
+                ],
+        "name":  "Wegmarke Schlangenlauf",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60641.9,
+                    27418.5
+                ],
+        "name":  "Wegmarke Kuttenzahns Stern",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60046.1,
+                    27207.5
+                ],
+        "name":  "Wegmarke Westliches Bollwerk",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60750.2,
+                    26949.7
+                ],
+        "name":  "Wegmarke Feuerwacht-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676,
+                    26282.4
+                ],
+        "name":  "Wegmarke Lichtungssturz",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61638.1,
+                    26437.9
+                ],
+        "name":  "Wegmarke Grostoggs Kral",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56554.4,
+                    28444.8
+                ],
+        "name":  "Wegmarke Charrtor-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BNkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57831,
+                    28790.4
+                ],
+        "name":  "Wegmarke Ödmoore",
+        "type":  "waypoint",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58955.1,
+                    28564.2
+                ],
+        "name":  "Wegmarke Blutklingen-Sägewerk",
+        "type":  "waypoint",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58763,
+                    27859.9
+                ],
+        "name":  "Wegmarke Rhands Brunnen",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57747.5,
+                    29572.9
+                ],
+        "name":  "Wegmarke Nageling",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56935.2,
+                    29685.9
+                ],
+        "name":  "Wegmarke Nolan",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56907.8,
+                    29191.4
+                ],
+        "name":  "Wegmarke Ruinen von Alttor",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57093.4,
+                    28347.1
+                ],
+        "name":  "Wegmarke Schlachterblock",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57506.1,
+                    29097.4
+                ],
+        "name":  "Wegmarke Charradis-Anwesen",
+        "type":  "waypoint",
+        "chat_code":  "[&BGABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58484.2,
+                    29675.7
+                ],
+        "name":  "Wegmarke Durchbrochener Wall",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59357.6,
+                    28078.3
+                ],
+        "name":  "Wegmarke Incendio Templum",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59653.9,
+                    29083.6
+                ],
+        "name":  "Wegmarke Nemus-Hain",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59470.4,
+                    29828.4
+                ],
+        "name":  "Wegmarke Bruchwasser-See",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58480.3,
+                    28979.9
+                ],
+        "name":  "Wegmarke Morgenrecht-Anwesen",
+        "type":  "waypoint",
+        "chat_code":  "[&BJoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57433.4,
+                    28086.1
+                ],
+        "name":  "Wegmarke Blutklippen-Steinbruch",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59490.3,
+                    28565
+                ],
+        "name":  "Wegmarke Refugium",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58937.2,
+                    29193.2
+                ],
+        "name":  "Wegmarke Rotraub-Mühle",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58193.5,
+                    28258
+                ],
+        "name":  "Wegmarke Manbanes Felsaufschluss",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58744.2,
+                    28271.8
+                ],
+        "name":  "Wegmarke Schwarzklinge",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.3,
+                    31106.2
+                ],
+        "name":  "Wegmarke Gladium",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57733.4,
+                    30623.3
+                ],
+        "name":  "Wegmarke Appellplatz",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57138,
+                    30368.3
+                ],
+        "name":  "Wegmarke Ehrenmal",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57379.1,
+                    30254.9
+                ],
+        "name":  "Wegmarke Factorium",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57030,
+                    30146.9
+                ],
+        "name":  "Wegmarke Diessa-Tor",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56831.1,
+                    30474.5
+                ],
+        "name":  "Wegmarke Ligacus Aquilo",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57039.2,
+                    30536.1
+                ],
+        "name":  "Wegmarke Fluch",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57367.3,
+                    30552.9
+                ],
+        "name":  "Wegmarke des Helden",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56879.8,
+                    31208.5
+                ],
+        "name":  "Wegmarke Ruinen von Rin",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57089,
+                    30642.5
+                ],
+        "name":  "Wegmarke des Imperators",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57222,
+                    30898.1
+                ],
+        "name":  "Wegmarke Rümpler",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56605.1,
+                    30513.3
+                ],
+        "name":  "Wegmarke Verwunschenes Nolani",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61288.2,
+                    19612.2
+                ],
+        "name":  "Wegmarke Kriegshügel",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61726.3,
+                    18513.4
+                ],
+        "name":  "Wegmarke Dalada-Wald",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60426.8,
+                    18848.4
+                ],
+        "name":  "Wegmarke Blut-Feste",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49731,
+                    38998.8
+                ],
+        "name":  "Wegmarke Brombeer-Pass",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49122,
+                    39051.6
+                ],
+        "name":  "Wegmarke Signalgipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50061.3,
+                    40004.1
+                ],
+        "name":  "Wegmarke Fort der Dreifaltigkeit",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50385.3,
+                    39950.2
+                ],
+        "name":  "Wegmarke Dornenpass",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49929,
+                    40404.1
+                ],
+        "name":  "Wegmarke Donnerkopf",
+        "type":  "waypoint",
+        "chat_code":  "[&BPACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49380.2,
+                    40962.5
+                ],
+        "name":  "Wegmarke Geknickte Landzunge",
+        "type":  "waypoint",
+        "chat_code":  "[&BPECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49072.5,
+                    40068.6
+                ],
+        "name":  "Wegmarke Die Abendsternglocke",
+        "type":  "waypoint",
+        "chat_code":  "[&BPICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48538,
+                    39525.4
+                ],
+        "name":  "Wegmarke Der royale Markt",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48348.7,
+                    39852.1
+                ],
+        "name":  "Wegmarke Anlegestelle Messingklaue",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47602.2,
+                    40251.9
+                ],
+        "name":  "Wegmarke Anthenäum",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48531.7,
+                    40341.5
+                ],
+        "name":  "Wegmarke Eroberungs-Jachthafen",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48935.9,
+                    40697.2
+                ],
+        "name":  "Wegmarke Verlassener Posten",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48532.5,
+                    41315.8
+                ],
+        "name":  "Wegmarke Abwege",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48249.8,
+                    40845.8
+                ],
+        "name":  "Wegmarke Xenarius",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47819.1,
+                    40959.7
+                ],
+        "name":  "Wegmarke Glorreicher Sieg",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47420.5,
+                    40811.6
+                ],
+        "name":  "Wegmarke Wachposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48072.4,
+                    40387.3
+                ],
+        "name":  "Wegmarke Sammelpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50065.2,
+                    39284.9
+                ],
+        "name":  "Wegmarke Sockel-Waldland",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49736.8,
+                    39268.3
+                ],
+        "name":  "Wegmarke Schattenseite",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47706.6,
+                    39501.8
+                ],
+        "name":  "Wegmarke Dämonische Untiefe",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44523.8,
+                    41785.7
+                ],
+        "name":  "Wegmarke Verfolgungspass",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43631.7,
+                    42391.8
+                ],
+        "name":  "Wegmarke R&D",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44208.5,
+                    42598.4
+                ],
+        "name":  "Bußfertige Wegmarke",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43265.7,
+                    42875.5
+                ],
+        "name":  "Wegmarke Gavbeorns Anlegestelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43953.6,
+                    43173.1
+                ],
+        "name":  "Wegmarke Kathedrale des frischen Grüns",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44476.2,
+                    42973.6
+                ],
+        "name":  "Wegmarke Zufluchtstor",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44339.4,
+                    43403.7
+                ],
+        "name":  "Jofasts Wegmarke",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43853.8,
+                    43751.8
+                ],
+        "name":  "Wegmarke Wichtigtuergipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43741.1,
+                    44276.6
+                ],
+        "name":  "Wegmarke Ankerplatz",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44754.9,
+                    44115.3
+                ],
+        "name":  "Wegmarke Arah",
+        "type":  "waypoint",
+        "chat_code":  "[&BCADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44087.2,
+                    42138.6
+                ],
+        "name":  "Wegmarke Kastell Schattenlieb",
+        "type":  "waypoint",
+        "chat_code":  "[&BCEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43289.7,
+                    45056.9
+                ],
+        "name":  "Wegmarke Altar der ermordeten Träume",
+        "type":  "waypoint",
+        "chat_code":  "[&BCIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44616.1,
+                    45441.1
+                ],
+        "name":  "Wegmarke Schiffswrackfelsen",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46866.4,
+                    41177.4
+                ],
+        "name":  "Wegmarke Pagga",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    41268.2
+                ],
+        "name":  "Wegmarke Dorics",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46874.7,
+                    40461.2
+                ],
+        "name":  "Wegmarke Abfall-Senken",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46387.6,
+                    40821.8
+                ],
+        "name":  "Wegmarke Säulengang",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46178.6,
+                    41237.6
+                ],
+        "name":  "Wegmarke Tal der Lyss",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46013.5,
+                    39946.8
+                ],
+        "name":  "Wegmarke Vereinigung",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45494.9,
+                    40742.5
+                ],
+        "name":  "Wegmarke Wren",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45969.5,
+                    40323.2
+                ],
+        "name":  "Wegmarke Lyssa",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45132.2,
+                    40523.1
+                ],
+        "name":  "Wegmarke Vermodertes Gewölbe",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    40123.4
+                ],
+        "name":  "Wegmarke Wisper",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44888.7,
+                    40702.6
+                ],
+        "name":  "Wegmarke Gezeiten",
+        "type":  "waypoint",
+        "chat_code":  "[&BLACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43931.2,
+                    39953.1
+                ],
+        "name":  "Wegmarke Gegenzauber",
+        "type":  "waypoint",
+        "chat_code":  "[&BLECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44489.3,
+                    40825.3
+                ],
+        "name":  "Wegmarke Lichter",
+        "type":  "waypoint",
+        "chat_code":  "[&BLICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49392.5,
+                    42605
+                ],
+        "name":  "Wegmarke Lager der Rückgewinnung",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43728.4,
+                    28589.9
+                ],
+        "name":  "Wegmarke Shaemoor",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43356.9,
+                    28720.8
+                ],
+        "name":  "Wegmarke Felder",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44094.9,
+                    28803.7
+                ],
+        "name":  "Wegmarke Festung",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43584.3,
+                    29518.7
+                ],
+        "name":  "Wegmarke Kreuzung",
+        "type":  "waypoint",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44548.8,
+                    29806.5
+                ],
+        "name":  "Wegmarke Phinney",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42996.3,
+                    29695.9
+                ],
+        "name":  "Wegmarke Tal",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44239.4,
+                    30073.2
+                ],
+        "name":  "Wegmarke Herzholzpass-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43482,
+                    29972.5
+                ],
+        "name":  "Wegmarke Tonteich",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44959.4,
+                    30336.3
+                ],
+        "name":  "Wegmarke Sumpf-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45150.5,
+                    29080.3
+                ],
+        "name":  "Wegmarke Kryta",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44714.8,
+                    28616.8
+                ],
+        "name":  "Wegmarke Ojons Sägewerk",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45967.6,
+                    28419.5
+                ],
+        "name":  "Wegmarke Beetletun",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45690.6,
+                    29146.2
+                ],
+        "name":  "Wegmarke Tunwacht-Schanze",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45274.7,
+                    29755
+                ],
+        "name":  "Wegmarke Gottloser Sumpf",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42863.9,
+                    28509.6
+                ],
+        "name":  "Wegmarke Obstgarten",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44145.3,
+                    29193.7
+                ],
+        "name":  "Wegmarke Schnorrer",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47173.8,
+                    28233.9
+                ],
+        "name":  "Wegmarke Fauns",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48489.3,
+                    28515.4
+                ],
+        "name":  "Wegmarke Schildklippe",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46569.9,
+                    26596.1
+                ],
+        "name":  "Wegmarke Seraphenlände",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46897.9,
+                    27366.9
+                ],
+        "name":  "Wegmarke Wynchona-Sammelpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49048.1,
+                    27956.6
+                ],
+        "name":  "Wegmarke Grau-Grittas Posten",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47627.1,
+                    28497
+                ],
+        "name":  "Wegmarke Nachtwache",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46506.2,
+                    27638.7
+                ],
+        "name":  "Wegmarke Demetra",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47862.6,
+                    27455.2
+                ],
+        "name":  "Wegmarke Erholungslager",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48543.8,
+                    27299.1
+                ],
+        "name":  "Wegmarke Barrikadenlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47779.3,
+                    26802.1
+                ],
+        "name":  "Wegmarke Trebushas Aussicht",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47384.1,
+                    26626.6
+                ],
+        "name":  "Wegmarke Brückenwachtlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48031.8,
+                    26413.9
+                ],
+        "name":  "Wegmarke Knotenpunkt-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48809.3,
+                    26174.8
+                ],
+        "name":  "Wegmarke Spalthuf",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46498.7,
+                    26140.6
+                ],
+        "name":  "Wegmarke Arca",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47559.2,
+                    26139.4
+                ],
+        "name":  "Wegmarke Arcallion",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43995.6,
+                    27954
+                ],
+        "name":  "Wegmarke Dwayna",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44043.5,
+                    26498.9
+                ],
+        "name":  "Wegmarke Grenth",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44637.7,
+                    27624.8
+                ],
+        "name":  "Wegmarke Kormir",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44660.4,
+                    26885
+                ],
+        "name":  "Wegmarke Lyssa",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43376.3,
+                    27570.9
+                ],
+        "name":  "Wegmarke Melandru",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43389.5,
+                    26850.3
+                ],
+        "name":  "Wegmarke Balthasar",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44036,
+                    27193.3
+                ],
+        "name":  "Wegmarke Palast",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43917.3,
+                    27584.1
+                ],
+        "name":  "Wegmarke Marktviertel",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44410.5,
+                    27239.1
+                ],
+        "name":  "Wegmarke Rurikstadt",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43628.3,
+                    27229.6
+                ],
+        "name":  "Wegmarke Kronpavillon",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43818.9,
+                    26866.1
+                ],
+        "name":  "Wegmarke Ossa",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44266.4,
+                    26928.4
+                ],
+        "name":  "Wegmarke Salma",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44048,
+                    27570.5
+                ],
+        "name":  "Wegmarke Minister",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42695.1,
+                    30680.5
+                ],
+        "name":  "Wegmarke Fort Salma",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42759.5,
+                    31679.2
+                ],
+        "name":  "Wegmarke Oberherr",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42299.7,
+                    31027.5
+                ],
+        "name":  "Wegmarke Halacon",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45163.2,
+                    30664
+                ],
+        "name":  "Wegmarke Reisender",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45766.9,
+                    30799.6
+                ],
+        "name":  "Wegmarke Delania",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43537.7,
+                    32163.9
+                ],
+        "name":  "Wegmarke Ireko-Händlerlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42841,
+                    32330.2
+                ],
+        "name":  "Wegmarke Schattenherzgrund",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43833.9,
+                    31419.4
+                ],
+        "name":  "Wegmarke Viathan",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45999,
+                    31579.6
+                ],
+        "name":  "Wegmarke Dunkelwund-Klause",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45528.3,
+                    31950.6
+                ],
+        "name":  "Wegmarke Cereboth",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44742.9,
+                    32051.8
+                ],
+        "name":  "Wegmarke Obersee-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44843,
+                    31380.9
+                ],
+        "name":  "Wegmarke Kessex-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44559.4,
+                    30633.6
+                ],
+        "name":  "Wegmarke Höhlengrifflager",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43589.1,
+                    30655.8
+                ],
+        "name":  "Wegmarke Grauhuf-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45432.8,
+                    31161
+                ],
+        "name":  "Wegmarke Erdbaulager",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44257.8,
+                    30860.3
+                ],
+        "name":  "Wegmarke Bresche",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46449.5,
+                    30416.7
+                ],
+        "name":  "Wegmarke Tal des Reisenden",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.7,
+                    29131.4
+                ],
+        "name":  "Wegmarke Steinwächtertor",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48027,
+                    30390
+                ],
+        "name":  "Wegmarke Weitsenke",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48089,
+                    29884.4
+                ],
+        "name":  "Wegmarke Uuguuth",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48668.1,
+                    30456
+                ],
+        "name":  "Wegmarke Füllhorn-Felder",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48551.5,
+                    28867.2
+                ],
+        "name":  "Wegmarke Provern-Ufer",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50046.1,
+                    29938
+                ],
+        "name":  "Wegmarke Knotenpunkt-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50142.9,
+                    29190.2
+                ],
+        "name":  "Wegmarke Winter-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46693.6,
+                    30206
+                ],
+        "name":  "Wegmarke Erste Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46734.4,
+                    29727.6
+                ],
+        "name":  "Wegmarke Talajisches Bergvorland",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47155.5,
+                    28761.6
+                ],
+        "name":  "Wegmarke Bluthügel-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47004.9,
+                    29558.9
+                ],
+        "name":  "Wegmarke Nebo-Terrasse",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47695.4,
+                    29692.5
+                ],
+        "name":  "Wegmarke Siedlung Ascalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48224.9,
+                    29350.5
+                ],
+        "name":  "Wegmarke Nordfelder",
+        "type":  "waypoint",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48875.6,
+                    29957.1
+                ],
+        "name":  "Wegmarke Apfeleck-Weiler",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49506.9,
+                    28945.7
+                ],
+        "name":  "Wegmarke Feste der Wachsamen",
+        "type":  "waypoint",
+        "chat_code":  "[&BJIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49981.6,
+                    30510.4
+                ],
+        "name":  "Wegmarke Eistor-Schlucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49351.5,
+                    29825.7
+                ],
+        "name":  "Wegmarke Almuten-Anwesen",
+        "type":  "waypoint",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47324.9,
+                    30117.2
+                ],
+        "name":  "Wegmarke Löwenbrücke",
+        "type":  "waypoint",
+        "chat_code":  "[&BJsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49697.7,
+                    29287.1
+                ],
+        "name":  "Wegmarke Schneeblindgipfel",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48632.1,
+                    29278
+                ],
+        "name":  "Wegmarke Brigantine",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47358.7,
+                    29501
+                ],
+        "name":  "Wegmarke Blutfelder",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48571,
+                    30868.4
+                ],
+        "name":  "Wegmarke Kommodore-Viertel",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49927.1,
+                    31138.4
+                ],
+        "name":  "Wegmarke Gilden-Klippen",
+        "type":  "waypoint",
+        "chat_code":  "[&BA0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49619.8,
+                    32044.1
+                ],
+        "name":  "Wegmarke Blutküste-Bezirk",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48996.8,
+                    31853.2
+                ],
+        "name":  "Wegmarke Klaueninsel-Portage",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49063.6,
+                    30911
+                ],
+        "name":  "Wegmarke Händlerforum",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49309.1,
+                    31222.8
+                ],
+        "name":  "Wegmarke Torknotenpunkt-Platz",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48229.9,
+                    31688.5
+                ],
+        "name":  "Wegmarke Verschiedene Vorsprünge",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48402.5,
+                    31156.5
+                ],
+        "name":  "Wegmarke westlicher Bezirk",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48663.5,
+                    31395.1
+                ],
+        "name":  "Wegmarke Sanctum-Hafen",
+        "type":  "waypoint",
+        "chat_code":  "[&BC8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49457.3,
+                    31700
+                ],
+        "name":  "Wegmarke Fort Marriner",
+        "type":  "waypoint",
+        "chat_code":  "[&BDAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49749.7,
+                    30961.2
+                ],
+        "name":  "Wegmarke östlicher Bezirk",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50162.3,
+                    31436.3
+                ],
+        "name":  "Wegmarke Höhle",
+        "type":  "waypoint",
+        "chat_code":  "[&BDIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49957.1,
+                    31690.5
+                ],
+        "name":  "Wegmarke Küstenferne",
+        "type":  "waypoint",
+        "chat_code":  "[&BDMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49515.9,
+                    32337.6
+                ],
+        "name":  "Wegmarke Archen-Vorland",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48753.2,
+                    32780
+                ],
+        "name":  "Wegmarke Gramvoll",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49245,
+                    33072.2
+                ],
+        "name":  "Wegmarke Sturmklippe",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50112.6,
+                    32532.3
+                ],
+        "name":  "Wegmarke Marschwacht-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49985.5,
+                    33404.8
+                ],
+        "name":  "Wegmarke Remanda",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48915.9,
+                    33772.2
+                ],
+        "name":  "Wegmarke Lachmöwe",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48357.9,
+                    34155
+                ],
+        "name":  "Wegmarke Grenzlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49401.4,
+                    34071.5
+                ],
+        "name":  "Wegmarke Wachsame der Fördenmündung",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50197.2,
+                    34085.1
+                ],
+        "name":  "Wegmarke Verlorenes Wrack",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50184.3,
+                    34696.1
+                ],
+        "name":  "Wegmarke Sumpfufer-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48993.3,
+                    34736.1
+                ],
+        "name":  "Wegmarke Schwermut",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48999.2,
+                    34955
+                ],
+        "name":  "Wegmarke Castavall",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48315,
+                    35172.4
+                ],
+        "name":  "Wegmarke Jelako",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50033.1,
+                    35244.4
+                ],
+        "name":  "Wegmarke Wisperwille",
+        "type":  "waypoint",
+        "chat_code":  "[&BLABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49550.2,
+                    32792.4
+                ],
+        "name":  "Wegmarke Sackgasse",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45546,
+                    35647.4
+                ],
+        "name":  "Wegmarke Löwenpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46637.7,
+                    35611.8
+                ],
+        "name":  "Wegmarke Stolzpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46589.2,
+                    36791.8
+                ],
+        "name":  "Wegmarke Perlen-Inselchen",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45605.9,
+                    36766.5
+                ],
+        "name":  "Wegmarke Karka-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44683.5,
+                    36898.4
+                ],
+        "name":  "Wegmarke Owains Zuflucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.5,
+                    36069.5
+                ],
+        "name":  "Wegmarke Kiels Außenposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49331.4,
+                    32136.9
+                ],
+        "name":  "Wegmarke Flugplatz",
+        "type":  "waypoint",
+        "chat_code":  "[&BCAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45004.7,
+                    27001.9
+                ],
+        "name":  "Wegmarke Doric-Anlegestelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45006,
+                    25823.3
+                ],
+        "name":  "Wegmarke Rotblatt-Rückzug",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46062.5,
+                    27237.5
+                ],
+        "name":  "Wegmarke Seeufer-Basar",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42723.9,
+                    36217.2
+                ],
+        "name":  "Wegmarke Astorea",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43729.7,
+                    35620.3
+                ],
+        "name":  "Wegmarke Morgan-Spirale",
+        "type":  "waypoint",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42620.1,
+                    35734.6
+                ],
+        "name":  "Wegmarke Kastell Astorea",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42534.7,
+                    35459.8
+                ],
+        "name":  "Wegmarke Ährenleser-Bucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43061.2,
+                    35067.5
+                ],
+        "name":  "Wegmarke Brigids Aussichtspunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43759.5,
+                    34975.3
+                ],
+        "name":  "Wegmarke Gipfelchen",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42869.2,
+                    34533
+                ],
+        "name":  "Wegmarke Mabon-Markt",
+        "type":  "waypoint",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42302.5,
+                    33993.5
+                ],
+        "name":  "Wegmarke Cathal",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42659.5,
+                    33826.3
+                ],
+        "name":  "Wegmarke Caledon-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43593.9,
+                    34162.9
+                ],
+        "name":  "Wegmarke Titanen-Treppe",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42446.1,
+                    33409
+                ],
+        "name":  "Wegmarke Falias-Dorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43345.5,
+                    33197.9
+                ],
+        "name":  "Wegmarke Annwen-Weiler",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43487.8,
+                    32858.3
+                ],
+        "name":  "Wegmarke Kraitbann-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42252.6,
+                    32679.8
+                ],
+        "name":  "Wegmarke Bergsuhlensumpf",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43019,
+                    35643
+                ],
+        "name":  "Wegmarke Wächterwäldchen",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42884.2,
+                    33154.5
+                ],
+        "name":  "Wegmarke Wegstation der Löwengarde",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42351.3,
+                    32964.6
+                ],
+        "name":  "Wegmarke Zwielichtgarten",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43515.9,
+                    35981.1
+                ],
+        "name":  "Wegmarke Sleive",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40171.7,
+                    36402.5
+                ],
+        "name":  "Wegmarke Soran Draa",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41201.9,
+                    36636.2
+                ],
+        "name":  "Wegmarke Jeztar-Fälle",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41739.1,
+                    36013.3
+                ],
+        "name":  "Wegmarke Akk-Wildnis",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40758.4,
+                    35412.8
+                ],
+        "name":  "Wegmarke Rana-Anlegestellenkomplex",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41281.5,
+                    34770.2
+                ],
+        "name":  "Wegmarke Arterium-Freistatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41822.1,
+                    34087.5
+                ],
+        "name":  "Wegmarke Hexan-Abflachung",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40577.9,
+                    34465.8
+                ],
+        "name":  "Wegmarke Überlebendenlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40840.7,
+                    33722.1
+                ],
+        "name":  "Wegmarke Muridianisches Hochland",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41307.6,
+                    35437.2
+                ],
+        "name":  "Wegmarke Desider Atum",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40388.2,
+                    35749.2
+                ],
+        "name":  "Wegmarke Alte Golem-Fabrik",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41036.1,
+                    36064.2
+                ],
+        "name":  "Wegmarke Loch",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40094.7,
+                    34617.4
+                ],
+        "name":  "Wegmarke Ameisenhügel",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40694.4,
+                    35000.4
+                ],
+        "name":  "Wegmarke Michotl-Gründe",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.1,
+                    35125.7
+                ],
+        "name":  "Wegmarke Cuatl",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41015.8,
+                    34337.7
+                ],
+        "name":  "Wegmarke Artergon",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40631.8,
+                    36216.7
+                ],
+        "name":  "Wegmarke Hydron-Einheit",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41833.6,
+                    32676.5
+                ],
+        "name":  "Wegmarke Wachsame Quelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.4,
+                    31191.8
+                ],
+        "name":  "Wegmarke Wendon",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    32459.5
+                ],
+        "name":  "Wegmarke Tunnel",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41311,
+                    32306.9
+                ],
+        "name":  "Wegmarke Hügelstatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41275.2,
+                    31983.9
+                ],
+        "name":  "Wegmarke Ostend",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40165.6,
+                    31856.7
+                ],
+        "name":  "Wegmarke Brilitin",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40190.6,
+                    31059.9
+                ],
+        "name":  "Wegmarke Seraphen-Beobachter",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39175.1,
+                    31346.1
+                ],
+        "name":  "Wegmarke Spukfelder",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38992.5,
+                    32509
+                ],
+        "name":  "Wegmarke Trischmiede",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40015.9,
+                    32542.8
+                ],
+        "name":  "Wegmarke Ulta Metamagikale",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40733.6,
+                    33298.8
+                ],
+        "name":  "Wegmarke Mrot Boru",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39870.1,
+                    33051.4
+                ],
+        "name":  "Wegmarke Düsterhöhe",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38936.7,
+                    31509.4
+                ],
+        "name":  "Wegmarke Proxemik-Labor",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43050.6,
+                    37063.8
+                ],
+        "name":  "Wegmarke Caledon",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43161.8,
+                    37494.4
+                ],
+        "name":  "Wegmarke Obere Distrikte",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43171.8,
+                    37445.5
+                ],
+        "name":  "Wegmarke Rechenmeister",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43213.5,
+                    37448.8
+                ],
+        "name":  "Wegmarke Ronan",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38851.9,
+                    37177.6
+                ],
+        "name":  "Wegmarke Metrischer Hof",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38775.1,
+                    36969.6
+                ],
+        "name":  "Wegmarke Magustan-Hof",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38581.5,
+                    37130
+                ],
+        "name":  "Wegmarke Magicat-Hof",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38702.5,
+                    37961.4
+                ],
+        "name":  "Wegmarke Ideengeburten",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47322,
+                    34668
+                ],
+        "name":  "Mistlock Sanctuary Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38742.8,
+                    37098.1
+                ],
+        "name":  "Wegmarke Buchhaltung",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38854.5,
+                    37110.4
+                ],
+        "name":  "Wegmarke Lehrling",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38598.7,
+                    37064.6
+                ],
+        "name":  "Wegmarke Forschung",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38745.7,
+                    37235.7
+                ],
+        "name":  "Wegmarke Zusätzliche Studierräume",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38102.1,
+                    38251
+                ],
+        "name":  "Wegmarke Hafen",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50740.4,
+                    39671.9
+                ],
+        "name":  "Wegmarke Finstertal",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50706.2,
+                    38116.2
+                ],
+        "name":  "Wegmarke Govoran",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51007.6,
+                    38441.5
+                ],
+        "name":  "Wegmarke Richtwert",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51326.6,
+                    38959.6
+                ],
+        "name":  "Wegmarke Feuerbruchfort",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51296,
+                    39360.4
+                ],
+        "name":  "Wegmarke Spaecia Illogica",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51797.3,
+                    38107.5
+                ],
+        "name":  "Wegmarke des Barden",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51987.3,
+                    39515.1
+                ],
+        "name":  "Wegmarke Mahlstrom",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.5,
+                    38540
+                ],
+        "name":  "Wegmarke Aschen",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52453.3,
+                    39564.9
+                ],
+        "name":  "Wegmarke Avernan",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52372.1,
+                    37859.2
+                ],
+        "name":  "Wegmarke Gebrochener Pfeil",
+        "type":  "waypoint",
+        "chat_code":  "[&BNACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52794.1,
+                    38992.3
+                ],
+        "name":  "Wegmarke Ochsenjoch-Insel",
+        "type":  "waypoint",
+        "chat_code":  "[&BNECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53195,
+                    39622.9
+                ],
+        "name":  "Wegmarke Irwin-Insel",
+        "type":  "waypoint",
+        "chat_code":  "[&BNICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52967.7,
+                    37946.5
+                ],
+        "name":  "Wegmarke Stulpenschlucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53917.5,
+                    39300.4
+                ],
+        "name":  "Wegmarke Alter Hammergrund",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54220.8,
+                    40050.6
+                ],
+        "name":  "Wegmarke Urteil",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51773.1,
+                    39890.5
+                ],
+        "name":  "Wegmarke Magmatisch",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.2,
+                    38322.7
+                ],
+        "name":  "Wegmarke Schmelztiegel der Ewigkeit",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48420,
+                    35663.5
+                ],
+        "name":  "Wegmarke Orvars Schlucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49607.4,
+                    35721.8
+                ],
+        "name":  "Wegmarke Fort Gleichschritt",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50128.7,
+                    35786.4
+                ],
+        "name":  "Wegmarke Prahlhansls Heimstätte",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50075.9,
+                    36234.5
+                ],
+        "name":  "Wegmarke Salzflut",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49239.5,
+                    36452.3
+                ],
+        "name":  "Wegmarke Zintl-Heiligtum",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48721.9,
+                    36264.1
+                ],
+        "name":  "Wegmarke Ozeanschlund",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48297.4,
+                    37012.5
+                ],
+        "name":  "Wegmarke Forvars Anlegestelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49398.3,
+                    37058.2
+                ],
+        "name":  "Wegmarke Toades Kopf",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50234.1,
+                    37084
+                ],
+        "name":  "Wegmarke Flammenfrosch",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50229.3,
+                    38119.2
+                ],
+        "name":  "Wegmarke Dunkelwetter",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49789.8,
+                    38320.4
+                ],
+        "name":  "Wegmarke Brackwasser",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49164.7,
+                    37688.1
+                ],
+        "name":  "Wegmarke Aleems Buße",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48647.6,
+                    38360.6
+                ],
+        "name":  "Wegmarke Splitterküste",
+        "type":  "waypoint",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48380.7,
+                    37754
+                ],
+        "name":  "Wegmarke Bruuluunu",
+        "type":  "waypoint",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49822.3,
+                    37647.4
+                ],
+        "name":  "Wegmarke Trockengrund-Dorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49260.1,
+                    38212.2
+                ],
+        "name":  "Wegmarke Kastell Dornstrauch",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49626.8,
+                    35965.8
+                ],
+        "name":  "Wegmarke Morast",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39109.2
+                ],
+        "name":  "Wegmarke Basar-Docks",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39277.5
+                ],
+        "name":  "Wegmarke Himmels-Docks",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36204.7,
+                    36974.5
+                ],
+        "name":  "Wegmarke Zentrales Vorstoßlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36986.7,
+                    37143
+                ],
+        "name":  "Wegmarke Südliches Vorstoßlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35730.2,
+                    36555.7
+                ],
+        "name":  "Wegmarke Nördliches Vorstoßlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36118.5,
+                    37357.4
+                ],
+        "name":  "Wegmarke Zentrales vorgeschobenes Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35648.7,
+                    38076.6
+                ],
+        "name":  "Südliche Wegmarke Domäne des Drachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36654.2,
+                    37490.9
+                ],
+        "name":  "Wegmarke Südliches vorgeschobenes Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35435.9,
+                    37715
+                ],
+        "name":  "Zentrale Wegmarke Domäne des Drachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34756.5,
+                    37366.8
+                ],
+        "name":  "Nördliche Wegmarke Domäne des Drachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35531.9,
+                    36790.1
+                ],
+        "name":  "Wegmarke Nördliches vorgeschobenes Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34318.4,
+                    33966.2
+                ],
+        "name":  "Wegmarke Vergessene Stadt",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33672.4,
+                    32820.5
+                ],
+        "name":  "Wegmarke des Wanderers",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34402.5,
+                    33143.6
+                ],
+        "name":  "Wegmarke Nordwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34227.8,
+                    34590.9
+                ],
+        "name":  "Wegmarke Südwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33703.9,
+                    33522.1
+                ],
+        "name":  "Wegmarke Westwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34864.1,
+                    35025
+                ],
+        "name":  "Wegmarke Chak-Senke",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35047.7,
+                    33802.8
+                ],
+        "name":  "Wegmarke Ostwacht",
+        "type":  "waypoint",
+        "chat_code":  "[&BGwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36673.7,
+                    35237.7
+                ],
+        "name":  "Wegmarke Oger-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37246.5,
+                    35515.6
+                ],
+        "name":  "Wegmarke Zusammenfluss der Ley-Linien",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37974.7,
+                    35495.3
+                ],
+        "name":  "Wegmarke NARBE-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37716.8,
+                    34709.8
+                ],
+        "name":  "Wegmarke Rata Novus",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37039.4,
+                    34324.5
+                ],
+        "name":  "Wegmarke Teku Nuhoch",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35826,
+                    34605.7
+                ],
+        "name":  "Wegmarke Lager des Ordens der Gerüchte",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35651.7,
+                    35858.9
+                ],
+        "name":  "Wegmarke Passage des Drachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34501.6,
+                    31503.7
+                ],
+        "name":  "Wegmarke Mellaggans Tapferkeit",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36479.7,
+                    31660.6
+                ],
+        "name":  "Wegmarke Schiffswrackspitze",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36032.8,
+                    31135.7
+                ],
+        "name":  "Wegmarke Jaka Itzel",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34083.3,
+                    32201.2
+                ],
+        "name":  "Wegmarke Farens Luftschiff",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35554.9,
+                    32384.1
+                ],
+        "name":  "Wegmarke Verschleierte Ruinen",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33681.2,
+                    32396.7
+                ],
+        "name":  "Wegmarke Trügerischer Pfad",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33684.6,
+                    29911.2
+                ],
+        "name":  "Wegmarke Schlucht-Grabung",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33951.8,
+                    30648.6
+                ],
+        "name":  "Wegmarke Aussichtspunkt am Fluss",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34211.1,
+                    29897.3
+                ],
+        "name":  "Wegmarke Oberer Platz",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34612.9,
+                    30938.2
+                ],
+        "name":  "Wegmarke Schrein-Tunnel",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34234.5,
+                    30347.5
+                ],
+        "name":  "Wegmarke Zentraler Abgrund",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34786.5,
+                    30849.3
+                ],
+        "name":  "Wegmarke Sandstein-Kolosseum",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35511.3,
+                    30577.1
+                ],
+        "name":  "Wegmarke Schlundtiefen",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35827.6,
+                    30738.4
+                ],
+        "name":  "Wegmarke Explosionsort",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35212.1,
+                    30583.8
+                ],
+        "name":  "Wegmarke Seelenhüters Luftschiff",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35482.2,
+                    30692.4
+                ],
+        "name":  "Wegmarke Aussichtspunkt des Eiferers",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.4,
+                    32717.8
+                ],
+        "name":  "Wegmarke Wohlstand",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38299.1,
+                    33089
+                ],
+        "name":  "Wegmarke Trockenkuppenzugang",
+        "type":  "waypoint",
+        "chat_code":  "[&BIAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36895,
+                    32688.1
+                ],
+        "name":  "Wegmarke Rankenbrücke",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37730.7,
+                    32727.2
+                ],
+        "name":  "Wegmarke Erneuerungszuflucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36713.1,
+                    32755.1
+                ],
+        "name":  "Wegmarke Reparaturwerkstatt",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38451.1,
+                    31736.5
+                ],
+        "name":  "Wegmarke Lager der Standhaftigkeit",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37668.8,
+                    32070.6
+                ],
+        "name":  "Wegmarke Verborgene Tiefen",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38233.6,
+                    31107.6
+                ],
+        "name":  "Wegmarke Trockendock-Grotte",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55830.2,
+                    60838.7
+                ],
+        "name":  "Wegmarke Astralarium",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57792.9,
+                    61028.3
+                ],
+        "name":  "Wegmarke Chalon-Docks",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56265.3,
+                    62042.9
+                ],
+        "name":  "Wegmarke Champions Erwachen",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42924.4,
+                    22729.7
+                ],
+        "name":  "Wegmarke Erntehöhle",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41475.2,
+                    23594.3
+                ],
+        "name":  "Wegmarke Thermalquellen",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43186.1,
+                    21873.1
+                ],
+        "name":  "Wegmarke Ernteküste",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    22900.7
+                ],
+        "name":  "Wegmarke Wanderling-Außenposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42951.9,
+                    23723.2
+                ],
+        "name":  "Wegmarke Astralwachen-Mondlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41864.4,
+                    22647.7
+                ],
+        "name":  "Wegmarke Herbsttal",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40824.6,
+                    16638.4
+                ],
+        "name":  "Wegmarke Sammlersruh",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39306.1,
+                    16382.6
+                ],
+        "name":  "Wegmarke Schwärendes Becken",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40127.6,
+                    14659.2
+                ],
+        "name":  "Wegmarke Geplagte Ebene",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39237.2,
+                    15524.6
+                ],
+        "name":  "Wegmarke Blutroter Krater",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36051.3,
+                    11654.2
+                ],
+        "name":  "Wegmarke Mantels Ankunft",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.2,
+                    12288.6
+                ],
+        "name":  "Wegmarke Verborgener Knoten",
+        "type":  "waypoint",
+        "chat_code":  "[&BG0PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34312.3,
+                    11578
+                ],
+        "name":  "Sammelpunkt der Allianz",
+        "type":  "waypoint",
+        "chat_code":  "[&BFAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40203.4,
+                    45862.7
+                ],
+        "name":  "Wegmarke Riss-Tor",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38980.3,
+                    46425.7
+                ],
+        "name":  "Wegmarke Kap",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39809.1,
+                    45114.6
+                ],
+        "name":  "Wegmarke Bröckelnder Pfad",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38284.7,
+                    46256.3
+                ],
+        "name":  "Wegmarke Zirkus der Schiffbrüchigen",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36016.2,
+                    41919.2
+                ],
+        "name":  "Wegmarke Seemanns Anlegestelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37310,
+                    41714.3
+                ],
+        "name":  "Wegmarke Heidenhalt",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36589.4,
+                    41018.7
+                ],
+        "name":  "Wegmarke Uralte Senke",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21852.2,
+                    104468
+                ],
+        "name":  "Wegmarke Reflexions-Docks",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Wegmarke Reflexions-Kristall",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Wegmarke Reflexions-Arena",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34181,
+                    103953
+                ],
+        "name":  "Wegmarke Ernte-Komplex",
+        "type":  "waypoint",
+        "chat_code":  "[&BKAMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33825.5,
+                    102383
+                ],
+        "name":  "Wegmarke Jadesteinbruch",
+        "type":  "waypoint",
+        "chat_code":  "[&BKIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34126,
+                    105319
+                ],
+        "name":  "Wegmarke Gefrorenes Meer",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33392,
+                    104381
+                ],
+        "name":  "Wegmarke Bruderschaft",
+        "type":  "waypoint",
+        "chat_code":  "[&BBENAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34978.6,
+                    104479
+                ],
+        "name":  "Wegmarke Sprecher",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29844.8,
+                    101425
+                ],
+        "name":  "Wegmarke Arborstein",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29851.8,
+                    100973
+                ],
+        "name":  "Wegmarke Canachs Klub",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25472.8,
+                    99591.6
+                ],
+        "name":  "Wegmarke Promenade",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25946,
+                    98633
+                ],
+        "name":  "Wegmarke Gartenhöhen",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26674.2,
+                    99438.3
+                ],
+        "name":  "Wegmarke Ministeriumsviertel",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27869.7,
+                    99381
+                ],
+        "name":  "Wegmarke Lutgardis-Platz",
+        "type":  "waypoint",
+        "chat_code":  "[&BCANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22949.4,
+                    102166
+                ],
+        "name":  "Wegmarke Dorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21672.7,
+                    102058
+                ],
+        "name":  "Wegmarke Kloster",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23637.6,
+                    100727
+                ],
+        "name":  "Wegmarke Haiju-Docks",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23191.2,
+                    101452
+                ],
+        "name":  "Wegmarke Daigo-Bezirk",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30896.1,
+                    101005
+                ],
+        "name":  "Wegmarke Schrottplatz",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32842,
+                    103030
+                ],
+        "name":  "Wegmarke Mori-Dorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30020.8,
+                    102042
+                ],
+        "name":  "Wegmarke zu Heltzer",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30311.7,
+                    102714
+                ],
+        "name":  "Wegmarke Kropa",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32675.6,
+                    101324
+                ],
+        "name":  "Wegmarke Qinkai",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32767.6,
+                    102107
+                ],
+        "name":  "Wegmarke Jadetor",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37423.6,
+                    102153
+                ],
+        "name":  "Wegmarke Behemoth-Bresche",
+        "type":  "waypoint",
+        "chat_code":  "[&BJINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37815,
+                    103075
+                ],
+        "name":  "Wegmarke Luxon-Endpunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38285.3,
+                    101596
+                ],
+        "name":  "Wegmarke Jadesäulen-Punkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37631.4,
+                    100871
+                ],
+        "name":  "Wegmarke Park-Bergbaubetrieb",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24102.9,
+                    22231.4
+                ],
+        "name":  "Wegmarke Turm-Innenhof",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24327.1,
+                    23532.9
+                ],
+        "name":  "Wegmarke Droknars Licht",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26331.3,
+                    23073.8
+                ],
+        "name":  "Wegmarke Promenade von Rata Novus",
+        "type":  "waypoint",
+        "chat_code":  "[&BOANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25830,
+                    24166.2
+                ],
+        "name":  "Wegmarke Lager der Astralwache",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26976.9,
+                    23979.3
+                ],
+        "name":  "Wegmarke Flüchtlingslager Garrenhoff",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26836.3,
+                    24387.4
+                ],
+        "name":  "Wegmarke Leuchtfeuer der Zeitalter",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25402.1,
+                    23927.5
+                ],
+        "name":  "Wegmarke Falkenschwur",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25559.4,
+                    22867.4
+                ],
+        "name":  "Wegmarke Beobachtungslager",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25172.4,
+                    20160.5
+                ],
+        "name":  "Wegmarke Bastion der Stärke",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24086.1,
+                    19983.7
+                ],
+        "name":  "Wegmarke Bastion des Himmlischen",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23898.1,
+                    21158.7
+                ],
+        "name":  "Wegmarke Bastion des Natürlichen",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23750.8,
+                    19530.4
+                ],
+        "name":  "Wegmarke Bastion des Gleichgewichts",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25159,
+                    21075.9
+                ],
+        "name":  "Wegmarke Bastion des Wissens",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23134.7,
+                    20587.4
+                ],
+        "name":  "Wegmarke Bastion des Obskuren",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22367.2,
+                    23760.7
+                ],
+        "name":  "Wegmarke Astralwachen-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BGYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21733.5,
+                    22801.1
+                ],
+        "name":  "Wegmarke Vorstoß-Biwak",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7748.18,
+                    58054.1
+                ],
+        "name":  "Wegmarke Jäger-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7618.46,
+                    58835.9
+                ],
+        "name":  "Wegmarke Abtei-Expedition",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    8698.36,
+                    59533.1
+                ],
+        "name":  "Wegmarke Stützpunkt-Biwak",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11173,
+                    59803.2
+                ],
+        "name":  "Wegmarke Canachs Kaschemme",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11740,
+                    57967.3
+                ],
+        "name":  "Wegmarke Dunkler Leviathan",
+        "type":  "waypoint",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11661.4,
+                    59029.4
+                ],
+        "name":  "Wegmarke Rumpfgarten-Pier",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60972.9,
+                    43251.6
+                ],
+        "name":  "Wegmarke Tempel der Kormir",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61588.6,
+                    44187.2
+                ],
+        "name":  "Wegmarke Schicksalsschlucht",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58615.4,
+                    43742.9
+                ],
+        "name":  "Wegmarke Amnoon",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    40452.9
+                ],
+        "name":  "Wegmarke Lommuld-Kral",
+        "type":  "waypoint",
+        "chat_code":  "[&BGoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676.5,
+                    42149.4
+                ],
+        "name":  "Wegmarke Makali-Außenposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BGsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59352.1,
+                    41882.9
+                ],
+        "name":  "Wegmarke Hellwasser",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59604.9,
+                    40332.9
+                ],
+        "name":  "Wegmarke Hochsprunghof",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57691.8,
+                    40331.8
+                ],
+        "name":  "Wegmarke Verlassene Senke",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64453.1,
+                    52290.7
+                ],
+        "name":  "Wegmarke Höhlen-Aussichtspunkt",
+        "type":  "waypoint",
+        "chat_code":  "[&BKEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64611,
+                    51738
+                ],
+        "name":  "Wegmarke Windgepeitschte Arena",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65172.6,
+                    51485.6
+                ],
+        "name":  "Wegmarke Aussichtskuppel",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64843.8,
+                    51650.5
+                ],
+        "name":  "Wegmarke Freistatt-Terrasse",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60886.5,
+                    52307.6
+                ],
+        "name":  "Wegmarke Jokos Domäne",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60442.7,
+                    50248.3
+                ],
+        "name":  "Wegmarke Geißelweg",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59123.2,
+                    52734.9
+                ],
+        "name":  "Wegmarke Sandschakal-Lauf",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59187.1,
+                    50521.2
+                ],
+        "name":  "Wegmarke Dunkellande",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61423.3,
+                    51140.4
+                ],
+        "name":  "Wegmarke Höhle der Vergessenen",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60080.7,
+                    48404.7
+                ],
+        "name":  "Wegmarke Knochenufer",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60363.6,
+                    46367.2
+                ],
+        "name":  "Wegmarke Olishars Oasenlager",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61075,
+                    45581
+                ],
+        "name":  "Wegmarke Schatten der Weissagung",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59093.8,
+                    46548.8
+                ],
+        "name":  "Wegmarke Schweberochen-Hof",
+        "type":  "waypoint",
+        "chat_code":  "[&BGcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66421.2,
+                    54770.7
+                ],
+        "name":  "Wegmarke Vehtendi-Akademie",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65111.6,
+                    54720.3
+                ],
+        "name":  "Wegmarke Nekropole",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    67375.7,
+                    53930.7
+                ],
+        "name":  "Wegmarke Marktruinen",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63792.2,
+                    52749.9
+                ],
+        "name":  "Wegmarke Schartental",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65531.2,
+                    53474.3
+                ],
+        "name":  "Wegmarke Seborhin",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64290.5,
+                    53303.7
+                ],
+        "name":  "Wegmarke Vehjin-Palast",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54424.7,
+                    57340
+                ],
+        "name":  "Wegmarke Anniogel-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53327,
+                    56442.8
+                ],
+        "name":  "Wegmarke Atholma",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66016.1,
+                    61284.5
+                ],
+        "name":  "Wegmarke Apizmic-Gründe",
+        "type":  "waypoint",
+        "chat_code":  "[&BFALAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64765.1,
+                    61579.3
+                ],
+        "name":  "Wegmarke Lager der Verbündeten",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66572.2,
+                    58608.9
+                ],
+        "name":  "Wegmarke Yatendi-Dorf",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64761.5,
+                    59142.4
+                ],
+        "name":  "Wegmarke \"Rache der Seele\"",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63986.3,
+                    57861
+                ],
+        "name":  "Wegmarke Venta-Pass",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66277.1,
+                    56515.4
+                ],
+        "name":  "Wegmarke Zurückeroberte Heilige Halle",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44863.7,
+                    50382
+                ],
+        "name":  "Wegmarke Die Unterwelt",
+        "type":  "waypoint",
+        "chat_code":  "[&BNELAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46579,
+                    50768.9
+                ],
+        "name":  "Wegmarke Verlorene Domäne Melandrus",
+        "type":  "waypoint",
+        "chat_code":  "[&BNILAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44341.9,
+                    48961.8
+                ],
+        "name":  "Wegmarke Brennender Wald",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35973,
+                    33210
+                ],
+        "name":  "Central Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35727,
+                    33286
+                ],
+        "name":  "Arena Tower Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQIAAA=]",
+        "desc":  "requires guild arena"
+    },
+    {
+        "pos":  [
+                    36293,
+                    33455
+                ],
+        "name":  "Cavern Mine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIIAAA=]",
+        "desc":  "requires guild mine"
+    },
+    {
+        "pos":  [
+                    35393,
+                    33662
+                ],
+        "name":  "Surface Tunnel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35911,
+                    32706
+                ],
+        "name":  "Waterfall Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEIAAA=]",
+        "desc":  "requires further exploration"
+    },
+    {
+        "pos":  [
+                    3804.34,
+                    60931.1
+                ],
+        "name":  "Wegmarke Tiefenwald-Außenposten",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4867.48,
+                    61003.2
+                ],
+        "name":  "Wegmarke Äußeres Refugium",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3722.91,
+                    61850.8
+                ],
+        "name":  "Wegmarke Tempel der Verleugnung",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36649.7,
+                    36232.2
+                ],
+        "name":  "Wegmarke Basislager des Pakts",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36809,
+                    36525.5
+                ],
+        "name":  "Südliche Wegmarke Basislager des Pakts",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5162.33,
+                    62438.5
+                ],
+        "name":  "Wegmarke Pilgersruh",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3657.8,
+                    58080.6
+                ],
+        "name":  "Wegmarke Altmeisters Adyton",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8QAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4953.2,
+                    59329.6
+                ],
+        "name":  "Wegmarke Halle des Zusammenbaus",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5819.8,
+                    59557.2
+                ],
+        "name":  "Wegmarke Versiegelter Vorhof",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35165.7,
+                    31785.4
+                ],
+        "name":  "Wegmarke Pakt-Lager",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46814,
+                    48720
+                ],
+        "name":  "Wegmarke Kommando des Pakts",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4LAAA=]",
+        "desc":  ""
+    }
+]

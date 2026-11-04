@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
 			body { background: transparent; color: var(--text-primary); font-family: "Crimson Text", serif; padding: 25px; overflow-x: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
@@ -86,6 +87,16 @@
 			</label>
 		</div>
 
+		<div class="setting-control" id="wiki-lang-setting">
+			<span class="label">Display Language</span>
+			<select id="pref-wiki-lang" style="width: 150px;" onchange="updateWikiLanguage(this.value)">
+				<option value="en">English</option>
+				<option value="de">Deutsch</option>
+				<option value="fr">Français</option>
+				<option value="es">Español</option>
+			</select>
+		</div>
+
 		<div class="setting-control">
 			<span class="label">System Tray Notifications</span>
 			<label class="toggle-switch">
@@ -144,10 +155,22 @@
 				<output id="bubble-fscale" class="bubble"></output>
 			</div>
 		</div>
+		<div class="setting-control" 
+			onmouseover="window.parent.postMessage({action:'showTooltip', text: (window.DataLoader ? window.DataLoader.t('settings.zoom_cap_tooltip', 'Forcing higher zoom details at zoomed-out levels significantly increases tile loading and memory usage, which can severely impact performance.') : 'Forcing higher zoom details at zoomed-out levels significantly increases tile loading and memory usage, which can severely impact performance.'), x:event.clientX, y:event.clientY, isRight: true}, '*')"
+			onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')">
+			<span class="label">Map Detail Zoom Cap</span>
+			<select id="pref-map-detail" style="width: 150px;" onchange="updateSetting('mapDetailLevel', this.value); checkScaleChange()">
+				<option value="painterly">Zoom 4 (Default)</option>
+				<option value="5">Zoom 5</option>
+				<option value="6">Zoom 6</option>
+				<option value="7">Zoom 7</option>
+			</select>
+		</div>
 		<button id="reload-map-btn" class="btn dimmed" onclick="triggerMapReload()">Reload Map</button>
 
 		<div class="section-title">Data Management</div>
 		<button id="update-btn" class="btn" onclick="openUpdateUrl()">Update Available</button>
+		<button class="btn" onclick="showActiveMotd()">View Message of the Day</button>
         <button class="btn" onclick="exportLog()">Export Log</button>
 		<button class="btn" style="color: #ff4a4a; border-color: #ff4a4a;" onclick="showConfirmModal()">Clear Application Data</button>
 
@@ -211,9 +234,10 @@
 			function checkScaleChange() {
 				let currentMScale = document.getElementById('pref-mscale').value;
 				let currentFScale = document.getElementById('pref-fscale').value;
+				let currentMapDetail = document.getElementById('pref-map-detail').value;
 				let btn = document.getElementById('reload-map-btn');
 				
-				if (currentMScale !== initialMarkerScale || currentFScale !== initialFarmingScale) {
+				if (currentMScale !== initialMarkerScale || currentFScale !== initialFarmingScale || currentMapDetail !== initialMapDetail) {
 					btn.classList.remove('dimmed');
 					btn.classList.add('lit-up');
 				} else {
@@ -225,6 +249,7 @@
 			function triggerMapReload() {
 				initialMarkerScale = document.getElementById('pref-mscale').value;
 				initialFarmingScale = document.getElementById('pref-fscale').value;
+				initialMapDetail = document.getElementById('pref-map-detail').value;
 				checkScaleChange();
 				sendAction('reloadMap');
 			}
@@ -278,6 +303,7 @@
 			document.getElementById('pref-ontop').checked = settings.onTop || false;
 
 			document.getElementById('pref-wiki').checked = settings.wikiIntegrated ?? true;
+			document.getElementById('pref-wiki-lang').value = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
             document.getElementById('pref-systray').checked = localStorage.getItem('gw2_systray_notifications') === 'true';
             document.getElementById('pref-discordrpc').checked = settings.discordRpcEnabled || false;
 			document.getElementById('pref-tz').value = localStorage.getItem('gw2_pref_timezone') || 'local';
@@ -295,6 +321,9 @@
 			const fScaleVal = settings.farmingMarkerScale !== undefined ? settings.farmingMarkerScale : 100;
 			document.getElementById('pref-fscale').value = fScaleVal;
 			updateLabel('fscale', fScaleVal);
+
+			const mapDetailVal = settings.mapDetailLevel || "painterly";
+			document.getElementById('pref-map-detail').value = mapDetailVal;
             
             function exportLog() {
                 window.parent.postMessage({action: 'openLogFolder'}, '*');
@@ -305,9 +334,108 @@
                 window.parent.postMessage({action: 'updateTheme', theme: val}, '*');
             }
 
+            async function applySettingsI18n() {
+                if (!window.DataLoader || !window.DataLoader.loadTranslations) return;
+                await window.DataLoader.loadTranslations();
+                const t = window.DataLoader.t;
+
+                const secTitles = document.querySelectorAll('.section-title');
+                if (secTitles.length >= 5) {
+                    secTitles[0].innerText = t('settings.sections.window', 'Window & Display');
+                    secTitles[1].innerText = t('settings.sections.timezone', 'Time Zone');
+                    secTitles[2].innerText = t('settings.sections.character', 'Preferred Character');
+                    secTitles[3].innerText = t('settings.sections.audio', 'Audio & Markers');
+                    secTitles[4].innerText = t('settings.sections.data', 'Data Management');
+                }
+
+                const labels = document.querySelectorAll('.setting-control .label');
+                const labelKeys = [
+                    'settings.labels.theme',
+                    'settings.labels.ontop',
+                    'settings.labels.wiki',
+                    'settings.labels.language',
+                    'settings.labels.systray',
+                    'settings.labels.discord',
+                    'settings.labels.volume',
+                    'settings.labels.marker_scale',
+                    'settings.labels.farming_scale',
+                    'settings.labels.zoom_cap'
+                ];
+                labels.forEach((el, idx) => {
+                    if (labelKeys[idx]) el.innerText = t(labelKeys[idx], el.innerText);
+                });
+
+                const themeSelect = document.getElementById('pref-theme');
+                if (themeSelect && themeSelect.options.length >= 5) {
+                    themeSelect.options[0].text = t('settings.themes.human', 'Human (Default)');
+                    themeSelect.options[1].text = t('settings.themes.sylvari', 'Sylvari');
+                    themeSelect.options[2].text = t('settings.themes.asura', 'Asura');
+                    themeSelect.options[3].text = t('settings.themes.charr', 'Charr');
+                    themeSelect.options[4].text = t('settings.themes.norn', 'Norn');
+                }
+
+                const tzSelect = document.getElementById('pref-tz');
+                if (tzSelect && tzSelect.options.length >= 7) {
+                    tzSelect.options[0].text = t('settings.timezones.local', 'Local Time');
+                    tzSelect.options[1].text = t('settings.timezones.utc', 'UTC (Server Time)');
+                    tzSelect.options[2].text = t('settings.timezones.la', 'Pacific Time (US)');
+                    tzSelect.options[3].text = t('settings.timezones.ny', 'Eastern Time (US)');
+                    tzSelect.options[4].text = t('settings.timezones.london', 'London (UK)');
+                    tzSelect.options[5].text = t('settings.timezones.berlin', 'Central Europe');
+                    tzSelect.options[6].text = t('settings.timezones.sydney', 'Sydney (AU)');
+                }
+
+                const charSelect = document.getElementById('pref-char');
+                if (charSelect && charSelect.options.length > 0 && charSelect.options[0].value === "") {
+                    charSelect.options[0].text = t('settings.no_preference', 'No Preference');
+                }
+
+                const zoomSelect = document.getElementById('pref-map-detail');
+                if (zoomSelect && zoomSelect.options.length >= 4) {
+                    zoomSelect.options[0].text = t('settings.zoom_levels.painterly', 'Zoom 4 (Default)');
+                    zoomSelect.options[1].text = t('settings.zoom_levels.5', 'Zoom 5');
+                    zoomSelect.options[2].text = t('settings.zoom_levels.6', 'Zoom 6');
+                    zoomSelect.options[3].text = t('settings.zoom_levels.7', 'Zoom 7');
+                }
+
+                const reloadBtn = document.getElementById('reload-map-btn');
+                if (reloadBtn) reloadBtn.innerText = t('settings.buttons.reload_map', 'Reload Map');
+                const updateBtn = document.getElementById('update-btn');
+                if (updateBtn) updateBtn.innerText = t('settings.buttons.update_available', 'Update Available');
+                const motdBtn = document.querySelector('button[onclick="showActiveMotd()"]');
+                if (motdBtn) motdBtn.innerText = t('settings.buttons.motd', 'View Message of the Day');
+                const exportBtn = document.querySelector('button[onclick="exportLog()"]');
+                if (exportBtn) exportBtn.innerText = t('settings.buttons.export_log', 'Export Log');
+                const clearBtn = document.querySelector('button[onclick="showConfirmModal()"]');
+                if (clearBtn) clearBtn.innerText = t('settings.buttons.clear_data', 'Clear Application Data');
+
+                const modalText = document.querySelector('.modal-text');
+                if (modalText) modalText.innerText = t('settings.confirm_modal.text', 'DANGER: THIS WILL RESET ALL SETTINGS, API KEYS, AND SAVED TRACKERS. CONTINUE?');
+                const modalConfirmBtn = document.querySelector('.modal-btns .btn-danger');
+                if (modalConfirmBtn) modalConfirmBtn.innerText = t('settings.confirm_modal.confirm', 'Yes, Reset');
+                const modalCancelBtn = document.querySelector('.modal-btns button:not(.btn-danger)');
+                if (modalCancelBtn) modalCancelBtn.innerText = t('settings.confirm_modal.cancel', 'Cancel');
+            }
+
+            function updateWikiLanguage(val) {
+                if (window.DataLoader && window.DataLoader.loadTranslations) {
+                    window.DataLoader.loadTranslations(true).then(() => applySettingsI18n());
+                }
+                localStorage.setItem('gw2_lang', val);
+                localStorage.setItem('gw2_wiki_lang', val);
+                window.parent.postMessage({action: 'setWikiLang', lang: val}, '*');
+                window.parent.postMessage({action: 'languageChanged', lang: val}, '*');
+            }
+
+            function showActiveMotd() {
+                window.parent.postMessage({action: 'showMotdForce'}, '*');
+            }
+
 			let initialMarkerScale = document.getElementById('pref-mscale').value;
 			let initialFarmingScale = document.getElementById('pref-fscale').value;
+			let initialMapDetail = document.getElementById('pref-map-detail').value;
             loadSettingsData();
+            applySettingsI18n();
 			checkUpdateBtn();
             /*]]>*/
 		</script>

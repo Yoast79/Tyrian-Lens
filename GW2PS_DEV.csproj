@@ -24,12 +24,9 @@
 		</Content>
 		
 		<!-- Static Data / Databases -->
-		<Content Include="Data\**" Exclude="Data\nodes_*.json;Data\timers_config.json;Data\*.bak;Data\desktop.ini">
+		<Content Include="Data\**" Exclude="Data\*.bak;Data\desktop.ini">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-		<None Include="Data\nodes_*.json;Data\timers_config.json;Data\*.bak;Data\desktop.ini">
-			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</None>
 		
 		<!-- Assets (Icons, Sounds, Fonts, Leaflet) -->
 		<Content Include="Assets\**">

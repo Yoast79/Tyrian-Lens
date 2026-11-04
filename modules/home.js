@@ -12,7 +12,7 @@ async function loadHomeData(el, index) {
     gridDiv.className = 'grid';
     const { sub } = el.dataset;
     const fallbackIcon = "https://wiki.guildwars2.com/images/7/75/Mini_Orange_Tabby_Cat.png";
-    const scavengerWiki = "https://wiki.guildwars2.com/index.php?title=Hungry_cat_scavenger_hunt&useskin=vector";
+    const scavengerWiki = "https://wiki.guildwars2.com/index.php?title=Hungry_cat_scavenger_hunt&useskin=vector-2022";
 
     const activeTab = typeof currentTab !== 'undefined' ? currentTab : 'unlocked';
 

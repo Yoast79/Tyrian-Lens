@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10, 8, 5, 0.3)); }
@@ -309,7 +310,61 @@
 			}
 			}
 
+			function renderHelp() {
+				const h = (window.DataLoader && window.DataLoader.translations && window.DataLoader.translations.help) || null;
+				if (!h || !h.sections) return;
+				const s = h.sections;
+				let html = '';
+				if (s.account) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.account.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.account.h_api}</h4><p>${s.account.p_api}</p><h4>${s.account.h_visual}</h4><p>${s.account.p_visual}</p><h4>${s.account.h_drf}</h4><p>${s.account.p_drf}</p></div></div>`;
+				}
+				if (s.map) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.map.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.map.h_mumble}</h4><p>${s.map.p_mumble}</p><h4>${s.map.h_overlay}</h4><p>${s.map.p_overlay}</p><h4>${s.map.h_marker}</h4><p>${s.map.p_marker}</p></div></div>`;
+				}
+				if (s.storage) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.storage.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.storage.h_search}</h4><p>${s.storage.p_search}</p><h4>${s.storage.h_roster}</h4><p>${s.storage.p_roster}</p><h4>${s.storage.h_mat}</h4><p>${s.storage.p_mat}</p></div></div>`;
+				}
+				if (s.hero) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.hero.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.hero.h_equip}</h4><p>${s.hero.p_equip}</p><h4>${s.hero.h_specs}</h4><p>${s.hero.p_specs}</p><h4>${s.hero.h_planner}</h4><p>${s.hero.p_planner}</p></div></div>`;
+				}
+				if (s.trading) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.trading.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.trading.h_delivery}</h4><p>${s.trading.p_delivery}</p><h4>${s.trading.h_charts}</h4><p>${s.trading.p_charts}</p><h4>${s.trading.h_crafting}</h4><p>${s.trading.p_crafting}</p></div></div>`;
+				}
+				if (s.events) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.events.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.events.h_meta}</h4><p>${s.events.p_meta}</p><h4>${s.events.h_achieve}</h4><p>${s.events.p_achieve}</p><h4>${s.events.h_clears}</h4><p>${s.events.p_clears}</p><h4>${s.events.h_farming}</h4><p>${s.events.p_farming}</p></div></div>`;
+				}
+				if (s.credits) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.credits.title}</span><span class="cat-icon">▼</span></div><div class="cat-content"><h4>${s.credits.h_copy}</h4><p>${s.credits.p_copy}</p><h4>${s.credits.h_arch}</h4><p>${s.credits.p_arch}</p><h4>${s.credits.h_dep}</h4><p>${s.credits.p_dep}</p><h4>${s.credits.h_insp}</h4><p>${s.credits.p_insp}</p><h4>${s.credits.h_contrib}</h4><p>${s.credits.p_contrib}</p></div></div>`;
+				}
+				if (s.hotkeys) {
+					html += `<div class="help-cat"><div class="cat-header" onclick="toggleHelp(this)"><span class="cat-title">${s.hotkeys.title}</span><span class="cat-icon">▼</span></div><div class="cat-content" style="padding: 10px;"><div class="shortcut-grid"><div class="shortcut-row">${s.hotkeys.refresh}</div><div class="shortcut-key">${s.hotkeys.k_refresh}</div><div class="shortcut-row">${s.hotkeys.move}</div><div class="shortcut-key">${s.hotkeys.k_move}</div><div class="shortcut-row">${s.hotkeys.resize}</div><div class="shortcut-key">${s.hotkeys.k_resize}</div><div class="shortcut-row">${s.hotkeys.place_marker}</div><div class="shortcut-key">${s.hotkeys.k_place_marker}</div><div class="shortcut-row">${s.hotkeys.delete_marker}</div><div class="shortcut-key">${s.hotkeys.k_delete_marker}</div></div></div></div>`;
+				}
+				const container = document.getElementById('help-container');
+				if (container) container.innerHTML = html;
+				const btnDiscord = document.querySelector('.discord-btn');
+				if (btnDiscord && h.btn_discord) {
+					btnDiscord.innerHTML = `<img src="https://gw2ps.local/Assets/Icons/discord-icon.png" class="discord-icon" alt="Discord Logo"> ${h.btn_discord}`;
+				}
+				const btnWebsite = document.querySelector('.website-btn');
+				if (btnWebsite && h.btn_website) {
+					btnWebsite.innerHTML = `<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" class="website-icon" alt="Tyrian Lens Logo"> ${h.btn_website}`;
+				}
+				const donationText = document.querySelector('.donation-text');
+				if (donationText && h.donation) {
+					donationText.innerText = h.donation;
+				}
+			}
+
+			if (window.DataLoader && window.DataLoader.loadTranslations) {
+				window.DataLoader.loadTranslations().then(() => renderHelp());
+			}
+
 			window.addEventListener('message', (e) => {
+			if (e.data && e.data.action === 'languageChanged') {
+				if (window.DataLoader && window.DataLoader.loadTranslations) {
+					window.DataLoader.loadTranslations(true).then(() => renderHelp());
+				}
+			}
 			if (e.data && e.data.action === 'updateTheme') {
 				document.body.setAttribute('data-theme', e.data.theme);
 			}

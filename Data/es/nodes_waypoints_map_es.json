@@ -1,0 +1,6882 @@
+[
+    {
+        "pos":  [
+                    52889.5,
+                    34117.4
+                ],
+        "name":  "Punto de Ruta de la Tribulación",
+        "type":  "waypoint",
+        "chat_code":  "[&BFYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.1,
+                    34290.6
+                ],
+        "name":  "Punto de Ruta de Tierraescarcha",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54008.3,
+                    34034.7
+                ],
+        "name":  "Punto de Ruta de Dociu",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53816.4,
+                    33263.4
+                ],
+        "name":  "Punto de Ruta de Siete Pinos",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53452.6,
+                    33489.3
+                ],
+        "name":  "Punto de Ruta de Camino Gris",
+        "type":  "waypoint",
+        "chat_code":  "[&BFoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52704.6,
+                    33489
+                ],
+        "name":  "Punto de Ruta de Campoacero",
+        "type":  "waypoint",
+        "chat_code":  "[&BFsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52451.1,
+                    32695
+                ],
+        "name":  "Punto de Ruta de Hondonada de Toran",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53075.5,
+                    32429
+                ],
+        "name":  "Punto de Ruta de Símbolo Hessdallen",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53574.8,
+                    32721.3
+                ],
+        "name":  "Punto de Ruta del Campo de pruebas de Kenning",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.4,
+                    32611.5
+                ],
+        "name":  "Punto de Ruta de Extensión Vasta",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54326,
+                    32033.7
+                ],
+        "name":  "Punto de Ruta de Falla Elotro",
+        "type":  "waypoint",
+        "chat_code":  "[&BGACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53932.7,
+                    32128
+                ],
+        "name":  "Punto de Ruta de Cola de la Montaña",
+        "type":  "waypoint",
+        "chat_code":  "[&BGECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53573.7,
+                    31649.5
+                ],
+        "name":  "Punto de Ruta de Granizo",
+        "type":  "waypoint",
+        "chat_code":  "[&BGICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53272,
+                    31898.2
+                ],
+        "name":  "Punto de Ruta de Cuenca Havfrue",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52909.4,
+                    31809.3
+                ],
+        "name":  "Punto de Ruta de Travelen",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52690.2,
+                    32156.4
+                ],
+        "name":  "Punto de Ruta de Sangredracona",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54213.2,
+                    33707.6
+                ],
+        "name":  "Punto de Ruta de Ciudadela de Granito",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52536.4,
+                    34075.8
+                ],
+        "name":  "Punto de Ruta de Abrazo del Pesar",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51845.7,
+                    34059.2
+                ],
+        "name":  "Punto de Ruta de Paraje de Vanjir",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50668.5,
+                    34081.7
+                ],
+        "name":  "Punto de Ruta de Fauces de Demonio",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52020.8,
+                    33007.3
+                ],
+        "name":  "Punto de Ruta de Deshielo Invernal",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50784.6,
+                    33228.2
+                ],
+        "name":  "Punto de Ruta de Lago Falso",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50639.8,
+                    31314.6
+                ],
+        "name":  "Punto de Ruta de Priorato de Durmand",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52056.5,
+                    31606.6
+                ],
+        "name":  "Punto de Ruta de Lamento",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51805.2,
+                    29889.8
+                ],
+        "name":  "Punto de Ruta de Truenocuernos",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50626.1,
+                    30078.8
+                ],
+        "name":  "Punto de Ruta de Nentor",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51206.3,
+                    33631.4
+                ],
+        "name":  "Punto de Ruta de Heredad de Guutra",
+        "type":  "waypoint",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50628.5,
+                    32378.5
+                ],
+        "name":  "Punto de Ruta de Esparcepiedra",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51645.7,
+                    30941.5
+                ],
+        "name":  "Punto de Ruta de Enclave del Pináculo",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51209.3,
+                    30480.4
+                ],
+        "name":  "Punto de Ruta de Hiendeniebla",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51056.6,
+                    30097.8
+                ],
+        "name":  "Punto de Ruta de Diablo de Hielo",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51039.1,
+                    31474.2
+                ],
+        "name":  "Punto de Ruta de Pico del Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51275.9,
+                    31883.9
+                ],
+        "name":  "Punto de Ruta de Afgar",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51134.7,
+                    32776.7
+                ],
+        "name":  "Punto de Ruta de Puente de la Cascada",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51595.9,
+                    32519.3
+                ],
+        "name":  "Punto de Ruta del Río Falso",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55359.6,
+                    31736.8
+                ],
+        "name":  "Punto de Ruta de Desterrado",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55448.9,
+                    31216.7
+                ],
+        "name":  "Punto de Ruta de Festín del Héroe",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55046.6,
+                    30964.6
+                ],
+        "name":  "Punto de Ruta de Cuernollamada",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55963.4,
+                    30568.8
+                ],
+        "name":  "Punto de Ruta de Ensombrecidos",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55498.1,
+                    30284.9
+                ],
+        "name":  "Punto de Ruta de Taigan",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54895.2,
+                    29732.1
+                ],
+        "name":  "Punto de Ruta de Manantiales de Zelechor",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55115.6,
+                    29004.9
+                ],
+        "name":  "Punto de Ruta de Halvaunt",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55215,
+                    28608.5
+                ],
+        "name":  "Punto de Ruta de Refugio de la Encrucijada",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54887.3,
+                    28256.2
+                ],
+        "name":  "Punto de Ruta de Albacolina",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56027.3,
+                    28351
+                ],
+        "name":  "Punto de Ruta de Paso Dolyak",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55858.5,
+                    27924.5
+                ],
+        "name":  "Punto de Ruta de Soledad",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55447.5,
+                    29750.6
+                ],
+        "name":  "Punto de Ruta de Refugio Dosespuelas",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55920.1,
+                    29598.3
+                ],
+        "name":  "Punto de Ruta de Heredad de Vendraco",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55653.5,
+                    28713.6
+                ],
+        "name":  "Punto de Ruta de Cueva de Dragonperdido",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55803.7,
+                    29098
+                ],
+        "name":  "Punto de Ruta de Heredad de Krennak",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55876.8,
+                    31453.7
+                ],
+        "name":  "Punto de Ruta de Fiordograwl",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54936.8,
+                    30511.5
+                ],
+        "name":  "Punto de Ruta de Osenfold",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52275,
+                    37557
+                ],
+        "name":  "Punto de Ruta de Astrágalo",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52703.3,
+                    37372.2
+                ],
+        "name":  "Punto de Ruta de Serpiente",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53427.3,
+                    37497.4
+                ],
+        "name":  "Punto de Ruta de Okarinoo",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53745.1,
+                    37076.3
+                ],
+        "name":  "Punto de Ruta de Espiral",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.5,
+                    36599.4
+                ],
+        "name":  "Punto de Ruta de Playa de Escama",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52965.4,
+                    36940.2
+                ],
+        "name":  "Punto de Ruta de Sinmoa",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53209.3,
+                    36483.8
+                ],
+        "name":  "Punto de Ruta de Territorios Eztlitl",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52444.4,
+                    36753.5
+                ],
+        "name":  "Punto de Ruta de Rápidos de Espiral",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.3,
+                    35949.1
+                ],
+        "name":  "Punto de Ruta de Tutoría Valance",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53439,
+                    35899
+                ],
+        "name":  "Punto de Ruta de Ogduk",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53844.9,
+                    35324.5
+                ],
+        "name":  "Punto de Ruta de Fundación 86",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53082.4,
+                    35437.1
+                ],
+        "name":  "Punto de Ruta de Papel Blanco",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52594.4,
+                    35193.1
+                ],
+        "name":  "Punto de Ruta de Río Amable",
+        "type":  "waypoint",
+        "chat_code":  "[&BFACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52241.5,
+                    35598
+                ],
+        "name":  "Punto de Ruta de Cardojunco",
+        "type":  "waypoint",
+        "chat_code":  "[&BFECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51953.9,
+                    34727.6
+                ],
+        "name":  "Punto de Ruta de Krongar",
+        "type":  "waypoint",
+        "chat_code":  "[&BFICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53185.3,
+                    34786.5
+                ],
+        "name":  "Punto de Ruta de Velo de Hierro",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52237.6,
+                    37073
+                ],
+        "name":  "Punto de Ruta de Ruinas de Rankor",
+        "type":  "waypoint",
+        "chat_code":  "[&BFQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52216.5,
+                    36527.9
+                ],
+        "name":  "Punto de Ruta de Concordia",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52877.6,
+                    36203
+                ],
+        "name":  "Punto de Ruta de Stromkarl",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55832.5,
+                    27488.8
+                ],
+        "name":  "Punto de Ruta de Arundon",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53880.3,
+                    27565.6
+                ],
+        "name":  "Punto de Ruta de Groznev",
+        "type":  "waypoint",
+        "chat_code":  "[&BHkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56297.6,
+                    25884.3
+                ],
+        "name":  "Punto de Ruta de Tiemblatierra",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56257,
+                    24846.5
+                ],
+        "name":  "Punto de Ruta de Camino de los Cielos Estrellados",
+        "type":  "waypoint",
+        "chat_code":  "[&BHsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55232.5,
+                    25529.5
+                ],
+        "name":  "Punto de Ruta de Abismo del Desaliento",
+        "type":  "waypoint",
+        "chat_code":  "[&BHwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55565.2,
+                    24986.9
+                ],
+        "name":  "Punto de Ruta de Vigilante",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54544.7,
+                    25299.3
+                ],
+        "name":  "Punto de Ruta de Témpano de hielo",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54000.9,
+                    25497.3
+                ],
+        "name":  "Punto de Ruta de Dimotiki",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54299.8,
+                    26253.5
+                ],
+        "name":  "Punto de Ruta de Doscurvas",
+        "type":  "waypoint",
+        "chat_code":  "[&BIACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54678,
+                    26989
+                ],
+        "name":  "Punto de Ruta de Finca de Cieloalto",
+        "type":  "waypoint",
+        "chat_code":  "[&BIECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55396.3,
+                    27075.7
+                ],
+        "name":  "Punto de Ruta de Cimasaltas",
+        "type":  "waypoint",
+        "chat_code":  "[&BIICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55253.1,
+                    26550.2
+                ],
+        "name":  "Punto de Ruta de Campamento de Rocacrestada",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56003.8,
+                    26623.4
+                ],
+        "name":  "Punto de Ruta de Declive del Yak",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54078.8,
+                    26667
+                ],
+        "name":  "Punto de Ruta de Fulgor de Hielo Azul",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53572.2,
+                    24661.7
+                ],
+        "name":  "Punto de Ruta de Drakkar",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55227.5,
+                    25187.3
+                ],
+        "name":  "Punto de Ruta del Honor de las Olas",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50594.5,
+                    29086.7
+                ],
+        "name":  "Punto de Ruta de Skradden",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51814.5,
+                    29365.7
+                ],
+        "name":  "Punto de Ruta de Lornar",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54345,
+                    28046.1
+                ],
+        "name":  "Punto de Ruta de Refugio de Pasoalto",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53547.3,
+                    27818.1
+                ],
+        "name":  "Punto de Ruta de Tristeza del Niño Perdido",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50671.9,
+                    28144.8
+                ],
+        "name":  "Punto de Ruta de Grieta del Erudito",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51750.4,
+                    28038.1
+                ],
+        "name":  "Punto de Ruta de Isenfall",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51949.2,
+                    28780.2
+                ],
+        "name":  "Punto de Ruta de Refugio de Cumulonieve",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50685.3,
+                    28500
+                ],
+        "name":  "Punto de Ruta de Escoltas Serafines",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52847.1,
+                    28438.8
+                ],
+        "name":  "Punto de Ruta de Heredad de Torstvedt",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53033.4,
+                    29370.5
+                ],
+        "name":  "Punto de Ruta de Exilio",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53043.1,
+                    27821.2
+                ],
+        "name":  "Punto de Ruta de Njordstead",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53004.5,
+                    28147.1
+                ],
+        "name":  "Punto de Ruta de Finca Soderhem",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53674.4,
+                    28568.6
+                ],
+        "name":  "Punto de Ruta de Desembarcadero de Halcón de Nieve",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53976.1,
+                    29098.1
+                ],
+        "name":  "Punto de Ruta de Saqueador",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54246.6,
+                    29308.1
+                ],
+        "name":  "Punto de Ruta de Lechuza",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50879.9,
+                    29308.6
+                ],
+        "name":  "Punto de Ruta de Finca de Podaga",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51256.5,
+                    28735.8
+                ],
+        "name":  "Punto de Ruta de Sendas Escarchadas",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52374.3,
+                    29244.8
+                ],
+        "name":  "Punto de Ruta de Valslago",
+        "type":  "waypoint",
+        "chat_code":  "[&BMADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50591.8,
+                    28282.2
+                ],
+        "name":  "Punto de Ruta del Tesoro de Angvar",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8GAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53776.2,
+                    30500.3
+                ],
+        "name":  "Punto de Ruta de Omnipotencia",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53676.8,
+                    30665
+                ],
+        "name":  "Punto de Ruta de Feria de Comercio",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53455.7,
+                    30395.9
+                ],
+        "name":  "Punto de Ruta de Pantera de las Nieves",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53794,
+                    30172.8
+                ],
+        "name":  "Punto de Ruta de Cuervo",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54089.7,
+                    30286.9
+                ],
+        "name":  "Punto de Ruta de Osa",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54035.5,
+                    30693.3
+                ],
+        "name":  "Punto de Ruta de Lobo",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54270.7,
+                    30009.9
+                ],
+        "name":  "Punto de Ruta de Roca del Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54262.6,
+                    30542.2
+                ],
+        "name":  "Punto de Ruta de Leyendas",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54174,
+                    30922.2
+                ],
+        "name":  "Punto de Ruta de Puesto Vigía Oriental",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53839.8,
+                    31018.3
+                ],
+        "name":  "Punto de Ruta de Puesto Vigía Meridional",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53314,
+                    30660.6
+                ],
+        "name":  "Punto de Ruta de Peeta",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53048.7,
+                    30340
+                ],
+        "name":  "Punto de Ruta de Brújula del Héroe",
+        "type":  "waypoint",
+        "chat_code":  "[&BJADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53493.1,
+                    30988.7
+                ],
+        "name":  "Punto de Ruta de Gran Albergue",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53655.5,
+                    30804.9
+                ],
+        "name":  "Punto de Ruta de Balcón Alto",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54983.6,
+                    23969.6
+                ],
+        "name":  "Punto de Ruta de Eclipse del Pesar",
+        "type":  "waypoint",
+        "chat_code":  "[&BH0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54151.6,
+                    24385.5
+                ],
+        "name":  "Punto de Ruta de Bienvenida de Koda",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56733,
+                    37407.9
+                ],
+        "name":  "Punto de Ruta de Corazón de la Revolución",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56677.9,
+                    35196.4
+                ],
+        "name":  "Punto de Ruta de Cubierta de Observación",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58149.9,
+                    36959.7
+                ],
+        "name":  "Punto de Ruta de Amarradero",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58328.5,
+                    35778.5
+                ],
+        "name":  "Punto de Ruta de Fin de la Historia",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58936.7,
+                    18318.8
+                ],
+        "name":  "Punto de Ruta de la Fortaleza de Jora",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56616.3,
+                    17814.7
+                ],
+        "name":  "Punto de Ruta de Aguas Tranquilas Que Hablan",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57864.6,
+                    21794.7
+                ],
+        "name":  "Punto de Ruta del Ojo del Norte",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50992.2,
+                    21878.1
+                ],
+        "name":  "Punto de Ruta del Campamento Base",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50443.8,
+                    19441.1
+                ],
+        "name":  "Punto de Ruta del Campamento Avanzado",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58481.7,
+                    31031.6
+                ],
+        "name":  "Punto de Ruta de Puerta de Vir",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58138.5,
+                    30589.8
+                ],
+        "name":  "Punto de Ruta de Paraje del Humo",
+        "type":  "waypoint",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58121.9,
+                    30173.2
+                ],
+        "name":  "Punto de Ruta de Armería Acerogrís",
+        "type":  "waypoint",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59561.4,
+                    30217.7
+                ],
+        "name":  "Punto de Ruta de Mártir",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59160.5,
+                    30929.8
+                ],
+        "name":  "Punto de Ruta de Punta Temperus",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59821.2,
+                    31407
+                ],
+        "name":  "Punto de Ruta de Ashford",
+        "type":  "waypoint",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59366.9,
+                    31491.5
+                ],
+        "name":  "Punto de Ruta de Adorea",
+        "type":  "waypoint",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60433,
+                    30432.8
+                ],
+        "name":  "Punto de Ruta de Catacumbas Ascalonianas",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60987.2,
+                    30152.3
+                ],
+        "name":  "Punto de Ruta de Ciudad Ascalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61513.2,
+                    30819
+                ],
+        "name":  "Punto de Ruta de Torre Vigilapeñasco",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61694.1,
+                    31267.3
+                ],
+        "name":  "Punto de Ruta de Mirador Desgarraocaso",
+        "type":  "waypoint",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60860,
+                    31342.2
+                ],
+        "name":  "Punto de Ruta de Astillero de Hierromuelle",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58845,
+                    30602.5
+                ],
+        "name":  "Punto de Ruta de Feritas",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58482.8,
+                    31545.8
+                ],
+        "name":  "Punto de Ruta de Décimo Puntoguardia",
+        "type":  "waypoint",
+        "chat_code":  "[&BJgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59896.2,
+                    30718.6
+                ],
+        "name":  "Punto de Ruta de Campamento del Cazador de Espíritus",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61161.7,
+                    31717.8
+                ],
+        "name":  "Punto de Ruta de Garrafolclore",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60922.9,
+                    30687.9
+                ],
+        "name":  "Punto de Ruta de Phasmatis",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58552.5,
+                    31813.9
+                ],
+        "name":  "Punto de Ruta de Hacienda de Langmar",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62150.3,
+                    31333
+                ],
+        "name":  "Punto de Ruta de Último Bar de Copas",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62510.5,
+                    31608.6
+                ],
+        "name":  "Punto de Ruta de Ojoacero",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62505.5,
+                    32210.4
+                ],
+        "name":  "Punto de Ruta de Tumok",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63630.5,
+                    32491.7
+                ],
+        "name":  "Punto de Ruta de Hermanas Gemelas",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63393.2,
+                    31557
+                ],
+        "name":  "Punto de Ruta de Behem",
+        "type":  "waypoint",
+        "chat_code":  "[&BP0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63517.7,
+                    30176.8
+                ],
+        "name":  "Punto de Ruta de Extensión",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62905.8,
+                    29835.6
+                ],
+        "name":  "Punto de Ruta de Piedra Guardián",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63697.8,
+                    29769
+                ],
+        "name":  "Punto de Ruta de Corral de Lunk",
+        "type":  "waypoint",
+        "chat_code":  "[&BAACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63481,
+                    29114.8
+                ],
+        "name":  "Punto de Ruta de Terra Carorunda",
+        "type":  "waypoint",
+        "chat_code":  "[&BAECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62776,
+                    29006.3
+                ],
+        "name":  "Punto de Ruta de Fauces Dienterroto",
+        "type":  "waypoint",
+        "chat_code":  "[&BAICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62128,
+                    28960.8
+                ],
+        "name":  "Punto de Ruta de Puente Prendedor",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62222.5,
+                    29920.2
+                ],
+        "name":  "Punto de Ruta de Vistamarca",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62795.1,
+                    30751.6
+                ],
+        "name":  "Punto de Ruta de Sagrario del Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BAUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62591.4,
+                    29268.2
+                ],
+        "name":  "Punto de Ruta de Arroyo de la Vega",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63533,
+                    30772.8
+                ],
+        "name":  "Punto de Ruta de Garganta de Gastor",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62378,
+                    30660.8
+                ],
+        "name":  "Punto de Ruta de Fuerte Kinar",
+        "type":  "waypoint",
+        "chat_code":  "[&BFADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63344.8,
+                    32096.6
+                ],
+        "name":  "Punto de Ruta de Fuerte de Crestastilla",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62872.7,
+                    31804.3
+                ],
+        "name":  "Punto de Ruta de Camino de Hollín",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62124,
+                    34784.3
+                ],
+        "name":  "Punto de Ruta de Puertas del Halcón",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64080.4,
+                    34496.6
+                ],
+        "name":  "Punto de Ruta de Vigilancia de Filomortal",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63103.9,
+                    33728.1
+                ],
+        "name":  "Punto de Ruta de Cumbre",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61792.4,
+                    34406.1
+                ],
+        "name":  "Punto de Ruta de Vivaque de Tyler",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62073.2,
+                    32995.4
+                ],
+        "name":  "Punto de Ruta de Tenaebron",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63570.6,
+                    32957.4
+                ],
+        "name":  "Punto de Ruta de Campamento de Rosko",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62633.5,
+                    33391.2
+                ],
+        "name":  "Punto de Ruta de Vivaque de Skoll",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61744.7,
+                    33678.2
+                ],
+        "name":  "Punto de Ruta de Mina de Helliot",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63866.4,
+                    33374.5
+                ],
+        "name":  "Punto de Ruta de Vigilancia Colmillofurioso",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62564.3,
+                    33973.4
+                ],
+        "name":  "Punto de Ruta de Buitre",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63112.9,
+                    34430.4
+                ],
+        "name":  "Punto de Ruta de Restos de la Vigilancia del Desfiladero Sangriento",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63654.3,
+                    34933.9
+                ],
+        "name":  "Punto de Ruta de Camino de los Ogros",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62942.9,
+                    35338.2
+                ],
+        "name":  "Punto de Ruta de Puerta Forlorn",
+        "type":  "waypoint",
+        "chat_code":  "[&BFABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61782.8,
+                    35261.6
+                ],
+        "name":  "Punto de Ruta de Fuerte de los Ángeles Caídos",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62781.8,
+                    34729.2
+                ],
+        "name":  "Punto de Ruta de Observador",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62364.5,
+                    35184.1
+                ],
+        "name":  "Punto de Ruta de Kestrel",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62592.5,
+                    32994.5
+                ],
+        "name":  "Punto de Ruta de Rompetrueno",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59744.8,
+                    27162.5
+                ],
+        "name":  "Punto de Ruta de Sati",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58967.9,
+                    26938.7
+                ],
+        "name":  "Punto de Ruta de Arrabio",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59385.2,
+                    27359.9
+                ],
+        "name":  "Punto de Ruta de Puesto de Mando de Tuyere",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58629.5,
+                    27336.5
+                ],
+        "name":  "Punto de Ruta de Brecha Cercenada",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59569.1,
+                    26192.2
+                ],
+        "name":  "Punto de Ruta de Rompedientes",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57895.6,
+                    26719.1
+                ],
+        "name":  "Punto de Ruta de Caos",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58054.7,
+                    27217.1
+                ],
+        "name":  "Punto de Ruta de Vidius Castrum",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57161.4,
+                    26998.7
+                ],
+        "name":  "Punto de Ruta de Apóstata",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56822.4,
+                    26176.7
+                ],
+        "name":  "Punto de Ruta de Hondonada de Óxido",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57651.7,
+                    26176
+                ],
+        "name":  "Punto de Ruta de Vueltatrás",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.7,
+                    25165.5
+                ],
+        "name":  "Punto de Ruta de Lanzagélida",
+        "type":  "waypoint",
+        "chat_code":  "[&BCACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57537.6,
+                    24911.1
+                ],
+        "name":  "Punto de Ruta de Campamento del Cerro Nevado",
+        "type":  "waypoint",
+        "chat_code":  "[&BCECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57974.5,
+                    25299.2
+                ],
+        "name":  "Punto de Ruta de Fuerte de Vorgas",
+        "type":  "waypoint",
+        "chat_code":  "[&BCICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58498,
+                    25047.9
+                ],
+        "name":  "Punto de Ruta de Abandonada",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58584.2,
+                    25384.2
+                ],
+        "name":  "Punto de Ruta de Senecus Castrum",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58958.5,
+                    25673.9
+                ],
+        "name":  "Punto de Ruta de Simurgh",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58275.5,
+                    25871.4
+                ],
+        "name":  "Punto de Ruta de Guardián",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59682.4,
+                    25151.3
+                ],
+        "name":  "Punto de Ruta de Ciudadela de la Llama",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60940.6,
+                    29823.3
+                ],
+        "name":  "Punto de Ruta de Garrahelada",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61524,
+                    29597.6
+                ],
+        "name":  "Punto de Ruta de Lago Aletasangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60281.4,
+                    29394.2
+                ],
+        "name":  "Punto de Ruta de Ruinas de la Antigua Piken",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61117.5,
+                    28788.7
+                ],
+        "name":  "Punto de Ruta de Aldea de Sabueso de Guerra",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61816.4,
+                    28806.8
+                ],
+        "name":  "Punto de Ruta de Demonio",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60585.8,
+                    28536.8
+                ],
+        "name":  "Punto de Ruta de Aldea de Atrapaescamas",
+        "type":  "waypoint",
+        "chat_code":  "[&BOcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60204.9,
+                    28157.2
+                ],
+        "name":  "Punto de Ruta de Campamento de Pelajeliso",
+        "type":  "waypoint",
+        "chat_code":  "[&BOgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61229.2,
+                    28081.3
+                ],
+        "name":  "Punto de Ruta de Campamento de Vigilamarca",
+        "type":  "waypoint",
+        "chat_code":  "[&BOkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61167.5,
+                    26997
+                ],
+        "name":  "Punto de Ruta de Carrera de la Víbora",
+        "type":  "waypoint",
+        "chat_code":  "[&BOoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60641.9,
+                    27418.5
+                ],
+        "name":  "Punto de Ruta de Ciudad de la Estrella de Garradesbocada",
+        "type":  "waypoint",
+        "chat_code":  "[&BOsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60046.1,
+                    27207.5
+                ],
+        "name":  "Punto de Ruta de Baluarte",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60750.2,
+                    26949.7
+                ],
+        "name":  "Punto de Ruta de Campamento de Vigilafuegos",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676,
+                    26282.4
+                ],
+        "name":  "Punto de Ruta de Claro",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61638.1,
+                    26437.9
+                ],
+        "name":  "Punto de Ruta de Corral de Grostogg",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56554.4,
+                    28444.8
+                ],
+        "name":  "Punto de Ruta de Refugio de la Puerta Charr",
+        "type":  "waypoint",
+        "chat_code":  "[&BNkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57831,
+                    28790.4
+                ],
+        "name":  "Punto de Ruta de Páramos Malditos",
+        "type":  "waypoint",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58955.1,
+                    28564.2
+                ],
+        "name":  "Punto de Ruta de Sierrasangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58763,
+                    27859.9
+                ],
+        "name":  "Punto de Ruta de Fuente de Rhand",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57747.5,
+                    29572.9
+                ],
+        "name":  "Punto de Ruta de Nageling",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56935.2,
+                    29685.9
+                ],
+        "name":  "Punto de Ruta de Nolan",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56907.8,
+                    29191.4
+                ],
+        "name":  "Punto de Ruta de Puertavieja",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57093.4,
+                    28347.1
+                ],
+        "name":  "Punto de Ruta de Tajo del Carnicero",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57506.1,
+                    29097.4
+                ],
+        "name":  "Punto de Ruta de Hacienda de Charradis",
+        "type":  "waypoint",
+        "chat_code":  "[&BGABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58484.2,
+                    29675.7
+                ],
+        "name":  "Punto de Ruta de Muro Quebrado",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59357.6,
+                    28078.3
+                ],
+        "name":  "Punto de Ruta de Incendio",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59653.9,
+                    29083.6
+                ],
+        "name":  "Punto de Ruta de Arboleda de Nemus",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59470.4,
+                    29828.4
+                ],
+        "name":  "Punto de Ruta de Brechagua",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58480.3,
+                    28979.9
+                ],
+        "name":  "Punto de Ruta de Hacienda Albacierta",
+        "type":  "waypoint",
+        "chat_code":  "[&BJoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57433.4,
+                    28086.1
+                ],
+        "name":  "Punto de Ruta de Riscosangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59490.3,
+                    28565
+                ],
+        "name":  "Punto de Ruta de Camino del Sagrario",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58937.2,
+                    29193.2
+                ],
+        "name":  "Punto de Ruta de Aserradero Asaltorrojo",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58193.5,
+                    28258
+                ],
+        "name":  "Punto de Ruta de Azotahombres",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58744.2,
+                    28271.8
+                ],
+        "name":  "Punto de Ruta de Filonegro",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57120.3,
+                    31106.2
+                ],
+        "name":  "Punto de Ruta de Gladio",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57733.4,
+                    30623.3
+                ],
+        "name":  "Punto de Ruta de Campo de Formación",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57138,
+                    30368.3
+                ],
+        "name":  "Punto de Ruta de Monumento Memorial",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57379.1,
+                    30254.9
+                ],
+        "name":  "Punto de Ruta de Factorium",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57030,
+                    30146.9
+                ],
+        "name":  "Punto de Ruta de Puerta de Diessa",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56831.1,
+                    30474.5
+                ],
+        "name":  "Punto de Ruta de Aquilón de Ligacus",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57039.2,
+                    30536.1
+                ],
+        "name":  "Punto de Ruta de Azote",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57367.3,
+                    30552.9
+                ],
+        "name":  "Punto de Ruta del Héroe",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56879.8,
+                    31208.5
+                ],
+        "name":  "Punto de Ruta de Ruinas de Rin",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57089,
+                    30642.5
+                ],
+        "name":  "Punto de Ruta de Imperator",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57222,
+                    30898.1
+                ],
+        "name":  "Punto de Ruta del Vertedero",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56605.1,
+                    30513.3
+                ],
+        "name":  "Punto de Ruta de Nolani Encantado",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61288.2,
+                    19612.2
+                ],
+        "name":  "Punto de Ruta de las Llanuras Bélicas",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61726.3,
+                    18513.4
+                ],
+        "name":  "Punto de Ruta del Bosque de Dalada",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60426.8,
+                    18848.4
+                ],
+        "name":  "Punto de Ruta de la Fortaleza de Sangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49731,
+                    38998.8
+                ],
+        "name":  "Punto de Ruta de Paso de las Zarzas",
+        "type":  "waypoint",
+        "chat_code":  "[&BOwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49122,
+                    39051.6
+                ],
+        "name":  "Punto de Ruta de Pico Señal",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50061.3,
+                    40004.1
+                ],
+        "name":  "Punto de Ruta de Fuerte Trinidad",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50385.3,
+                    39950.2
+                ],
+        "name":  "Punto de Ruta de Paso Thorn",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49929,
+                    40404.1
+                ],
+        "name":  "Punto de Ruta de Trueno",
+        "type":  "waypoint",
+        "chat_code":  "[&BPACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49380.2,
+                    40962.5
+                ],
+        "name":  "Punto de Ruta de Saliva Rota",
+        "type":  "waypoint",
+        "chat_code":  "[&BPECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49072.5,
+                    40068.6
+                ],
+        "name":  "Punto de Ruta de Campana de Vísperas",
+        "type":  "waypoint",
+        "chat_code":  "[&BPICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48538,
+                    39525.4
+                ],
+        "name":  "Punto de Ruta de Foro Real",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48348.7,
+                    39852.1
+                ],
+        "name":  "Punto de Ruta de Garrabronce",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47602.2,
+                    40251.9
+                ],
+        "name":  "Punto de Ruta de Antheneum",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48531.7,
+                    40341.5
+                ],
+        "name":  "Punto de Ruta de Marina de la Conquista",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48935.9,
+                    40697.2
+                ],
+        "name":  "Punto de Ruta de Puesto Solitario",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48532.5,
+                    41315.8
+                ],
+        "name":  "Punto de Ruta de Porfía",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48249.8,
+                    40845.8
+                ],
+        "name":  "Punto de Ruta de Xenarius",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47819.1,
+                    40959.7
+                ],
+        "name":  "Punto de Ruta de Victoria Gloriosa",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47420.5,
+                    40811.6
+                ],
+        "name":  "Punto de Ruta de Vigía",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48072.4,
+                    40387.3
+                ],
+        "name":  "Punto de Ruta de Reunión",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50065.2,
+                    39284.9
+                ],
+        "name":  "Punto de Ruta de Pedestal del Terreno Maderero",
+        "type":  "waypoint",
+        "chat_code":  "[&BFgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49736.8,
+                    39268.3
+                ],
+        "name":  "Punto de Ruta de Vientre",
+        "type":  "waypoint",
+        "chat_code":  "[&BFkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47706.6,
+                    39501.8
+                ],
+        "name":  "Punto de Ruta de Bajíos de la Desesperación",
+        "type":  "waypoint",
+        "chat_code":  "[&BOUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44523.8,
+                    41785.7
+                ],
+        "name":  "Punto de Ruta de Paso de Persecución",
+        "type":  "waypoint",
+        "chat_code":  "[&BBcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43631.7,
+                    42391.8
+                ],
+        "name":  "Punto de Ruta de I+D",
+        "type":  "waypoint",
+        "chat_code":  "[&BBgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44208.5,
+                    42598.4
+                ],
+        "name":  "Punto de Ruta de Penitente",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43265.7,
+                    42875.5
+                ],
+        "name":  "Punto de Ruta de Gavbeorn",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43953.6,
+                    43173.1
+                ],
+        "name":  "Punto de Ruta de Verde",
+        "type":  "waypoint",
+        "chat_code":  "[&BBsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44476.2,
+                    42973.6
+                ],
+        "name":  "Punto de Ruta de Puerta del Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44339.4,
+                    43403.7
+                ],
+        "name":  "Punto de Ruta de Jofast",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43853.8,
+                    43751.8
+                ],
+        "name":  "Punto de Ruta de Cumbre del Entrometido",
+        "type":  "waypoint",
+        "chat_code":  "[&BB4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43741.1,
+                    44276.6
+                ],
+        "name":  "Punto de Ruta de Fondeadero",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44754.9,
+                    44115.3
+                ],
+        "name":  "Punto de Ruta de Arah",
+        "type":  "waypoint",
+        "chat_code":  "[&BCADAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44087.2,
+                    42138.6
+                ],
+        "name":  "Punto de Ruta de Sombrabuena de Caer",
+        "type":  "waypoint",
+        "chat_code":  "[&BCEDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43289.7,
+                    45056.9
+                ],
+        "name":  "Punto de Ruta de Sueños Asesinados",
+        "type":  "waypoint",
+        "chat_code":  "[&BCIDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44616.1,
+                    45441.1
+                ],
+        "name":  "Punto de Ruta de Roca del Naufragio",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46866.4,
+                    41177.4
+                ],
+        "name":  "Punto de Ruta de Pagga",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    41268.2
+                ],
+        "name":  "Punto de Ruta de Doric",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46874.7,
+                    40461.2
+                ],
+        "name":  "Punto de Ruta de Hondonadas de Deshechos",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46387.6,
+                    40821.8
+                ],
+        "name":  "Punto de Ruta de Columnata",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46178.6,
+                    41237.6
+                ],
+        "name":  "Punto de Ruta de Valle de Lyss",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46013.5,
+                    39946.8
+                ],
+        "name":  "Punto de Ruta de Unión",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45494.9,
+                    40742.5
+                ],
+        "name":  "Punto de Ruta de Wren",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45969.5,
+                    40323.2
+                ],
+        "name":  "Punto de Ruta de Lyssa",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45132.2,
+                    40523.1
+                ],
+        "name":  "Punto de Ruta de Arco Plagado",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44641.4,
+                    40123.4
+                ],
+        "name":  "Punto de Ruta de Murmullo",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44888.7,
+                    40702.6
+                ],
+        "name":  "Punto de Ruta de Tempestades",
+        "type":  "waypoint",
+        "chat_code":  "[&BLACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43931.2,
+                    39953.1
+                ],
+        "name":  "Punto de Ruta de Versoconjuración",
+        "type":  "waypoint",
+        "chat_code":  "[&BLECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44489.3,
+                    40825.3
+                ],
+        "name":  "Punto de Ruta de Luces",
+        "type":  "waypoint",
+        "chat_code":  "[&BLICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49392.5,
+                    42605
+                ],
+        "name":  "Punto de Ruta del Campamento Reclamación",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43728.4,
+                    28589.9
+                ],
+        "name":  "Punto de Ruta de Shaemoor",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43356.9,
+                    28720.8
+                ],
+        "name":  "Punto de Ruta de Campos",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44094.9,
+                    28803.7
+                ],
+        "name":  "Punto de Ruta de Fuerte",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43584.3,
+                    29518.7
+                ],
+        "name":  "Punto de Ruta de Cruce",
+        "type":  "waypoint",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44548.8,
+                    29806.5
+                ],
+        "name":  "Punto de Ruta de Phinney",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42996.3,
+                    29695.9
+                ],
+        "name":  "Punto de Ruta de Valle",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44239.4,
+                    30073.2
+                ],
+        "name":  "Punto de Ruta de Campamento del Paso de Duramen",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43482,
+                    29972.5
+                ],
+        "name":  "Punto de Ruta de Arcillar",
+        "type":  "waypoint",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44959.4,
+                    30336.3
+                ],
+        "name":  "Punto de Ruta de Refugio de Pantanoperdido",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45150.5,
+                    29080.3
+                ],
+        "name":  "Punto de Ruta de Kryta",
+        "type":  "waypoint",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44714.8,
+                    28616.8
+                ],
+        "name":  "Punto de Ruta de Aserradero de Ojon",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45967.6,
+                    28419.5
+                ],
+        "name":  "Punto de Ruta de Beetletun",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45690.6,
+                    29146.2
+                ],
+        "name":  "Punto de Ruta de Vigilancia de Beetletun",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45274.7,
+                    29755
+                ],
+        "name":  "Punto de Ruta de Perdido de los Dioses",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42863.9,
+                    28509.6
+                ],
+        "name":  "Punto de Ruta de Huerto",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44145.3,
+                    29193.7
+                ],
+        "name":  "Punto de Ruta de Scaver",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47173.8,
+                    28233.9
+                ],
+        "name":  "Punto de Ruta de Faun",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48489.3,
+                    28515.4
+                ],
+        "name":  "Punto de Ruta de Cimaescudo",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46569.9,
+                    26596.1
+                ],
+        "name":  "Punto de Ruta de Desembarcadero del Serafín",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46897.9,
+                    27366.9
+                ],
+        "name":  "Punto de Ruta de Punto de Reunión de Wynchona",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49048.1,
+                    27956.6
+                ],
+        "name":  "Punto de Ruta de Gritta Gris",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47627.1,
+                    28497
+                ],
+        "name":  "Punto de Ruta de Cobijo Nocturno",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46506.2,
+                    27638.7
+                ],
+        "name":  "Punto de Ruta de Demetra",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47862.6,
+                    27455.2
+                ],
+        "name":  "Punto de Ruta de Campamento de Recuperación",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48543.8,
+                    27299.1
+                ],
+        "name":  "Punto de Ruta de Campamento Barricada",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47779.3,
+                    26802.1
+                ],
+        "name":  "Punto de Ruta de Mirador de Trebusha",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47384.1,
+                    26626.6
+                ],
+        "name":  "Punto de Ruta de Campamento Vigilapuente",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48031.8,
+                    26413.9
+                ],
+        "name":  "Punto de Ruta de Campamento de la Intersección",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48809.3,
+                    26174.8
+                ],
+        "name":  "Punto de Ruta de Pezuña Hendida",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46498.7,
+                    26140.6
+                ],
+        "name":  "Punto de Ruta de Arca",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47559.2,
+                    26139.4
+                ],
+        "name":  "Punto de Ruta de Arcallion",
+        "type":  "waypoint",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43995.6,
+                    27954
+                ],
+        "name":  "Punto de Ruta de Dwayna",
+        "type":  "waypoint",
+        "chat_code":  "[&BCMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44043.5,
+                    26498.9
+                ],
+        "name":  "Punto de Ruta de Grenth",
+        "type":  "waypoint",
+        "chat_code":  "[&BCQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44637.7,
+                    27624.8
+                ],
+        "name":  "Punto de Ruta de Kormir",
+        "type":  "waypoint",
+        "chat_code":  "[&BCUDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44660.4,
+                    26885
+                ],
+        "name":  "Punto de Ruta de Lyssa",
+        "type":  "waypoint",
+        "chat_code":  "[&BCYDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43376.3,
+                    27570.9
+                ],
+        "name":  "Punto de Ruta de Melandru",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43389.5,
+                    26850.3
+                ],
+        "name":  "Punto de Ruta de Balthazar",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44036,
+                    27193.3
+                ],
+        "name":  "Punto de Ruta de Palacio",
+        "type":  "waypoint",
+        "chat_code":  "[&BCkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43917.3,
+                    27584.1
+                ],
+        "name":  "Punto de Ruta de Feria",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44410.5,
+                    27239.1
+                ],
+        "name":  "Punto de Ruta de Rurikton",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43628.3,
+                    27229.6
+                ],
+        "name":  "Punto de Ruta de Pabellón de la Corona",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43818.9,
+                    26866.1
+                ],
+        "name":  "Punto de Ruta de Ossa",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44266.4,
+                    26928.4
+                ],
+        "name":  "Punto de Ruta de Salma",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44048,
+                    27570.5
+                ],
+        "name":  "Punto de Ruta de Ministros",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42695.1,
+                    30680.5
+                ],
+        "name":  "Punto de Ruta de Fuerte Salma",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42759.5,
+                    31679.2
+                ],
+        "name":  "Punto de Ruta de Jefe Supremo",
+        "type":  "waypoint",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42299.7,
+                    31027.5
+                ],
+        "name":  "Punto de Ruta de Halacon",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45163.2,
+                    30664
+                ],
+        "name":  "Punto de Ruta de los Acogidos",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45766.9,
+                    30799.6
+                ],
+        "name":  "Punto de Ruta de Delania",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43537.7,
+                    32163.9
+                ],
+        "name":  "Punto de Ruta de Campo de Comercio Ireko",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42841,
+                    32330.2
+                ],
+        "name":  "Punto de Ruta de Zona del Corazonsombrío",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43833.9,
+                    31419.4
+                ],
+        "name":  "Punto de Ruta de Viathano",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45999,
+                    31579.6
+                ],
+        "name":  "Punto de Ruta de Llaganegra",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45528.3,
+                    31950.6
+                ],
+        "name":  "Punto de Ruta de Cereboth",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44742.9,
+                    32051.8
+                ],
+        "name":  "Punto de Ruta de Refugio de Sobrelago",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44843,
+                    31380.9
+                ],
+        "name":  "Punto de Ruta de Refugio de Kessex",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44559.4,
+                    30633.6
+                ],
+        "name":  "Punto de Ruta de Campamento Cuevafuerte",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43589.1,
+                    30655.8
+                ],
+        "name":  "Punto de Ruta de Campamento de Pezuñagrís",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45432.8,
+                    31161
+                ],
+        "name":  "Punto de Ruta de Campamento de los Terraplenes",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44257.8,
+                    30860.3
+                ],
+        "name":  "Punto de Ruta de Zanja",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46449.5,
+                    30416.7
+                ],
+        "name":  "Punto de Ruta de Valle del Viajero",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.7,
+                    29131.4
+                ],
+        "name":  "Punto de Ruta de Puerta de Guardapiedra",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48027,
+                    30390
+                ],
+        "name":  "Punto de Ruta de Vacuholgado",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48089,
+                    29884.4
+                ],
+        "name":  "Punto de Ruta de Úguth",
+        "type":  "waypoint",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48668.1,
+                    30456
+                ],
+        "name":  "Punto de Ruta de Campos de la Abundancia",
+        "type":  "waypoint",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48551.5,
+                    28867.2
+                ],
+        "name":  "Punto de Ruta de Orilla de Provernia",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50046.1,
+                    29938
+                ],
+        "name":  "Punto de Ruta de Refugio de la Intersección",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50142.9,
+                    29190.2
+                ],
+        "name":  "Punto de Ruta de Refugio de Invierno",
+        "type":  "waypoint",
+        "chat_code":  "[&BO4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46693.6,
+                    30206
+                ],
+        "name":  "Punto de Ruta de Primer Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46734.4,
+                    29727.6
+                ],
+        "name":  "Punto de Ruta de Talajiano",
+        "type":  "waypoint",
+        "chat_code":  "[&BIwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47155.5,
+                    28761.6
+                ],
+        "name":  "Punto de Ruta de Colina Sangrienta",
+        "type":  "waypoint",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47004.9,
+                    29558.9
+                ],
+        "name":  "Punto de Ruta de Terraza de Nebo",
+        "type":  "waypoint",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47695.4,
+                    29692.5
+                ],
+        "name":  "Punto de Ruta de Asentamiento de Ascalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BI8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48224.9,
+                    29350.5
+                ],
+        "name":  "Punto de Ruta de Campos del Norte",
+        "type":  "waypoint",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48875.6,
+                    29957.1
+                ],
+        "name":  "Punto de Ruta de Caserío Manzarrincón",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49506.9,
+                    28945.7
+                ],
+        "name":  "Punto de Ruta de Fortaleza de la Vigilia",
+        "type":  "waypoint",
+        "chat_code":  "[&BJIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49981.6,
+                    30510.4
+                ],
+        "name":  "Punto de Ruta de Puertagélida",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49351.5,
+                    29825.7
+                ],
+        "name":  "Punto de Ruta de Almuten",
+        "type":  "waypoint",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47324.9,
+                    30117.2
+                ],
+        "name":  "Punto de Ruta de Puenteleón",
+        "type":  "waypoint",
+        "chat_code":  "[&BJsDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49697.7,
+                    29287.1
+                ],
+        "name":  "Punto de Ruta de Nieveciegos",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48632.1,
+                    29278
+                ],
+        "name":  "Punto de Ruta de Bergantín",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47358.7,
+                    29501
+                ],
+        "name":  "Punto de Ruta de Campos de Sangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48571,
+                    30868.4
+                ],
+        "name":  "Punto de Ruta del Barrio del Comodoro",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49927.1,
+                    31138.4
+                ],
+        "name":  "Punto de Ruta de Peñasco del clan",
+        "type":  "waypoint",
+        "chat_code":  "[&BA0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49619.8,
+                    32044.1
+                ],
+        "name":  "Punto de Ruta de Distrito Costasangre",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48996.8,
+                    31853.2
+                ],
+        "name":  "Punto de Ruta de Transporte a Isla Garra",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49063.6,
+                    30911
+                ],
+        "name":  "Punto de Ruta de Foro del Comerciante",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49309.1,
+                    31222.8
+                ],
+        "name":  "Punto de Ruta de Plaza del Centro de Puertas",
+        "type":  "waypoint",
+        "chat_code":  "[&BBEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48229.9,
+                    31688.5
+                ],
+        "name":  "Punto de Ruta de Cornisas Variadas",
+        "type":  "waypoint",
+        "chat_code":  "[&BC0EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48402.5,
+                    31156.5
+                ],
+        "name":  "Punto de Ruta de Distrito Occidental",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48663.5,
+                    31395.1
+                ],
+        "name":  "Punto de Ruta de Puerto del Sagrario",
+        "type":  "waypoint",
+        "chat_code":  "[&BC8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49457.3,
+                    31700
+                ],
+        "name":  "Punto de Ruta de Fuerte Marriner",
+        "type":  "waypoint",
+        "chat_code":  "[&BDAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49749.7,
+                    30961.2
+                ],
+        "name":  "Punto de Ruta de Distrito Oriental",
+        "type":  "waypoint",
+        "chat_code":  "[&BDEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50162.3,
+                    31436.3
+                ],
+        "name":  "Punto de Ruta de Caverna",
+        "type":  "waypoint",
+        "chat_code":  "[&BDIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49957.1,
+                    31690.5
+                ],
+        "name":  "Punto de Ruta de Costalejana",
+        "type":  "waypoint",
+        "chat_code":  "[&BDMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49515.9,
+                    32337.6
+                ],
+        "name":  "Punto de Ruta de Promontorio de Arco",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48753.2,
+                    32780
+                ],
+        "name":  "Punto de Ruta de Pesadumbre",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49245,
+                    33072.2
+                ],
+        "name":  "Punto de Ruta de Cimatormenta",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50112.6,
+                    32532.3
+                ],
+        "name":  "Punto de Ruta de Refugio de Vigilapantano",
+        "type":  "waypoint",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49985.5,
+                    33404.8
+                ],
+        "name":  "Punto de Ruta de Remanda",
+        "type":  "waypoint",
+        "chat_code":  "[&BKcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48915.9,
+                    33772.2
+                ],
+        "name":  "Punto de Ruta de Gaviota Sonriente",
+        "type":  "waypoint",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48357.9,
+                    34155
+                ],
+        "name":  "Punto de Ruta de Campamento Barrera",
+        "type":  "waypoint",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49401.4,
+                    34071.5
+                ],
+        "name":  "Punto de Ruta de Vigilia Estuario",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50197.2,
+                    34085.1
+                ],
+        "name":  "Punto de Ruta de Ruinaperdida",
+        "type":  "waypoint",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50184.3,
+                    34696.1
+                ],
+        "name":  "Punto de Ruta de Campamento de la Ciénaga",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48993.3,
+                    34736.1
+                ],
+        "name":  "Punto de Ruta de Pesar",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48999.2,
+                    34955
+                ],
+        "name":  "Punto de Ruta de Castavall",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48315,
+                    35172.4
+                ],
+        "name":  "Punto de Ruta de Jelako",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50033.1,
+                    35244.4
+                ],
+        "name":  "Punto de Ruta de Voluntad Susurrante",
+        "type":  "waypoint",
+        "chat_code":  "[&BLABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49550.2,
+                    32792.4
+                ],
+        "name":  "Punto de Ruta de Sin Salida",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45546,
+                    35647.4
+                ],
+        "name":  "Punto de Ruta de Punta León",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46637.7,
+                    35611.8
+                ],
+        "name":  "Punto de Ruta de Punta Orgullo",
+        "type":  "waypoint",
+        "chat_code":  "[&BNIGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46589.2,
+                    36791.8
+                ],
+        "name":  "Punto de Ruta de Islote Perlado",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45605.9,
+                    36766.5
+                ],
+        "name":  "Punto de Ruta del Campamento Karka",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44683.5,
+                    36898.4
+                ],
+        "name":  "Punto de Ruta del Refugio de Owain",
+        "type":  "waypoint",
+        "chat_code":  "[&BNgGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46363.5,
+                    36069.5
+                ],
+        "name":  "Punto de Ruta del Puesto Avanzado de Kiel",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49331.4,
+                    32136.9
+                ],
+        "name":  "Punto de Ruta del Aeródromo",
+        "type":  "waypoint",
+        "chat_code":  "[&BCAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45004.7,
+                    27001.9
+                ],
+        "name":  "Punto de Ruta de Desembarco de Doric",
+        "type":  "waypoint",
+        "chat_code":  "[&BK0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45006,
+                    25823.3
+                ],
+        "name":  "Punto de Ruta de Retiro de Hojarroja",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46062.5,
+                    27237.5
+                ],
+        "name":  "Punto de Ruta de Bazar del Lago",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42723.9,
+                    36217.2
+                ],
+        "name":  "Punto de Ruta de Astoria",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43729.7,
+                    35620.3
+                ],
+        "name":  "Punto de Ruta de Espiral",
+        "type":  "waypoint",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42620.1,
+                    35734.6
+                ],
+        "name":  "Punto de Ruta de Astoria de Caer",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42534.7,
+                    35459.8
+                ],
+        "name":  "Punto de Ruta de Cueva de Espigador",
+        "type":  "waypoint",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43061.2,
+                    35067.5
+                ],
+        "name":  "Punto de Ruta de Mirador de Brigid",
+        "type":  "waypoint",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43759.5,
+                    34975.3
+                ],
+        "name":  "Punto de Ruta de Cordillera",
+        "type":  "waypoint",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42869.2,
+                    34533
+                ],
+        "name":  "Punto de Ruta de Mabon",
+        "type":  "waypoint",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42302.5,
+                    33993.5
+                ],
+        "name":  "Punto de Ruta de Ciudad de Cathal",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42659.5,
+                    33826.3
+                ],
+        "name":  "Punto de Ruta de Refugio de Caledon",
+        "type":  "waypoint",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43593.9,
+                    34162.9
+                ],
+        "name":  "Punto de Ruta de Escalera del Titán",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42446.1,
+                    33409
+                ],
+        "name":  "Punto de Ruta de Falias Thorp",
+        "type":  "waypoint",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43345.5,
+                    33197.9
+                ],
+        "name":  "Punto de Ruta de Poblado de Annwen",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43487.8,
+                    32858.3
+                ],
+        "name":  "Punto de Ruta de Refugio Azotakrait",
+        "type":  "waypoint",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42252.6,
+                    32679.8
+                ],
+        "name":  "Punto de Ruta de Wychmire",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43019,
+                    35643
+                ],
+        "name":  "Punto de Ruta de Monte del Guarda",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42884.2,
+                    33154.5
+                ],
+        "name":  "Punto de Ruta de Estación Vial de la Guardia del León",
+        "type":  "waypoint",
+        "chat_code":  "[&BEwDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42351.3,
+                    32964.6
+                ],
+        "name":  "Punto de Ruta de la Pérgola del Crepúsculo",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43515.9,
+                    35981.1
+                ],
+        "name":  "Punto de Ruta de Sleive",
+        "type":  "waypoint",
+        "chat_code":  "[&BP4FAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40171.7,
+                    36402.5
+                ],
+        "name":  "Punto de Ruta de Soren Draa",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41201.9,
+                    36636.2
+                ],
+        "name":  "Punto de Ruta de Cataratas Jeztar",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41739.1,
+                    36013.3
+                ],
+        "name":  "Punto de Ruta de Selvas Akk",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40758.4,
+                    35412.8
+                ],
+        "name":  "Punto de Ruta de Complejo del Desembarcadero de Rana",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41281.5,
+                    34770.2
+                ],
+        "name":  "Punto de Ruta de Refugio Arterium",
+        "type":  "waypoint",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41822.1,
+                    34087.5
+                ],
+        "name":  "Punto de Ruta de Grada Hexano",
+        "type":  "waypoint",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40577.9,
+                    34465.8
+                ],
+        "name":  "Punto de Ruta de Campamento de los Supervivientes",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40840.7,
+                    33722.1
+                ],
+        "name":  "Punto de Ruta de Muridiano",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41307.6,
+                    35437.2
+                ],
+        "name":  "Punto de Ruta de Desider Atum",
+        "type":  "waypoint",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40388.2,
+                    35749.2
+                ],
+        "name":  "Punto de Ruta de Antigua Fábrica de Gólems",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41036.1,
+                    36064.2
+                ],
+        "name":  "Punto de Ruta de Lago",
+        "type":  "waypoint",
+        "chat_code":  "[&BK8EAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40094.7,
+                    34617.4
+                ],
+        "name":  "Punto de Ruta de Hormiguero",
+        "type":  "waypoint",
+        "chat_code":  "[&BLAEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40694.4,
+                    35000.4
+                ],
+        "name":  "Punto de Ruta de Territorios Michotl",
+        "type":  "waypoint",
+        "chat_code":  "[&BLEEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.1,
+                    35125.7
+                ],
+        "name":  "Punto de Ruta de Cuatl",
+        "type":  "waypoint",
+        "chat_code":  "[&BLIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41015.8,
+                    34337.7
+                ],
+        "name":  "Punto de Ruta de Artergon",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40631.8,
+                    36216.7
+                ],
+        "name":  "Punto de Ruta de Unidad Hidrón",
+        "type":  "waypoint",
+        "chat_code":  "[&BPcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41833.6,
+                    32676.5
+                ],
+        "name":  "Punto de Ruta de Fuente Atenta",
+        "type":  "waypoint",
+        "chat_code":  "[&BFwAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41907.4,
+                    31191.8
+                ],
+        "name":  "Punto de Ruta de Wendon",
+        "type":  "waypoint",
+        "chat_code":  "[&BF0AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    32459.5
+                ],
+        "name":  "Punto de Ruta de Túneles",
+        "type":  "waypoint",
+        "chat_code":  "[&BF4AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41311,
+                    32306.9
+                ],
+        "name":  "Punto de Ruta de Colina",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8AAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41275.2,
+                    31983.9
+                ],
+        "name":  "Punto de Ruta de Barrio Este",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40165.6,
+                    31856.7
+                ],
+        "name":  "Punto de Ruta de Brilitine",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40190.6,
+                    31059.9
+                ],
+        "name":  "Punto de Ruta de Observadores Serafines",
+        "type":  "waypoint",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39175.1,
+                    31346.1
+                ],
+        "name":  "Punto de Ruta de Campos del Patíbulo",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38992.5,
+                    32509
+                ],
+        "name":  "Punto de Ruta de Punto de la Triforja",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40015.9,
+                    32542.8
+                ],
+        "name":  "Punto de Ruta de Metamágicos de Ulta",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40733.6,
+                    33298.8
+                ],
+        "name":  "Punto de Ruta de Mrot Boru",
+        "type":  "waypoint",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39870.1,
+                    33051.4
+                ],
+        "name":  "Punto de Ruta de Levatinieblas",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38936.7,
+                    31509.4
+                ],
+        "name":  "Punto de Ruta de Laboratorio de Proxémica",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkGAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43050.6,
+                    37063.8
+                ],
+        "name":  "Punto de Ruta de Caledon",
+        "type":  "waypoint",
+        "chat_code":  "[&BBIEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43161.8,
+                    37494.4
+                ],
+        "name":  "Punto de Ruta de Feria Superior",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43171.8,
+                    37445.5
+                ],
+        "name":  "Punto de Ruta de Calculista",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43213.5,
+                    37448.8
+                ],
+        "name":  "Punto de Ruta de Ronan",
+        "type":  "waypoint",
+        "chat_code":  "[&BLwEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38851.9,
+                    37177.6
+                ],
+        "name":  "Punto de Ruta de Patio Métrico",
+        "type":  "waypoint",
+        "chat_code":  "[&BBMEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38775.1,
+                    36969.6
+                ],
+        "name":  "Punto de Ruta de Patio Magustano",
+        "type":  "waypoint",
+        "chat_code":  "[&BBQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38581.5,
+                    37130
+                ],
+        "name":  "Punto de Ruta de Patio Magigato",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38702.5,
+                    37961.4
+                ],
+        "name":  "Punto de Ruta de Incubación",
+        "type":  "waypoint",
+        "chat_code":  "[&BLUEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47322,
+                    34668
+                ],
+        "name":  "Mistlock Sanctuary Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38742.8,
+                    37098.1
+                ],
+        "name":  "Punto de Ruta de Cuenta",
+        "type":  "waypoint",
+        "chat_code":  "[&BLYEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38854.5,
+                    37110.4
+                ],
+        "name":  "Punto de Ruta de Aprendiz",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38598.7,
+                    37064.6
+                ],
+        "name":  "Punto de Ruta de Investigación",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38745.7,
+                    37235.7
+                ],
+        "name":  "Punto de Ruta de Auxiliar",
+        "type":  "waypoint",
+        "chat_code":  "[&BLkEAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38102.1,
+                    38251
+                ],
+        "name":  "Punto de Ruta de Puerto",
+        "type":  "waypoint",
+        "chat_code":  "[&BAcFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50740.4,
+                    39671.9
+                ],
+        "name":  "Punto de Ruta de Vallelóbrego",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50706.2,
+                    38116.2
+                ],
+        "name":  "Punto de Ruta de Govoran",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51007.6,
+                    38441.5
+                ],
+        "name":  "Punto de Ruta de Criterio",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51326.6,
+                    38959.6
+                ],
+        "name":  "Punto de Ruta de Fuerte Rompefuegos",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51296,
+                    39360.4
+                ],
+        "name":  "Punto de Ruta de Spaecia Illogica",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51797.3,
+                    38107.5
+                ],
+        "name":  "Punto de Ruta de Bardo",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51987.3,
+                    39515.1
+                ],
+        "name":  "Punto de Ruta de Vorágine",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52162.5,
+                    38540
+                ],
+        "name":  "Punto de Ruta de Ceniciento",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52453.3,
+                    39564.9
+                ],
+        "name":  "Punto de Ruta de Avernan",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8CAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52372.1,
+                    37859.2
+                ],
+        "name":  "Punto de Ruta de Flecha Rota",
+        "type":  "waypoint",
+        "chat_code":  "[&BNACAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52794.1,
+                    38992.3
+                ],
+        "name":  "Punto de Ruta de Isla Reverencia del Buey",
+        "type":  "waypoint",
+        "chat_code":  "[&BNECAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53195,
+                    39622.9
+                ],
+        "name":  "Punto de Ruta de Isla Irwin",
+        "type":  "waypoint",
+        "chat_code":  "[&BNICAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52967.7,
+                    37946.5
+                ],
+        "name":  "Punto de Ruta de Guantelete",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53917.5,
+                    39300.4
+                ],
+        "name":  "Punto de Ruta de Antigua Zona de Trineos",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54220.8,
+                    40050.6
+                ],
+        "name":  "Punto de Ruta de Juicio",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51773.1,
+                    39890.5
+                ],
+        "name":  "Punto de Ruta de Magmático",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYCAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53743.2,
+                    38322.7
+                ],
+        "name":  "Punto de Ruta de Crisol de la Eternidad",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIFAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48420,
+                    35663.5
+                ],
+        "name":  "Punto de Ruta de Cañada de Orvar",
+        "type":  "waypoint",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49607.4,
+                    35721.8
+                ],
+        "name":  "Punto de Ruta de Fuerte Cadencia",
+        "type":  "waypoint",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50128.7,
+                    35786.4
+                ],
+        "name":  "Punto de Ruta de Paraje de Braggi",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50075.9,
+                    36234.5
+                ],
+        "name":  "Punto de Ruta de Inundasal",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49239.5,
+                    36452.3
+                ],
+        "name":  "Punto de Ruta de Territorios Sagrados Zintl",
+        "type":  "waypoint",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48721.9,
+                    36264.1
+                ],
+        "name":  "Punto de Ruta de Garganta del Océano",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48297.4,
+                    37012.5
+                ],
+        "name":  "Punto de Ruta de Forvar",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49398.3,
+                    37058.2
+                ],
+        "name":  "Punto de Ruta de Cabeza de Toade",
+        "type":  "waypoint",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50234.1,
+                    37084
+                ],
+        "name":  "Punto de Ruta de Ranaflamígera",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    50229.3,
+                    38119.2
+                ],
+        "name":  "Punto de Ruta de Encapotada",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49789.8,
+                    38320.4
+                ],
+        "name":  "Punto de Ruta de Aguasal",
+        "type":  "waypoint",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49164.7,
+                    37688.1
+                ],
+        "name":  "Punto de Ruta de Aleem",
+        "type":  "waypoint",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48647.6,
+                    38360.6
+                ],
+        "name":  "Punto de Ruta de Costa Astillada",
+        "type":  "waypoint",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48380.7,
+                    37754
+                ],
+        "name":  "Punto de Ruta de Bruuluunu",
+        "type":  "waypoint",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49822.3,
+                    37647.4
+                ],
+        "name":  "Punto de Ruta de Aldea Tierraseca",
+        "type":  "waypoint",
+        "chat_code":  "[&BE0DAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49260.1,
+                    38212.2
+                ],
+        "name":  "Punto de Ruta de Zarza de Caer",
+        "type":  "waypoint",
+        "chat_code":  "[&BLMDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49626.8,
+                    35965.8
+                ],
+        "name":  "Punto de Ruta de Mire",
+        "type":  "waypoint",
+        "chat_code":  "[&BLQDAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39109.2
+                ],
+        "name":  "Punto de Ruta de Muelles del Bazar",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55717.5,
+                    39277.5
+                ],
+        "name":  "Punto de Ruta de Muelles Celestiales",
+        "type":  "waypoint",
+        "chat_code":  "[&BB0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36204.7,
+                    36974.5
+                ],
+        "name":  "Punto de Ruta de Campamento Avanzado Central",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36986.7,
+                    37143
+                ],
+        "name":  "Punto de Ruta de Campamento Avanzado del Sur",
+        "type":  "waypoint",
+        "chat_code":  "[&BE8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35730.2,
+                    36555.7
+                ],
+        "name":  "Punto de Ruta de Campamento Avanzado del Norte",
+        "type":  "waypoint",
+        "chat_code":  "[&BFIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36118.5,
+                    37357.4
+                ],
+        "name":  "Punto de Ruta de Campamento Superior Central",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35648.7,
+                    38076.6
+                ],
+        "name":  "Punto de Ruta de Territorio del Dragón del Sur",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36654.2,
+                    37490.9
+                ],
+        "name":  "Punto de Ruta de Campamento Superior del Sur",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35435.9,
+                    37715
+                ],
+        "name":  "Punto de Ruta de Territorio del Dragón Central",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34756.5,
+                    37366.8
+                ],
+        "name":  "Punto de Ruta de Territorio del Dragón del Norte",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35531.9,
+                    36790.1
+                ],
+        "name":  "Punto de Ruta de Campamento Superior del Norte",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34318.4,
+                    33966.2
+                ],
+        "name":  "Punto de Ruta de la Ciudad de los Olvidados",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33672.4,
+                    32820.5
+                ],
+        "name":  "Punto de Ruta del Peregrino",
+        "type":  "waypoint",
+        "chat_code":  "[&BNYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34402.5,
+                    33143.6
+                ],
+        "name":  "Punto de Ruta de Vigilanorte",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34227.8,
+                    34590.9
+                ],
+        "name":  "Punto de Ruta de Vigilasur",
+        "type":  "waypoint",
+        "chat_code":  "[&BAIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33703.9,
+                    33522.1
+                ],
+        "name":  "Punto de Ruta de Vigilaoeste",
+        "type":  "waypoint",
+        "chat_code":  "[&BAYIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34864.1,
+                    35025
+                ],
+        "name":  "Punto de Ruta de Hondonada de los Chak",
+        "type":  "waypoint",
+        "chat_code":  "[&BEkIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35047.7,
+                    33802.8
+                ],
+        "name":  "Punto de Ruta de Vigilaeste",
+        "type":  "waypoint",
+        "chat_code":  "[&BGwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36673.7,
+                    35237.7
+                ],
+        "name":  "Punto de Ruta de Campamento Ogro",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37246.5,
+                    35515.6
+                ],
+        "name":  "Punto de Ruta de Confluencia de Líneas Ley",
+        "type":  "waypoint",
+        "chat_code":  "[&BPUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37974.7,
+                    35495.3
+                ],
+        "name":  "Punto de Ruta de Campamento de RACE",
+        "type":  "waypoint",
+        "chat_code":  "[&BAAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37716.8,
+                    34709.8
+                ],
+        "name":  "Punto de Ruta de Rata Novus",
+        "type":  "waypoint",
+        "chat_code":  "[&BAMIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37039.4,
+                    34324.5
+                ],
+        "name":  "Punto de Ruta de Teku Nuhoch",
+        "type":  "waypoint",
+        "chat_code":  "[&BAwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35826,
+                    34605.7
+                ],
+        "name":  "Punto de Ruta de Campamento de la Orden de los Susurros",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35651.7,
+                    35858.9
+                ],
+        "name":  "Punto de Ruta de Pasaje del Dragón",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34501.6,
+                    31503.7
+                ],
+        "name":  "Punto de Ruta de Valor de Mellaggan",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36479.7,
+                    31660.6
+                ],
+        "name":  "Punto de Ruta de Pico de la Catástrofe",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36032.8,
+                    31135.7
+                ],
+        "name":  "Punto de Ruta de Jaka Itzel",
+        "type":  "waypoint",
+        "chat_code":  "[&BOAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34083.3,
+                    32201.2
+                ],
+        "name":  "Punto de Ruta de Nave de Faren",
+        "type":  "waypoint",
+        "chat_code":  "[&BO8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35554.9,
+                    32384.1
+                ],
+        "name":  "Punto de Ruta de Ruinas Veladas",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33681.2,
+                    32396.7
+                ],
+        "name":  "Punto de Ruta del Camino Traicionero",
+        "type":  "waypoint",
+        "chat_code":  "[&BBwIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33684.6,
+                    29911.2
+                ],
+        "name":  "Punto de Ruta de Excavación del Cañón",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33951.8,
+                    30648.6
+                ],
+        "name":  "Punto de Ruta de Mirador de la Ribera",
+        "type":  "waypoint",
+        "chat_code":  "[&BFEIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34211.1,
+                    29897.3
+                ],
+        "name":  "Punto de Ruta de Plaza Alta",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34612.9,
+                    30938.2
+                ],
+        "name":  "Punto de Ruta de Túnel del Santuario",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34234.5,
+                    30347.5
+                ],
+        "name":  "Punto de Ruta de Precipicio Central",
+        "type":  "waypoint",
+        "chat_code":  "[&BMIIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34786.5,
+                    30849.3
+                ],
+        "name":  "Punto de Ruta de Coliseo de Arenisca",
+        "type":  "waypoint",
+        "chat_code":  "[&BPQIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35511.3,
+                    30577.1
+                ],
+        "name":  "Punto de Ruta de Profundidades de las Fauces",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35827.6,
+                    30738.4
+                ],
+        "name":  "Punto de Ruta de Zona de Impacto",
+        "type":  "waypoint",
+        "chat_code":  "[&BEEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35212.1,
+                    30583.8
+                ],
+        "name":  "Punto de Ruta de Aeronave de Guardalma",
+        "type":  "waypoint",
+        "chat_code":  "[&BEsJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35482.2,
+                    30692.4
+                ],
+        "name":  "Punto de Ruta de Mirador del Zelote",
+        "type":  "waypoint",
+        "chat_code":  "[&BE4JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.4,
+                    32717.8
+                ],
+        "name":  "Punto de Ruta de Prosperidad",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38299.1,
+                    33089
+                ],
+        "name":  "Punto de Ruta de Entrada a Cima Seca",
+        "type":  "waypoint",
+        "chat_code":  "[&BIAHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36895,
+                    32688.1
+                ],
+        "name":  "Punto de Ruta de Puente de Hiedras",
+        "type":  "waypoint",
+        "chat_code":  "[&BIYHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37730.7,
+                    32727.2
+                ],
+        "name":  "Punto de Ruta de Refugio de Restauración",
+        "type":  "waypoint",
+        "chat_code":  "[&BIgHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36713.1,
+                    32755.1
+                ],
+        "name":  "Punto de Ruta de Taller de Reparaciones",
+        "type":  "waypoint",
+        "chat_code":  "[&BJcHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38451.1,
+                    31736.5
+                ],
+        "name":  "Punto de Ruta del Campamento Determinación",
+        "type":  "waypoint",
+        "chat_code":  "[&BH8HAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37668.8,
+                    32070.6
+                ],
+        "name":  "Punto de Ruta de las Profundidades Ocultas",
+        "type":  "waypoint",
+        "chat_code":  "[&BKwHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38233.6,
+                    31107.6
+                ],
+        "name":  "Punto de Ruta de Gruta de Diqueseco",
+        "type":  "waypoint",
+        "chat_code":  "[&BLoHAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55830.2,
+                    60838.7
+                ],
+        "name":  "Punto de Ruta del Observatorio",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57792.9,
+                    61028.3
+                ],
+        "name":  "Punto de Ruta de los Muelles de Chalon",
+        "type":  "waypoint",
+        "chat_code":  "[&BAkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    56265.3,
+                    62042.9
+                ],
+        "name":  "Punto de Ruta de Amanecer del Campeón",
+        "type":  "waypoint",
+        "chat_code":  "[&BBoLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42924.4,
+                    22729.7
+                ],
+        "name":  "Punto de ruta de Guarida de la Cosecha",
+        "type":  "waypoint",
+        "chat_code":  "[&BK4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41475.2,
+                    23594.3
+                ],
+        "name":  "Punto de ruta de las termas",
+        "type":  "waypoint",
+        "chat_code":  "[&BMkOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43186.1,
+                    21873.1
+                ],
+        "name":  "Punto de ruta de la Costa de la Cosecha",
+        "type":  "waypoint",
+        "chat_code":  "[&BN8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40859.9,
+                    22900.7
+                ],
+        "name":  "Punto de ruta del puesto avanzado de criaturas errantes",
+        "type":  "waypoint",
+        "chat_code":  "[&BPsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42951.9,
+                    23723.2
+                ],
+        "name":  "Punto de ruta del Campamento Luna del Resguardo Astral",
+        "type":  "waypoint",
+        "chat_code":  "[&BCcPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41864.4,
+                    22647.7
+                ],
+        "name":  "Punto de ruta del Valle Otoñal",
+        "type":  "waypoint",
+        "chat_code":  "[&BC4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40824.6,
+                    16638.4
+                ],
+        "name":  "Punto de ruta de Cacería del Forrajeador",
+        "type":  "waypoint",
+        "chat_code":  "[&BLcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39306.1,
+                    16382.6
+                ],
+        "name":  "Punto de ruta de la Cuenca Infecta",
+        "type":  "waypoint",
+        "chat_code":  "[&BLgOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40127.6,
+                    14659.2
+                ],
+        "name":  "Punto de ruta de las Llanuras Azotadas",
+        "type":  "waypoint",
+        "chat_code":  "[&BCoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39237.2,
+                    15524.6
+                ],
+        "name":  "Punto de ruta del Cráter Sanguino",
+        "type":  "waypoint",
+        "chat_code":  "[&BCwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36051.3,
+                    11654.2
+                ],
+        "name":  "Punto de ruta de Arribo del Manto",
+        "type":  "waypoint",
+        "chat_code":  "[&BGEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37988.2,
+                    12288.6
+                ],
+        "name":  "Punto de ruta de Nódulo Oculto",
+        "type":  "waypoint",
+        "chat_code":  "[&BG0PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34312.3,
+                    11578
+                ],
+        "name":  "Zona de preparación de la Alianza",
+        "type":  "waypoint",
+        "chat_code":  "[&BFAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40203.4,
+                    45862.7
+                ],
+        "name":  "Punto de Ruta de la Puerta de la Fisura",
+        "type":  "waypoint",
+        "chat_code":  "[&BFUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38980.3,
+                    46425.7
+                ],
+        "name":  "Punto de Ruta del Promontorio",
+        "type":  "waypoint",
+        "chat_code":  "[&BF8JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39809.1,
+                    45114.6
+                ],
+        "name":  "Punto de Ruta del Sendero Desmoronado",
+        "type":  "waypoint",
+        "chat_code":  "[&BGAJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38284.7,
+                    46256.3
+                ],
+        "name":  "Punto de Ruta del Circo de los Náufragos",
+        "type":  "waypoint",
+        "chat_code":  "[&BHgJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36016.2,
+                    41919.2
+                ],
+        "name":  "Punto de Ruta de Desembarco del Marinero",
+        "type":  "waypoint",
+        "chat_code":  "[&BL0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37310,
+                    41714.3
+                ],
+        "name":  "Punto de Ruta de Baluarte Pagano",
+        "type":  "waypoint",
+        "chat_code":  "[&BM0JAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36589.4,
+                    41018.7
+                ],
+        "name":  "Punto de Ruta de Hondonada Vetusta",
+        "type":  "waypoint",
+        "chat_code":  "[&BNUJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21852.2,
+                    104468
+                ],
+        "name":  "Punto de Ruta de los Muelles del Reflejo",
+        "type":  "waypoint",
+        "chat_code":  "[&BPMMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Punto de Ruta del Cristal del Reflejo",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22018.7,
+                    105151
+                ],
+        "name":  "Punto de Ruta de la Arena del Reflejo",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34181,
+                    103953
+                ],
+        "name":  "Punto de Ruta del Complejo de la Cosecha",
+        "type":  "waypoint",
+        "chat_code":  "[&BKAMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33825.5,
+                    102383
+                ],
+        "name":  "Punto de Ruta de la Cantera de Jade",
+        "type":  "waypoint",
+        "chat_code":  "[&BKIMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34126,
+                    105319
+                ],
+        "name":  "Punto de Ruta del Mar Congelado",
+        "type":  "waypoint",
+        "chat_code":  "[&BPEMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    33392,
+                    104381
+                ],
+        "name":  "Punto de Ruta de la Hermandad",
+        "type":  "waypoint",
+        "chat_code":  "[&BBENAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34978.6,
+                    104479
+                ],
+        "name":  "Punto de Ruta de los Portavoces",
+        "type":  "waypoint",
+        "chat_code":  "[&BDsNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29844.8,
+                    101425
+                ],
+        "name":  "Punto de Ruta de Piedra Arbórea",
+        "type":  "waypoint",
+        "chat_code":  "[&BGMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29851.8,
+                    100973
+                ],
+        "name":  "Punto de Ruta del Club Canach",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25472.8,
+                    99591.6
+                ],
+        "name":  "Punto de Ruta del Paseo",
+        "type":  "waypoint",
+        "chat_code":  "[&BMYMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25946,
+                    98633
+                ],
+        "name":  "Punto de Ruta de los Altos Ajardinados",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26674.2,
+                    99438.3
+                ],
+        "name":  "Punto de Ruta del Barrio de los Ministerios",
+        "type":  "waypoint",
+        "chat_code":  "[&BBkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27869.7,
+                    99381
+                ],
+        "name":  "Punto de Ruta de la Plaza de Lutgardis",
+        "type":  "waypoint",
+        "chat_code":  "[&BCANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22949.4,
+                    102166
+                ],
+        "name":  "Punto de Ruta de la Aldea",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21672.7,
+                    102058
+                ],
+        "name":  "Punto de Ruta del Monasterio",
+        "type":  "waypoint",
+        "chat_code":  "[&BL8MAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23637.6,
+                    100727
+                ],
+        "name":  "Punto de Ruta de los Muelles de Haiju",
+        "type":  "waypoint",
+        "chat_code":  "[&BGQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23191.2,
+                    101452
+                ],
+        "name":  "Punto de Ruta del Distrito de Daigo",
+        "type":  "waypoint",
+        "chat_code":  "[&BGUNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30896.1,
+                    101005
+                ],
+        "name":  "Punto de Ruta de la Chatarrería",
+        "type":  "waypoint",
+        "chat_code":  "[&BIsMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32842,
+                    103030
+                ],
+        "name":  "Punto de Ruta de la Aldea de Mori",
+        "type":  "waypoint",
+        "chat_code":  "[&BMcMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30020.8,
+                    102042
+                ],
+        "name":  "Punto de Ruta de los zu Heltzer",
+        "type":  "waypoint",
+        "chat_code":  "[&BMoMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    30311.7,
+                    102714
+                ],
+        "name":  "Punto de Ruta de Kropa",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32675.6,
+                    101324
+                ],
+        "name":  "Punto de Ruta de Qinkai",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    32767.6,
+                    102107
+                ],
+        "name":  "Punto de Ruta de la Puerta de Jade",
+        "type":  "waypoint",
+        "chat_code":  "[&BPkMAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37423.6,
+                    102153
+                ],
+        "name":  "Punto de Ruta de Hueco del Behemot",
+        "type":  "waypoint",
+        "chat_code":  "[&BJINAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37815,
+                    103075
+                ],
+        "name":  "Punto de Ruta Terminal de los Luxon",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38285.3,
+                    101596
+                ],
+        "name":  "Punto de Ruta de Punta de Pilar de Jade",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37631.4,
+                    100871
+                ],
+        "name":  "Punto de Ruta de Explotación Minera Park",
+        "type":  "waypoint",
+        "chat_code":  "[&BKoNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24102.9,
+                    22231.4
+                ],
+        "name":  "Punto de Ruta del Patio de la Torre",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24327.1,
+                    23532.9
+                ],
+        "name":  "Punto de Ruta de Luz de Droknar",
+        "type":  "waypoint",
+        "chat_code":  "[&BL4NAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26331.3,
+                    23073.8
+                ],
+        "name":  "Punto de Ruta de Paseo de Rata Novus",
+        "type":  "waypoint",
+        "chat_code":  "[&BOANAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25830,
+                    24166.2
+                ],
+        "name":  "Punto de Ruta del campamento del Resguardo Astral",
+        "type":  "waypoint",
+        "chat_code":  "[&BA4OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26976.9,
+                    23979.3
+                ],
+        "name":  "Punto de Ruta del campamento de refugiados de Garenhoff",
+        "type":  "waypoint",
+        "chat_code":  "[&BBUOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    26836.3,
+                    24387.4
+                ],
+        "name":  "Punto de Ruta de la Baliza de las Eras",
+        "type":  "waypoint",
+        "chat_code":  "[&BCsOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25402.1,
+                    23927.5
+                ],
+        "name":  "Punto de Ruta de Voto de Cernícalo",
+        "type":  "waypoint",
+        "chat_code":  "[&BD8OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25559.4,
+                    22867.4
+                ],
+        "name":  "Punto de Ruta de campamento de observación",
+        "type":  "waypoint",
+        "chat_code":  "[&BEYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25172.4,
+                    20160.5
+                ],
+        "name":  "Punto de Ruta del Bastión de la Fuerza",
+        "type":  "waypoint",
+        "chat_code":  "[&BNMNAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24086.1,
+                    19983.7
+                ],
+        "name":  "Punto de Ruta del Bastión de lo Celestial",
+        "type":  "waypoint",
+        "chat_code":  "[&BAoOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23898.1,
+                    21158.7
+                ],
+        "name":  "Punto de Ruta del Bastión de lo Natural",
+        "type":  "waypoint",
+        "chat_code":  "[&BDQOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23750.8,
+                    19530.4
+                ],
+        "name":  "Punto de Ruta del Bastión del Equilibrio",
+        "type":  "waypoint",
+        "chat_code":  "[&BD0OAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25159,
+                    21075.9
+                ],
+        "name":  "Punto de Ruta del Bastión del Conocimiento",
+        "type":  "waypoint",
+        "chat_code":  "[&BEIOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23134.7,
+                    20587.4
+                ],
+        "name":  "Punto de Ruta del Bastión de lo Oscuro",
+        "type":  "waypoint",
+        "chat_code":  "[&BEcOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22367.2,
+                    23760.7
+                ],
+        "name":  "Punto de Ruta de Campamento del Resguardo Astral",
+        "type":  "waypoint",
+        "chat_code":  "[&BGYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21733.5,
+                    22801.1
+                ],
+        "name":  "Punto de ruta de vivac avanzado",
+        "type":  "waypoint",
+        "chat_code":  "[&BHYOAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7748.18,
+                    58054.1
+                ],
+        "name":  "Punto de ruta de Campamento del Cazador",
+        "type":  "waypoint",
+        "chat_code":  "[&BIoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7618.46,
+                    58835.9
+                ],
+        "name":  "Punto de ruta de expedición del Priorato",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ4PAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    8698.36,
+                    59533.1
+                ],
+        "name":  "Punto de ruta de vivac de apoyo",
+        "type":  "waypoint",
+        "chat_code":  "[&BMAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11173,
+                    59803.2
+                ],
+        "name":  "Punto de ruta de Taberna Canach",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11740,
+                    57967.3
+                ],
+        "name":  "Punto de Ruta de Leviatán Oscuro",
+        "type":  "waypoint",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    11661.4,
+                    59029.4
+                ],
+        "name":  "Punto de ruta de puerto de Vainajardín",
+        "type":  "waypoint",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60972.9,
+                    43251.6
+                ],
+        "name":  "Punto de Ruta del Templo de Kormir",
+        "type":  "waypoint",
+        "chat_code":  "[&BEAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61588.6,
+                    44187.2
+                ],
+        "name":  "Punto de Ruta del Cañón del Destino",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58615.4,
+                    43742.9
+                ],
+        "name":  "Punto de Ruta de Amnoon",
+        "type":  "waypoint",
+        "chat_code":  "[&BLsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    40452.9
+                ],
+        "name":  "Punto de Ruta de Corral Lommuld",
+        "type":  "waypoint",
+        "chat_code":  "[&BGoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60676.5,
+                    42149.4
+                ],
+        "name":  "Punto de Ruta de Puesto Avanzado de Makali",
+        "type":  "waypoint",
+        "chat_code":  "[&BGsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59352.1,
+                    41882.9
+                ],
+        "name":  "Punto de Ruta de Aguarreluciente",
+        "type":  "waypoint",
+        "chat_code":  "[&BJEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59604.9,
+                    40332.9
+                ],
+        "name":  "Punto de Ruta de Rancho Saltoalto",
+        "type":  "waypoint",
+        "chat_code":  "[&BJ0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57691.8,
+                    40331.8
+                ],
+        "name":  "Punto de Ruta de Socavón Abandonado",
+        "type":  "waypoint",
+        "chat_code":  "[&BKQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64453.1,
+                    52290.7
+                ],
+        "name":  "Punto de Ruta de Mirador de la Caverna",
+        "type":  "waypoint",
+        "chat_code":  "[&BKEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64611,
+                    51738
+                ],
+        "name":  "Punto de Ruta de Arena Venteada",
+        "type":  "waypoint",
+        "chat_code":  "[&BIIKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65172.6,
+                    51485.6
+                ],
+        "name":  "Punto de Ruta de Cúpula de Punto Estratégico",
+        "type":  "waypoint",
+        "chat_code":  "[&BNcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64843.8,
+                    51650.5
+                ],
+        "name":  "Punto de Ruta de Terraza de Refugio",
+        "type":  "waypoint",
+        "chat_code":  "[&BN0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60886.5,
+                    52307.6
+                ],
+        "name":  "Punto de Ruta del Dominio de Joko",
+        "type":  "waypoint",
+        "chat_code":  "[&BAsKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60442.7,
+                    50248.3
+                ],
+        "name":  "Punto de Ruta de la Senda del Azote",
+        "type":  "waypoint",
+        "chat_code":  "[&BHMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59123.2,
+                    52734.9
+                ],
+        "name":  "Punto de Ruta del Camino del Chacal de Arena",
+        "type":  "waypoint",
+        "chat_code":  "[&BHcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59187.1,
+                    50521.2
+                ],
+        "name":  "Punto de Ruta de Tierras Oscuras",
+        "type":  "waypoint",
+        "chat_code":  "[&BKMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61423.3,
+                    51140.4
+                ],
+        "name":  "Punto de Ruta de la Guarida de los Olvidados",
+        "type":  "waypoint",
+        "chat_code":  "[&BMEKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60080.7,
+                    48404.7
+                ],
+        "name":  "Punto de Ruta de la Franja de Huesos",
+        "type":  "waypoint",
+        "chat_code":  "[&BNwKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60363.6,
+                    46367.2
+                ],
+        "name":  "Punto de Ruta del Campamento del Oasis de Olishar",
+        "type":  "waypoint",
+        "chat_code":  "[&BCgKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    61075,
+                    45581
+                ],
+        "name":  "Punto de Ruta de la Sombra del Augurio",
+        "type":  "waypoint",
+        "chat_code":  "[&BFMKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59093.8,
+                    46548.8
+                ],
+        "name":  "Punto de Ruta de Rancho Mantarraya",
+        "type":  "waypoint",
+        "chat_code":  "[&BGcKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66421.2,
+                    54770.7
+                ],
+        "name":  "Punto de Ruta de la Academia Vehtendi",
+        "type":  "waypoint",
+        "chat_code":  "[&BA8KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65111.6,
+                    54720.3
+                ],
+        "name":  "Punto de Ruta de Necrópolis",
+        "type":  "waypoint",
+        "chat_code":  "[&BEoKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    67375.7,
+                    53930.7
+                ],
+        "name":  "Punto de Ruta de Ruinas del Mercado",
+        "type":  "waypoint",
+        "chat_code":  "[&BHQKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63792.2,
+                    52749.9
+                ],
+        "name":  "Punto de Ruta de Valle Peñascoso",
+        "type":  "waypoint",
+        "chat_code":  "[&BKUKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65531.2,
+                    53474.3
+                ],
+        "name":  "Punto de Ruta de Seborhin",
+        "type":  "waypoint",
+        "chat_code":  "[&BNAKAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64290.5,
+                    53303.7
+                ],
+        "name":  "Punto de Ruta del Palacio de Vehjin",
+        "type":  "waypoint",
+        "chat_code":  "[&BO0KAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54424.7,
+                    57340
+                ],
+        "name":  "Punto de Ruta de Campamento de Anniogel",
+        "type":  "waypoint",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53327,
+                    56442.8
+                ],
+        "name":  "Punto de Ruta de Atholma",
+        "type":  "waypoint",
+        "chat_code":  "[&BEMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66016.1,
+                    61284.5
+                ],
+        "name":  "Punto de Ruta de Territorios Apizmic",
+        "type":  "waypoint",
+        "chat_code":  "[&BFALAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64765.1,
+                    61579.3
+                ],
+        "name":  "Punto de Ruta del Campamento Aliado",
+        "type":  "waypoint",
+        "chat_code":  "[&BFcLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66572.2,
+                    58608.9
+                ],
+        "name":  "Punto de Ruta de Aldea de Yatendi",
+        "type":  "waypoint",
+        "chat_code":  "[&BH4LAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    64761.5,
+                    59142.4
+                ],
+        "name":  "Punto de Ruta de Venganza de las Almas",
+        "type":  "waypoint",
+        "chat_code":  "[&BIMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    63986.3,
+                    57861
+                ],
+        "name":  "Punto de Ruta de Paso de Venta",
+        "type":  "waypoint",
+        "chat_code":  "[&BJMLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66277.1,
+                    56515.4
+                ],
+        "name":  "Punto de Ruta de Capellanía Reclamada",
+        "type":  "waypoint",
+        "chat_code":  "[&BJkLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44863.7,
+                    50382
+                ],
+        "name":  "Punto de Ruta del Inframundo",
+        "type":  "waypoint",
+        "chat_code":  "[&BNELAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46579,
+                    50768.9
+                ],
+        "name":  "Punto de Ruta del Dominio de los Perdidos de Melandru",
+        "type":  "waypoint",
+        "chat_code":  "[&BNILAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44341.9,
+                    48961.8
+                ],
+        "name":  "Punto de Ruta del Bosque Ardiente",
+        "type":  "waypoint",
+        "chat_code":  "[&BOYLAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35973,
+                    33210
+                ],
+        "name":  "Central Hollow Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BP8IAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35727,
+                    33286
+                ],
+        "name":  "Arena Tower Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BNQIAAA=]",
+        "desc":  "requires guild arena"
+    },
+    {
+        "pos":  [
+                    36293,
+                    33455
+                ],
+        "name":  "Cavern Mine Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHIIAAA=]",
+        "desc":  "requires guild mine"
+    },
+    {
+        "pos":  [
+                    35393,
+                    33662
+                ],
+        "name":  "Surface Tunnel Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAEJAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35911,
+                    32706
+                ],
+        "name":  "Waterfall Plaza Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BOEIAAA=]",
+        "desc":  "requires further exploration"
+    },
+    {
+        "pos":  [
+                    3804.34,
+                    60931.1
+                ],
+        "name":  "Punto de ruta del puesto avanzado del Bosqueprofundo",
+        "type":  "waypoint",
+        "chat_code":  "[&BOQPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4867.48,
+                    61003.2
+                ],
+        "name":  "Punto de ruta del exterior del sagrario",
+        "type":  "waypoint",
+        "chat_code":  "[&BPAPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3722.91,
+                    61850.8
+                ],
+        "name":  "Punto de ruta del Templo de la Abnegación",
+        "type":  "waypoint",
+        "chat_code":  "[&BPoPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36649.7,
+                    36232.2
+                ],
+        "name":  "Punto de Ruta de Campamento Base del Pacto",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36809,
+                    36525.5
+                ],
+        "name":  "Punto de Ruta sur de Campamento Base del Pacto",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5162.33,
+                    62438.5
+                ],
+        "name":  "Punto de ruta del Descanso del Peregrino",
+        "type":  "waypoint",
+        "chat_code":  "[&BPwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3657.8,
+                    58080.6
+                ],
+        "name":  "Punto de ruta de Adytum del Decano",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8QAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4953.2,
+                    59329.6
+                ],
+        "name":  "Punto de ruta de la Sala de Asamblea",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5819.8,
+                    59557.2
+                ],
+        "name":  "Punto de ruta del Vestíbulo Sellado",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35165.7,
+                    31785.4
+                ],
+        "name":  "Punto de Ruta del Campamento del Pacto",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46814,
+                    48720
+                ],
+        "name":  "Punto de Ruta del Estado Mayor del Pacto",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4LAAA=]",
+        "desc":  ""
+    }
+]

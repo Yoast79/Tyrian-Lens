@@ -2,9 +2,15 @@
   "active": true,
   "motds": [
     {
-      "id": "motd_npc_coords",
-      "title": "NPC coordinates wanted!",
-      "message": "<div style='text-align: center;'>I want to keep filling the list of  NPC's and their coordinates.<br> Please, if you see a missing NPC, stand exactly on top of it.<br> Use the <span class='motd-highlight-btn'>Report Node</span> button and use the name of the NPC as <strong>Node Name</strong>. Thank you!",
+      "id": "motd_v1_3_9_clears",
+      "title": "Watchlist Updated!",
+      "message": "<div style='text-align: center;'><strong>I want to keep filling the list of NPC's and their coordinates.</strong></div><br>Please, if you see a missing NPC, stand <em>exactly</em> on top of it and report the <span class='motd-highlight-btn'>Node</span> with the name of the NPC. <img class='inline-icon' style='width: 20px; height: 20px; vertical-align: middle; margin: 0 4px;' src='https://wiki.guildwars2.com/images/d/d2/Waypoint_%28map_icon%29.png' /><br><br><div style='text-align: center;'><u>Thank you!</u></div>",
+      "active": false
+    },
+    {
+      "id": "motd_new_4530",
+      "title": "Castora Coordinates update",
+      "message": "<div style='text-align: center;'>I have updated the maps in Castora with the coordinates for</div> <br><div style='text-align: center;'><span class='motd-highlight-btn'>POI's</span> <span class='motd-highlight-btn'>Waypoints</span> <span class='motd-highlight-btn'>Mastery Insights</span> <span class='motd-highlight-btn'>Hearts</span></div><br><br><div style='text-align: center;'>If you see any missing coordinates, please report them with the <span class='motd-highlight-btn'>Report Node</span> button in the bottom left.</div>\n      ",
       "active": true
     }
   ]

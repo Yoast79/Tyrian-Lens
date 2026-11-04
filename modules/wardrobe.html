@@ -58,7 +58,7 @@
 	<body>
 		<div class="section-title">Wardrobe</div>
 		<div class="search-container">
-			<input type="text" class="search-box" id="wardrobe-search" placeholder="SEARCH WARDROBE..." autocomplete="off" oninput="triggerSearch()">
+			<input type="text" class="search-box" id="wardrobe-search" data-i18n-ph="common.search_wardrobe" placeholder="SEARCH WARDROBE..." autocomplete="off" oninput="triggerSearch()">
 				<span class="clear-btn" id="clear-search-btn" onclick="clearSearch()">✕</span>
 			</div>
 		<div class="tab-container">
@@ -76,6 +76,10 @@
 			if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
 			window.addEventListener('message', (e) => {
+				if (e.data.action === 'languageChanged') {
+					window.location.reload();
+					return;
+				}
 				if (e.data.action === 'uiScaleChanged') {
 					if (e.data.value === 'large') document.body.classList.add('ui-large');
 					else document.body.classList.remove('ui-large');
@@ -163,6 +167,7 @@
 		<script src="collectibles.js"></script>
 		<script src="home.js"></script>
 		<script src="dyes.js"></script>
+		<script src="data_loader.js"></script>
 		<script src="core.js"></script>
 	</body>
 </html>

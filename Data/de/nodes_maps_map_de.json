@@ -1,0 +1,1916 @@
+[
+    {
+        "pos":  [
+                    53376,
+                    32960
+                ],
+        "name":  "Schauflerschreck-Klippen",
+        "type":  "map",
+        "level":  "40-50",
+        "waypoints":  18,
+        "hearts":  11,
+        "heropoints":  6,
+        "pois":  24,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51328,
+                    32128
+                ],
+        "name":  "Lornars Pass",
+        "type":  "map",
+        "level":  "25-40",
+        "waypoints":  17,
+        "hearts":  15,
+        "heropoints":  9,
+        "pois":  43,
+        "vistas":  10,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55424,
+                    29952
+                ],
+        "name":  "Wanderer-Hügel",
+        "type":  "map",
+        "level":  "1-15",
+        "waypoints":  17,
+        "hearts":  15,
+        "heropoints":  8,
+        "pois":  20,
+        "vistas":  10,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52864,
+                    36160
+                ],
+        "name":  "Baumgrenzen-Fälle",
+        "type":  "map",
+        "level":  "50-60",
+        "waypoints":  19,
+        "hearts":  11,
+        "heropoints":  5,
+        "pois":  13,
+        "vistas":  6,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55040,
+                    25984
+                ],
+        "name":  "Eisklamm-Sund",
+        "type":  "map",
+        "level":  "70-80",
+        "waypoints":  16,
+        "hearts":  11,
+        "heropoints":  7,
+        "pois":  20,
+        "vistas":  8,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52480,
+                    28672
+                ],
+        "name":  "Schneekuhlenhöhen",
+        "type":  "map",
+        "level":  "15-25",
+        "waypoints":  19,
+        "hearts":  13,
+        "heropoints":  6,
+        "pois":  11,
+        "vistas":  6,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53664,
+                    30432
+                ],
+        "name":  "Hoelbrak",
+        "type":  "map",
+        "level":  "0",
+        "waypoints":  14,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  24,
+        "vistas":  5,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57984,
+                    21504
+                ],
+        "name":  "Auge des Nordens",
+        "type":  "map",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55040,
+                    23854
+                ],
+        "name":  "Bitterfrost-Grenzland",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  4,
+        "heropoints":  0,
+        "pois":  13,
+        "vistas":  5,
+        "masteries":  3,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57820,
+                    36936
+                ],
+        "name":  "Donnerkopf-Gipfel",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  4,
+        "heropoints":  0,
+        "pois":  27,
+        "vistas":  7,
+        "masteries":  5,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57191,
+                    18009
+                ],
+        "name":  "Bjora-Sümpfe",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  29,
+        "vistas":  8,
+        "masteries":  7,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    51218,
+                    20334
+                ],
+        "name":  "Nieselwald-Küste",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  37,
+        "vistas":  16,
+        "masteries":  9,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59904,
+                    30976
+                ],
+        "name":  "Ebenen von Aschfurt",
+        "type":  "map",
+        "level":  "1-15",
+        "waypoints":  18,
+        "hearts":  18,
+        "heropoints":  6,
+        "pois":  17,
+        "vistas":  10,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62998,
+                    30464
+                ],
+        "name":  "Flammenkamm-Steppe",
+        "type":  "map",
+        "level":  "40-50",
+        "waypoints":  18,
+        "hearts":  15,
+        "heropoints":  5,
+        "pois":  10,
+        "vistas":  5,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62976,
+                    34176
+                ],
+        "name":  "Felder der Verwüstung",
+        "type":  "map",
+        "level":  "30-40",
+        "waypoints":  17,
+        "hearts":  13,
+        "heropoints":  5,
+        "pois":  20,
+        "vistas":  6,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58240,
+                    26240
+                ],
+        "name":  "Feuerherzhügel",
+        "type":  "map",
+        "level":  "60-70",
+        "waypoints":  18,
+        "hearts":  12,
+        "heropoints":  7,
+        "pois":  16,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60928,
+                    27904
+                ],
+        "name":  "Eisenmark",
+        "type":  "map",
+        "level":  "50-60",
+        "waypoints":  14,
+        "hearts":  13,
+        "heropoints":  6,
+        "pois":  14,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    58048,
+                    28760
+                ],
+        "name":  "Diessa-Plateau",
+        "type":  "map",
+        "level":  "15-25",
+        "waypoints":  19,
+        "hearts":  15,
+        "heropoints":  8,
+        "pois":  17,
+        "vistas":  10,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57088,
+                    30460
+                ],
+        "name":  "Schwarze Zitadelle",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  12,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  17,
+        "vistas":  5,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    60992,
+                    18784
+                ],
+        "name":  "Grothmar-Tal",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  31,
+        "vistas":  10,
+        "masteries":  2,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48688,
+                    40192
+                ],
+        "name":  "Meerenge der Verwüstung",
+        "type":  "map",
+        "level":  "70-75",
+        "waypoints":  20,
+        "hearts":  0,
+        "heropoints":  12,
+        "pois":  30,
+        "vistas":  6,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43904,
+                    43648
+                ],
+        "name":  "Fluchküste",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  13,
+        "hearts":  0,
+        "heropoints":  17,
+        "pois":  28,
+        "vistas":  5,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45184,
+                    40576
+                ],
+        "name":  "Malchors Sprung",
+        "type":  "map",
+        "level":  "75-80",
+        "waypoints":  13,
+        "hearts":  0,
+        "heropoints":  15,
+        "pois":  37,
+        "vistas":  5,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48688,
+                    42184
+                ],
+        "name":  "Zaubersängerlände",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  1,
+        "hearts":  5,
+        "heropoints":  0,
+        "pois":  17,
+        "vistas":  4,
+        "masteries":  5,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44416,
+                    29248
+                ],
+        "name":  "Königintal",
+        "type":  "map",
+        "level":  "1-15",
+        "waypoints":  16,
+        "hearts":  17,
+        "heropoints":  7,
+        "pois":  21,
+        "vistas":  9,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47808,
+                    27264
+                ],
+        "name":  "Harathi-Hinterland",
+        "type":  "map",
+        "level":  "35-45",
+        "waypoints":  15,
+        "hearts":  11,
+        "heropoints":  6,
+        "pois":  15,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43968,
+                    27136
+                ],
+        "name":  "Götterfels",
+        "type":  "map",
+        "level":  "0",
+        "waypoints":  13,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  21,
+        "vistas":  6,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    44224,
+                    31509
+                ],
+        "name":  "Kessex-Hügel",
+        "type":  "map",
+        "level":  "15-25",
+        "waypoints":  16,
+        "hearts":  14,
+        "heropoints":  5,
+        "pois":  20,
+        "vistas":  9,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48320,
+                    29568
+                ],
+        "name":  "Gendarran-Felder",
+        "type":  "map",
+        "level":  "25-35",
+        "waypoints":  22,
+        "hearts":  11,
+        "heropoints":  7,
+        "pois":  17,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49216,
+                    31488
+                ],
+        "name":  "Löwenstein",
+        "type":  "map",
+        "level":  "-",
+        "waypoints":  13,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  26,
+        "vistas":  11,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49212,
+                    33792
+                ],
+        "name":  "Blutstrom-Küste",
+        "type":  "map",
+        "level":  "45-55",
+        "waypoints":  15,
+        "hearts":  13,
+        "heropoints":  6,
+        "pois":  18,
+        "vistas":  7,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45668,
+                    36216
+                ],
+        "name":  "Südlicht-Bucht",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  6,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45568,
+                    26884
+                ],
+        "name":  "Doric-See",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  6,
+        "heropoints":  0,
+        "pois":  16,
+        "vistas":  9,
+        "masteries":  5,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43072,
+                    34432
+                ],
+        "name":  "Caledon-Wald",
+        "type":  "map",
+        "level":  "1-15",
+        "waypoints":  18,
+        "hearts":  19,
+        "heropoints":  7,
+        "pois":  20,
+        "vistas":  8,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41024,
+                    35200
+                ],
+        "name":  "Provinz Metrica",
+        "type":  "map",
+        "level":  "1-15",
+        "waypoints":  16,
+        "hearts":  16,
+        "heropoints":  8,
+        "pois":  23,
+        "vistas":  9,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40384,
+                    32192
+                ],
+        "name":  "Brisban-Wildnis",
+        "type":  "map",
+        "level":  "15-25",
+        "waypoints":  13,
+        "hearts":  16,
+        "heropoints":  8,
+        "pois":  20,
+        "vistas":  7,
+        "masteries":  1,
+        "mastery_icon":  "mi_ibs.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    43200,
+                    37384
+                ],
+        "name":  "Der Hain",
+        "type":  "map",
+        "level":  "0",
+        "waypoints":  4,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  19,
+        "vistas":  6,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    38848,
+                    36928
+                ],
+        "name":  "Rata Sum",
+        "type":  "map",
+        "level":  "0",
+        "waypoints":  9,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  19,
+        "vistas":  5,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52480,
+                    38912
+                ],
+        "name":  "Mahlstromgipfel",
+        "type":  "map",
+        "level":  "60-70",
+        "waypoints":  17,
+        "hearts":  11,
+        "heropoints":  7,
+        "pois":  32,
+        "vistas":  7,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    49280,
+                    37120
+                ],
+        "name":  "Funkenschwärmersumpf",
+        "type":  "map",
+        "level":  "55-65",
+        "waypoints":  17,
+        "hearts":  13,
+        "heropoints":  6,
+        "pois":  20,
+        "vistas":  5,
+        "masteries":  1,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55714,
+                    39460
+                ],
+        "name":  "Labyrinthklippen",
+        "type":  "map",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35712,
+                    37120
+                ],
+        "name":  "Widerstand des Drachen",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  11,
+        "hearts":  0,
+        "heropoints":  7,
+        "pois":  24,
+        "vistas":  7,
+        "masteries":  0,
+        "mastery_icon":  "mi_tyria.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34304,
+                    33792
+                ],
+        "name":  "Güldener Talkessel",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  7,
+        "hearts":  0,
+        "heropoints":  11,
+        "pois":  22,
+        "vistas":  6,
+        "masteries":  8,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37004,
+                    34748
+                ],
+        "name":  "Verschlungene Tiefen",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  7,
+        "hearts":  0,
+        "heropoints":  11,
+        "pois":  20,
+        "vistas":  6,
+        "masteries":  5,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35072,
+                    31744
+                ],
+        "name":  "Grasgrüne Schwelle",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  7,
+        "hearts":  0,
+        "heropoints":  11,
+        "pois":  26,
+        "vistas":  6,
+        "masteries":  9,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35582,
+                    30688
+                ],
+        "name":  "Blutsteinsumpf",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  7,
+        "vistas":  3,
+        "masteries":  2,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37840,
+                    32926
+                ],
+        "name":  "Trockenkuppe",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  5,
+        "hearts":  0,
+        "heropoints":  5,
+        "pois":  22,
+        "vistas":  6,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37618,
+                    31484
+                ],
+        "name":  "Die Silberwüste",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  0,
+        "heropoints":  6,
+        "pois":  18,
+        "vistas":  7,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    57168,
+                    61884
+                ],
+        "name":  "Domäne Istan",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  3,
+        "heropoints":  0,
+        "pois":  27,
+        "vistas":  6,
+        "masteries":  3,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52672,
+                    62176
+                ],
+        "name":  "Fahranur, die Erste Stadt",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Story Instance"
+    },
+    {
+        "pos":  [
+                    67252,
+                    51572
+                ],
+        "name":  "Schlüssel von Ahdashim",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 7"
+    },
+    {
+        "pos":  [
+                    64668,
+                    51752
+                ],
+        "name":  "Windgepeitschte Freistatt",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  4,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Guild Hall"
+    },
+    {
+        "pos":  [
+                    41954,
+                    22890
+                ],
+        "name":  "Tiefland-Küste",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  3,
+        "heropoints":  0,
+        "pois":  56,
+        "vistas":  8,
+        "masteries":  11,
+        "mastery_icon":  "mi_jw.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39970,
+                    15607
+                ],
+        "name":  "Janthir Syntri",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  3,
+        "heropoints":  0,
+        "pois":  50,
+        "vistas":  8,
+        "masteries":  11,
+        "mastery_icon":  "mi_jw.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37128,
+                    11549
+                ],
+        "name":  "Bava Nisos",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  10,
+        "vistas":  3,
+        "masteries":  6,
+        "mastery_icon":  "mi_jw.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34921,
+                    11721
+                ],
+        "name":  "Nebelbrand-Ödland",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  1,
+        "hearts":  1,
+        "heropoints":  0,
+        "pois":  18,
+        "vistas":  3,
+        "masteries":  6,
+        "mastery_icon":  "mi_jw.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39008,
+                    45445
+                ],
+        "name":  "Glutbucht",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  5,
+        "heropoints":  0,
+        "pois":  23,
+        "vistas":  7,
+        "masteries":  2,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36518,
+                    41584
+                ],
+        "name":  "Draconis Mons",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  4,
+        "heropoints":  0,
+        "pois":  22,
+        "vistas":  5,
+        "masteries":  3,
+        "mastery_icon":  "mi_hot.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34175,
+                    103437
+                ],
+        "name":  "Drachen-Ende",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  5,
+        "hearts":  0,
+        "heropoints":  6,
+        "pois":  48,
+        "vistas":  5,
+        "masteries":  6,
+        "mastery_icon":  "mi_eod.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29750,
+                    101210
+                ],
+        "name":  "Arborstein",
+        "type":  "map",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27000,
+                    99400
+                ],
+        "name":  "Stadt Neu-Kaineng",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  3,
+        "heropoints":  9,
+        "pois":  38,
+        "vistas":  5,
+        "masteries":  13,
+        "mastery_icon":  "mi_eod.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    23150,
+                    101800
+                ],
+        "name":  "Provinz Seitung",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  3,
+        "heropoints":  9,
+        "pois":  41,
+        "vistas":  5,
+        "masteries":  14,
+        "mastery_icon":  "mi_eod.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    31100,
+                    102360
+                ],
+        "name":  "Die Echowald-Wildnis",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  3,
+        "heropoints":  6,
+        "pois":  45,
+        "vistas":  5,
+        "masteries":  12,
+        "mastery_icon":  "mi_eod.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37749,
+                    102240
+                ],
+        "name":  "Gyala-Senke",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  24,
+        "vistas":  3,
+        "masteries":  0,
+        "mastery_icon":  "mi_eod.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    25415,
+                    23679
+                ],
+        "name":  "Himmelswacht-Archipel",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  7,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  50,
+        "vistas":  8,
+        "masteries":  11,
+        "mastery_icon":  "mi_soto.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    22140,
+                    104852
+                ],
+        "name":  "Insel der Reflexion",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  3,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Guild Hall"
+    },
+    {
+        "pos":  [
+                    24085,
+                    20568
+                ],
+        "name":  "Amnytas",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  50,
+        "vistas":  8,
+        "masteries":  9,
+        "mastery_icon":  "mi_soto.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    24092,
+                    22640
+                ],
+        "name":  "Der Turm des Zauberers",
+        "type":  "map",
+        "level":  "0",
+        "waypoints":  1,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  24,
+        "vistas":  3,
+        "masteries":  2,
+        "mastery_icon":  "mi_soto.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    21325,
+                    22772
+                ],
+        "name":  "Inneres Nayos",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  50,
+        "vistas":  7,
+        "masteries":  7,
+        "mastery_icon":  "mi_soto.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    7850,
+                    58600
+                ],
+        "name":  "Sternenlicht-Gehölz",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  3,
+        "heropoints":  15,
+        "pois":  43,
+        "vistas":  5,
+        "masteries":  8,
+        "mastery_icon":  "mi_voe.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    10800,
+                    58830
+                ],
+        "name":  "Strand der Wracks",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  3,
+        "heropoints":  15,
+        "pois":  41,
+        "vistas":  6,
+        "masteries":  12,
+        "mastery_icon":  "mi_voe.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59968,
+                    43534
+                ],
+        "name":  "Kristalloase",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  4,
+        "heropoints":  5,
+        "pois":  30,
+        "vistas":  10,
+        "masteries":  6,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59968,
+                    41240
+                ],
+        "name":  "Wüsten-Hochland",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  5,
+        "hearts":  4,
+        "heropoints":  7,
+        "pois":  31,
+        "vistas":  11,
+        "masteries":  15,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59868,
+                    50752
+                ],
+        "name":  "Das Ödland",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  5,
+        "heropoints":  6,
+        "pois":  43,
+        "vistas":  10,
+        "masteries":  8,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59868,
+                    46284
+                ],
+        "name":  "Elon-Flusslande",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  6,
+        "heropoints":  8,
+        "pois":  30,
+        "vistas":  10,
+        "masteries":  8,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    66016,
+                    53702
+                ],
+        "name":  "Domäne Vaabi",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  6,
+        "hearts":  8,
+        "heropoints":  3,
+        "pois":  32,
+        "vistas":  10,
+        "masteries":  3,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    53768,
+                    57384
+                ],
+        "name":  "Sandgepeitschte Inseln",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  4,
+        "heropoints":  0,
+        "pois":  30,
+        "vistas":  4,
+        "masteries":  4,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65368,
+                    61384
+                ],
+        "name":  "Domäne Kourna",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  2,
+        "hearts":  5,
+        "heropoints":  0,
+        "pois":  25,
+        "vistas":  4,
+        "masteries":  5,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    65151,
+                    58087
+                ],
+        "name":  "Jahai-Klippen",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  3,
+        "heropoints":  0,
+        "pois":  28,
+        "vistas":  7,
+        "masteries":  5,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45638,
+                    49589
+                ],
+        "name":  "Drachensturz",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  21,
+        "vistas":  8,
+        "masteries":  6,
+        "mastery_icon":  "mi_pof.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    34230,
+                    30248
+                ],
+        "name":  "Verlorener Abgrund",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  6,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Guild Hall"
+    },
+    {
+        "pos":  [
+                    35956,
+                    33128
+                ],
+        "name":  "Vergoldete Senke",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  5,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Guild Hall"
+    },
+    {
+        "pos":  [
+                    45776,
+                    21216
+                ],
+        "name":  "Bastion der Bußfertigen",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 4"
+    },
+    {
+        "pos":  [
+                    4470,
+                    62000
+                ],
+        "name":  "Ewigkeitsgarten",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  4,
+        "hearts":  2,
+        "heropoints":  0,
+        "pois":  40,
+        "vistas":  6,
+        "masteries":  7,
+        "mastery_icon":  "mi_voe.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4724,
+                    58488
+                ],
+        "name":  "Leyquellen-Senke",
+        "type":  "map",
+        "level":  "80",
+        "waypoints":  3,
+        "hearts":  2,
+        "heropoints":  0,
+        "pois":  40,
+        "vistas":  6,
+        "masteries":  5,
+        "mastery_icon":  "mi_voe.png",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39456,
+                    19760
+                ],
+        "name":  "Janthir-Bucht",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47216,
+                    23360
+                ],
+        "name":  "Waldkaskaden",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    42144,
+                    40720
+                ],
+        "name":  "Straße von Malchor",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39232,
+                    50160
+                ],
+        "name":  "Endloser Ozean",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52496,
+                    46672
+                ],
+        "name":  "Damm des Aasfressers",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    55696,
+                    44528
+                ],
+        "name":  "Elon-Fluss",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    52256,
+                    52304
+                ],
+        "name":  "Dajkah",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    59904,
+                    55216
+                ],
+        "name":  "Schwefel-Ödland",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36472,
+                    105912
+                ],
+        "name":  "Das Jademeer",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    37344,
+                    99040
+                ],
+        "name":  "Hochland der Großen Schildkröte",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    29760,
+                    95952
+                ],
+        "name":  "Ertrunkenes Kaineng",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    27140,
+                    108556
+                ],
+        "name":  "Kirin-Gipfel",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    39776,
+                    12928
+                ],
+        "name":  "Die Inseln",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    41976,
+                    11688
+                ],
+        "name":  "Janthir Gravis",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46768,
+                    15048
+                ],
+        "name":  "Hochlandufer",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    54552,
+                    21372
+                ],
+        "name":  "Ferne Zittergipfel",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    62012,
+                    20636
+                ],
+        "name":  "Heimat der Blut-Legion",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    68176,
+                    47208
+                ],
+        "name":  "Dzalana",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46312,
+                    35136
+                ],
+        "name":  "Meer des Leids",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    40904,
+                    37720
+                ],
+        "name":  "Befleckte Küste",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    47177,
+                    34549
+                ],
+        "name":  "Nebelsperren-Zuflucht",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35056,
+                    28928
+                ],
+        "name":  "Geistertal",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 1"
+    },
+    {
+        "pos":  [
+                    35888,
+                    29480
+                ],
+        "name":  "Erlösungspass",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 2"
+    },
+    {
+        "pos":  [
+                    36712,
+                    29984
+                ],
+        "name":  "Festung der Treuen",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 3"
+    },
+    {
+        "pos":  [
+                    37292,
+                    15380
+                ],
+        "name":  "Berg Balrior",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  "Raid Wing 8 & Convergence"
+    },
+    {
+        "pos":  [
+                    47016,
+                    31320
+                ],
+        "name":  "Herrschaft der Winde",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    48880,
+                    44488
+                ],
+        "name":  "Damm des Aasfressers",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    45968,
+                    42952
+                ],
+        "name":  "Stadt Arah",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36208,
+                    27744
+                ],
+        "name":  "Maguuma-Einöde",
+        "type":  "map",
+        "level":  "",
+        "waypoints":  0,
+        "hearts":  0,
+        "heropoints":  0,
+        "pois":  0,
+        "vistas":  0,
+        "masteries":  0,
+        "mastery_icon":  "",
+        "desc":  ""
+    }
+]

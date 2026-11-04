@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -118,7 +119,7 @@
 			</div>
 
 			<div class="search-container">
-				<input type="text" class="search-box" id="inv-search" placeholder="SEARCH ACROSS ALL CHARACTERS..." oninput="filterInventory()" autocomplete="off">
+				<input type="text" class="search-box" id="inv-search" data-i18n-ph="common.search_inventory" placeholder="SEARCH ACROSS ALL CHARACTERS..." oninput="filterInventory()" autocomplete="off">
 					<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
 				</div>
 
@@ -348,7 +349,8 @@
 			async function fetchItemsInChunks(ids) {
 				for (let i = 0; i < ids.length; i += 200) {
 					const chunk = ids.slice(i, i + 200);
-					const data = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+					const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+					const data = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}&lang=${lang}`);
 					if (data) data.forEach(item => UTILS.itemCache[item.id] = item);
 				}
 			}

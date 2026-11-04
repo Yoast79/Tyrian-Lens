@@ -1,0 +1,4042 @@
+[
+    {
+        "pos":  [
+                    52412.7,
+                    32988.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAEAAAA=]",
+        "desc":  "Helft Daphne, die sich ausbreitende Verderbnis aufzuhalten."
+    },
+    {
+        "pos":  [
+                    54163.6,
+                    32112.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAIAAAA=]",
+        "desc":  "Helft den Skritt in Ratatosk."
+    },
+    {
+        "pos":  [
+                    52781.3,
+                    31794.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  "Verteidigt Travelens Gehöft gegen die Söhne Svanirs."
+    },
+    {
+        "pos":  [
+                    50727.5,
+                    30382.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC4AAAA=]",
+        "desc":  "Sorgt dafür, dass das Bergbaulager seine Produktivität aufrechterhält."
+    },
+    {
+        "pos":  [
+                    55514.7,
+                    31765.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDYAAAA=]",
+        "desc":  "Ehrt den Geist des Wolfs."
+    },
+    {
+        "pos":  [
+                    55804.1,
+                    31126.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDcAAAA=]",
+        "desc":  "Ehrt den Geist des Bären."
+    },
+    {
+        "pos":  [
+                    55443.4,
+                    31044.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDgAAAA=]",
+        "desc":  "Ehrt den Geist des Raben."
+    },
+    {
+        "pos":  [
+                    55062.6,
+                    31488.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDkAAAA=]",
+        "desc":  "Ehrt den Geist der Schneeleopardin."
+    },
+    {
+        "pos":  [
+                    55989,
+                    31319
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDsAAAA=]",
+        "desc":  "Stört das Anbetungsritual der Grawle."
+    },
+    {
+        "pos":  [
+                    55691.3,
+                    28127.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BD0AAAA=]",
+        "desc":  "Fordert die Diener von Jormag, dem Eisdrachen, heraus."
+    },
+    {
+        "pos":  [
+                    55767.2,
+                    29033.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  "Bekämpft die Verderbnis des Eisdrachen."
+    },
+    {
+        "pos":  [
+                    52142.1,
+                    34959.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEsAAAA=]",
+        "desc":  "Nehmt am Bierrat teil."
+    },
+    {
+        "pos":  [
+                    53277,
+                    34780.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEwAAAA=]",
+        "desc":  "Stört die Minenoperationen der Schaufler für die Agenten des Ordens der Gerüchte."
+    },
+    {
+        "pos":  [
+                    53557.4,
+                    35727.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BE0AAAA=]",
+        "desc":  "Vertreibt die ungewöhnlich aggressiven Grawle."
+    },
+    {
+        "pos":  [
+                    54119.4,
+                    26550.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA4AAAA=]",
+        "desc":  "Lernt den Weg der Kodan."
+    },
+    {
+        "pos":  [
+                    53945,
+                    27504.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBkAAAA=]",
+        "desc":  "Helft Rebell Isaak, die Saat für die Schaufler-Revolution zu sähen."
+    },
+    {
+        "pos":  [
+                    53164.1,
+                    28110.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBoAAAA=]",
+        "desc":  "Unterstützt die Handwerker von Soderhem."
+    },
+    {
+        "pos":  [
+                    52923.7,
+                    27791.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBsAAAA=]",
+        "desc":  "Beschützt die Njordhof-Jagdreviere."
+    },
+    {
+        "pos":  [
+                    53357.1,
+                    28502.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB0AAAA=]",
+        "desc":  "Drängt die Verderbnis zurück."
+    },
+    {
+        "pos":  [
+                    53483.2,
+                    28690.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB4AAAA=]",
+        "desc":  "Helft Löwengardistin Nadel."
+    },
+    {
+        "pos":  [
+                    51112.5,
+                    28304.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCAAAAA=]",
+        "desc":  "Unterstützt die Abtei Durmand gegen die Zentauren."
+    },
+    {
+        "pos":  [
+                    51440.7,
+                    28508.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCIAAAA=]",
+        "desc":  "Kämpft gegen die Bewohner der Jormabakke-Heimstatt."
+    },
+    {
+        "pos":  [
+                    51395.9,
+                    29365.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCMAAAA=]",
+        "desc":  "Stört die Schaufler in Maulingrad."
+    },
+    {
+        "pos":  [
+                    51536.9,
+                    29401.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCQAAAA=]",
+        "desc":  "Beeindruckt die Gutsbesitzer von Mennerheim."
+    },
+    {
+        "pos":  [
+                    52224.2,
+                    28241.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCUAAAA=]",
+        "desc":  "Stellt Euch dem diebischen Grawl in den Weg."
+    },
+    {
+        "pos":  [
+                    54977.3,
+                    23513.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHABAAA=]",
+        "desc":  "Haltet die Grawle beschäftigt, damit sie sich nicht Jormag zuwenden."
+    },
+    {
+        "pos":  [
+                    53646.7,
+                    24354.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  "Stört die Svanir."
+    },
+    {
+        "pos":  [
+                    57132.8,
+                    35101.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLcBAAA=]",
+        "desc":  "Macht Eure Streitkräfte für den Angriff auf Kralkatorrik bereit."
+    },
+    {
+        "pos":  [
+                    59187.5,
+                    31100.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGcAAAA=]",
+        "desc":  "Verteidigt die Eisen-Legion gegen die Flammen-Legion."
+    },
+    {
+        "pos":  [
+                    60926.2,
+                    31295.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG0AAAA=]",
+        "desc":  "Assistiert Sesto Kopfspalter bei seiner Arbeit."
+    },
+    {
+        "pos":  [
+                    58056.4,
+                    30164.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BFsBAAA=]",
+        "desc":  "Befreit das Trainingsgebiet von Ungeziefer."
+    },
+    {
+        "pos":  [
+                    62739,
+                    30676.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHMAAAA=]",
+        "desc":  "Unterstützt Historikerin Jinells Forschungen bei den Überresten des Tempels der Gelassenheit."
+    },
+    {
+        "pos":  [
+                    62847.2,
+                    29077.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHQAAAA=]",
+        "desc":  "Helft den Schildwächtern gegen die Drachenbrut."
+    },
+    {
+        "pos":  [
+                    63624,
+                    32403.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHkAAAA=]",
+        "desc":  "Helft den Soldaten der Legion und der Ebon-Vorhut gegen die Oger."
+    },
+    {
+        "pos":  [
+                    63702.8,
+                    29368.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH4AAAA=]",
+        "desc":  "Unterstützt die Asche-Legion in Braungrat bei verdeckten Operationen."
+    },
+    {
+        "pos":  [
+                    62489.3,
+                    34325
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJwAAAA=]",
+        "desc":  "Haltet die Aufständischen auf."
+    },
+    {
+        "pos":  [
+                    63395.8,
+                    33625.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKEAAAA=]",
+        "desc":  "Helft den Gesandten der Charr."
+    },
+    {
+        "pos":  [
+                    63092.5,
+                    33933.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKIAAAA=]",
+        "desc":  "Unterstützt die Gesandten der Menschen."
+    },
+    {
+        "pos":  [
+                    62364.1,
+                    33049.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKMAAAA=]",
+        "desc":  "Verhindert die Ausdehnung des Drachenbrands."
+    },
+    {
+        "pos":  [
+                    61872.1,
+                    32945.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKQAAAA=]",
+        "desc":  "Helft den Forschern bei der Untersuchung des Brands."
+    },
+    {
+        "pos":  [
+                    63473.5,
+                    34958.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  "Setzt die Oger vom Faulbär-Kral unter Druck."
+    },
+    {
+        "pos":  [
+                    59515.8,
+                    27409.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIAAAAA=]",
+        "desc":  "Helft, die Tuyere-Kommandostelle zu halten."
+    },
+    {
+        "pos":  [
+                    59387.8,
+                    26849.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIEAAAA=]",
+        "desc":  "Helft Technikerin Verutum."
+    },
+    {
+        "pos":  [
+                    58759.3,
+                    27479
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIIAAAA=]",
+        "desc":  "Säubert die Magie der Flammen-Legion."
+    },
+    {
+        "pos":  [
+                    57866.3,
+                    25777.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIgAAAA=]",
+        "desc":  "Unterstützt die Asche-Legion-Truppen der Schattenkluft."
+    },
+    {
+        "pos":  [
+                    57068.3,
+                    25722.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIkAAAA=]",
+        "desc":  "Helft den Kodan bei ihrer Flucht zum Haymal-Keil."
+    },
+    {
+        "pos":  [
+                    61393.1,
+                    28184
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BI4AAAA=]",
+        "desc":  "Bekämpft die Gebrandmarkten am Desolann-See mit den Schildwächtern."
+    },
+    {
+        "pos":  [
+                    61193.9,
+                    27025.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BI8AAAA=]",
+        "desc":  "Unterstützt die Schildwächter beim Patrouillieren des Kristalltränen-Hains."
+    },
+    {
+        "pos":  [
+                    61688.2,
+                    28870.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJEAAAA=]",
+        "desc":  "Bekämpft lebensentziehende Diener im Teufelsbraten-Wald."
+    },
+    {
+        "pos":  [
+                    61536.8,
+                    29632.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJIAAAA=]",
+        "desc":  "Unterstützt die Eisen-Legion beim Einreißen des ascalonischen Walls."
+    },
+    {
+        "pos":  [
+                    60279.6,
+                    29622
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJYAAAA=]",
+        "desc":  "Helft Zenturio Wahrheitsbringer im Schalltafelgewölbe."
+    },
+    {
+        "pos":  [
+                    60319.1,
+                    29265.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJcAAAA=]",
+        "desc":  "Helft Magistra Rasiermähne, die Alten Pikenruinen zu beschützen."
+    },
+    {
+        "pos":  [
+                    60723.1,
+                    27228.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJgAAAA=]",
+        "desc":  "Unterstützt die verbündeten Legionen bei ihrem Marsch über das Gelände der Flammen-Legion."
+    },
+    {
+        "pos":  [
+                    60510.8,
+                    26594
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJkAAAA=]",
+        "desc":  "Helft dem Flammen-Trupp bei seinem Angriff auf die Flammen-Legion."
+    },
+    {
+        "pos":  [
+                    56958.6,
+                    29665.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  "Unterstützt die Blut-Legion."
+    },
+    {
+        "pos":  [
+                    56998.8,
+                    28459
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  "Unterstützt Lakor Nörgelmaul beim reibungslosen Ablauf des Fleischoberfestes."
+    },
+    {
+        "pos":  [
+                    56723.2,
+                    28144.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  "Helft der Eisen-Legion."
+    },
+    {
+        "pos":  [
+                    57798.2,
+                    27971
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  "Helft den Arbeitern im Steinbruch."
+    },
+    {
+        "pos":  [
+                    58309.6,
+                    28645.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  "Helft Stout Finstersinn."
+    },
+    {
+        "pos":  [
+                    59141.8,
+                    28527.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  "Helft den Arbeitern im Blutklingen-Sägewerk."
+    },
+    {
+        "pos":  [
+                    59247.4,
+                    28157.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  "Helft der Asche-Legion."
+    },
+    {
+        "pos":  [
+                    47771.9,
+                    42678.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  "Gewinnt das Reliquiar des Grenth zurück."
+    },
+    {
+        "pos":  [
+                    47359.1,
+                    42320.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  "Gewinnt das Reliquiar der Dwayna zurück."
+    },
+    {
+        "pos":  [
+                    48655.5,
+                    42554.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  "Gewinnt das Reliquiar der Melandru zurück."
+    },
+    {
+        "pos":  [
+                    47546.6,
+                    41688.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  "Gewinnt das Reliquiar des Balthasar zurück."
+    },
+    {
+        "pos":  [
+                    48593.9,
+                    41853.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  "Gewinnt das Reliquiar der Lyssa zurück."
+    },
+    {
+        "pos":  [
+                    43550.7,
+                    30028
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  "Übt gemeinsam mit der Miliz."
+    },
+    {
+        "pos":  [
+                    44142.2,
+                    28815.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  "Helft den Seraphen in der Festung von Shaemoor."
+    },
+    {
+        "pos":  [
+                    42834.8,
+                    28302.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  "Helft Bäuerin Eda in ihrem Obstgarten."
+    },
+    {
+        "pos":  [
+                    45662.7,
+                    30062.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  "Vereint die Ettin."
+    },
+    {
+        "pos":  [
+                    45225.9,
+                    29229.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  "Haltet die Abtei am Laufen."
+    },
+    {
+        "pos":  [
+                    44598.1,
+                    28755.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  "Helft Hilfsarbeiterin Cardy und den Holzarbeitern von Ojons Sägewerk."
+    },
+    {
+        "pos":  [
+                    45266.7,
+                    28533.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  "Helft Jäger Block und den Jägern der Jagdhütte."
+    },
+    {
+        "pos":  [
+                    45600.2,
+                    28218.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  "Helft Fischer Will und den Fischern von Beetletun."
+    },
+    {
+        "pos":  [
+                    48195.6,
+                    27360.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMsAAAA=]",
+        "desc":  "Stiftet Chaos unter den Zentauren."
+    },
+    {
+        "pos":  [
+                    49078.6,
+                    28027.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM4AAAA=]",
+        "desc":  "Trainiert mit der Kompanie."
+    },
+    {
+        "pos":  [
+                    47470.4,
+                    25963.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM8AAAA=]",
+        "desc":  "Unterstützt die Skritt in den Arcallion-Grabungen."
+    },
+    {
+        "pos":  [
+                    47722.7,
+                    26260.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNAAAAA=]",
+        "desc":  "Greift die Zentauren an."
+    },
+    {
+        "pos":  [
+                    42830.3,
+                    32417.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  "Unterstützt die Hainhüter von Schattenherzgrund."
+    },
+    {
+        "pos":  [
+                    44881.2,
+                    31979.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BP4AAAA=]",
+        "desc":  "Helft Obersee-Freistatt mit ihrer Ettin-Plage."
+    },
+    {
+        "pos":  [
+                    42616.5,
+                    30737.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAEBAAA=]",
+        "desc":  "Unterstützt Fort Salma."
+    },
+    {
+        "pos":  [
+                    43019.6,
+                    31943.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAIBAAA=]",
+        "desc":  "Helft Dianna, indem Ihr die Wiederverwertung durch die Banditen untergrabt."
+    },
+    {
+        "pos":  [
+                    45259.7,
+                    32172.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAMBAAA=]",
+        "desc":  "Helft Sangdo Flinkschwinge."
+    },
+    {
+        "pos":  [
+                    46778.1,
+                    29544.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  "Rettet die gefallenen Seraphen auf den Blutfeldern."
+    },
+    {
+        "pos":  [
+                    48503.7,
+                    29572.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  "Nehmt für Joukje Rache an den Piraten."
+    },
+    {
+        "pos":  [
+                    47643.8,
+                    29732.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  "Helft den Soldaten in der Siedlung Ascalon."
+    },
+    {
+        "pos":  [
+                    49388.3,
+                    29919.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  "Sichert das Almuten-Anwesen."
+    },
+    {
+        "pos":  [
+                    48305.2,
+                    34098.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  "Bekämpft den mysteriösen Quaggan-Befall."
+    },
+    {
+        "pos":  [
+                    48882.1,
+                    32956
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  "Unterbrecht die Experimente am Aquanarium-Hydroposten."
+    },
+    {
+        "pos":  [
+                    48824.5,
+                    32639.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMQAAAA=]",
+        "desc":  "Bringt den Quaggan bei, wie Krebse gezüchtet werden."
+    },
+    {
+        "pos":  [
+                    49623.1,
+                    34176.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMYAAAA=]",
+        "desc":  "Helft Wachsamen-Reckin Aisling, verlorene Skritt-Gebiete zurückzuerobern."
+    },
+    {
+        "pos":  [
+                    45565.3,
+                    27601.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  "Stellt den Normalzustand in Neulehmwald wieder her."
+    },
+    {
+        "pos":  [
+                    45918.2,
+                    26705.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  "Stört die Truppen des Weißen Mantels bei der Besetzung von Fort Evennia."
+    },
+    {
+        "pos":  [
+                    43488.8,
+                    36061.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAUBAAA=]",
+        "desc":  "Helft Junkerin Caillech gegen die Auferstandenen."
+    },
+    {
+        "pos":  [
+                    43680.6,
+                    32939.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAsBAAA=]",
+        "desc":  "Helft Löwengardistin Hester, die Sklaven aus den Sklavenhändlertiefen zu befreien."
+    },
+    {
+        "pos":  [
+                    43797.6,
+                    35332
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBQBAAA=]",
+        "desc":  "Stört die Aktivitäten des Albtraumhofs in der Wilddornhöhle."
+    },
+    {
+        "pos":  [
+                    42261,
+                    36020.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBUBAAA=]",
+        "desc":  "Helft Arias bei der Pflege seines Gartens."
+    },
+    {
+        "pos":  [
+                    40428.5,
+                    36473.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  "Unterstützt Doola bei der Golemantik-Forschung."
+    },
+    {
+        "pos":  [
+                    40969,
+                    36620.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  "Unterstützt das Optikalium bei der Blitzforschung."
+    },
+    {
+        "pos":  [
+                    41638.1,
+                    36406.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  "Unterstützt PR&T Esoterik bei der Schleimforschung."
+    },
+    {
+        "pos":  [
+                    41794.5,
+                    36108.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEYBAAA=]",
+        "desc":  "Unterstützt Parnnas Erforschung der alten Transferkammern."
+    },
+    {
+        "pos":  [
+                    40496.8,
+                    34562.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  "Helft der Chaos-Kru."
+    },
+    {
+        "pos":  [
+                    40809.4,
+                    36503.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  "Helft Professor Gahf dabei, seinen Nachwuchs zu unterrichten."
+    },
+    {
+        "pos":  [
+                    41466.4,
+                    36744.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  "Helft Forscher Kaii mit dem Incomp-Schrotthaufen."
+    },
+    {
+        "pos":  [
+                    41927.1,
+                    32766
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDIBAAA=]",
+        "desc":  "Vereitelt die Pläne des Albtraumhofes bei Freudentod."
+    },
+    {
+        "pos":  [
+                    39720.1,
+                    32950.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDMBAAA=]",
+        "desc":  "Setzt den Bedrohungen der Forscher von der Abtei Durmand im Toxalsumpf ein Ende."
+    },
+    {
+        "pos":  [
+                    40129.7,
+                    32571.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  "Unterstützt Ulta Metamagikale bei der Erforschung von Asura-Portalen."
+    },
+    {
+        "pos":  [
+                    41049.5,
+                    33151
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  "Die Äthervolt-Forscher brauchen vorübergehend Gehilfen."
+    },
+    {
+        "pos":  [
+                    40801.8,
+                    32906
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  "Hindert die Inquestur daran, Mrot Boru zu gefährden."
+    },
+    {
+        "pos":  [
+                    41006.6,
+                    31228.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  "Stört Scottas Banditen."
+    },
+    {
+        "pos":  [
+                    39430.4,
+                    31414.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  "Schleicht Euch in Seanans Banditenbande ein und stört ihre Aktivitäten."
+    },
+    {
+        "pos":  [
+                    51265.1,
+                    38975.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBcBAAA=]",
+        "desc":  "Helft Taktikerin Flammenfell dabei, das Feuerbruchfort auf den Angriff der Auferstandenen vorzubereiten."
+    },
+    {
+        "pos":  [
+                    51558.7,
+                    38065.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB0BAAA=]",
+        "desc":  "Unterstützt die Skritt bei ihren Befestigungen."
+    },
+    {
+        "pos":  [
+                    49555.6,
+                    36223.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCQBAAA=]",
+        "desc":  "Unterstützt Qoetl und die Ni-tlacua beim Sumpfwacht-Posten."
+    },
+    {
+        "pos":  [
+                    49420.9,
+                    35765
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCUBAAA=]",
+        "desc":  "Unterstützt Jezza und die Wachsamen, die Auferstandenen aus Fort Gleichschritt zu vertreiben."
+    },
+    {
+        "pos":  [
+                    49770.4,
+                    37672.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCoBAAA=]",
+        "desc":  "Sichert die Gegend um das Dorf Trockengrund ab."
+    },
+    {
+        "pos":  [
+                    49756.3,
+                    38236
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCwBAAA=]",
+        "desc":  "Sichert das Dorf Brackwasser ab."
+    },
+    {
+        "pos":  [
+                    56240,
+                    62583.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  "Helft den Unterdrückten von Champions Erwachen im Namen der Sonnenspeere."
+    },
+    {
+        "pos":  [
+                    56649,
+                    60509.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  "Wahrt den Frieden und die Ordnung in der Korsaren-Flottille."
+    },
+    {
+        "pos":  [
+                    42941,
+                    22848.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMIBAAA=]",
+        "desc":  "Unterstützt die Kodan-Bewohner von Erntehöhle"
+    },
+    {
+        "pos":  [
+                    11243,
+                    59713
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIIPAAA=]",
+        "desc":  "Help Pub Canach grow into a lucrative business"
+    },
+    {
+        "pos":  [
+                    40729.2,
+                    22882.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  "Unterstützt die Kodan bei ihren Aktivitäten im Fließenden Oberland."
+    },
+    {
+        "pos":  [
+                    41839.8,
+                    22655.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  "Helft den Kodan im Herbsttal."
+    },
+    {
+        "pos":  [
+                    40833.1,
+                    16662.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMMBAAA=]",
+        "desc":  "Unterstützt die Kodan bei der Instandhaltung ihres Lagers."
+    },
+    {
+        "pos":  [
+                    39335.4,
+                    16439.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  "Helft den Kodan, die Titanen-Pestilenz zu erforschen."
+    },
+    {
+        "pos":  [
+                    34387.7,
+                    11629.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  "Helft den Vermessern des Nebelbrand-Ödlands, damit ihr Lager sicher ist und alles reibungslos läuft."
+    },
+    {
+        "pos":  [
+                    38226.1,
+                    46492
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGwBAAA=]",
+        "desc":  "Die Gunst des Zirkusses gewinnen"
+    },
+    {
+        "pos":  [
+                    39606.4,
+                    46353.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG0BAAA=]",
+        "desc":  "Assistiert den asurischen Forschern."
+    },
+    {
+        "pos":  [
+                    39522.9,
+                    45358.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG4BAAA=]",
+        "desc":  "Assistiert Wissenschaftlerin Vratt."
+    },
+    {
+        "pos":  [
+                    36523.1,
+                    41035.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  "Helft den uralten Golems."
+    },
+    {
+        "pos":  [
+                    36111.2,
+                    41541.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  "Infiltriert die Inquestur."
+    },
+    {
+        "pos":  [
+                    24383,
+                    102235
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL4BAAA=]",
+        "desc":  "Zeigt den Fischern des Dorfes Eure Angelkünste."
+    },
+    {
+        "pos":  [
+                    22152.7,
+                    102584
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMABAAA=]",
+        "desc":  "Kloster-Ausbildung"
+    },
+    {
+        "pos":  [
+                    31174.2,
+                    101304
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLsBAAA=]",
+        "desc":  "Infiltriert und sabotiert die Operationen im Hauptquartier der Jadebruderschaft."
+    },
+    {
+        "pos":  [
+                    29673.1,
+                    102889
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL0BAAA=]",
+        "desc":  "Stört die Operationen der Sprecher in ihrem Hauptquartier."
+    },
+    {
+        "pos":  [
+                    8694.33,
+                    59481.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  "Helft Euren Verbündeten, das Lager einzurichten und miteinander auszukommen."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  "Assist the castaways around Hullgarden."
+    },
+    {
+        "pos":  [
+                    10793,
+                    58215
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  "Help the Tyrian Alliance keep tabs on the Inquest."
+    },
+    {
+        "pos":  [
+                    59259,
+                    44140.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  "Gewährt den Flüchtlingen im Lager Marifa Beistand."
+    },
+    {
+        "pos":  [
+                    61548.1,
+                    44114.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJsBAAA=]",
+        "desc":  "Unterstützt die Dorfbewohner von Zephyrs Spur."
+    },
+    {
+        "pos":  [
+                    60977.9,
+                    43401.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ0BAAA=]",
+        "desc":  "Unterstützt den Tempel der Kormir."
+    },
+    {
+        "pos":  [
+                    60634,
+                    40643.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKABAAA=]",
+        "desc":  "Packt in der Umgebung des Lommuld-Krals mit an."
+    },
+    {
+        "pos":  [
+                    64053.2,
+                    53863.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  "Unterstützt die Erweckten in den Vehjin-Minen."
+    },
+    {
+        "pos":  [
+                    65090.5,
+                    53201.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  "Erweist Euch als Stimmungskanone."
+    },
+    {
+        "pos":  [
+                    65370.8,
+                    53457.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  "Helft der Schauspieltruppe \"Lyssa-Narren\"."
+    },
+    {
+        "pos":  [
+                    64323.2,
+                    54145.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJUBAAA=]",
+        "desc":  "Stört die Geschmiedeten bei der Besetzung der Gießerei."
+    },
+    {
+        "pos":  [
+                    54412,
+                    57420
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  "Help the Olmakhan slow the Inquest's expansion."
+    },
+    {
+        "pos":  [
+                    53355.3,
+                    56077
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  "Die Jagdgründe"
+    },
+    {
+        "pos":  [
+                    53552.1,
+                    56393.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  "Atholma-Gehöfte"
+    },
+    {
+        "pos":  [
+                    54528.7,
+                    58709.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  "Stört das Magnet-Labor."
+    },
+    {
+        "pos":  [
+                    63970.2,
+                    62666.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  "Sichert die Nachschubroute von der Korsaren-Anlegestelle aus."
+    },
+    {
+        "pos":  [
+                    64294.1,
+                    60688.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  "Unternehmt etwas gegen den Nahrungsmangel im Arkjok-Ackerland."
+    },
+    {
+        "pos":  [
+                    66561.9,
+                    56636.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLIBAAA=]",
+        "desc":  "Dialoge zwischen den Fraktionen Elonas beginnen"
+    },
+    {
+        "pos":  [
+                    5160.31,
+                    62548.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  "Helft in und um Pilgersruh bei Forschungs- und Erkundungsaufgaben."
+    },
+    {
+        "pos":  [
+                    4665.5,
+                    61492.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  "Helft den Verwaltern von Galdra in der Schmiede aus."
+    },
+    {
+        "pos":  [
+                    3587.4,
+                    59446.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  "Helft dem Astralwachen-Agenten Knurrkrähe und seinen Mitarbeitern, die Operationsbasis der Inquestur in der Leyquellen-Senke zu sabotieren."
+    },
+    {
+        "pos":  [
+                    5118.2,
+                    59287.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNIBAAA=]",
+        "desc":  "Trainiert mit den verbündeten Streitkräften und helft im Lager mit, um Euch für den bevorstehenden Kampf bereit zu machen."
+    },
+    {
+        "pos":  [
+                    52903.5,
+                    32422.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  "Helft Antal dem Geduldigen, die Skritt in Kolkorensburg zu beeindrucken."
+    },
+    {
+        "pos":  [
+                    53394.2,
+                    33046.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  "Helft der Abtei, die Schaufler-Ausgrabungen am Dostoev-Himmelsgipfel zu verhindern."
+    },
+    {
+        "pos":  [
+                    54217.1,
+                    33882.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAUAAAA=]",
+        "desc":  "Helft Arkanist Vance beim Untersuchen von Zwergen-Relikten in der Granitzitadelle."
+    },
+    {
+        "pos":  [
+                    54050.4,
+                    34042.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  "Helft Magistra Roslin, die Schwarzerd-Mine zu infiltrieren."
+    },
+    {
+        "pos":  [
+                    53182.9,
+                    34145.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  "Helft Explorator Brokkar, die Schaufler-Munition zu sabotieren."
+    },
+    {
+        "pos":  [
+                    52869.6,
+                    34177.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  "Helft Magistra Kathryn, die Streitkräfte der Schaufler zu schwächen."
+    },
+    {
+        "pos":  [
+                    52619.5,
+                    31987
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAkAAAA=]",
+        "desc":  "Verteidigt den Schrein der Schneeleopardin gegen die Söhne Svanirs."
+    },
+    {
+        "pos":  [
+                    53612.3,
+                    32065.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAsAAAA=]",
+        "desc":  "Helft den Grawlen, die Söhne Svanirs abzuwehren."
+    },
+    {
+        "pos":  [
+                    51022.8,
+                    33177.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCcAAAA=]",
+        "desc":  "Helft Queldip beim Plündern der Piraten."
+    },
+    {
+        "pos":  [
+                    50811.1,
+                    33726.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCgAAAA=]",
+        "desc":  "Helft Duidda beim Schikanieren der Piraten."
+    },
+    {
+        "pos":  [
+                    51236.1,
+                    34200.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCkAAAA=]",
+        "desc":  "Helft Forscher Bramm mit seiner Forschungsausrüstung."
+    },
+    {
+        "pos":  [
+                    51538.2,
+                    32973.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCoAAAA=]",
+        "desc":  "Helft Exploratorin Leandra bei der Suche nach den Relikten in den Maulitage-Gruben."
+    },
+    {
+        "pos":  [
+                    51918.3,
+                    33077.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCsAAAA=]",
+        "desc":  "Unterstützt Arkanistin Kruppa gegen die Zerstörer beim Schwingen-Pass."
+    },
+    {
+        "pos":  [
+                    51925.9,
+                    33913.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCwAAAA=]",
+        "desc":  "Helft Jägerin Neida bei Vanjirs Hof."
+    },
+    {
+        "pos":  [
+                    50857.3,
+                    31860.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC0AAAA=]",
+        "desc":  "Helft Hirtin Lyot mit ihrer Dolyak-Zucht."
+    },
+    {
+        "pos":  [
+                    51025.1,
+                    30127.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC8AAAA=]",
+        "desc":  "Helft Kelgg die Probleme der Mine zu lösen."
+    },
+    {
+        "pos":  [
+                    51568.2,
+                    29968.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDAAAAA=]",
+        "desc":  "Helft Hune, die Hütte in Ordnung zu halten."
+    },
+    {
+        "pos":  [
+                    51996.6,
+                    30820.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDEAAAA=]",
+        "desc":  "Helft der Abtei den Schaufler-Übergriff zu stoppen."
+    },
+    {
+        "pos":  [
+                    51932.1,
+                    31693.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDIAAAA=]",
+        "desc":  "Untersucht die Dampf-Wesen und dämmt ihre Invasion ein."
+    },
+    {
+        "pos":  [
+                    51187.1,
+                    32393.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDMAAAA=]",
+        "desc":  "Helft Forscherin Suki, die Kobolde in der Nähe von Felsnest zu untersuchen."
+    },
+    {
+        "pos":  [
+                    51201.7,
+                    30732.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDQAAAA=]",
+        "desc":  "Helft Aurelio, die Straßen zur Abtei vor den Grawlen zu sichern."
+    },
+    {
+        "pos":  [
+                    52076.3,
+                    31601.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDUAAAA=]",
+        "desc":  "Helft Agent Kaukiri die Schaufler dazu zu überlisten, die Dampfwesen anzugreifen."
+    },
+    {
+        "pos":  [
+                    55240.1,
+                    28696.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDwAAAA=]",
+        "desc":  "Helft der Löwengarde, Kreuzungs-Freistatt sicher zu halten."
+    },
+    {
+        "pos":  [
+                    55869.5,
+                    28673.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BD4AAAA=]",
+        "desc":  "Helft Kevach beim Erhalt seiner Hütte."
+    },
+    {
+        "pos":  [
+                    55209.9,
+                    30406.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BD8AAAA=]",
+        "desc":  "Helft Bjarni, dem Geist der Häsin die Ehre zu erweisen."
+    },
+    {
+        "pos":  [
+                    55722.3,
+                    30189.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  "Unterhaltet und beschützt die Kinder."
+    },
+    {
+        "pos":  [
+                    55519.2,
+                    29678.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  "Helft der Löwengarde, die Straße durch die Eissteppen zu schützen."
+    },
+    {
+        "pos":  [
+                    55011,
+                    29348.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  "Helft den Bergarbeitern bei ihrer Suche nach Erz, indem Ihr die Schaufler bekämpft."
+    },
+    {
+        "pos":  [
+                    56055.2,
+                    28366.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  "Helft Maxtar Schnellschritt Dolyaks zu fangen."
+    },
+    {
+        "pos":  [
+                    55256.6,
+                    29616.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  "Helft Albin Schreiberling, mit dem Jotun-Stamm zu handeln."
+    },
+    {
+        "pos":  [
+                    52835.1,
+                    36192.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  "Helft dabei, die Stromkarl-Höhen für Reisende sicher zu machen."
+    },
+    {
+        "pos":  [
+                    52212.5,
+                    36331.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  "Helft dem Bündnis der Wachsamen und der Abtei."
+    },
+    {
+        "pos":  [
+                    52155.5,
+                    36012.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  "Helft der Goldlichtsenke bei den Experimenten."
+    },
+    {
+        "pos":  [
+                    53357.4,
+                    36582.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEkAAAA=]",
+        "desc":  "Helft Ichtaca."
+    },
+    {
+        "pos":  [
+                    53659.6,
+                    37159
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEoAAAA=]",
+        "desc":  "Helft den gefährdeten Quaggan."
+    },
+    {
+        "pos":  [
+                    52250,
+                    37333.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BE4AAAA=]",
+        "desc":  "Helft Kastell Immerdar, die Auferstandenen in der Region zu besiegen."
+    },
+    {
+        "pos":  [
+                    52229.1,
+                    36782.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BE8AAAA=]",
+        "desc":  "Unterstützt die Ausgrabung der Ruinen durch die Abtei."
+    },
+    {
+        "pos":  [
+                    52713.1,
+                    35988.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BFAAAAA=]",
+        "desc":  "Helft den Fionnghuala-Riss bei der Vorbereitung ihrer Verteidigung."
+    },
+    {
+        "pos":  [
+                    55605.5,
+                    26716.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  "Helft der Gelehrten Inka, die Kobolde zu erforschen."
+    },
+    {
+        "pos":  [
+                    55317.5,
+                    26775.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA0AAAA=]",
+        "desc":  "Unterstützt Taktiker Sebastian gegen die Söhne Svanirs."
+    },
+    {
+        "pos":  [
+                    54668.6,
+                    27472.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA8AAAA=]",
+        "desc":  "Helft Grenzenloser Geist, die Truppen der Station Blaue Eisglanz zusammenzuziehen."
+    },
+    {
+        "pos":  [
+                    53895.5,
+                    25473.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  "Helft Qualdup, Orsippus Auszubildende auf die Quaggan-Spiele vorzubereiten."
+    },
+    {
+        "pos":  [
+                    54245.6,
+                    25513.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  "Helft Sanfte Klinge Tiefes Wildwasser am Laufen zu halten."
+    },
+    {
+        "pos":  [
+                    53984.7,
+                    25203.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  "Helft Würdige Last die Eisbrut in Drakkar-Spornen zu schlagen."
+    },
+    {
+        "pos":  [
+                    55328.6,
+                    27277.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  "Helft Pakt-Recke D'Stolt die Söhne Savnirs zu bekämpfen."
+    },
+    {
+        "pos":  [
+                    56068.1,
+                    27207.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  "Helft Pakt-Explorator Erikk die Grawle vom Drachen-Stamm zu bekämpfen."
+    },
+    {
+        "pos":  [
+                    56276.9,
+                    24857.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBgAAAA=]",
+        "desc":  "Helft Wechselnde Wellen die Kodan am Pfad der Sternenhimmel zu beschützen."
+    },
+    {
+        "pos":  [
+                    54094.4,
+                    28366.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBwAAAA=]",
+        "desc":  "Helft Jägern und Reisenden entlang der Straße."
+    },
+    {
+        "pos":  [
+                    54060.8,
+                    29497.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB8AAAA=]",
+        "desc":  "Helft den Anhängern der Eule."
+    },
+    {
+        "pos":  [
+                    50764,
+                    28513.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCEAAAA=]",
+        "desc":  "Helft im Lager der Seraphen-Vorreiter."
+    },
+    {
+        "pos":  [
+                    52722.4,
+                    29352.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCYAAAA=]",
+        "desc":  "Helft den Quaggan, in Urgulp zu siedeln."
+    },
+    {
+        "pos":  [
+                    55891.6,
+                    24288.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHEBAAA=]",
+        "desc":  "Helft den Quaggan-Bauern, Nahrungsmittel zu ernten."
+    },
+    {
+        "pos":  [
+                    54373.5,
+                    23694
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  "Helft, die gefährdeten Schnee-Greifen zu beschützen."
+    },
+    {
+        "pos":  [
+                    58180.9,
+                    37079.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLUBAAA=]",
+        "desc":  "Versammelt die Pakt-Soldaten, Korsaren und Zephyriten."
+    },
+    {
+        "pos":  [
+                    58198.9,
+                    35900
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLYBAAA=]",
+        "desc":  "Helft der Abtei bei ihren Ausgrabungen."
+    },
+    {
+        "pos":  [
+                    56719.9,
+                    37616.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLgBAAA=]",
+        "desc":  "Helft den frierenden und hungrigen Schauflern."
+    },
+    {
+        "pos":  [
+                    58614.5,
+                    30795.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  "Helft Bryllana Tiefsinn beim Kampf gegen die Geister."
+    },
+    {
+        "pos":  [
+                    58389.6,
+                    31340.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  "Helft Kyra Scharfspürer beim Kampf gegen die Geister."
+    },
+    {
+        "pos":  [
+                    58362.9,
+                    30369.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  "Helft Crucibis Feuerschweißer dabei, die Waffenkammer zu leiten."
+    },
+    {
+        "pos":  [
+                    58699.5,
+                    30258.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  "Helft Strum Barschklatsch dabei, den Feritas-See zu sichern."
+    },
+    {
+        "pos":  [
+                    58538.1,
+                    30503.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  "Helft Scar Streifenklaue dabei, den Schrottplatz zu organisieren."
+    },
+    {
+        "pos":  [
+                    58945.8,
+                    30253.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGYAAAA=]",
+        "desc":  "Helft Latera Schmerzsturm im Kampf gegen die Flammen-Legion."
+    },
+    {
+        "pos":  [
+                    59193.8,
+                    30666.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGgAAAA=]",
+        "desc":  "Helft der Blut-Legion bei der Bekämpfung von Plagen."
+    },
+    {
+        "pos":  [
+                    60153.6,
+                    30257.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGkAAAA=]",
+        "desc":  "Helft Sagum Reliktsucher bei seinen Forschungen."
+    },
+    {
+        "pos":  [
+                    60192.1,
+                    31160.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGoAAAA=]",
+        "desc":  "Helft Gavros Geisterfeind beim Kampf gegen die Geister."
+    },
+    {
+        "pos":  [
+                    59479.5,
+                    31240.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGsAAAA=]",
+        "desc":  "Helft Paenula beim Trainieren der Truppen."
+    },
+    {
+        "pos":  [
+                    60620.4,
+                    31720.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGwAAAA=]",
+        "desc":  "Helft Mei Falkentöter dabei, die Aktivitäten der Separatisten zu unterbinden."
+    },
+    {
+        "pos":  [
+                    61743.1,
+                    31738.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG4AAAA=]",
+        "desc":  "Helft Forscher Irkz bei der Erforschung des Skal-Gifts."
+    },
+    {
+        "pos":  [
+                    61414.7,
+                    31056.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG8AAAA=]",
+        "desc":  "Helft Androchus, die Oger zu bekämpfen."
+    },
+    {
+        "pos":  [
+                    60995.8,
+                    30111.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHAAAAA=]",
+        "desc":  "Helft Ghyrtratus Feindmalmer dabei, Ascalon zurückzuerobern."
+    },
+    {
+        "pos":  [
+                    58093.8,
+                    30516.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BFwBAAA=]",
+        "desc":  "Helft Tolona Eisendieb auf dem Bauernhof."
+    },
+    {
+        "pos":  [
+                    62363.8,
+                    30181.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHEAAAA=]",
+        "desc":  "Helft Schildwächterin Liharn, die Inquestur zu stören."
+    },
+    {
+        "pos":  [
+                    62989.5,
+                    30729.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHIAAAA=]",
+        "desc":  "Helft dem Gelehrten Olenn, die Grawle beim Schweif des Sternengottes hereinzulegen."
+    },
+    {
+        "pos":  [
+                    62359.2,
+                    30576.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  "Helft Schildwächter Hoffnungsschimmer gegen die Skritt."
+    },
+    {
+        "pos":  [
+                    63024.6,
+                    29343.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  "Helft Wode bei den Forschungen zu Harpyien."
+    },
+    {
+        "pos":  [
+                    63508.1,
+                    30208.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHcAAAA=]",
+        "desc":  "Helft den friedlichen Ogern aus Degun Shun."
+    },
+    {
+        "pos":  [
+                    63172.7,
+                    32422.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHgAAAA=]",
+        "desc":  "Helft dem Dorf Ferrusato beim Fischen und beim Kampf gegen die Separatisten."
+    },
+    {
+        "pos":  [
+                    62650.9,
+                    31733.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHoAAAA=]",
+        "desc":  "Helft der Eisen-Legion, Stahlaugen-Spanne vor Gebrandmarkten Kreaturen zu schützen."
+    },
+    {
+        "pos":  [
+                    63406.8,
+                    31528.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHsAAAA=]",
+        "desc":  "Helft der Asche-Legion beim Kampf gegen die Oger."
+    },
+    {
+        "pos":  [
+                    62960.5,
+                    32244
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHwAAAA=]",
+        "desc":  "Helft Torruh Sausefaden, die Separatistenaktivitäten zu stören."
+    },
+    {
+        "pos":  [
+                    62187.6,
+                    32440.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH0AAAA=]",
+        "desc":  "Helft den Schildwächtern, Kämpfe zwischen Geistern und Gebrandmarkten zu stiften."
+    },
+    {
+        "pos":  [
+                    63616.8,
+                    29021.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH8AAAA=]",
+        "desc":  "Helft Jahr Dämmerspalt, die Separatistenaktivitäten zu stören."
+    },
+    {
+        "pos":  [
+                    61802,
+                    34353.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJsAAAA=]",
+        "desc":  "Helft dabei, Tylers Biwak für Siedler zu befrieden."
+    },
+    {
+        "pos":  [
+                    62030.4,
+                    35066.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ0AAAA=]",
+        "desc":  "Helft den Einwohnern von Ebonfalke."
+    },
+    {
+        "pos":  [
+                    61710.4,
+                    35329.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ4AAAA=]",
+        "desc":  "Helft Kommandeur Varalyn und der Ebon-Vorhut."
+    },
+    {
+        "pos":  [
+                    62555.2,
+                    35484.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ8AAAA=]",
+        "desc":  "Helft Vorarbeiter Boslo, sich um die Schwarzflügel-Ausgrabung zu kümmern."
+    },
+    {
+        "pos":  [
+                    63062.2,
+                    33114.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKAAAAA=]",
+        "desc":  "Helft der Eisen-Legion, die Machenschaften der Abtrünnigen zu durchkreuzen."
+    },
+    {
+        "pos":  [
+                    63904.3,
+                    33088.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  "Helft Roskos Bauern bei der Verteidigung des Dorfes."
+    },
+    {
+        "pos":  [
+                    63294.1,
+                    35489.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  "Helft der Vorhut, den Vorstoß der Oger aufzuhalten."
+    },
+    {
+        "pos":  [
+                    57965.5,
+                    26934.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIQAAAA=]",
+        "desc":  "Verhindert, dass die Flammen-Legion Feuer-Elementarlinge beschwört."
+    },
+    {
+        "pos":  [
+                    57100.6,
+                    26711.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIUAAAA=]",
+        "desc":  "Helft dem Nrocroc-Stamm, so nah am Land der Flammen zu überleben."
+    },
+    {
+        "pos":  [
+                    57015.9,
+                    27078.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIYAAAA=]",
+        "desc":  "Helft dem Tarstar-Stamm, so nah am Land der Flammen zu überleben."
+    },
+    {
+        "pos":  [
+                    57080.2,
+                    27331.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIcAAAA=]",
+        "desc":  "Helft dem Wupwup-Stamm, so nah am Land der Flammen zu überleben."
+    },
+    {
+        "pos":  [
+                    57162.6,
+                    25156.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIoAAAA=]",
+        "desc":  "Helft den Forschern des Pakts bei ihren experimentellen Waffen."
+    },
+    {
+        "pos":  [
+                    58452.3,
+                    25058
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIwAAAA=]",
+        "desc":  "Helft der Asche-Legion, die Flammen-Legion zu unterbrechen."
+    },
+    {
+        "pos":  [
+                    59004,
+                    25655.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BI0AAAA=]",
+        "desc":  "Helft der Asche-Legion, das Herz der Flammen-Legion zu treffen."
+    },
+    {
+        "pos":  [
+                    61544.9,
+                    26437.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJAAAAA=]",
+        "desc":  "Helft den Ogern, die Gebrandmarkten von ihrem Gebiet zu vertreiben."
+    },
+    {
+        "pos":  [
+                    61220.2,
+                    29082.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJMAAAA=]",
+        "desc":  "Helft Zwingerwärter Kriegsschnauze, die Separatisten zu verfolgen."
+    },
+    {
+        "pos":  [
+                    60149.4,
+                    28554.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJQAAAA=]",
+        "desc":  "Helft Gefängnisleiter Geißelkiefer, den Gefängnis-Steinbruch zu führen."
+    },
+    {
+        "pos":  [
+                    60155.7,
+                    28149.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJUAAAA=]",
+        "desc":  "Helft dem Glanzfell-Trupp bei der Verteidigung der Straße auf der Soldaten-Hochebene."
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    28908.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJoAAAA=]",
+        "desc":  "Helft Braxa Schuppenjäger, die Nester der Verschlinger zu pflegen."
+    },
+    {
+        "pos":  [
+                    56862.2,
+                    29498.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  "Helft der Eisen-Legion beim Kampf gegen die Geister."
+    },
+    {
+        "pos":  [
+                    58295.1,
+                    29445.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  "Helft Rak Todesmähne, das Steinfall-Anwesen instandzuhalten."
+    },
+    {
+        "pos":  [
+                    58832.3,
+                    29198.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  "Beschützt das Rotraub-Sägewerk vor den Separatisten."
+    },
+    {
+        "pos":  [
+                    59272.5,
+                    29385.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  "Helft dem Regenholz-Sägewerk."
+    },
+    {
+        "pos":  [
+                    57864.1,
+                    29810.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  "Helft Kastaz Starkpranke bei der Gartenarbeit."
+    },
+    {
+        "pos":  [
+                    57444.3,
+                    29680.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  "Helft der Asche-Legion beim Kampf gegen die Separatisten."
+    },
+    {
+        "pos":  [
+                    57368.7,
+                    29232.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  "Helft den Bauern auf dem Charradis-Anwesen beim Rinderhüten."
+    },
+    {
+        "pos":  [
+                    57943.1,
+                    28805.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  "Helft der Blut-Legion beim Kampf gegen die Belagerungswaffen der Geister."
+    },
+    {
+        "pos":  [
+                    44063.9,
+                    29886.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  "Helft den Seraphen, Tonteich vor den Zentauren zu schützen."
+    },
+    {
+        "pos":  [
+                    44087.8,
+                    29386.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  "Helft Lexi Teuerkauf, die Handelsroute zu schützen."
+    },
+    {
+        "pos":  [
+                    43244.7,
+                    28723.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  "Helft Diah, ihren Hof zu führen."
+    },
+    {
+        "pos":  [
+                    43236.7,
+                    28382.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  "Helft Fischer Travis, den Fluss zu erhalten."
+    },
+    {
+        "pos":  [
+                    43330.3,
+                    28324.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  "Helft Vorarbeiter Flannum, die Sicherheit des Damms zu verbessern."
+    },
+    {
+        "pos":  [
+                    42822.6,
+                    28780
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  "Helft Cassie auf dem Moa-Hof."
+    },
+    {
+        "pos":  [
+                    45750.9,
+                    28964.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  "Beschützt die Bauern von Beetletun vor den Tamini-Zentauren."
+    },
+    {
+        "pos":  [
+                    45852.1,
+                    28430
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  "Helft den Bürgern von Beetletun, ihre Stadt zu erhalten."
+    },
+    {
+        "pos":  [
+                    44988.9,
+                    29668.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  "Helft Historiker Garrod bei seinen Untersuchungen im Gottlosen Sumpf."
+    },
+    {
+        "pos":  [
+                    46524.6,
+                    26614.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMgAAAA=]",
+        "desc":  "Beschützt die Seraphenlände."
+    },
+    {
+        "pos":  [
+                    46944,
+                    27377.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMkAAAA=]",
+        "desc":  "Helft den Seraphen, die Aktivitäten der Banditen zu beenden."
+    },
+    {
+        "pos":  [
+                    47633.2,
+                    28431.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMoAAAA=]",
+        "desc":  "Helft den Seraphen am Nachtwache-Strand."
+    },
+    {
+        "pos":  [
+                    46550.3,
+                    27787.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMwAAAA=]",
+        "desc":  "Helft Ket bei der Erforschung der Ruinen der Demetra."
+    },
+    {
+        "pos":  [
+                    48816.6,
+                    28501.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM0AAAA=]",
+        "desc":  "Helft Simmer Kloppstock, die Zentauren zu stören."
+    },
+    {
+        "pos":  [
+                    48602,
+                    26658.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNEAAAA=]",
+        "desc":  "Helft dem Späher Luke, den Nachschub der Zentauren zu unterbrechen."
+    },
+    {
+        "pos":  [
+                    48575.4,
+                    26289.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BNIAAAA=]",
+        "desc":  "Helft der Späherin Greta, im Heimatland der Modniir Chaos zu stiften."
+    },
+    {
+        "pos":  [
+                    45251.6,
+                    30520.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  "Helft Waldo Flut, Rache an den örtlichen Banditen zu üben."
+    },
+    {
+        "pos":  [
+                    45699.3,
+                    30872.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  "Helft Löwengardist Micah dabei, die Gegend um die Schwarz-Freistatt für Reisende zu sichern."
+    },
+    {
+        "pos":  [
+                    44530.9,
+                    31238.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  "Helft Technikerin Gilli."
+    },
+    {
+        "pos":  [
+                    44718,
+                    30866.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  "Helft Wache Barnaby."
+    },
+    {
+        "pos":  [
+                    44435.3,
+                    31656.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  "Helft den Fischern am Triskell-Kai."
+    },
+    {
+        "pos":  [
+                    43762,
+                    31851.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  "Helft Matlal dabei, Trüffel für ihren hungernden Stamm zu sammeln."
+    },
+    {
+        "pos":  [
+                    43261.9,
+                    31270.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BP0AAAA=]",
+        "desc":  "Helft Duulsileep dabei, das Dorf Muuguuluu zu beschützen."
+    },
+    {
+        "pos":  [
+                    42674.2,
+                    31653.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BP8AAAA=]",
+        "desc":  "Helft Seraphen-Soldat Tripp."
+    },
+    {
+        "pos":  [
+                    43255.4,
+                    30775.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAABAAA=]",
+        "desc":  "Helft Feldwebel Rane."
+    },
+    {
+        "pos":  [
+                    46680.5,
+                    30234.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  "Helft der Ersten Freistatt beim Kampf gegen die Untoten."
+    },
+    {
+        "pos":  [
+                    46909.7,
+                    29178.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  "Helft Bronson, die Truppen der Zentauren zu stören."
+    },
+    {
+        "pos":  [
+                    48549.1,
+                    30135.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  "Helft Milton Buch und den Bauern der Gegend bei ihrem Kampf gegen Piraten und Ungeziefer."
+    },
+    {
+        "pos":  [
+                    50096.1,
+                    29642.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  "Helft Löwengardistin Rhyn, die Schaufler aus der Knotenpunkt-Freistatt zu vertreiben."
+    },
+    {
+        "pos":  [
+                    50041.1,
+                    30031
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  "Helft der Löwengarde beim Schutz der Knotenpunkt-Freistatt."
+    },
+    {
+        "pos":  [
+                    49858.3,
+                    29188.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  "Helft Johan bei seiner Ausbildertätigkeit in Vollyms Schlachtgrube."
+    },
+    {
+        "pos":  [
+                    48799.5,
+                    29079.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  "Helft Mei Schattenläufer, den von Wileys Piraten gestohlenen Schatz zurückzuholen."
+    },
+    {
+        "pos":  [
+                    48804.7,
+                    32335.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  "Helft der Abtei dabei, die Geisterpiraten zu beseitigen."
+    },
+    {
+        "pos":  [
+                    49403.2,
+                    32413.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  "Helft der Löwengarde dabei, Lindwürmer im Zaum zu halten."
+    },
+    {
+        "pos":  [
+                    49302.2,
+                    33460.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  "Helft dabei, die Schlitzohrkorsaren auszuspionieren."
+    },
+    {
+        "pos":  [
+                    49938.5,
+                    32927
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  "Helft dabei, die Blutbukaniere zu bezwingen."
+    },
+    {
+        "pos":  [
+                    50315.3,
+                    33027.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  "Helft dabei, in Moriaritys Feste für Ordnung zu sorgen."
+    },
+    {
+        "pos":  [
+                    48892.8,
+                    34072.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  "Helft bei der Bewaffnung der Quaggan."
+    },
+    {
+        "pos":  [
+                    48312.9,
+                    34864.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  "Helft dabei, die Verteidigung der Hylek zu unterstützen."
+    },
+    {
+        "pos":  [
+                    49450.6,
+                    34265
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMUAAAA=]",
+        "desc":  "Helft den Wachsamen, die verlassenen Höhlen von Maulwurfkopf zu säubern."
+    },
+    {
+        "pos":  [
+                    50172,
+                    35218.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMcAAAA=]",
+        "desc":  "Unterstützt Cesseilia beim Schutz und der Erforschung der Oase."
+    },
+    {
+        "pos":  [
+                    45987,
+                    27216.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  "Helft Cin Fursarai auf dem Seeufer-Basar."
+    },
+    {
+        "pos":  [
+                    45046.3,
+                    27359.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  "Unterstützt die vorderste Verteidigungslinie der Doric-Anlegestelle."
+    },
+    {
+        "pos":  [
+                    45295.1,
+                    25681.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  "Helft Noran im Gebiet der Erntekaskaden."
+    },
+    {
+        "pos":  [
+                    45505.1,
+                    26809.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  "Helft, das Leben in Saidras Hafen wieder zu ermöglichen."
+    },
+    {
+        "pos":  [
+                    43631.5,
+                    35765.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAQBAAA=]",
+        "desc":  "Helft Hainhüter Brulians bei der Beseitigung der untoten Kreaturen im Gebiet."
+    },
+    {
+        "pos":  [
+                    43346.3,
+                    35629.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAYBAAA=]",
+        "desc":  "Helft Elain bei der Säuberung der Spinnenhöhle."
+    },
+    {
+        "pos":  [
+                    43213.2,
+                    36021.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAcBAAA=]",
+        "desc":  "Helft Danador dabei, seinen Zwinger zu kontrollieren."
+    },
+    {
+        "pos":  [
+                    43687.8,
+                    34009.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAgBAAA=]",
+        "desc":  "Helft Yoal, die Krait zu schwächen und entführte Hylek zu befreien."
+    },
+    {
+        "pos":  [
+                    43861.1,
+                    33619.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAkBAAA=]",
+        "desc":  "Helft Fischerin Leudap, die Angler von Soggorsort zu unterstützen."
+    },
+    {
+        "pos":  [
+                    43669.5,
+                    34707.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAoBAAA=]",
+        "desc":  "Helft Atzintli und dem Zopatl-Stamm beim Kampf gegen die Krait."
+    },
+    {
+        "pos":  [
+                    42607.4,
+                    35408.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BAwBAAA=]",
+        "desc":  "Helft Erntearbeiter Mavad dabei, die Tangernte zu organisieren."
+    },
+    {
+        "pos":  [
+                    42699.2,
+                    34815
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA0BAAA=]",
+        "desc":  "Helft den Lautlosen, mit dem Albtraumhof fertig zu werden."
+    },
+    {
+        "pos":  [
+                    42579.4,
+                    34370.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA4BAAA=]",
+        "desc":  "Helft Tovar, den Albtraumhof zu drangsalieren."
+    },
+    {
+        "pos":  [
+                    42814.8,
+                    34220.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BA8BAAA=]",
+        "desc":  "Helft Zippti bei der Untersuchung der ungewöhnlich aggressiven Skritt."
+    },
+    {
+        "pos":  [
+                    42508.4,
+                    33255.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBABAAA=]",
+        "desc":  "Helft den Hainhütern im Bergsuhlensumpf."
+    },
+    {
+        "pos":  [
+                    42733.3,
+                    32826.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBEBAAA=]",
+        "desc":  "Helft Löwengardist Cern, die Straße zu beschützen."
+    },
+    {
+        "pos":  [
+                    42998.5,
+                    35631.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBIBAAA=]",
+        "desc":  "Helft Gemai, den Hainhütern von Wächterwäldchen beizustehen."
+    },
+    {
+        "pos":  [
+                    42631.7,
+                    35888
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBMBAAA=]",
+        "desc":  "Helft dabei, Kastell Astorea vor dem Albtraumhof zu beschützen."
+    },
+    {
+        "pos":  [
+                    42682.1,
+                    36129.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  "Helft Delilah, die Felder der Farm sicher zu machen."
+    },
+    {
+        "pos":  [
+                    41225.1,
+                    36275.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  "Die Inquestur benutzt Hylekgift, um die Geschöpfe im See in den Wahnsinn zu treiben. Helft Blopp, das zu unterbinden."
+    },
+    {
+        "pos":  [
+                    40313.5,
+                    36000.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEMBAAA=]",
+        "desc":  "Helft Shoons Wiederverwertungs-Kru, mit den Störungen durch die Inquestur fertigzuwerden."
+    },
+    {
+        "pos":  [
+                    40787.3,
+                    35552.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEQBAAA=]",
+        "desc":  "Helft der Brill-Allianz, die Skritt zu erforschen."
+    },
+    {
+        "pos":  [
+                    41469.4,
+                    35671
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEUBAAA=]",
+        "desc":  "Helft Hrouda, das Ökosystem trotz der Forschung von Dr. Bleent aufrechtzuerhalten."
+    },
+    {
+        "pos":  [
+                    41830.1,
+                    35099.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEcBAAA=]",
+        "desc":  "Helft der Löwengarde, die Cuatl-Hylek in Schach zu halten."
+    },
+    {
+        "pos":  [
+                    41063.7,
+                    35136.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEgBAAA=]",
+        "desc":  "Helft dem Michotl-Stamm."
+    },
+    {
+        "pos":  [
+                    41056.8,
+                    34336.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEkBAAA=]",
+        "desc":  "Helft der Kru im Luminate-Werk, die Stromversorgung aufrechtzuerhalten."
+    },
+    {
+        "pos":  [
+                    41645.1,
+                    34131.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  "Helft Friedensstifterin Owta, den Inquestur-Komplex zu zerschlagen."
+    },
+    {
+        "pos":  [
+                    40478.5,
+                    34055.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  "Helft der S.A.U.B.E.R.-Kru."
+    },
+    {
+        "pos":  [
+                    41467.7,
+                    32511.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC4BAAA=]",
+        "desc":  "Helft den Raupen-Bauern in Skrittsburg-Hügelstatt."
+    },
+    {
+        "pos":  [
+                    41381.2,
+                    31738.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC8BAAA=]",
+        "desc":  "Helft den Skritt bei der Verteidigung von Skrittsburg-Ostend."
+    },
+    {
+        "pos":  [
+                    41018,
+                    32695.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDABAAA=]",
+        "desc":  "Helft den Skritt bei ihren Experimenten in den Tunneln von Skrittsburg."
+    },
+    {
+        "pos":  [
+                    41768.3,
+                    32260.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDEBAAA=]",
+        "desc":  "Helft Leigheara, den Verehrten Pistazienbaum zu beschützen."
+    },
+    {
+        "pos":  [
+                    41904.6,
+                    31350.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  "Unterstützt die Seraphen im Kampf gegen Willems Banditen."
+    },
+    {
+        "pos":  [
+                    40409.8,
+                    31235.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  "Helft den in die Enge getriebenen Spionen bei der Wegmarke Seraphen-Beobachter."
+    },
+    {
+        "pos":  [
+                    39141.1,
+                    31401.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  "Helft den Skritt gegen die Banditen."
+    },
+    {
+        "pos":  [
+                    39012.1,
+                    32470.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  "Helft Junker Mathair, den Vandalen-Claim zu sichern."
+    },
+    {
+        "pos":  [
+                    39872.5,
+                    31921.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  "Helft Friedensstifterin Klodi, das Bündnis der Kriminellen zu brechen."
+    },
+    {
+        "pos":  [
+                    53415.6,
+                    39775.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBYBAAA=]",
+        "desc":  "Helft dem Orden der Gerüchte, die Waffentests der Inquestur an dem Hylekdorf in den Tzanopl-Gründen zu sabotieren."
+    },
+    {
+        "pos":  [
+                    53963.6,
+                    39212.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBgBAAA=]",
+        "desc":  "Helft Carmel dabei, die Verschmutzung der Inquestur zu beseitigen."
+    },
+    {
+        "pos":  [
+                    51773.2,
+                    39934.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBkBAAA=]",
+        "desc":  "Helft Ambrs Kru bei der Verteidigung des Labors."
+    },
+    {
+        "pos":  [
+                    51156.9,
+                    39652.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBoBAAA=]",
+        "desc":  "Helft Pixor, seine Waffen an den Auferstandenen in Finstertal zu testen."
+    },
+    {
+        "pos":  [
+                    52952.3,
+                    38001.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBsBAAA=]",
+        "desc":  "Helft Zara Torheit des Galans zu sichern und zu versorgen."
+    },
+    {
+        "pos":  [
+                    52216,
+                    37914.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BBwBAAA=]",
+        "desc":  "Helft den Pakt-Soldaten, einen Weg nach Orr zu sichern."
+    },
+    {
+        "pos":  [
+                    54208.9,
+                    39832.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB4BAAA=]",
+        "desc":  "Helft Jenrys, die Natur vor der Inquestur zu schützen."
+    },
+    {
+        "pos":  [
+                    50829.6,
+                    38541.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BB8BAAA=]",
+        "desc":  "Helft den Mitgliedern der Abtei, Rata Pten auszugraben."
+    },
+    {
+        "pos":  [
+                    52745.9,
+                    39012.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCABAAA=]",
+        "desc":  "Helft dem Orden der Gerüchte, einen Kampf zwischen den Krait und den Auferstandenen heraufzubeschwören."
+    },
+    {
+        "pos":  [
+                    48284.7,
+                    37055.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCEBAAA=]",
+        "desc":  "Helft Admiral Clarinda Demard."
+    },
+    {
+        "pos":  [
+                    48995.4,
+                    36482.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCIBAAA=]",
+        "desc":  "Helft Potatlan beim Westufer."
+    },
+    {
+        "pos":  [
+                    49223.2,
+                    36780.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCMBAAA=]",
+        "desc":  "Helft Cuadinti, den Südwacht-Posten vorzubereiten."
+    },
+    {
+        "pos":  [
+                    48189.2,
+                    37539.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCYBAAA=]",
+        "desc":  "Beschützt die Quaggan vor den Krait."
+    },
+    {
+        "pos":  [
+                    48608.1,
+                    38148.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCcBAAA=]",
+        "desc":  "Helft Kamma, ihre experimentelle Waffe zu testen."
+    },
+    {
+        "pos":  [
+                    48763.9,
+                    35870
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCgBAAA=]",
+        "desc":  "Helft Costi Atl und seinem Stamm, nach Termiten-Larven zu jagen."
+    },
+    {
+        "pos":  [
+                    48738.6,
+                    36465.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCkBAAA=]",
+        "desc":  "Helft Ayomichi, die Ausbreitung der Auferstandenen Verderbnis zu verlangsamen."
+    },
+    {
+        "pos":  [
+                    48890.5,
+                    37582.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BCsBAAA=]",
+        "desc":  "Helft den Junkern der Wylden Jagd, die Schiffswracks zu erkunden."
+    },
+    {
+        "pos":  [
+                    49178.4,
+                    38175.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BC0BAAA=]",
+        "desc":  "Helft Brannen, Kastell Dornstrauch zu halten."
+    },
+    {
+        "pos":  [
+                    55682,
+                    60587.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  "Unterstützt die andersdenkenden Gelehrten des Astralariums in ihrer Sache."
+    },
+    {
+        "pos":  [
+                    40650.8,
+                    15575.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  "Helft den Kodan bei der Erforschung und Besiedlung von Janthir Syntri."
+    },
+    {
+        "pos":  [
+                    37865.2,
+                    45616.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BGsBAAA=]",
+        "desc":  "Untersucht die Mursaat-Festung."
+    },
+    {
+        "pos":  [
+                    40198.4,
+                    45949.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BG8BAAA=]",
+        "desc":  "Helft dem Skritt-Lager."
+    },
+    {
+        "pos":  [
+                    37357.6,
+                    41649.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  "Helft den Gefangenen."
+    },
+    {
+        "pos":  [
+                    36551.4,
+                    42395
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  "Helft dem Spähtrupp."
+    },
+    {
+        "pos":  [
+                    27014.2,
+                    100171
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLkBAAA=]",
+        "desc":  "Helft den Tengu im Kopfsteinpflaster-Bezirk, ihr Stadtviertel wieder aufzubauen."
+    },
+    {
+        "pos":  [
+                    25993.2,
+                    98645.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BL8BAAA=]",
+        "desc":  "Helft Xunlai-Jade, die Jade-Technologie zu testen und anzupreisen."
+    },
+    {
+        "pos":  [
+                    28286.6,
+                    99457.7
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMEBAAA=]",
+        "desc":  "Helft dem Ost-Bezirk, die Raupengasse zu schützen."
+    },
+    {
+        "pos":  [
+                    22141.6,
+                    100957
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLoBAAA=]",
+        "desc":  "Helft dem Tempel bei der Verteidigung."
+    },
+    {
+        "pos":  [
+                    32752,
+                    103075
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLwBAAA=]",
+        "desc":  "Helft hier und da im Mori-Dorf, um Euch das Vertrauen der dort ansässigen Tengu zu verdienen."
+    },
+    {
+        "pos":  [
+                    7780.8,
+                    57997.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  "Helft den Jägern, ihr Lager in Schuss zu halten und die Wildtiere vor der Inquestur zu schützen."
+    },
+    {
+        "pos":  [
+                    7700,
+                    58870.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  "Helft der Abtei Durmand, ihre Expedition vorzubereiten und zu schützen."
+    },
+    {
+        "pos":  [
+                    11250.2,
+                    59716
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  "Helft mit, Canachs Kaschemme zu einem lukrativen Geschäft zu machen."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  "Unterstützt die Schiffbrüchigen überall in Rumpfgarten."
+    },
+    {
+        "pos":  [
+                    10797.3,
+                    58207.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  "Helft der Tyrianischen Allianz, die Inquestur im Auge zu behalten und mehr über Castoras natürliche Magien herauszufinden."
+    },
+    {
+        "pos":  [
+                    58473.4,
+                    43025.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  "Helft Aksim, Raptoren zu versorgen und zu trainieren."
+    },
+    {
+        "pos":  [
+                    59701.4,
+                    40412.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  "Helft in der Umgebung des Hochsprunghofs aus."
+    },
+    {
+        "pos":  [
+                    60702.7,
+                    42042.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  "Helft der Gemeinde Makali."
+    },
+    {
+        "pos":  [
+                    59067.1,
+                    41441.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  "Helft den Choya der Stachelbeet-Senke oder lasst es bleiben."
+    },
+    {
+        "pos":  [
+                    58343.1,
+                    43050.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ4BAAA=]",
+        "desc":  "Helft Aksim, Raptoren zu versorgen und zu trainieren."
+    },
+    {
+        "pos":  [
+                    59492.3,
+                    52606.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  "Helft Geistersturm Drojkor dabei, die Kontrolle über die Schakale zu gewinnen."
+    },
+    {
+        "pos":  [
+                    61504.2,
+                    51076.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  "Helft Dunkoro dabei, die einheimischen Geister zu unterstützen."
+    },
+    {
+        "pos":  [
+                    59786.6,
+                    48835
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJ8BAAA=]",
+        "desc":  "Helft Tariq, die Festung zu schwächen."
+    },
+    {
+        "pos":  [
+                    59325.1,
+                    50678.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKIBAAA=]",
+        "desc":  "Helft dem Orden der Schatten, sich gegen die Geschmiedeten zu verteidigen."
+    },
+    {
+        "pos":  [
+                    60369.8,
+                    48571.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  "Helft Kisha Odili, dass im Dorf alles weiterläuft."
+    },
+    {
+        "pos":  [
+                    60662.8,
+                    46278.1
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  "Helft Ebele dabei, den Weg nach Norden für Fahnenflüchtige vorzubereiten."
+    },
+    {
+        "pos":  [
+                    61375.3,
+                    45643.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  "Helft Adisa, Splitter des Vlast von Veteran Gebrandmarkten zu sammeln."
+    },
+    {
+        "pos":  [
+                    59168,
+                    46574.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  "Benutzt einen Schweberochen, um beim Training auf dem Hof zu helfen."
+    },
+    {
+        "pos":  [
+                    60298.7,
+                    45312.2
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  "Helft Jüngerin Dawnwynn, beim Fels der Weissagung Gebrandmarkte Vergessene zu besiegen."
+    },
+    {
+        "pos":  [
+                    60704.6,
+                    46586.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJoBAAA=]",
+        "desc":  "Helft Stellvertretendem Vorarbeiter Kofi dabei, die Bewohner der Lichtungs-Trockenfelder zu beschützen."
+    },
+    {
+        "pos":  [
+                    60820.4,
+                    45037
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJwBAAA=]",
+        "desc":  "Helft Jünger Xunn, Glyphen der Vergessenen zur Entschlüsselung zu sammeln."
+    },
+    {
+        "pos":  [
+                    63797.9,
+                    53337.5
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  "Helft den Mitgliedern des Königshauses im Vehjin-Palast."
+    },
+    {
+        "pos":  [
+                    64841.6,
+                    54777.4
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  "Helft den Lebenden und den Toten in der Nekropole."
+    },
+    {
+        "pos":  [
+                    64450.4,
+                    55266
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  "Helft bei der Ausbildung der Neuerweckten."
+    },
+    {
+        "pos":  [
+                    66390.2,
+                    55143.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  "Helft den Schülern der Vehtendi-Akademie."
+    },
+    {
+        "pos":  [
+                    54414.1,
+                    57417.9
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  "Helft den Olmakhan, den Vormarsch der Inquestur zu verlangsamen."
+    },
+    {
+        "pos":  [
+                    64452,
+                    61814.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  "Helft, eintreffende Vorräte ans Lager der Verbündeten zu verteilen."
+    },
+    {
+        "pos":  [
+                    65526.4,
+                    61986.8
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  "Helft, die Front zu stabilisieren."
+    },
+    {
+        "pos":  [
+                    65989.6,
+                    61252.6
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLEBAAA=]",
+        "desc":  "Helft dem ernsthaft gefährdeten Heket-Stamm."
+    },
+    {
+        "pos":  [
+                    64663.1,
+                    59066.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLMBAAA=]",
+        "desc":  "Bereitet das Pakt-Lager auf den Kampf vor."
+    },
+    {
+        "pos":  [
+                    66715.7,
+                    58414.3
+                ],
+        "name":  "Aufgabe",
+        "type":  "heart",
+        "chat_code":  "[&BLQBAAA=]",
+        "desc":  "Helft den Einwohnern des Yatendi-Dorfs."
+    }
+]

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
 			body {
@@ -177,7 +178,7 @@
 	<body>
 		<div class="search-container">
 			<div class="search-wrapper">
-				<input type="text" id="marker-search" placeholder="Search Markers..." autocomplete="off" oninput="handleSearch(this.value)">
+				<input type="text" id="marker-search" data-i18n-ph="common.search_markers" placeholder="Search Markers..." autocomplete="off" oninput="handleSearch(this.value)">
 					<span class="clear-search" id="clear-btn" onclick="clearSearch()">X</span>
 				</div>
 		</div>
@@ -197,9 +198,10 @@
 						? "https://gw2ps.local/Data/" 
 						: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
 
-					const response = await fetch(apiBase + "map_options_structure.json?t=" + Date.now());
+					const response = (window.DataLoader ? await window.DataLoader.fetchDataFile("map_options_structure.json") : null) || await fetch(apiBase + "map_options_structure.json?t=" + Date.now());
 					if (!response.ok) throw new Error("Failed to load map options structure");
-					const sections = await response.json();
+					const text = await response.text();
+					const sections = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 
 					const container = document.getElementById('dynamic-sections-container');
 					let html = '';
@@ -586,6 +588,9 @@
 			};
 
 			window.addEventListener('message', (e) => {
+				if (e.data.action === 'languageChanged') {
+					loadDynamicSections();
+				}
 				if (e.data.action === 'updateTheme') {
 					document.body.setAttribute('data-theme', e.data.theme);
 				}
@@ -595,7 +600,7 @@
 		<script>
 			/*<![CDATA[*/
 			async function copyPSNAWaypoints() {
-				window.parent.postMessage({ action: 'toast', msg: 'SYNCING WITH ROTATION TABLE...' }, "*");
+				const tSync = window.DataLoader ? window.DataLoader.t('map_options.syncing_rotation', 'SYNCING WITH ROTATION TABLE...') : 'SYNCING WITH ROTATION TABLE...'; window.parent.postMessage({ action: 'toast', msg: tSync }, "*");
 
 				const rotation = {
 					0: ["[\x26BIkHAAA=]", "[\x26BDoBAAA=]", "[\x26BO4CAAA=]", "[\x26BC0AAAA=]", "[\x26BIUCAAA=]", "[\x26BCECAAA=]"],
@@ -621,13 +626,13 @@
 					if (todayCodes) {
 						const finalString = todayCodes.join("");
 						await navigator.clipboard.writeText(finalString);
-						window.parent.postMessage({ action: 'toast', msg: 'COPIED 6 WAYPOINTS' }, "*");
+						const tCopied = window.DataLoader ? window.DataLoader.t('map_options.copied_waypoints', 'COPIED 6 WAYPOINTS') : 'COPIED 6 WAYPOINTS'; window.parent.postMessage({ action: 'toast', msg: tCopied }, "*");
 					} else {
 						throw new Error("Invalid day mapping");
 					}
 				} catch (e) {
 					console.error("PSNA Sync Error:", e);
-					window.parent.postMessage({ action: 'toast', msg: 'ROTATION SYNC ERROR' }, "*");
+					const tErr = window.DataLoader ? window.DataLoader.t('map_options.rotation_error', 'ROTATION SYNC ERROR') : 'ROTATION SYNC ERROR'; window.parent.postMessage({ action: 'toast', msg: tErr }, "*");
 				}
 			}
 			/*]]>*/

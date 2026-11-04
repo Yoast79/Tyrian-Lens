@@ -1,0 +1,17 @@
+{
+    "active": true,
+    "motds": [
+        {
+            "id": "motd_v1_3_9_clears",
+            "title": "Beobachtungsliste aktualisiert!",
+            "message": "<div style='text-align: center;'><strong>Ich möchte die Liste der NSCs und ihrer Koordinaten weiter vervollständigen.</strong></div><br>Bitte, wenn ihr einen fehlenden NSC seht, stellt euch <em>genau</em> darauf und meldet den <span class='motd-highlight-btn'>Knoten</span> mit dem Namen des NSCs. <img class='inline-icon' style='width: 20px; height: 20px; vertical-align: middle; margin: 0 4px;' src='https://wiki.guildwars2.com/images/d/d2/Waypoint_%28map_icon%29.png' /><br><br><div style='text-align: center;'><u>Vielen Dank!</u></div>",
+            "active": false
+        },
+        {
+            "id": "motd_new_4530",
+            "title": "Castora Koordinaten-Update",
+            "message": "<div style='text-align: center;'>Ich habe die Karten in Castora mit den Koordinaten aktualisiert für</div> <br><div style='text-align: center;'><span class='motd-highlight-btn'>Sehenswürdigkeiten</span> <span class='motd-highlight-btn'>Wegmarken</span> <span class='motd-highlight-btn'>Beherrschungseinblicke</span> <span class='motd-highlight-btn'>Herzen</span></div><br><br><div style='text-align: center;'>Wenn ihr fehlende Koordinaten seht, meldet sie bitte über die Schaltfläche <span class='motd-highlight-btn'>Knoten melden</span> unten links.</div>\n      ",
+            "active": true
+        }
+    ]
+}

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -234,7 +235,7 @@
 			<div class="main-layout">
 				<div id="nav-panel" class="nav-panel">
 					<div style="position: relative;">
-						<input type="text" id="event-search" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)" autocomplete="off">
+						<input type="text" id="event-search" data-i18n-ph="common.search_general" placeholder="SEARCH..." style="width: 100%; background: #1a1510; border: none; border-bottom: 1px solid #4a3b2a; color: #e2c07d; padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)" autocomplete="off">
 							<span style="position: absolute; right: 8px; top: 10px; color: #8a7a5f; font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('event-search').value=''; handleSearch('');">X</span>
 						</div>
 				</div>
@@ -357,13 +358,13 @@
 
             window.saveCustomTimer = function() {
                 let title = document.getElementById('ct-title').value.trim();
-                if (!title) return alert("Title is required");
+                if (!title) return alert(window.DataLoader ? window.DataLoader.t('timers.err_title', "Title is required") : "Title is required");
                 let type = document.getElementById('ct-type').value;
                 
                 let targetMs = Date.now();
                 if (type.startsWith('in')) {
                     let amt = parseInt(document.getElementById('ct-time-in').value);
-                    if (isNaN(amt) || amt <= 0) return alert("Invalid value");
+                    if (isNaN(amt) || amt <= 0) return alert(window.DataLoader ? window.DataLoader.t('timers.err_value', "Invalid value") : "Invalid value");
                     let mult = 60000;
                     if (type === 'in_hours') mult = 3600000;
                     else if (type === 'in_days') mult = 86400000;
@@ -372,7 +373,7 @@
                     targetMs += amt * mult;
                 } else {
                     let time = document.getElementById('ct-time-at').value;
-                    if (!time) return alert("Invalid time");
+                    if (!time) return alert(window.DataLoader ? window.DataLoader.t('timers.err_time', "Invalid time") : "Invalid time");
                     let [h, m] = time.split(':');
                     let d = new Date();
                     d.setHours(parseInt(h), parseInt(m), 0, 0);
@@ -470,9 +471,10 @@
                     : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
 
                 try {
-                    const response = await fetch(apiBase + "timers_config.json?t=" + Date.now(), { cache: "no-store" });
+                    const response = (window.DataLoader ? await window.DataLoader.fetchDataFile("timers_config.json") : null) || await fetch(apiBase + "timers_config.json?t=" + Date.now(), { cache: "no-store" });
                     if (response.ok) {
-                        schedule = await response.json();
+                        const text = await response.text();
+                        schedule = JSON.parse(text.replace(/^\uFEFF/, '').trim());
                         schedule.push({ cat: "Custom Timers", sub: [ { n: "My Timers", evs: customTimers } ] });
                     }
                 } catch(e) { console.error("Failed to load timers JSON:", e); }
@@ -698,9 +700,9 @@
 
                     if (schedule[currentMainCat] && schedule[currentMainCat].cat === "Custom Timers" && !searchQuery) {
                         html += `<div id="custom-timer-form" style="background: rgba(0,0,0,0.3); border: 1px solid #2a2015; padding: 10px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 8px;">
-                            <div style="font-size: 12px; font-weight: bold; color: #8a7a5f; margin-bottom: 5px;">ADD CUSTOM TIMER</div>
+                            <div style="font-size: 12px; font-weight: bold; color: #8a7a5f; margin-bottom: 5px;">${window.DataLoader ? window.DataLoader.t('timers.add_custom', 'ADD CUSTOM TIMER') : 'ADD CUSTOM TIMER'}</div>
                             <div style="display:flex; gap:5px;">
-                                <input type="text" id="ct-title" placeholder="TITLE" style="flex:1; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;">
+                                <input type="text" id="ct-title" placeholder="${window.DataLoader ? window.DataLoader.t('timers.ph_title', 'TITLE') : 'TITLE'}" style="flex:1; background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;">
                             </div>
                             <div style="display: flex; gap: 5px; align-items: center;">
                                 <select id="ct-type" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase;" onchange="toggleCtTimeMode()">
@@ -711,7 +713,7 @@
                                     <option value="in_months">IN (MONTHS)</option>
                                     <option value="at">AT (LOCAL TIME)</option>
                                 </select>
-                                <input type="number" id="ct-time-in" placeholder="MINS" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; width: 60px;">
+                                <input type="number" id="ct-time-in" placeholder="${window.DataLoader ? window.DataLoader.t('timers.ph_mins', 'MINS') : 'MINS'}" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; width: 60px;">
                                 <input type="time" id="ct-time-at" style="background: #1a1510; border: 1px solid #4a3b2a; color: #e2c07d; padding: 5px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; display: none;">
                             </div>
                             <div style="display: flex; align-items: center; gap: 5px; margin-top: 5px;">
@@ -979,6 +981,7 @@
             }
             
             window.addEventListener('message', (e) => {
+                if (e.data.action === 'languageChanged') window.location.reload();
                 if (e.data.action === 'updateTheme') {
                     document.body.setAttribute('data-theme', e.data.theme);
                 }

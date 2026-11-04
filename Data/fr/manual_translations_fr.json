@@ -1,0 +1,706 @@
+{
+  "language": "fr",
+  "nav": {
+    "Map Options": "Options de carte",
+    "Tyria Map": "Carte de la Tyrie",
+    "WvW Map": "Carte McM",
+    "Timers": "Chronomètres",
+    "PvP": "JcJ",
+    "Hero Panel": "Héros",
+    "Build Planner": "Créateur de build",
+    "Characters": "Personnages",
+    "Inventory": "Inventaire",
+    "Bank": "Banque",
+    "Material Storage": "Stockage de matériaux",
+    "Wardrobe": "Garde-robe",
+    "Crafting": "Artisanat",
+    "Achievements": "Succès",
+    "Fishing": "Pêche",
+    "Weekly Clears": "Objectifs hebdo",
+    "Wallet": "Portefeuille",
+    "Trading": "Compagnie commerciale",
+    "Farming Tracker": "Suivi de farm",
+    "Search": "Recherche",
+    "Help": "Aide",
+    "Report Bug / Feature": "Signaler bug / Idée",
+    "API Keys": "Clés API",
+    "Settings": "Paramètres",
+    "Update Available!": "Mise à jour dispo !"
+  },
+  "help": {
+    "title": "TYRIAN LENS",
+    "sections": {
+      "account": {
+        "title": "CONNEXION DE COMPTE & CLÉS API",
+        "h_api": "Intégration de clé API",
+        "p_api": "Tyrian Lens nécessite une clé API Guild Wars 2 pour afficher vos données en toute sécurité. Créez une clé sur le portail ArenaNet. Autorisations recommandées : account, inventories, characters, progression, wallet, unlocks et trading.",
+        "h_visual": "Personnalisation & Échelle",
+        "p_visual": "Ajustez l'échelle et choisissez parmi les thèmes (Sylvari, Asura, Charr, Norn, Humain) dans les paramètres. Les volets gauche et droit fonctionnent indépendamment.",
+        "h_drf": "Intégration DRF pour le butin",
+        "p_drf": "(Optionnel) Associez le suivi de farm à Drop Research Facilities (DRF) pour enregistrer en direct les objets obtenus sans attendre le rafraîchissement de l'API."
+      },
+      "map": {
+        "title": "CARTES INTERACTIVES & NAVIGATION GPS",
+        "h_mumble": "Intégration Mumble Link",
+        "p_mumble": "Les cartes Leaflet utilisent les données Mumble Link pour la géolocalisation en jeu. La carte suit automatiquement votre personnage et bascule entre Tyrie et McM en temps réel.",
+        "h_overlay": "Superpositions interactives",
+        "p_overlay": "Affichez ou masquez de nombreux marqueurs : ressources, coffres, familiers de rôdeur, PNJ marchands et bien plus ! Cliquez sur un PNJ pour voir ses objets.",
+        "h_marker": "Marqueurs personnalisés",
+        "p_marker": "Placez des repères avec ALT + CLIC GAUCHE. Cliquez directement sur un marqueur placé pour le supprimer."
+      },
+      "storage": {
+        "title": "STOCKAGE GLOBAL DU COMPTE & RECHERCHE",
+        "h_search": "Recherche unifiée",
+        "p_search": "Recherchez et filtrez instantanément dans votre banque, réserve de matériaux, emplacements partagés et tous vos personnages.",
+        "h_roster": "Liste des personnages & Sacs",
+        "p_roster": "Consultez l'équipement, les sacs, les anniversaires et le temps de jeu sans devoir changer de personnage en jeu.",
+        "h_mat": "Matériaux & Garde-robe",
+        "p_mat": "Parcourez vos collections, apparences déverrouillées et quantités de matériaux. Cliquez pour ouvrir la page du Wiki Guild Wars 2 correspondante."
+      },
+      "hero": {
+        "title": "PANNEAU DE HÉROS & BUILDS",
+        "h_equip": "Équipement & Attributs",
+        "p_equip": "Inspectez vos armes, armures et bijoux équipés avec leurs caractéristiques complètes et couleurs de rareté.",
+        "h_specs": "Spécialisations & Aptitudes",
+        "p_specs": "Visualisez les spécialisations, aptitudes sélectionnées et compétences utilitaires de votre modèle actif.",
+        "h_planner": "Planificateur de Build",
+        "p_planner": "Concevez vos ensembles d'équipement, comparez les statistiques et partagez facilement vos créations avec vos amis."
+      },
+      "trading": {
+        "title": "COMPAGNIE COMMERCIALE & ÉCONOMIE",
+        "h_delivery": "Boîte de livraison",
+        "p_delivery": "L'icône du comptoir s'illumine lorsque des objets ou des pièces vous attendent. Survolez-la pour voir le récapitulatif détaillé.",
+        "h_charts": "Graphiques & Investissements",
+        "p_charts": "Suivez les ordres d'achat et de vente, l'historique des prix et visualisez vos profits avec le suivi de portefeuille.",
+        "h_crafting": "Calculateur d'artisanat",
+        "p_crafting": "Calculez vos bénéfices de fabrication nets en tenant compte des matériaux déjà présents dans votre banque et votre réserve."
+      },
+      "events": {
+        "title": "ÉVÉNEMENTS, BOSS & PROGRESSION",
+        "h_meta": "Méta-événements & Boss mondiaux",
+        "p_meta": "Suivez les horaires des boss mondiaux et méta-événements. Cliquez sur l'icône de l'œil pour ajouter un boss à vos favoris permanents.",
+        "h_achieve": "Tableau des succès",
+        "p_achieve": "Suivez votre progression par catégorie et le détail des paliers de chaque succès.",
+        "h_clears": "Objectifs hebdomadaires",
+        "p_clears": "Gardez un œil sur vos raids, missions d'attaque et donjons avec le statut des boss complétés pour le cycle en cours.",
+        "h_farming": "Session de farm",
+        "p_farming": "Enregistrez vos gains d'or par heure, variations de monnaies et objets récoltés en temps réel."
+      },
+      "credits": {
+        "title": "CRÉDITS & MENTIONS LÉGALES",
+        "h_copy": "Droits d'auteur",
+        "p_copy": "Tous les contenus, images et données API Guild Wars 2 appartiennent à ArenaNet et NCSOFT.",
+        "h_arch": "Architecture logicielle",
+        "p_arch": "Conçu avec C#, .NET 9, WebView2 et Leaflet JS.",
+        "h_dep": "Dépendances",
+        "p_dep": "Propulsé par la bibliothèque Gw2Sharp pour l'intégration Mumble Link.",
+        "h_insp": "Inspirations",
+        "p_insp": "Inspiré par gw2efficiency, gw2navi et drf.rs.",
+        "h_contrib": "Coordonnées",
+        "p_contrib": "Fichiers de coordonnées fournis par Lady Elyssa et Tekkit."
+      },
+      "hotkeys": {
+        "title": "RACCOURCIS CLAVIER & COMMANDES",
+        "refresh": "RAFRAÎCHIR L'APPLICATION",
+        "k_refresh": "F5",
+        "move": "DÉPLACER LA FENÊTRE",
+        "k_move": "GLISSER LA BARRE DE MENU",
+        "resize": "REDIMENSIONNER",
+        "k_resize": "GLISSER LE COIN INFÉRIEUR DROIT",
+        "place_marker": "PLACER UN MARQUEUR",
+        "k_place_marker": "ALT + CLIC GAUCHE",
+        "delete_marker": "SUPPRIMER UN MARQUEUR",
+        "k_delete_marker": "CLIC GAUCHE SUR LE MARQUEUR"
+      }
+    },
+    "btn_discord": "REJOINDRE LE DISCORD",
+    "btn_website": "VISITER LE SITE OFFICIEL",
+    "donation": "Si Tyrian Lens améliore vos aventures en Tyrie, montrez votre soutien par un don d'or ou d'objets en jeu."
+  },
+  "map": {
+    "compass": {
+      "track_player": "Suivre le joueur",
+      "central_tyria": "Tyrie centrale",
+      "crystal_desert": "Désert de cristal",
+      "cantha": "Cantha",
+      "heart_of_maguuma": "Cœur de Maguuma",
+      "castora": "Castora",
+      "horn_of_maguuma": "Cor de Maguuma"
+    },
+    "tod": {
+      "day": "TYRIE : JOUR",
+      "night": "TYRIE : NUIT",
+      "dusk": "TYRIE : CRÉPUSCULE",
+      "dawn": "TYRIE : AUBE"
+    },
+    "hud": {
+      "player": "JOUEUR :",
+      "cursor": "CURSEUR :",
+      "altitude": "ALTITUDE :",
+      "tracking": "SUIVI :",
+      "on": "ACTIF",
+      "off": "INACTIF",
+      "report_node": "Signaler un nœud"
+    },
+    "modals": {
+      "remove_marker_title": "Supprimer le marqueur ?",
+      "remove": "Supprimer",
+      "cancel": "Annuler",
+      "report_coord_title": "Signaler des coordonnées",
+      "report_coord_tutorial": "Placez-vous exactement sur l'élément en jeu, saisissez son nom ci-dessous et cliquez sur Envoyer. Les coordonnées sont relevées automatiquement.",
+      "report_coord_label": "Nom / Description du nœud",
+      "report_coord_placeholder": "ex : Filone de platine riche, Élisa, etc.",
+      "report_submit": "Envoyer le rapport"
+    },
+    "toasts": {
+      "waypoint_copied": "POINT DE PASSAGE COPIÉ",
+      "poi_copied": "SITE REMARQUABLE COPIÉ",
+      "coords_copied": "COORDONNÉES COPIÉES",
+      "marker_removed": "MARQUEUR SUPPRIMÉ"
+    }
+  },
+  "settings": {
+    "sections": {
+      "window": "Fenêtre & Affichage",
+      "timezone": "Fuseau horaire",
+      "character": "Personnage préféré",
+      "audio": "Audio & Marqueurs",
+      "data": "Gestion des données"
+    },
+    "labels": {
+      "theme": "Thème",
+      "ontop": "Toujours au premier plan",
+      "wiki": "Vue Wiki intégrée",
+      "language": "Langue d'affichage",
+      "systray": "Notifications de la barre des tâches",
+      "discord": "Discord Rich Presence",
+      "volume": "Volume principal",
+      "marker_scale": "Échelle des marqueurs de carte",
+      "farming_scale": "Échelle des nœuds de récolte",
+      "zoom_cap": "Limite de zoom des détails"
+    },
+    "themes": {
+      "human": "Humain (Défaut)",
+      "sylvari": "Sylvari",
+      "asura": "Asura",
+      "charr": "Charr",
+      "norn": "Norn"
+    },
+    "timezones": {
+      "local": "Heure locale",
+      "utc": "UTC (Heure serveur)",
+      "la": "Heure Pacifique (US)",
+      "ny": "Heure de l'Est (US)",
+      "london": "Londres (UK)",
+      "berlin": "Europe centrale",
+      "sydney": "Sydney (AU)"
+    },
+    "no_preference": "Aucune préférence",
+    "zoom_levels": {
+      "5": "Zoom 5",
+      "6": "Zoom 6",
+      "7": "Zoom 7",
+      "painterly": "Zoom 4 (Défaut)"
+    },
+    "zoom_cap_tooltip": "Forcer des détails élevés lors d'un dézoom important augmente la charge mémoire et peut impacter la fluidité.",
+    "buttons": {
+      "reload_map": "Recharger la carte",
+      "update_available": "Mise à jour disponible",
+      "motd": "Message du jour",
+      "export_log": "Exporter le journal",
+      "clear_data": "Réinitialiser les données"
+    },
+    "confirm_modal": {
+      "text": "ATTENTION : CETTE ACTION RÉINITIALISE TOUS LES PARAMÈTRES, CLÉS API ET FAVORIS. CONTINUER ?",
+      "confirm": "Oui, Réinitialiser",
+      "cancel": "Annuler"
+    }
+  },
+  "api": {
+    "placeholder_nickname": "SURNOM (EX : PRINCIPAL)",
+    "placeholder_key": "COLLER LA CLÉ API...",
+    "placeholder_drf": "COLLER LE JETON DRF (DEPUIS DRF.RS)...",
+    "btn_add": "Ajouter le compte",
+    "btn_link_drf": "Lier le jeton DRF",
+    "how_drf": "Comment configurer DRF",
+    "how_api": "Comment configurer une clé API",
+    "tip_api": "Les clés API permettent à Tyrian Lens de lire les informations de votre compte en toute sécurité. Créez une clé sur le portail ArenaNet officiel et collez-la ici.",
+    "tip_drf": "DRF (Drop Research Facilities) permet le suivi du butin en temps réel : 1. Téléchargez l'addon sur drf.rs. 2. Créez un jeton sur leur site et collez-le ici. 3. Le butin est enregistré en direct.",
+    "tip_reveal": "Révéler la clé",
+    "modal_title": "SUPPRIMER LE COMPTE ?",
+    "modal_purge": "RÉVOQUER L'ACCÈS POUR",
+    "btn_yes": "OUI",
+    "btn_no": "NON",
+    "toast_revoked": "Accès révoqué"
+  },
+  "bug_report": {
+    "title": "Signaler bug / Idée",
+    "label_type": "Type de rapport :",
+    "opt_bug": "Bogue / Problème",
+    "opt_feature": "Suggestion de fonctionnalité",
+    "label_module": "Module concerné :",
+    "success_title": "Merci !",
+    "success_body": "Votre rapport a été transmis avec succès.<br>Merci de prendre le temps d'améliorer Tyrian Lens !",
+    "btn_discord": "Rejoindre le Discord",
+    "btn_ok": "OK"
+  },
+  "common": {
+    "search_anything": "RECHERCHER...",
+    "search_vault": "RECHERCHER EN BANQUE...",
+    "search_inventory": "RECHERCHER DANS L'INVENTAIRE...",
+    "search_wardrobe": "RECHERCHER DANS LA GARDE-ROBE...",
+    "search_markers": "Rechercher un marqueur...",
+    "search_general": "RECHERCHER...",
+    "search_items": "NOM DE L'OBJET...",
+    "loading": "Chargement...",
+    "close": "Fermer",
+    "cancel": "Annuler",
+    "submit": "Envoyer",
+    "save": "Enregistrer",
+    "undercut": "PRIX DÉPASSÉ",
+    "overbid": "SURBANQUE DÉPASSÉE",
+    "search_currencies": "RECHERCHER TOUTES LES DEVISES...",
+    "search_fish": "RECHERCHER DES POISSONS...",
+    "search_materials": "RECHERCHER DES MATÉRIAUX...",
+    "search_crafting_queue": "RECHERCHER UN OBJET À AJOUTER À LA FILE D'ATTENTE D'ARTISANAT...",
+    "search_options": "Rechercher des options...",
+    "syncing": "Synchronisation...",
+    "loading_module": "Chargement du module...",
+    "connecting_tyria": "Connexion à la Tyrie...",
+    "clear": "Effacer",
+    "delete": "Supprimer",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "OK",
+    "accept": "Accepter"
+  },
+  "map_options": {
+    "sections": {
+      "map-options": "Options de carte",
+      "farming_nodes": "Nœuds de récolte",
+      "miscellaneous": "Divers"
+    },
+    "categories": {
+      "mapicons": "Icônes de carte",
+      "maplabels": "Étiquettes de carte",
+      "ore": "Minerai",
+      "wood": "Bois",
+      "plants": "Plantes",
+      "hunting": "Chasse & Événements",
+      "trading": "Marchands & PNJs",
+      "chests_and_achievements": "Coffres & Succès",
+      "festivals": "Festivals"
+    },
+    "items": {
+      "poi": {
+        "label": "Sites remarquables",
+        "tooltip": "Afficher ou masquer les sites remarquables."
+      },
+      "waypoint": {
+        "label": "Points de passage",
+        "tooltip": "Afficher ou masquer les points de passage."
+      },
+      "vista": {
+        "label": "Panoramas",
+        "tooltip": "Afficher ou masquer les panoramas."
+      },
+      "heart": {
+        "label": "Cœurs de renommée",
+        "tooltip": "Afficher ou masquer les cœurs de renommée."
+      },
+      "heropoint": {
+        "label": "Points de héros",
+        "tooltip": "Afficher ou masquer les points de héros."
+      },
+      "mastery": {
+        "label": "Points de maîtrise",
+        "tooltip": "Afficher ou masquer les points de maîtrise."
+      },
+      "node_zone_portal": {
+        "label": "Portails de zone",
+        "tooltip": "Afficher ou masquer les portails de zone."
+      },
+      "personal_markers": {
+        "label": "Marqueurs personnels",
+        "tooltip": "Afficher ou masquer les marqueurs personnels."
+      },
+      "region": {
+        "label": "Noms de région",
+        "tooltip": "Afficher ou masquer les noms de région."
+      },
+      "map_text": {
+        "label": "Noms de carte",
+        "tooltip": "Afficher ou masquer les noms de carte."
+      },
+      "sector": {
+        "label": "Noms de secteur",
+        "tooltip": "Afficher ou masquer les noms de secteur."
+      },
+      "map_borders": {
+        "label": "Frontières de secteur",
+        "tooltip": "Afficher ou masquer les frontières de secteur et choisir la couleur."
+      },
+      "node_gold_ore": {
+        "label": "Or"
+      },
+      "node_silver_ore": {
+        "label": "Argent"
+      },
+      "node_iron_ore": {
+        "label": "Fer"
+      },
+      "node_copper_ore": {
+        "label": "Cuivre"
+      },
+      "node_platinum_ore": {
+        "label": "Platine"
+      },
+      "node_mithril_ore": {
+        "label": "Mithril"
+      },
+      "node_orichalcum_ore": {
+        "label": "Orichalque"
+      },
+      "node_quartz_crystal": {
+        "label": "Cristal de quartz"
+      },
+      "node_rich_ore_vein": {
+        "label": "Filons riches non catégorisés"
+      },
+      "node_soft_wood": {
+        "label": "Bois tendre"
+      },
+      "node_seasoned_wood": {
+        "label": "Bois sec"
+      },
+      "node_hard_wood": {
+        "label": "Bois dur"
+      },
+      "node_elder_wood": {
+        "label": "Bois ancien"
+      },
+      "node_ancient_wood": {
+        "label": "Bois antique"
+      },
+      "node_lettuce_plants": {
+        "label": "Laitue"
+      },
+      "node_onion_plants": {
+        "label": "Oignons"
+      },
+      "node_potato_plants": {
+        "label": "Pomme de terre"
+      },
+      "node_clam_plants": {
+        "label": "Palourde"
+      },
+      "node_strawberry_plants": {
+        "label": "Carré de fraises"
+      },
+      "node_coral_plants": {
+        "label": "Corail"
+      },
+      "node_seaweed_plants": {
+        "label": "Algue"
+      },
+      "node_sugar_pumpkin_plants": {
+        "label": "Citrouille sucrée"
+      },
+      "node_artichoke_plants": {
+        "label": "Artichaut"
+      },
+      "node_asparagus_plants": {
+        "label": "Asperge"
+      },
+      "node_passiflora_plants": {
+        "label": "Passiflore en fleur"
+      },
+      "node_toxic_seedling_plants": {
+        "label": "Pousses toxiques",
+        "tooltip": "Un nœud dans un groupe donnera un échantillon de spore toxique immaculé."
+      },
+      "node_black_crocus_plants": {
+        "label": "Crocus noir"
+      },
+      "node_flax_plants": {
+        "label": "Lin"
+      },
+      "node_mussels_plants": {
+        "label": "Moules"
+      },
+      "node_omnomberry_plants": {
+        "label": "Baies d'omnom"
+      },
+      "node_orrian_truffle_plants": {
+        "label": "Truffe d'Orr"
+      },
+      "node_sawgill_mushroom_plants": {
+        "label": "Champignons vrillettes"
+      },
+      "node_jungle_plants_plants": {
+        "label": "Plantes de la jungle"
+      },
+      "node_verdant_herbs_plants": {
+        "label": "Herbes verdoyantes"
+      },
+      "node_desert_herbs_plants": {
+        "label": "Herbes du désert"
+      },
+      "node_mixed_herbs_plants": {
+        "label": "Herbes mélangées"
+      },
+      "node_mixed_vegetables_plants": {
+        "label": "Légumes variés"
+      },
+      "node_world_boss": {
+        "label": "Boss & Champions",
+        "tooltip": "Un cercle vert clignotant indique quand le World Boss est actif."
+      },
+      "node_event_group": {
+        "label": "Événements de groupe",
+        "tooltip": "Afficher ou masquer les événements de groupe."
+      },
+      "node_event_standard": {
+        "label": "Événements dynamiques",
+        "tooltip": "Afficher ou masquer les événements dynamiques standards."
+      },
+      "node_event_gathering": {
+        "label": "Autres événements",
+        "tooltip": "Afficher ou masquer les événements de collecte et d'escorte."
+      },
+      "node_mist_rift": {
+        "label": "Failles des Brumes",
+        "tooltip": "Emplacements d'apparition possibles à travers la Tyrie."
+      },
+      "node_bounty": {
+        "label": "Primes",
+        "tooltip": "Prenez une prime sur le tableau des primes avant qu'elle n'apparaisse."
+      },
+      "node_ranger_pet": {
+        "label": "Familiers de rôdeur",
+        "tooltip": "Les familiers peuvent être recherchés dans le menu Recherche."
+      },
+      "node_fishing_hole": {
+        "label": "Coins de pêche",
+        "tooltip": "Emplacements de pêche possibles à travers la Tyrie."
+      },
+      "node_treasure_mushroom": {
+        "label": "Champignon aux trésors",
+        "tooltip": "Emplacements d'apparition possibles."
+      },
+      "node_matrix_cube_key": {
+        "label": "Clé de cube matriciel",
+        "tooltip": "Emplacements possibles dans le réacteur de Thaumanova."
+      },
+      "node_fireworks_launchers": {
+        "label": "Foire du Dragon - Lanceurs de feux d'artifice"
+      },
+      "node_dragon_pinata": {
+        "label": "Foire du Dragon - Piñatas de dragon"
+      },
+      "node_zephyrite_kite_basket": {
+        "label": "Festival des Quatre Vents - Paniers de cerfs-volants"
+      },
+      "node_carving_pumpkin": {
+        "label": "Halloween - Citrouilles à sculpter"
+      },
+      "node_orphan": {
+        "label": "Hivernel - Orphelins"
+      }
+    },
+    "syncing_rotation": "SYNCHRONISATION AVEC LA TABLE DE ROTATION...",
+    "copied_waypoints": "6 POINTS DE PASSAGE COPIÉS",
+    "rotation_error": "ERREUR DE SYNCHRONISATION",
+    "copy_waypoints_tip": "Copier les points de passage"
+  },
+  "motd": {
+    "active": true,
+    "motds": [
+      {
+        "id": "motd_v1_3_9_clears",
+        "title": "Liste de surveillance mise à jour !",
+        "message": "<div style='text-align: center;'><strong>Je souhaite continuer à compléter la liste des PNJs et de leurs coordonnées.</strong></div><br>S'il vous plaît, si vous voyez un PNJ manquant, placez-vous <em>exactement</em> dessus et signalez le <span class='motd-highlight-btn'>Nœud</span> avec le nom du PNJ. <img class='inline-icon' style='width: 20px; height: 20px; vertical-align: middle; margin: 0 4px;' src='https://wiki.guildwars2.com/images/d/d2/Waypoint_%28map_icon%29.png' /><br><br><div style='text-align: center;'><u>Merci beaucoup !</u></div>",
+        "active": false
+      },
+      {
+        "id": "motd_new_4530",
+        "title": "Mise à jour des coordonnées de Castora",
+        "message": "<div style='text-align: center;'>J'ai mis à jour les cartes de Castora avec les coordonnées pour</div> <br><div style='text-align: center;'><span class='motd-highlight-btn'>Sites remarquables</span> <span class='motd-highlight-btn'>Points de passage</span> <span class='motd-highlight-btn'>Points de maîtrise</span> <span class='motd-highlight-btn'>Cœurs</span></div><br><br><div style='text-align: center;'>Si vous constatez des coordonnées manquantes, veuillez les signaler à l'aide du bouton <span class='motd-highlight-btn'>Signaler un nœud</span> en bas à gauche.</div>\n      ",
+        "active": true
+      }
+    ]
+  },
+  "common_ui": {
+    "WAYPOINT COPIED": "POINT DE PASSAGE COPIÉ",
+    "POI COPIED": "SITE REMARQUABLE COPIÉ",
+    "Loading...": "Chargement...",
+    "Search": "Rechercher",
+    "Close": "Fermer",
+    "search_anything": "RECHERCHER...",
+    "search_vault": "RECHERCHER EN BANQUE...",
+    "search_inventory": "RECHERCHER DANS L'INVENTAIRE...",
+    "search_wardrobe": "RECHERCHER DANS LA GARDE-ROBE...",
+    "search_markers": "Rechercher un marqueur...",
+    "search_general": "RECHERCHER...",
+    "search_items": "NOM DE L'OBJET...",
+    "loading": "Chargement...",
+    "close": "Fermer",
+    "cancel": "Annuler",
+    "submit": "Envoyer",
+    "save": "Enregistrer",
+    "undercut": "PRIX DÉPASSÉ",
+    "overbid": "SURBANQUE DÉPASSÉE"
+  },
+  "wvw": {
+    "compass_eotm": "Lisière des brumes",
+    "compass_green_alpine": "Territoires alpins verts",
+    "compass_blue_alpine": "Territoires alpins bleus",
+    "compass_red_desert": "Territoires désertiques rouges",
+    "compass_alpine": "Territoires alpins",
+    "compass_desert": "Territoires désertiques",
+    "compass_eb": "Champs de bataille éternels",
+    "compass_hotm": "Cœur des brumes",
+    "compass_track": "Suivre le joueur",
+    "label_marker": "Étiqueter le marqueur",
+    "remove_marker": "Supprimer le marqueur ?",
+    "options_title": "Icônes de la carte",
+    "options_labels": "Étiquettes et frontières",
+    "opt_poi": "Sites remarquables",
+    "opt_waypoint": "Points de passage",
+    "opt_vista": "Panoramas",
+    "opt_heropoint": "Défis de héros",
+    "opt_towers": "Tours",
+    "opt_keeps": "Forts",
+    "opt_camps": "Camps",
+    "opt_ruins": "Ruines du pouvoir",
+    "opt_personal_markers": "Marqueurs personnels",
+    "opt_map_text": "Noms de cartes",
+    "opt_sector": "Secteurs",
+    "opt_borders": "Frontières",
+    "opt_overlay": "Superposition de couleur de secteur",
+    "opt_scoreboard": "Tableau des scores"
+  },
+  "characters": {
+    "title": "Liste des personnages",
+    "total_playtime": "Temps de jeu total : {0} h",
+    "syncing_roster": "SYNCHRONISATION DES DONNÉES DU ROSTER...",
+    "birthday_title": "JOYEUX ANNIVERSAIRE !",
+    "birthday_btn": "Fêter !",
+    "tip_bag_slots": "Agrandissements de sac",
+    "tip_crafting_licenses": "Licences d'artisanat actives",
+    "tip_build_tabs": "Onglets de modèle de archétype",
+    "tip_equip_tabs": "Onglets de modèle d'équipement"
+  },
+  "wallet": {
+    "title": "Portefeuille de compte",
+    "search_ph": "RECHERCHER TOUTES LES DEVISES...",
+    "syncing": "Synchronisation des actifs...",
+    "footer": "Suivi des devises et actifs"
+  },
+  "fishing": {
+    "title": "RÉGIONS DE PÊCHE",
+    "watchlist_overlay": "OVERLAY DE LA LISTE DE SUIVI",
+    "search_ph": "RECHERCHER DES POISSONS...",
+    "loading": "CHARGEMENT DES DONNÉES DE PÊCHE..."
+  },
+  "clears": {
+    "title": "Validations hebdomadaires",
+    "watchlist_screen": "Liste de suivi à l'écran",
+    "watchlist_btn": "Liste de suivi",
+    "overview_title": "Aperçu de la liste de suivi",
+    "syncing": "SYNCHRONISATION DES DONNÉES DE VALIDATION...",
+    "cleared": "TERMINÉ",
+    "uncleared": "NON TERMINÉ",
+    "no_items": "Aucun élément sur votre liste de suivi.<br><br>Cliquez sur les icônes Rayons X à côté des éléments pour les suivre.",
+    "wing": "Aile"
+  },
+  "farming": {
+    "title": "SUIVI DE FARMING",
+    "start_session": "DÉMARRER LA SESSION",
+    "pause_session": "PAUSE",
+    "resume_session": "REPRENDRE",
+    "save_session": "ENREGISTRER",
+    "tab_current": "SESSION ACTUELLE",
+    "tab_history": "HISTORIQUE & GRAPHIQUES",
+    "currencies_gained": "DEVISES OBTENUES",
+    "items_gained": "OBJETS OBTENUS",
+    "no_active_session": "AUCUNE SESSION ACTIVE",
+    "currency_gains_over_time": "GAINS DE DEVISES AU FIL DU TEMPS",
+    "day": "JOUR",
+    "week": "SEMAINE",
+    "month": "MOIS",
+    "year": "ANNÉE",
+    "session_log": "JOURNAL DE SESSION",
+    "delete_entry": "Supprimer l'entrée"
+  },
+  "hero": {
+    "attributes": "Attributs",
+    "copy_build": "Copier le modèle",
+    "copy_equip": "Copier l'équipement",
+    "save_to_planner": "Enregistrer dans le planificateur"
+  },
+  "crafting": {
+    "account_unlocks": "Déverrouillages de compte",
+    "calculator": "Calculateur d'artisanat",
+    "use_own_mats": "UTILISER SES PROPRES MATÉRIAUX",
+    "auto_update_mats": "METTRE À JOUR LES MATÉRIAUX TOUTES LES MINUTES",
+    "use_promotions": "UTILISER LES PROMOTIONS D'OBJETS",
+    "syncing": "SYNCHRONISATION DES RECETTES...",
+    "may_take_minute": "CELA PEUT PRENDRE UNE MINUTE"
+  },
+  "pvp": {
+    "title": "Module JcJ",
+    "tab_stats": "Statistiques",
+    "tab_season": "Saison",
+    "tab_leaderboard": "Top 50",
+    "tab_history": "Historique",
+    "equipment": "Équipement",
+    "mist_champions": "Champions des brumes"
+  },
+  "planner": {
+    "clear": "Effacer",
+    "save": "Enregistrer",
+    "load": "Charger",
+    "copy_build": "Copier le modèle",
+    "share": "Partager",
+    "code_hint": "Code de modèle ou partagé",
+    "paste_code": "Coller le code",
+    "select_saved": "CHOISIR UN MODÈLE ENREGISTRÉ",
+    "save_as": "ENREGISTRER LE MODÈLE SOUS",
+    "overwrite_title": "ÉCRASER LE MODÈLE ?",
+    "clear_title": "EFFACER LE MODÈLE",
+    "clear_prompt": "Êtes-vous sûr de vouloir effacer le modèle actuel ? Cette opération est irréversible.",
+    "select_skill": "CHOISIR UNE COMPÉTENCE",
+    "select_option": "Choisir une option",
+    "apply_all": "Appliquer à tous les compatibles"
+  },
+  "timers": {
+    "add_custom": "AJOUTER UN MINUTEUR PERSONNALISÉ",
+    "ph_title": "TITRE",
+    "ph_mins": "MIN",
+    "err_title": "Le titre est requis",
+    "err_value": "Valeur invalide",
+    "err_time": "Heure invalide"
+  },
+  "trading": {
+    "market_search": "RECHERCHE AU COMPTOIR",
+    "search_btn": "RECHERCHER",
+    "add_items_hint": "Ajouter des objets via la recherche",
+    "run_analysis": "LANCER L'ANALYSE",
+    "ph_qty": "QUANTITÉ ACHETÉE",
+    "ph_cost": "COÛT TOTAL (CUIVRE)",
+    "empty_watchlist": "LISTE DE SUIVI VIDE"
+  },
+  "index": {
+    "switch_map_prompt": "Position détectée dans {0}.\nChanger de vue ?",
+    "motd_title": "Message du jour",
+    "motd_loading": "Chargement du message...",
+    "motd_dont_show": "Ne plus afficher",
+    "watch_achievements": "SUIVI DES SUCCÈS",
+    "watch_timers": "MINUTEURS D'ÉVÉNEMENTS",
+    "watch_fishing": "SUIVI DE PÊCHE",
+    "watch_clears": "VALIDATIONS HEBDOMADAIRES",
+    "connecting": "Connexion à la Tyrie...",
+    "loading_module": "Chargement du module..."
+  }
+}

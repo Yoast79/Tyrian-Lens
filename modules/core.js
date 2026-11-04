@@ -105,10 +105,11 @@ async function initCore() {
         }
         
         // Memory-heavy index loading
-        indexes.home = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/home_index.json').then(r => r.json());
-        indexes.appearance = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/appearance_index.json').then(r => r.json());
-        indexes.gear = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/gear_index.json').then(r => r.json());
-        indexes.dyes = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/dyes_index.json').then(r => r.json());
+        const loadIndex = async (file) => (window.DataLoader ? await window.DataLoader.fetchDataJSON(file) : await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/' + file).then(r => r.json()));
+        indexes.home = await loadIndex('home_index.json');
+        indexes.appearance = await loadIndex('appearance_index.json');
+        indexes.gear = await loadIndex('gear_index.json');
+        indexes.dyes = await loadIndex('dyes_index.json');
         
         buildMenu();
         

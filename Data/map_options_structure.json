@@ -1214,22 +1214,8 @@
               },
               {
                 "id": "node_node_small_obscure_chest_chests",
-                "label": "Small Obscure Chests",
+                "label": "Obscure Chests",
                 "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
-                "tooltip": "Play the Magic Mirror mini-game for these to show up",
-                "hasColorPicker": true
-              },
-              {
-                "id": "node_medium_obscure_chest_chests",
-                "label": "Medium Obscure Chests",
-                "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_medium.png",
-                "tooltip": "Play the Magic Mirror mini-game for these to show up",
-                "hasColorPicker": true
-              },
-              {
-                "id": "node_large_obscure_chest_chests",
-                "label": "Large Obscure Chests",
-                "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_large.png",
                 "tooltip": "Play the Magic Mirror mini-game for these to show up",
                 "hasColorPicker": true
               }

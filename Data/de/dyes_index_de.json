@@ -1,0 +1,7077 @@
+{
+    "dyes": [
+        {
+            "n": "Farbentferner",
+            "id": 1,
+            "r": "Common",
+            "rgb": [
+                124,
+                108,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dye%20Remover_Dye"
+        },
+        {
+            "n": "Schwarz",
+            "id": 2,
+            "r": "Rare",
+            "rgb": [
+                37,
+                35,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Black_Dye"
+        },
+        {
+            "n": "Kreide",
+            "id": 3,
+            "r": "Uncommon",
+            "rgb": [
+                95,
+                92,
+                92
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Chalk_Dye"
+        },
+        {
+            "n": "Grau",
+            "id": 4,
+            "r": "Common",
+            "rgb": [
+                72,
+                69,
+                70
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gray_Dye"
+        },
+        {
+            "n": "Pech",
+            "id": 5,
+            "r": "Uncommon",
+            "rgb": [
+                48,
+                46,
+                49
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pitch_Dye"
+        },
+        {
+            "n": "Firmament",
+            "id": 6,
+            "r": "Rare",
+            "rgb": [
+                211,
+                208,
+                207
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Celestial_Dye"
+        },
+        {
+            "n": "Ozean",
+            "id": 7,
+            "r": "Uncommon",
+            "rgb": [
+                0,
+                51,
+                73
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ocean_Dye"
+        },
+        {
+            "n": "Wanderdrossel",
+            "id": 8,
+            "r": "Uncommon",
+            "rgb": [
+                1,
+                106,
+                135
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Robin_Dye"
+        },
+        {
+            "n": "Blaue Rose",
+            "id": 9,
+            "r": "Uncommon",
+            "rgb": [
+                0,
+                76,
+                109
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Rose_Dye"
+        },
+        {
+            "n": "Himmel",
+            "id": 10,
+            "r": "Rare",
+            "rgb": [
+                54,
+                130,
+                160
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sky_Dye"
+        },
+        {
+            "n": "Sternennacht",
+            "id": 11,
+            "r": "Rare",
+            "rgb": [
+                0,
+                31,
+                52
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Starry%20Night_Dye"
+        },
+        {
+            "n": "Lehmziegel",
+            "id": 12,
+            "r": "Common",
+            "rgb": [
+                72,
+                34,
+                15
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Adobe_Dye"
+        },
+        {
+            "n": "Kalbsleder",
+            "id": 13,
+            "r": "Common",
+            "rgb": [
+                65,
+                49,
+                29
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Calfskin_Dye"
+        },
+        {
+            "n": "Kamel",
+            "id": 14,
+            "r": "Starter",
+            "rgb": [
+                88,
+                64,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Camel_Dye"
+        },
+        {
+            "n": "Holzkohle",
+            "id": 15,
+            "r": "Rare",
+            "rgb": [
+                39,
+                37,
+                30
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Charcoal_Dye"
+        },
+        {
+            "n": "Schokolade",
+            "id": 16,
+            "r": "Rare",
+            "rgb": [
+                42,
+                22,
+                7
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Chocolate_Dye"
+        },
+        {
+            "n": "Keramik",
+            "id": 17,
+            "r": "Starter",
+            "rgb": [
+                71,
+                44,
+                23
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pottery_Dye"
+        },
+        {
+            "n": "Erde",
+            "id": 18,
+            "r": "Common",
+            "rgb": [
+                54,
+                30,
+                3
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Earthen_Dye"
+        },
+        {
+            "n": "Ebenholz",
+            "id": 19,
+            "r": "Starter",
+            "rgb": [
+                53,
+                50,
+                40
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ebony_Dye"
+        },
+        {
+            "n": "Elfenbein",
+            "id": 20,
+            "r": "Rare",
+            "rgb": [
+                150,
+                132,
+                105
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ivory_Dye"
+        },
+        {
+            "n": "Mahagoni",
+            "id": 21,
+            "r": "Common",
+            "rgb": [
+                48,
+                19,
+                8
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mahogany_Dye"
+        },
+        {
+            "n": "Natur",
+            "id": 22,
+            "r": "Common",
+            "rgb": [
+                86,
+                74,
+                56
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Natural_Dye"
+        },
+        {
+            "n": "Rohleder",
+            "id": 23,
+            "r": "Common",
+            "rgb": [
+                126,
+                99,
+                67
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rawhide_Dye"
+        },
+        {
+            "n": "Terrakotta",
+            "id": 24,
+            "r": "Uncommon",
+            "rgb": [
+                101,
+                59,
+                34
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Terracotta_Dye"
+        },
+        {
+            "n": "Walnuss",
+            "id": 25,
+            "r": "Uncommon",
+            "rgb": [
+                34,
+                27,
+                11
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Walnut_Dye"
+        },
+        {
+            "n": "Weizen",
+            "id": 26,
+            "r": "Uncommon",
+            "rgb": [
+                95,
+                67,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wheat_Dye"
+        },
+        {
+            "n": "Blaubeer",
+            "id": 27,
+            "r": "Uncommon",
+            "rgb": [
+                36,
+                65,
+                122
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blueberry_Dye"
+        },
+        {
+            "n": "Brise",
+            "id": 28,
+            "r": "Common",
+            "rgb": [
+                74,
+                113,
+                187
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Breeze_Dye"
+        },
+        {
+            "n": "Saphir",
+            "id": 29,
+            "r": "Rare",
+            "rgb": [
+                4,
+                20,
+                62
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sapphire_Dye"
+        },
+        {
+            "n": "Königsblau",
+            "id": 30,
+            "r": "Rare",
+            "rgb": [
+                18,
+                37,
+                89
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Royal%20Blue_Dye"
+        },
+        {
+            "n": "Sommerhimmel",
+            "id": 31,
+            "r": "Common",
+            "rgb": [
+                35,
+                87,
+                139
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Summer%20Sky_Dye"
+        },
+        {
+            "n": "Wangenrot",
+            "id": 32,
+            "r": "Common",
+            "rgb": [
+                119,
+                75,
+                67
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blush_Dye"
+        },
+        {
+            "n": "Grell",
+            "id": 33,
+            "r": "Uncommon",
+            "rgb": [
+                134,
+                65,
+                53
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bold_Dye"
+        },
+        {
+            "n": "Düster",
+            "id": 34,
+            "r": "Rare",
+            "rgb": [
+                93,
+                35,
+                25
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dusky_Dye"
+        },
+        {
+            "n": "Pfirsich",
+            "id": 35,
+            "r": "Uncommon",
+            "rgb": [
+                159,
+                106,
+                87
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Peach_Dye"
+        },
+        {
+            "n": "Rosaner Sonnenuntergang",
+            "id": 36,
+            "r": "Common",
+            "rgb": [
+                150,
+                80,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Peach%20Sunset_Dye"
+        },
+        {
+            "n": "Herbsthimmel",
+            "id": 37,
+            "r": "Rare",
+            "rgb": [
+                89,
+                102,
+                128
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Autumn%20Sky_Dye"
+        },
+        {
+            "n": "Rustikalblau",
+            "id": 38,
+            "r": "Rare",
+            "rgb": [
+                46,
+                65,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Country%20Blue_Dye"
+        },
+        {
+            "n": "Rustikalpetrol",
+            "id": 39,
+            "r": "Common",
+            "rgb": [
+                32,
+                58,
+                68
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Country%20Teal_Dye"
+        },
+        {
+            "n": "Staubtraube",
+            "id": 40,
+            "r": "Uncommon",
+            "rgb": [
+                47,
+                49,
+                72
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dusty%20Grape_Dye"
+        },
+        {
+            "n": "Eukalyptus",
+            "id": 41,
+            "r": "Uncommon",
+            "rgb": [
+                49,
+                74,
+                72
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Eucalyptus_Dye"
+        },
+        {
+            "n": "Eismeer",
+            "id": 42,
+            "r": "Common",
+            "rgb": [
+                72,
+                95,
+                93
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frosted%20Sea_Dye"
+        },
+        {
+            "n": "Alte Jeans",
+            "id": 43,
+            "r": "Rare",
+            "rgb": [
+                40,
+                50,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Old%20Jeans_Dye"
+        },
+        {
+            "n": "Zartblau",
+            "id": 44,
+            "r": "Common",
+            "rgb": [
+                46,
+                82,
+                95
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shy%20Blue_Dye"
+        },
+        {
+            "n": "Schmutzblau",
+            "id": 45,
+            "r": "Starter",
+            "rgb": [
+                40,
+                58,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tea%20Jeans_Dye"
+        },
+        {
+            "n": "Denim",
+            "id": 46,
+            "r": "Uncommon",
+            "rgb": [
+                61,
+                82,
+                103
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Denim_Dye"
+        },
+        {
+            "n": "Traube",
+            "id": 47,
+            "r": "Common",
+            "rgb": [
+                70,
+                16,
+                65
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grape_Dye"
+        },
+        {
+            "n": "Traubenbonbon",
+            "id": 48,
+            "r": "Common",
+            "rgb": [
+                94,
+                29,
+                100
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grape%20Gum_Dye"
+        },
+        {
+            "n": "Lilablau",
+            "id": 49,
+            "r": "Common",
+            "rgb": [
+                121,
+                53,
+                129
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Morning%20Glory_Dye"
+        },
+        {
+            "n": "Pflaume",
+            "id": 50,
+            "r": "Rare",
+            "rgb": [
+                157,
+                92,
+                164
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Plum_Dye"
+        },
+        {
+            "n": "Wein",
+            "id": 51,
+            "r": "Rare",
+            "rgb": [
+                45,
+                9,
+                35
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wine_Dye"
+        },
+        {
+            "n": "Avocado",
+            "id": 52,
+            "r": "Uncommon",
+            "rgb": [
+                102,
+                96,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Avocado_Dye"
+        },
+        {
+            "n": "Zeylon",
+            "id": 53,
+            "r": "Rare",
+            "rgb": [
+                88,
+                110,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ceylon_Dye"
+        },
+        {
+            "n": "Chartreuse",
+            "id": 54,
+            "r": "Uncommon",
+            "rgb": [
+                138,
+                129,
+                39
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Chartreuse_Dye"
+        },
+        {
+            "n": "Frischminze",
+            "id": 55,
+            "r": "Rare",
+            "rgb": [
+                29,
+                101,
+                59
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Crisp%20Mint_Dye"
+        },
+        {
+            "n": "Smaragd",
+            "id": 56,
+            "r": "Rare",
+            "rgb": [
+                0,
+                38,
+                14
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Emerald_Dye"
+        },
+        {
+            "n": "Dschungel",
+            "id": 57,
+            "r": "Uncommon",
+            "rgb": [
+                14,
+                44,
+                11
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Kelly_Dye"
+        },
+        {
+            "n": "Echte Limette",
+            "id": 58,
+            "r": "Common",
+            "rgb": [
+                66,
+                134,
+                90
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Key%20Lime_Dye"
+        },
+        {
+            "n": "Kobold",
+            "id": 59,
+            "r": "Common",
+            "rgb": [
+                10,
+                79,
+                39
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Leprechaun_Dye"
+        },
+        {
+            "n": "Pfefferminz",
+            "id": 60,
+            "r": "Rare",
+            "rgb": [
+                15,
+                47,
+                36
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spearmint_Dye"
+        },
+        {
+            "n": "Sommergras",
+            "id": 61,
+            "r": "Uncommon",
+            "rgb": [
+                7,
+                53,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Summer%20Grass_Dye"
+        },
+        {
+            "n": "Antikbronze",
+            "id": 62,
+            "r": "Rare",
+            "rgb": [
+                69,
+                59,
+                46
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Antique%20Bronze_Dye"
+        },
+        {
+            "n": "Antikoliv",
+            "id": 63,
+            "r": "Common",
+            "rgb": [
+                62,
+                65,
+                48
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Antique%20Olive_Dye"
+        },
+        {
+            "n": "Messing",
+            "id": 64,
+            "r": "Common",
+            "rgb": [
+                113,
+                73,
+                16
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Brass_Dye"
+        },
+        {
+            "n": "Bronze",
+            "id": 65,
+            "r": "Common",
+            "rgb": [
+                63,
+                57,
+                33
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bronze_Dye"
+        },
+        {
+            "n": "Kupfer",
+            "id": 66,
+            "r": "Uncommon",
+            "rgb": [
+                93,
+                46,
+                15
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Copper_Dye"
+        },
+        {
+            "n": "Gold",
+            "id": 67,
+            "r": "Uncommon",
+            "rgb": [
+                138,
+                103,
+                50
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gold_Dye"
+        },
+        {
+            "n": "Geschützmetall",
+            "id": 68,
+            "r": "Uncommon",
+            "rgb": [
+                62,
+                68,
+                71
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gunmetal_Dye"
+        },
+        {
+            "n": "Eisen",
+            "id": 69,
+            "r": "Common",
+            "rgb": [
+                33,
+                41,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Iron_Dye"
+        },
+        {
+            "n": "Mithril",
+            "id": 70,
+            "r": "Rare",
+            "rgb": [
+                167,
+                153,
+                142
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mithril_Dye"
+        },
+        {
+            "n": "Stierblut",
+            "id": 71,
+            "r": "Rare",
+            "rgb": [
+                55,
+                4,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Oxblood_Dye"
+        },
+        {
+            "n": "Zinn",
+            "id": 72,
+            "r": "Uncommon",
+            "rgb": [
+                70,
+                70,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pewter_Dye"
+        },
+        {
+            "n": "Rost",
+            "id": 73,
+            "r": "Common",
+            "rgb": [
+                73,
+                26,
+                5
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rust_Dye"
+        },
+        {
+            "n": "Silber",
+            "id": 74,
+            "r": "Rare",
+            "rgb": [
+                130,
+                138,
+                146
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Silver_Dye"
+        },
+        {
+            "n": "Stahl",
+            "id": 75,
+            "r": "Uncommon",
+            "rgb": [
+                87,
+                83,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Steel_Dye"
+        },
+        {
+            "n": "Mitternachtsblau",
+            "id": 76,
+            "r": "Rare",
+            "rgb": [
+                14,
+                28,
+                37
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Blue_Dye"
+        },
+        {
+            "n": "Mitternachtshimmel",
+            "id": 77,
+            "r": "Rare",
+            "rgb": [
+                23,
+                27,
+                40
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Sky_Dye"
+        },
+        {
+            "n": "Mitternachtsfuchsie",
+            "id": 78,
+            "r": "Uncommon",
+            "rgb": [
+                36,
+                22,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Fuchsia_Dye"
+        },
+        {
+            "n": "Mitternachtsgold",
+            "id": 79,
+            "r": "Rare",
+            "rgb": [
+                38,
+                23,
+                2
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Gold_Dye"
+        },
+        {
+            "n": "Mitternachtsgrün",
+            "id": 80,
+            "r": "Uncommon",
+            "rgb": [
+                15,
+                28,
+                20
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Green_Dye"
+        },
+        {
+            "n": "Mitternachtsoliv",
+            "id": 81,
+            "r": "Common",
+            "rgb": [
+                32,
+                25,
+                6
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Olive_Dye"
+        },
+        {
+            "n": "Mitternachtslila",
+            "id": 82,
+            "r": "Rare",
+            "rgb": [
+                30,
+                23,
+                37
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Purple_Dye"
+        },
+        {
+            "n": "Mitternachtsrot",
+            "id": 83,
+            "r": "Rare",
+            "rgb": [
+                37,
+                15,
+                11
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Red_Dye"
+        },
+        {
+            "n": "Mitternachtsrose",
+            "id": 84,
+            "r": "Uncommon",
+            "rgb": [
+                43,
+                22,
+                24
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Rose_Dye"
+        },
+        {
+            "n": "Mitternachtsrost",
+            "id": 85,
+            "r": "Common",
+            "rgb": [
+                36,
+                18,
+                9
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Rust_Dye"
+        },
+        {
+            "n": "Mitternachtspetrol",
+            "id": 86,
+            "r": "Uncommon",
+            "rgb": [
+                10,
+                27,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Teal_Dye"
+        },
+        {
+            "n": "Mitternachtsviolett",
+            "id": 87,
+            "r": "Rare",
+            "rgb": [
+                26,
+                24,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Violet_Dye"
+        },
+        {
+            "n": "Mitternachtseibe",
+            "id": 88,
+            "r": "Uncommon",
+            "rgb": [
+                22,
+                28,
+                14
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Yew_Dye"
+        },
+        {
+            "n": "Kreidetafel",
+            "id": 89,
+            "r": "Uncommon",
+            "rgb": [
+                50,
+                60,
+                65
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Chalkboard_Dye"
+        },
+        {
+            "n": "Sahne",
+            "id": 90,
+            "r": "Common",
+            "rgb": [
+                154,
+                131,
+                114
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cream_Dye"
+        },
+        {
+            "n": "Schattenbeige",
+            "id": 91,
+            "r": "Uncommon",
+            "rgb": [
+                124,
+                108,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cream%20Shade_Dye"
+        },
+        {
+            "n": "Dämmerung",
+            "id": 92,
+            "r": "Uncommon",
+            "rgb": [
+                64,
+                61,
+                70
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dusk_Dye"
+        },
+        {
+            "n": "Frost",
+            "id": 93,
+            "r": "Rare",
+            "rgb": [
+                124,
+                136,
+                138
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frost_Dye"
+        },
+        {
+            "n": "Zuckerguss",
+            "id": 94,
+            "r": "Common",
+            "rgb": [
+                155,
+                142,
+                121
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frosting_Dye"
+        },
+        {
+            "n": "Flussbett",
+            "id": 96,
+            "r": "Common",
+            "rgb": [
+                75,
+                63,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Riverbed_Dye"
+        },
+        {
+            "n": "Salbei",
+            "id": 97,
+            "r": "Rare",
+            "rgb": [
+                55,
+                63,
+                56
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sage_Dye"
+        },
+        {
+            "n": "Zartviolett",
+            "id": 98,
+            "r": "Common",
+            "rgb": [
+                116,
+                105,
+                112
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shy%20Violet_Dye"
+        },
+        {
+            "n": "Schlick",
+            "id": 99,
+            "r": "Common",
+            "rgb": [
+                95,
+                100,
+                96
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Silt_Dye"
+        },
+        {
+            "n": "Bleisilber",
+            "id": 100,
+            "r": "Common",
+            "rgb": [
+                69,
+                70,
+                62
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Silver%20Lead_Dye"
+        },
+        {
+            "n": "Stein",
+            "id": 101,
+            "r": "Starter",
+            "rgb": [
+                102,
+                100,
+                85
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Stone_Dye"
+        },
+        {
+            "n": "Erdbeersahne",
+            "id": 102,
+            "r": "Common",
+            "rgb": [
+                186,
+                111,
+                87
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Strawberry%20Cream_Dye"
+        },
+        {
+            "n": "Trüffel",
+            "id": 103,
+            "r": "Uncommon",
+            "rgb": [
+                97,
+                84,
+                73
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Truffle_Dye"
+        },
+        {
+            "n": "Oliv",
+            "id": 104,
+            "r": "Common",
+            "rgb": [
+                60,
+                57,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive_Dye"
+        },
+        {
+            "n": "Weinblatt",
+            "id": 105,
+            "r": "Common",
+            "rgb": [
+                69,
+                81,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grape%20Leaf_Dye"
+        },
+        {
+            "n": "Olivenöl",
+            "id": 106,
+            "r": "Uncommon",
+            "rgb": [
+                91,
+                106,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Oil_Dye"
+        },
+        {
+            "n": "Kiefer",
+            "id": 107,
+            "r": "Uncommon",
+            "rgb": [
+                39,
+                36,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pine_Dye"
+        },
+        {
+            "n": "Eibenoliv",
+            "id": 108,
+            "r": "Common",
+            "rgb": [
+                116,
+                127,
+                33
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Yew_Dye"
+        },
+        {
+            "n": "Aprikose",
+            "id": 109,
+            "r": "Starter",
+            "rgb": [
+                160,
+                75,
+                23
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Apricot_Dye"
+        },
+        {
+            "n": "Zimt",
+            "id": 110,
+            "r": "Uncommon",
+            "rgb": [
+                59,
+                12,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cinnamon_Dye"
+        },
+        {
+            "n": "Sahneeis",
+            "id": 111,
+            "r": "Rare",
+            "rgb": [
+                202,
+                107,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Creamsicle_Dye"
+        },
+        {
+            "n": "Orange",
+            "id": 112,
+            "r": "Uncommon",
+            "rgb": [
+                152,
+                63,
+                23
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orange_Dye"
+        },
+        {
+            "n": "Sonnenuntergang",
+            "id": 113,
+            "r": "Common",
+            "rgb": [
+                95,
+                23,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sunset_Dye"
+        },
+        {
+            "n": "Weinrebe",
+            "id": 114,
+            "r": "Common",
+            "rgb": [
+                69,
+                40,
+                99
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grapevine_Dye"
+        },
+        {
+            "n": "Indigo",
+            "id": 115,
+            "r": "Rare",
+            "rgb": [
+                35,
+                15,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Indigo_Dye"
+        },
+        {
+            "n": "Irisröte",
+            "id": 116,
+            "r": "Uncommon",
+            "rgb": [
+                94,
+                70,
+                140
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Iris%20Blush_Dye"
+        },
+        {
+            "n": "Orchidee",
+            "id": 117,
+            "r": "Starter",
+            "rgb": [
+                48,
+                26,
+                77
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orchid_Dye"
+        },
+        {
+            "n": "Distel",
+            "id": 118,
+            "r": "Uncommon",
+            "rgb": [
+                129,
+                96,
+                175
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Thistle_Dye"
+        },
+        {
+            "n": "Burgundrot",
+            "id": 119,
+            "r": "Rare",
+            "rgb": [
+                51,
+                0,
+                2
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Burgundy_Dye"
+        },
+        {
+            "n": "Koralle",
+            "id": 120,
+            "r": "Uncommon",
+            "rgb": [
+                169,
+                72,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Coral_Dye"
+        },
+        {
+            "n": "Pink",
+            "id": 121,
+            "r": "Uncommon",
+            "rgb": [
+                194,
+                97,
+                106
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pink_Dye"
+        },
+        {
+            "n": "Rubin",
+            "id": 122,
+            "r": "Uncommon",
+            "rgb": [
+                71,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ruby_Dye"
+        },
+        {
+            "n": "Feuerrot",
+            "id": 123,
+            "r": "Common",
+            "rgb": [
+                102,
+                0,
+                6
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Scarlet_Dye"
+        },
+        {
+            "n": "Zuckerwatte",
+            "id": 124,
+            "r": "Rare",
+            "rgb": [
+                182,
+                90,
+                128
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cotton%20Candy_Dye"
+        },
+        {
+            "n": "Fuchsie",
+            "id": 125,
+            "r": "Uncommon",
+            "rgb": [
+                117,
+                25,
+                67
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fuchsia_Dye"
+        },
+        {
+            "n": "Echt scharfes Pink",
+            "id": 126,
+            "r": "Rare",
+            "rgb": [
+                169,
+                54,
+                94
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hot%20Pink_Dye"
+        },
+        {
+            "n": "Lippenstift",
+            "id": 127,
+            "r": "Rare",
+            "rgb": [
+                77,
+                0,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lipstick_Dye"
+        },
+        {
+            "n": "Bordeauxrot",
+            "id": 128,
+            "r": "Rare",
+            "rgb": [
+                47,
+                0,
+                25
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Maroon_Dye"
+        },
+        {
+            "n": "Apfelgrün",
+            "id": 129,
+            "r": "Rare",
+            "rgb": [
+                64,
+                86,
+                18
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Green%20Apple_Dye"
+        },
+        {
+            "n": "Immergrün",
+            "id": 130,
+            "r": "Uncommon",
+            "rgb": [
+                25,
+                39,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Evergreen_Dye"
+        },
+        {
+            "n": "Jalapeño",
+            "id": 131,
+            "r": "Starter",
+            "rgb": [
+                22,
+                57,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Jalape%C3%B1o_Dye"
+        },
+        {
+            "n": "Limette",
+            "id": 132,
+            "r": "Uncommon",
+            "rgb": [
+                35,
+                80,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lime_Dye"
+        },
+        {
+            "n": "Spross",
+            "id": 133,
+            "r": "Common",
+            "rgb": [
+                98,
+                137,
+                60
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sprout_Dye"
+        },
+        {
+            "n": "Gischt",
+            "id": 134,
+            "r": "Common",
+            "rgb": [
+                45,
+                140,
+                127
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Seafoam_Dye"
+        },
+        {
+            "n": "Meergrün",
+            "id": 135,
+            "r": "Common",
+            "rgb": [
+                0,
+                81,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sea%20Green_Dye"
+        },
+        {
+            "n": "Fichte",
+            "id": 136,
+            "r": "Common",
+            "rgb": [
+                0,
+                56,
+                49
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spruce_Dye"
+        },
+        {
+            "n": "Türkis",
+            "id": 137,
+            "r": "Rare",
+            "rgb": [
+                0,
+                108,
+                108
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Turquoise_Dye"
+        },
+        {
+            "n": "Wintergrün",
+            "id": 138,
+            "r": "Uncommon",
+            "rgb": [
+                0,
+                35,
+                35
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wintergreen_Dye"
+        },
+        {
+            "n": "Violett",
+            "id": 139,
+            "r": "Common",
+            "rgb": [
+                53,
+                53,
+                116
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Violet_Dye"
+        },
+        {
+            "n": "Iris",
+            "id": 140,
+            "r": "Rare",
+            "rgb": [
+                41,
+                33,
+                89
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Iris_Dye"
+        },
+        {
+            "n": "Flieder",
+            "id": 141,
+            "r": "Uncommon",
+            "rgb": [
+                107,
+                110,
+                185
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lilac_Dye"
+        },
+        {
+            "n": "Veilchen",
+            "id": 142,
+            "r": "Common",
+            "rgb": [
+                77,
+                83,
+                152
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Periwinkle_Dye"
+        },
+        {
+            "n": "Ultramarin",
+            "id": 143,
+            "r": "Uncommon",
+            "rgb": [
+                21,
+                19,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Royal%20Purple_Dye"
+        },
+        {
+            "n": "Butterkaramell",
+            "id": 144,
+            "r": "Common",
+            "rgb": [
+                122,
+                68,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Butterscotch_Dye"
+        },
+        {
+            "n": "Karamell",
+            "id": 145,
+            "r": "Common",
+            "rgb": [
+                94,
+                49,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Caramel_Dye"
+        },
+        {
+            "n": "Herbstgold",
+            "id": 146,
+            "r": "Uncommon",
+            "rgb": [
+                137,
+                85,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Harvest%20Gold_Dye"
+        },
+        {
+            "n": "Zitrone",
+            "id": 147,
+            "r": "Common",
+            "rgb": [
+                155,
+                108,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon_Dye"
+        },
+        {
+            "n": "Limonade",
+            "id": 148,
+            "r": "Rare",
+            "rgb": [
+                171,
+                135,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemonade_Dye"
+        },
+        {
+            "n": "Wolfram",
+            "id": 314,
+            "r": "Uncommon",
+            "rgb": [
+                72,
+                63,
+                66
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tungsten_Dye"
+        },
+        {
+            "n": "Weißgold",
+            "id": 315,
+            "r": "Rare",
+            "rgb": [
+                175,
+                159,
+                124
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/White%20Gold_Dye"
+        },
+        {
+            "n": "Zartpfirsich",
+            "id": 332,
+            "r": "Common",
+            "rgb": [
+                156,
+                106,
+                70
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shy%20Peach_Dye"
+        },
+        {
+            "n": "Sand",
+            "id": 333,
+            "r": "Rare",
+            "rgb": [
+                146,
+                119,
+                67
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sand_Dye"
+        },
+        {
+            "n": "Seetang",
+            "id": 334,
+            "r": "Common",
+            "rgb": [
+                130,
+                123,
+                62
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tang_Dye"
+        },
+        {
+            "n": "Blass",
+            "id": 335,
+            "r": "Common",
+            "rgb": [
+                134,
+                112,
+                107
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pale_Dye"
+        },
+        {
+            "n": "Frische",
+            "id": 336,
+            "r": "Uncommon",
+            "rgb": [
+                153,
+                139,
+                112
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Refresh_Dye"
+        },
+        {
+            "n": "Horizont",
+            "id": 337,
+            "r": "Common",
+            "rgb": [
+                118,
+                95,
+                84
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Far%20Mountain_Dye"
+        },
+        {
+            "n": "Nelke",
+            "id": 338,
+            "r": "Common",
+            "rgb": [
+                86,
+                36,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Clove_Dye"
+        },
+        {
+            "n": "Wasabi",
+            "id": 339,
+            "r": "Common",
+            "rgb": [
+                66,
+                109,
+                35
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wasabi_Dye"
+        },
+        {
+            "n": "Khaki",
+            "id": 340,
+            "r": "Common",
+            "rgb": [
+                81,
+                69,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Khaki_Dye"
+        },
+        {
+            "n": "Patina",
+            "id": 341,
+            "r": "Common",
+            "rgb": [
+                69,
+                48,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Patina_Dye"
+        },
+        {
+            "n": "Oxid",
+            "id": 342,
+            "r": "Uncommon",
+            "rgb": [
+                44,
+                29,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tarnish_Dye"
+        },
+        {
+            "n": "Errötung",
+            "id": 343,
+            "r": "Uncommon",
+            "rgb": [
+                185,
+                107,
+                107
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Flush_Dye"
+        },
+        {
+            "n": "Frostorange",
+            "id": 344,
+            "r": "Common",
+            "rgb": [
+                189,
+                136,
+                97
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orange%20Frost_Dye"
+        },
+        {
+            "n": "Zitronenschale",
+            "id": 345,
+            "r": "Uncommon",
+            "rgb": [
+                187,
+                151,
+                85
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon%20Zest_Dye"
+        },
+        {
+            "n": "Bohnengrün",
+            "id": 346,
+            "r": "Uncommon",
+            "rgb": [
+                149,
+                155,
+                95
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Quickstalk_Dye"
+        },
+        {
+            "n": "Frühling",
+            "id": 347,
+            "r": "Rare",
+            "rgb": [
+                125,
+                150,
+                100
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring_Dye"
+        },
+        {
+            "n": "Winterminze",
+            "id": 348,
+            "r": "Common",
+            "rgb": [
+                104,
+                148,
+                123
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wintermint_Dye"
+        },
+        {
+            "n": "Blauschecke",
+            "id": 349,
+            "r": "Rare",
+            "rgb": [
+                105,
+                143,
+                151
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dapple_Dye"
+        },
+        {
+            "n": "Tautropfen",
+            "id": 350,
+            "r": "Uncommon",
+            "rgb": [
+                117,
+                121,
+                161
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dewdrop_Dye"
+        },
+        {
+            "n": "Drama",
+            "id": 351,
+            "r": "Common",
+            "rgb": [
+                138,
+                108,
+                153
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Scenic_Dye"
+        },
+        {
+            "n": "Mauerblümchen",
+            "id": 352,
+            "r": "Uncommon",
+            "rgb": [
+                148,
+                86,
+                72
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Demure_Dye"
+        },
+        {
+            "n": "Andeutung",
+            "id": 353,
+            "r": "Common",
+            "rgb": [
+                115,
+                103,
+                81
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hint_Dye"
+        },
+        {
+            "n": "Lichtpink",
+            "id": 354,
+            "r": "Uncommon",
+            "rgb": [
+                163,
+                121,
+                115
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pink%20Tint_Dye"
+        },
+        {
+            "n": "Lichtoliv",
+            "id": 355,
+            "r": "Common",
+            "rgb": [
+                143,
+                143,
+                113
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Tint_Dye"
+        },
+        {
+            "n": "Lichtblau",
+            "id": 356,
+            "r": "Uncommon",
+            "rgb": [
+                115,
+                128,
+                131
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Tint_Dye"
+        },
+        {
+            "n": "Lichtrosa",
+            "id": 357,
+            "r": "Rare",
+            "rgb": [
+                141,
+                114,
+                119
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rose%20Tint_Dye"
+        },
+        {
+            "n": "Schattentee",
+            "id": 358,
+            "r": "Uncommon",
+            "rgb": [
+                43,
+                50,
+                46
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tea%20Shade_Dye"
+        },
+        {
+            "n": "Sellerie",
+            "id": 359,
+            "r": "Uncommon",
+            "rgb": [
+                109,
+                122,
+                74
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Celery_Dye"
+        },
+        {
+            "n": "Nebel",
+            "id": 360,
+            "r": "Common",
+            "rgb": [
+                94,
+                120,
+                91
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mist_Dye"
+        },
+        {
+            "n": "Nachtluft",
+            "id": 361,
+            "r": "Uncommon",
+            "rgb": [
+                80,
+                112,
+                106
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Night%20Air_Dye"
+        },
+        {
+            "n": "Winterhimmel",
+            "id": 362,
+            "r": "Starter",
+            "rgb": [
+                80,
+                103,
+                115
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Winter%20Sky_Dye"
+        },
+        {
+            "n": "Stille",
+            "id": 363,
+            "r": "Uncommon",
+            "rgb": [
+                91,
+                94,
+                120
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hush_Dye"
+        },
+        {
+            "n": "Violettrosa",
+            "id": 364,
+            "r": "Rare",
+            "rgb": [
+                113,
+                80,
+                99
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Taro_Dye"
+        },
+        {
+            "n": "Verknallt",
+            "id": 365,
+            "r": "Uncommon",
+            "rgb": [
+                129,
+                70,
+                70
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Crush_Dye"
+        },
+        {
+            "n": "Kürbisfleisch",
+            "id": 366,
+            "r": "Common",
+            "rgb": [
+                118,
+                86,
+                50
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Squash_Dye"
+        },
+        {
+            "n": "Farn",
+            "id": 367,
+            "r": "Uncommon",
+            "rgb": [
+                75,
+                68,
+                34
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fern_Dye"
+        },
+        {
+            "n": "Wärme",
+            "id": 368,
+            "r": "Rare",
+            "rgb": [
+                87,
+                41,
+                27
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Warmth_Dye"
+        },
+        {
+            "n": "Erdnussbutter",
+            "id": 369,
+            "r": "Common",
+            "rgb": [
+                90,
+                56,
+                8
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Peanut%20Butter_Dye"
+        },
+        {
+            "n": "Neid",
+            "id": 370,
+            "r": "Uncommon",
+            "rgb": [
+                39,
+                51,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Envy_Dye"
+        },
+        {
+            "n": "Traubensaft",
+            "id": 371,
+            "r": "Common",
+            "rgb": [
+                74,
+                55,
+                81
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grapesicle_Dye"
+        },
+        {
+            "n": "Nachtiris",
+            "id": 372,
+            "r": "Rare",
+            "rgb": [
+                48,
+                42,
+                65
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Night%20Iris_Dye"
+        },
+        {
+            "n": "Malz",
+            "id": 373,
+            "r": "Common",
+            "rgb": [
+                127,
+                115,
+                99
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Malt_Dye"
+        },
+        {
+            "n": "Zuckermelone",
+            "id": 374,
+            "r": "Common",
+            "rgb": [
+                197,
+                93,
+                75
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cantaloupe_Dye"
+        },
+        {
+            "n": "Sorbet",
+            "id": 375,
+            "r": "Uncommon",
+            "rgb": [
+                157,
+                62,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sherbert_Dye"
+        },
+        {
+            "n": "Lachs",
+            "id": 376,
+            "r": "Starter",
+            "rgb": [
+                133,
+                36,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Salmon_Dye"
+        },
+        {
+            "n": "Herbst",
+            "id": 377,
+            "r": "Starter",
+            "rgb": [
+                88,
+                8,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Autumn_Dye"
+        },
+        {
+            "n": "Ziegel",
+            "id": 378,
+            "r": "Common",
+            "rgb": [
+                71,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Brick_Dye"
+        },
+        {
+            "n": "Butter",
+            "id": 379,
+            "r": "Common",
+            "rgb": [
+                180,
+                117,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Butter_Dye"
+        },
+        {
+            "n": "Honig",
+            "id": 380,
+            "r": "Uncommon",
+            "rgb": [
+                152,
+                86,
+                11
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Honey_Dye"
+        },
+        {
+            "n": "Mandarine",
+            "id": 381,
+            "r": "Common",
+            "rgb": [
+                134,
+                64,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tangerine_Dye"
+        },
+        {
+            "n": "Bernstein",
+            "id": 382,
+            "r": "Rare",
+            "rgb": [
+                123,
+                48,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Amber_Dye"
+        },
+        {
+            "n": "Mohair",
+            "id": 383,
+            "r": "Common",
+            "rgb": [
+                98,
+                66,
+                37
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mohair_Dye"
+        },
+        {
+            "n": "Mokka",
+            "id": 384,
+            "r": "Uncommon",
+            "rgb": [
+                75,
+                56,
+                46
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mocha_Dye"
+        },
+        {
+            "n": "Polierter Stahl",
+            "id": 385,
+            "r": "Common",
+            "rgb": [
+                91,
+                95,
+                99
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Burnished%20Steel_Dye"
+        },
+        {
+            "n": "Kürbis",
+            "id": 434,
+            "r": "Rare",
+            "rgb": [
+                111,
+                67,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pumpkin_Dye"
+        },
+        {
+            "n": "Dijon",
+            "id": 435,
+            "r": "Starter",
+            "rgb": [
+                90,
+                70,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dijon_Dye"
+        },
+        {
+            "n": "Memento",
+            "id": 436,
+            "r": "Uncommon",
+            "rgb": [
+                77,
+                33,
+                33
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Remembrance_Dye"
+        },
+        {
+            "n": "Kürbiskuchen",
+            "id": 437,
+            "r": "Uncommon",
+            "rgb": [
+                85,
+                47,
+                22
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pumpkin%20Pie_Dye"
+        },
+        {
+            "n": "Moos",
+            "id": 438,
+            "r": "Common",
+            "rgb": [
+                56,
+                60,
+                22
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Moss_Dye"
+        },
+        {
+            "n": "Zartiris",
+            "id": 439,
+            "r": "Rare",
+            "rgb": [
+                81,
+                74,
+                100
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shy%20Iris_Dye"
+        },
+        {
+            "n": "Abend",
+            "id": 440,
+            "r": "Uncommon",
+            "rgb": [
+                54,
+                39,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Evening_Dye"
+        },
+        {
+            "n": "Branntwein",
+            "id": 441,
+            "r": "Rare",
+            "rgb": [
+                72,
+                42,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Brandywine_Dye"
+        },
+        {
+            "n": "Matt",
+            "id": 442,
+            "r": "Starter",
+            "rgb": [
+                142,
+                138,
+                120
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Matte_Dye"
+        },
+        {
+            "n": "Weiß",
+            "id": 443,
+            "r": "Rare",
+            "rgb": [
+                189,
+                186,
+                185
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/White_Dye"
+        },
+        {
+            "n": "Seidenoliv",
+            "id": 444,
+            "r": "Common",
+            "rgb": [
+                133,
+                122,
+                96
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Silk_Dye"
+        },
+        {
+            "n": "Frostminze",
+            "id": 445,
+            "r": "Rare",
+            "rgb": [
+                142,
+                152,
+                129
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mint%20Frost_Dye"
+        },
+        {
+            "n": "Gerücht",
+            "id": 446,
+            "r": "Uncommon",
+            "rgb": [
+                127,
+                114,
+                114
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Whisper_Dye"
+        },
+        {
+            "n": "Lichtpfirsich",
+            "id": 447,
+            "r": "Common",
+            "rgb": [
+                160,
+                130,
+                108
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Peach%20Tint_Dye"
+        },
+        {
+            "n": "Lichtgrün",
+            "id": 448,
+            "r": "Common",
+            "rgb": [
+                125,
+                134,
+                116
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Green%20Tint_Dye"
+        },
+        {
+            "n": "Lichtviolett",
+            "id": 449,
+            "r": "Uncommon",
+            "rgb": [
+                119,
+                121,
+                135
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Violet%20Tint_Dye"
+        },
+        {
+            "n": "Pilz",
+            "id": 450,
+            "r": "Common",
+            "rgb": [
+                75,
+                58,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mushroom_Dye"
+        },
+        {
+            "n": "Schattenblau",
+            "id": 451,
+            "r": "Common",
+            "rgb": [
+                44,
+                52,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Shade_Dye"
+        },
+        {
+            "n": "Kaschmir",
+            "id": 452,
+            "r": "Uncommon",
+            "rgb": [
+                107,
+                91,
+                60
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cashmere_Dye"
+        },
+        {
+            "n": "Braungrau",
+            "id": 453,
+            "r": "Common",
+            "rgb": [
+                57,
+                41,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Taupe_Dye"
+        },
+        {
+            "n": "Mattstahl",
+            "id": 454,
+            "r": "Starter",
+            "rgb": [
+                71,
+                63,
+                51
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tarnished%20Steel_Dye"
+        },
+        {
+            "n": "Ölschlick",
+            "id": 455,
+            "r": "Rare",
+            "rgb": [
+                47,
+                40,
+                28
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Oil%20Slick_Dye"
+        },
+        {
+            "n": "Kakao",
+            "id": 456,
+            "r": "Rare",
+            "rgb": [
+                33,
+                19,
+                14
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cocoa_Dye"
+        },
+        {
+            "n": "Ton",
+            "id": 457,
+            "r": "Starter",
+            "rgb": [
+                77,
+                62,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Clay_Dye"
+        },
+        {
+            "n": "Nachtschatten",
+            "id": 458,
+            "r": "Rare",
+            "rgb": [
+                41,
+                44,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Night%20Shade_Dye"
+        },
+        {
+            "n": "Schattenorange",
+            "id": 459,
+            "r": "Common",
+            "rgb": [
+                79,
+                57,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orange%20Shade_Dye"
+        },
+        {
+            "n": "Lichtlila",
+            "id": 460,
+            "r": "Common",
+            "rgb": [
+                128,
+                115,
+                131
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Purple%20Tint_Dye"
+        },
+        {
+            "n": "Lichtwasser",
+            "id": 461,
+            "r": "Uncommon",
+            "rgb": [
+                116,
+                134,
+                125
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Aqua%20Tint_Dye"
+        },
+        {
+            "n": "Lichtzitronen",
+            "id": 462,
+            "r": "Rare",
+            "rgb": [
+                158,
+                139,
+                102
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon%20Tint_Dye"
+        },
+        {
+            "n": "Schattenrose",
+            "id": 463,
+            "r": "Uncommon",
+            "rgb": [
+                74,
+                42,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rose%20Shade_Dye"
+        },
+        {
+            "n": "Schattentraube",
+            "id": 464,
+            "r": "Uncommon",
+            "rgb": [
+                52,
+                45,
+                56
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grape%20Shade_Dye"
+        },
+        {
+            "n": "Schiefer",
+            "id": 465,
+            "r": "Common",
+            "rgb": [
+                57,
+                53,
+                34
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shale_Dye"
+        },
+        {
+            "n": "Alter Pfennig",
+            "id": 466,
+            "r": "Common",
+            "rgb": [
+                108,
+                62,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Old%20Penny_Dye"
+        },
+        {
+            "n": "Altmetall",
+            "id": 467,
+            "r": "Common",
+            "rgb": [
+                105,
+                86,
+                55
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mudmetal_Dye"
+        },
+        {
+            "n": "Kupferkessel",
+            "id": 468,
+            "r": "Common",
+            "rgb": [
+                136,
+                83,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Copper%20Pot_Dye"
+        },
+        {
+            "n": "Sumpfgras",
+            "id": 469,
+            "r": "Common",
+            "rgb": [
+                72,
+                59,
+                27
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Swamp%20Grass_Dye"
+        },
+        {
+            "n": "Marine",
+            "id": 470,
+            "r": "Common",
+            "rgb": [
+                43,
+                35,
+                12
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Marine_Dye"
+        },
+        {
+            "n": "Schattenwein",
+            "id": 471,
+            "r": "Rare",
+            "rgb": [
+                61,
+                43,
+                49
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wine%20Shade_Dye"
+        },
+        {
+            "n": "Schattenzitrone",
+            "id": 472,
+            "r": "Uncommon",
+            "rgb": [
+                74,
+                54,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon%20Shade_Dye"
+        },
+        {
+            "n": "Abgrund",
+            "id": 473,
+            "r": "Rare",
+            "rgb": [
+                26,
+                24,
+                27
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyss_Dye"
+        },
+        {
+            "n": "Asche",
+            "id": 474,
+            "r": "Rare",
+            "rgb": [
+                82,
+                79,
+                79
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ash_Dye"
+        },
+        {
+            "n": "Staub",
+            "id": 475,
+            "r": "Common",
+            "rgb": [
+                107,
+                105,
+                105
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dust_Dye"
+        },
+        {
+            "n": "Graphit",
+            "id": 476,
+            "r": "Uncommon",
+            "rgb": [
+                59,
+                57,
+                60
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Graphite_Dye"
+        },
+        {
+            "n": "Glasur",
+            "id": 477,
+            "r": "Rare",
+            "rgb": [
+                157,
+                154,
+                154
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Icing_Dye"
+        },
+        {
+            "n": "Beige",
+            "id": 478,
+            "r": "Common",
+            "rgb": [
+                98,
+                76,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Beige_Dye"
+        },
+        {
+            "n": "Milchkaffee",
+            "id": 479,
+            "r": "Common",
+            "rgb": [
+                129,
+                101,
+                77
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Latte_Dye"
+        },
+        {
+            "n": "Antikgold",
+            "id": 480,
+            "r": "Starter",
+            "rgb": [
+                156,
+                126,
+                81
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Antique%20Gold_Dye"
+        },
+        {
+            "n": "Kupfermünze",
+            "id": 481,
+            "r": "Uncommon",
+            "rgb": [
+                161,
+                109,
+                85
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Copper%20Penny_Dye"
+        },
+        {
+            "n": "Mitternachtsfeuer",
+            "id": 482,
+            "r": "Rare",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Fire_Dye"
+        },
+        {
+            "n": "Mitternachtseis",
+            "id": 483,
+            "r": "Rare",
+            "rgb": [
+                0,
+                0,
+                8
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Ice_Dye"
+        },
+        {
+            "n": "Schattengrün",
+            "id": 484,
+            "r": "Common",
+            "rgb": [
+                50,
+                59,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Green%20Shade_Dye"
+        },
+        {
+            "n": "Schattenoliv",
+            "id": 485,
+            "r": "Common",
+            "rgb": [
+                52,
+                50,
+                35
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Shade_Dye"
+        },
+        {
+            "n": "Dunkle Lehmziegel",
+            "id": 582,
+            "r": "Common",
+            "rgb": [
+                117,
+                34,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Adobe%20Sunset_Dye"
+        },
+        {
+            "n": "Nachmittag",
+            "id": 583,
+            "r": "Uncommon",
+            "rgb": [
+                33,
+                53,
+                106
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Afternoon_Dye"
+        },
+        {
+            "n": "Uraltes Silber",
+            "id": 584,
+            "r": "Rare",
+            "rgb": [
+                157,
+                142,
+                108
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ancient%20Silver_Dye"
+        },
+        {
+            "n": "Banane",
+            "id": 585,
+            "r": "Common",
+            "rgb": [
+                199,
+                162,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Banana_Dye"
+        },
+        {
+            "n": "Schwarzkirsche",
+            "id": 586,
+            "r": "Rare",
+            "rgb": [
+                51,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Black%20Cherry_Dye"
+        },
+        {
+            "n": "Eisblau",
+            "id": 587,
+            "r": "Common",
+            "rgb": [
+                160,
+                168,
+                185
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Ice_Dye"
+        },
+        {
+            "n": "Himmelblau",
+            "id": 588,
+            "r": "Rare",
+            "rgb": [
+                40,
+                78,
+                130
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Sky_Dye"
+        },
+        {
+            "n": "Blila",
+            "id": 589,
+            "r": "Common",
+            "rgb": [
+                82,
+                55,
+                118
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blurple_Dye"
+        },
+        {
+            "n": "Bach",
+            "id": 590,
+            "r": "Uncommon",
+            "rgb": [
+                102,
+                135,
+                198
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Brook_Dye"
+        },
+        {
+            "n": "Buttercreme",
+            "id": 591,
+            "r": "Common",
+            "rgb": [
+                224,
+                158,
+                92
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Buttercream_Dye"
+        },
+        {
+            "n": "Kirsche",
+            "id": 592,
+            "r": "Uncommon",
+            "rgb": [
+                119,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cherry_Dye"
+        },
+        {
+            "n": "Kastanie",
+            "id": 593,
+            "r": "Common",
+            "rgb": [
+                107,
+                20,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Chestnut_Dye"
+        },
+        {
+            "n": "Zitrus",
+            "id": 594,
+            "r": "Common",
+            "rgb": [
+                227,
+                131,
+                80
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Citrus_Dye"
+        },
+        {
+            "n": "Zitrusbrise",
+            "id": 595,
+            "r": "Common",
+            "rgb": [
+                238,
+                149,
+                102
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Citrus%20Breeze_Dye"
+        },
+        {
+            "n": "Zitruseis",
+            "id": 596,
+            "r": "Common",
+            "rgb": [
+                216,
+                170,
+                134
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Citrus%20Ice_Dye"
+        },
+        {
+            "n": "Kobalt",
+            "id": 597,
+            "r": "Rare",
+            "rgb": [
+                65,
+                79,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cobalt_Dye"
+        },
+        {
+            "n": "Maisbart",
+            "id": 598,
+            "r": "Common",
+            "rgb": [
+                178,
+                167,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cornsilk_Dye"
+        },
+        {
+            "n": "Gurke",
+            "id": 599,
+            "r": "Common",
+            "rgb": [
+                26,
+                68,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cucumber_Dye"
+        },
+        {
+            "n": "Narzisse",
+            "id": 600,
+            "r": "Common",
+            "rgb": [
+                169,
+                120,
+                21
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Daffodil_Dye"
+        },
+        {
+            "n": "Dunkle Schokolade",
+            "id": 601,
+            "r": "Uncommon",
+            "rgb": [
+                55,
+                23,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dark%20Chocolate_Dye"
+        },
+        {
+            "n": "Dunkeloliv",
+            "id": 602,
+            "r": "Common",
+            "rgb": [
+                50,
+                47,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dark%20Olive_Dye"
+        },
+        {
+            "n": "Dunkler Flieder",
+            "id": 603,
+            "r": "Rare",
+            "rgb": [
+                89,
+                95,
+                169
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Lilac_Dye"
+        },
+        {
+            "n": "Dunkler Ahorn",
+            "id": 604,
+            "r": "Starter",
+            "rgb": [
+                65,
+                30,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Maple_Dye"
+        },
+        {
+            "n": "Dunkle Kiefer",
+            "id": 605,
+            "r": "Common",
+            "rgb": [
+                56,
+                40,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Pine_Dye"
+        },
+        {
+            "n": "Tiefpetrol",
+            "id": 606,
+            "r": "Common",
+            "rgb": [
+                0,
+                69,
+                62
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Teal_Dye"
+        },
+        {
+            "n": "Abendgras",
+            "id": 607,
+            "r": "Rare",
+            "rgb": [
+                16,
+                51,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Evening%20Grass_Dye"
+        },
+        {
+            "n": "Abendrot",
+            "id": 608,
+            "r": "Uncommon",
+            "rgb": [
+                80,
+                12,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Evening%20Red_Dye"
+        },
+        {
+            "n": "Abendwein",
+            "id": 609,
+            "r": "Uncommon",
+            "rgb": [
+                58,
+                15,
+                50
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Evening%20Wine_Dye"
+        },
+        {
+            "n": "Flaum",
+            "id": 610,
+            "r": "Common",
+            "rgb": [
+                125,
+                122,
+                122
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fluff_Dye"
+        },
+        {
+            "n": "Dunst",
+            "id": 611,
+            "r": "Common",
+            "rgb": [
+                142,
+                138,
+                136
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fog_Dye"
+        },
+        {
+            "n": "Frischgrün",
+            "id": 612,
+            "r": "Common",
+            "rgb": [
+                104,
+                118,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fresh%20Green_Dye"
+        },
+        {
+            "n": "Erfrischung",
+            "id": 613,
+            "r": "Common",
+            "rgb": [
+                124,
+                178,
+                134
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Freshen_Dye"
+        },
+        {
+            "n": "Frostige Brise",
+            "id": 614,
+            "r": "Common",
+            "rgb": [
+                120,
+                149,
+                205
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frost%20Breeze_Dye"
+        },
+        {
+            "n": "Ruhm",
+            "id": 615,
+            "r": "Starter",
+            "rgb": [
+                102,
+                45,
+                108
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glory_Dye"
+        },
+        {
+            "n": "Pampelmuse",
+            "id": 616,
+            "r": "Uncommon",
+            "rgb": [
+                137,
+                50,
+                3
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grapefruit_Dye"
+        },
+        {
+            "n": "Grün",
+            "id": 617,
+            "r": "Common",
+            "rgb": [
+                28,
+                90,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Green_Dye"
+        },
+        {
+            "n": "Haselnuss",
+            "id": 618,
+            "r": "Uncommon",
+            "rgb": [
+                77,
+                42,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hazel_Dye"
+        },
+        {
+            "n": "Heidekraut",
+            "id": 619,
+            "r": "Uncommon",
+            "rgb": [
+                179,
+                77,
+                116
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Heather_Dye"
+        },
+        {
+            "n": "Sonnenwende",
+            "id": 620,
+            "r": "Common",
+            "rgb": [
+                163,
+                102,
+                170
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Heliotrope_Dye"
+        },
+        {
+            "n": "Honigeis",
+            "id": 621,
+            "r": "Uncommon",
+            "rgb": [
+                216,
+                176,
+                128
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Honey%20Ice_Dye"
+        },
+        {
+            "n": "Honigbutter",
+            "id": 622,
+            "r": "Common",
+            "rgb": [
+                172,
+                102,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Honeybutter_Dye"
+        },
+        {
+            "n": "Geißblatt",
+            "id": 623,
+            "r": "Common",
+            "rgb": [
+                204,
+                138,
+                72
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Honeysuckle_Dye"
+        },
+        {
+            "n": "Demütigung",
+            "id": 624,
+            "r": "Common",
+            "rgb": [
+                183,
+                103,
+                139
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Humiliation_Dye"
+        },
+        {
+            "n": "Hortensie",
+            "id": 625,
+            "r": "Common",
+            "rgb": [
+                0,
+                95,
+                124
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hydrangea_Dye"
+        },
+        {
+            "n": "Lavendel",
+            "id": 626,
+            "r": "Common",
+            "rgb": [
+                66,
+                68,
+                127
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lavender_Dye"
+        },
+        {
+            "n": "Blei",
+            "id": 627,
+            "r": "Rare",
+            "rgb": [
+                71,
+                81,
+                75
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lead_Dye"
+        },
+        {
+            "n": "Zitroneneis",
+            "id": 628,
+            "r": "Common",
+            "rgb": [
+                204,
+                180,
+                113
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon%20Ice_Dye"
+        },
+        {
+            "n": "Herzblut",
+            "id": 629,
+            "r": "Uncommon",
+            "rgb": [
+                90,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lifesblood_Dye"
+        },
+        {
+            "n": "Limettenbrise",
+            "id": 630,
+            "r": "Common",
+            "rgb": [
+                99,
+                164,
+                111
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lime%20Breeze_Dye"
+        },
+        {
+            "n": "Limetteneis",
+            "id": 631,
+            "r": "Common",
+            "rgb": [
+                156,
+                196,
+                160
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lime%20Ice_Dye"
+        },
+        {
+            "n": "Limettengrün",
+            "id": 632,
+            "r": "Starter",
+            "rgb": [
+                42,
+                92,
+                5
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Limette_Dye"
+        },
+        {
+            "n": "Melone",
+            "id": 633,
+            "r": "Common",
+            "rgb": [
+                177,
+                77,
+                59
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Melon_Dye"
+        },
+        {
+            "n": "Mittag",
+            "id": 634,
+            "r": "Common",
+            "rgb": [
+                34,
+                120,
+                143
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midday_Dye"
+        },
+        {
+            "n": "Minze",
+            "id": 635,
+            "r": "Uncommon",
+            "rgb": [
+                117,
+                151,
+                74
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mint_Dye"
+        },
+        {
+            "n": "Minzbrise",
+            "id": 636,
+            "r": "Common",
+            "rgb": [
+                134,
+                169,
+                86
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mint%20Breeze_Dye"
+        },
+        {
+            "n": "Minzeis",
+            "id": 637,
+            "r": "Uncommon",
+            "rgb": [
+                169,
+                193,
+                136
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mint%20Ice_Dye"
+        },
+        {
+            "n": "Minzgrün",
+            "id": 638,
+            "r": "Common",
+            "rgb": [
+                73,
+                152,
+                100
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mintay_Dye"
+        },
+        {
+            "n": "Morgensee",
+            "id": 639,
+            "r": "Common",
+            "rgb": [
+                67,
+                151,
+                140
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Morning%20Sea_Dye"
+        },
+        {
+            "n": "Berghimmel",
+            "id": 640,
+            "r": "Common",
+            "rgb": [
+                99,
+                105,
+                181
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mountain%20Sky_Dye"
+        },
+        {
+            "n": "Maulbeer",
+            "id": 641,
+            "r": "Uncommon",
+            "rgb": [
+                142,
+                38,
+                82
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mullberry_Dye"
+        },
+        {
+            "n": "Nektar",
+            "id": 642,
+            "r": "Uncommon",
+            "rgb": [
+                212,
+                178,
+                84
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Nectar_Dye"
+        },
+        {
+            "n": "Nickel",
+            "id": 643,
+            "r": "Uncommon",
+            "rgb": [
+                136,
+                130,
+                102
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Nickel_Dye"
+        },
+        {
+            "n": "Nachtgesang",
+            "id": 644,
+            "r": "Uncommon",
+            "rgb": [
+                56,
+                47,
+                103
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Nightsong_Dye"
+        },
+        {
+            "n": "Alter Nickel",
+            "id": 645,
+            "r": "Common",
+            "rgb": [
+                107,
+                101,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Old%20Nickel_Dye"
+        },
+        {
+            "n": "Oliveneis",
+            "id": 646,
+            "r": "Common",
+            "rgb": [
+                181,
+                188,
+                114
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Olive%20Ice_Dye"
+        },
+        {
+            "n": "Frühlingsorange",
+            "id": 647,
+            "r": "Common",
+            "rgb": [
+                185,
+                86,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orange%20Spring_Dye"
+        },
+        {
+            "n": "Papaya",
+            "id": 648,
+            "r": "Common",
+            "rgb": [
+                151,
+                50,
+                44
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Papaya_Dye"
+        },
+        {
+            "n": "Pastell-Blau",
+            "id": 649,
+            "r": "Uncommon",
+            "rgb": [
+                143,
+                167,
+                211
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Blue_Dye"
+        },
+        {
+            "n": "Pastell-Zitrus",
+            "id": 650,
+            "r": "Uncommon",
+            "rgb": [
+                231,
+                168,
+                118
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Citrus_Dye"
+        },
+        {
+            "n": "Pastell-Honig",
+            "id": 651,
+            "r": "Common",
+            "rgb": [
+                224,
+                174,
+                115
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Honey_Dye"
+        },
+        {
+            "n": "Pastell-Zitrone",
+            "id": 652,
+            "r": "Common",
+            "rgb": [
+                218,
+                188,
+                107
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Lemon_Dye"
+        },
+        {
+            "n": "Pastell-Limette",
+            "id": 653,
+            "r": "Uncommon",
+            "rgb": [
+                138,
+                192,
+                148
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Lime_Dye"
+        },
+        {
+            "n": "Pastell-Minze",
+            "id": 654,
+            "r": "Common",
+            "rgb": [
+                158,
+                188,
+                117
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Mint_Dye"
+        },
+        {
+            "n": "Pastell-Oliv",
+            "id": 655,
+            "r": "Common",
+            "rgb": [
+                179,
+                188,
+                94
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Olive_Dye"
+        },
+        {
+            "n": "Pastell-Pfirsich",
+            "id": 656,
+            "r": "Common",
+            "rgb": [
+                239,
+                171,
+                139
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Peach_Dye"
+        },
+        {
+            "n": "Pastell-Pink",
+            "id": 657,
+            "r": "Common",
+            "rgb": [
+                247,
+                170,
+                157
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Pink_Dye"
+        },
+        {
+            "n": "Pastell-Lila",
+            "id": 658,
+            "r": "Common",
+            "rgb": [
+                168,
+                149,
+                195
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Purple_Dye"
+        },
+        {
+            "n": "Pastell-Rosa",
+            "id": 659,
+            "r": "Common",
+            "rgb": [
+                203,
+                140,
+                169
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Rose_Dye"
+        },
+        {
+            "n": "Pastell-See",
+            "id": 660,
+            "r": "Common",
+            "rgb": [
+                131,
+                187,
+                172
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Sea_Dye"
+        },
+        {
+            "n": "Pastell-Frühling",
+            "id": 661,
+            "r": "Common",
+            "rgb": [
+                193,
+                183,
+                89
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Spring_Dye"
+        },
+        {
+            "n": "Pastell-Violett",
+            "id": 662,
+            "r": "Common",
+            "rgb": [
+                147,
+                152,
+                214
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Violet_Dye"
+        },
+        {
+            "n": "Pastell-Wein",
+            "id": 663,
+            "r": "Uncommon",
+            "rgb": [
+                184,
+                141,
+                188
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Wine_Dye"
+        },
+        {
+            "n": "Pastell-Winter",
+            "id": 664,
+            "r": "Uncommon",
+            "rgb": [
+                133,
+                179,
+                193
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Winter_Dye"
+        },
+        {
+            "n": "Pfirsicheis",
+            "id": 665,
+            "r": "Common",
+            "rgb": [
+                217,
+                171,
+                149
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Peach%20Ice_Dye"
+        },
+        {
+            "n": "Persephone",
+            "id": 666,
+            "r": "Common",
+            "rgb": [
+                169,
+                65,
+                101
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Persephone_Dye"
+        },
+        {
+            "n": "Phlox",
+            "id": 667,
+            "r": "Common",
+            "rgb": [
+                136,
+                74,
+                142
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Phlox_Dye"
+        },
+        {
+            "n": "Eispink",
+            "id": 668,
+            "r": "Common",
+            "rgb": [
+                216,
+                172,
+                164
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pink%20Ice_Dye"
+        },
+        {
+            "n": "Primel",
+            "id": 669,
+            "r": "Rare",
+            "rgb": [
+                225,
+                128,
+                118
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Primrose_Dye"
+        },
+        {
+            "n": "Lila",
+            "id": 670,
+            "r": "Uncommon",
+            "rgb": [
+                84,
+                28,
+                84
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Purple_Dye"
+        },
+        {
+            "n": "Lilabrise",
+            "id": 671,
+            "r": "Rare",
+            "rgb": [
+                155,
+                131,
+                188
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Purple%20Breeze_Dye"
+        },
+        {
+            "n": "Eislila",
+            "id": 672,
+            "r": "Uncommon",
+            "rgb": [
+                177,
+                164,
+                195
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Purple%20Ice_Dye"
+        },
+        {
+            "n": "Rot",
+            "id": 673,
+            "r": "Common",
+            "rgb": [
+                135,
+                0,
+                10
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Red_Dye"
+        },
+        {
+            "n": "Pfauenblau",
+            "id": 674,
+            "r": "Rare",
+            "rgb": [
+                0,
+                64,
+                91
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Regal_Dye"
+        },
+        {
+            "n": "Kräftige Traube",
+            "id": 675,
+            "r": "Uncommon",
+            "rgb": [
+                60,
+                36,
+                86
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rich%20Grape_Dye"
+        },
+        {
+            "n": "Fluss",
+            "id": 676,
+            "r": "Common",
+            "rgb": [
+                56,
+                98,
+                153
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/River_Dye"
+        },
+        {
+            "n": "Wurzel",
+            "id": 677,
+            "r": "Common",
+            "rgb": [
+                110,
+                59,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Root_Dye"
+        },
+        {
+            "n": "Rosenbrise",
+            "id": 678,
+            "r": "Common",
+            "rgb": [
+                189,
+                114,
+                148
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rose%20Breeze_Dye"
+        },
+        {
+            "n": "Eisrose",
+            "id": 679,
+            "r": "Common",
+            "rgb": [
+                201,
+                158,
+                178
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rose%20Ice_Dye"
+        },
+        {
+            "n": "Purpur",
+            "id": 680,
+            "r": "Starter",
+            "rgb": [
+                97,
+                10,
+                53
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Royal%20Rose_Dye"
+        },
+        {
+            "n": "Meeresbrise",
+            "id": 681,
+            "r": "Common",
+            "rgb": [
+                107,
+                172,
+                158
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sea%20Breeze_Dye"
+        },
+        {
+            "n": "Meerfrost",
+            "id": 682,
+            "r": "Uncommon",
+            "rgb": [
+                85,
+                173,
+                154
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sea%20Frost_Dye"
+        },
+        {
+            "n": "Meereis",
+            "id": 683,
+            "r": "Common",
+            "rgb": [
+                150,
+                186,
+                177
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sea%20Ice_Dye"
+        },
+        {
+            "n": "Zartflieder",
+            "id": 684,
+            "r": "Common",
+            "rgb": [
+                120,
+                125,
+                192
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shy%20Lilac_Dye"
+        },
+        {
+            "n": "Blasser Flieder",
+            "id": 685,
+            "r": "Common",
+            "rgb": [
+                143,
+                119,
+                176
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shylac_Dye"
+        },
+        {
+            "n": "Siena-Erde",
+            "id": 686,
+            "r": "Common",
+            "rgb": [
+                100,
+                39,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sienna_Dye"
+        },
+        {
+            "n": "Sauer",
+            "id": 687,
+            "r": "Common",
+            "rgb": [
+                115,
+                109,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sour_Dye"
+        },
+        {
+            "n": "Saurer Apfel",
+            "id": 688,
+            "r": "Uncommon",
+            "rgb": [
+                91,
+                78,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sour%20Apple_Dye"
+        },
+        {
+            "n": "Schössling",
+            "id": 689,
+            "r": "Uncommon",
+            "rgb": [
+                41,
+                117,
+                73
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sprig_Dye"
+        },
+        {
+            "n": "Frühlingsbrise",
+            "id": 690,
+            "r": "Common",
+            "rgb": [
+                151,
+                165,
+                59
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Breeze_Dye"
+        },
+        {
+            "n": "Frühlingstau",
+            "id": 691,
+            "r": "Common",
+            "rgb": [
+                72,
+                143,
+                159
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Dew_Dye"
+        },
+        {
+            "n": "Frühlingsgras",
+            "id": 692,
+            "r": "Rare",
+            "rgb": [
+                73,
+                97,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Grass_Dye"
+        },
+        {
+            "n": "Frühlingseis",
+            "id": 693,
+            "r": "Common",
+            "rgb": [
+                197,
+                189,
+                112
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Ice_Dye"
+        },
+        {
+            "n": "Frühlingsblatt",
+            "id": 694,
+            "r": "Common",
+            "rgb": [
+                75,
+                119,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Leaf_Dye"
+        },
+        {
+            "n": "Frühlingsmoos",
+            "id": 695,
+            "r": "Common",
+            "rgb": [
+                123,
+                118,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Moss_Dye"
+        },
+        {
+            "n": "Frühlingsgezeiten",
+            "id": 696,
+            "r": "Common",
+            "rgb": [
+                1,
+                119,
+                110
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spring%20Tide_Dye"
+        },
+        {
+            "n": "Stengel",
+            "id": 697,
+            "r": "Common",
+            "rgb": [
+                157,
+                146,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Stem_Dye"
+        },
+        {
+            "n": "Erdbeere",
+            "id": 698,
+            "r": "Common",
+            "rgb": [
+                160,
+                37,
+                47
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Strawberry_Dye"
+        },
+        {
+            "n": "Erdbeerbrise",
+            "id": 699,
+            "r": "Common",
+            "rgb": [
+                243,
+                154,
+                145
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Strawberry%20Breeze_Dye"
+        },
+        {
+            "n": "Flüsschen",
+            "id": 700,
+            "r": "Starter",
+            "rgb": [
+                61,
+                112,
+                162
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Stream_Dye"
+        },
+        {
+            "n": "Sommerdistel",
+            "id": 701,
+            "r": "Common",
+            "rgb": [
+                118,
+                92,
+                157
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Summer%20Thistle_Dye"
+        },
+        {
+            "n": "Sonnenaufgangsbrise",
+            "id": 702,
+            "r": "Uncommon",
+            "rgb": [
+                247,
+                155,
+                126
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sunrise%20Breeze_Dye"
+        },
+        {
+            "n": "Mattsilber",
+            "id": 703,
+            "r": "Rare",
+            "rgb": [
+                169,
+                156,
+                129
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tarnished%20Silver_Dye"
+        },
+        {
+            "n": "Petrol",
+            "id": 704,
+            "r": "Uncommon",
+            "rgb": [
+                0,
+                93,
+                93
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Teal_Dye"
+        },
+        {
+            "n": "Umbra",
+            "id": 705,
+            "r": "Common",
+            "rgb": [
+                67,
+                26,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Umber_Dye"
+        },
+        {
+            "n": "Veronika",
+            "id": 706,
+            "r": "Common",
+            "rgb": [
+                107,
+                84,
+                144
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Veronica_Dye"
+        },
+        {
+            "n": "Violettbrise",
+            "id": 707,
+            "r": "Uncommon",
+            "rgb": [
+                134,
+                139,
+                201
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Violet%20Breeze_Dye"
+        },
+        {
+            "n": "Eisviolett",
+            "id": 708,
+            "r": "Common",
+            "rgb": [
+                157,
+                160,
+                196
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Violet%20Ice_Dye"
+        },
+        {
+            "n": "Viridian",
+            "id": 709,
+            "r": "Uncommon",
+            "rgb": [
+                6,
+                66,
+                36
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Viridian_Dye"
+        },
+        {
+            "n": "Weinbrise",
+            "id": 710,
+            "r": "Uncommon",
+            "rgb": [
+                172,
+                125,
+                177
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wine%20Breeze_Dye"
+        },
+        {
+            "n": "Weineis",
+            "id": 711,
+            "r": "Common",
+            "rgb": [
+                188,
+                157,
+                191
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wine%20Ice_Dye"
+        },
+        {
+            "n": "Winterbrise",
+            "id": 712,
+            "r": "Common",
+            "rgb": [
+                111,
+                162,
+                177
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Winter%20Breeze_Dye"
+        },
+        {
+            "n": "Winterfrost",
+            "id": 713,
+            "r": "Common",
+            "rgb": [
+                86,
+                153,
+                174
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Winter%20Frost_Dye"
+        },
+        {
+            "n": "Wintereis",
+            "id": 714,
+            "r": "Rare",
+            "rgb": [
+                150,
+                177,
+                186
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Winter%20Ice_Dye"
+        },
+        {
+            "n": "Zeste",
+            "id": 715,
+            "r": "Uncommon",
+            "rgb": [
+                137,
+                147,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Zest_Dye"
+        },
+        {
+            "n": "Tulpe",
+            "id": 1053,
+            "r": "Common",
+            "rgb": [
+                225,
+                121,
+                103
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tulip_Dye"
+        },
+        {
+            "n": "Gras",
+            "id": 1054,
+            "r": "Uncommon",
+            "rgb": [
+                62,
+                65,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grass_Dye"
+        },
+        {
+            "n": "Lava",
+            "id": 1149,
+            "r": "Common",
+            "rgb": [
+                121,
+                26,
+                9
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lava_Dye"
+        },
+        {
+            "n": "Zorn",
+            "id": 1150,
+            "r": "Uncommon",
+            "rgb": [
+                68,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wrath_Dye"
+        },
+        {
+            "n": "Hitzkopf",
+            "id": 1151,
+            "r": "Common",
+            "rgb": [
+                96,
+                19,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spitfire_Dye"
+        },
+        {
+            "n": "Erbstück",
+            "id": 1152,
+            "r": "Uncommon",
+            "rgb": [
+                45,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Heirloom_Dye"
+        },
+        {
+            "n": "Blut",
+            "id": 1153,
+            "r": "Rare",
+            "rgb": [
+                85,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blood_Dye"
+        },
+        {
+            "n": "Erlösung",
+            "id": 1154,
+            "r": "Rare",
+            "rgb": [
+                161,
+                102,
+                12
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Redemption_Dye"
+        },
+        {
+            "n": "Erleuchtung",
+            "id": 1155,
+            "r": "Rare",
+            "rgb": [
+                197,
+                141,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Illumination_Dye"
+        },
+        {
+            "n": "Bosheit",
+            "id": 1156,
+            "r": "Common",
+            "rgb": [
+                69,
+                81,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spite_Dye"
+        },
+        {
+            "n": "Vergebung",
+            "id": 1157,
+            "r": "Common",
+            "rgb": [
+                62,
+                87,
+                79
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Forgiveness_Dye"
+        },
+        {
+            "n": "Aufrichtigkeit",
+            "id": 1158,
+            "r": "Uncommon",
+            "rgb": [
+                66,
+                72,
+                90
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sincerity_Dye"
+        },
+        {
+            "n": "Stolz",
+            "id": 1159,
+            "r": "Common",
+            "rgb": [
+                71,
+                67,
+                90
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pride_Dye"
+        },
+        {
+            "n": "Arroganz",
+            "id": 1160,
+            "r": "Common",
+            "rgb": [
+                87,
+                62,
+                79
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Arrogance_Dye"
+        },
+        {
+            "n": "Unfug",
+            "id": 1161,
+            "r": "Uncommon",
+            "rgb": [
+                87,
+                71,
+                71
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mischief_Dye"
+        },
+        {
+            "n": "Gletscherpetrol",
+            "id": 1231,
+            "r": "Exclusive",
+            "rgb": [
+                60,
+                106,
+                101
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glacial%20Teal_Dye"
+        },
+        {
+            "n": "Gletscherhimmel",
+            "id": 1232,
+            "r": "Exclusive",
+            "rgb": [
+                61,
+                94,
+                111
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glacial%20Sky_Dye"
+        },
+        {
+            "n": "Zitterhimmel",
+            "id": 1233,
+            "r": "Exclusive",
+            "rgb": [
+                89,
+                125,
+                143
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shiver%20Sky_Dye"
+        },
+        {
+            "n": "Zittermeer",
+            "id": 1234,
+            "r": "Exclusive",
+            "rgb": [
+                87,
+                137,
+                132
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shiver%20Sea_Dye"
+        },
+        {
+            "n": "Tiefes Gletscherpetrol",
+            "id": 1235,
+            "r": "Exclusive",
+            "rgb": [
+                47,
+                77,
+                74
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Glacial%20Teal_Dye"
+        },
+        {
+            "n": "Tiefer Gletscherhimmel",
+            "id": 1236,
+            "r": "Exclusive",
+            "rgb": [
+                48,
+                69,
+                80
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Glacial%20Sky_Dye"
+        },
+        {
+            "n": "Scheiterhaufen",
+            "id": 1237,
+            "r": "Exclusive",
+            "rgb": [
+                203,
+                140,
+                22
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pyre_Dye"
+        },
+        {
+            "n": "Feuerlodern",
+            "id": 1238,
+            "r": "Exclusive",
+            "rgb": [
+                218,
+                180,
+                77
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Flare_Dye"
+        },
+        {
+            "n": "Feurig",
+            "id": 1239,
+            "r": "Exclusive",
+            "rgb": [
+                156,
+                89,
+                21
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Molten_Dye"
+        },
+        {
+            "n": "Flamme",
+            "id": 1240,
+            "r": "Exclusive",
+            "rgb": [
+                139,
+                46,
+                18
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Flame_Dye"
+        },
+        {
+            "n": "Verkohlt",
+            "id": 1241,
+            "r": "Exclusive",
+            "rgb": [
+                66,
+                58,
+                49
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Charred_Dye"
+        },
+        {
+            "n": "Schlacke",
+            "id": 1242,
+            "r": "Exclusive",
+            "rgb": [
+                142,
+                139,
+                115
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cinders_Dye"
+        },
+        {
+            "n": "Lauge",
+            "id": 1243,
+            "r": "Exclusive",
+            "rgb": [
+                53,
+                65,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Caustic_Dye"
+        },
+        {
+            "n": "Galle",
+            "id": 1244,
+            "r": "Exclusive",
+            "rgb": [
+                110,
+                122,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Acrid_Dye"
+        },
+        {
+            "n": "Säure",
+            "id": 1245,
+            "r": "Exclusive",
+            "rgb": [
+                91,
+                97,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Acid_Dye"
+        },
+        {
+            "n": "Gift",
+            "id": 1246,
+            "r": "Exclusive",
+            "rgb": [
+                70,
+                99,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Toxin_Dye"
+        },
+        {
+            "n": "Sumpfschwarz",
+            "id": 1247,
+            "r": "Exclusive",
+            "rgb": [
+                33,
+                36,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Swampblack_Dye"
+        },
+        {
+            "n": "Algen",
+            "id": 1248,
+            "r": "Exclusive",
+            "rgb": [
+                76,
+                114,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Algae_Dye"
+        },
+        {
+            "n": "Blaustein",
+            "id": 1249,
+            "r": "Exclusive",
+            "rgb": [
+                68,
+                53,
+                130
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cobolt_Dye"
+        },
+        {
+            "n": "Copiapit",
+            "id": 1250,
+            "r": "Exclusive",
+            "rgb": [
+                102,
+                71,
+                133
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Violite_Dye"
+        },
+        {
+            "n": "Limonit",
+            "id": 1251,
+            "r": "Exclusive",
+            "rgb": [
+                127,
+                143,
+                5
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Limonite_Dye"
+        },
+        {
+            "n": "Zyanid",
+            "id": 1252,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                85,
+                98
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cyanide_Dye"
+        },
+        {
+            "n": "Vincentit",
+            "id": 1253,
+            "r": "Exclusive",
+            "rgb": [
+                41,
+                9,
+                53
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Vincent_Dye"
+        },
+        {
+            "n": "Schwarzlicht",
+            "id": 1254,
+            "r": "Exclusive",
+            "rgb": [
+                61,
+                18,
+                93
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blacklight_Dye"
+        },
+        {
+            "n": "Schleudern",
+            "id": 1265,
+            "r": "Exclusive",
+            "rgb": [
+                158,
+                83,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fling_Dye"
+        },
+        {
+            "n": "Wohlstand",
+            "id": 1266,
+            "r": "Exclusive",
+            "rgb": [
+                146,
+                128,
+                50
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Prosperity_Dye"
+        },
+        {
+            "n": "Beharrlichkeit",
+            "id": 1267,
+            "r": "Exclusive",
+            "rgb": [
+                156,
+                108,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Perseverance_Dye"
+        },
+        {
+            "n": "Beginn",
+            "id": 1268,
+            "r": "Exclusive",
+            "rgb": [
+                89,
+                124,
+                53
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Onset_Dye"
+        },
+        {
+            "n": "Annehmlichkeit",
+            "id": 1269,
+            "r": "Exclusive",
+            "rgb": [
+                55,
+                111,
+                141
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Amenity_Dye"
+        },
+        {
+            "n": "Rückruf",
+            "id": 1270,
+            "r": "Exclusive",
+            "rgb": [
+                111,
+                55,
+                141
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Recall_Dye"
+        },
+        {
+            "n": "Glasiertes Vermächtnis",
+            "id": 1271,
+            "r": "Exclusive",
+            "rgb": [
+                96,
+                70,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Legacy_Dye"
+        },
+        {
+            "n": "Glasierter Urwald",
+            "id": 1272,
+            "r": "Exclusive",
+            "rgb": [
+                49,
+                88,
+                29
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Jungle_Dye"
+        },
+        {
+            "n": "Glasierter Himmel",
+            "id": 1273,
+            "r": "Exclusive",
+            "rgb": [
+                6,
+                72,
+                87
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Sky_Dye"
+        },
+        {
+            "n": "Glasierter Herrscher",
+            "id": 1274,
+            "r": "Exclusive",
+            "rgb": [
+                76,
+                14,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Reign_Dye"
+        },
+        {
+            "n": "Glasierter Brand",
+            "id": 1275,
+            "r": "Exclusive",
+            "rgb": [
+                90,
+                34,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Emblaze_Dye"
+        },
+        {
+            "n": "Glasiertes Purpurrot",
+            "id": 1276,
+            "r": "Exclusive",
+            "rgb": [
+                78,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Crimson_Dye"
+        },
+        {
+            "n": "Glasierte Beharrlichkeit",
+            "id": 1277,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                49,
+                39
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Perseverance_Dye"
+        },
+        {
+            "n": "Glasierte Langlebigkeit",
+            "id": 1278,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                41,
+                17
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Longevity_Dye"
+        },
+        {
+            "n": "Glasierte Einsamkeit",
+            "id": 1279,
+            "r": "Exclusive",
+            "rgb": [
+                28,
+                28,
+                67
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Solitude_Dye"
+        },
+        {
+            "n": "Glasierte Opferung",
+            "id": 1280,
+            "r": "Exclusive",
+            "rgb": [
+                65,
+                19,
+                19
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Sacrifice_Dye"
+        },
+        {
+            "n": "Glasierte Generation",
+            "id": 1281,
+            "r": "Exclusive",
+            "rgb": [
+                58,
+                46,
+                3
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Generation_Dye"
+        },
+        {
+            "n": "Glasierte Anamnese",
+            "id": 1282,
+            "r": "Exclusive",
+            "rgb": [
+                79,
+                8,
+                33
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Anamnesis_Dye"
+        },
+        {
+            "n": "Elektro-Limette",
+            "id": 1301,
+            "r": "Exclusive",
+            "rgb": [
+                143,
+                255,
+                162
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Lime_Dye"
+        },
+        {
+            "n": "Elektro-Pfirsich",
+            "id": 1302,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                176,
+                136
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Peach_Dye"
+        },
+        {
+            "n": "Elektro-Zitrone",
+            "id": 1303,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                252,
+                94
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Lemon_Dye"
+        },
+        {
+            "n": "Elektro-Pink",
+            "id": 1304,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                140,
+                172
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Pink_Dye"
+        },
+        {
+            "n": "Elektro-Blau",
+            "id": 1305,
+            "r": "Exclusive",
+            "rgb": [
+                130,
+                200,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Blue_Dye"
+        },
+        {
+            "n": "Elektro-Lila",
+            "id": 1306,
+            "r": "Exclusive",
+            "rgb": [
+                179,
+                144,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Electro%20Purple_Dye"
+        },
+        {
+            "n": "Glints Kristall",
+            "id": 1307,
+            "r": "Exclusive",
+            "rgb": [
+                174,
+                182,
+                215
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Crystal_Dye"
+        },
+        {
+            "n": "Glints Zuflucht",
+            "id": 1308,
+            "r": "Exclusive",
+            "rgb": [
+                169,
+                189,
+                212
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Sanctuary_Dye"
+        },
+        {
+            "n": "Glints Einflussbereich",
+            "id": 1309,
+            "r": "Exclusive",
+            "rgb": [
+                165,
+                205,
+                201
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Purview_Dye"
+        },
+        {
+            "n": "Glints Rebellion",
+            "id": 1310,
+            "r": "Exclusive",
+            "rgb": [
+                192,
+                168,
+                211
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Rebellion_Dye"
+        },
+        {
+            "n": "Glints Ambition",
+            "id": 1311,
+            "r": "Exclusive",
+            "rgb": [
+                175,
+                215,
+                181
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Ambition_Dye"
+        },
+        {
+            "n": "Glints Isolation",
+            "id": 1312,
+            "r": "Exclusive",
+            "rgb": [
+                209,
+                195,
+                167
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glint's%20Isolation_Dye"
+        },
+        {
+            "n": "Aureus",
+            "id": 1333,
+            "r": "Exclusive",
+            "rgb": [
+                237,
+                178,
+                39
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Aureus_Dye"
+        },
+        {
+            "n": "Karmesinroter Löwe",
+            "id": 1334,
+            "r": "Exclusive",
+            "rgb": [
+                129,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Crimson%20Lion_Dye"
+        },
+        {
+            "n": "Palisander",
+            "id": 1335,
+            "r": "Exclusive",
+            "rgb": [
+                88,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rosewood_Dye"
+        },
+        {
+            "n": "Imperiales Rot",
+            "id": 1336,
+            "r": "Exclusive",
+            "rgb": [
+                153,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Imperial%20Red_Dye"
+        },
+        {
+            "n": "Imperiales Gold",
+            "id": 1337,
+            "r": "Exclusive",
+            "rgb": [
+                216,
+                157,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Imperial%20Gold_Dye"
+        },
+        {
+            "n": "Goldener Löwe",
+            "id": 1338,
+            "r": "Exclusive",
+            "rgb": [
+                195,
+                118,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Golden%20Lion_Dye"
+        },
+        {
+            "n": "Schatten-Gelb",
+            "id": 1348,
+            "r": "Exclusive",
+            "rgb": [
+                8,
+                9,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Yellow_Dye"
+        },
+        {
+            "n": "Schatten-Rot",
+            "id": 1349,
+            "r": "Exclusive",
+            "rgb": [
+                17,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Red_Dye"
+        },
+        {
+            "n": "Schatten-Orange",
+            "id": 1350,
+            "r": "Exclusive",
+            "rgb": [
+                15,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Orange_Dye"
+        },
+        {
+            "n": "Schatten-Violett",
+            "id": 1351,
+            "r": "Exclusive",
+            "rgb": [
+                4,
+                0,
+                12
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Violet_Dye"
+        },
+        {
+            "n": "Schatten-Lila",
+            "id": 1352,
+            "r": "Exclusive",
+            "rgb": [
+                8,
+                0,
+                9
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Purple_Dye"
+        },
+        {
+            "n": "Schatten-Magenta",
+            "id": 1353,
+            "r": "Exclusive",
+            "rgb": [
+                11,
+                0,
+                5
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Magenta_Dye"
+        },
+        {
+            "n": "Schatten-Abgrund",
+            "id": 1354,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Abyss_Dye"
+        },
+        {
+            "n": "Schatten-Grün",
+            "id": 1355,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                16,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Green_Dye"
+        },
+        {
+            "n": "Schatten-Türkis",
+            "id": 1356,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                9,
+                8
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Turquoise_Dye"
+        },
+        {
+            "n": "Schatten-Blau",
+            "id": 1357,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                3,
+                12
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shadow%20Blue_Dye"
+        },
+        {
+            "n": "Emaillierte Annehmlichkeit",
+            "id": 1358,
+            "r": "Exclusive",
+            "rgb": [
+                59,
+                125,
+                140
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Amenity_Dye"
+        },
+        {
+            "n": "Emailliertes Lilablau",
+            "id": 1359,
+            "r": "Exclusive",
+            "rgb": [
+                129,
+                67,
+                129
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Morning%20Glory_Dye"
+        },
+        {
+            "n": "Emaillierter Beginn",
+            "id": 1360,
+            "r": "Exclusive",
+            "rgb": [
+                83,
+                122,
+                62
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Onset_Dye"
+        },
+        {
+            "n": "Emaillierte Banane",
+            "id": 1361,
+            "r": "Exclusive",
+            "rgb": [
+                162,
+                136,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Banana_Dye"
+        },
+        {
+            "n": "Emailliertes Messing",
+            "id": 1362,
+            "r": "Exclusive",
+            "rgb": [
+                138,
+                82,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Brass_Dye"
+        },
+        {
+            "n": "Emaillierte Erdbeere",
+            "id": 1363,
+            "r": "Exclusive",
+            "rgb": [
+                155,
+                15,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Enameled%20Strawberry_Dye"
+        },
+        {
+            "n": "Trübes Grau",
+            "id": 1364,
+            "r": "Exclusive",
+            "rgb": [
+                55,
+                52,
+                44
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Murky%20Gray_Dye"
+        },
+        {
+            "n": "Matriarchin-Messing",
+            "id": 1365,
+            "r": "Exclusive",
+            "rgb": [
+                126,
+                97,
+                33
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Matriarch%20Brass_Dye"
+        },
+        {
+            "n": "Altsilber",
+            "id": 1366,
+            "r": "Exclusive",
+            "rgb": [
+                72,
+                68,
+                60
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Vintage%20Silver_Dye"
+        },
+        {
+            "n": "Trockenes Silber",
+            "id": 1367,
+            "r": "Exclusive",
+            "rgb": [
+                93,
+                89,
+                81
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dry%20Silver_Dye"
+        },
+        {
+            "n": "Goldschmelze",
+            "id": 1368,
+            "r": "Exclusive",
+            "rgb": [
+                79,
+                63,
+                18
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gold%20Fusion_Dye"
+        },
+        {
+            "n": "Goldener Schimmer",
+            "id": 1369,
+            "r": "Exclusive",
+            "rgb": [
+                122,
+                95,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Golden%20Sheen_Dye"
+        },
+        {
+            "n": "Unheils-Gelb",
+            "id": 1370,
+            "r": "Exclusive",
+            "rgb": [
+                116,
+                90,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ominous%20Yellow_Dye"
+        },
+        {
+            "n": "Quälendes Bordeauxrot-Farbe",
+            "id": 1371,
+            "r": "Exclusive",
+            "rgb": [
+                62,
+                1,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Harrowing%20Maroon%20Dye_Dye"
+        },
+        {
+            "n": "Unheimliches Lila",
+            "id": 1372,
+            "r": "Exclusive",
+            "rgb": [
+                61,
+                33,
+                47
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Eerie%20Purple_Dye"
+        },
+        {
+            "n": "Blutbad-Orange",
+            "id": 1373,
+            "r": "Exclusive",
+            "rgb": [
+                138,
+                72,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Carnage%20Orange_Dye"
+        },
+        {
+            "n": "Zermalmter Knochen",
+            "id": 1374,
+            "r": "Exclusive",
+            "rgb": [
+                207,
+                207,
+                177
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Crushed%20Bone_Dye"
+        },
+        {
+            "n": "Glut-Rot",
+            "id": 1375,
+            "r": "Exclusive",
+            "rgb": [
+                115,
+                14,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ember%20Red_Dye"
+        },
+        {
+            "n": "Zaffre",
+            "id": 1376,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                31,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Zaffre_Dye"
+        },
+        {
+            "n": "Tapferkeit",
+            "id": 1377,
+            "r": "Exclusive",
+            "rgb": [
+                59,
+                84,
+                117
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Valor_Dye"
+        },
+        {
+            "n": "Lapis",
+            "id": 1378,
+            "r": "Exclusive",
+            "rgb": [
+                39,
+                82,
+                139
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lapis_Dye"
+        },
+        {
+            "n": "Phthaloblau",
+            "id": 1379,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                28,
+                103
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Phthalo%20Blue_Dye"
+        },
+        {
+            "n": "Babyblau",
+            "id": 1380,
+            "r": "Exclusive",
+            "rgb": [
+                96,
+                145,
+                211
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Baby%20Blue_Dye"
+        },
+        {
+            "n": "Entschlossenheit",
+            "id": 1381,
+            "r": "Exclusive",
+            "rgb": [
+                12,
+                32,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Resolution_Dye"
+        },
+        {
+            "n": "Geist",
+            "id": 1382,
+            "r": "Exclusive",
+            "rgb": [
+                135,
+                149,
+                168
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ghost_Dye"
+        },
+        {
+            "n": "Blauer Stahl",
+            "id": 1383,
+            "r": "Exclusive",
+            "rgb": [
+                73,
+                85,
+                102
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Steel_Dye"
+        },
+        {
+            "n": "Puderblau",
+            "id": 1384,
+            "r": "Exclusive",
+            "rgb": [
+                119,
+                147,
+                185
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Powder%20Blue_Dye"
+        },
+        {
+            "n": "Blutstein-Korallenrot",
+            "id": 1453,
+            "r": "Exclusive",
+            "rgb": [
+                99,
+                0,
+                7
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Coral_Dye"
+        },
+        {
+            "n": "Dunkles Blutstein-Indigo",
+            "id": 1454,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Dark%20Indigo_Dye"
+        },
+        {
+            "n": "Dunkles Blutstein-Violett",
+            "id": 1455,
+            "r": "Exclusive",
+            "rgb": [
+                10,
+                0,
+                10
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Dark%20Violet_Dye"
+        },
+        {
+            "n": "Dunkles Blutstein-Korallenrot",
+            "id": 1456,
+            "r": "Exclusive",
+            "rgb": [
+                49,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Dark%20Coral_Dye"
+        },
+        {
+            "n": "Blutstein-Violett",
+            "id": 1457,
+            "r": "Exclusive",
+            "rgb": [
+                61,
+                0,
+                61
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Violet_Dye"
+        },
+        {
+            "n": "Blutstein-Indigo",
+            "id": 1458,
+            "r": "Exclusive",
+            "rgb": [
+                44,
+                0,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloodstone%20Indigo_Dye"
+        },
+        {
+            "n": "Kürbisorange",
+            "id": 1477,
+            "r": "Exclusive",
+            "rgb": [
+                183,
+                71,
+                37
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pumpkin%20Orange_Dye"
+        },
+        {
+            "n": "Mitternachtsbronze",
+            "id": 1478,
+            "r": "Exclusive",
+            "rgb": [
+                33,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Midnight%20Bronze_Dye"
+        },
+        {
+            "n": "Tagesanbruch",
+            "id": 1481,
+            "r": "Exclusive",
+            "rgb": [
+                246,
+                240,
+                179
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Daybreak_Dye"
+        },
+        {
+            "n": "Silbersatin",
+            "id": 1485,
+            "r": "Exclusive",
+            "rgb": [
+                137,
+                137,
+                137
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Silver%20Satin_Dye"
+        },
+        {
+            "n": "Aqua-Satin",
+            "id": 1486,
+            "r": "Exclusive",
+            "rgb": [
+                24,
+                82,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Aqua%20Satin_Dye"
+        },
+        {
+            "n": "Hochglanzschwarz",
+            "id": 1489,
+            "r": "Exclusive",
+            "rgb": [
+                30,
+                28,
+                31
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Glossy%20Black_Dye"
+        },
+        {
+            "n": "Magenta",
+            "id": 1490,
+            "r": "Exclusive",
+            "rgb": [
+                171,
+                0,
+                120
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Magenta_Dye"
+        },
+        {
+            "n": "Blaue Orchidee",
+            "id": 1493,
+            "r": "Exclusive",
+            "rgb": [
+                23,
+                37,
+                133
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Orchid_Dye"
+        },
+        {
+            "n": "Schleimgrün",
+            "id": 1495,
+            "r": "Exclusive",
+            "rgb": [
+                122,
+                150,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Slime%20Green_Dye"
+        },
+        {
+            "n": "Rubinrot",
+            "id": 1497,
+            "r": "Exclusive",
+            "rgb": [
+                189,
+                0,
+                11
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ruby%20Red_Dye"
+        },
+        {
+            "n": "Blauwal",
+            "id": 1498,
+            "r": "Exclusive",
+            "rgb": [
+                45,
+                44,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Whale_Dye"
+        },
+        {
+            "n": "Rotgold",
+            "id": 1499,
+            "r": "Exclusive",
+            "rgb": [
+                176,
+                143,
+                128
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Rose%20Gold_Dye"
+        },
+        {
+            "n": "Zerstörer-Orange",
+            "id": 1537,
+            "r": "Exclusive",
+            "rgb": [
+                240,
+                80,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Destroyer%20Orange_Dye"
+        },
+        {
+            "n": "Sonnenfeuer-Lava",
+            "id": 1538,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                147,
+                3
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sunfire%20Lava_Dye"
+        },
+        {
+            "n": "Weißglut",
+            "id": 1539,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                236,
+                76
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Incandescent_Dye"
+        },
+        {
+            "n": "Magma",
+            "id": 1540,
+            "r": "Exclusive",
+            "rgb": [
+                196,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Magma_Dye"
+        },
+        {
+            "n": "Versengt",
+            "id": 1541,
+            "r": "Exclusive",
+            "rgb": [
+                238,
+                37,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Scorched_Dye"
+        },
+        {
+            "n": "Blutrot",
+            "id": 1542,
+            "r": "Exclusive",
+            "rgb": [
+                7,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloody%20Red_Dye"
+        },
+        {
+            "n": "Ewiges Eis",
+            "id": 1549,
+            "r": "Exclusive",
+            "rgb": [
+                232,
+                226,
+                225
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Eternal%20Ice_Dye"
+        },
+        {
+            "n": "Kerneis",
+            "id": 1550,
+            "r": "Exclusive",
+            "rgb": [
+                82,
+                171,
+                236
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Core%20Ice_Dye"
+        },
+        {
+            "n": "Erfrierungsblau",
+            "id": 1551,
+            "r": "Exclusive",
+            "rgb": [
+                232,
+                255,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frostbite%20Blue_Dye"
+        },
+        {
+            "n": "Erfrierungsgrün",
+            "id": 1552,
+            "r": "Exclusive",
+            "rgb": [
+                250,
+                255,
+                250
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frostbite%20Green_Dye"
+        },
+        {
+            "n": "Permafrost",
+            "id": 1553,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                255,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Permafrost_Dye"
+        },
+        {
+            "n": "Eisschuppen",
+            "id": 1554,
+            "r": "Exclusive",
+            "rgb": [
+                119,
+                186,
+                131
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Frozen%20Scales_Dye"
+        },
+        {
+            "n": "Hochebene",
+            "id": 1573,
+            "r": "Exclusive",
+            "rgb": [
+                113,
+                71,
+                55
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mesa_Dye"
+        },
+        {
+            "n": "Hochland",
+            "id": 1574,
+            "r": "Exclusive",
+            "rgb": [
+                77,
+                84,
+                32
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Highlands_Dye"
+        },
+        {
+            "n": "Schwefel",
+            "id": 1575,
+            "r": "Exclusive",
+            "rgb": [
+                251,
+                201,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sulfur_Dye"
+        },
+        {
+            "n": "Ruine",
+            "id": 1576,
+            "r": "Exclusive",
+            "rgb": [
+                45,
+                35,
+                31
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Ruin_Dye"
+        },
+        {
+            "n": "Oase",
+            "id": 1577,
+            "r": "Exclusive",
+            "rgb": [
+                40,
+                174,
+                174
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Oasis_Dye"
+        },
+        {
+            "n": "Jacaranda",
+            "id": 1578,
+            "r": "Exclusive",
+            "rgb": [
+                44,
+                36,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Jacaranda_Dye"
+        },
+        {
+            "n": "Sandsturm",
+            "id": 1579,
+            "r": "Exclusive",
+            "rgb": [
+                200,
+                170,
+                130
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sandstorm_Dye"
+        },
+        {
+            "n": "Abgrundmeer",
+            "id": 1580,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Sea_Dye"
+        },
+        {
+            "n": "Auferstanden",
+            "id": 1581,
+            "r": "Exclusive",
+            "rgb": [
+                115,
+                137,
+                131
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Risen_Dye"
+        },
+        {
+            "n": "Grab",
+            "id": 1582,
+            "r": "Exclusive",
+            "rgb": [
+                38,
+                38,
+                38
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Grave_Dye"
+        },
+        {
+            "n": "Verfall",
+            "id": 1583,
+            "r": "Exclusive",
+            "rgb": [
+                84,
+                56,
+                49
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Decay_Dye"
+        },
+        {
+            "n": "Abgenutzte Knochen",
+            "id": 1584,
+            "r": "Exclusive",
+            "rgb": [
+                178,
+                169,
+                157
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Worn%20Bone_Dye"
+        },
+        {
+            "n": "Dunkelheit",
+            "id": 1585,
+            "r": "Exclusive",
+            "rgb": [
+                52,
+                52,
+                52
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Darkness_Dye"
+        },
+        {
+            "n": "Choya",
+            "id": 1592,
+            "r": "Exclusive",
+            "rgb": [
+                50,
+                107,
+                53
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Choya_Dye"
+        },
+        {
+            "n": "Wüsten-Harpyie",
+            "id": 1593,
+            "r": "Exclusive",
+            "rgb": [
+                48,
+                61,
+                98
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Desert%20Harpy_Dye"
+        },
+        {
+            "n": "Hydra",
+            "id": 1594,
+            "r": "Exclusive",
+            "rgb": [
+                51,
+                2,
+                2
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hydra_Dye"
+        },
+        {
+            "n": "Sandhai",
+            "id": 1595,
+            "r": "Exclusive",
+            "rgb": [
+                26,
+                138,
+                197
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sand%20Shark_Dye"
+        },
+        {
+            "n": "Iboga",
+            "id": 1596,
+            "r": "Exclusive",
+            "rgb": [
+                212,
+                240,
+                88
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Iboga_Dye"
+        },
+        {
+            "n": "Vaabische Bronze",
+            "id": 1597,
+            "r": "Exclusive",
+            "rgb": [
+                176,
+                98,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Vabbian%20Bronze_Dye"
+        },
+        {
+            "n": "Einbalsamierung",
+            "id": 1598,
+            "r": "Exclusive",
+            "rgb": [
+                161,
+                148,
+                126
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Embalm_Dye"
+        },
+        {
+            "n": "Teer",
+            "id": 1599,
+            "r": "Exclusive",
+            "rgb": [
+                6,
+                10,
+                19
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tar_Dye"
+        },
+        {
+            "n": "Sarkophag",
+            "id": 1600,
+            "r": "Exclusive",
+            "rgb": [
+                143,
+                114,
+                36
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sarcophagus_Dye"
+        },
+        {
+            "n": "Geißel",
+            "id": 1601,
+            "r": "Exclusive",
+            "rgb": [
+                61,
+                57,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Scourge_Dye"
+        },
+        {
+            "n": "Urne",
+            "id": 1602,
+            "r": "Exclusive",
+            "rgb": [
+                169,
+                116,
+                81
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Urn_Dye"
+        },
+        {
+            "n": "Dschungel",
+            "id": 1617,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                30,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Jungle_Dye"
+        },
+        {
+            "n": "Gülden",
+            "id": 1618,
+            "r": "Exclusive",
+            "rgb": [
+                145,
+                119,
+                7
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Auric_Dye"
+        },
+        {
+            "n": "Blüte",
+            "id": 1619,
+            "r": "Exclusive",
+            "rgb": [
+                145,
+                54,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bloom_Dye"
+        },
+        {
+            "n": "Dürre",
+            "id": 1620,
+            "r": "Exclusive",
+            "rgb": [
+                96,
+                58,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Arid_Dye"
+        },
+        {
+            "n": "Albtraum",
+            "id": 1621,
+            "r": "Exclusive",
+            "rgb": [
+                62,
+                149,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Nightmare_Dye"
+        },
+        {
+            "n": "Abgrundwald",
+            "id": 1622,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Forest_Dye"
+        },
+        {
+            "n": "Furcht",
+            "id": 1623,
+            "r": "Exclusive",
+            "rgb": [
+                35,
+                0,
+                80
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Fear_Dye"
+        },
+        {
+            "n": "Zerschmettert",
+            "id": 1624,
+            "r": "Exclusive",
+            "rgb": [
+                185,
+                185,
+                244
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Shattered_Dye"
+        },
+        {
+            "n": "Kristall",
+            "id": 1625,
+            "r": "Exclusive",
+            "rgb": [
+                171,
+                0,
+                171
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Crystal_Dye"
+        },
+        {
+            "n": "Gebrandmarkt",
+            "id": 1627,
+            "r": "Exclusive",
+            "rgb": [
+                94,
+                0,
+                94
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Branded_Dye"
+        },
+        {
+            "n": "Brandsturm",
+            "id": 1628,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                47
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Brandstorm_Dye"
+        },
+        {
+            "n": "Arkan",
+            "id": 1629,
+            "r": "Exclusive",
+            "rgb": [
+                91,
+                0,
+                212
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Arcane_Dye"
+        },
+        {
+            "n": "Coelinblaue Nacht",
+            "id": 1633,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                15,
+                69
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cerulean%20Night_Dye"
+        },
+        {
+            "n": "Morgengrauen",
+            "id": 1634,
+            "r": "Exclusive",
+            "rgb": [
+                202,
+                152,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Dawn_Dye"
+        },
+        {
+            "n": "Strahlendes Messing",
+            "id": 1635,
+            "r": "Exclusive",
+            "rgb": [
+                164,
+                123,
+                14
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Radiant%20Brass_Dye"
+        },
+        {
+            "n": "Himmlisches Blau",
+            "id": 1636,
+            "r": "Exclusive",
+            "rgb": [
+                119,
+                213,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Celestial%20Blue_Dye"
+        },
+        {
+            "n": "Coelinblauer Himmel",
+            "id": 1637,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                62,
+                154
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cerulean%20Sky_Dye"
+        },
+        {
+            "n": "Strahlendes Gold",
+            "id": 1638,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                217,
+                107
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Radiant%20Gold_Dye"
+        },
+        {
+            "n": "Das Große Feuer",
+            "id": 1639,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                73,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Searing_Dye"
+        },
+        {
+            "n": "Gladium",
+            "id": 1640,
+            "r": "Exclusive",
+            "rgb": [
+                113,
+                113,
+                113
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gladium_Dye"
+        },
+        {
+            "n": "Gottlos",
+            "id": 1641,
+            "r": "Exclusive",
+            "rgb": [
+                71,
+                71,
+                71
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Godless_Dye"
+        },
+        {
+            "n": "Legionär",
+            "id": 1642,
+            "r": "Exclusive",
+            "rgb": [
+                138,
+                12,
+                12
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Legionnaire_Dye"
+        },
+        {
+            "n": "Tribun",
+            "id": 1643,
+            "r": "Exclusive",
+            "rgb": [
+                101,
+                59,
+                59
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tribune_Dye"
+        },
+        {
+            "n": "Trupp",
+            "id": 1644,
+            "r": "Exclusive",
+            "rgb": [
+                169,
+                73,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Warband_Dye"
+        },
+        {
+            "n": "Exodus",
+            "id": 1645,
+            "r": "Exclusive",
+            "rgb": [
+                4,
+                4,
+                46
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Exodus_Dye"
+        },
+        {
+            "n": "Jagd",
+            "id": 1646,
+            "r": "Exclusive",
+            "rgb": [
+                114,
+                84,
+                57
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Hunt_Dye"
+        },
+        {
+            "n": "Geister",
+            "id": 1647,
+            "r": "Exclusive",
+            "rgb": [
+                164,
+                165,
+                166
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Spirits_Dye"
+        },
+        {
+            "n": "Bierrat",
+            "id": 1648,
+            "r": "Exclusive",
+            "rgb": [
+                91,
+                82,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Alemoot_Dye"
+        },
+        {
+            "n": "Havroun",
+            "id": 1649,
+            "r": "Exclusive",
+            "rgb": [
+                59,
+                71,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Havroun_Dye"
+        },
+        {
+            "n": "Legende",
+            "id": 1650,
+            "r": "Exclusive",
+            "rgb": [
+                20,
+                67,
+                130
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Legend_Dye"
+        },
+        {
+            "n": "Panorama",
+            "id": 1651,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                31,
+                110
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Vista_Dye"
+        },
+        {
+            "n": "Alpin",
+            "id": 1652,
+            "r": "Exclusive",
+            "rgb": [
+                30,
+                54,
+                79
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Alpine_Dye"
+        },
+        {
+            "n": "Blauer Löwe",
+            "id": 1653,
+            "r": "Exclusive",
+            "rgb": [
+                35,
+                35,
+                203
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Blue%20Lion_Dye"
+        },
+        {
+            "n": "Cyanit",
+            "id": 1654,
+            "r": "Exclusive",
+            "rgb": [
+                18,
+                91,
+                163
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Kyanite_Dye"
+        },
+        {
+            "n": "Unterwelt",
+            "id": 1655,
+            "r": "Exclusive",
+            "rgb": [
+                41,
+                136,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Underworld_Dye"
+        },
+        {
+            "n": "Wachstum",
+            "id": 1656,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                148,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Growth_Dye"
+        },
+        {
+            "n": "Grüner Löwe",
+            "id": 1657,
+            "r": "Exclusive",
+            "rgb": [
+                19,
+                212,
+                19
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Green%20Lion_Dye"
+        },
+        {
+            "n": "Blätterdach",
+            "id": 1658,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                74,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Canopy_Dye"
+        },
+        {
+            "n": "Roter Löwe",
+            "id": 1659,
+            "r": "Exclusive",
+            "rgb": [
+                212,
+                3,
+                3
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Red%20Lion_Dye"
+        },
+        {
+            "n": "Infernalisch",
+            "id": 1660,
+            "r": "Exclusive",
+            "rgb": [
+                136,
+                41,
+                41
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Infernal_Dye"
+        },
+        {
+            "n": "Granat",
+            "id": 1661,
+            "r": "Exclusive",
+            "rgb": [
+                110,
+                26,
+                26
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Garnet_Dye"
+        },
+        {
+            "n": "Wassermelone",
+            "id": 1662,
+            "r": "Exclusive",
+            "rgb": [
+                147,
+                63,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Watermelon_Dye"
+        },
+        {
+            "n": "Stroh",
+            "id": 1663,
+            "r": "Exclusive",
+            "rgb": [
+                109,
+                100,
+                63
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Straw_Dye"
+        },
+        {
+            "n": "Gelber Löwe",
+            "id": 1664,
+            "r": "Exclusive",
+            "rgb": [
+                181,
+                139,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Yellow%20Lion_Dye"
+        },
+        {
+            "n": "Seraphim",
+            "id": 1665,
+            "r": "Exclusive",
+            "rgb": [
+                113,
+                94,
+                10
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Seraphim_Dye"
+        },
+        {
+            "n": "Ananas",
+            "id": 1666,
+            "r": "Exclusive",
+            "rgb": [
+                126,
+                101,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pineapple_Dye"
+        },
+        {
+            "n": "Vorausgesagt",
+            "id": 1667,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                73,
+                145
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Foretold_Dye"
+        },
+        {
+            "n": "Vision",
+            "id": 1668,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                255,
+                140
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Vision_Dye"
+        },
+        {
+            "n": "Quarz",
+            "id": 1669,
+            "r": "Exclusive",
+            "rgb": [
+                153,
+                165,
+                177
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Quartz_Dye"
+        },
+        {
+            "n": "Nachkommin",
+            "id": 1670,
+            "r": "Exclusive",
+            "rgb": [
+                7,
+                133,
+                133
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Scion_Dye"
+        },
+        {
+            "n": "Leitstern",
+            "id": 1671,
+            "r": "Exclusive",
+            "rgb": [
+                252,
+                242,
+                213
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Guiding%20Star_Dye"
+        },
+        {
+            "n": "Prismatisch",
+            "id": 1672,
+            "r": "Exclusive",
+            "rgb": [
+                217,
+                176,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Prismatic_Dye"
+        },
+        {
+            "n": "Toffee",
+            "id": 1673,
+            "r": "Exclusive",
+            "rgb": [
+                158,
+                239,
+                255
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Taffy_Dye"
+        },
+        {
+            "n": "Zitronensorbet",
+            "id": 1674,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                255,
+                153
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Lemon%20Sherbet_Dye"
+        },
+        {
+            "n": "Kaugummi",
+            "id": 1675,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                105,
+                183
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Bubblegum_Dye"
+        },
+        {
+            "n": "Orange Sahne",
+            "id": 1676,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                224,
+                159
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Orange%20Cream_Dye"
+        },
+        {
+            "n": "Kirsche-Vanille",
+            "id": 1677,
+            "r": "Exclusive",
+            "rgb": [
+                255,
+                190,
+                190
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Cherry%20Vanilla_Dye"
+        },
+        {
+            "n": "Limetteneis",
+            "id": 1678,
+            "r": "Exclusive",
+            "rgb": [
+                126,
+                255,
+                126
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Limesicle_Dye"
+        },
+        {
+            "n": "Tiefenjade",
+            "id": 1679,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                68,
+                50
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Jade_Dye"
+        },
+        {
+            "n": "Warmes Jadeit",
+            "id": 1680,
+            "r": "Exclusive",
+            "rgb": [
+                120,
+                170,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Warm%20Jadeite_Dye"
+        },
+        {
+            "n": "Jade-Tinte",
+            "id": 1681,
+            "r": "Exclusive",
+            "rgb": [
+                13,
+                121,
+                83
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Jade%20Ink_Dye"
+        },
+        {
+            "n": "Abgrundsonne",
+            "id": 1682,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Sun_Dye"
+        },
+        {
+            "n": "Abgrundgrat",
+            "id": 1683,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Ridge_Dye"
+        },
+        {
+            "n": "Abgrund-Tiefen",
+            "id": 1684,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Depths_Dye"
+        },
+        {
+            "n": "Abgrundrose",
+            "id": 1685,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Rose_Dye"
+        },
+        {
+            "n": "Abgrundflamme",
+            "id": 1686,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Flame_Dye"
+        },
+        {
+            "n": "Energetisierte Jade",
+            "id": 1687,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                161,
+                79
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Energized%20Jade_Dye"
+        },
+        {
+            "n": "Abgrunddämmerung",
+            "id": 1688,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                0
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Abyssal%20Twilight_Dye"
+        },
+        {
+            "n": "Grasgrüne Jade",
+            "id": 1689,
+            "r": "Exclusive",
+            "rgb": [
+                8,
+                92,
+                8
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Verdant%20Jade_Dye"
+        },
+        {
+            "n": "Jade-Balance",
+            "id": 1690,
+            "r": "Exclusive",
+            "rgb": [
+                2,
+                97,
+                64
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Jade%20Balance_Dye"
+        },
+        {
+            "n": "Wohlwollen",
+            "id": 1691,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                120
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Benevolence_Dye"
+        },
+        {
+            "n": "Meeresblüte",
+            "id": 1692,
+            "r": "Exclusive",
+            "rgb": [
+                127,
+                0,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Sea%20Bloom_Dye"
+        },
+        {
+            "n": "Die Tiefe",
+            "id": 1693,
+            "r": "Exclusive",
+            "rgb": [
+                18,
+                0,
+                42
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/The%20Deep_Dye"
+        },
+        {
+            "n": "Weisheit",
+            "id": 1694,
+            "r": "Exclusive",
+            "rgb": [
+                9,
+                104,
+                104
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Wisdom_Dye"
+        },
+        {
+            "n": "Tsunami",
+            "id": 1696,
+            "r": "Exclusive",
+            "rgb": [
+                41,
+                41,
+                136
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Tsunami_Dye"
+        },
+        {
+            "n": "Sechsfache Koralle",
+            "id": 1698,
+            "r": "Exclusive",
+            "rgb": [
+                105,
+                63,
+                105
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Six-Fold%20Coral_Dye"
+        },
+        {
+            "n": "Qual",
+            "id": 1699,
+            "r": "Exclusive",
+            "rgb": [
+                104,
+                9,
+                104
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Torment_Dye"
+        },
+        {
+            "n": "Qual",
+            "id": 1700,
+            "r": "Exclusive",
+            "rgb": [
+                54,
+                0,
+                127
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Anguish_Dye"
+        },
+        {
+            "n": "Erbeutung",
+            "id": 1701,
+            "r": "Exclusive",
+            "rgb": [
+                128,
+                45,
+                45
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Predation_Dye"
+        },
+        {
+            "n": "Wild",
+            "id": 1702,
+            "r": "Exclusive",
+            "rgb": [
+                157,
+                0,
+                36
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Savage_Dye"
+        },
+        {
+            "n": "Welt-Beender",
+            "id": 1703,
+            "r": "Exclusive",
+            "rgb": [
+                0,
+                0,
+                74
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/World%20Ender_Dye"
+        },
+        {
+            "n": "Düsternis",
+            "id": 1704,
+            "r": "Exclusive",
+            "rgb": [
+                35,
+                0,
+                80
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Gloom_Dye"
+        },
+        {
+            "n": "Senf",
+            "id": 1706,
+            "r": "Exclusive",
+            "rgb": [
+                109,
+                92,
+                18
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Mustard_Dye"
+        },
+        {
+            "n": "Schiefer",
+            "id": 1707,
+            "r": "Exclusive",
+            "rgb": [
+                88,
+                88,
+                88
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Slate_Dye"
+        },
+        {
+            "n": "Pastell-Lavendel",
+            "id": 1708,
+            "r": "Exclusive",
+            "rgb": [
+                244,
+                212,
+                251
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Pastel%20Lavender_Dye"
+        },
+        {
+            "n": "Tiefsee",
+            "id": 1709,
+            "r": "Exclusive",
+            "rgb": [
+                6,
+                54,
+                103
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Deep%20Sea_Dye"
+        },
+        {
+            "n": "Nachmittagswein",
+            "id": 1710,
+            "r": "Exclusive",
+            "rgb": [
+                79,
+                30,
+                54
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Afternoon%20Wine_Dye"
+        },
+        {
+            "n": "Helles Viridian",
+            "id": 1711,
+            "r": "Exclusive",
+            "rgb": [
+                77,
+                119,
+                77
+            ],
+            "w": "https://wiki.guildwars2.com/wiki/Light%20Viridian_Dye"
+        }
+    ]
+}

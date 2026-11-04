@@ -13,6 +13,7 @@
 				if (el) el.classList.remove('active');
 			};
 		</script>
+		<script src="data_loader.js"></script>
 		<link rel="manifest" href="https://gw2ps.local/Data/manifest.json" />
         <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
@@ -197,7 +198,7 @@
 		<div id="motd-popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:1000000; align-items:center; justify-content:center; padding:20px;">
 			<div style="background: var(--bg-panel, rgba(15,12,10,0.98)); border: 2px solid var(--text-primary, #e2c07d); max-width: 500px; width: 100%; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.9); display:flex; flex-direction:column; position:relative; text-align: center; border-radius: 4px;">
 				<div style="font-size: 20px; font-weight: bold; color: var(--text-primary, #e2c07d); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; font-family: 'Crimson Text', serif; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px;" id="motd-title">Message of the Day</div>
-				<div style="font-size: 14px; color: var(--text-muted, #dcb36b); line-height: 1.6; margin-bottom: 25px; max-height: 250px; overflow-y: auto; text-align: left; padding-right: 5px; white-space: pre-wrap; font-family: 'Crimson Text', serif;" id="motd-message">Loading message...</div>
+				<div style="font-size: 14px; color: var(--text-muted, #dcb36b); line-height: 1.6; margin-bottom: 25px; max-height: 250px; overflow-y: auto; text-align: left; padding-right: 5px; white-space: normal; font-family: 'Crimson Text', serif;" id="motd-message">Loading message...</div>
 				<div style="display: flex; justify-content: center; gap: 15px;">
 					<button class="popup-btn" style="margin:0;" onclick="closeMotd(true)">Don't Show Again</button>
 					<button class="popup-btn" style="margin:0;" onclick="closeMotd(false)">Close</button>
@@ -269,7 +270,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.4.4";
+			const APP_VERSION = "1.4.6";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -277,6 +278,65 @@
 			window.lastPlayerCoords = {x: 0, y: 0};
 			window.currentPlayerZone = 'map';
 			window.isFirstLocationUpdate = true;
+
+			window.openWikiPanel = async function(rawUrl, rawTitle) {
+				if (!rawUrl && !rawTitle) return;
+				const lang = localStorage.getItem('gw2_wiki_lang') || 'en';
+				let url = rawUrl || '';
+				let title = rawTitle || '';
+
+				if (!title && url) {
+					try {
+						const urlObj = new URL(url);
+						if (urlObj.searchParams.has('title')) {
+							title = urlObj.searchParams.get('title');
+						} else if (urlObj.pathname.startsWith('/wiki/')) {
+							title = decodeURIComponent(urlObj.pathname.substring(6));
+						}
+					} catch(e) {}
+				}
+
+				if (lang !== 'en' && title) {
+					const anchorMatch = title.match(/#.*$/);
+					const anchor = anchorMatch ? anchorMatch[0] : '';
+					const cleanTitle = title.replace(/#.*$/, '').replace(/_/g, ' ');
+
+					try {
+						const apiUrl = `https://wiki.guildwars2.com/api.php?action=query&titles=${encodeURIComponent(cleanTitle)}&prop=langlinks&lllang=${lang}&format=json&origin=*`;
+						const res = await fetch(apiUrl);
+						if (res.ok) {
+							const json = await res.json();
+							const pages = json?.query?.pages || {};
+							const page = Object.values(pages)[0];
+							if (page && page.langlinks && page.langlinks.length > 0) {
+								const transTitle = page.langlinks[0]['*'];
+								url = `https://wiki-${lang}.guildwars2.com/index.php?title=${encodeURIComponent(transTitle)}${anchor}&useskin=vector-2022`;
+							}
+						}
+					} catch (err) {
+						console.log("Wiki langlink lookup skipped:", err);
+					}
+				}
+
+				if (!url && title) {
+					url = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(title)}&useskin=vector-2022`;
+				}
+
+				url = url.replace(/useskin=vector(?![-\w])/g, 'useskin=vector-2022');
+				if (!url.includes('useskin=')) {
+					url += (url.includes('?') ? '&' : '?') + 'useskin=vector-2022';
+				}
+
+				const rightPanel = document.getElementById('side-panel-right');
+				const rightFrame = document.getElementById('panel-frame-right');
+				if (rightPanel && rightFrame) {
+					window.showLoader('panel-loading-right');
+					rightFrame.src = url;
+					rightPanel.classList.add('wiki-mode', 'open');
+					document.getElementById('right-panel-close-btn').style.display = 'none';
+					document.getElementById('wiki-close-btn').style.display = 'flex';
+				}
+			};
 
 			window.postToHost = function(action) {
 				if (window.chrome && window.chrome.webview) {
@@ -404,16 +464,9 @@
                     const data = event.data;
 
 					if (typeof data === 'string' && data.startsWith('openWiki:')) {
-						const url = data.substring(9);
-						const rightPanel = document.getElementById('side-panel-right');
-						const rightFrame = document.getElementById('panel-frame-right');
-						
-						window.showLoader('panel-loading-right');
-						rightFrame.src = url;
-						rightPanel.classList.add('wiki-mode', 'open');
-						document.getElementById('right-panel-close-btn').style.display = 'none';
-						document.getElementById('wiki-close-btn').style.display = 'flex';
-					} 
+						window.openWikiPanel(data.substring(9));
+					}
+ 
 					else if (data && typeof data === 'object') {
 						let items = null;
 						let curr = null;
@@ -806,41 +859,43 @@
                     if (data === 'closePanels') { window.closeAllPanels(); return; }
                     
                     if (data.startsWith('openWiki:')) {
-                        const url = data.substring(9);
-                        const rightPanel = document.getElementById('side-panel-right');
-                        const rightFrame = document.getElementById('panel-frame-right');
-                        
-                        window.showLoader('panel-loading-right');
-                        rightFrame.src = url;
-                        rightPanel.classList.add('wiki-mode', 'open');
-						document.getElementById('right-panel-close-btn').style.display = 'none';
-                        document.getElementById('wiki-close-btn').style.display = 'flex';
+                        window.openWikiPanel(data.substring(9));
                         return;
                     }
                 }
 
 				if (typeof data === 'object') {
 					if (data.action === 'openWiki') {
-						let url = '';
-						if (data.url) {
-							url = data.url;
-						} else if (data.title && (data.title.startsWith('http://') || data.title.startsWith('https://'))) {
-							url = data.title;
-						} else {
-							url = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(data.title)}`;
+						let url = data.url || '';
+						let title = data.title || '';
+						if (!url && title && (title.startsWith('http://') || title.startsWith('https://'))) {
+							url = title;
+							title = '';
 						}
-						if (!url.includes('useskin=vector')) {
-							url += (url.includes('?') ? '&' : '?') + 'useskin=vector';
+						window.openWikiPanel(url, title);
+					}
+					else if (data.action === 'showMotdForce') {
+						window.checkMotd(true);
+					}
+					else if (data.action === 'setWikiLang' || data.action === 'languageChanged') {
+						localStorage.setItem('gw2_lang', data.lang);
+						const mapFrame = document.getElementById('map-frame');
+						if (mapFrame && mapFrame.contentWindow) {
+							mapFrame.contentWindow.location.reload();
 						}
-						const rightPanel = document.getElementById('side-panel-right');
-						const rightFrame = document.getElementById('panel-frame-right');
-						if (rightPanel && rightFrame) {
-							window.showLoader('panel-loading-right');
-							rightFrame.src = url;
-							rightPanel.classList.add('wiki-mode', 'open');
-							document.getElementById('right-panel-close-btn').style.display = 'none';
-							document.getElementById('wiki-close-btn').style.display = 'flex';
+						const panelFrame = document.getElementById('panel-frame');
+						if (panelFrame && panelFrame.contentWindow) {
+							try {
+								panelFrame.contentWindow.postMessage({ action: 'languageChanged', lang: data.lang }, '*');
+							} catch (e) {}
 						}
+						const menuFrame = document.getElementById('menu-frame');
+						if (menuFrame && menuFrame.contentWindow) {
+							try {
+								menuFrame.contentWindow.postMessage({ action: 'languageChanged', lang: data.lang }, '*');
+							} catch (e) {}
+						}
+						localStorage.setItem('gw2_wiki_lang', data.lang);
 					}
 					else if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
 					else if (data.action === 'refreshClearsWatchlist') window.pollClearsWatchlist();
@@ -936,6 +991,11 @@
                     else if (data.action === 'updateTheme') {
                         document.body.setAttribute('data-theme', data.theme);
                         window.postToFrames(data);
+                        window.postToHost('setTheme:' + data.theme);
+                    }
+                    else if (data.action === 'requestTheme') {
+                        const curTheme = localStorage.getItem('gw2_theme') || 'human';
+                        window.postToFrames({ action: 'updateTheme', theme: curTheme });
                     }
                     else if (data.action === 'syncAccountData') { syncAccountData(); }
 					else if (data.action === 'changeModule') {
@@ -969,6 +1029,7 @@
 
             let currentTheme = localStorage.getItem('gw2_theme') || 'human';
             document.body.setAttribute('data-theme', currentTheme);
+            window.postToHost('setTheme:' + currentTheme);
 
 			setInterval(() => {
 				const frame = document.getElementById('map-frame');
@@ -1031,14 +1092,14 @@
                 } catch (e) { console.error("Sync failed", e); }
             }
 
-            async function checkMotd() {
+            async function checkMotd(forceShow = false) {
                 try {
                     const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
                     const apiBase = isDevMode 
                         ? "https://gw2ps.local/Data/" 
                         : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
 
-                    const res = await fetch(apiBase + 'motd.json', { cache: "no-store" });
+                    const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('motd.json') : null) || await fetch(apiBase + 'motd.json', { cache: "no-store" });
                     if (!res.ok) return;
                     
                     const data = await res.json();
@@ -1048,7 +1109,7 @@
                     if (!activeMotd || !activeMotd.id || !activeMotd.message) return;
                     
                     const isSeen = localStorage.getItem('gw2_seen_motd_' + activeMotd.id) === 'true';
-                    if (isSeen) return;
+                    if (isSeen && !forceShow) return;
                     
                     document.getElementById('motd-title').innerText = activeMotd.title || "MESSAGE OF THE DAY";
                     document.getElementById('motd-message').innerHTML = activeMotd.message;
@@ -1061,6 +1122,7 @@
                     console.log("MOTD check skipped or failed:", e);
                 }
             }
+            window.checkMotd = checkMotd;
 
             window.closeMotd = function(dontShowAgain) {
                 if (dontShowAgain && window.currentActiveMotdId) {

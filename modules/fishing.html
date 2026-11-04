@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -65,9 +66,9 @@
 	<body>
 		<div id="ui-root" style="display:flex; height:100%; flex-direction: column;">
 			<div class="header-row">
-				<div class="section-title">FISHING REGIONS</div>
+				<div class="section-title" data-i18n="fishing.title">FISHING REGIONS</div>
 				<div style="display:flex; align-items:center;">
-					<span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);">WATCHLIST OVERLAY</span>
+					<span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);" data-i18n="fishing.watchlist_overlay">WATCHLIST OVERLAY</span>
 					<label class="fancy-toggle">
 						<input type="checkbox" id="fishing-overlay-toggle" onchange="toggleFishingOverlay(this.checked)" />
 						<span class="slider"></span>
@@ -76,12 +77,12 @@
 			</div>
 
 			<div class="search-container">
-				<input type="text" id="fish-search" class="search-box" autocomplete="off" placeholder="SEARCH FISH..." onkeyup="handleSearch(this.value)">
+				<input type="text" id="fish-search" class="search-box" autocomplete="off" data-i18n-ph="fishing.search_ph" placeholder="SEARCH FISH..." onkeyup="handleSearch(this.value)">
 				<span class="clear-btn" onclick="document.getElementById('fish-search').value=''; handleSearch('');">&times;</span>
 			</div>
 
 			<div class="content-panel" id="fish-container">
-				<div class="loading-text">LOADING FISHING DATA...</div>
+				<div class="loading-text" data-i18n="fishing.loading">LOADING FISHING DATA...</div>
 			</div>
 		</div>
 
@@ -115,7 +116,8 @@
                 if (!catData || !catData.achievements) { document.getElementById('fish-container').innerHTML = "<div class='loading-text'>FAILED TO LOAD GW2 API</div>"; return; }
 
                 // 2. Fetch Achievement definitions
-                const achData = await fetchJSON("https://api.guildwars2.com/v2/achievements?ids=" + catData.achievements.join(','));
+                const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                const achData = await fetchJSON("https://api.guildwars2.com/v2/achievements?ids=" + catData.achievements.join(',') + "&lang=" + lang);
                 if (!achData) { document.getElementById('fish-container').innerHTML = "<div class='loading-text'>FAILED TO LOAD GW2 API</div>"; return; }
                 
                 // 3. Strict filter: Remove achievements without items, and explicitly remove problem meta-achievements
@@ -140,7 +142,8 @@
                 const idsArray = Array.from(neededItemIds);
                 for(let i=0; i<idsArray.length; i+=200) {
                     const batch = idsArray.slice(i, i+200);
-                    const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(','));
+                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                    const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(',') + "&lang=" + lang);
                     if (iData && Array.isArray(iData)) {
                         iData.forEach(it => itemCache[it.id] = it);
                     }

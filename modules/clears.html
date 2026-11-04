@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -68,10 +69,10 @@
 	<body>
 		<div id="ui-root" style="display:none; height:100%; flex-direction: column;">
 			<div class="header-row">
-				<div class="section-title">Weekly Clears</div>
+				<div class="section-title" data-i18n="clears.title">Weekly Clears</div>
 				<div style="display: flex; align-items: center; gap: 15px;">
 					<div style="display: flex; align-items: center; gap: 8px;">
-						<span style="font-size: 10px; font-weight: bold; color: var(--text-muted, #8a7a5f); letter-spacing: 1px;">Watchlist on Screen</span>
+						<span style="font-size: 10px; font-weight: bold; color: var(--text-muted, #8a7a5f); letter-spacing: 1px;" data-i18n="clears.watchlist_screen">Watchlist on Screen</span>
 						<label class="fancy-toggle">
 							<input type="checkbox" id="clears-watchlist-toggle" onchange="toggleWatchlistOnScreen(this.checked)" />
 							<span class="slider"></span>
@@ -85,7 +86,7 @@
 
 		<div id="watchlist-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10,8,5,0.95); z-index:1000; padding:15px; flex-direction:column; border:1px solid var(--border-color, #4a3b2a);">
 			<div class="header-row">
-				<div class="section-title">Watchlist Overview</div>
+				<div class="section-title" data-i18n="clears.overview_title">Watchlist Overview</div>
 				<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='var(--text-primary, #e2c07d)';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-muted, #8a7a5f)';" onclick="closeWatchlistModal()">Close</button>
 			</div>
 			<div id="watchlist-modal-content" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
@@ -93,7 +94,7 @@
 
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
-			<div>SYNCING CLEARS DATA...</div>
+			<div data-i18n="clears.syncing">SYNCING CLEARS DATA...</div>
 		</div>
 
 		<script>
@@ -220,10 +221,10 @@
                 }
 
                 const [allRaids, accRaids, accStrikes, allDungeons, accDungeons, accAchievements] = await Promise.all([
-                    fetchJSON('https://api.guildwars2.com/v2/raids?ids=all'),
+                    fetchJSON('https://api.guildwars2.com/v2/raids?ids=all&lang=' + (localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en')),
                     fetchJSON(`https://api.guildwars2.com/v2/account/raids?access_token=${activeKey}`),
                     fetchJSON(`https://api.guildwars2.com/v2/account/strikes?access_token=${activeKey}`),
-                    fetchJSON('https://api.guildwars2.com/v2/dungeons?ids=all'),
+                    fetchJSON('https://api.guildwars2.com/v2/dungeons?ids=all&lang=' + (localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en')),
                     fetchJSON(`https://api.guildwars2.com/v2/account/dungeons?access_token=${activeKey}`),
                     fetchJSON(`https://api.guildwars2.com/v2/account/achievements?access_token=${activeKey}`)
                 ]);
@@ -720,6 +721,7 @@
             }
 
             window.addEventListener('message', (e) => { 
+                if (e.data && e.data.action === 'languageChanged') { init(); } 
                 if (e.data && e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
                 if (e.data && e.data.action === 'uiScaleChanged') {
                     if (e.data.value === 'large') document.body.classList.add('ui-large');

@@ -1,0 +1,4042 @@
+[
+    {
+        "pos":  [
+                    52412.7,
+                    32988.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAEAAAA=]",
+        "desc":  "Ayuda a Daphne a detener la corrupción invasora."
+    },
+    {
+        "pos":  [
+                    54163.6,
+                    32112.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAIAAAA=]",
+        "desc":  "Ayuda a los skritt de Ratatosk."
+    },
+    {
+        "pos":  [
+                    52781.3,
+                    31794.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAoAAAA=]",
+        "desc":  "Defiende la Finca de Travelen de los ataques de los Svanir."
+    },
+    {
+        "pos":  [
+                    50727.5,
+                    30382.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC4AAAA=]",
+        "desc":  "Asegura que el campamento minero mantiene la productividad."
+    },
+    {
+        "pos":  [
+                    55514.7,
+                    31765.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDYAAAA=]",
+        "desc":  "Honra al espíritu del Lobo."
+    },
+    {
+        "pos":  [
+                    55804.1,
+                    31126.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDcAAAA=]",
+        "desc":  "Honra al espíritu de la Osa."
+    },
+    {
+        "pos":  [
+                    55443.4,
+                    31044.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDgAAAA=]",
+        "desc":  "Honra al espíritu del Cuervo."
+    },
+    {
+        "pos":  [
+                    55062.6,
+                    31488.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDkAAAA=]",
+        "desc":  "Honra al espíritu de la Pantera de las Nieves."
+    },
+    {
+        "pos":  [
+                    55989,
+                    31319
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDsAAAA=]",
+        "desc":  "Interrumpe la adoración de los grawl."
+    },
+    {
+        "pos":  [
+                    55691.3,
+                    28127.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BD0AAAA=]",
+        "desc":  "Desafía a los siervos de Jormag, el dragón de hielo."
+    },
+    {
+        "pos":  [
+                    55767.2,
+                    29033.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEMAAAA=]",
+        "desc":  "Combate la corrupción del dragón de hielo."
+    },
+    {
+        "pos":  [
+                    52142.1,
+                    34959.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEsAAAA=]",
+        "desc":  "Participa en el festín."
+    },
+    {
+        "pos":  [
+                    53277,
+                    34780.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEwAAAA=]",
+        "desc":  "Sabotea las operaciones mineras de los draga para los agentes de la Orden de los Susurros."
+    },
+    {
+        "pos":  [
+                    53557.4,
+                    35727.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BE0AAAA=]",
+        "desc":  "Disgrega a los grawl, que están más agresivos de lo habitual."
+    },
+    {
+        "pos":  [
+                    54119.4,
+                    26550.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA4AAAA=]",
+        "desc":  "Aprende las costumbres de los kodan."
+    },
+    {
+        "pos":  [
+                    53945,
+                    27504.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBkAAAA=]",
+        "desc":  "Ayuda al rebelde Isaak a plantar las semillas de la revolución draga."
+    },
+    {
+        "pos":  [
+                    53164.1,
+                    28110.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBoAAAA=]",
+        "desc":  "Apoya a los artesanos de Soderhem."
+    },
+    {
+        "pos":  [
+                    52923.7,
+                    27791.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBsAAAA=]",
+        "desc":  "Protege los territorios de caza de Njordstead."
+    },
+    {
+        "pos":  [
+                    53357.1,
+                    28502.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB0AAAA=]",
+        "desc":  "Repele la corrupción."
+    },
+    {
+        "pos":  [
+                    53483.2,
+                    28690.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB4AAAA=]",
+        "desc":  "Ayuda al guardia del león Nadel."
+    },
+    {
+        "pos":  [
+                    51112.5,
+                    28304.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCAAAAA=]",
+        "desc":  "Apoya al Priorato de Durmand contra los centauros."
+    },
+    {
+        "pos":  [
+                    51440.7,
+                    28508.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCIAAAA=]",
+        "desc":  "Repele a los habitantes de Paraje de Jormabakke."
+    },
+    {
+        "pos":  [
+                    51395.9,
+                    29365.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCMAAAA=]",
+        "desc":  "Neutraliza a los draga de Topogrado."
+    },
+    {
+        "pos":  [
+                    51536.9,
+                    29401.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCQAAAA=]",
+        "desc":  "Impresiona a los hacendados de Mennerheim."
+    },
+    {
+        "pos":  [
+                    52224.2,
+                    28241.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCUAAAA=]",
+        "desc":  "Oponte a los usurpadores grawl."
+    },
+    {
+        "pos":  [
+                    54977.3,
+                    23513.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHABAAA=]",
+        "desc":  "Mantén a los grawl ocupados para que no empiecen a adorar a Jormag."
+    },
+    {
+        "pos":  [
+                    53646.7,
+                    24354.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHMBAAA=]",
+        "desc":  "Frustra las acciones de los Svanir."
+    },
+    {
+        "pos":  [
+                    57132.8,
+                    35101.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLcBAAA=]",
+        "desc":  "Prepara a tus tropas para la batalla contra Kralkatorrik."
+    },
+    {
+        "pos":  [
+                    59187.5,
+                    31100.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGcAAAA=]",
+        "desc":  "Defiende el fuerte de la Legión de Hierro contra la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    60926.2,
+                    31295.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG0AAAA=]",
+        "desc":  "Ayuda a Sesto Partecabezas con su trabajo."
+    },
+    {
+        "pos":  [
+                    58056.4,
+                    30164.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BFsBAAA=]",
+        "desc":  "Elimina las plagas del área de entrenamiento."
+    },
+    {
+        "pos":  [
+                    62739,
+                    30676.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHMAAAA=]",
+        "desc":  "Ayuda en la investigación de la historiadora Jinell en los restos de Serenidad."
+    },
+    {
+        "pos":  [
+                    62847.2,
+                    29077.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHQAAAA=]",
+        "desc":  "Ayuda a las fuerzas centinelas contra los dragauros."
+    },
+    {
+        "pos":  [
+                    63624,
+                    32403.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHkAAAA=]",
+        "desc":  "Ayuda a la Legión y a los soldados de la Vanguardia de Ébano contra los ogros."
+    },
+    {
+        "pos":  [
+                    63702.8,
+                    29368.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH4AAAA=]",
+        "desc":  "Únete a la Legión de Ceniza de Cresta Tawny en las operaciones sigilosas."
+    },
+    {
+        "pos":  [
+                    62489.3,
+                    34325
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJwAAAA=]",
+        "desc":  "Contén a los insurrectos."
+    },
+    {
+        "pos":  [
+                    63395.8,
+                    33625.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKEAAAA=]",
+        "desc":  "Ayuda a la delegación charr."
+    },
+    {
+        "pos":  [
+                    63092.5,
+                    33933.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKIAAAA=]",
+        "desc":  "Colabora con la delegación humana."
+    },
+    {
+        "pos":  [
+                    62364.1,
+                    33049.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKMAAAA=]",
+        "desc":  "Contén el crecimiento de la Marca del Dragón."
+    },
+    {
+        "pos":  [
+                    61872.1,
+                    32945.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKQAAAA=]",
+        "desc":  "Ayuda a los investigadores a estudiar la Marca."
+    },
+    {
+        "pos":  [
+                    63473.5,
+                    34958.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKcAAAA=]",
+        "desc":  "Hostiga a los ogros de Corral Osoinmundo."
+    },
+    {
+        "pos":  [
+                    59515.8,
+                    27409.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIAAAAA=]",
+        "desc":  "Ayuda con el mantenimiento en el Puesto de Mando de Tuyere."
+    },
+    {
+        "pos":  [
+                    59387.8,
+                    26849.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIEAAAA=]",
+        "desc":  "Ayuda a la ingeniera Verutum."
+    },
+    {
+        "pos":  [
+                    58759.3,
+                    27479
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIIAAAA=]",
+        "desc":  "Limpia la magia de la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    57866.3,
+                    25777.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIgAAAA=]",
+        "desc":  "Ayuda a los soldados de la Legión de Ceniza en Grieta de las Sombras."
+    },
+    {
+        "pos":  [
+                    57068.3,
+                    25722.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIkAAAA=]",
+        "desc":  "Ayuda a los refugiados kodan que huyen hacia Vísceras de Haymal."
+    },
+    {
+        "pos":  [
+                    61393.1,
+                    28184
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BI4AAAA=]",
+        "desc":  "Enfréntate a los Marcados del Lago Desolann junto con los Centinelas."
+    },
+    {
+        "pos":  [
+                    61193.9,
+                    27025.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BI8AAAA=]",
+        "desc":  "Ayuda a los centinelas a patrullar las Arboledas Lágrimaclara."
+    },
+    {
+        "pos":  [
+                    61688.2,
+                    28870.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJEAAAA=]",
+        "desc":  "Enfréntate a los siervos robavida en el Bosque del Demonio."
+    },
+    {
+        "pos":  [
+                    61536.8,
+                    29632.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJIAAAA=]",
+        "desc":  "Únete a la Legión de Hierro para derribar el muro ascaloniano."
+    },
+    {
+        "pos":  [
+                    60279.6,
+                    29622
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJYAAAA=]",
+        "desc":  "Ayuda al centurión Portaverdades en Arcos Ecotabla."
+    },
+    {
+        "pos":  [
+                    60319.1,
+                    29265.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJcAAAA=]",
+        "desc":  "Ayuda a la maestre Crinarrasa a conservar las Ruinas de la Antigua Piken."
+    },
+    {
+        "pos":  [
+                    60723.1,
+                    27228.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJgAAAA=]",
+        "desc":  "Ayuda a las Legiones Aliadas en su marcha hacia el territorio de la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    60510.8,
+                    26594
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJkAAAA=]",
+        "desc":  "Ayuda a la escuadra Chamuscadora en su asalto contra la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    56958.6,
+                    29665.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKkAAAA=]",
+        "desc":  "Ayuda a la Legión de Sangre."
+    },
+    {
+        "pos":  [
+                    56998.8,
+                    28459
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKoAAAA=]",
+        "desc":  "Ayuda a Lakor Bocallorona a hacer que el Carnoberfest transcurra sin contratiempos."
+    },
+    {
+        "pos":  [
+                    56723.2,
+                    28144.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKsAAAA=]",
+        "desc":  "Apoya a la Legión de Hierro."
+    },
+    {
+        "pos":  [
+                    57798.2,
+                    27971
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKwAAAA=]",
+        "desc":  "Ayuda a los trabajadores de la cantera."
+    },
+    {
+        "pos":  [
+                    58309.6,
+                    28645.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK4AAAA=]",
+        "desc":  "Ayuda a Robusto Menteoscura."
+    },
+    {
+        "pos":  [
+                    59141.8,
+                    28527.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLEAAAA=]",
+        "desc":  "Ayuda a los trabajadores del Molino Sierrasangre."
+    },
+    {
+        "pos":  [
+                    59247.4,
+                    28157.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLIAAAA=]",
+        "desc":  "Ayuda a la Legión de Ceniza."
+    },
+    {
+        "pos":  [
+                    47771.9,
+                    42678.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH4BAAA=]",
+        "desc":  "Reclama el relicario de Grenth."
+    },
+    {
+        "pos":  [
+                    47359.1,
+                    42320.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH8BAAA=]",
+        "desc":  "Reclama el relicario de Dwayna."
+    },
+    {
+        "pos":  [
+                    48655.5,
+                    42554.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIABAAA=]",
+        "desc":  "Reclama el relicario de Melandru."
+    },
+    {
+        "pos":  [
+                    47546.6,
+                    41688.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIEBAAA=]",
+        "desc":  "Reclama el relicario de Balthazar."
+    },
+    {
+        "pos":  [
+                    48593.9,
+                    41853.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIIBAAA=]",
+        "desc":  "Reclama el relicario de Lyssa."
+    },
+    {
+        "pos":  [
+                    43550.7,
+                    30028
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNQAAAA=]",
+        "desc":  "Entrena con la milicia."
+    },
+    {
+        "pos":  [
+                    44142.2,
+                    28815.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNUAAAA=]",
+        "desc":  "Ayuda a los Serafines en el Fuerte de Shaemoor."
+    },
+    {
+        "pos":  [
+                    42834.8,
+                    28302.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNsAAAA=]",
+        "desc":  "Ayuda a la granjera Eda con su huerto."
+    },
+    {
+        "pos":  [
+                    45662.7,
+                    30062.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BN8AAAA=]",
+        "desc":  "Une a los ettin."
+    },
+    {
+        "pos":  [
+                    45225.9,
+                    29229.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOEAAAA=]",
+        "desc":  "Mantén el monasterio operativo."
+    },
+    {
+        "pos":  [
+                    44598.1,
+                    28755.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOIAAAA=]",
+        "desc":  "Ayuda a la Obrera Cardy en el Aserradero de Ojon."
+    },
+    {
+        "pos":  [
+                    45266.7,
+                    28533.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOMAAAA=]",
+        "desc":  "Apoya al cazador Bloque y al albergue de caza."
+    },
+    {
+        "pos":  [
+                    45600.2,
+                    28218.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOQAAAA=]",
+        "desc":  "Ayuda al pescador Will y a los pescadores de Beetletun."
+    },
+    {
+        "pos":  [
+                    48195.6,
+                    27360.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMsAAAA=]",
+        "desc":  "Desata el caos entre los centauros."
+    },
+    {
+        "pos":  [
+                    49078.6,
+                    28027.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM4AAAA=]",
+        "desc":  "Entrénate con la Compañía."
+    },
+    {
+        "pos":  [
+                    47470.4,
+                    25963.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM8AAAA=]",
+        "desc":  "Colabora con los skritt de Excavaciones Arcallion."
+    },
+    {
+        "pos":  [
+                    47722.7,
+                    26260.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNAAAAA=]",
+        "desc":  "Ataca a los centauros."
+    },
+    {
+        "pos":  [
+                    42830.3,
+                    32417.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPoAAAA=]",
+        "desc":  "Ayuda a los guardas de Corazonsombrío."
+    },
+    {
+        "pos":  [
+                    44881.2,
+                    31979.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BP4AAAA=]",
+        "desc":  "Ayuda al Refugio de Sobrelago con los molestos ettin."
+    },
+    {
+        "pos":  [
+                    42616.5,
+                    30737.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAEBAAA=]",
+        "desc":  "Apoya al Fuerte Salma."
+    },
+    {
+        "pos":  [
+                    43019.6,
+                    31943.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAIBAAA=]",
+        "desc":  "Ayuda a Dianna socavando las operaciones de reciclaje de los bandidos."
+    },
+    {
+        "pos":  [
+                    45259.7,
+                    32172.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAMBAAA=]",
+        "desc":  "Apoya a Sangdo Alacélere."
+    },
+    {
+        "pos":  [
+                    46778.1,
+                    29544.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOcAAAA=]",
+        "desc":  "Rescata a los serafines caídos en los Campos Sangrientos."
+    },
+    {
+        "pos":  [
+                    48503.7,
+                    29572.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOoAAAA=]",
+        "desc":  "Véngate de los piratas por Joukje."
+    },
+    {
+        "pos":  [
+                    47643.8,
+                    29732.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BO8AAAA=]",
+        "desc":  "Apoya a las tropas apostadas en Asentamiento de Ascalon."
+    },
+    {
+        "pos":  [
+                    49388.3,
+                    29919.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPUAAAA=]",
+        "desc":  "Mantén la seguridad alrededor de la Mansión Almuten."
+    },
+    {
+        "pos":  [
+                    48305.2,
+                    34098.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMIAAAA=]",
+        "desc":  "Pon fin a la misteriosa aflicción de los quaggan."
+    },
+    {
+        "pos":  [
+                    48882.1,
+                    32956
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMMAAAA=]",
+        "desc":  "Pon fin a los experimentos de Hidropuesto Aquanarium."
+    },
+    {
+        "pos":  [
+                    48824.5,
+                    32639.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMQAAAA=]",
+        "desc":  "Enseña a los quaggan a criar cangrejos."
+    },
+    {
+        "pos":  [
+                    49623.1,
+                    34176.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMYAAAA=]",
+        "desc":  "Ayuda a la cruzada Aisling de la Vigilia a recuperar el territorio skritt perdido."
+    },
+    {
+        "pos":  [
+                    45565.3,
+                    27601.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHcBAAA=]",
+        "desc":  "Devuelve la normalidad a Nueva Loamhurst."
+    },
+    {
+        "pos":  [
+                    45918.2,
+                    26705.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHkBAAA=]",
+        "desc":  "Interrumpe las fuerzas del Manto Blanco que ocupan el Fuerte Evennia."
+    },
+    {
+        "pos":  [
+                    43488.8,
+                    36061.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAUBAAA=]",
+        "desc":  "Ayuda a la valiente Caillech con los resurgidos."
+    },
+    {
+        "pos":  [
+                    43680.6,
+                    32939.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAsBAAA=]",
+        "desc":  "Ayuda a la guardia del león Hester a rescatar a los esclavos de los Abismos del Esclavista."
+    },
+    {
+        "pos":  [
+                    43797.6,
+                    35332
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBQBAAA=]",
+        "desc":  "Enfréntate a la Corte de la Pesadilla en Guarida de Espinazarza."
+    },
+    {
+        "pos":  [
+                    42261,
+                    36020.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBUBAAA=]",
+        "desc":  "Ayuda a Arias a cuidar de su jardín."
+    },
+    {
+        "pos":  [
+                    40428.5,
+                    36473.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BD8BAAA=]",
+        "desc":  "Colabora en la investigación de Doola sobre la golemancia."
+    },
+    {
+        "pos":  [
+                    40969,
+                    36620.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEABAAA=]",
+        "desc":  "Ayuda al Optícalo a investigar los relámpagos."
+    },
+    {
+        "pos":  [
+                    41638.1,
+                    36406.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEIBAAA=]",
+        "desc":  "Ayuda a Esotérica FI+T con la investigación del légamo."
+    },
+    {
+        "pos":  [
+                    41794.5,
+                    36108.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEYBAAA=]",
+        "desc":  "Colabora en la investigación de Parnna sobre la antigua cámara de transferencia."
+    },
+    {
+        "pos":  [
+                    40496.8,
+                    34562.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEsBAAA=]",
+        "desc":  "Ayuda a la sociedad del Caos."
+    },
+    {
+        "pos":  [
+                    40809.4,
+                    36503.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BE0BAAA=]",
+        "desc":  "Ayuda al profesor Gahf a educar a su joven progenie."
+    },
+    {
+        "pos":  [
+                    41466.4,
+                    36744.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BE4BAAA=]",
+        "desc":  "Ayuda al investigador Kaii con el depósito de chatarra de Incompleta."
+    },
+    {
+        "pos":  [
+                    41927.1,
+                    32766
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDIBAAA=]",
+        "desc":  "Desbarata los planes de la Corte de la Pesadilla en Final de la Alegría."
+    },
+    {
+        "pos":  [
+                    39720.1,
+                    32950.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDMBAAA=]",
+        "desc":  "Acaba con las amenazas para los investigadores del Priorato de Durmand en Ciénaga Toxal."
+    },
+    {
+        "pos":  [
+                    40129.7,
+                    32571.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDQBAAA=]",
+        "desc":  "Ayuda a Metamágicos de Ulta a investigar la puerta asura."
+    },
+    {
+        "pos":  [
+                    41049.5,
+                    33151
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDUBAAA=]",
+        "desc":  "Los investigadores de Voltioetéreo necesitan ayudantes temporales."
+    },
+    {
+        "pos":  [
+                    40801.8,
+                    32906
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDYBAAA=]",
+        "desc":  "Impide que la Inquisa ponga en peligro Mrot Boru."
+    },
+    {
+        "pos":  [
+                    41006.6,
+                    31228.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDgBAAA=]",
+        "desc":  "Sal al paso de los bandidos de Scotta."
+    },
+    {
+        "pos":  [
+                    39430.4,
+                    31414.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BD4BAAA=]",
+        "desc":  "Infíltrate entre los bandidos de Seanan y párales los pies."
+    },
+    {
+        "pos":  [
+                    51265.1,
+                    38975.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBcBAAA=]",
+        "desc":  "Ayuda a la estratega Pelajeflagrante a preparar el Fuerte Rompefuegos para la ofensiva de los resurgidos."
+    },
+    {
+        "pos":  [
+                    51558.7,
+                    38065.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB0BAAA=]",
+        "desc":  "Ayuda a los skritt con sus fortificaciones."
+    },
+    {
+        "pos":  [
+                    49555.6,
+                    36223.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCQBAAA=]",
+        "desc":  "Ayuda a Qoetl y a los Ni-tlacua en Puesto de Vigilapantano."
+    },
+    {
+        "pos":  [
+                    49420.9,
+                    35765
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCUBAAA=]",
+        "desc":  "Ayuda a Jezza y a la Vigilia a expulsar a los resurgidos de Fuerte Cadencia."
+    },
+    {
+        "pos":  [
+                    49770.4,
+                    37672.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCoBAAA=]",
+        "desc":  "Asegura el entorno de Aldea Tierraseca."
+    },
+    {
+        "pos":  [
+                    49756.3,
+                    38236
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCwBAAA=]",
+        "desc":  "Asegura Aldea Aguasal."
+    },
+    {
+        "pos":  [
+                    56240,
+                    62583.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKUBAAA=]",
+        "desc":  "Ayuda a los oprimidos de Amanecer del Campeón de parte de los Lanceros del Sol."
+    },
+    {
+        "pos":  [
+                    56649,
+                    60509.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKYBAAA=]",
+        "desc":  "Mantén la paz y el orden en la Flotilla Corsaria."
+    },
+    {
+        "pos":  [
+                    42941,
+                    22848.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMIBAAA=]",
+        "desc":  "Ayuda a los habitantes kodan de la Guarida de la Cosecha"
+    },
+    {
+        "pos":  [
+                    11243,
+                    59713
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIIPAAA=]",
+        "desc":  "Help Pub Canach grow into a lucrative business"
+    },
+    {
+        "pos":  [
+                    40729.2,
+                    22882.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMUBAAA=]",
+        "desc":  "Ayuda a los kodan con sus actividades en el Altiplano de las Sendas"
+    },
+    {
+        "pos":  [
+                    41839.8,
+                    22655.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMYBAAA=]",
+        "desc":  "Ayuda a los kodan por el Valle Otoñal"
+    },
+    {
+        "pos":  [
+                    40833.1,
+                    16662.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMMBAAA=]",
+        "desc":  "Apoya a los kodan mientras se ocupan de su campamento."
+    },
+    {
+        "pos":  [
+                    39335.4,
+                    16439.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMQBAAA=]",
+        "desc":  "Ayuda a los kodan a investigar la plaga de los titanes."
+    },
+    {
+        "pos":  [
+                    34387.7,
+                    11629.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMgBAAA=]",
+        "desc":  "Ayuda a quienes están explorando los Yermos de Pavesas de Niebla a mantener su campamento en marcha y seguro."
+    },
+    {
+        "pos":  [
+                    38226.1,
+                    46492
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGwBAAA=]",
+        "desc":  "Gana la aprobación del circo"
+    },
+    {
+        "pos":  [
+                    39606.4,
+                    46353.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG0BAAA=]",
+        "desc":  "Ayuda a los investigadores asura."
+    },
+    {
+        "pos":  [
+                    39522.9,
+                    45358.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG4BAAA=]",
+        "desc":  "Ayuda a la científica Vratt"
+    },
+    {
+        "pos":  [
+                    36523.1,
+                    41035.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHoBAAA=]",
+        "desc":  "Ayuda a los gólems antiguos."
+    },
+    {
+        "pos":  [
+                    36111.2,
+                    41541.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHwBAAA=]",
+        "desc":  "Infíltrate entre la Inquisa."
+    },
+    {
+        "pos":  [
+                    24383,
+                    102235
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL4BAAA=]",
+        "desc":  "Demuestra tus habilidades de pesca a los pescadores de la aldea."
+    },
+    {
+        "pos":  [
+                    22152.7,
+                    102584
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMABAAA=]",
+        "desc":  "Entrenamiento en el monasterio"
+    },
+    {
+        "pos":  [
+                    31174.2,
+                    101304
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLsBAAA=]",
+        "desc":  "Infíltrate y sabotea las operaciones en el cuartel general de la Hermandad de Jade."
+    },
+    {
+        "pos":  [
+                    29673.1,
+                    102889
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL0BAAA=]",
+        "desc":  "Frustra las operaciones de los Portavoces en su cuartel general."
+    },
+    {
+        "pos":  [
+                    8694.33,
+                    59481.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMsBAAA=]",
+        "desc":  "Ayuda a tus aliados a establecer su campamento y a llevarse bien."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMwPAAA=]",
+        "desc":  "Assist the castaways around Hullgarden."
+    },
+    {
+        "pos":  [
+                    10793,
+                    58215
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJwPAAA=]",
+        "desc":  "Help the Tyrian Alliance keep tabs on the Inquest."
+    },
+    {
+        "pos":  [
+                    59259,
+                    44140.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIMBAAA=]",
+        "desc":  "Auxilia a los refugiados en el Campamento de Marifa."
+    },
+    {
+        "pos":  [
+                    61548.1,
+                    44114.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJsBAAA=]",
+        "desc":  "Ayuda a los aldeanos de Rastro del Céfiro."
+    },
+    {
+        "pos":  [
+                    60977.9,
+                    43401.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ0BAAA=]",
+        "desc":  "Echa una mano en el Templo de Kormir."
+    },
+    {
+        "pos":  [
+                    60634,
+                    40643.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKABAAA=]",
+        "desc":  "Arrima el hombro en el Corral Lommuld."
+    },
+    {
+        "pos":  [
+                    64053.2,
+                    53863.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIQBAAA=]",
+        "desc":  "Ayuda a los despertados en las Minas de Vehjin."
+    },
+    {
+        "pos":  [
+                    65090.5,
+                    53201.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIsBAAA=]",
+        "desc":  "Conviértete en el alma de la fiesta."
+    },
+    {
+        "pos":  [
+                    65370.8,
+                    53457.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJEBAAA=]",
+        "desc":  "Ayuda a la compañía de teatro Bufones de Lyssa."
+    },
+    {
+        "pos":  [
+                    64323.2,
+                    54145.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJUBAAA=]",
+        "desc":  "Interrumpe a los forjados que ocupan la Fundición."
+    },
+    {
+        "pos":  [
+                    54412,
+                    57420
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCULAAA=]",
+        "desc":  "Help the Olmakhan slow the Inquest's expansion."
+    },
+    {
+        "pos":  [
+                    53355.3,
+                    56077
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKkBAAA=]",
+        "desc":  "Los Territorios de Caza"
+    },
+    {
+        "pos":  [
+                    53552.1,
+                    56393.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKoBAAA=]",
+        "desc":  "Granjas de Atholma"
+    },
+    {
+        "pos":  [
+                    54528.7,
+                    58709.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKsBAAA=]",
+        "desc":  "Destroza el Laboratorio de Magnetismo."
+    },
+    {
+        "pos":  [
+                    63970.2,
+                    62666.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKwBAAA=]",
+        "desc":  "Asegura la línea de suministros desde Arribada de los Corsarios."
+    },
+    {
+        "pos":  [
+                    64294.1,
+                    60688.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK0BAAA=]",
+        "desc":  "Da una respuesta a la escasez de comida en las Granjas de Arkjok."
+    },
+    {
+        "pos":  [
+                    66561.9,
+                    56636.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLIBAAA=]",
+        "desc":  "Fomenta diálogos entre las facciones elonianas."
+    },
+    {
+        "pos":  [
+                    5160.31,
+                    62548.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM8BAAA=]",
+        "desc":  "Echa una mano con las tareas de investigación y expedición en el Descanso del Peregrino."
+    },
+    {
+        "pos":  [
+                    4665.5,
+                    61492.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNABAAA=]",
+        "desc":  "Ayuda a los intendentes de Galdra por la forja."
+    },
+    {
+        "pos":  [
+                    3587.4,
+                    59446.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNEBAAA=]",
+        "desc":  "Ayuda al agente del Resguardo Astral Cuervofiero y a sus socios a sabotear la base de operaciones de la Inquisa en las Hondonadas del Manantial de Ley."
+    },
+    {
+        "pos":  [
+                    5118.2,
+                    59287.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNIBAAA=]",
+        "desc":  "Entrena con las fuerzas de la Alianza y presta ayuda por el campamento para prepararte para la lucha que se avecina."
+    },
+    {
+        "pos":  [
+                    52903.5,
+                    32422.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAMAAAA=]",
+        "desc":  "Ayuda a Antal el paciente a impresionar a los skritt de Kolkorensburg."
+    },
+    {
+        "pos":  [
+                    53394.2,
+                    33046.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAQAAAA=]",
+        "desc":  "Ayuda al Priorato a desbaratar la excavación draga en el Pico Dostoiev."
+    },
+    {
+        "pos":  [
+                    54217.1,
+                    33882.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAUAAAA=]",
+        "desc":  "Ayuda al arcanista Vance a estudiar las reliquias enanas en Ciudadela de Granito."
+    },
+    {
+        "pos":  [
+                    54050.4,
+                    34042.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAYAAAA=]",
+        "desc":  "Ayuda a la maestre Roslin a infiltrarse en la mina de Tierra Negra."
+    },
+    {
+        "pos":  [
+                    53182.9,
+                    34145.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAcAAAA=]",
+        "desc":  "Ayuda al pionero Brokkar a sabotear las municiones draga."
+    },
+    {
+        "pos":  [
+                    52869.6,
+                    34177.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAgAAAA=]",
+        "desc":  "Ayuda a la maestre Kathryn a dañar a las fuerzas de los draga."
+    },
+    {
+        "pos":  [
+                    52619.5,
+                    31987
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAkAAAA=]",
+        "desc":  "Protege el santuario de la Pantera de las Nieves de los Svanir."
+    },
+    {
+        "pos":  [
+                    53612.3,
+                    32065.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAsAAAA=]",
+        "desc":  "Ayuda a los grawl a prevenir los ataques de los Svanir."
+    },
+    {
+        "pos":  [
+                    51022.8,
+                    33177.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCcAAAA=]",
+        "desc":  "Ayuda a Queldip a saquear a los piratas."
+    },
+    {
+        "pos":  [
+                    50811.1,
+                    33726.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCgAAAA=]",
+        "desc":  "Ayuda a Duidda a molestar a los piratas."
+    },
+    {
+        "pos":  [
+                    51236.1,
+                    34200.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCkAAAA=]",
+        "desc":  "Ayuda al investigador Bramm con su equipo de investigación."
+    },
+    {
+        "pos":  [
+                    51538.2,
+                    32973.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCoAAAA=]",
+        "desc":  "Ayuda a la pionera Leandra a encontrar reliquias en las Excavaciones Topomonio."
+    },
+    {
+        "pos":  [
+                    51918.3,
+                    33077.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCsAAAA=]",
+        "desc":  "Ayuda al arcanista Kruppa con los destructores cerca de Paso del Piñón."
+    },
+    {
+        "pos":  [
+                    51925.9,
+                    33913.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCwAAAA=]",
+        "desc":  "Ayuda a la cazadora Neida cerca del Paraje de Vanjir."
+    },
+    {
+        "pos":  [
+                    50857.3,
+                    31860.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC0AAAA=]",
+        "desc":  "Ayuda a la pastora Lyot a cuidar de su rancho de dolyak."
+    },
+    {
+        "pos":  [
+                    51025.1,
+                    30127.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC8AAAA=]",
+        "desc":  "Ayuda a Kelgg con los problemas en la mina."
+    },
+    {
+        "pos":  [
+                    51568.2,
+                    29968.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDAAAAA=]",
+        "desc":  "Ayuda a Hune a administrar el albergue."
+    },
+    {
+        "pos":  [
+                    51996.6,
+                    30820.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDEAAAA=]",
+        "desc":  "Ayuda al Priorato a detener la invasión de los draga."
+    },
+    {
+        "pos":  [
+                    51932.1,
+                    31693.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDIAAAA=]",
+        "desc":  "Investiga y contén las crecientes fuerzas de las criaturas de vapor."
+    },
+    {
+        "pos":  [
+                    51187.1,
+                    32393.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDMAAAA=]",
+        "desc":  "Ayuda a la investigadora Suki a examinar los diablillos cerca de Rocaguarida."
+    },
+    {
+        "pos":  [
+                    51201.7,
+                    30732.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDQAAAA=]",
+        "desc":  "Ayuda a Aurelio a mantener a salvo de los grawl los caminos que llevan hacia el Priorato."
+    },
+    {
+        "pos":  [
+                    52076.3,
+                    31601.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDUAAAA=]",
+        "desc":  "Ayuda al agente Kaukiri a engañar a los draga para que luchen contra las criaturas de vapor."
+    },
+    {
+        "pos":  [
+                    55240.1,
+                    28696.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDwAAAA=]",
+        "desc":  "Ayuda a la Guardia del León a mantener a salvo el Refugio de la Encrucijada."
+    },
+    {
+        "pos":  [
+                    55869.5,
+                    28673.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BD4AAAA=]",
+        "desc":  "Ayuda a Kevach a mantener su albergue."
+    },
+    {
+        "pos":  [
+                    55209.9,
+                    30406.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BD8AAAA=]",
+        "desc":  "Ayuda a Bjarni a honrar al espíritu de la Liebre."
+    },
+    {
+        "pos":  [
+                    55722.3,
+                    30189.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEAAAAA=]",
+        "desc":  "Entretén y protege a los niños."
+    },
+    {
+        "pos":  [
+                    55519.2,
+                    29678.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEEAAAA=]",
+        "desc":  "Ayuda a la Guardia del León a proteger el camino por las Estepasgélidas."
+    },
+    {
+        "pos":  [
+                    55011,
+                    29348.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEIAAAA=]",
+        "desc":  "Ayuda en la búsqueda de minerales de los mineros luchando contra los draga."
+    },
+    {
+        "pos":  [
+                    56055.2,
+                    28366.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEQAAAA=]",
+        "desc":  "Ayuda a Maxtar Pasorrápido a capturar dolyak."
+    },
+    {
+        "pos":  [
+                    55256.6,
+                    29616.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEUAAAA=]",
+        "desc":  "Ayuda al cronista Albin a comerciar con la tribu jotun."
+    },
+    {
+        "pos":  [
+                    52835.1,
+                    36192.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEYAAAA=]",
+        "desc":  "Ayuda a hacer de los Altos Stromkarl un lugar más seguro para los viajeros."
+    },
+    {
+        "pos":  [
+                    52212.5,
+                    36331.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEcAAAA=]",
+        "desc":  "Apoya la alianza de la Vigilia y el Priorato."
+    },
+    {
+        "pos":  [
+                    52155.5,
+                    36012.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEgAAAA=]",
+        "desc":  "Ayuda a Ermita Áurea con sus experimentos."
+    },
+    {
+        "pos":  [
+                    53357.4,
+                    36582.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEkAAAA=]",
+        "desc":  "Ayuda a Ichtaca."
+    },
+    {
+        "pos":  [
+                    53659.6,
+                    37159
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEoAAAA=]",
+        "desc":  "Ayuda a los quaggan que están en peligro."
+    },
+    {
+        "pos":  [
+                    52250,
+                    37333.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BE4AAAA=]",
+        "desc":  "Ayuda a Eterno de Caer a vencer a los resurgidos de la región."
+    },
+    {
+        "pos":  [
+                    52229.1,
+                    36782.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BE8AAAA=]",
+        "desc":  "Ayuda al Priorato en la excavación de las ruinas."
+    },
+    {
+        "pos":  [
+                    52713.1,
+                    35988.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BFAAAAA=]",
+        "desc":  "Ayuda a Fisura Fionnghuala a preparar sus defensas."
+    },
+    {
+        "pos":  [
+                    55605.5,
+                    26716.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAwAAAA=]",
+        "desc":  "Ayuda a la erudita Inka a investigar a los diablillos."
+    },
+    {
+        "pos":  [
+                    55317.5,
+                    26775.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA0AAAA=]",
+        "desc":  "Ayuda al Estratega Sebastian a enfrentarse a los Hijos de Svanir."
+    },
+    {
+        "pos":  [
+                    54668.6,
+                    27472.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA8AAAA=]",
+        "desc":  "Ayuda a la mente infinita a reunir las fuerzas de la Estación Hielo Azul."
+    },
+    {
+        "pos":  [
+                    53895.5,
+                    25473.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBAAAAA=]",
+        "desc":  "Ayuda a Qualdup a entrenar a los aprendices de Orsippus para los juegos quaggan."
+    },
+    {
+        "pos":  [
+                    54245.6,
+                    25513.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBEAAAA=]",
+        "desc":  "Ayuda a Tersura Afilada a mantener Aguas Turbulentas Y Profundas."
+    },
+    {
+        "pos":  [
+                    53984.7,
+                    25203.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBMAAAA=]",
+        "desc":  "Ayuda a Carga Digna a vencer a la progelie en Espuelas de Drakkar."
+    },
+    {
+        "pos":  [
+                    55328.6,
+                    27277.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBQAAAA=]",
+        "desc":  "Ayuda al cruzado del Pacto D'Stolt a combatir a los Hijos de Svanir."
+    },
+    {
+        "pos":  [
+                    56068.1,
+                    27207.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBUAAAA=]",
+        "desc":  "Ayuda al pionero del Pacto Erikk a combatir contra los grawl de la tribu del dragón."
+    },
+    {
+        "pos":  [
+                    56276.9,
+                    24857.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBgAAAA=]",
+        "desc":  "Ayuda a Oleaje Cambiante a proteger a los kodan en el Camino de los Cielos Estrellados."
+    },
+    {
+        "pos":  [
+                    54094.4,
+                    28366.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBwAAAA=]",
+        "desc":  "Ayuda a los cazadores y a los viajeros en las cercanías del camino."
+    },
+    {
+        "pos":  [
+                    54060.8,
+                    29497.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB8AAAA=]",
+        "desc":  "Ayuda a los seguidores de la Lechuza."
+    },
+    {
+        "pos":  [
+                    50764,
+                    28513.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCEAAAA=]",
+        "desc":  "Ayuda al campamento Escoltas Serafines."
+    },
+    {
+        "pos":  [
+                    52722.4,
+                    29352.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCYAAAA=]",
+        "desc":  "Ayuda a los quaggan a asentarse en Urgulp."
+    },
+    {
+        "pos":  [
+                    55891.6,
+                    24288.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHEBAAA=]",
+        "desc":  "Ayuda a los granjeros quaggan a cosechar alimentos."
+    },
+    {
+        "pos":  [
+                    54373.5,
+                    23694
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHIBAAA=]",
+        "desc":  "Ayuda a proteger a los grifos de las nieves amenazados."
+    },
+    {
+        "pos":  [
+                    58180.9,
+                    37079.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLUBAAA=]",
+        "desc":  "Levanta el ánimo a los soldados del Pacto, a los corsarios y a los cefiritas."
+    },
+    {
+        "pos":  [
+                    58198.9,
+                    35900
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLYBAAA=]",
+        "desc":  "Ayuda al Priorato en sus excavaciones."
+    },
+    {
+        "pos":  [
+                    56719.9,
+                    37616.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLgBAAA=]",
+        "desc":  "Ayuda a los draga que tienen hambre y frío."
+    },
+    {
+        "pos":  [
+                    58614.5,
+                    30795.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGAAAAA=]",
+        "desc":  "Ayuda a Bryllana Menteprofunda a diezmar a los fantasmas."
+    },
+    {
+        "pos":  [
+                    58389.6,
+                    31340.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGEAAAA=]",
+        "desc":  "Ayuda a Kyra Rastroagudo a diezmar a los fantasmas."
+    },
+    {
+        "pos":  [
+                    58362.9,
+                    30369.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGIAAAA=]",
+        "desc":  "Ayuda a Crucibis Soldaforjas a atender la armería."
+    },
+    {
+        "pos":  [
+                    58699.5,
+                    30258.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGQAAAA=]",
+        "desc":  "Ayuda a Rasgueo Choquegrave a despejar el lago Feritas."
+    },
+    {
+        "pos":  [
+                    58538.1,
+                    30503.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGUAAAA=]",
+        "desc":  "Ayuda a Cicatriz Garrafranja a organizar el Desguace."
+    },
+    {
+        "pos":  [
+                    58945.8,
+                    30253.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGYAAAA=]",
+        "desc":  "Ayuda a Latera Maltormenta a luchar contra la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    59193.8,
+                    30666.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGgAAAA=]",
+        "desc":  "Ayuda a la Legión de Sangre a eliminar las molestias."
+    },
+    {
+        "pos":  [
+                    60153.6,
+                    30257.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGkAAAA=]",
+        "desc":  "Ayuda a Sagum Buscarreliquias en su investigación."
+    },
+    {
+        "pos":  [
+                    60192.1,
+                    31160.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGoAAAA=]",
+        "desc":  "Ayuda a Gavros Espirituhostil a diezmar a los fantasmas."
+    },
+    {
+        "pos":  [
+                    59479.5,
+                    31240.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGsAAAA=]",
+        "desc":  "Ayuda a Paenula a entrenar a las tropas."
+    },
+    {
+        "pos":  [
+                    60620.4,
+                    31720.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGwAAAA=]",
+        "desc":  "Ayuda a Mei Matahalcones a interferir en la actividad de los separatistas."
+    },
+    {
+        "pos":  [
+                    61743.1,
+                    31738.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG4AAAA=]",
+        "desc":  "Ayuda al investigador Irkz a estudiar el veneno de saurio."
+    },
+    {
+        "pos":  [
+                    61414.7,
+                    31056.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG8AAAA=]",
+        "desc":  "Ayuda a Androchus a diezmar a los ogros."
+    },
+    {
+        "pos":  [
+                    60995.8,
+                    30111.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHAAAAA=]",
+        "desc":  "Ayuda a Ghyrtratus Apaleademonios a retomar la ciudad de Ascalon."
+    },
+    {
+        "pos":  [
+                    58093.8,
+                    30516.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BFwBAAA=]",
+        "desc":  "Ayuda a Tolona Robahierro en su granja."
+    },
+    {
+        "pos":  [
+                    62363.8,
+                    30181.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHEAAAA=]",
+        "desc":  "Ayuda a la centinela Liharn a detener la Inquisa."
+    },
+    {
+        "pos":  [
+                    62989.5,
+                    30729.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHIAAAA=]",
+        "desc":  "Ayuda al erudito Olenn a engañar a los grawl cerca de Cola del Dios Estelar."
+    },
+    {
+        "pos":  [
+                    62359.2,
+                    30576.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHUAAAA=]",
+        "desc":  "Ayuda al centinela Buscafé a enfrentarse a los skritt."
+    },
+    {
+        "pos":  [
+                    63024.6,
+                    29343.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHYAAAA=]",
+        "desc":  "Ayuda a Wode a investigar las arpías."
+    },
+    {
+        "pos":  [
+                    63508.1,
+                    30208.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHcAAAA=]",
+        "desc":  "Ayuda a los pacíficos ogros de Degun Shun."
+    },
+    {
+        "pos":  [
+                    63172.7,
+                    32422.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHgAAAA=]",
+        "desc":  "Colabora en la operación pesquera de la Aldea Ferrusatos y ayúdalos a cazar separatistas."
+    },
+    {
+        "pos":  [
+                    62650.9,
+                    31733.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHoAAAA=]",
+        "desc":  "Ayuda a la Legión de Hierro a proteger Franja de Ojoacero de las criaturas marcadas."
+    },
+    {
+        "pos":  [
+                    63406.8,
+                    31528.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHsAAAA=]",
+        "desc":  "Ayuda a la Legión de Ceniza a eliminar a los ogros."
+    },
+    {
+        "pos":  [
+                    62960.5,
+                    32244
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHwAAAA=]",
+        "desc":  "Ayuda a Torruh Barretejido a desbaratar las actividades de los separatistas."
+    },
+    {
+        "pos":  [
+                    62187.6,
+                    32440.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH0AAAA=]",
+        "desc":  "Ayuda a los centinelas a provocar peleas entre los fantasmas y los marcados."
+    },
+    {
+        "pos":  [
+                    63616.8,
+                    29021.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH8AAAA=]",
+        "desc":  "Ayuda a Jahr Desgarraocaso a desbaratar las actividades de los separatistas."
+    },
+    {
+        "pos":  [
+                    61802,
+                    34353.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJsAAAA=]",
+        "desc":  "Ayuda a restaurar la paz para los colonos en Vivaque de Tyler."
+    },
+    {
+        "pos":  [
+                    62030.4,
+                    35066.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ0AAAA=]",
+        "desc":  "Ayuda al pueblo de Halcón de Ébano."
+    },
+    {
+        "pos":  [
+                    61710.4,
+                    35329.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ4AAAA=]",
+        "desc":  "Ayuda a la comandante Varalyn y a la Vanguardia de Ébano."
+    },
+    {
+        "pos":  [
+                    62555.2,
+                    35484.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ8AAAA=]",
+        "desc":  "Ayuda al capataz Boslo a cuidar de la Excavación Alanegra."
+    },
+    {
+        "pos":  [
+                    63062.2,
+                    33114.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKAAAAA=]",
+        "desc":  "Ayuda a la Legión de Hierro a sabotear las operaciones de los renegados."
+    },
+    {
+        "pos":  [
+                    63904.3,
+                    33088.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKUAAAA=]",
+        "desc":  "Ayuda a los rancheros de Rosko a proteger la aldea."
+    },
+    {
+        "pos":  [
+                    63294.1,
+                    35489.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKYAAAA=]",
+        "desc":  "Ayuda a la vanguardia a frenar el avance de los ogros."
+    },
+    {
+        "pos":  [
+                    57965.5,
+                    26934.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIQAAAA=]",
+        "desc":  "Impide que la Legión de la Llama invoque ascuas."
+    },
+    {
+        "pos":  [
+                    57100.6,
+                    26711.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIUAAAA=]",
+        "desc":  "Ayuda a la tribu nrocroc a sobrevivir a tan poca distancia del territorio de la Llama."
+    },
+    {
+        "pos":  [
+                    57015.9,
+                    27078.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIYAAAA=]",
+        "desc":  "Ayuda a la tribu tarstar a sobrevivir a tan poca distancia del territorio de la Llama."
+    },
+    {
+        "pos":  [
+                    57080.2,
+                    27331.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIcAAAA=]",
+        "desc":  "Ayuda a la tribu wupwup a sobrevivir a tan poca distancia del territorio de la Llama."
+    },
+    {
+        "pos":  [
+                    57162.6,
+                    25156.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIoAAAA=]",
+        "desc":  "Ayuda a los investigadores del Pacto con sus armas experimentales."
+    },
+    {
+        "pos":  [
+                    58452.3,
+                    25058
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIwAAAA=]",
+        "desc":  "Ayuda a la Legión de Ceniza a intervenir contra la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    59004,
+                    25655.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BI0AAAA=]",
+        "desc":  "Ayuda a la Legión de Ceniza a atacar el corazón de la Legión de la Llama."
+    },
+    {
+        "pos":  [
+                    61544.9,
+                    26437.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJAAAAA=]",
+        "desc":  "Ayuda a los ogros a expulsar a los Marcados de su territorio."
+    },
+    {
+        "pos":  [
+                    61220.2,
+                    29082.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJMAAAA=]",
+        "desc":  "Ayuda al adiestrador Morrobélico a rastrear a los Separatistas."
+    },
+    {
+        "pos":  [
+                    60149.4,
+                    28554.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJQAAAA=]",
+        "desc":  "Ayuda al guarda Rompemandíbulas a dirigir la cantera de la prisión."
+    },
+    {
+        "pos":  [
+                    60155.7,
+                    28149.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJUAAAA=]",
+        "desc":  "Ayuda a la escuadra Pelajeliso a defender el camino de la Meseta del Soldado."
+    },
+    {
+        "pos":  [
+                    60598.2,
+                    28908.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJoAAAA=]",
+        "desc":  "Ayuda a Braxa Cazaescamas a ocuparse de los nidos de devoradores."
+    },
+    {
+        "pos":  [
+                    56862.2,
+                    29498.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKgAAAA=]",
+        "desc":  "Ayuda a la Legión de Hierro a luchar contra los fantasmas."
+    },
+    {
+        "pos":  [
+                    58295.1,
+                    29445.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK0AAAA=]",
+        "desc":  "Ayuda a Rak Crinmuerte a mantener la Hacienda Derrumbapiedra."
+    },
+    {
+        "pos":  [
+                    58832.3,
+                    29198.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK8AAAA=]",
+        "desc":  "Protege el Aserradero Asaltorrojo de los separatistas."
+    },
+    {
+        "pos":  [
+                    59272.5,
+                    29385.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLAAAAA=]",
+        "desc":  "Apoya al Aserradero Leñalluvia."
+    },
+    {
+        "pos":  [
+                    57864.1,
+                    29810.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLMAAAA=]",
+        "desc":  "Ayuda a Kastaz Zarpafuerte a cuidar de su jardín."
+    },
+    {
+        "pos":  [
+                    57444.3,
+                    29680.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLQAAAA=]",
+        "desc":  "Ayuda a la Legión de Ceniza a eliminar a los separatistas."
+    },
+    {
+        "pos":  [
+                    57368.7,
+                    29232.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLUAAAA=]",
+        "desc":  "Ayuda a los rancheros de Hacienda de Charradis a atender el ganado."
+    },
+    {
+        "pos":  [
+                    57943.1,
+                    28805.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLYAAAA=]",
+        "desc":  "Ayuda a la Legión de Sangre a combatir contra las armas de asedio fantasmales."
+    },
+    {
+        "pos":  [
+                    44063.9,
+                    29886.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNMAAAA=]",
+        "desc":  "Ayuda a los Serafines a proteger Arcillar de los centauros."
+    },
+    {
+        "pos":  [
+                    44087.8,
+                    29386.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNYAAAA=]",
+        "desc":  "Ayuda a Lexi Preciado a proteger la ruta comercial."
+    },
+    {
+        "pos":  [
+                    43244.7,
+                    28723.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNcAAAA=]",
+        "desc":  "Ayuda a Diah a cuidar de su granja."
+    },
+    {
+        "pos":  [
+                    43236.7,
+                    28382.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNgAAAA=]",
+        "desc":  "Ayuda al pescador Travis a mantener el río."
+    },
+    {
+        "pos":  [
+                    43330.3,
+                    28324.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNoAAAA=]",
+        "desc":  "Ayuda al capataz Flannum a mejorar la seguridad del dique."
+    },
+    {
+        "pos":  [
+                    42822.6,
+                    28780
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNwAAAA=]",
+        "desc":  "Ayuda a Cassie en el Rancho Moa."
+    },
+    {
+        "pos":  [
+                    45750.9,
+                    28964.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BN0AAAA=]",
+        "desc":  "Protege a los granjeros de Beetletun de los centauros tamini."
+    },
+    {
+        "pos":  [
+                    45852.1,
+                    28430
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BN4AAAA=]",
+        "desc":  "Ayuda los habitantes de Beetletun a mantener su ciudad."
+    },
+    {
+        "pos":  [
+                    44988.9,
+                    29668.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOAAAAA=]",
+        "desc":  "Ayuda al historiador Garrod a investigar el Pantano Perdido de los Dioses."
+    },
+    {
+        "pos":  [
+                    46524.6,
+                    26614.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMgAAAA=]",
+        "desc":  "Protege el Desembarcadero del Serafín."
+    },
+    {
+        "pos":  [
+                    46944,
+                    27377.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMkAAAA=]",
+        "desc":  "Ayuda a los Serafines a paralizar la actividad de los bandidos."
+    },
+    {
+        "pos":  [
+                    47633.2,
+                    28431.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMoAAAA=]",
+        "desc":  "Ayuda a los Serafines de la Playa de la Guardia Nocturna."
+    },
+    {
+        "pos":  [
+                    46550.3,
+                    27787.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMwAAAA=]",
+        "desc":  "Ayuda a Ket a investigar las Ruinas de Demetra."
+    },
+    {
+        "pos":  [
+                    48816.6,
+                    28501.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM0AAAA=]",
+        "desc":  "Ayuda a Broil Cane a detener a los centauros."
+    },
+    {
+        "pos":  [
+                    48602,
+                    26658.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNEAAAA=]",
+        "desc":  "Ayuda al explorador de avanzada Luke a desbaratar la logística de los centauros."
+    },
+    {
+        "pos":  [
+                    48575.4,
+                    26289.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BNIAAAA=]",
+        "desc":  "Ayuda a la exploradora de avanzada Greta a sembrar el caos en el territorio de los modniir."
+    },
+    {
+        "pos":  [
+                    45251.6,
+                    30520.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPYAAAA=]",
+        "desc":  "Ayuda a Waldo Riada a vengarse de los bandidos de la zona."
+    },
+    {
+        "pos":  [
+                    45699.3,
+                    30872.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPcAAAA=]",
+        "desc":  "Ayuda al guardia del león Micah a hacer que la zona del Refugio Negro sea segura para los viajeros."
+    },
+    {
+        "pos":  [
+                    44530.9,
+                    31238.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPgAAAA=]",
+        "desc":  "Ayuda a la ingeniera Gilli."
+    },
+    {
+        "pos":  [
+                    44718,
+                    30866.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPkAAAA=]",
+        "desc":  "Ayuda al guardia Barnaby."
+    },
+    {
+        "pos":  [
+                    44435.3,
+                    31656.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPsAAAA=]",
+        "desc":  "Ayuda a los pescadores de Muelle de Triskel."
+    },
+    {
+        "pos":  [
+                    43762,
+                    31851.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPwAAAA=]",
+        "desc":  "Ayuda a Matlal a recoger trufas para su tribu, que está pasando hambre."
+    },
+    {
+        "pos":  [
+                    43261.9,
+                    31270.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BP0AAAA=]",
+        "desc":  "Ayuda a Doolsileep a proteger Mugulú."
+    },
+    {
+        "pos":  [
+                    42674.2,
+                    31653.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BP8AAAA=]",
+        "desc":  "Ayuda al soldado serafín Tripp."
+    },
+    {
+        "pos":  [
+                    43255.4,
+                    30775.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAABAAA=]",
+        "desc":  "Ayuda a la sargento Rane."
+    },
+    {
+        "pos":  [
+                    46680.5,
+                    30234.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOUAAAA=]",
+        "desc":  "Ayuda a los habitantes de Primer Refugio a despachar a los muertos vivientes."
+    },
+    {
+        "pos":  [
+                    46909.7,
+                    29178.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOgAAAA=]",
+        "desc":  "Ayuda a Bronson a neutralizar las tropas de centauros."
+    },
+    {
+        "pos":  [
+                    48549.1,
+                    30135.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BOwAAAA=]",
+        "desc":  "Ayuda a Milton Book y a los granjeros locales a terminar con los piratas y la plaga."
+    },
+    {
+        "pos":  [
+                    50096.1,
+                    29642.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPEAAAA=]",
+        "desc":  "Ayuda a la guardia del león Rhyn a expulsar a los draga de Refugio de la Intersección."
+    },
+    {
+        "pos":  [
+                    50041.1,
+                    30031
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPIAAAA=]",
+        "desc":  "Ayuda al guardia del león y protege Refugio de la Intersección."
+    },
+    {
+        "pos":  [
+                    49858.3,
+                    29188.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPMAAAA=]",
+        "desc":  "Ayuda a Johan a entrenarse en el foso de combate de Vollym."
+    },
+    {
+        "pos":  [
+                    48799.5,
+                    29079.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BPQAAAA=]",
+        "desc":  "Ayuda a Mei Caminasombras a reclamar el tesoro robado de los piratas de Wiley."
+    },
+    {
+        "pos":  [
+                    48804.7,
+                    32335.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLsAAAA=]",
+        "desc":  "Ayuda al Priorato a liquidar a los piratas fantasmas."
+    },
+    {
+        "pos":  [
+                    49403.2,
+                    32413.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLwAAAA=]",
+        "desc":  "Ayuda a la Guardia del León a mantener a los dracos a raya."
+    },
+    {
+        "pos":  [
+                    49302.2,
+                    33460.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL0AAAA=]",
+        "desc":  "Ayuda a espiar a los astutos corsarios."
+    },
+    {
+        "pos":  [
+                    49938.5,
+                    32927
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL4AAAA=]",
+        "desc":  "Ayuda a subvertir a los Bucaneros sangrientos."
+    },
+    {
+        "pos":  [
+                    50315.3,
+                    33027.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL8AAAA=]",
+        "desc":  "Ayuda a mantener el orden en Fuerte de Moriarity."
+    },
+    {
+        "pos":  [
+                    48892.8,
+                    34072.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMAAAAA=]",
+        "desc":  "Ayuda a proveer de armas a los quaggan."
+    },
+    {
+        "pos":  [
+                    48312.9,
+                    34864.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMEAAAA=]",
+        "desc":  "Ayuda a reforzar las defensas de los hylek."
+    },
+    {
+        "pos":  [
+                    49450.6,
+                    34265
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMUAAAA=]",
+        "desc":  "Ayuda a la Vigilia a despejar las cuevas abandonadas de Cabeza del Topo."
+    },
+    {
+        "pos":  [
+                    50172,
+                    35218.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMcAAAA=]",
+        "desc":  "Ayuda a Cesseilia a defender e investigar el oasis."
+    },
+    {
+        "pos":  [
+                    45987,
+                    27216.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHQBAAA=]",
+        "desc":  "Ayuda a Cin Fursarai cerca del Bazar del Lago."
+    },
+    {
+        "pos":  [
+                    45046.3,
+                    27359.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHUBAAA=]",
+        "desc":  "Ayuda a la defensa del frente de Desembarco de Doric."
+    },
+    {
+        "pos":  [
+                    45295.1,
+                    25681.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHYBAAA=]",
+        "desc":  "Ayuda a Noran por las Cascadas de la Cosecha."
+    },
+    {
+        "pos":  [
+                    45505.1,
+                    26809.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHgBAAA=]",
+        "desc":  "Ayuda a devolverle la vida al Refugio de Saidra."
+    },
+    {
+        "pos":  [
+                    43631.5,
+                    35765.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAQBAAA=]",
+        "desc":  "Ayuda al guarda Brulians a despejar la zona de muertos vivientes."
+    },
+    {
+        "pos":  [
+                    43346.3,
+                    35629.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAYBAAA=]",
+        "desc":  "Ayuda a Elain a despejar la cueva de las arañas."
+    },
+    {
+        "pos":  [
+                    43213.2,
+                    36021.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAcBAAA=]",
+        "desc":  "Ayuda a Danador a administrar su perrera."
+    },
+    {
+        "pos":  [
+                    43687.8,
+                    34009.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAgBAAA=]",
+        "desc":  "Ayuda a Yoal a debilitar a los krait y rescatar los hylek secuestrados."
+    },
+    {
+        "pos":  [
+                    43861.1,
+                    33619.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAkBAAA=]",
+        "desc":  "Únete a la pescadora Leudap para ayudar a los pescadores de Soggorsort."
+    },
+    {
+        "pos":  [
+                    43669.5,
+                    34707.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAoBAAA=]",
+        "desc":  "Ayuda a las tribus Atzintli y Zopatl a luchar contra los krait."
+    },
+    {
+        "pos":  [
+                    42607.4,
+                    35408.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BAwBAAA=]",
+        "desc":  "Ayuda al cosechador Mavad a gestionar la cosecha de algas."
+    },
+    {
+        "pos":  [
+                    42699.2,
+                    34815
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA0BAAA=]",
+        "desc":  "Ayuda a los inaudibles a luchar con la Corte de la Pesadilla."
+    },
+    {
+        "pos":  [
+                    42579.4,
+                    34370.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA4BAAA=]",
+        "desc":  "Ayuda a Tovar a hostigar a la Corte de la Pesadilla."
+    },
+    {
+        "pos":  [
+                    42814.8,
+                    34220.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BA8BAAA=]",
+        "desc":  "Ayuda a Zippti a estudiar a los agresivísimos skritt."
+    },
+    {
+        "pos":  [
+                    42508.4,
+                    33255.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBABAAA=]",
+        "desc":  "Ayuda a los Guardas en Pantano Wychmire."
+    },
+    {
+        "pos":  [
+                    42733.3,
+                    32826.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBEBAAA=]",
+        "desc":  "Ayuda al guardia del león Cern a proteger el camino."
+    },
+    {
+        "pos":  [
+                    42998.5,
+                    35631.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBIBAAA=]",
+        "desc":  "Únete a Gemai para apoyar a los guardas de Monte del Guarda."
+    },
+    {
+        "pos":  [
+                    42631.7,
+                    35888
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBMBAAA=]",
+        "desc":  "Ayuda a defender Astoria de Caer de la Corte de la Pesadilla."
+    },
+    {
+        "pos":  [
+                    42682.1,
+                    36129.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGMBAAA=]",
+        "desc":  "Ayuda a Delilah a mantener a salvo los campos agrícolas."
+    },
+    {
+        "pos":  [
+                    41225.1,
+                    36275.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEEBAAA=]",
+        "desc":  "Ayuda a Blopp a impedir que la Inquisa utilice veneno hylek para enloquecer a las criaturas del lago."
+    },
+    {
+        "pos":  [
+                    40313.5,
+                    36000.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEMBAAA=]",
+        "desc":  "Ayuda a la sociedad de reciclaje de Shoon a terminar con la intromisión de la Inquisa."
+    },
+    {
+        "pos":  [
+                    40787.3,
+                    35552.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEQBAAA=]",
+        "desc":  "Ayuda a la Alianza Brillante a estudiar a los skritt."
+    },
+    {
+        "pos":  [
+                    41469.4,
+                    35671
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEUBAAA=]",
+        "desc":  "Ayuda a Hrouda a mantener el ecosistema a pesar de la investigación del Dr. Bleent."
+    },
+    {
+        "pos":  [
+                    41830.1,
+                    35099.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEcBAAA=]",
+        "desc":  "Ayuda a la Guardia del León a mantener a los hylek de Cuatl a raya."
+    },
+    {
+        "pos":  [
+                    41063.7,
+                    35136.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEgBAAA=]",
+        "desc":  "Ayuda a la tribu Michotl."
+    },
+    {
+        "pos":  [
+                    41056.8,
+                    34336.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEkBAAA=]",
+        "desc":  "Ayuda a la sociedad de la Planta de los Luminosos a mantener la red eléctrica."
+    },
+    {
+        "pos":  [
+                    41645.1,
+                    34131.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEoBAAA=]",
+        "desc":  "Ayuda a la pacificadora Owta a intervenir en el complejo de la Inquisa."
+    },
+    {
+        "pos":  [
+                    40478.5,
+                    34055.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BEwBAAA=]",
+        "desc":  "Ayuda a la sociedad de L.I.M.P.I.O."
+    },
+    {
+        "pos":  [
+                    41467.7,
+                    32511.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC4BAAA=]",
+        "desc":  "Ayuda a los criadores de larvas de Colina Skrittsburgo."
+    },
+    {
+        "pos":  [
+                    41381.2,
+                    31738.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC8BAAA=]",
+        "desc":  "Ayuda a los skritt a defender Skrittsburgo Oriental."
+    },
+    {
+        "pos":  [
+                    41018,
+                    32695.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDABAAA=]",
+        "desc":  "Colabora en los experimentos de los skritt en los Túneles Skrittsburgo."
+    },
+    {
+        "pos":  [
+                    41768.3,
+                    32260.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDEBAAA=]",
+        "desc":  "Ayuda a Leigheara a proteger el Terebinto Venerado."
+    },
+    {
+        "pos":  [
+                    41904.6,
+                    31350.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDcBAAA=]",
+        "desc":  "Ayuda a los Serafines a luchar contra los bandidos de Willem."
+    },
+    {
+        "pos":  [
+                    40409.8,
+                    31235.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDkBAAA=]",
+        "desc":  "Ayuda a los espías acorralados en los Observadores Serafines."
+    },
+    {
+        "pos":  [
+                    39141.1,
+                    31401.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDoBAAA=]",
+        "desc":  "Ayuda a los skritt a enfrentarse a los bandidos."
+    },
+    {
+        "pos":  [
+                    39012.1,
+                    32470.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDsBAAA=]",
+        "desc":  "Ayuda al valiente Mathair a asegurar Reclamo de los Vándalos."
+    },
+    {
+        "pos":  [
+                    39872.5,
+                    31921.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BDwBAAA=]",
+        "desc":  "Ayuda a la Pacificadora Klodi a disgregar la alianza de los criminales."
+    },
+    {
+        "pos":  [
+                    53415.6,
+                    39775.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBYBAAA=]",
+        "desc":  "Ayuda a la Orden de los Susurros a sabotear las pruebas de armas de la Inquisa en la aldea hylek de Territorios Tzanopl."
+    },
+    {
+        "pos":  [
+                    53963.6,
+                    39212.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBgBAAA=]",
+        "desc":  "Ayuda a Carmel a limpiar la polución de la Inquisa."
+    },
+    {
+        "pos":  [
+                    51773.2,
+                    39934.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBkBAAA=]",
+        "desc":  "Ayuda a la sociedad de Ambr a defender el laboratorio."
+    },
+    {
+        "pos":  [
+                    51156.9,
+                    39652.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBoBAAA=]",
+        "desc":  "Ayuda a Pixtor a probar sus armas contra los resurgidos de Vallelóbrego."
+    },
+    {
+        "pos":  [
+                    52952.3,
+                    38001.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBsBAAA=]",
+        "desc":  "Ayuda a Zara a asegurar y abastecer Capricho de Gallardo."
+    },
+    {
+        "pos":  [
+                    52216,
+                    37914.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BBwBAAA=]",
+        "desc":  "Ayuda a los soldados del Pacto a asegurar un camino hasta Orr."
+    },
+    {
+        "pos":  [
+                    54208.9,
+                    39832.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB4BAAA=]",
+        "desc":  "Ayuda a Jenrys a proteger la naturaleza de la Inquisa."
+    },
+    {
+        "pos":  [
+                    50829.6,
+                    38541.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BB8BAAA=]",
+        "desc":  "Ayuda a los miembros del Priorato a excavar en Rata Pten."
+    },
+    {
+        "pos":  [
+                    52745.9,
+                    39012.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCABAAA=]",
+        "desc":  "Ayuda a la Orden de los Susurros a instigar una lucha entre los krait y los resurgidos."
+    },
+    {
+        "pos":  [
+                    48284.7,
+                    37055.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCEBAAA=]",
+        "desc":  "Ayuda a la almirante Clarinda Demard."
+    },
+    {
+        "pos":  [
+                    48995.4,
+                    36482.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCIBAAA=]",
+        "desc":  "Ayuda a Potatlan en la orilla oeste."
+    },
+    {
+        "pos":  [
+                    49223.2,
+                    36780.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCMBAAA=]",
+        "desc":  "Ayuda a Cuadinti a preparar el Puesto Vigilasur."
+    },
+    {
+        "pos":  [
+                    48189.2,
+                    37539.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCYBAAA=]",
+        "desc":  "Protege a los quaggan de los krait."
+    },
+    {
+        "pos":  [
+                    48608.1,
+                    38148.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCcBAAA=]",
+        "desc":  "Ayuda a Kamma a probar su arma experimental."
+    },
+    {
+        "pos":  [
+                    48763.9,
+                    35870
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCgBAAA=]",
+        "desc":  "Ayuda a Costi Atl y a su tribu a cazar larvas de termitas."
+    },
+    {
+        "pos":  [
+                    48738.6,
+                    36465.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCkBAAA=]",
+        "desc":  "Ayuda a Ayomichi a ralentizar la propagación de la corrupción de los resurgidos."
+    },
+    {
+        "pos":  [
+                    48890.5,
+                    37582.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BCsBAAA=]",
+        "desc":  "Ayuda a los valientes de la Caza Sylvestre a explorar los restos."
+    },
+    {
+        "pos":  [
+                    49178.4,
+                    38175.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BC0BAAA=]",
+        "desc":  "Ayuda a Brannen a mantener Zarza de Caer."
+    },
+    {
+        "pos":  [
+                    55682,
+                    60587.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKQBAAA=]",
+        "desc":  "Ayuda a la causa de los eruditos disidentes del Observatorio."
+    },
+    {
+        "pos":  [
+                    40650.8,
+                    15575.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMcBAAA=]",
+        "desc":  "Ayuda a los kodan a estudiar y asentarse en la región de Janthir Syntri."
+    },
+    {
+        "pos":  [
+                    37865.2,
+                    45616.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BGsBAAA=]",
+        "desc":  "Investiga la fortaleza mursaat"
+    },
+    {
+        "pos":  [
+                    40198.4,
+                    45949.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BG8BAAA=]",
+        "desc":  "Ayuda al campamento skritt"
+    },
+    {
+        "pos":  [
+                    37357.6,
+                    41649.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BHsBAAA=]",
+        "desc":  "Ayuda a los prisioneros"
+    },
+    {
+        "pos":  [
+                    36551.4,
+                    42395
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BH0BAAA=]",
+        "desc":  "Ayuda a la patrulla de exploración."
+    },
+    {
+        "pos":  [
+                    27014.2,
+                    100171
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLkBAAA=]",
+        "desc":  "Ayuda a los tengu del Barrio Empedrado a recuperar el distrito."
+    },
+    {
+        "pos":  [
+                    25993.2,
+                    98645.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BL8BAAA=]",
+        "desc":  "Ayuda a Xunlai Jade a probar y promocionar la tecnología de jade."
+    },
+    {
+        "pos":  [
+                    28286.6,
+                    99457.7
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMEBAAA=]",
+        "desc":  "Ayuda a la comisaría del este a proteger el Corredor de las Larvas."
+    },
+    {
+        "pos":  [
+                    22141.6,
+                    100957
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLoBAAA=]",
+        "desc":  "Ayuda en la defensa del templo."
+    },
+    {
+        "pos":  [
+                    32752,
+                    103075
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLwBAAA=]",
+        "desc":  "Echa una mano en la aldea de Mori para ganarte la confianza de los tengu que allí viven."
+    },
+    {
+        "pos":  [
+                    7780.8,
+                    57997.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMwBAAA=]",
+        "desc":  "Ayuda a los cazadores a mantener su campamento y a proteger a la fauna de la Inquisa."
+    },
+    {
+        "pos":  [
+                    7700,
+                    58870.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM4BAAA=]",
+        "desc":  "Ayuda al Priorato de Durmand a establecer y proteger su expedición."
+    },
+    {
+        "pos":  [
+                    11250.2,
+                    59716
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMkBAAA=]",
+        "desc":  "Ayuda a la Taberna Canach a crecer y convertirse en un negocio lucrativo."
+    },
+    {
+        "pos":  [
+                    11675.9,
+                    58998.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BMoBAAA=]",
+        "desc":  "Ayuda a los náufragos que hay por Vainajardín."
+    },
+    {
+        "pos":  [
+                    10797.3,
+                    58207.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BM0BAAA=]",
+        "desc":  "Ayuda a la Alianza Tyriana a tener vigilada a la Inquisa y descubre más sobre las magias naturales de Castora."
+    },
+    {
+        "pos":  [
+                    58473.4,
+                    43025.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJYBAAA=]",
+        "desc":  "Ayuda a Aksim a cuidar y entrenar raptores."
+    },
+    {
+        "pos":  [
+                    59701.4,
+                    40412.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIYBAAA=]",
+        "desc":  "Echa una mano en el Rancho Saltoalto."
+    },
+    {
+        "pos":  [
+                    60702.7,
+                    42042.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BI4BAAA=]",
+        "desc":  "Ayuda a la comunidad de Makali."
+    },
+    {
+        "pos":  [
+                    59067.1,
+                    41441.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJcBAAA=]",
+        "desc":  "Ayuda a los chumbos de Hondonada Zonaspinas... o no."
+    },
+    {
+        "pos":  [
+                    58343.1,
+                    43050.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ4BAAA=]",
+        "desc":  "Ayuda a Aksim a cuidar y entrenar raptores."
+    },
+    {
+        "pos":  [
+                    59492.3,
+                    52606.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIcBAAA=]",
+        "desc":  "Ayuda a Drokjor, Espíritu de Borrasca, a controlar a los chacales."
+    },
+    {
+        "pos":  [
+                    61504.2,
+                    51076.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJMBAAA=]",
+        "desc":  "Ayuda a Dunkoro a asistir a los fantasmas locales."
+    },
+    {
+        "pos":  [
+                    59786.6,
+                    48835
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJ8BAAA=]",
+        "desc":  "Ayuda a Tariq a debilitar el fuerte."
+    },
+    {
+        "pos":  [
+                    59325.1,
+                    50678.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKIBAAA=]",
+        "desc":  "Ayuda a la Orden de las Sombras en su defensa contra los Forjados."
+    },
+    {
+        "pos":  [
+                    60369.8,
+                    48571.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKMBAAA=]",
+        "desc":  "Ayuda a Kisha Odili a que la aldea siga funcionando."
+    },
+    {
+        "pos":  [
+                    60662.8,
+                    46278.1
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIkBAAA=]",
+        "desc":  "Ayuda a Ebele a preparar el paso al norte para los desertores."
+    },
+    {
+        "pos":  [
+                    61375.3,
+                    45643.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIoBAAA=]",
+        "desc":  "Ayuda a Adisa a recuperar trizas de Vlast de los marcados veteranos."
+    },
+    {
+        "pos":  [
+                    59168,
+                    46574.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJABAAA=]",
+        "desc":  "Usa una mantarraya para ayudar con el entrenamiento en el rancho."
+    },
+    {
+        "pos":  [
+                    60298.7,
+                    45312.2
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJQBAAA=]",
+        "desc":  "Ayuda a la seguidora Dawnwynn a derrotar a los Olvidados marcados en la Roca del Augurio."
+    },
+    {
+        "pos":  [
+                    60704.6,
+                    46586.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJoBAAA=]",
+        "desc":  "Colabora con el ayudante de capataz Kofi para mantener a salvo a la gente de los Baldíos."
+    },
+    {
+        "pos":  [
+                    60820.4,
+                    45037
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJwBAAA=]",
+        "desc":  "Ayuda al seguidor Xunn a conseguir glifos de los Olvidados para descifrarlos."
+    },
+    {
+        "pos":  [
+                    63797.9,
+                    53337.5
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BIUBAAA=]",
+        "desc":  "Ayuda a la realeza en el Palacio de Vehjin."
+    },
+    {
+        "pos":  [
+                    64841.6,
+                    54777.4
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BI0BAAA=]",
+        "desc":  "Ayuda tanto a los vivos como a los muertos en la Necrópolis."
+    },
+    {
+        "pos":  [
+                    64450.4,
+                    55266
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJgBAAA=]",
+        "desc":  "Ayuda a entrenar a los recién despertados."
+    },
+    {
+        "pos":  [
+                    66390.2,
+                    55143.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BJkBAAA=]",
+        "desc":  "Ayuda a los estudiantes de la Academia Vehtendi."
+    },
+    {
+        "pos":  [
+                    54414.1,
+                    57417.9
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BKgBAAA=]",
+        "desc":  "Ayuda a los Olmakhan a ralentizar la expansión de la Inquisa."
+    },
+    {
+        "pos":  [
+                    64452,
+                    61814.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK4BAAA=]",
+        "desc":  "Ayuda a distribuir los suministros que llegan al campamento aliado."
+    },
+    {
+        "pos":  [
+                    65526.4,
+                    61986.8
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BK8BAAA=]",
+        "desc":  "Ayuda a estabilizar la línea del frente."
+    },
+    {
+        "pos":  [
+                    65989.6,
+                    61252.6
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLEBAAA=]",
+        "desc":  "Ayuda a la tribu heket en estos momentos de máximo peligro."
+    },
+    {
+        "pos":  [
+                    64663.1,
+                    59066.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLMBAAA=]",
+        "desc":  "Prepara el campamento del Pacto para el combate."
+    },
+    {
+        "pos":  [
+                    66715.7,
+                    58414.3
+                ],
+        "name":  "Tarea",
+        "type":  "heart",
+        "chat_code":  "[&BLQBAAA=]",
+        "desc":  "Ayuda a la gente de la aldea de Yatendi."
+    }
+]

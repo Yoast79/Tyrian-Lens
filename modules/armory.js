@@ -33,7 +33,8 @@ async function loadArmoryData(el) {
                 }
 
                 for (const chunk of chunks) {
-                    const res = await fetch(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`).then(r => r.json());
+                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                    const res = await fetch(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}&lang=${lang}`).then(r => r.json());
                     res.forEach(item => {
                         const entry = accountData.armory.find(a => String(a.id) === String(item.id));
                         let match = false;

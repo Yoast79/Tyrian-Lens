@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+	<script src="data_loader.js"></script>
     <style>
         ::-webkit-scrollbar {
             width: 6px;
@@ -633,21 +634,21 @@
                 </select>
             </div>
             <div class="controls-group">
-                <button class="btn btn-clear" id="btn-clear">Clear</button>
-                <button class="btn" id="btn-save">Save</button>
-                <button class="btn" id="btn-load">Load</button>
-                <button class="btn" id="btn-copy">Copy Build</button>
-                <button class="btn" id="btn-share">Share</button>
+                <button class="btn btn-clear" id="btn-clear" data-i18n="planner.clear">Clear</button>
+                <button class="btn" id="btn-save" data-i18n="planner.save">Save</button>
+                <button class="btn" id="btn-load" data-i18n="planner.load">Load</button>
+                <button class="btn" id="btn-copy" data-i18n="planner.copy_build">Copy Build</button>
+                <button class="btn" id="btn-share" data-i18n="planner.share">Share</button>
                 <div style="display:flex; flex-direction:column; gap:2px;">
-                    <span style="font-size:10px; color:#8a7a5f; margin-left:5px;">Build or shared code</span>
-                    <input type="text" id="main-paste-code" class="modal-input" placeholder="Paste Code"
+                    <span style="font-size:10px; color:#8a7a5f; margin-left:5px;" data-i18n="planner.code_hint">Build or shared code</span>
+                    <input type="text" id="main-paste-code" class="modal-input" data-i18n-ph="planner.paste_code" placeholder="Paste Code"
                         style="width:140px; margin:0; height:24px;" />
                 </div>
             </div>
         </div>
 
         <div id="load-modal">
-            <div style="color:#f0dca5; margin:0 0 10px; font-weight:bold; font-size:16px;">SELECT SAVED BUILD</div>
+            <div style="color:#f0dca5; margin:0 0 10px; font-weight:bold; font-size:16px;" data-i18n="planner.select_saved">SELECT SAVED BUILD</div>
             <select id="saved-builds-list" size="8" class="modal-select"></select>
             <div style="display:flex; justify-content:space-between;">
                 <div style="display:flex; gap:10px;">
@@ -659,7 +660,7 @@
         </div>
 
         <div id="save-as-modal">
-            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">SAVE BUILD AS</div>
+            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;" data-i18n="planner.save_as">SAVE BUILD AS</div>
             <input type="text" id="save-as-name" class="modal-input"
                 style="cursor:text; font-family:inherit; font-size:14px;" />
             <div style="display:flex; justify-content:space-between;">
@@ -669,7 +670,7 @@
         </div>
 
         <div id="overwrite-modal">
-            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">OVERWRITE BUILD?</div>
+            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;" data-i18n="planner.overwrite_title">OVERWRITE BUILD?</div>
             <div id="overwrite-msg" style="color:#ccc; font-size:14px; margin-bottom:20px;"></div>
             <div style="display:flex; justify-content:space-between;">
                 <button class="btn"
@@ -679,9 +680,8 @@
         </div>
 
         <div id="clear-modal">
-            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;">CLEAR BUILD</div>
-            <div style="color:#ccc; font-size:14px; margin-bottom:20px;">Are you sure you want to clear the current
-                build? This cannot be undone.</div>
+            <div style="color:#f0dca5; margin-bottom:10px; font-weight:bold; font-size:16px;" data-i18n="planner.clear_title">CLEAR BUILD</div>
+            <div style="color:#ccc; font-size:14px; margin-bottom:20px;" data-i18n="planner.clear_prompt">Are you sure you want to clear the current build? This cannot be undone.</div>
             <div style="display:flex; justify-content:space-between;">
                 <button class="btn" id="btn-clear-cancel">Cancel</button>
                 <button class="btn btn-clear" id="btn-clear-confirm">Clear</button>

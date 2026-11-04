@@ -1,0 +1,435 @@
+{
+  "language": "en",
+  "nav": {
+    "Map Options": "Map Options",
+    "Tyria Map": "Tyria Map",
+    "WvW Map": "WvW Map",
+    "Timers": "Timers",
+    "PvP": "PvP",
+    "Hero Panel": "Hero Panel",
+    "Build Planner": "Build Planner",
+    "Characters": "Characters",
+    "Inventory": "Inventory",
+    "Bank": "Bank",
+    "Material Storage": "Material Storage",
+    "Wardrobe": "Wardrobe",
+    "Crafting": "Crafting",
+    "Achievements": "Achievements",
+    "Fishing": "Fishing",
+    "Weekly Clears": "Weekly Clears",
+    "Wallet": "Wallet",
+    "Trading": "Trading",
+    "Farming Tracker": "Farming Tracker",
+    "Search": "Search",
+    "Help": "Help",
+    "Report Bug / Feature": "Report Bug / Feature",
+    "API Keys": "API Keys",
+    "Settings": "Settings",
+    "Update Available!": "Update Available!"
+  },
+  "help": {
+    "title": "TYRIAN LENS",
+    "sections": {
+      "account": {
+        "title": "ACCOUNT CONNECTION & KEY SETTINGS",
+        "h_api": "API Key Integration",
+        "p_api": "Tyrian Lens requires a Guild Wars 2 API key to display your account data securely. Create a key at the official ArenaNet account portal. For full functionality, your key requires the following permissions: account, inventories, characters, progression, wallet, unlocks, and trading.",
+        "h_visual": "Visual Customization & Scale",
+        "p_visual": "Adjust scaling preferences and select interface themes (Sylvari, Asura, Charr, Norn, Human) within settings. Left-hand panels (Map, Timers, Farming) and right-hand panels (Wiki, API, Settings) act independently, allowing you to run layouts on both sides of the screen simultaneously.",
+        "h_drf": "DRF Live Loot Integration",
+        "p_drf": "(Optional) Link the Farming Tracker with the Drop Research Facilities (DRF) addon to enable live drop tracking. This automatically logs all item drops during grinding sessions without delay. The tracker will still work without this, but you have to wait for the GW2 API to refresh."
+      },
+      "map": {
+        "title": "INTERACTIVE MAPS & GPS NAVIGATION",
+        "h_mumble": "Mumble Link Client Integration",
+        "p_mumble": "The Leaflet-powered maps use Guild Wars 2 Mumble Link data for live location services. The map automatically snaps to your active character's location, tracks coordinate changes, and shifts between Tyria and WvW layers in real time.",
+        "h_overlay": "Interactive Map Overlays",
+        "p_overlay": "Use the map options panel to toggle many icons on the map like: gathering nodes, chests, ranger pet locations, service NPCs and many more! Clicking a NPC icon will show you the items they are selling.",
+        "h_marker": "Personal Map Markers",
+        "p_marker": "You can place custom icons directly onto the map. Use ALT + LEFT CLICK to drop a waypoint, and click directly on the placed marker to remove it."
+      },
+      "storage": {
+        "title": "ACCOUNT WIDE STORAGE & SEARCH",
+        "h_search": "Unified Account Search",
+        "p_search": "Search and filter your entire bank, material storage, shared slots, and individual character inventories simultaneously from a single search box.",
+        "h_roster": "Character Roster & Inventories",
+        "p_roster": "Check bag slots, equipment, birthday countdowns, and playtime across your entire character roster without having to swap characters in-game.",
+        "h_mat": "Material Storage & Wardrobes",
+        "p_mat": "Browse account-wide collections, skin unlocks, and crafting material quantities. Click on items to open their official Guild Wars 2 Wiki entries."
+      },
+      "hero": {
+        "title": "HERO PANEL & BUILD THEORYCRAFTING",
+        "h_equip": "Live Hero Equipment & Attributes",
+        "p_equip": "Inspect equipped weapons, armor, and accessories. Dynamic tooltips supply full item stats and match item rarity colors.",
+        "h_specs": "Specializations & Builds",
+        "p_specs": "View slotted specializations, selected traits, and active utility skills. You can review your loaded template properties directly in the interface.",
+        "h_planner": "Interactive Build Planner",
+        "p_planner": "Plan your builds and theorycraft gear sets using the layout editor. Check custom trait lines, stats distributions, and utility combinations. Share them easily with your friends."
+      },
+      "trading": {
+        "title": "TRADING POST & ECONOMY DATA",
+        "h_delivery": "Delivery Box Notification",
+        "p_delivery": "The Trading Post navigation icon updates to a notification graphic when you have items or gold waiting. Hover over the icon to display an exact breakdown of total waiting items and formatted coin values.",
+        "h_charts": "Investment Charts & Markets",
+        "p_charts": "Track buy and sell orders, historical price updates, and active TP listings. The portfolio tracker plots profit and return-on-investment (ROI) charts for saved item investments.",
+        "h_crafting": "Smart Crafting Engine",
+        "p_crafting": "Calculate net crafting profits by cross-referencing live market pricing against materials already inside your personal bank and material storage."
+      },
+      "events": {
+        "title": "EVENTS, BOSSES & PROGRESSION",
+        "h_meta": "Meta Watchlist & Boss Timers",
+        "p_meta": "Monitor world boss schedules and active meta timelines. Click on any boss card to add it to your permanent countdown watchlist overlay.",
+        "h_achieve": "Achievements Dashboard",
+        "p_achieve": "Track overall achievements. The dashboard displays progress meters by category, along with completion details for individual achievement tiers.",
+        "h_clears": "Weekly Boss Clears",
+        "p_clears": "Keep tabs on your raids, strike missions, and dungeon progress. The matrix updates automatically to show completed and remaining targets for the weekly cycle.",
+        "h_farming": "Session Farming Tracker",
+        "p_farming": "Start grinding sessions to record gold-per-hour, total currency fluctuations, and logged item drops in real-time (when the DRF module is installed)."
+      },
+      "credits": {
+        "title": "CREDITS & LEGAL DISCLAIMERS",
+        "h_copy": "Copyright Notice",
+        "p_copy": "All Guild Wars 2 assets, imagery, and API content are owned by ArenaNet and NCSOFT.",
+        "h_arch": "Software Architecture",
+        "p_arch": "Built using C#, .NET 9, WebView2 runtime interfaces and Leaflet JS.",
+        "h_dep": "Core Dependencies",
+        "p_dep": "Powered by the Gw2Sharp library for local Mumble Link integration.",
+        "h_insp": "Inspirations",
+        "p_insp": "Inspired by the work of gw2efficiency, gw2navi, and drf.rs.",
+        "h_contrib": "Coordinate Contributions",
+        "p_contrib": "Map coordinate files provided by Lady Elyssa and Tekkit."
+      },
+      "hotkeys": {
+        "title": "HOTKEYS & SHORTCUT CONTROLS",
+        "refresh": "REFRESH APPLICATION",
+        "k_refresh": "F5",
+        "move": "MOVE APPLICATION WINDOW",
+        "k_move": "DRAG MENU BAR",
+        "resize": "RESIZE APPLICATION",
+        "k_resize": "DRAG BOTTOM RIGHT CORNER",
+        "place_marker": "PLACE CUSTOM WAYPOINT",
+        "k_place_marker": "ALT + LEFT CLICK",
+        "delete_marker": "DELETE WAYPOINT",
+        "k_delete_marker": "LEFT CLICK MARKER"
+      }
+    },
+    "btn_discord": "JOIN THE DISCORD SERVER",
+    "btn_website": "VISIT THE OFFICIAL WEBSITE",
+    "donation": "If Tyrian Lens has enhanced your journey through Tyria, show your appreciation by donating some items or gold."
+  },
+  "map": {
+    "compass": {
+      "track_player": "Track Player",
+      "central_tyria": "Central Tyria",
+      "crystal_desert": "Crystal Desert",
+      "cantha": "Cantha",
+      "heart_of_maguuma": "Heart of Maguuma",
+      "castora": "Castora",
+      "horn_of_maguuma": "Horn of Maguuma"
+    },
+    "tod": {
+      "day": "TYRIA: DAY",
+      "night": "TYRIA: NIGHT",
+      "dusk": "TYRIA: DUSK",
+      "dawn": "TYRIA: DAWN"
+    },
+    "hud": {
+      "player": "PLAYER:",
+      "cursor": "CURSOR:",
+      "altitude": "ALTITUDE:",
+      "tracking": "TRACKING:",
+      "on": "ON",
+      "off": "OFF",
+      "report_node": "Report Node"
+    },
+    "modals": {
+      "remove_marker_title": "Remove Marker?",
+      "remove": "Remove",
+      "cancel": "Cancel",
+      "report_coord_title": "Report Node Coordinate",
+      "report_coord_tutorial": "Please stand directly on top of the target node in-game, enter its name below, and click Submit. Telemetry and coordinates are captured automatically.",
+      "report_coord_label": "Node Name / Description",
+      "report_coord_placeholder": "e.g. Rich Platinum Ore, Elisa, etc.",
+      "report_submit": "Submit Report"
+    },
+    "toasts": {
+      "waypoint_copied": "WAYPOINT COPIED",
+      "poi_copied": "POI COPIED",
+      "coords_copied": "COORDINATES COPIED",
+      "marker_removed": "MARKER REMOVED"
+    }
+  },
+  "settings": {
+    "sections": {
+      "window": "Window & Display",
+      "timezone": "Time Zone",
+      "character": "Preferred Character",
+      "audio": "Audio & Markers",
+      "data": "Data Management"
+    },
+    "labels": {
+      "theme": "Theme",
+      "ontop": "Always on Top",
+      "wiki": "Integrated Wiki View",
+      "language": "Display Language",
+      "systray": "System Tray Notifications",
+      "discord": "Discord Rich Presence",
+      "volume": "Master Volume",
+      "marker_scale": "Location Markers Scale",
+      "farming_scale": "Farming Markers Scale",
+      "zoom_cap": "Map Detail Zoom Cap"
+    },
+    "themes": {
+      "human": "Human (Default)",
+      "sylvari": "Sylvari",
+      "asura": "Asura",
+      "charr": "Charr",
+      "norn": "Norn"
+    },
+    "timezones": {
+      "local": "Local Time",
+      "utc": "UTC (Server Time)",
+      "la": "Pacific Time (US)",
+      "ny": "Eastern Time (US)",
+      "london": "London (UK)",
+      "berlin": "Central Europe",
+      "sydney": "Sydney (AU)"
+    },
+    "no_preference": "No Preference",
+    "zoom_levels": {
+      "5": "Zoom 5",
+      "6": "Zoom 6",
+      "7": "Zoom 7",
+      "painterly": "Zoom 4 (Default)"
+    },
+    "zoom_cap_tooltip": "Forcing higher zoom details at zoomed-out levels significantly increases tile loading and memory usage, which can severely impact performance.",
+    "buttons": {
+      "reload_map": "Reload Map",
+      "update_available": "Update Available",
+      "motd": "View Message of the Day",
+      "export_log": "Export Log",
+      "clear_data": "Clear Application Data"
+    },
+    "confirm_modal": {
+      "text": "DANGER: THIS WILL RESET ALL SETTINGS, API KEYS, AND SAVED TRACKERS. CONTINUE?",
+      "confirm": "Yes, Reset",
+      "cancel": "Cancel"
+    }
+  },
+  "api": {
+    "placeholder_nickname": "NICKNAME (E.G. MAIN)",
+    "placeholder_key": "PASTE API KEY...",
+    "placeholder_drf": "PASTE DRF TOKEN (FROM DRF.RS)...",
+    "btn_add": "Add Account",
+    "btn_link_drf": "Link DRF Token",
+    "how_drf": "How to set up DRF",
+    "how_api": "How to set up an API key",
+    "tip_api": "API keys grant Tyrian Lens read-only access to your Guild Wars 2 account. To begin, create a key at the official ArenaNet portal with your desired permissions, then paste it here. You can revoke this lens' access at any time by deleting the key.",
+    "tip_drf": "DRF (Drop Research Facilities) allows real-time loot tracking. 1. Download the DRF addon from drf.rs and place it in your GW2 addons folder. 2. Create a token on their website and paste it here. 3. Real-time data will stream directly to your farming session.",
+    "tip_reveal": "Reveal Key",
+    "modal_title": "REMOVE ACCOUNT?",
+    "modal_purge": "PURGE ACCESS FOR",
+    "btn_yes": "YES",
+    "btn_no": "NO",
+    "toast_revoked": "Access Revoked"
+  },
+  "bug_report": {
+    "title": "Report Bug / Feature",
+    "label_type": "I want to report a:",
+    "opt_bug": "Bug / Defect",
+    "opt_feature": "Feature Request",
+    "label_module": "What module is affected?",
+    "success_title": "Thank You!",
+    "success_body": "Your report has been submitted successfully.<br>We appreciate you taking the time to help improve Tyrian Lens!",
+    "btn_discord": "Join the Discord Server",
+    "btn_ok": "OK"
+  },
+  "common": {
+    "search_anything": "SEARCH ANYTHING...",
+    "search_vault": "SEARCH VAULT...",
+    "search_inventory": "SEARCH INVENTORY...",
+    "search_wardrobe": "SEARCH WARDROBE...",
+    "search_markers": "Search Markers...",
+    "search_general": "SEARCH...",
+    "search_items": "SEARCH ITEM NAME...",
+    "loading": "Loading...",
+    "close": "Close",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "save": "Save",
+    "undercut": "UNDERCUT",
+    "overbid": "OVERBID",
+    "search_currencies": "SEARCH ALL CURRENCIES...",
+    "search_fish": "SEARCH FISH...",
+    "search_materials": "SEARCH MATERIALS...",
+    "search_crafting_queue": "SEARCH ITEM TO ADD TO CRAFTING QUEUE...",
+    "search_options": "Search Options...",
+    "syncing": "Syncing...",
+    "loading_module": "Loading Module...",
+    "connecting_tyria": "Connecting to Tyria...",
+    "clear": "Clear",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "accept": "Accept"
+  },
+  "wvw": {
+    "compass_eotm": "Edge of the Mists",
+    "compass_green_alpine": "Green Alpine Borderlands",
+    "compass_blue_alpine": "Blue Alpine Borderlands",
+    "compass_red_desert": "Red Desert Borderlands",
+    "compass_alpine": "Alpine Borderlands",
+    "compass_desert": "Desert Borderlands",
+    "compass_eb": "Eternal Battlegrounds",
+    "compass_hotm": "Heart of the Mists",
+    "compass_track": "Track Player",
+    "label_marker": "Label Marker",
+    "remove_marker": "Remove Marker?",
+    "options_title": "Map Icons",
+    "options_labels": "Labels & Borders",
+    "opt_poi": "Points of Interest",
+    "opt_waypoint": "Waypoints",
+    "opt_vista": "Vistas",
+    "opt_heropoint": "Hero Points",
+    "opt_towers": "Towers",
+    "opt_keeps": "Keeps",
+    "opt_camps": "Camps",
+    "opt_ruins": "Ruins of Power",
+    "opt_personal_markers": "Personal Markers",
+    "opt_map_text": "Map Names",
+    "opt_sector": "Sectors",
+    "opt_borders": "Borders",
+    "opt_overlay": "Sector Color Overlay",
+    "opt_scoreboard": "Scoreboard"
+  },
+  "characters": {
+    "title": "Character Roster",
+    "total_playtime": "Total Playtime: {0} HRS",
+    "syncing_roster": "SYNCING ROSTER DATA...",
+    "birthday_title": "HAPPY BIRTHDAY!",
+    "birthday_btn": "Celebrate!",
+    "tip_bag_slots": "Bag Slot Expansions",
+    "tip_crafting_licenses": "Active Crafting Licenses",
+    "tip_build_tabs": "Build Template Tabs",
+    "tip_equip_tabs": "Equipment Template Tabs"
+  },
+  "wallet": {
+    "title": "Account Wallet",
+    "search_ph": "SEARCH ALL CURRENCIES...",
+    "syncing": "Synchronizing Assets...",
+    "footer": "Currency & Asset Tracker"
+  },
+  "fishing": {
+    "title": "FISHING REGIONS",
+    "watchlist_overlay": "WATCHLIST OVERLAY",
+    "search_ph": "SEARCH FISH...",
+    "loading": "LOADING FISHING DATA..."
+  },
+  "clears": {
+    "title": "Weekly Clears",
+    "watchlist_screen": "Watchlist on Screen",
+    "watchlist_btn": "Watchlist",
+    "overview_title": "Watchlist Overview",
+    "syncing": "SYNCING CLEARS DATA...",
+    "cleared": "CLEARED",
+    "uncleared": "UNCLEARED",
+    "no_items": "No items on your watchlist.<br><br>Click the X-Ray icons next to items to watch them.",
+    "wing": "Wing"
+  },
+  "farming": {
+    "title": "FARMING TRACKER",
+    "start_session": "START SESSION",
+    "pause_session": "PAUSE",
+    "resume_session": "RESUME",
+    "save_session": "SAVE",
+    "tab_current": "CURRENT SESSION",
+    "tab_history": "HISTORY & GRAPHS",
+    "currencies_gained": "CURRENCIES GAINED",
+    "items_gained": "ITEMS GAINED",
+    "no_active_session": "NO ACTIVE SESSION",
+    "currency_gains_over_time": "CURRENCY GAINS OVER TIME",
+    "day": "DAY",
+    "week": "WEEK",
+    "month": "MONTH",
+    "year": "YEAR",
+    "session_log": "SESSION LOG",
+    "delete_entry": "Delete Entry"
+  },
+  "hero": {
+    "attributes": "Attributes",
+    "copy_build": "Copy Build",
+    "copy_equip": "Copy Equipment",
+    "save_to_planner": "Save to Planner"
+  },
+  "crafting": {
+    "account_unlocks": "Account Unlocks",
+    "calculator": "Crafting Calculator",
+    "use_own_mats": "USE OWN MATERIALS",
+    "auto_update_mats": "UPDATE OWNED MATERIALS EVERY MINUTE",
+    "use_promotions": "USE ITEM PROMOTIONS",
+    "syncing": "SYNCING RECIPE DATA...",
+    "may_take_minute": "THIS MAY TAKE A MINUTE"
+  },
+  "pvp": {
+    "title": "PvP Module",
+    "tab_stats": "Stats",
+    "tab_season": "Season",
+    "tab_leaderboard": "Top 50",
+    "tab_history": "History",
+    "equipment": "Equipment",
+    "mist_champions": "Mist Champions"
+  },
+  "planner": {
+    "clear": "Clear",
+    "save": "Save",
+    "load": "Load",
+    "copy_build": "Copy Build",
+    "share": "Share",
+    "code_hint": "Build or shared code",
+    "paste_code": "Paste Code",
+    "select_saved": "SELECT SAVED BUILD",
+    "save_as": "SAVE BUILD AS",
+    "overwrite_title": "OVERWRITE BUILD?",
+    "clear_title": "CLEAR BUILD",
+    "clear_prompt": "Are you sure you want to clear the current build? This cannot be undone.",
+    "select_skill": "SELECT SKILL",
+    "select_option": "Select Option",
+    "apply_all": "Apply to all compatible"
+  },
+  "timers": {
+    "add_custom": "ADD CUSTOM TIMER",
+    "ph_title": "TITLE",
+    "ph_mins": "MINS",
+    "err_title": "Title is required",
+    "err_value": "Invalid value",
+    "err_time": "Invalid time"
+  },
+  "trading": {
+    "market_search": "MARKET SEARCH",
+    "search_btn": "SEARCH",
+    "add_items_hint": "Add items via Market Search",
+    "run_analysis": "RUN ANALYSIS",
+    "ph_qty": "QUANTITY PURCHASED",
+    "ph_cost": "TOTAL COST (COPPER)",
+    "empty_watchlist": "WATCHLIST EMPTY"
+  },
+  "index": {
+    "switch_map_prompt": "Location detected in {0}.\nSwitch view?",
+    "motd_title": "Message of the Day",
+    "motd_loading": "Loading message...",
+    "motd_dont_show": "Don't Show Again",
+    "watch_achievements": "ACHIEVEMENT WATCHLIST",
+    "watch_timers": "EVENT TIMERS",
+    "watch_fishing": "FISHING WATCHLIST",
+    "watch_clears": "WEEKLY CLEARS",
+    "connecting": "Connecting to Tyria...",
+    "loading_module": "Loading Module..."
+  },
+  "map_options": {
+    "syncing_rotation": "SYNCING WITH ROTATION TABLE...",
+    "copied_waypoints": "COPIED 6 WAYPOINTS",
+    "rotation_error": "ROTATION SYNC ERROR",
+    "copy_waypoints_tip": "Copy Waypoints"
+  }
+}

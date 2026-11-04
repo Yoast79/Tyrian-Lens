@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="https://gw2ps.local/Assets/Leaflet/MarkerCluster.Default.css" />
 	<script src="https://gw2ps.local/Assets/Leaflet/leaflet.js"></script>
 	<script src="https://gw2ps.local/Assets/Leaflet/leaflet.markercluster.js"></script>
+	<script src="data_loader.js"></script>
+	<script>
+		function getMapTip(key, fallback) {
+			return (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t(key, fallback) : fallback;
+		}
+	</script>
 	<style>
 		* {
 			cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important;
@@ -746,25 +752,25 @@
 		<div class="compass-container">
 			<div id="compass-glow"></div>
 			<div class="nav-hitbox" style="top:48px; left:48px;" onclick="setTracking(true)"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Track Player', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.track_player', 'Track Player'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="top:0px; left:48px;" onclick="jump('Central Tyria')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Central Tyria', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.central_tyria', 'Central Tyria'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="top:48px; right:0px;" onclick="jump('Crystal Desert')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Crystal Desert', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.crystal_desert', 'Crystal Desert'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="bottom:0px; left:48px;" onclick="jump('Cantha')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Cantha', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.cantha', 'Cantha'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="top:48px; left:0px;" onclick="jump('Heart of Maguuma')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Heart of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.heart_of_maguuma', 'Heart of Maguuma'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="bottom:10px; left:10px;" onclick="jump('Castora')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Castora', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.castora', 'Castora'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 			<div class="nav-hitbox" style="top:10px; left:10px;" onclick="jump('Horn of Maguuma')"
-				onmouseover="window.parent.postMessage({action:'showTooltip', text:'Horn of Maguuma', x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
+				onmouseover="window.parent.postMessage({action:'showTooltip', text:getMapTip('map.compass.horn_of_maguuma', 'Horn of Maguuma'), x:event.clientX, y:event.clientY, offsetTop: 45}, '*')"
 				onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"></div>
 		</div>
 		<div id="map-clock-hud" style="pointer-events: auto !important;">
@@ -955,7 +961,35 @@
 			return 'node_npc_misc';
 		}
 
-		L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+		var mapDetailLevel = mSettings.mapDetailLevel || "painterly";
+		var detailedLayer = null;
+		var painterlyLayer = null;
+
+		if (mapDetailLevel === "painterly") {
+			L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 7, maxZoom: 9 }).addTo(map);
+		} else {
+			var targetZoom = parseInt(mapDetailLevel);
+			detailedLayer = L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, minNativeZoom: targetZoom, maxNativeZoom: targetZoom, maxZoom: 9 });
+			painterlyLayer = L.tileLayer("https://tiles.guildwars2.com/1/1/{z}/{x}/{y}.jpg", { noWrap: true, maxNativeZoom: 6, maxZoom: 9 });
+
+			function updateTileLayer() {
+				var z = map.getZoom();
+				if (z >= 5) {
+					if (!map.hasLayer(detailedLayer)) {
+						detailedLayer.addTo(map);
+						map.removeLayer(painterlyLayer);
+					}
+				} else {
+					if (!map.hasLayer(painterlyLayer)) {
+						painterlyLayer.addTo(map);
+						map.removeLayer(detailedLayer);
+					}
+				}
+			}
+
+			updateTileLayer();
+			map.on("zoomend", updateTileLayer);
+		}
 		map.setView([31384, 49071], 4);
 
 		borderLayer.addTo(map);
@@ -1523,7 +1557,7 @@
 			});
 			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 			m.on('click', () => {
-				const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent("Priory Historian Elisa")}&useskin=vector#Items_offered`;
+				const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent("Priory Historian Elisa")}&useskin=vector-2022#Items_offered`;
 				window.parent.postMessage({ action: 'openWiki', url: wikiUrl }, '*');
 			});
 			
@@ -1745,10 +1779,29 @@
 					"nodes_miscellaneous.json", "nodes_mist_rift.json", "nodes_ranger_pets.json",
 					"nodes_service_npc.json", "nodes_world_events.json"
 				];
-				const altPromises = altFiles.map(file => fetch(apiBase + file + "?t=" + Date.now())
+				async function fetchWithFallback(file) {
+					if (window.DataLoader && window.DataLoader.fetchDataFile) {
+						return window.DataLoader.fetchDataFile(file);
+					}
+					if (!isDevMode) {
+						try {
+							const r = await fetch("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/" + file + "?t=" + Date.now());
+							if (r && r.ok) return r;
+						} catch (e) {}
+					}
+					try {
+						const r = await fetch("https://gw2ps.local/Data/" + file + "?t=" + Date.now());
+						if (r && r.ok) return r;
+					} catch (e) {}
+					return null;
+				}
+
+				const altPromises = altFiles.map(file => fetchWithFallback(file)
 					.then(res => {
-						if (res.ok) {
-							return res.json().then(data => {
+						if (res && res.ok) {
+							return res.text().then(text => {
+								let cleanText = text.replace(/^\uFEFF/, '').trim();
+								let data = JSON.parse(cleanText);
 								let nodesArray = Array.isArray(data) ? data : (data && data.value ? data.value : []);
 								console.log(`[Altitude Engine] Loaded ${file} successfully: ${nodesArray.length} nodes.`);
 								// Inject the source file name into each node for dynamic dev mode updates!
@@ -1759,7 +1812,7 @@
 								return [];
 							});
 						} else {
-							console.error(`[Altitude Engine] Failed to load ${file}: HTTP status ${res.status}`);
+							console.error(`[Altitude Engine] Failed to load ${file}`);
 							return [];
 						}
 					})
@@ -1774,23 +1827,24 @@
 					iRes, oRes,
 					...altResults
 				] = await Promise.all([
-					fetch(apiBase + "nodes_zone_portals_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_hearts_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_heropoints_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_maps_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_regions_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_sectors_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_pois_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_vistas_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_waypoints_map.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "nodes_mastery_insight.json?t=" + Date.now()).catch(() => null),
-					fetch(apiBase + "map_options_structure.json?t=" + Date.now()).catch(() => null),
+					fetchWithFallback("nodes_zone_portals_map.json"),
+					fetchWithFallback("nodes_hearts_map.json"),
+					fetchWithFallback("nodes_heropoints_map.json"),
+					fetchWithFallback("nodes_maps_map.json"),
+					fetchWithFallback("nodes_regions_map.json"),
+					fetchWithFallback("nodes_sectors_map.json"),
+					fetchWithFallback("nodes_pois_map.json"),
+					fetchWithFallback("nodes_vistas_map.json"),
+					fetchWithFallback("nodes_waypoints_map.json"),
+					fetchWithFallback("nodes_mastery_insight.json"),
+					fetchWithFallback("map_options_structure.json"),
 					...altPromises
 				]);
 
 				if (oRes && oRes.ok) {
 					try {
-						const sections = await oRes.json();
+						const text = await oRes.text();
+						const sections = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 						buildLayerToSectionMap(sections);
 						console.log("[Altitude Engine] Dynamically built layerToSectionMap from options structure.");
 					} catch(err) {
@@ -1931,7 +1985,7 @@
 					// Set up actions
 					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
 						m.on('click', () => {
-							const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(p.node)}&useskin=vector#Items_offered`;
+							const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(p.node)}&useskin=vector-2022#Items_offered`;
 							window.parent.postMessage({ action: 'openWiki', url: wikiUrl }, '*');
 						});
 					} else if (p.chat_code) {
@@ -1955,8 +2009,13 @@
 
 				// 1. Mastery Insights
 				if (iRes && iRes.ok) {
-					masteryPointsData = await iRes.json();
-					renderMasteryInsights();
+					try {
+						const text = await iRes.text();
+						masteryPointsData = JSON.parse(text.replace(/^\uFEFF/, '').trim());
+						renderMasteryInsights();
+					} catch(err) {
+						console.error("Error parsing nodes_mastery_insight.json:", err);
+					}
 				}
 
 				// 4. Standard Map Data (POIs, Labels, etc.)
@@ -1975,7 +2034,8 @@
 				for (const item of mapDataFiles) {
 					if (item.res && item.res.ok) {
 						try {
-							const arr = await item.res.json();
+							const text = await item.res.text();
+							const arr = JSON.parse(text.replace(/^\uFEFF/, '').trim());
 							if (Array.isArray(arr)) {
 								mapDataPoints.push(...arr);
 							}
@@ -2055,7 +2115,8 @@
 											navigator.clipboard.writeText(p.chat_code);
 										} catch (e) {}
 										window.parent.postMessage("copy:" + p.chat_code, "*");
-										window.parent.postMessage({ action: 'toast', msg: type === 'waypoint' ? 'WAYPOINT COPIED' : 'POI COPIED' }, "*");
+										const toastMsg = type === 'waypoint' ? ((window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.waypoint_copied', 'WAYPOINT COPIED') : 'WAYPOINT COPIED') : ((window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.poi_copied', 'POI COPIED') : 'POI COPIED');
+										window.parent.postMessage({ action: 'toast', msg: toastMsg }, "*");
 									});
 								}
 							} else if (type === 'heart') {
@@ -2108,6 +2169,10 @@
 		init();
 
 		window.addEventListener("message", function (event) {
+			if (event.data && event.data.action === 'languageChanged') {
+				window.location.reload();
+				return;
+			}
 			if (event.data && event.data.action === 'toggleHideCompletedMastery') {
 				window.toggleHideCompletedMastery(event.data.isHidden);
 			}
@@ -2738,7 +2803,9 @@
 			
 			if (iconEl) iconEl.innerHTML = svgIcon;
 			if (textEl) {
-				textEl.innerText = `${cycle}: ${phase}`;
+				const tPhase = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.tod.' + phase.toLowerCase(), phase) : phase;
+				const tCycle = (cycle === "TYRIA") ? ((window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.compass.central_tyria', 'Tyria').toUpperCase() : 'TYRIA') : cycle;
+				textEl.innerText = `${tCycle}: ${tPhase}`;
 				// Stylize phase colors slightly for ultra-premium look
 				if (phase === "DAY") textEl.style.color = "#ffe066";
 				else if (phase === "NIGHT") textEl.style.color = "#a5f3fc";
@@ -2746,6 +2813,36 @@
 				else if (phase === "DUSK") textEl.style.color = "#ff8533";
 			}
 		}
+
+		async function applyMapI18n() {
+			if (!window.DataLoader || !window.DataLoader.loadTranslations) return;
+			await window.DataLoader.loadTranslations();
+			const t = window.DataLoader.t;
+
+			const repBtn = document.querySelector('#coord-hud button');
+			if (repBtn) repBtn.innerText = t('map.hud.report_node', 'Report Node');
+
+			const rmTitle = document.querySelector('#marker-remove-prompt > div');
+			if (rmTitle) rmTitle.innerText = t('map.modals.remove_marker_title', 'Remove Marker?');
+			const rmBtn = document.querySelector('#marker-remove-prompt .danger');
+			if (rmBtn) rmBtn.innerText = t('map.modals.remove', 'Remove');
+			const rmCancel = document.querySelector('#marker-remove-prompt button:not(.danger)');
+			if (rmCancel) rmCancel.innerText = t('map.modals.cancel', 'Cancel');
+
+			const repTitle = document.querySelector('#report-modal .report-title');
+			if (repTitle) repTitle.innerText = t('map.modals.report_coord_title', 'Report Node Coordinate');
+			const repTutorial = document.querySelector('#report-modal .report-tutorial');
+			if (repTutorial) repTutorial.innerText = t('map.modals.report_coord_tutorial', 'Please stand directly on top of the target node in-game, enter its name below, and click Submit. Telemetry and coordinates are captured automatically.');
+			const repLabel = document.querySelector('#report-modal .report-label');
+			if (repLabel) repLabel.innerText = t('map.modals.report_coord_label', 'Node Name / Description');
+			const repInput = document.getElementById('rep-node-name');
+			if (repInput) repInput.placeholder = t('map.modals.report_coord_placeholder', 'e.g. Rich Platinum Ore, Elisa, etc.');
+			const repCancel = document.getElementById('rep-cancel-btn');
+			if (repCancel) repCancel.innerText = t('map.modals.cancel', 'Cancel');
+			const repSubmit = document.getElementById('rep-submit-btn');
+			if (repSubmit) repSubmit.innerText = t('map.modals.report_submit', 'Submit Report');
+		}
+		applyMapI18n();
 
 		setInterval(tickCompassClock, 1000);
 		tickCompassClock();

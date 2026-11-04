@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -105,29 +106,29 @@
 	<body>
 		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position:relative;">
 			<div class="header-row">
-				<div class="section-title">FARMING TRACKER</div>
+				<div class="section-title" data-i18n="farming.title">FARMING TRACKER</div>
 				<div class="controls">
 					<div id="session-timer">00:00:00</div>
-					<button id="btn-save" onclick="saveSession(true)" style="display:none; background:#1e4c7a; border-color:#2a6ba1;">SAVE</button>
-					<button id="btn-start" onclick="toggleSession()">START SESSION</button>
+					<button id="btn-save" onclick="saveSession(true)" style="display:none; background:#1e4c7a; border-color:#2a6ba1;" data-i18n="farming.save_session">SAVE</button>
+					<button id="btn-start" onclick="toggleSession()" data-i18n="farming.start_session">START SESSION</button>
 				</div>
 			</div>
 
 			<div class="tabs">
-				<button class="tab-btn active" onclick="switchTab('tab-current', this)">CURRENT SESSION</button>
-				<button class="tab-btn" onclick="switchTab('tab-history', this)">HISTORY & GRAPHS</button>
+				<button class="tab-btn active" onclick="switchTab('tab-current', this)" data-i18n="farming.tab_current">CURRENT SESSION</button>
+				<button class="tab-btn" onclick="switchTab('tab-history', this)" data-i18n="farming.tab_history">HISTORY & GRAPHS</button>
 			</div>
 
 			<div id="tab-current" class="tab-content active">
 				<div class="panel-box">
-					<div class="box-title">CURRENCIES GAINED</div>
+					<div class="box-title" data-i18n="farming.currencies_gained">CURRENCIES GAINED</div>
 					<div id="currency-container" class="currency-list">
-						<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;">NO ACTIVE SESSION</div>
+						<div style="padding:10px; color:#8a7a5f; font-size:10px; text-align:center;" data-i18n="farming.no_active_session">NO ACTIVE SESSION</div>
 					</div>
 				</div>
 				<div class="panel-box" style="flex:1;">
 					<div class="box-title" style="display:flex; justify-content:space-between; align-items:flex-end;">
-						<span>ITEMS GAINED</span>
+						<span data-i18n="farming.items_gained">ITEMS GAINED</span>
 						<div style="text-align: right;">
 							<div id="est-vendor-val" style="color:#AAAAAA; font-family:monospace; font-size:11px; font-weight:normal; letter-spacing:0; margin-bottom: 2px;"></div>
 							<div id="est-tp-val" style="color:#e2c07d; font-family:monospace; font-size:12px; font-weight:normal; letter-spacing:0;"></div>
@@ -139,7 +140,7 @@
 
 			<div id="tab-history" class="tab-content">
 				<div class="panel-box">
-					<div class="box-title">CURRENCY GAINS OVER TIME</div>
+					<div class="box-title" data-i18n="farming.currency_gains_over_time">CURRENCY GAINS OVER TIME</div>
 					<div class="graph-controls">
 						<button class="graph-btn active" onclick="renderGraph('day')">DAY</button>
 						<button class="graph-btn" onclick="renderGraph('week')">WEEK</button>
@@ -157,7 +158,7 @@
 				</div>
 				<div class="panel-box" style="flex:1; position: relative;">
 					<div class="box-title" style="display:flex; justify-content:space-between; align-items:center;">
-						<span>SESSION LOG</span>
+						<span data-i18n="farming.session_log">SESSION LOG</span>
 						<button onclick="confirmWipeHistory()" style="background: transparent; border: 1px solid #721c24; color: #ff6b6b; padding: 2px 8px; font-size: 9px; margin-top:-4px;">WIPE DATA</button>
 					</div>
 					<div id="history-container" class="history-list"></div>
@@ -334,7 +335,8 @@
                 if (missing.length > 0) {
                     for(let i=0; i<missing.length; i+=200) {
                         const batch = missing.slice(i, i+200);
-                        const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(','));
+                        const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                        const iData = await fetchJSON("https://api.guildwars2.com/v2/items?ids=" + batch.join(',') + "&lang=" + lang);
                         if (iData && Array.isArray(iData)) iData.forEach(it => itemIndex[it.id] = it);
                         
                         const pData = await fetchJSON("https://api.guildwars2.com/v2/commerce/prices?ids=" + batch.join(','));

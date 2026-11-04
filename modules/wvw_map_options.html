@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
 			body { margin: 0; background: transparent; padding: 20px; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; text-transform: uppercase; display: flex; flex-direction: column; height: 100vh; }
@@ -24,78 +25,78 @@
 		</style>
 	</head>
 	<body>
-		<div class="section-title">Map Icons</div>
+		<div class="section-title" data-i18n="wvw.options_title">Map Icons</div>
 		<label class="filter-option">
 			<input type="checkbox" id="poi" checked onchange="saveAndToggle('poi', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Points of Interest</span>
+			<span class="label-text" data-i18n="wvw.opt_poi">Points of Interest</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="waypoint" checked onchange="saveAndToggle('waypoint', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Waypoints</span>
+			<span class="label-text" data-i18n="wvw.opt_waypoint">Waypoints</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="vista" checked onchange="saveAndToggle('vista', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Vistas</span>
+			<span class="label-text" data-i18n="wvw.opt_vista">Vistas</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="heropoint" checked onchange="saveAndToggle('heropoint', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Hero Points</span>
+			<span class="label-text" data-i18n="wvw.opt_heropoint">Hero Points</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="towers" checked onchange="saveAndToggle('towers', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Towers</span>
+			<span class="label-text" data-i18n="wvw.opt_towers">Towers</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="keeps" checked onchange="saveAndToggle('keeps', this.checked); saveAndToggle('castles', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Keeps</span>
+			<span class="label-text" data-i18n="wvw.opt_keeps">Keeps</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="camps" checked onchange="saveAndToggle('camps', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Camps</span>
+			<span class="label-text" data-i18n="wvw.opt_camps">Camps</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="ruins" checked onchange="saveAndToggle('ruins', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Ruins of Power</span>
+			<span class="label-text" data-i18n="wvw.opt_ruins">Ruins of Power</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="personal_markers" checked onchange="saveAndToggle('personal_markers', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Personal Markers</span>
+			<span class="label-text" data-i18n="wvw.opt_personal_markers">Personal Markers</span>
 		</label>
 
-		<div class="section-title">Labels & Borders</div>
+		<div class="section-title" data-i18n="wvw.options_labels">Labels & Borders</div>
 		<label class="filter-option">
 			<input type="checkbox" id="map_text" checked onchange="saveAndToggle('map_text', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Map Names</span>
+			<span class="label-text" data-i18n="wvw.opt_map_text">Map Names</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="sector" checked onchange="saveAndToggle('sector', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Sectors</span>
+			<span class="label-text" data-i18n="wvw.opt_sector">Sectors</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="borders" checked onchange="saveAndToggle('borders', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Borders</span>
+			<span class="label-text" data-i18n="wvw.opt_borders">Borders</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="overlay" checked onchange="saveAndToggle('overlay', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Sector Color Overlay</span>
+			<span class="label-text" data-i18n="wvw.opt_overlay">Sector Color Overlay</span>
 		</label>
 		<label class="filter-option">
 			<input type="checkbox" id="scoreboard" checked onchange="saveAndToggle('scoreboard', this.checked)">
 			<div class="toggle-btn"></div>
-			<span class="label-text">Scoreboard</span>
+			<span class="label-text" data-i18n="wvw.opt_scoreboard">Scoreboard</span>
 		</label>
 
 		<script>

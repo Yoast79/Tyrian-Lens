@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Bug &amp; Feature Reporter</title>
     <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+    <script src="data_loader.js"></script>
     <style>
         * { 
             cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; 
@@ -543,10 +544,52 @@
             });
         }
 
-        // Theme sync from parent
+        async function applyBugReportI18n() {
+            if (!window.DataLoader || !window.DataLoader.loadTranslations) return;
+            await window.DataLoader.loadTranslations();
+            const t = window.DataLoader.t;
+
+            const secTitle = document.querySelector('.section-title span');
+            if (secTitle) secTitle.innerText = t('bug_report.title', 'Report Bug / Feature');
+
+            const labels = document.querySelectorAll('.form-group .label');
+            if (labels.length >= 2) {
+                labels[0].innerText = t('bug_report.label_type', 'I want to report a:');
+                labels[1].innerText = t('bug_report.label_module', 'What module is affected?');
+            }
+
+            const repType = document.getElementById('report-type');
+            if (repType && repType.options.length >= 2) {
+                repType.options[0].text = t('bug_report.opt_bug', 'Bug / Defect');
+                repType.options[1].text = t('bug_report.opt_feature', 'Feature Request');
+            }
+
+            const succTitle = document.querySelector('.success-title');
+            if (succTitle) succTitle.innerText = t('bug_report.success_title', 'Thank You!');
+
+            const succBody = document.querySelector('.success-body');
+            if (succBody) succBody.innerHTML = t('bug_report.success_body', 'Your report has been submitted successfully.<br>We appreciate you taking the time to help improve Tyrian Lens!');
+
+            const btnDiscord = document.querySelector('.btn-discord');
+            if (btnDiscord) btnDiscord.innerHTML = `<img src="https://gw2ps.local/Assets/Icons/discord-icon.png" alt="Discord" /> ${t('bug_report.btn_discord', 'Join the Discord Server')}`;
+
+            const btnOk = document.querySelector('.btn-ok');
+            if (btnOk) btnOk.innerText = t('bug_report.btn_ok', 'OK');
+
+            const submitBtn = document.getElementById('submit-btn');
+            if (submitBtn) submitBtn.innerText = t('common.submit', 'Submit Report');
+        }
+        applyBugReportI18n();
+
+        // Theme and language sync from parent
         window.addEventListener('message', function(event) {
             if (event.data && event.data.action === 'updateTheme') {
                 document.body.setAttribute('data-theme', event.data.theme);
+            }
+            if (event.data && event.data.action === 'languageChanged') {
+                if (window.DataLoader && window.DataLoader.loadTranslations) {
+                    window.DataLoader.loadTranslations(true).then(() => applyBugReportI18n());
+                }
             }
         });
     </script>

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -82,22 +83,22 @@
 		</style>
 	</head>
 	<body>
-		<div class="header-row"><div class="section-title">PvP Module</div></div>
+		<div class="header-row"><div class="section-title" data-i18n="pvp.title">PvP Module</div></div>
 		<div class="tabs">
-			<button class="tab-btn active" onclick="switchTab('stats', this)">Stats</button>
-			<button class="tab-btn" onclick="switchTab('season', this)">Season</button>
-			<button class="tab-btn" onclick="switchTab('leaderboard', this)">Top 50</button>
-			<button class="tab-btn" onclick="switchTab('history', this)">History</button>
+			<button class="tab-btn active" onclick="switchTab('stats', this)" data-i18n="pvp.tab_stats">Stats</button>
+			<button class="tab-btn" onclick="switchTab('season', this)" data-i18n="pvp.tab_season">Season</button>
+			<button class="tab-btn" onclick="switchTab('leaderboard', this)" data-i18n="pvp.tab_leaderboard">Top 50</button>
+			<button class="tab-btn" onclick="switchTab('history', this)" data-i18n="pvp.tab_history">History</button>
 		</div>
 
 		<div id="panel-stats" class="content-panel active">
 			<div id="stats-container"></div>
 			<div id="stats-equipment-container" style="display:none; margin-top:10px;">
-				<div class="section-title" style="font-size:12px; margin-bottom:10px; border-bottom: 1px solid #2a2015; padding-bottom:5px;">Equipment</div>
+				<div class="section-title" style="font-size:12px; margin-bottom:10px; border-bottom: 1px solid #2a2015; padding-bottom:5px;" data-i18n="pvp.equipment">Equipment</div>
 				<select id="char-selector" onchange="loadCharBuild(this.value)"></select>
 				<div id="prof-display" style="font-size: 11px; color: #8a7a5f; margin-bottom: 10px; font-weight: bold; letter-spacing: 1px;"></div>
 				<div id="build-display"></div>
-				<div class="section-title" style="font-size:11px; margin-top:15px; border-bottom: 1px solid #2a2015;">Mist Champions</div>
+				<div class="section-title" style="font-size:11px; margin-top:15px; border-bottom: 1px solid #2a2015;" data-i18n="pvp.mist_champions">Mist Champions</div>
 				<div id="hero-display" class="hero-grid"></div>
 			</div>
 		</div>

@@ -165,12 +165,169 @@ namespace GW2PS
             mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             mapView.CoreWebView2.Settings.AreDevToolsEnabled = false;
 
+            // Configure dark mode preference and pre-set MediaWiki Vector-2022 night mode cookies for all 4 languages
+            mapView.CoreWebView2.Profile.PreferredColorScheme = CoreWebView2PreferredColorScheme.Dark;
+            string[] wikiLangs = { "en", "de", "fr", "es" };
+            foreach (var wLang in wikiLangs)
+            {
+                try
+                {
+                    var darkCookie = mapView.CoreWebView2.CookieManager.CreateCookie($"{wLang}_wikidb_gw2mwclientpreferences", "skin-theme-clientpref-night", ".guildwars2.com", "/");
+                    darkCookie.IsSecure = true;
+                    mapView.CoreWebView2.CookieManager.AddOrUpdateCookie(darkCookie);
+                }
+                catch { }
+            }
+            try
+            {
+                var themeCookie = mapView.CoreWebView2.CookieManager.CreateCookie("gw2_app_theme", "human", ".guildwars2.com", "/");
+                themeCookie.IsSecure = true;
+                mapView.CoreWebView2.CookieManager.AddOrUpdateCookie(themeCookie);
+            }
+            catch { }
+
+            _ = mapView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(@"
+                try {
+                    (function() {
+                        var host = (window.location && window.location.hostname) || '';
+                        var isWiki = host.indexOf('guildwars2.com') !== -1 && host.indexOf('wiki') !== -1;
+
+                        var themes = {
+                            human:   { accent: '#e2c07d', bg: '#0a0805', card: '#14100c', border: '#4a3b2a', muted: '#8a7a5f' },
+                            sylvari: { accent: '#a1e27d', bg: '#050a06', card: '#0d140e', border: '#2a4a2b', muted: '#5f8a65' },
+                            asura:   { accent: '#7dcae2', bg: '#05080a', card: '#0d1217', border: '#2a3b4a', muted: '#5f7a8a' },
+                            charr:   { accent: '#e27d7d', bg: '#0a0505', card: '#140d0d', border: '#4a2a2a', muted: '#8a5f5f' },
+                            norn:    { accent: '#d4e0e5', bg: '#080a0b', card: '#121517', border: '#3b4a52', muted: '#7a8a91' }
+                        };
+
+                        var applyTheme = function(themeName) {
+                            var curHost = (window.location && window.location.hostname) || '';
+                            if (curHost && (curHost.indexOf('guildwars2.com') === -1 || curHost.indexOf('wiki') === -1)) return;
+
+                            var t = themes[themeName] || themes.human;
+                            var styleId = 'tyrian-lens-wiki-theme';
+                            var styleEl = document.getElementById(styleId);
+                            if (!styleEl) {
+                                styleEl = document.createElement('style');
+                                styleEl.id = styleId;
+                            }
+                            styleEl.textContent = 
+                                'html, html.skin-theme-clientpref-night, html.skin-theme-clientpref-night body, html body { ' +
+                                '    --color-progressive: ' + t.accent + ' !important; ' +
+                                '    --color-progressive--hover: ' + t.accent + ' !important; ' +
+                                '    --color-progressive--visited: ' + t.accent + ' !important; ' +
+                                '    --color-base: #e0e0e0 !important; ' +
+                                '    --color-emphasized: ' + t.accent + ' !important; ' +
+                                '    --color-subtle: ' + t.muted + ' !important; ' +
+                                '    --background-color-base: ' + t.bg + ' !important; ' +
+                                '    --background-color-neutral: ' + t.card + ' !important; ' +
+                                '    --background-color-interactive: ' + t.card + ' !important; ' +
+                                '    --border-color-base: ' + t.border + ' !important; ' +
+                                '    --border-color-muted: ' + t.border + ' !important; ' +
+                                '    --border-color-subtle: ' + t.border + ' !important; ' +
+                                '}\n' +
+                                'html body, html.skin-theme-clientpref-night body, ' +
+                                'html .mw-page-container, html.skin-theme-clientpref-night .mw-page-container, ' +
+                                'html .vector-header-container, html .vector-sticky-header-container, ' +
+                                'html #content, html .mw-body, html .vector-body { ' +
+                                '    background-color: ' + t.bg + ' !important; ' +
+                                '    color: #e0e0e0 !important; ' +
+                                '}\n' +
+                                'html h1, html h2, html h3, html h4, html h5, html h6, ' +
+                                'html.skin-theme-clientpref-night h1, html.skin-theme-clientpref-night h2, html.skin-theme-clientpref-night h3, ' +
+                                'html .mw-first-heading, html .mw-heading h1, html .mw-heading h2, html .mw-heading h3 { ' +
+                                '    color: ' + t.accent + ' !important; ' +
+                                '    border-bottom: 1px solid ' + t.border + ' !important; ' +
+                                '    font-family: -apple-system, BlinkMacSystemFont, ""Segoe UI"", Roboto, sans-serif !important; ' +
+                                '}\n' +
+                                'html a, html a:visited, html .vector-menu-content-list a, ' +
+                                'html.skin-theme-clientpref-night a, html.skin-theme-clientpref-night a:visited, ' +
+                                'html.skin-theme-clientpref-night .mw-parser-output a { ' +
+                                '    color: ' + t.accent + ' !important; ' +
+                                '}\n' +
+                                'html a:hover { filter: brightness(1.25); text-decoration: underline !important; }\n' +
+                                'html .wikitable, html .infobox, html .navbox, html table.standard, html .toc, html .mw-parser-output .toc, ' +
+                                'html.skin-theme-clientpref-night .wikitable, html.skin-theme-clientpref-night .infobox { ' +
+                                '    background-color: ' + t.card + ' !important; ' +
+                                '    border: 1px solid ' + t.border + ' !important; ' +
+                                '    color: #e0e0e0 !important; ' +
+                                '}\n' +
+                                'html .wikitable th, html .infobox th, html .navbox th, html table.standard th { ' +
+                                '    background-color: ' + t.border + ' !important; ' +
+                                '    color: ' + t.accent + ' !important; ' +
+                                '    border: 1px solid ' + t.border + ' !important; ' +
+                                '}\n' +
+                                'html .wikitable td, html .infobox td, html .navbox td, html table.standard td { ' +
+                                '    border: 1px solid ' + t.border + ' !important; ' +
+                                '    background-color: ' + t.card + ' !important; ' +
+                                '}\n' +
+                                'html .vector-main-menu, html .vector-column-start, html .vector-column-end { background-color: ' + t.bg + ' !important; }\n' +
+                                '::-webkit-scrollbar { width: 8px; height: 8px; }\n' +
+                                '::-webkit-scrollbar-track { background: ' + t.bg + '; }\n' +
+                                '::-webkit-scrollbar-thumb { background: ' + t.border + '; border-radius: 4px; }\n' +
+                                '::-webkit-scrollbar-thumb:hover { background: ' + t.accent + '; }';
+
+                            var parent = document.head || document.documentElement;
+                            if (parent) {
+                                parent.appendChild(styleEl);
+                            }
+
+                            if (document.documentElement) {
+                                document.documentElement.classList.remove('skin-theme-clientpref-day');
+                                document.documentElement.classList.add('skin-theme-clientpref-night');
+                            }
+                        };
+
+                        var getTheme = function() {
+                            var match = document.cookie.match(/(?:^|;\s*)gw2_app_theme=([^;]+)/);
+                            return (match && themes[match[1]]) ? match[1] : 'human';
+                        };
+
+                        var init = function() {
+                            var curHost = (window.location && window.location.hostname) || '';
+                            if (curHost && (curHost.indexOf('guildwars2.com') === -1 || curHost.indexOf('wiki') === -1)) return;
+                            applyTheme(getTheme());
+                            try {
+                                if (window.parent && window.parent !== window) {
+                                    window.parent.postMessage({ action: 'requestTheme' }, '*');
+                                }
+                            } catch(e) {}
+                        };
+
+                        init();
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', init);
+                        }
+                        window.addEventListener('load', init);
+
+                        window.addEventListener('message', function(ev) {
+                            if (ev && ev.data && ev.data.action === 'updateTheme' && ev.data.theme) {
+                                applyTheme(ev.data.theme);
+                                document.cookie = 'gw2_app_theme=' + ev.data.theme + '; path=/; domain=.guildwars2.com; max-age=31536000; SameSite=None; Secure';
+                            }
+                        });
+                    })();
+                } catch(e) {}
+            ");
+
+            // Allow embedding the official wiki in the side panel iframe despite X-Frame-Options: SAMEORIGIN
+            mapView.CoreWebView2.FrameNavigationStarting += (s, e) =>
+            {
+                if (e.Uri.Contains("guildwars2.com") && e.Uri.Contains("wiki"))
+                {
+                    e.AdditionalAllowedFrameAncestors = "https://gw2ps.local http://gw2ps.local http://localhost https://localhost";
+                }
+            };
+
             mapView.CoreWebView2.NewWindowRequested += (s, e) =>
             {
                 e.Handled = true;
-                if (isWikiIntegrated && e.Uri.Contains("wiki.guildwars2.com"))
+                if (isWikiIntegrated && e.Uri.Contains("guildwars2.com") && e.Uri.Contains("wiki"))
                 {
-                    mapView.CoreWebView2.PostWebMessageAsString($"openWiki:{e.Uri}");
+                    string targetUri = e.Uri.Contains("useskin=vector") 
+                        ? e.Uri.Replace("useskin=vector", "useskin=vector-2022") 
+                        : (e.Uri.Contains("useskin=") ? e.Uri : e.Uri + (e.Uri.Contains("?") ? "&" : "?") + "useskin=vector-2022");
+                    mapView.CoreWebView2.PostWebMessageAsString($"openWiki:{targetUri}");
                 }
                 else
                 {
@@ -208,6 +365,17 @@ namespace GW2PS
                 if (msg != null)
                 {
                     if (msg.StartsWith("setWikiIntegrated:")) isWikiIntegrated = msg.Split(':')[1].ToLower() == "true";
+                    else if (msg.StartsWith("setTheme:"))
+                    {
+                        string themeName = msg.Substring("setTheme:".Length).Trim().ToLower();
+                        try
+                        {
+                            var themeCookie = mapView.CoreWebView2.CookieManager.CreateCookie("gw2_app_theme", themeName, ".guildwars2.com", "/");
+                            themeCookie.IsSecure = true;
+                            mapView.CoreWebView2.CookieManager.AddOrUpdateCookie(themeCookie);
+                        }
+                        catch { }
+                    }
                     else if (msg == "hide_welcome_forever")
                     {
                         if (!Directory.Exists(userDataFolder)) Directory.CreateDirectory(userDataFolder);

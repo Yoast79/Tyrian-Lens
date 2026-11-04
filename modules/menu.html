@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
 			body, html { height: 100%; width: 100%; background: transparent; overflow: hidden; }
@@ -141,6 +142,12 @@
 			window.addEventListener('DOMContentLoaded', checkUpdateIcon);
 
 			window.addEventListener('message', function(event) {
+				if (event.data && event.data.action === 'languageChanged') {
+					if (window.DataLoader && window.DataLoader.loadTranslations) {
+						window.DataLoader.loadTranslations(true);
+					}
+					checkUpdateIcon();
+				}
 				const data = event.data;
 				if (data.action === 'updateTPIndicator') {
 					const icon = document.getElementById('nav-tp-icon');
@@ -180,7 +187,13 @@
 				}
 			});
 
-			function showTip(t, e) { window.parent.postMessage({ action: 'showTooltip', text: t, x: e.clientX, y: e.clientY, offsetTop: 0 }, '*'); }
+			function showTip(t, e) {
+				let text = t;
+				if (window.DataLoader && window.DataLoader.t) {
+					text = window.DataLoader.t('nav.' + t, t);
+				}
+				window.parent.postMessage({ action: 'showTooltip', text: text, x: e.clientX, y: e.clientY, offsetTop: 0 }, '*');
+			}
 			function hideTip() { window.parent.postMessage({ action: 'hideTooltip' }, '*'); }
 			
 			const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');

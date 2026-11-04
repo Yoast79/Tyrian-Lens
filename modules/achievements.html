@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			::-webkit-scrollbar { width: 6px; }
 			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
@@ -111,7 +112,7 @@
 			<div class="main-layout">
 				<div class="nav-panel" id="nav-panel-container">
 					<div style="position: relative;">
-						<input type="text" id="ach-search" placeholder="SEARCH..." style="width: 100%; background: var(--bg-button, #1a1510); border: none; border-bottom: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
+						<input type="text" id="ach-search" data-i18n-ph="common.search_general" placeholder="SEARCH..." style="width: 100%; background: var(--bg-button, #1a1510); border: none; border-bottom: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
 							<span style="position: absolute; right: 8px; top: 10px; color: var(--text-muted, #8a7a5f); font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
 						</div>
 					<div id="nav-panel" style="display: flex; flex-direction: column; overflow-y: auto; flex: 1; min-height: 0;"></div>
@@ -184,7 +185,7 @@
 
                 const acc = await fetchJSON("https://api.guildwars2.com/v2/account?access_token=" + activeKey);
                 try {
-                    const res = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/achievement_index.json', { cache: "no-store" });
+                    const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('achievement_index.json') : null) || await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/achievement_index.json', { cache: "no-store" });
                     if (res.ok) { 
                         indexData = await res.json(); 
 						indexData.categories = indexData.categories.filter(c => !c.n.includes("Character Adventure Guide"));
@@ -678,7 +679,7 @@
                     { id: 'Magic', disp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
                 ];
                 const regInfo = regionOrder.find(r => r.id === track.region) || { disp: track.region, localIcon: 'mi_locked.png' };
-                const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(regInfo.disp.replace(/ /g, '_') + '_mastery_tracks')}&useskin=vector#${track.name.replace(/ /g, '_')}`;
+                const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(regInfo.disp.replace(/ /g, '_') + '_mastery_tracks')}&useskin=vector-2022#${track.name.replace(/ /g, '_')}`;
 
                 content.innerHTML = `
                     <div style="padding: 15px; display:flex; flex-direction:column; gap:20px; height:100%; background: rgba(0,0,0,0.1);">
@@ -801,6 +802,7 @@
             };
 
 			window.addEventListener('message', (e) => { 
+                if (e.data.action === 'languageChanged') init(); 
                 if (e.data.action === 'accountDataRefreshed') init();
                 if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
                 if (e.data.action === 'uiScaleChanged') {

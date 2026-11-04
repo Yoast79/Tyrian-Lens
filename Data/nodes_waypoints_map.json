@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "pos":  [
                     52889.5,
@@ -6801,12 +6801,82 @@
     },
     {
         "pos":  [
+                    36649.7,
+                    36232.2
+                ],
+        "name":  "Pact Base Camp Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBAIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    36809,
+                    36525.5
+                ],
+        "name":  "Pact Base Camp Southern Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BHoIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
                     5162.33,
                     62438.5
                 ],
         "name":  "Pilgrim's Rest Waypoint",
         "type":  "waypoint",
         "chat_code":  "[&BPwPAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    3657.8,
+                    58080.6
+                ],
+        "name":  "Doyen's Adytum Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BB8QAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    4953.2,
+                    59329.6
+                ],
+        "name":  "Hall of Assemblage Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BDYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    5819.8,
+                    59557.2
+                ],
+        "name":  "Sealed Vestibule Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BBYQAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    35165.7,
+                    31785.4
+                ],
+        "name":  "Pact Encampment Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BAgIAAA=]",
+        "desc":  ""
+    },
+    {
+        "pos":  [
+                    46814,
+                    48720
+                ],
+        "name":  "Pact Command Waypoint",
+        "type":  "waypoint",
+        "chat_code":  "[&BN4LAAA=]",
         "desc":  ""
     }
 ]

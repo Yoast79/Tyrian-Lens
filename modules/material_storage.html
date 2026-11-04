@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+		<script src="data_loader.js"></script>
 		<style>
 			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; box-sizing: border-box; }
 			body {
@@ -81,7 +82,7 @@
 			</div>
 		</div>
 		<div class="search-container">
-			<input type="text" class="search-box" id="storage-search" placeholder="SEARCH MATERIALS..." oninput="filterStorage()">
+			<input type="text" class="search-box" id="storage-search" data-i18n-ph="common.search_materials" placeholder="SEARCH MATERIALS..." oninput="filterStorage()">
 				<span class="clear-btn" id="clear-search" onclick="clearSearch()">&times;</span>
 			</div>
 		<div id="storage-container">
@@ -195,7 +196,8 @@
 			const chunks = [];
 			for (let i = 0; i < ids.length; i += 200) chunks.push(ids.slice(i, i + 200));
 				for (const chunk of chunks) {
-					const res = await fetch(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}`);
+					const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+					const res = await fetch(`https://api.guildwars2.com/v2/items?ids=${chunk.join(',')}&lang=${lang}`);
 					const data = await res.json();
 					data.forEach(item => itemCache[item.id] = item);
 				}
