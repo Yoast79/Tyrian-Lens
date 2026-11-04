@@ -165,6 +165,15 @@ namespace GW2PS
             mapView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
             mapView.CoreWebView2.Settings.AreDevToolsEnabled = false;
 
+            // Allow embedding the official wiki in the side panel iframe despite X-Frame-Options: SAMEORIGIN
+            mapView.CoreWebView2.FrameNavigationStarting += (s, e) =>
+            {
+                if (e.Uri.Contains("wiki.guildwars2.com"))
+                {
+                    e.AdditionalAllowedFrameAncestors = "https://gw2ps.local http://gw2ps.local http://localhost https://localhost";
+                }
+            };
+
             mapView.CoreWebView2.NewWindowRequested += (s, e) =>
             {
                 e.Handled = true;
