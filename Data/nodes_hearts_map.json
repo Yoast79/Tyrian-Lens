@@ -1361,26 +1361,6 @@
     },
     {
         "pos":  [
-                    11675.9,
-                    58998.9
-                ],
-        "name":  "Renown Heart",
-        "type":  "heart",
-        "chat_code":  "[&BMwPAAA=]",
-        "desc":  "Assist the castaways around Hullgarden."
-    },
-    {
-        "pos":  [
-                    10793,
-                    58215
-                ],
-        "name":  "Renown Heart",
-        "type":  "heart",
-        "chat_code":  "[&BJwPAAA=]",
-        "desc":  "Help the Tyrian Alliance keep tabs on the Inquest."
-    },
-    {
-        "pos":  [
                     59259,
                     44140.3
                 ],
@@ -3751,16 +3731,6 @@
     },
     {
         "pos":  [
-                    11250.2,
-                    59716
-                ],
-        "name":  "Renown Heart",
-        "type":  "heart",
-        "chat_code":  "[&BMkBAAA=]",
-        "desc":  "Help Pub Canach grow into a lucrative business."
-    },
-    {
-        "pos":  [
                     11675.9,
                     58998.9
                 ],
@@ -3818,16 +3788,6 @@
         "type":  "heart",
         "chat_code":  "[&BJcBAAA=]",
         "desc":  "Help the Pricklepatch Hollow choya, or don't."
-    },
-    {
-        "pos":  [
-                    58343.1,
-                    43050.8
-                ],
-        "name":  "Renown Heart",
-        "type":  "heart",
-        "chat_code":  "[&BJ4BAAA=]",
-        "desc":  "Help Aksim care for and train raptors."
     },
     {
         "pos":  [

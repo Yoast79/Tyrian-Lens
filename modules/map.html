@@ -59,7 +59,7 @@
 			white-space: nowrap;
 			background: none !important;
 			border: none !important;
-			pointer-events: auto !important;
+			pointer-events: none !important;
 			text-align: center;
 			-webkit-text-stroke: 2px black;
 			paint-order: stroke fill;
@@ -69,11 +69,13 @@
 		.region-label {
 			font-size: 18px;
 			letter-spacing: 5px;
+			pointer-events: none !important;
 		}
 
 		.map-title-label {
 			font-size: 14px;
 			letter-spacing: 2px;
+			pointer-events: auto !important;
 		}
 
 		.map-meta-row {
@@ -109,6 +111,7 @@
 			font-size: 12px;
 			letter-spacing: 1px;
 			text-transform: none;
+			pointer-events: none !important;
 		}
 
 		.hud-compass-wrapper {
@@ -834,6 +837,63 @@
 
 		var mapStorageKey = 'gw2_custom_markers_tyria';
 
+		// Overlapping Markers Tooltip Engine
+		var allInteractiveMarkers = [];
+
+		function showMarkerTooltip(marker, originalEvent) {
+			if (!marker) return;
+			var pt = map.mouseEventToContainerPoint(originalEvent);
+			var targetLatLng = marker.getLatLng();
+
+			var overlappingMarkers = [];
+			var seenTitles = new Set();
+
+			for (var i = 0; i < allInteractiveMarkers.length; i++) {
+				var other = allInteractiveMarkers[i];
+				if (!other || !other._tooltipHtml) continue;
+				// Must be currently rendered on screen (icon exists in DOM)
+				if (!other._icon || !other._icon.parentNode) continue;
+
+				var otherLatLng = other.getLatLng();
+				var distCoords = Math.hypot(targetLatLng.lat - otherLatLng.lat, targetLatLng.lng - otherLatLng.lng);
+
+				// Overlap criteria:
+				// 1. Same or nearly identical continent coordinates (within 25 units)
+				// 2. OR on-screen pixel distance within icon radius (18px)
+				var isOverlapping = (distCoords <= 25);
+				if (!isOverlapping && map.getZoom() >= 4) {
+					var otherPt = map.latLngToContainerPoint(otherLatLng);
+					var distPixels = Math.hypot(pt.x - otherPt.x, pt.y - otherPt.y);
+					if (distPixels <= 18) isOverlapping = true;
+				}
+
+				if (isOverlapping) {
+					var titleKey = other._tooltipTitle || other._tooltipHtml;
+					if (!seenTitles.has(titleKey)) {
+						seenTitles.add(titleKey);
+						overlappingMarkers.push(other);
+					}
+				}
+			}
+
+			if (overlappingMarkers.length === 0 && marker._tooltipHtml) {
+				overlappingMarkers.push(marker);
+			}
+
+			var combinedHtml = "";
+			if (overlappingMarkers.length === 1) {
+				combinedHtml = overlappingMarkers[0]._tooltipHtml;
+			} else {
+				combinedHtml = overlappingMarkers.map(function(m, idx) {
+					var separator = idx > 0 ? '<div style="height:1px; background:rgba(226, 192, 125, 0.35); margin:8px 0;"></div>' : '';
+					var iconTag = m._iconUrl ? '<img src="' + m._iconUrl + '" style="width:18px; height:18px; object-fit:contain; flex-shrink:0; margin-top:2px; filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.8));" />' : '';
+					return separator + '<div class="stacked-tooltip-item" style="display:flex; align-items:flex-start; gap:8px;">' + iconTag + '<div style="flex:1;">' + m._tooltipHtml + '</div></div>';
+				}).join('');
+			}
+
+			window.parent.postMessage({ action: 'showTooltip', text: combinedHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+		}
+
 		const createClusterIcon = (cluster) => {
 			var markers = cluster.getAllChildMarkers();
 			if (!markers || markers.length === 0) return L.divIcon({ html: '' });
@@ -1299,9 +1359,12 @@
 				icon: L.icon({ iconUrl: "https://gw2ps.local/Assets/MarkerIcons/" + iconFile, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale] })
 			});
 			if (label) {
+				m._tooltipHtml = `<div style="color:#e2c07d; font-size:13px;">${label}</div>`;
+				m._tooltipTitle = label;
+				m._iconUrl = "https://gw2ps.local/Assets/MarkerIcons/" + iconFile;
+				allInteractiveMarkers.push(m);
 				m.on('mouseover', e => {
-					var pt = map.mouseEventToContainerPoint(e.originalEvent);
-					window.parent.postMessage({ action: 'showTooltip', text: label, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+					showMarkerTooltip(m, e.originalEvent);
 				});
 				m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 			}
@@ -1551,9 +1614,11 @@
 								<div style="margin-top: 6px; font-style: italic; color: #fff; font-size: 12px; text-transform: none;">"${data.desc}"</div>
 							   </div>`;
 							   
+			m._tooltipHtml = tooltipHtml;
+			m._tooltipTitle = "Priory Historian Elisa";
+			allInteractiveMarkers.push(m);
 			m.on('mouseover', e => {
-				var pt = map.mouseEventToContainerPoint(e.originalEvent);
-				window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+				showMarkerTooltip(m, e.originalEvent);
 			});
 			m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 			m.on('click', () => {
@@ -1715,13 +1780,17 @@
 				}
 
 				let m = L.marker([parseFloat(p.pos[1]), parseFloat(p.pos[0])], { pane: 'iconPane', interactive: true, icon: customIcon, data: p });
-				m.on('mouseover', e => { 
-					var pt = map.mouseEventToContainerPoint(e.originalEvent); 
-					let tooltipHtml = `<b>${window.DataLoader ? window.DataLoader.t('common.mastery_insight', 'Mastery Insight') : 'Mastery Insight'}</b>`;
-					if (p.desc) {
-						tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</span>`;
-					}
-					window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*"); 
+				let miTitle = window.DataLoader ? window.DataLoader.t('common.mastery_insight', 'Mastery Insight') : 'Mastery Insight';
+				let tooltipHtml = `<b>${miTitle}</b>`;
+				if (p.desc) {
+					tooltipHtml += `<br><span style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</span>`;
+				}
+				m._tooltipHtml = tooltipHtml;
+				m._tooltipTitle = p.name || miTitle;
+				m._iconUrl = iconPath;
+				allInteractiveMarkers.push(m);
+				m.on('mouseover', e => {
+					showMarkerTooltip(m, e.originalEvent);
 				});
 				m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 				let cCode = p.chat_code || p.chat_link;
@@ -1742,6 +1811,7 @@
 		};
 
 		async function init() {
+			allInteractiveMarkers = [];
 			await fetchCompletedAchievements();
 			customMarkersLayer.clearLayers();
 			borderLayer.clearLayers();
@@ -1976,9 +2046,12 @@
 						if (p.no_underwater) tooltipText += ` <img src="${p.no_underwater}" style="width:16px;height:16px;vertical-align:middle;margin-left:5px;" />`;
 					}
 
+					m._tooltipHtml = tooltipText;
+					m._tooltipTitle = mainTitle;
+					m._iconUrl = iconUrl;
+					allInteractiveMarkers.push(m);
 					m.on('mouseover', e => {
-						var pt = map.mouseEventToContainerPoint(e.originalEvent);
-						window.parent.postMessage({ action: 'showTooltip', text: tooltipText, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+						showMarkerTooltip(m, e.originalEvent);
 					});
 					m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 
@@ -2055,8 +2128,9 @@
 						let labelKey = labelMapKeys[rawType];
 
 						if (labelKey) {
+							let isInteractive = (labelKey === 'map_text');
 							let l = L.marker([p.pos[1], p.pos[0]], {
-								pane: 'textPane', interactive: true,
+								pane: 'textPane', interactive: isInteractive,
 								icon: L.divIcon({ className: 'map-label ' + (labelKey === 'region' ? 'region-label' : labelKey === 'map_text' ? 'map-title-label' : 'sector-label'), html: p.name, iconSize: [400, 40] })
 							});
 							if (p.description || p.desc) {
@@ -2097,17 +2171,21 @@
 							}
 
 							let m = L.marker([p.pos[1], p.pos[0]], { pane: 'iconPane', interactive: true, icon: L.icon({ iconUrl: iconPath, iconSize: [24 * locScale, 24 * locScale], iconAnchor: [12 * locScale, 12 * locScale], className: 'layer-target-' + type }) });
+							let defaultName = (type === 'heropoint' || rawType === 'heropoint') ? (window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point')
+								: (type === 'vista' || rawType === 'vista') ? (window.DataLoader ? window.DataLoader.t('common.vista', 'Vista') : 'Vista')
+								: (type === 'heart' || rawType === 'heart') ? (window.DataLoader ? window.DataLoader.t('common.heart', 'Renown Heart') : 'Renown Heart')
+								: (window.DataLoader ? window.DataLoader.t('common.point_of_interest', 'Point of Interest') : 'Point of Interest');
+							let markerTitle = p.name || defaultName;
+							let tooltipHtml = `<div style="color:#e2c07d; font-size:13px; margin-bottom:2px;">${markerTitle}</div>`;
+							if (p.desc) {
+								tooltipHtml += `<div style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</div>`;
+							}
+							m._tooltipHtml = tooltipHtml;
+							m._tooltipTitle = markerTitle;
+							m._iconUrl = iconPath;
+							allInteractiveMarkers.push(m);
 							m.on('mouseover', e => {
-								var pt = map.mouseEventToContainerPoint(e.originalEvent);
-								let defaultName = (type === 'heropoint' || rawType === 'heropoint') ? (window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point')
-									: (type === 'vista' || rawType === 'vista') ? (window.DataLoader ? window.DataLoader.t('common.vista', 'Vista') : 'Vista')
-									: (type === 'heart' || rawType === 'heart') ? (window.DataLoader ? window.DataLoader.t('common.heart', 'Renown Heart') : 'Renown Heart')
-									: (window.DataLoader ? window.DataLoader.t('common.point_of_interest', 'Point of Interest') : 'Point of Interest');
-								let tooltipHtml = `<div style="color:#e2c07d; font-size:13px; margin-bottom:2px;">${p.name || defaultName}</div>`;
-								if (p.desc) {
-									tooltipHtml += `<div style="color:#8a7a5f; font-size:11px; text-transform:none;">${p.desc}</div>`;
-								}
-								window.parent.postMessage({ action: 'showTooltip', text: tooltipHtml, x: pt.x, y: pt.y, offsetTop: 45 }, "*");
+								showMarkerTooltip(m, e.originalEvent);
 							});
 							m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 
