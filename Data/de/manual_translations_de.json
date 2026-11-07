@@ -1422,7 +1422,8 @@
     "unlock_plural": "{0} FREISCHALTUNGEN",
     "units_up": "▲ {0} Einheiten höher",
     "units_down": "▼ {0} Einheiten tiefer",
-    "level": "• gleiche Höhe"
+    "level": "• gleiche Höhe",
+    "hide_completed_achievements": "Abgeschlossene Erfolgsschritte ausblenden"
   },
   "professions": {
     "guardian": "Wächter",

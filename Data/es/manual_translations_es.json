@@ -1422,7 +1422,8 @@
     "unlock_plural": "{0} DESBLOQUEOS",
     "units_up": "▲ {0} unidades arriba",
     "units_down": "▼ {0} unidades abajo",
-    "level": "• mismo nivel"
+    "level": "• mismo nivel",
+    "hide_completed_achievements": "Ocultar pasos de logro completados"
   },
   "professions": {
     "guardian": "Guardián",

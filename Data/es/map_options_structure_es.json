@@ -944,6 +944,13 @@
                 "label": "Dominio de Istan - Perdido en el tiempo",
                 "icon": "https://wiki.guildwars2.com/images/7/77/Daybreak.png",
                 "hasColorPicker": true
+              },
+              {
+                "id": "node_ruler_of_the_skies_achievement",
+                "label": "Señor de los cielos",
+                "icon": "https://wiki.guildwars2.com/images/f/fd/Skyscale_%28map_icon%29.png",
+                "tooltip": "Fisuras en la realidad para los logros 'Señor de los cielos' y 'Jinete de escamaceleste'.",
+                "hasColorPicker": true
               }
             ]
           },

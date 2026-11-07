@@ -27,6 +27,7 @@
 	let unlockedSkins = new Set();
 	let unlockedMinis = new Set();
 	let completedAchievements = new Set();
+	let completedAchievementBits = new Set();
 
 	// Proximity Alert Enter-State: targetId -> { inRange: boolean, lastAlert: number }
 	const targetRangeState = new Map();
@@ -39,6 +40,7 @@
 		proximityRadius: 1500,
 		volume: 80,
 		hideUnlocked: true,
+		hideCompletedAchievements: true,
 		toggles: {}
 	};
 
@@ -123,9 +125,15 @@
 			if (r.ok) {
 				const arr = await r.json();
 				const newCompleted = new Set((arr || []).filter(a => a.done).map(a => a.id));
+				const newCompletedBits = new Set();
+				(arr || []).forEach(a => {
+					if (a.bits && Array.isArray(a.bits)) {
+						a.bits.forEach(b => newCompletedBits.add(`${a.id}_${b}`));
+					}
+				});
 				
 				let changed = false;
-				if (newCompleted.size !== completedAchievements.size) {
+				if (newCompleted.size !== completedAchievements.size || newCompletedBits.size !== completedAchievementBits.size) {
 					changed = true;
 				} else {
 					for (const id of newCompleted) {
@@ -134,11 +142,20 @@
 							break;
 						}
 					}
+					if (!changed) {
+						for (const bitKey of newCompletedBits) {
+							if (!completedAchievementBits.has(bitKey)) {
+								changed = true;
+								break;
+							}
+						}
+					}
 				}
 
 				if (changed) {
-					console.log(`[Radar Engine] Achievement update detected: ${newCompleted.size} completed. Refreshing radar...`);
+					console.log(`[Radar Engine] Achievement update detected: ${newCompleted.size} completed (${newCompletedBits.size} bits). Refreshing radar...`);
 					completedAchievements = newCompleted;
+					completedAchievementBits = newCompletedBits;
 					localStorage.setItem(`gw2_cache_achievements_${key}`, JSON.stringify(arr));
 					// Immediately recalculate candidates and update HUD & feed
 					radarEngineTick();
@@ -190,11 +207,23 @@
 			if (cachedAch && !overrideKey) {
 				const arr = JSON.parse(cachedAch);
 				completedAchievements = new Set((arr || []).filter(a => a.done).map(a => a.id));
+				completedAchievementBits = new Set();
+				(arr || []).forEach(a => {
+					if (a.bits && Array.isArray(a.bits)) {
+						a.bits.forEach(b => completedAchievementBits.add(`${a.id}_${b}`));
+					}
+				});
 			} else {
 				const r = await fetch(`https://api.guildwars2.com/v2/account/achievements?access_token=${key}`);
 				if (r.ok) {
 					const arr = await r.json();
 					completedAchievements = new Set((arr || []).filter(a => a.done).map(a => a.id));
+					completedAchievementBits = new Set();
+					(arr || []).forEach(a => {
+						if (a.bits && Array.isArray(a.bits)) {
+							a.bits.forEach(b => completedAchievementBits.add(`${a.id}_${b}`));
+						}
+					});
 					localStorage.setItem(`gw2_cache_achievements_${key}`, JSON.stringify(arr));
 				}
 			}
@@ -286,6 +315,7 @@
 		const activeMapId = getEffectiveMapId();
 		const toggles = radarSettings.toggles || {};
 		const hideUnlocked = (radarSettings.hideUnlocked !== false);
+		const hideCompletedAchievements = (radarSettings.hideCompletedAchievements !== false);
 		const candidates = [];
 
 		// A. Check Wardrobe Vendors
@@ -386,9 +416,11 @@
 			// Check Achievement Layer Toggle
 			if (toggles[a.layer] === false) continue;
 
-			// Check if already completed
-			const isDone = a.achievement_id && completedAchievements.has(parseInt(a.achievement_id));
-			if (isDone && hideUnlocked) continue;
+			// Check if already completed (supports full achievement done or individual bit done)
+			const achId = a.achievement_id ? parseInt(a.achievement_id) : null;
+			const isDone = (achId && completedAchievements.has(achId)) ||
+			               (achId && a.bit !== undefined && completedAchievementBits.has(`${achId}_${a.bit}`));
+			if (isDone && hideCompletedAchievements) continue;
 
 			const dist = calculateDistanceUnits(playerX, playerY, a.pos[0], a.pos[1]);
 			const dirInfo = getCardinalDirection(playerX, playerY, a.pos[0], a.pos[1]);
@@ -397,7 +429,7 @@
 			candidates.push({
 				id: `ach_${a.node}_${a.pos[0]}_${a.pos[1]}`,
 				name: a.node,
-				sub: isDone ? 'Completed' : (a.yields ? a.yields.join(', ') : (a.desc || 'Achievement')),
+				sub: isDone ? 'Completed' : (a.desc || (a.yields ? a.yields.join(', ') : 'Achievement')),
 				type: 'achievement',
 				pos: a.pos,
 				dist: dist,

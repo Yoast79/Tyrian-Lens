@@ -944,6 +944,13 @@
                 "label": "Domaine d'Istan - Perdu dans le temps",
                 "icon": "https://wiki.guildwars2.com/images/7/77/Daybreak.png",
                 "hasColorPicker": true
+              },
+              {
+                "id": "node_ruler_of_the_skies_achievement",
+                "label": "Souverain des cieux",
+                "icon": "https://wiki.guildwars2.com/images/f/fd/Skyscale_%28map_icon%29.png",
+                "tooltip": "Brèches du réel pour les succès 'Souverain des cieux' et 'Chevaucheur de dracaille'.",
+                "hasColorPicker": true
               }
             ]
           },

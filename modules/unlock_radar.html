@@ -460,11 +460,16 @@
 					</div>
 				</div>
 
-				<div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(74, 59, 42, 0.4);">
+				<div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(74, 59, 42, 0.4); display: flex; flex-direction: column; gap: 8px;">
 					<label class="filter-option" style="padding:0; margin:0;" data-tooltip="When checked, only shows vendors and collectibles you have not unlocked yet. Uncheck to inspect all items.">
 						<input type="checkbox" id="hide-unlocked-toggle" checked onchange="toggleHideUnlocked(this.checked)" />
 						<div class="toggle-btn"></div>
 						<span class="label-text" style="font-weight:bold;" data-i18n="radar.hide_unlocked">HIDE ALREADY UNLOCKED COLLECTIBLES</span>
+					</label>
+					<label class="filter-option" style="padding:0; margin:0;" data-tooltip="When checked, only shows achievements and achievement steps you have not completed yet. Uncheck to inspect all achievements.">
+						<input type="checkbox" id="hide-completed-achievements-toggle" checked onchange="toggleHideCompletedAchievements(this.checked)" />
+						<div class="toggle-btn"></div>
+						<span class="label-text" style="font-weight:bold;" data-i18n="radar.hide_completed_achievements">HIDE COMPLETED ACHIEVEMENT STEPS</span>
 					</label>
 				</div>
 			</div>
@@ -627,6 +632,7 @@
 				proximityRadius: 600,
 				volume: 80,
 				hideUnlocked: true,
+				hideCompletedAchievements: true,
 				toggles: {}
 			};
 
@@ -664,6 +670,9 @@
 
 				const hideUnlockedToggle = document.getElementById('hide-unlocked-toggle');
 				if (hideUnlockedToggle) hideUnlockedToggle.checked = (radarSettings.hideUnlocked !== false);
+
+				const hideCompletedAchToggle = document.getElementById('hide-completed-achievements-toggle');
+				if (hideCompletedAchToggle) hideCompletedAchToggle.checked = (radarSettings.hideCompletedAchievements !== false);
 
 				// Initialize Vendor Checkboxes
 				const vendorKeys = [
@@ -716,6 +725,14 @@
 
 			function toggleHideUnlocked(checked) {
 				radarSettings.hideUnlocked = checked;
+				saveSettings();
+				if (window.parent) {
+					window.parent.postMessage({ action: 'requestRadarFeed' }, '*');
+				}
+			}
+
+			function toggleHideCompletedAchievements(checked) {
+				radarSettings.hideCompletedAchievements = checked;
 				saveSettings();
 				if (window.parent) {
 					window.parent.postMessage({ action: 'requestRadarFeed' }, '*');

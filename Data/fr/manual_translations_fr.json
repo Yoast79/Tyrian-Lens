@@ -1422,7 +1422,8 @@
     "unlock_plural": "{0} DÉVERROUILLAGES",
     "units_up": "▲ {0} unités plus haut",
     "units_down": "▼ {0} unités plus bas",
-    "level": "• même niveau"
+    "level": "• même niveau",
+    "hide_completed_achievements": "Masquer les étapes de succès terminées"
   },
   "professions": {
     "guardian": "Gardien",

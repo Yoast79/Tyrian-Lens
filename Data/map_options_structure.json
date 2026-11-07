@@ -944,6 +944,13 @@
                 "label": "Domain of Istan - Lost to Time",
                 "icon": "https://wiki.guildwars2.com/images/7/77/Daybreak.png",
                 "hasColorPicker": true
+              },
+              {
+                "id": "node_ruler_of_the_skies_achievement",
+                "label": "Ruler of the Skies",
+                "icon": "https://wiki.guildwars2.com/images/f/fd/Skyscale_%28map_icon%29.png",
+                "tooltip": "Reality Rifts for the 'Ruler of the Skies' and 'Skyscale Rider' achievements.",
+                "hasColorPicker": true
               }
             ]
           },

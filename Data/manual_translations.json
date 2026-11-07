@@ -766,7 +766,8 @@
     "unlock_plural": "{0} UNLOCKS",
     "units_up": "▲ {0} units up",
     "units_down": "▼ {0} units down",
-    "level": "• level"
+    "level": "• level",
+    "hide_completed_achievements": "Hide Completed Achievement Steps"
   },
   "professions": {
     "guardian": "Guardian",

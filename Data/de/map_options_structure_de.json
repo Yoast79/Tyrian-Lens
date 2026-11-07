@@ -944,6 +944,13 @@
                 "label": "Domäne Istan - Der Zeit verloren",
                 "icon": "https://wiki.guildwars2.com/images/7/77/Daybreak.png",
                 "hasColorPicker": true
+              },
+              {
+                "id": "node_ruler_of_the_skies_achievement",
+                "label": "Herrscher der Himmel",
+                "icon": "https://wiki.guildwars2.com/images/f/fd/Skyscale_%28map_icon%29.png",
+                "tooltip": "Realitätsrisse für die Erfolge 'Herrscher der Himmel' und 'Himmelsschuppen-Reiter'.",
+                "hasColorPicker": true
               }
             ]
           },
