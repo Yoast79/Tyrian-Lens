@@ -25,7 +25,8 @@
     "Report Bug / Feature": "Reportar error / Sugerencia",
     "API Keys": "Claves API",
     "Settings": "Ajustes",
-    "Update Available!": "¡Actualización disponible!"
+    "Update Available!": "¡Actualización disponible!",
+    "Unlock Radar": "Radar de Desbloqueos"
   },
   "help": {
     "title": "TYRIAN LENS",
@@ -156,7 +157,8 @@
       "waypoint_copied": "PUNTO DE RUTA COPIADO",
       "poi_copied": "PUNTO DE INTERÉS COPIADO",
       "coords_copied": "COORDENADAS COPIADAS",
-      "marker_removed": "MARCADOR ELIMINADO"
+      "marker_removed": "MARCADOR ELIMINADO",
+      "chatlink_copied": "ENLACE DE CHAT COPIADO"
     }
   },
   "settings": {
@@ -257,6 +259,8 @@
     "cancel": "Cancelar",
     "submit": "Enviar",
     "save": "Guardar",
+    "remove": "Eliminar",
+    "no_data": "SIN DATOS",
     "undercut": "PRECIO SUPERADO",
     "overbid": "PUJA SUPERADA",
     "search_currencies": "BUSCAR TODAS LAS DIVISAS...",
@@ -291,17 +295,17 @@
     "sections": {
       "map-options": "Opciones de mapa",
       "farming_nodes": "Nodos de recolección",
-      "miscellaneous": "Varios"
+      "miscellaneous": "Miscelánea"
     },
     "categories": {
-      "mapicons": "Iconos del mapa",
-      "maplabels": "Etiquetas del mapa",
+      "mapicons": "Iconos de mapa",
+      "maplabels": "Etiquetas de mapa",
       "ore": "Mineral",
       "wood": "Madera",
       "plants": "Plantas",
-      "hunting": "Caza y Eventos",
+      "hunting": "Caza y eventos",
       "trading": "Comerciantes y PNJ",
-      "chests_and_achievements": "Cofres y Logros",
+      "chests_and_achievements": "Cofres y logros",
       "festivals": "Festivales"
     },
     "items": {
@@ -326,7 +330,7 @@
         "tooltip": "Mostrar u ocultar ubicaciones de puntos de héroe."
       },
       "mastery": {
-        "label": "Perspicacias de maestría",
+        "label": "Puntos de dominio",
         "tooltip": "Mostrar u ocultar perspicacias de maestría."
       },
       "node_zone_portal": {
@@ -354,37 +358,37 @@
         "tooltip": "Mostrar u ocultar límites de sector y elegir color."
       },
       "node_gold_ore": {
-        "label": "Oro"
+        "label": "Mineral de oro"
       },
       "node_silver_ore": {
-        "label": "Plata"
+        "label": "Mineral de plata"
       },
       "node_iron_ore": {
-        "label": "Hierro"
+        "label": "Mineral de hierro"
       },
       "node_copper_ore": {
-        "label": "Cobre"
+        "label": "Mineral de cobre"
       },
       "node_platinum_ore": {
-        "label": "Platino"
+        "label": "Mineral de platino"
       },
       "node_mithril_ore": {
-        "label": "Mitrilo"
+        "label": "Mineral de mithril"
       },
       "node_orichalcum_ore": {
-        "label": "Oricalco"
+        "label": "Mineral de oricalco"
       },
       "node_quartz_crystal": {
         "label": "Cristal de cuarzo"
       },
       "node_rich_ore_vein": {
-        "label": "Filones ricos no categorizados"
+        "label": "Vetas ricas de mineral (sin categorizar)"
       },
       "node_soft_wood": {
         "label": "Madera blanda"
       },
       "node_seasoned_wood": {
-        "label": "Madera curtida"
+        "label": "Madera curada"
       },
       "node_hard_wood": {
         "label": "Madera dura"
@@ -402,34 +406,34 @@
         "label": "Cebollas"
       },
       "node_potato_plants": {
-        "label": "Patata"
+        "label": "Patatas"
       },
       "node_clam_plants": {
-        "label": "Almeja"
+        "label": "Almejas"
       },
       "node_strawberry_plants": {
-        "label": "Parche de fresas"
+        "label": "Fresas"
       },
       "node_coral_plants": {
         "label": "Coral"
       },
       "node_seaweed_plants": {
-        "label": "Alga"
+        "label": "Algas"
       },
       "node_sugar_pumpkin_plants": {
         "label": "Calabaza dulce"
       },
       "node_artichoke_plants": {
-        "label": "Alcachofa"
+        "label": "Alcachofas"
       },
       "node_asparagus_plants": {
-        "label": "Espárrago"
+        "label": "Espárragos"
       },
       "node_passiflora_plants": {
         "label": "Pasiflora en flor"
       },
       "node_toxic_seedling_plants": {
-        "label": "Brotes tóxicos",
+        "label": "Brote tóxico",
         "tooltip": "Un nodo en un grupo dará una muestra impecable de esporas tóxicas."
       },
       "node_black_crocus_plants": {
@@ -442,13 +446,13 @@
         "label": "Mejillones"
       },
       "node_omnomberry_plants": {
-        "label": "Bayas omnom"
+        "label": "Omnibayas"
       },
       "node_orrian_truffle_plants": {
-        "label": "Trufa de Orr"
+        "label": "Trufa orriana"
       },
       "node_sawgill_mushroom_plants": {
-        "label": "Champiñones de agalla de sierra"
+        "label": "Champiñones de láminas"
       },
       "node_jungle_plants_plants": {
         "label": "Plantas de la jungla"
@@ -466,7 +470,7 @@
         "label": "Verduras variadas"
       },
       "node_world_boss": {
-        "label": "Jefes y Campeones",
+        "label": "Jefes del mundo y campeones",
         "tooltip": "Un círculo verde parpadeante indica cuándo está activo el jefe del mundo."
       },
       "node_event_group": {
@@ -486,7 +490,7 @@
         "tooltip": "Posibles ubicaciones de aparición en Tyria."
       },
       "node_bounty": {
-        "label": "Recompensas",
+        "label": "Contratos de recompensa",
         "tooltip": "Acepta primero la recompensa en el tablero antes de que aparezca."
       },
       "node_ranger_pet": {
@@ -494,7 +498,7 @@
         "tooltip": "Las mascotas individuales se pueden buscar en el menú de búsqueda."
       },
       "node_fishing_hole": {
-        "label": "Zonas de pesca",
+        "label": "Bancos de peces",
         "tooltip": "Posibles ubicaciones de pesca en Tyria."
       },
       "node_treasure_mushroom": {
@@ -502,29 +506,412 @@
         "tooltip": "Posibles ubicaciones de aparición."
       },
       "node_matrix_cube_key": {
-        "label": "Llave de cubo matriz",
+        "label": "Llave del cubo matriz",
         "tooltip": "Posibles ubicaciones en el reactor Thaumanova."
       },
       "node_fireworks_launchers": {
-        "label": "Festival del Dragón - Lanzadores de fuegos artificiales"
+        "label": "El Retorno del Dragón - Lanzadores de fuegos artificiales"
       },
       "node_dragon_pinata": {
-        "label": "Festival del Dragón - Piñatas de dragón"
+        "label": "El Retorno del Dragón - Piñatas de dragón"
       },
       "node_zephyrite_kite_basket": {
-        "label": "Festival de los Cuatro Vientos - Cestas de cometas"
+        "label": "Festival de los Cuatro Vientos - Cestas de cometas cefritas"
       },
       "node_carving_pumpkin": {
-        "label": "Halloween - Calabazas talladas"
+        "label": "Halloween - Calabazas para tallar"
       },
       "node_orphan": {
         "label": "Día Invernal - Huérfanos"
+      },
+      "node_pact_supply_network_agent": {
+        "label": "Agentes de la red de suministros del Pacto"
+      },
+      "node_historian_elisa": {
+        "label": "Historiadora del Priorato Elisa"
+      },
+      "node_npc_merchant": {
+        "label": "Comerciantes"
+      },
+      "node_npc_dungeon_merchant": {
+        "label": "Comerciantes de mazmorras"
+      },
+      "node_npc_event_merchant": {
+        "label": "Comerciantes de eventos"
+      },
+      "node_npc_karma_merchant": {
+        "label": "Comerciantes de karma"
+      },
+      "node_npc_fishmonger": {
+        "label": "Suministros de pesca"
+      },
+      "node_festival_merchant": {
+        "label": "Comerciantes de festivales"
+      },
+      "node_npc_gathering_merchant": {
+        "label": "Comerciantes de recolección"
+      },
+      "node_npc_laurel_merchant": {
+        "label": "Comerciantes de laureles"
+      },
+      "node_npc_guild_commendation": {
+        "label": "Comerciantes de recomendaciones de clan"
+      },
+      "node_npc_bank": {
+        "label": "Banco de cuenta"
+      },
+      "node_npc_guild_vault": {
+        "label": "Bóveda de clan"
+      },
+      "node_npc_trading_post": {
+        "label": "Compañía de Comercio del León Negro"
+      },
+      "node_npc_map_collector": {
+        "label": "Coleccionistas de monedas de mapa"
+      },
+      "node_npc_reinforce_armor": {
+        "label": "Reforzar armadura (Yunques)"
+      },
+      "node_npc_makeover_preview": {
+        "label": "Vista previa de cambio de imagen"
+      },
+      "node_npc_activity": {
+        "label": "Actividades"
+      },
+      "node_npc_adventure": {
+        "label": "Aventuras"
+      },
+      "node_npc_speed": {
+        "label": "Mejoras de velocidad"
+      },
+      "node_npc_scout": {
+        "label": "Exploradores"
+      },
+      "node_npc_race": {
+        "label": "Organizadores de carreras"
+      },
+      "node_npc_mount_rental": {
+        "label": "Alquiler de monturas"
+      },
+      "node_npc_misc": {
+        "label": "PNJ diversos"
+      },
+      "node_npc_faction_provisioner": {
+        "label": "Aprovisionadores de facción"
+      },
+      "node_npc_mystic_forge": {
+        "label": "Forja Mística"
+      },
+      "node_npc_armorsmith": {
+        "label": "Forjador de armaduras"
+      },
+      "node_npc_artificer": {
+        "label": "Artificiero"
+      },
+      "node_npc_chef": {
+        "label": "Cocinero"
+      },
+      "node_npc_huntsman": {
+        "label": "Cazador"
+      },
+      "node_npc_jeweler": {
+        "label": "Joyero"
+      },
+      "node_npc_leatherworker": {
+        "label": "Peletero"
+      },
+      "node_npc_tailor": {
+        "label": "Sastre"
+      },
+      "node_npc_weaponsmith": {
+        "label": "Armero"
+      },
+      "node_dive_master_achievement": {
+        "label": "Maestro del buceo (Gafas de buceo)"
+      },
+      "node_sunken_chest_chests": {
+        "label": "Tyria central - Cofres hundidos"
+      },
+      "node_silverwastes_chests": {
+        "label": "Páramos Argentados - Cofres de bandidos perdidos"
+      },
+      "node_silverwastes_lost_badges_achievement": {
+        "label": "Páramos Argentados - Insignias perdidas"
+      },
+      "node_silverwastes_golden_lost_badges_achievement": {
+        "label": "Páramos Argentados - Insignias doradas perdidas"
+      },
+      "node_dry_top_buried_locked_chest_chests": {
+        "label": "Cima Seca - Cofres cerrados enterrados"
+      },
+      "node_dry_top_coin_collector_achievement": {
+        "label": "Cima Seca - Coleccionista de monedas"
+      },
+      "node_airship_cargo": {
+        "label": "Umbral Verdeante - Cargamentos de aeronave"
+      },
+      "node_exalted_chest": {
+        "label": "Valle Áurico - Cofres de los Exaltados"
+      },
+      "node_auric_basin_no_mask_left_behind_achievement": {
+        "label": "Valle Áurico - Ni una sola máscara atrás"
+      },
+      "node_crystallized_supply_cache": {
+        "label": "Profundidades Enredadas - Alijos de suministros cristalizados"
+      },
+      "node_noxious_seed_pod": {
+        "label": "Boca del Dragón - Vainas de semillas nocivas"
+      },
+      "node_bloodstone_crystal": {
+        "label": "Pantano de la Hematites - Cristales de hematites"
+      },
+      "node_petrified_stump": {
+        "label": "Bahía de las Ascuas - Tocones petrificados"
+      },
+      "node_skritt_stash:": {
+        "label": "Bahía de las Ascuas - Alijos de skritts"
+      },
+      "node_skritt_stash": {
+        "label": "Bahía de las Ascuas - Alijos de skritts"
+      },
+      "node_ember_bay_token_collector_achievement": {
+        "label": "Bahía de las Ascuas - Coleccionista de fichas"
+      },
+      "node_winterberry_bush": {
+        "label": "Frontera de Escarchamarga - Arbustos de bayas invernales"
+      },
+      "node_bitterfrost_frontier_icebound_chest_chests": {
+        "label": "Frontera de Escarchamarga - Cofres cubiertos de hielo"
+      },
+      "node_jade_fragment": {
+        "label": "Lago Doric - Fragmentos de jade"
+      },
+      "node_primordal_orchid": {
+        "label": "Draconis Mons - Orquídeas primordiales"
+      },
+      "node_draconis_mons_rock_collector_achievement": {
+        "label": "Draconis Mons - Coleccionista de rocas"
+      },
+      "node_lessons_learned_achievement": {
+        "label": "Draconis Mons - Lecciones aprendidas"
+      },
+      "node_orrian_oyster": {
+        "label": "Desembarco de la Sirena - Ostras orrianas"
+      },
+      "node_sirens_landing_storyteller_achievement": {
+        "label": "Desembarco de la Sirena - Narrador de historias"
+      },
+      "node_sirens_landing_waterlogged_chest_chests": {
+        "label": "Desembarco de la Sirena - Cofres anegados"
+      },
+      "node_bleached_bones_achievement": {
+        "label": "Oasis de Cristal - Huesos blanqueados"
+      },
+      "node_lost_dwarven_chest_achievement": {
+        "label": "Tierras Altas del Desierto - Restos enanos"
+      },
+      "node_forgotten_debris_achievement": {
+        "label": "Ribera del Elon - Escombros de los Olvidados"
+      },
+      "node_shadows_provisions_achievement": {
+        "label": "La Desolación - Provisiones de las Sombras"
+      },
+      "node_timeworn_bust_achievement": {
+        "label": "Dominio de Vabbi - Destructor de azotes"
+      },
+      "node_praise_joko_achievement": {
+        "label": "Dominio de Vabbi - ¡Alabado sea Joko!"
+      },
+      "node_crystal_desert_trade_cache_chests": {
+        "label": "Alijos comerciales del Desierto de Cristal"
+      },
+      "node_crystal_desert_sand_pile_chests": {
+        "label": "Montones de arena del Desierto de Cristal"
+      },
+      "node_difluorite_crystal": {
+        "label": "Islas Arenosas - Cristal de difluorita"
+      },
+      "node_mistonium": {
+        "label": "Acantilados de Jahai - Nieblonio"
+      },
+      "node_kournan_supply_cache": {
+        "label": "Dominio de Kourna - Alijos de suministros de Kourna"
+      },
+      "node_dragon_crystal_node": {
+        "label": "Picos del Trueno - Nodo de cristal de dragón"
+      },
+      "node_thunderhead_peak_dwarven_chest_chests": {
+        "label": "Picos del Trueno - Cofres enanos"
+      },
+      "node_mistborn_mote": {
+        "label": "Caída del Dragón - Motas de la Niebla"
+      },
+      "node_domain_of_istan_lost_to_time_achievement": {
+        "label": "Dominio de Istan - Perdido en el tiempo"
+      },
+      "node_eternal_ice": {
+        "label": "Marcas de Bjora - Hielo eterno"
+      },
+      "node_bjora_marches_treasure_hunter_achievement": {
+        "label": "Marcas de Bjora - Buscador de tesoros"
+      },
+      "node_salvage_pile": {
+        "label": "Costa de Bosquellovizna - Montones de chatarra"
+      },
+      "node_lost_charr_supply_drop": {
+        "label": "Costa de Bosquellovizna - Entrega de suministros charr perdida"
+      },
+      "node_hatched_chili_pepper_bush": {
+        "label": "Valle de Grothmar - Arbustos de chiles nacidos"
+      },
+      "node_illuminating_seitung_province_achievement": {
+        "label": "Provincia de Seitung - Iluminando la provincia de Seitung"
+      },
+      "node_spiritual_childcare_achievement": {
+        "label": "Provincia de Seitung - Guardería espiritual"
+      },
+      "node_light_these_streets_achievement": {
+        "label": "Ciudad de Nueva Kaineng - Ilumina estas calles"
+      },
+      "node_little_foxes_in_the_big_city_achievement": {
+        "label": "Ciudad de Nueva Kaineng - Zorritos en la gran ciudad"
+      },
+      "node_cleanup_duty_achievement": {
+        "label": "Ciudad de Nueva Kaineng - Tareas de limpieza"
+      },
+      "node_read_the_secret_of_the_vault_achievement": {
+        "label": "Ciudad de Nueva Kaineng - Leer 'El secreto de la cámara'"
+      },
+      "node_the_history_of_new_kaineng_achievement": {
+        "label": "Ciudad de Nueva Kaineng - La historia de Nueva Kaineng"
+      },
+      "node_petrified_echovald_sapling": {
+        "label": "Echovald Salvaje - Retoños de Echovald petrificados"
+      },
+      "node_lighting_the_echovald_wilds_achievement": {
+        "label": "Echovald Salvaje - Iluminando Echovald Salvaje"
+      },
+      "node_what_did_the_shrine_guardian_say_achievement": {
+        "label": "Echovald Salvaje - ¿Qué dijeron los guardianes del santuario?"
+      },
+      "node_dragons_end_jadeite_vein": {
+        "label": "Extremo del Dragón - Vetas de jadeíta"
+      },
+      "node_lighting_dragons_end_achievement": {
+        "label": "Extremo del Dragón - Iluminando el Extremo del Dragón"
+      },
+      "node_dead_play_achievement": {
+        "label": "Extremo del Dragón - Obra mortal"
+      },
+      "node_respects_paid_achievement": {
+        "label": "Extremo del Dragón - Presentar respetos"
+      },
+      "node_gyala_delve_jadeite_vein": {
+        "label": "Hondonada de Gyala - Vetas de jadeíta"
+      },
+      "node_playing_with_the_infants_achievement": {
+        "label": "Hondonada de Gyala - Jugando con las crías"
+      },
+      "node_lesser_arcane_chest_chests": {
+        "label": "Secrets of the Obscure - Cofres arcanos menores"
+      },
+      "node_greater_arcane_chest_chests": {
+        "label": "Secrets of the Obscure - Cofres arcanos mayores"
+      },
+      "node_illuminating_skywatch_archipelago_achievement": {
+        "label": "Archipiélago de Selva de Cristal - Iluminando el archipiélago"
+      },
+      "node_rise_and_shrine_achievement": {
+        "label": "Archipiélago de Selva de Cristal - Madruga y venera"
+      },
+      "node_static_charge": {
+        "label": "Archipiélago de Selva de Cristal - Carga estática"
+      },
+      "node_illuminating_amnytas_achievement": {
+        "label": "Amnytas - Iluminando Amnytas"
+      },
+      "node_fantastic_flying_foxes_achievement": {
+        "label": "Amnytas - Fantásticos zorros voladores"
+      },
+      "node_pinch_of_stardust": {
+        "label": "Amnytas - Pizca de polvo estelar"
+      },
+      "node_astral_ward_research_achievement": {
+        "label": "Amnytas - Investigación del Resguardo Astral"
+      },
+      "node_illuminating_inner_nayos_achievement": {
+        "label": "Nayos Interior - Iluminando Nayos Interior"
+      },
+      "node_shrine_finder_achievement": {
+        "label": "Nayos Interior - Buscador de santuarios"
+      },
+      "node_calcified_gasp": {
+        "label": "Nayos Interior - Jadeo calcificado"
+      },
+      "node_sorrows_lost_achievement": {
+        "label": "Torre del Brujo - El dolor de los perdidos"
+      },
+      "node_honey_flower": {
+        "label": "Costa de las Tierras Bajas - Flores de miel"
+      },
+      "node_lowland_pine_sapling": {
+        "label": "Costa de las Tierras Bajas - Retoños de pino de las tierras bajas"
+      },
+      "node_titan_ore": {
+        "label": "Janthir Syntri - Ámbar podrido / Mineral de titán"
+      },
+      "node_mursaat_obsidian": {
+        "label": "Yermos Abrasados - Obsidiana mursaat"
+      },
+      "node_titan_heatstone": {
+        "label": "Yermos Abrasados - Piedra térmica de titán"
+      },
+      "node_minor_detected_treasure": {
+        "label": "Tesoro detectado"
+      },
+      "node_major_detected_treasure": {
+        "label": "Tesoro mayor detectado"
+      },
+      "node_life_in_the_lowlands_achievement": {
+        "label": "Costa de las Tierras Bajas - Vida en las tierras bajas"
+      },
+      "node_chasing_waterfalls_achievement": {
+        "label": "Costa de las Tierras Bajas - Tras las cascadas"
+      },
+      "node_shard_scouter_achievement": {
+        "label": "Janthir Syntri - Explorador de esquirlas"
+      },
+      "node_scouring_the_archive_achievement": {
+        "label": "Yermos Abrasados - Registrando el archivo"
+      },
+      "node_aetherlocation_treasure": {
+        "label": "Tesoro de eterlocalización"
+      },
+      "node_magic_mirror": {
+        "label": "Espejo mágico"
+      },
+      "node_node_small_obscure_chest_chests": {
+        "label": "Cofres oscuros"
       }
     },
     "syncing_rotation": "SINCRONIZANDO CON LA TABLA DE ROTACIÓN...",
     "copied_waypoints": "6 PUNTOS DE RUTA COPIADOS",
     "rotation_error": "ERROR DE SINCRONIZACIÓN",
-    "copy_waypoints_tip": "Copiar puntos de ruta"
+    "copy_waypoints_tip": "Copiar puntos de ruta",
+    "subcategories": {
+      "vendors": "Comerciantes y PNJ",
+      "crafting_vendors": "Comerciantes de artesanía",
+      "core_tyria": "Tyria central",
+      "heart_of_thorns": "Heart of Thorns",
+      "living_world_season_3": "3.ª temporada de Mundo Viviente",
+      "path_of_fire": "Path of Fire",
+      "living_world_season_4": "4.ª temporada de Mundo Viviente",
+      "the_icebrood_saga": "Sangre y Hielo",
+      "end_of_dragons": "End of Dragons",
+      "secrets_of_the_obscure": "Secrets of the Obscure",
+      "janthir_wilds": "Tierras Salvajes de Janthir",
+      "visions_of_eternity": "Visiones de la Eternidad"
+    }
   },
   "motd": {
     "active": true,
@@ -561,6 +948,8 @@
     "cancel": "Cancelar",
     "submit": "Enviar",
     "save": "Guardar",
+    "remove": "Eliminar",
+    "no_data": "SIN DATOS",
     "undercut": "PRECIO SUPERADO",
     "overbid": "PUJA SUPERADA"
   },
@@ -591,7 +980,18 @@
     "opt_sector": "Sectores",
     "opt_borders": "Fronteras",
     "opt_overlay": "Superposición de color de sector",
-    "opt_scoreboard": "Marcador"
+    "opt_scoreboard": "Marcador",
+    "red": "Rojo",
+    "green": "Verde",
+    "blue": "Azul",
+    "neutral": "Neutral",
+    "castle": "Castillo",
+    "keep": "Fortaleza",
+    "tower": "Torre",
+    "camp": "Campamento",
+    "ruins": "Ruinas de poder",
+    "mercenary": "Campamento mercenario",
+    "remove": "Eliminar"
   },
   "characters": {
     "title": "Lista de personajes",
@@ -602,7 +1002,17 @@
     "tip_bag_slots": "Expansiones de casilla de saco",
     "tip_crafting_licenses": "Licencias de artesanía activas",
     "tip_build_tabs": "Pestañas de plantilla de clan",
-    "tip_equip_tabs": "Pestañas de plantilla de equipamiento"
+    "tip_equip_tabs": "Pestañas de plantilla de equipamiento",
+    "born": "CREADO:",
+    "playtime": "TIEMPO DE JUEGO:",
+    "next_birthday": "PRÓXIMO CUMPLEAÑOS:",
+    "in_days": "EN {0} DÍAS",
+    "deaths": "MUERTES:",
+    "last_login": "ÚLTIMO ACCESO:",
+    "days_suffix": "DÍAS",
+    "hrs_suffix": "H",
+    "no_api_key": "No se detectó clave API.",
+    "unauthorized": "Clave API no autorizada"
   },
   "wallet": {
     "title": "Monedero de la cuenta",
@@ -612,20 +1022,29 @@
   },
   "fishing": {
     "title": "REGIONES DE PESCA",
-    "watchlist_overlay": "SUPERPOSICIÓN DE LISTA DE SEGUIMIENTO",
+    "watchlist_overlay": "SUPERPOSICIÓN DE SEGUIMIENTO",
     "search_ph": "BUSCAR PECES...",
-    "loading": "CARGANDO DATOS DE PESCA..."
+    "loading": "CARGANDO DATOS DE PESCA...",
+    "no_matches": "NINGÚN PEZ COINCIDE CON LA BÚSQUEDA",
+    "all_complete": "TODOS LOS MAPAS SEGUIDOS COMPLETADOS",
+    "api_error": "ERROR AL CARGAR LA API DE GW2"
   },
   "clears": {
     "title": "Completados semanales",
     "watchlist_screen": "Lista de seguimiento en pantalla",
     "watchlist_btn": "Lista de seguimiento",
-    "overview_title": "Resumen de la lista de seguimiento",
+    "overview_title": "Resumen de seguimiento",
     "syncing": "SINCRONIZANDO DATOS DE COMPLETADOS...",
     "cleared": "COMPLETADO",
     "uncleared": "PENDIENTE",
-    "no_items": "No hay elementos en tu lista de seguimiento.<br><br>Haz clic en los iconos de rayos X junto a los elementos para seguirlos.",
-    "wing": "Ala"
+    "no_items": "No hay elementos en tu lista de seguimiento.<br><br>Haz clic en el icono de rayos X junto a los elementos para seguirlos.",
+    "wing": "Ala {0}",
+    "close": "Cerrar",
+    "raids": "INCURSIONES",
+    "strike_missions": "MISIONES DE ATAQUE",
+    "dungeons": "MAZMORRAS",
+    "fractals": "FRACTALES",
+    "convergences": "CONVERGENCIAS"
   },
   "farming": {
     "title": "SEGUIMIENTO DE FARMEO",
@@ -637,20 +1056,37 @@
     "tab_history": "HISTORIAL Y GRÁFICOS",
     "currencies_gained": "DIVISAS OBTENIDAS",
     "items_gained": "OBJETOS OBTENIDOS",
-    "no_active_session": "SIN SESIÓN ACTIVA",
-    "currency_gains_over_time": "GANANCIAS DE DIVISAS A LO LARGO DEL TIEMPO",
+    "no_active_session": "NO HAY SESIÓN ACTIVA",
+    "currency_gains_over_time": "GANANCIAS DE DIVISAS EN EL TIEMPO",
     "day": "DÍA",
     "week": "SEMANA",
     "month": "MES",
     "year": "AÑO",
     "session_log": "REGISTRO DE SESIÓN",
-    "delete_entry": "Eliminar entrada"
+    "delete_entry": "ELIMINAR ENTRADA",
+    "stop_session": "DETENER SESIÓN",
+    "wipe_data": "BORRAR DATOS",
+    "session_details": "DETALLES DE LA SESIÓN",
+    "close": "CERRAR",
+    "tracking_started": "SEGUIMIENTO INICIADO...",
+    "session_ended": "SESIÓN FINALIZADA",
+    "fetching_snapshot": "OBTENIENDO INSTANTÁNEA...",
+    "api_error": "ERROR DE API",
+    "confirm_wipe": "¿Estás seguro de que deseas borrar todo el historial de sesiones? Esta acción no se puede deshacer.",
+    "confirm_delete_session": "¿Estás seguro de que deseas eliminar esta entrada de sesión?"
   },
   "hero": {
     "attributes": "Atributos",
     "copy_build": "Copiar build",
     "copy_equip": "Copier l'équipement",
-    "save_to_planner": "Guardar en el planificador"
+    "save_to_planner": "Guardar en el planificador",
+    "skills": "HABILIDADES",
+    "weapon": "ARMA",
+    "utility": "UTILIDADES",
+    "build": "BUILD",
+    "syncing": "SINCRONIZANDO DATOS DEL HÉROE...",
+    "equipment_links": "ENLACES DE EQUIPAMIENTO",
+    "enter_build_name": "Introduce el nombre del build:"
   },
   "crafting": {
     "account_unlocks": "Desbloqueos de cuenta",
@@ -659,7 +1095,116 @@
     "auto_update_mats": "ACTUALIZAR MATERIALES PROPIOS CADA MINUTO",
     "use_promotions": "USAR PROMOCIONES DE OBJETOS",
     "syncing": "SINCRONIZANDO RECETAS...",
-    "may_take_minute": "ESTO PUEDE TARDAR UN MINUTO"
+    "may_take_minute": "ESTO PUEDE TARDAR UN MINUTO",
+    "tab_calculator": "Calculadora de artesanía",
+    "tab_unlocks": "Desbloqueos de cuenta",
+    "search_recipes": "Buscar recetas...",
+    "filter_disc_all": "Todas las disciplinas",
+    "filter_status_all": "Todos los estados",
+    "filter_status_unlocked": "Desbloqueado",
+    "filter_status_locked": "Bloqueado",
+    "unlocked_count": "Desbloqueado: {0} / {1}",
+    "search_item": "BUSCAR OBJETO FABRICABLE...",
+    "quantity": "Cantidad:",
+    "opt_craft_precursors": "FABRICAR PRECURSORES",
+    "opt_craft_dailies": "FABRICAR ENFRIAMIENTOS DIARIOS",
+    "opt_allow_forge": "PERMITIR PROMOCIONES DE FORJA MÍSTICA",
+    "card_direct_buy": "Compra directa en bazar",
+    "card_direct_buy_sub": "Compra instantánea en bazar",
+    "card_direct_sell": "Venta directa en bazar",
+    "card_direct_sell_sub": "Venta instantánea en bazar",
+    "card_est_cost": "Coste estimado de artesanía",
+    "card_est_cost_sub": "Basado en precios de componentes",
+    "card_currency_cost": "Coste total en monedas",
+    "card_currency_cost_sub": "Monedas especiales sin oro",
+    "card_raw_gold": "Oro bruto / Mercader",
+    "card_raw_gold_sub": "Costes fijos de mercader",
+    "card_savings": "Ahorro frente a compra directa",
+    "card_savings_sub": "En comparación con la compra instantánea",
+    "card_profit_instant": "Beneficio (Orden de venta instantánea)",
+    "card_profit_instant_sub": "Tras el 15% de impuestos del bazar",
+    "card_profit_offer": "Beneficio (Oferta de venta)",
+    "card_profit_offer_sub": "Tras el 15% de impuestos del bazar",
+    "subtab_wiki": "Desglose completo de materiales (Wiki)",
+    "subtab_shopping": "Lista de compras categorizada",
+    "section_tp": "Objetos comerciables (Bazar)",
+    "section_vendor": "Compras de mercader y monedas fijas",
+    "section_bound": "Objetos vinculados a la cuenta y monedas",
+    "section_currencies": "Monedas especiales requeridas",
+    "col_item": "Objeto",
+    "col_req_qty": "Cantidad requerida",
+    "col_owned": "En propiedad (deducido)",
+    "col_to_buy": "Cantidad a comprar",
+    "col_needed": "Necesario",
+    "col_unit_price": "Precio unitario",
+    "col_est_cost": "Coste estimado",
+    "col_source": "Origen / Mercader",
+    "col_acquisition": "Método de obtención",
+    "tot_tp": "Total Bazar",
+    "tot_vendor": "Total Mercader / Oro bruto",
+    "tot_bound": "Objetos vinculados a la cuenta",
+    "tot_grand": "Coste total de bolsillo",
+    "tot_grand_sub": "Materiales de bazar + Oro de mercader",
+    "disc_required_prefix": "REQUERIDO >",
+    "disc_level": "Nivel {0}",
+    "disc_required_tag": "Requerido",
+    "disc_alternative_tag": "Alternativa",
+    "disc_ready": "Listo",
+    "disc_none_forge": "Ninguno (Forjado en la Forja Mística)",
+    "disc_none_forge_desc": "No se requiere ninguna disciplina (Forja Mística).",
+    "disc_no_char": "Ningún personaje cumple {0} {1}+",
+    "disc_connect_api": "Conecta una clave API para verificar personajes",
+    "empty_state": "SELECCIONA UN OBJETO PARA GENERAR EL DESGLOSE",
+    "calculating": "CALCULANDO DATOS DE LA RECETA...",
+    "calculating_sub": "Consultando precios y listas de materiales...",
+    "btn_efficiency": "Abrir en gw2efficiency",
+    "modal_title": "¿Abrir en gw2efficiency?",
+    "modal_desc": "Estás a punto de abrir gw2efficiency en tu navegador web externo para inspeccionar {0}.",
+    "modal_dont_show": "No volver a preguntar",
+    "modal_cancel": "Cancelar",
+    "modal_open": "Abrir gw2efficiency",
+    "free_owned": "En propiedad",
+    "free_currency": "Gratis / Moneda",
+    "disc_armorsmith": "Forjador de armaduras",
+    "disc_artificer": "Artificiero",
+    "disc_chef": "Cocinero",
+    "disc_huntsman": "Cazador",
+    "disc_jeweler": "Joyero",
+    "disc_leatherworker": "Peletero",
+    "disc_scribe": "Escriba",
+    "disc_tailor": "Sastre",
+    "disc_weaponsmith": "Armero",
+    "disc_handiworker": "Manitas",
+    "disc_mystic_forge": "Forja Mística",
+    "cat_refinement": "Refinamiento",
+    "cat_armor": "Armadura",
+    "cat_weapon": "Arma",
+    "cat_component": "Componente",
+    "cat_consumable": "Consumible",
+    "cat_ingredientcooking": "Ingrediente de cocina",
+    "cat_legendarycomponent": "Componente legendario",
+    "cat_refinementectoplasm": "Refinamiento de ectoplasma",
+    "cat_refinementobsidian": "Refinamiento de obsidiana",
+    "cat_longbow": "Arco largo",
+    "cat_shortbow": "Arco corto",
+    "cat_harpoongun": "Fusil submarino",
+    "status_ready": "✓ Listo",
+    "status_need": "⚠️ Necesita {0}",
+    "api_connected": "✓ API de cuenta conectada",
+    "api_none": "Sin clave API conectada",
+    "evaluated_chars": "({0} personajes de la cuenta evaluados)",
+    "no_tradable_items": "No se requieren objetos intercambiables.",
+    "no_vendor_items": "No se requieren compras de mercaderes.",
+    "no_bound_items": "No se requieren objetos vinculados a la cuenta.",
+    "no_currency_items": "No se requieren monedas especiales.",
+    "items_needed": "{0} objetos necesarios",
+    "owned_on_account": "{0} en posesión de la cuenta",
+    "units_to_buy": "{0} objetos ({1} unidades para comprar)",
+    "tot_tp_header": "TOTAL BAZAR ({0} objetos)",
+    "tot_vendor_header": "TOTAL COMPRAS DE MERCADER ({0} objetos)",
+    "tot_bound_header": "TOTAL VINCULADOS A LA CUENTA ({0} objetos)",
+    "section_disciplines": "Disciplinas de artesanía requeridas",
+    "opt_auto_refresh": "Actualizar mat. auto (1m)"
   },
   "pvp": {
     "title": "Módulo de PvP",
@@ -685,7 +1230,29 @@
     "clear_prompt": "¿Seguro que quieres borrar la build actual? Esta acción no se puede deshacer.",
     "select_skill": "SELECCIONAR HABILIDAD",
     "select_option": "Seleccionar opción",
-    "apply_all": "Aplicar a todos los compatibles"
+    "apply_all": "Aplicar a todos los compatibles",
+    "copy_tooltip": "Copiar código de build del juego<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Copia un enlace de plantilla de build estándar de Guild Wars 2 al portapapeles para importar rasgos, especializaciones y habilidades directamente en el juego. Nota: Las estadísticas del equipo, armas y sellos no son compatibles con el sistema del juego y deben configurarse manualmente.</span>",
+    "share_tooltip": "Compartir perfil de Lens<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Genera un código de perfil de build completo para otros usuarios de Tyrian Lens. Nota: Los perfiles de Lens son exclusivos de Tyrian Lens y no se pueden importar directamente al juego.</span>",
+    "clear_tooltip": "Borrar build actual",
+    "save_tooltip": "Guardar build actual",
+    "load_tooltip": "Cargar build guardada",
+    "slots": {
+      "helm": "Armadura de cabeza",
+      "shoulders": "Armadura de hombros",
+      "coat": "Armadura de pecho",
+      "gloves": "Armadura de manos",
+      "leggings": "Armadura de piernas",
+      "boots": "Armadura de pies",
+      "backpack": "Objeto para la espalda",
+      "accessory": "Accesorio",
+      "relic": "Reliquia",
+      "amulet": "Amuleto",
+      "ring": "Anillo",
+      "jade_bot": "Núcleo de bot de jade",
+      "helm_aquatic": "Respirador acuático",
+      "weapon_main": "Arma principal",
+      "weapon_off": "Arma secundaria"
+    }
   },
   "timers": {
     "add_custom": "AÑADIR TEMPORIZADOR PERSONALIZADO",
@@ -693,16 +1260,62 @@
     "ph_mins": "MIN",
     "err_title": "Se requiere un título",
     "err_value": "Valor no válido",
-    "err_time": "Tiempo no válido"
+    "err_time": "Tiempo no válido",
+    "title": "TEMPORIZADORES DE EVENTOS"
   },
   "trading": {
-    "market_search": "BÚSQUEDA EN EL BAZAR",
-    "search_btn": "BUSCAR",
+    "title": "Puesto comercial",
+    "sync_market": "Sincronizar mercado",
+    "timer_manual": "MANUAL",
+    "timer_1m": "1 MINUTO",
+    "timer_5m": "5 MINUTOS",
+    "timer_10m": "10 MINUTOS",
+    "currency_exchange": "CAMBIO DE MONEDA",
+    "calculate": "CALCULAR",
+    "delivery_box": "BUZÓN DE ENTREGA",
+    "items": "OBJETOS",
+    "funds": "FONDOS",
+    "my_transactions": "MIS TRANSACCIONES",
+    "sell_orders": "ÓRDENES DE VENTA",
+    "buy_orders": "ÓRDENES DE COMPRA",
+    "transaction_history": "HISTORIAL DE TRANSACCIONES",
+    "sold_items": "OBJETOS VENDIDOS",
+    "bought_items": "OBJETOS COMPRADOS",
+    "watchlist": "LISTA DE SEGUIMIENTO",
+    "watchlist_hint": "Haz clic en el icono para seguir precios de mercado y disponibilidad",
+    "empty_watchlist": "LISTA DE SEGUIMIENTO VACÍA",
+    "investments": "INVERSIONES",
+    "loading_investments": "CARGANDO INVERSIONES...",
+    "no_active_investments": "NO HAY INVERSIONES ACTIVAS",
+    "cost": "COSTE",
+    "profit": "BENEFICIO",
+    "waiting_price_data": "ESPERANDO DATOS DE PRECIOS...",
+    "remove": "ELIMINAR",
+    "smart_crafting": "FABRICACIÓN INTELIGENTE",
+    "time_gated_crafts": "FABRICACIONES CON LÍMITE DE TIEMPO",
+    "timegated_hint": "Analizar el almacén de materiales frente a los precios de mercado",
+    "custom_watchlist": "LISTA PERSONALIZADA",
     "add_items_hint": "Añadir objetos mediante la búsqueda",
     "run_analysis": "INICIAR ANÁLISIS",
+    "analyzing_market": "ANALIZANDO DATOS DE MERCADO...",
+    "no_items_analyze": "NO HAY OBJETOS PARA ANALIZAR",
+    "analysis_no_data": "ANÁLISIS COMPLETADO - SIN DATOS",
+    "in_crafting_watchlist": "✔ EN LISTA DE FABRICACIÓN",
+    "add_crafting_watchlist": "AÑADIR A LISTA DE FABRICACIÓN",
+    "market_search": "BÚSQUEDA EN EL BAZAR",
+    "search_btn": "BUSCAR",
+    "item_not_found": "OBJETO NO ENCONTRADO",
+    "track_investment": "SEGUIR INVERSIÓN",
     "ph_qty": "CANTIDAD COMPRADA",
     "ph_cost": "COSTE TOTAL (COBRE)",
-    "empty_watchlist": "LISTA DE SEGUIMIENTO VACÍA"
+    "remove_investment_title": "¿ELIMINAR INVERSIÓN?",
+    "remove_investment_confirm": "¿SEGURO QUE QUIERES ELIMINAR EL SEGUIMIENTO DE ESTA INVERSIÓN?",
+    "syncing_market_delta": "SINCRONIZANDO DELTA DEL MERCADO...",
+    "syncing_new_items": "SINCRONIZANDO NUEVOS OBJETOS ({0}%)",
+    "per_item": "/ OBJETO",
+    "total": "TOTAL",
+    "buy": "COMPRA",
+    "sell": "VENTA"
   },
   "index": {
     "switch_map_prompt": "Ubicación detectada en {0}.\n¿Cambiar de vista?",
@@ -715,5 +1328,379 @@
     "watch_clears": "COMPLETADOS SEMANALES",
     "connecting": "Conectando con Tyria...",
     "loading_module": "Cargando módulo..."
-  }
+  },
+  "radar": {
+    "title": "Radar de Desbloqueos",
+    "search_placeholder": "Buscar desbloqueos, comerciantes, logros...",
+    "hud_title": "HUD de Radar en Pantalla",
+    "sound_alert": "Alerta Sonora de Proximidad",
+    "tts_male": "TTS Masculino",
+    "tts_female": "TTS Femenino",
+    "sound_muted": "Desactivado (Silencio)",
+    "proximity_radius": "Radio de Proximidad de Alerta",
+    "volume": "Volumen de Alerta",
+    "play_sound": "Reproducir Sonido",
+    "current_map_feed": "Radar en Tiempo Real del Mapa",
+    "nearby_count": "{0} Cercanos",
+    "searching": "Buscando coleccionables cercanos en el mapa...",
+    "no_collectibles": "No hay coleccionables pendientes cercanos.",
+    "refreshing_account": "Actualizando desbloqueos de la cuenta...",
+    "map_btn": "Mapa",
+    "wardrobe_vendors": "Comerciantes de Guardarropa y Diseños",
+    "bulk_all": "Todos",
+    "bulk_none": "Ninguno",
+    "wardrobe_categories": "CATEGORÍAS DE DESBLOQUEO",
+    "cat_armor": "DISEÑOS DE ARMADURA (CULTURAL, KARMA, MAZMORRA)",
+    "cat_weapon": "DISEÑOS DE ARMAS (CULTURAL, KARMA, MAZMORRA)",
+    "cat_mini": "MINIATURAS (LAURELES, MONEDAS DE MAPA)",
+    "cat_novelty": "NOVEDADES (SILLAS, INSTRUMENTOS, TÓNICOS)",
+    "cat_outfits": "ATUENDOS Y PLANEADORES",
+    "allowed_currencies": "MONEDAS DE VENDEDOR PERMITIDAS",
+    "curr_karma": "VENDEDORES DE KARMA Y CORAZONES",
+    "curr_coin": "COMPRAS DE MONEDAS / ORO",
+    "curr_map": "MONEDAS DE MAPA Y MAGIA DESATADA / VOLÁTIL",
+    "curr_laurel": "VENDEDORES DE LAURELES",
+    "curr_dungeon_raid": "COMERCIANTES DE MAZMORRAS, INCURSIONES Y ATAQUES",
+    "mapped_achievements": "LOGROS MAPEADOS",
+    "expac_core": "TYRIA CENTRAL",
+    "ach_dive_master": "MAESTRO DE BUCEO (GAFAS DE BUCEO)",
+    "ach_silverwastes_lost": "PÁRAMOS DE PLATA - INSIGNIAS PERDIDAS",
+    "ach_silverwastes_golden": "PÁRAMOS DE PLATA - INSIGNIAS DORADAS PERDIDAS",
+    "expac_soto": "SECRETS OF THE OBSCURE",
+    "ach_sorrows_lost": "LO QUE EL PESAR SE LLEVÓ (CARTAS DE ORÁCULO)",
+    "ach_astral_ward": "DESCUBRIMIENTOS DE RESGUARDO ASTRAL Y SKYWATCH",
+    "expac_jw": "JANTHIR WILDS",
+    "ach_chasing_waterfalls": "COSTA BAJA - PERSEGUIR CASCADAS",
+    "ach_life_in_lowlands": "COSTA BAJA - VIDA EN LAS TIERRAS BAJAS",
+    "ach_shard_scouter": "JANTHIR SYNTRI - RASTREADOR DE ESQUIRLAS",
+    "ach_scouring_archive": "PARAMOS ARDIENTES - EXPLORAR EL ARCHIVO",
+    "expac_hot": "HEART OF THORNS Y 3.ª TEMPORADA",
+    "ach_hot_insights": "PUNTOS DE DOMINIO DE MAGUUMA",
+    "ach_lws3": "DESCUBRIMIENTOS DE LA 3.ª TEMPORADA",
+    "expac_pof": "PATH OF FIRE Y 4.ª TEMPORADA",
+    "ach_pof_insights": "PUNTOS DE DOMINIO DEL DESIERTO DE CRISTAL",
+    "ach_lws4": "COLECCIONABLES VOLÁTILES DE LA 4.ª TEMPORADA",
+    "expac_eod": "END OF DRAGONS",
+    "ach_eod_insights": "PUNTOS DE DOMINIO DE CANTHA",
+    "ach_shrine_guardians": "PUZLES DE GUARDIÁN DEL SANTUARIO",
+    "hud_empty": "No hay coleccionables pendientes en este mapa.",
+    "unlocks_plural": "{0} desbloqueos",
+    "unlocks_singular": "1 desbloqueo",
+    "dir_n": "Norte",
+    "dir_ne": "Noreste",
+    "dir_e": "Este",
+    "dir_se": "Sureste",
+    "dir_s": "Sur",
+    "dir_sw": "Suroeste",
+    "dir_w": "Oeste",
+    "dir_nw": "Noroeste",
+    "test_sound": "Probar Sonido",
+    "hide_unlocked": "Ocultar ya desbloqueados",
+    "chests_achievements": "COFRES Y LOGROS",
+    "cultural_armorsmiths": "ARMEROS CULTURALES (T1-3)",
+    "cultural_weaponsmiths": "FORJADORES DE ARMAS CULTURALES (T1-3)",
+    "heart_vendors": "COMERCIANTES DE CORAZONES",
+    "karma_merchants": "COMERCIANTES DE KARMA",
+    "dungeon_merchants": "COMERCIANTES DE MAZMORRA",
+    "laurel_merchants": "COMERCIANTES DE LAURELES",
+    "map_collectors": "COMERCIANTES DE MONEDAS DE MAPA",
+    "faction_provisioners": "PROVEEDORES DE FACCIÓN",
+    "guild_commendation": "COMERCIANTES DE RECOMENDACIONES DE CLAN",
+    "festival_merchants": "COMERCIANTES DE FESTIVALES Y FIESTAS",
+    "minis_novelties": "COMERCIANTES DE MINIATURAS Y NOVEDADES",
+    "general_merchants": "COMERCIANTES GENERALES DE GUARDARROPA",
+    "cultural_vendors": "ARMADURAS Y ARMAS CULTURALES",
+    "karma_heart_vendors": "KARMA Y CORAZONES DE PRESTIGIO",
+    "dungeon_faction_vendors": "MAZMORRAS Y PROVEEDORES DE FACCIÓN",
+    "laurel_commendations": "LAURELES Y RECOMENDACIONES DE CLAN",
+    "expansion_map_vendors": "EXPANSIONES Y MONEDAS DE MAPA",
+    "festivals_minis": "FESTIVALES, MINIATURAS Y NOVEDADES",
+    "general_equipment_vendors": "EQUIPAMIENTO GENERAL Y ARMAS",
+    "locked_unlocks_header": "DESBLOQUEOS BLOQUEADOS ({0})",
+    "click_view_wiki": "CLIC PARA VER EN LA WIKI",
+    "unlock_singular": "1 DESBLOQUEO",
+    "unlock_plural": "{0} DESBLOQUEOS",
+    "units_up": "▲ {0} unidades arriba",
+    "units_down": "▼ {0} unidades abajo",
+    "level": "• mismo nivel"
+  },
+  "professions": {
+    "guardian": "Guardián",
+    "warrior": "Guerrero",
+    "engineer": "Ingeniero",
+    "ranger": "Guardabosques",
+    "thief": "Ladrón",
+    "elementalist": "Elementalista",
+    "mesmer": "Hipnotizador",
+    "necromancer": "Nigromante",
+    "revenant": "Retornado"
+  },
+  "races": {
+    "asura": "Asura",
+    "charr": "Charr",
+    "human": "Humano",
+    "norn": "Norn",
+    "sylvari": "Sylvari"
+  },
+  "disciplines": {
+    "armorsmith": "Forjador de armaduras",
+    "artificer": "Artificiero",
+    "chef": "Cocinero",
+    "huntsman": "Cazador",
+    "jeweler": "Joyero",
+    "leatherworker": "Peletero",
+    "tailor": "Sastre",
+    "weaponsmith": "Armero"
+  },
+  "attributes": {
+    "power": "Potencia",
+    "precision": "Precisión",
+    "toughness": "Dureza",
+    "vitality": "Vitalidad",
+    "ferocity": "Ferocidad",
+    "condition_damage": "Daño de condición",
+    "expertise": "Pericia",
+    "concentration": "Concentración",
+    "healing_power": "Poder de curación",
+    "agony_resistance": "Resistencia a la agonía",
+    "armor": "Armadura",
+    "health": "Salud",
+    "crit_chance": "Probabilidad de crítico",
+    "crit_damage": "Daño crítico",
+    "condi_duration": "Duración de condición",
+    "boon_duration": "Duración de bendición",
+    "magic_find": "Hallazgo mágico"
+  },
+  "item_types": {
+    "skin": "Diseño",
+    "armor": "Armadura",
+    "weapon": "Arma",
+    "mini": "Miniatura",
+    "novelty": "Novedad",
+    "outfit": "Atuendo",
+    "glider": "Planeador",
+    "backpack": "Mochila",
+    "finisher": "Remate",
+    "mailcarrier": "Cartero"
+  },
+  "currency": {
+    "gold": "Oro",
+    "silver": "Plata",
+    "copper": "Cobre",
+    "karma": "Karma",
+    "laurel": "Laurel",
+    "spirit_shard": "Fragmento de espíritu",
+    "gem": "Gema",
+    "badge_of_honor": "Mención de honor",
+    "wvw_ticket": "Tique de reclamo de escaramuza de WvW",
+    "magnetite_shard": "Fragmento de magnetita",
+    "guild_commendation": "Recomendación del clan",
+    "astral_acclaim": "Aclamación astral",
+    "unbound_magic": "Magia desatada",
+    "volatile_magic": "Magia volátil",
+    "geode": "Geoda",
+    "bandit_crest": "Escudo de bandido",
+    "airship_part": "Pieza de aeronave",
+    "ley_line_crystal": "Cristal de línea ley",
+    "aurillium": "Trozo de aurilio"
+  },
+  "wardrobe": {
+    "armor": "Armadura",
+    "weapons": "Armas",
+    "legendary_armory": "Armería legendaria",
+    "appearance": "Aspecto",
+    "collectibles": "Coleccionables",
+    "home_instance": "Hogar",
+    "back": "Espalda",
+    "helm": "Casco",
+    "shoulders": "Hombreras",
+    "coat": "Abrigo",
+    "gloves": "Guantes",
+    "leggings": "Pantalones",
+    "boots": "Botas",
+    "aquabreathers": "Respiradores acuáticos",
+    "light": "Ligera",
+    "medium": "Media",
+    "heavy": "Pesada",
+    "one_handed": "Una mano",
+    "two_handed": "Dos manos",
+    "off_hand": "Mano izquierda",
+    "aquatic": "Acuático",
+    "axe": "Hacha",
+    "dagger": "Daga",
+    "mace": "Maza",
+    "pistol": "Pistola",
+    "scepter": "Cetro",
+    "sword": "Espada",
+    "greatsword": "Mandoble",
+    "hammer": "Martillo",
+    "longbow": "Arco largo",
+    "shortbow": "Arco corto",
+    "rifle": "Rifle",
+    "staff": "Báculo",
+    "spear": "Lanza",
+    "focus": "Foco",
+    "shield": "Escudo",
+    "torch": "Antorcha",
+    "warhorn": "Cuerno de guerra",
+    "speargun": "Fusil arpón",
+    "trident": "Tridente",
+    "equipment": "Equipamiento",
+    "dyes": "Tintes",
+    "common": "Común",
+    "uncommon": "Poco común",
+    "rare": "Raro",
+    "exclusive": "Exclusivo",
+    "outfits": "Atuendos",
+    "gliders": "Planeadores",
+    "mail_carriers": "Carteros",
+    "jade_bot_skins": "Diseños de bot de jade",
+    "conjured_doorway_skins": "Puertas conjuradas",
+    "skiff_skins": "Diseños de esquife",
+    "gathering_tools": "Herramientas de recolección",
+    "mining_tool_skins": "Herramientas de minería",
+    "logging_tool_skins": "Herramientas de tala",
+    "harvesting_tool_skins": "Herramientas de cosecha",
+    "fishing_rod_skins": "Cañas de pescar",
+    "novelties": "Novedades",
+    "mount_skins": "Diseños de montura",
+    "emotes": "Emoticonos",
+    "miniatures": "Miniaturas",
+    "finishers": "Remates",
+    "mount_types": "Tipos de montura",
+    "titles": "Títulos",
+    "account_upgrades": "Mejoras de cuenta",
+    "cats": "Gatos",
+    "nodes": "Nodos",
+    "title": "Guardarropa",
+    "unlocked": "Desbloqueado",
+    "locked": "Bloqueado"
+  },
+  "inventory": {
+    "title": "Inventario",
+    "sort_default": "Ordenar por: Predeterminado",
+    "sort_instant_high": "Venta instantánea: Mayor a menor",
+    "sort_instant_low": "Venta instantánea: Menor a mayor",
+    "sort_list_high": "Precio de listado: Mayor a menor",
+    "sort_list_low": "Precio de listado: Menor a mayor",
+    "show_all_characters": "MOSTRAR TODOS LOS PERSONAJES",
+    "show_bags": "MOSTRAR BOLSAS",
+    "syncing": "SINCRONIZANDO INVENTARIO..."
+  },
+  "storage": {
+    "title": "Almacenamiento de materiales",
+    "syncing": "SINCRONIZANDO ALMACENAMIENTO...",
+    "sort_default": "Ordenar: Predeterminado",
+    "sort_instant_high": "Venta instantánea: Mayor a menor",
+    "sort_instant_low": "Venta instantánea: Menor a mayor",
+    "sort_list_high": "Precio de listado: Mayor a menor",
+    "sort_list_low": "Precio de listado: Menor a mayor"
+  },
+  "bank": {
+    "title": "Cámaras de cuenta",
+    "syncing": "SINCRONIZANDO CÁMARAS...",
+    "sort_default": "Ordenar: Predeterminado",
+    "sort_instant_high": "Venta instantánea: Mayor a menor",
+    "sort_instant_low": "Venta instantánea: Menor a mayor",
+    "sort_list_high": "Precio de listado: Mayor a menor",
+    "sort_list_low": "Precio de listado: Menor a mayor",
+    "personal_bank": "Banco personal",
+    "guild_banks": "Bancos de clan"
+  },
+  "account_search": {
+    "title": "Buscar todo",
+    "search_ph": "BUSCAR EN TODA LA CUENTA..."
+  },
+  "achievements": {
+    "title": "LOGROS",
+    "search_ph": "BUSCAR LOGROS...",
+    "loading": "SINCRONIZANDO LOGROS...",
+    "view_on_wiki": "VER EN LA WIKI",
+    "open_wiki": "ABRIR WIKI",
+    "ready_to_train": "LISTO PARA ENTRENAR",
+    "secret_objective": "Objetivo secreto",
+    "next_chest_in": "SIGUIENTE COFRE EN:",
+    "tier_suffix": "NIVEL {0}"
+  },
+  "common.mastery_insight": "Perspicacia de maestría",
+  "map_options.hide_completed": "Ocultar completados",
+  "achievements.title": "DIARIO DEL HÉROE",
+  "achievements.subtitle": "Administra tus objetivos, maestrías y listas de seguimiento.",
+  "achievements.tab_achievements": "LOGROS",
+  "achievements.tab_daily": "DIARIO",
+  "achievements.tab_masteries": "MAESTRÍAS",
+  "achievements.tab_watchlist": "LISTA DE SEGUIMIENTO",
+  "achievements.watchlist_overlay": "SUPERPOSICIÓN DE SEGUIMIENTO",
+  "achievements.watchlist_empty": "LA LISTA DE SEGUIMIENTO ESTÁ VACÍA",
+  "achievements.open_wiki": "ABRIR WIKI",
+  "achievements.secret_objective": "Objetivo secreto",
+  "achievements.next_chest_in": "SIGUIENTE COFRE EN:",
+  "achievements.your_watchlist": "TU LISTA DE SEGUIMIENTO",
+  "achievements.no_items_tracked": "NO HAY ELEMENTOS EN SEGUIMIENTO",
+  "achievements.daily_objectives": "OBJETIVOS DIARIOS",
+  "achievements.overview": "RESUMEN DE LOGROS",
+  "achievements.watched": "EN SEGUIMIENTO",
+  "achievements.category_progress": "PROGRESO DE CATEGORÍA",
+  "achievements.completed": "COMPLETADO",
+  "achievements.total_ap_potential": "Potencial total de puntos de logro:",
+  "achievements.earned": "Ganado:",
+  "masteries.rank": "Rango de maestría",
+  "masteries.ready_to_train": "LISTO PARA ENTRENAR",
+  "masteries.view_on_wiki": "VER EN LA WIKI",
+  "masteries.loading": "CARGANDO DATOS DE MAESTRÍA...",
+  "masteries.not_loaded": "DATOS DE MAESTRÍA AÚN NO CARGADOS. POR FAVOR ESPERE O ACTUALICE.",
+  "masteries.search_results": "RESULTADOS DE BÚSQUEDA DE MAESTRÍAS",
+  "masteries.none_found": "NO SE ENCONTRARON MAESTRÍAS",
+  "masteries.region": "REGIÓN",
+  "masteries.tiers": "NIVELES",
+  "masteries.regions.tyria": "Tyria central",
+  "masteries.regions.maguuma": "Heart of Thorns",
+  "masteries.regions.desert": "Path of Fire",
+  "masteries.regions.tundra": "Sangre y Hielo",
+  "masteries.regions.jade": "End of Dragons",
+  "masteries.regions.sky": "Secrets of the Obscure",
+  "masteries.regions.wild": "Janthir Wilds",
+  "masteries.regions.magic": "Visions of Eternity",
+  "nav.Report Bug / Feature": "Informar de un error / sugerir función",
+  "bug_report.title": "Informar de un error / sugerir una función",
+  "bug_report.label_type": "Quiero informar de:",
+  "bug_report.opt_bug": "Error / Fallo",
+  "bug_report.opt_feature": "Sugerencia de función",
+  "bug_report.label_module": "¿Qué módulo está afectado?",
+  "bug_report.mod_overworld_map": "Mapa del supramundo",
+  "bug_report.mod_wvw_map": "Mapa WvW",
+  "bug_report.mod_event_timers": "Temporizadores de eventos",
+  "bug_report.mod_weekly_clears": "Limpiezas semanales",
+  "bug_report.mod_farming_nodes": "Nodos de recolección",
+  "bug_report.mod_fishing_assistant": "Asistente de pesca",
+  "bug_report.mod_hero_panel": "Panel de héroe / Builds",
+  "bug_report.mod_inventory_bank": "Inventario / Banco",
+  "bug_report.mod_api_settings": "Claves API / Ajustes",
+  "bug_report.mod_translations": "Traducciones",
+  "bug_report.mod_general_other": "Sistema general / Otro",
+  "bug_report.label_misplaced": "¿Se refiere a un marcador de mapa mal colocado?",
+  "bug_report.label_coords": "Coordenadas del marcador mal colocado",
+  "bug_report.btn_grab": "Capturar posición actual",
+  "bug_report.note_stand": "Colócate primero en la ubicación del nodo/marcador en el juego.",
+  "bug_report.label_reproduce": "¿Cómo se puede reproducir el error?",
+  "bug_report.ph_reproduce": "Describe los pasos para reproducir este error...",
+  "bug_report.label_desc_bug": "Describe el error",
+  "bug_report.ph_desc_bug": "Por favor describe el problema en detalle...",
+  "bug_report.label_desc_feature": "Describe la sugerencia de función",
+  "bug_report.ph_desc_feature": "Describe las funciones que te gustaría ver añadidas...",
+  "bug_report.label_screenshot": "Enlace de captura de pantalla (Imgur, Discord, etc.)",
+  "bug_report.label_add_info": "Información adicional",
+  "bug_report.ph_add_info": "Cualquier contexto del sistema o notas adicionales...",
+  "bug_report.btn_submit": "Enviar informe",
+  "bug_report.sending": "Enviando informe...",
+  "bug_report.success_title": "¡Gracias!",
+  "bug_report.success_body": "Tu informe se ha enviado correctamente.<br>¡Agradecemos que te tomes el tiempo para ayudar a mejorar Tyrian Lens!",
+  "bug_report.btn_discord": "Unirse al servidor de Discord",
+  "bug_report.btn_ok": "Aceptar",
+  "bug_report.toast_coords_grabbed": "¡Coordenadas capturadas con éxito!",
+  "bug_report.toast_no_telemetry": "¡No hay coordenadas de telemetría disponibles! ¿Estás en el juego?",
+  "bug_report.toast_desc_required": "¡El campo de descripción es obligatorio!",
+  "bug_report.toast_transmission_failed": "¡Fallo en la transmisión! Comprueba tu conexión a Internet.",
+  "common.no": "No",
+  "common.yes": "Sí"
 }

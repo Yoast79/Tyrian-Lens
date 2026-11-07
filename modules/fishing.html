@@ -247,7 +247,8 @@
                 });
 
                 if (isSearching && html === '') {
-                    html = "<div class='loading-text'>NO FISH MATCH YOUR SEARCH</div>";
+                    const noMatch = window.DataLoader ? window.DataLoader.t('fishing.no_matches', 'NO FISH MATCH YOUR SEARCH') : 'NO FISH MATCH YOUR SEARCH';
+                    html = "<div class='loading-text'>" + noMatch + "</div>";
                 }
 
                 container.innerHTML = html;
@@ -344,12 +345,25 @@
                     html += `</div></div>`;
                 });
 
-                if (html === '') html = "<div style='color:var(--text-muted, #8a7a5f); font-size:10px; text-align:center;'>ALL TRACKED MAPS COMPLETE</div>";
+                if (html === '') {
+                    const allDone = window.DataLoader ? window.DataLoader.t('fishing.all_complete', 'ALL TRACKED MAPS COMPLETE') : 'ALL TRACKED MAPS COMPLETE';
+                    html = "<div style='color:var(--text-muted, #8a7a5f); font-size:10px; text-align:center;'>" + allDone + "</div>";
+                }
 
                 window.parent.postMessage('FSH_DATA:' + html, '*');
             }
 
             window.addEventListener('message', async (e) => {
+                if (e.data && e.data.action === 'languageChanged') {
+                    if (window.DataLoader) {
+                        await window.DataLoader.loadTranslations(true);
+                        window.DataLoader.applyTranslations();
+                    }
+                    achCache = [];
+                    itemCache = {};
+                    progCache = {};
+                    init();
+                }
                 if (e.data && e.data.action === 'updateTheme') {
                     document.body.setAttribute('data-theme', e.data.theme);
                 }

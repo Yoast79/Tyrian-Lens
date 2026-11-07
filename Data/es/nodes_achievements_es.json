@@ -10531,6 +10531,582 @@
   },
   {
     "pos": [
+      25347,
+      100326.9
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 6,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      26015.8,
+      98248.5
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 34,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25536.9,
+      99318
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 3,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      28256.1,
+      98504.5
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 53,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27256.9,
+      98262
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 124,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27565.6,
+      99336
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 160,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27982.3,
+      100056.1
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 91,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25583.8,
+      98610.8
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 59,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      28571.5,
+      99508.4
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 34,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27640.6,
+      100324.2
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 3,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25469.7,
+      100551.3
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 14,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      26012.2,
+      100095.1
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 219,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25323.7,
+      98461.7
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 74,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25260.1,
+      98509.9
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 20,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      26130,
+      98842.3
+    ],
+    "node": "Labores de limpieza",
+    "yields": [
+      "Pintada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+    "alt": 249,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_cleanup_duty_achievement",
+    "desc": "Borra pintadas de la Hermandad de Jade en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      28532,
+      98346.6
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 1",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -33,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 1: bajo el agua debajo de la posición marcada. Hay una gran losa de roca sobre la ubicación del libro."
+  },
+  {
+    "pos": [
+      28457.9,
+      98389.1
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 2",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -69,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 2: junto al punto de dominio."
+  },
+  {
+    "pos": [
+      28580.9,
+      98319.2
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 3",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -53,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 3: bajo el agua, encima del libro 6, entra en una sala sin puerta donde el libro está ubicado en lo alto cerca del techo, sobre una repisa de roca rectangular."
+  },
+  {
+    "pos": [
+      28603.2,
+      98452.6
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 4",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -124,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 4: cerca del fondo del agua. Debajo de una gran losa de roca sostenida por un pilar roto."
+  },
+  {
+    "pos": [
+      28609.4,
+      98437.4
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 5",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -77,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 5: dentro de un edificio que parece un templo. Entra y gira a la izquierda. El libro está sobre la puerta."
+  },
+  {
+    "pos": [
+      28546.7,
+      98348.3
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 6",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -103,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 6: bajo el agua en una pequeña cueva. Hay tres orbes amarillos brillantes en la entrada de la cueva."
+  },
+  {
+    "pos": [
+      28590.9,
+      98555.5
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 7",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -148,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 7: en un rincón cerca del fondo del agua."
+  },
+  {
+    "pos": [
+      28597.9,
+      98526.4
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 8",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -48,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 8: aproximadamente a un tercio de la profundidad del agua. En una esquina a la derecha de un tejado hexagonal (parece un templo)."
+  },
+  {
+    "pos": [
+      28447.7,
+      98455
+    ],
+    "node": "Has leído \"El secreto de la cámara\" Libro 9",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": -71,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_read_the_secret_of_the_vault_achievement",
+    "desc": "Libro 9: desde la Cámara Antigua, sal y dirígete hacia abajo, a la derecha, donde se encuentra el pilar cilíndrico alto. Hay una sala sin puerta detrás de él. El libro está cerca del techo."
+  },
+  {
+    "pos": [
+      26148,
+      98286.6
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": 3,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      26824.9,
+      99315
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": 20,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25841.9,
+      99854.4
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": 198,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27409,
+      100233.3
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": 3,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      25660.1,
+      98410.5
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": -21,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      27946.4,
+      98835.8
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": -13,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      28382.3,
+      98593.4
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": 204,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
+      28451,
+      98384.2
+    ],
+    "node": "La historia de Nueva Kaineng",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+    "alt": -11,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_the_history_of_new_kaineng_achievement",
+    "desc": "Encuentra tablas de conocimiento en Nueva Kaineng."
+  },
+  {
+    "pos": [
       30123.5,
       101417.5
     ],
@@ -12364,6 +12940,168 @@
     "category": "achievements",
     "layer": "node_dead_play_achievement",
     "desc": "Juega con el cachorro de guardián del santuario para progresar en el logro"
+  },
+  {
+    "pos": [
+      34795.9,
+      102113.1
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 93,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      35030.5,
+      102796.5
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 82,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      34991.2,
+      103508.9
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 109,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      34491.7,
+      103477.6
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 123,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      34954,
+      102843.9
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 80,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      35057.3,
+      102545.1
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 83,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      33377.2,
+      103921.8
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 183,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      34432.4,
+      105134.5
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 194,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
+  },
+  {
+    "pos": [
+      33722.6,
+      105457.6
+    ],
+    "node": "Respetos presentados",
+    "yields": [
+      "Arrodillarse"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+    "alt": 2,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_respects_paid_achievement",
+    "desc": "Arrodíllate en todos los santuarios de Muerte del Dragón. (usa /kneel)"
   },
   {
     "pos": [
@@ -17605,6 +18343,132 @@
   },
   {
     "pos": [
+      25263.3,
+      21019.2
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 359,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25196.5,
+      21020.2
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 351,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25188.8,
+      20945.9
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 348,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25127.1,
+      20828
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 360,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25266.8,
+      20825.5
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 351,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25235.4,
+      20860.3
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 292,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
+      25196.1,
+      20873.9
+    ],
+    "node": "Investigación del Resguardo Astral",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+    "alt": 300,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_astral_ward_research_achievement",
+    "desc": "Lee todos los libros de la biblioteca del Bastión del Conocimiento."
+  },
+  {
+    "pos": [
       23778.3,
       19575.5
     ],
@@ -19366,6 +20230,402 @@
     "category": "achievements",
     "layer": "node_illuminating_inner_nayos_achievement",
     "desc": "Enciende la linterna para el logro «Iluminando Nayos Interior»"
+  },
+  {
+    "pos": [
+      44101.7,
+      26579.5
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 72,
+    "map_id": 18,
+    "map_name": "Divinity's Reach",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      48340.5,
+      30629.7
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 10,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      25145.5,
+      21471.2
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 276,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      23115.9,
+      19384.3
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 494,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      24413.3,
+      19437.3
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 380,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      25258,
+      20825.6
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 347,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      22957.5,
+      20671.7
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 504,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      23987.4,
+      21455.1
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 222,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      23026,
+      20176.5
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 512,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      23593.5,
+      21218.2
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 171,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      24086.7,
+      20306.9
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 807,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      24085.9,
+      20840.2
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 677,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      25061.2,
+      20636.5
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 273,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      57017.5,
+      30966.7
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 90,
+    "map_id": 218,
+    "map_name": "Black Citadel",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      54209.8,
+      25270.1
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 34,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      27158.2,
+      24427.2
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 144,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      26790,
+      24431.3
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 328,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      23786.3,
+      23495.5
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 544,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      26715.2,
+      24291.5
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 209,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      38137.5,
+      37229.9
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 82,
+    "map_id": 649,
+    "map_name": "Snaff Memorial Lab",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      24049,
+      22575.7
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 407,
+    "map_id": 1509,
+    "map_name": "The Wizard's Tower",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
+  },
+  {
+    "pos": [
+      24103.4,
+      22605
+    ],
+    "node": "La pérdida de Tristeza",
+    "yields": [
+      "Carta"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+    "alt": 568,
+    "map_id": 1509,
+    "map_name": "The Wizard's Tower",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_sorrows_lost_achievement",
+    "desc": "Localiza todas las cartas de adivinación."
   },
   {
     "pos": [
@@ -23956,5 +25216,833 @@
     "category": "achievements",
     "layer": "node_auric_basin_no_mask_left_behind_achievement",
     "desc": "Contribuye al logro «Ninguna máscara olvidada»"
+  },
+  {
+    "pos": [
+      42937.5,
+      22640.8
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 231,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42039.5,
+      22178.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 150,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42057.8,
+      22155.7
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 152,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42571.9,
+      22462.8
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 217,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42651.5,
+      22312.6
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 151,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42632.3,
+      22314.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 151,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42629.7,
+      22300.5
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 152,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42615,
+      22305.2
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 151,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42760.2,
+      22173.4
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 157,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42920.6,
+      22474.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 150,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      40815.2,
+      22809.6
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 219,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      40712.3,
+      22235.4
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 0,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42838.1,
+      22836.7
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 224,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      43537.6,
+      22816.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 339,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42619.3,
+      22172.5
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 135,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      43083,
+      22425
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 117,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42866.9,
+      22630.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 218,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      41486.5,
+      22101.7
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 204,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      41838.1,
+      22642.7
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 60,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      43024.9,
+      22296.3
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 64,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42894,
+      22694.1
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 231,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      43016.5,
+      23729
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 424,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      42924.1,
+      23738.2
+    ],
+    "node": "La vida en las tierras bajas",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 395,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_life_in_the_lowlands_achievement",
+    "desc": "Libro para el logro «La vida en las tierras bajas»"
+  },
+  {
+    "pos": [
+      34822.4,
+      11495.6
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 66,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      34998.4,
+      11739.2
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 105,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      35156.2,
+      11533.3
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 85,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      35147.3,
+      11712.9
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 111,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      35291.1,
+      11568.2
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 111,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      35381.8,
+      11615.4
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 84,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      34343.8,
+      11658.8
+    ],
+    "node": "Registrando el archivo",
+    "yields": [
+      "Libro"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+    "alt": 95,
+    "map_id": 1575,
+    "map_name": "Mistburned Barrens",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_scouring_the_archive_achievement",
+    "desc": "Libro para el logro «Registrando el archivo»"
+  },
+  {
+    "pos": [
+      42849.6,
+      22370.4
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 66,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      40720.7,
+      22665.8
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 13,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      40888.7,
+      22829.9
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 3,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      41976.4,
+      22786.4
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 62,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42086.3,
+      22532.5
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 1,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42218,
+      22866.5
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 3,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42597.2,
+      22967
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 147,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42264.4,
+      23116.5
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 151,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      41678.5,
+      23109.1
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": -1,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      43072.7,
+      23885.1
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 310,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42525.5,
+      22147.6
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": -1,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      42352.4,
+      22286.2
+    ],
+    "node": "Exploración de cataratas",
+    "yields": [
+      "Cascada"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+    "alt": 143,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_chasing_waterfalls_achievement",
+    "desc": "Echa un vistazo tras las cataratas de las Costas Bajas."
+  },
+  {
+    "pos": [
+      39856.4,
+      16284.6
+    ],
+    "node": "Explorador de esquirlas",
+    "yields": [
+      "Esquirla"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/d/d7/Jade_Event_%28User_Interface%29.png",
+    "alt": 20,
+    "map_id": 1554,
+    "map_name": "Janthir Syntri",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_shard_scouter_achievement",
+    "desc": "Descubre lugares interesantes con esquirlas de hematites grandes."
+  },
+  {
+    "pos": [
+      39926.7,
+      16843.2
+    ],
+    "node": "Explorador de esquirlas",
+    "yields": [
+      "Esquirla"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/d/d7/Jade_Event_%28User_Interface%29.png",
+    "alt": 88,
+    "map_id": 1554,
+    "map_name": "Janthir Syntri",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_shard_scouter_achievement",
+    "desc": "Descubre lugares interesantes con esquirlas de hematites grandes."
+  },
+  {
+    "pos": [
+      38966.9,
+      16005.7
+    ],
+    "node": "Explorador de esquirlas",
+    "yields": [
+      "Esquirla"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/d/d7/Jade_Event_%28User_Interface%29.png",
+    "alt": 0,
+    "map_id": 1554,
+    "map_name": "Janthir Syntri",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_shard_scouter_achievement",
+    "desc": "Descubre lugares interesantes con esquirlas de hematites grandes."
+  },
+  {
+    "pos": [
+      39625.6,
+      15436
+    ],
+    "node": "Explorador de esquirlas",
+    "yields": [
+      "Esquirla"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/d/d7/Jade_Event_%28User_Interface%29.png",
+    "alt": 34,
+    "map_id": 1554,
+    "map_name": "Janthir Syntri",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_shard_scouter_achievement",
+    "desc": "Descubre lugares interesantes con esquirlas de hematites grandes."
   }
 ]

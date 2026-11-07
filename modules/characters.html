@@ -285,7 +285,8 @@
 							c.crafting.forEach(cr => {
 								if (cr.active) activeLicenses++;
 								const icon = `https://gw2ps.local/Assets/Icons/craft_${cr.discipline.toLowerCase()}.png`;
-								craftHtml += `<div class="badge" onmouseover="showTip('${cr.discipline} (${cr.rating})', event)" onmouseout="hideTip()">
+								const dName = window.DataLoader ? window.DataLoader.t('disciplines.' + cr.discipline.toLowerCase(), cr.discipline) : cr.discipline;
+								craftHtml += `<div class="badge" onmouseover="showTip('${dName} (${cr.rating})', event)" onmouseout="hideTip()">
 									<img src="${icon}" onerror="this.style.display='none'">
 										<span class="${cr.rating >= 400 ? 'craft-max' : ''}">${cr.rating}</span>
 									</div>`;
@@ -321,31 +322,31 @@
 								<img src="https://gw2ps.local/Assets/Icons/race_${c.race.toLowerCase()}.png" class="char-race-img" onerror="this.src='https://gw2ps.local/Assets/Icons/mouse_cursor.png'">
 									<span class="char-name">${c.name}</span>
 								</div>
-							<span class="char-meta">LVL ${c.level} ${c.profession}</span>
+							<span class="char-meta">LVL ${c.level} ${window.DataLoader ? window.DataLoader.t('professions.' + c.profession.toLowerCase(), c.profession) : c.profession}</span>
 						</div>
 						<div class="char-stats-grid">
 							<div class="stat-item">
-								<span class="stat-label">BORN:</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.born", "BORN:") : "BORN:"}</span>
 								<span class="stat-val">${formatBirthDate(c.created)}</span>
 							</div>
 							<div class="stat-item">
-								<span class="stat-label">NEXT BIRTHDAY:</span>
-								<span class="stat-val">${getDaysUntilBirthday(c.created)} DAYS</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.next_birthday", "NEXT BIRTHDAY:") : "NEXT BIRTHDAY:"}</span>
+								<span class="stat-val">${getDaysUntilBirthday(c.created)} ${window.DataLoader ? window.DataLoader.t("characters.days_suffix", "DAYS") : "DAYS"}</span>
 							</div>
 							<div class="stat-item">
-								<span class="stat-label">PLAYTIME:</span>
-								<span class="stat-val">${hoursPlayed} HRS</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.playtime", "PLAYTIME:") : "PLAYTIME:"}</span>
+								<span class="stat-val">${hoursPlayed} ${window.DataLoader ? window.DataLoader.t("characters.hrs_suffix", "HRS") : "HRS"}</span>
 							</div>
 							<div class="stat-item">
-								<span class="stat-label">DEATHS:</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.deaths", "DEATHS:") : "DEATHS:"}</span>
 								<span class="stat-val">${c.deaths}</span>
 							</div>
 							<div class="stat-item">
-								<span class="stat-label">LAST LOGIN:</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.last_login", "LAST LOGIN:") : "LAST LOGIN:"}</span>
 								<span class="stat-val">${formatLastLogin(c.last_modified)}</span>
 							</div>
 							<div class="stat-item">
-								<span class="stat-label">ACTIVE GUILD:</span>
+								<span class="stat-label">${window.DataLoader ? window.DataLoader.t("characters.active_guild", "ACTIVE GUILD:") : "ACTIVE GUILD:"}</span>
 								<span class="stat-val" style="font-size: 10px;">${guildName}</span>
 							</div>
 						</div>

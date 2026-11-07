@@ -428,149 +428,7 @@
       {
         "categoryId": "trading",
         "categoryTitle": "Vendors & NPCs",
-        "items": [
-          {
-            "id": "node_pact_supply_network_agent",
-            "label": "Pact Supply Network Agents",
-            "icon": "https://wiki.guildwars2.com/images/d/d1/Pact_Supply_Network_Agent_%28map_icon%29.png",
-            "tooltip": "Show or hide Pact Supply Network Agents across Tyria.",
-            "customAction": "copyPSNA",
-            "defaultOn": true
-          },
-          {
-            "id": "node_historian_elisa",
-            "label": "Priory Historian Elisa",
-            "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
-            "tooltip": "Show or hide Priory Historian Elisa roaming vendor location.",
-            "defaultOn": true
-          },
-          {
-            "id": "node_npc_merchant",
-            "label": "Merchants",
-            "icon": "https://wiki.guildwars2.com/images/4/44/Merchant_%28map_icon%29.png",
-            "tooltip": "Show or hide general merchant locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_bank",
-            "label": "Bankers",
-            "icon": "https://wiki.guildwars2.com/images/8/88/Bank_%28map_icon%29.png",
-            "tooltip": "Show or hide Banker locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_trading_post",
-            "label": "Trading Post",
-            "icon": "https://wiki.guildwars2.com/images/d/d5/Trading_Post_%28map_icon%29.png",
-            "tooltip": "Show or hide Black Lion Trading Post locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_guild_vault",
-            "label": "Guild Vaults",
-            "icon": "https://wiki.guildwars2.com/images/d/d8/Guild_Banker_%28map_icon%29.png",
-            "tooltip": "Show or hide Guild Bank / Vault locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_karma_merchant",
-            "label": "Karma Merchants",
-            "icon": "https://wiki.guildwars2.com/images/b/ba/Karma_merchant.png",
-            "tooltip": "Show or hide Karma merchant locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_faction_provisioner",
-            "label": "Faction Provisioners",
-            "icon": "https://wiki.guildwars2.com/images/4/4c/Faction_Provisioner.png",
-            "tooltip": "Show or hide Faction Provisioners for Provisioner Tokens.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_laurel_merchant",
-            "label": "Laurel Merchants",
-            "icon": "https://wiki.guildwars2.com/images/a/aa/Laurel_Merchant_%28map_icon%29.png",
-            "tooltip": "Show or hide Laurel merchants.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_dungeon_merchant",
-            "label": "Dungeon Merchants",
-            "icon": "https://wiki.guildwars2.com/images/d/dc/Dungeon_Merchant_%28map_icon%29.png",
-            "tooltip": "Show or hide Dungeon armor & weapon merchants.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_weaponsmith",
-            "label": "Weaponsmithing Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/7/75/20171102113846%21Weaponsmithing_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Weaponsmith crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_armorsmith",
-            "label": "Armorsmithing Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/d/d7/20171102113345%21Armorsmithing_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Armorsmith crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_tailor",
-            "label": "Tailoring Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/1/12/20171102113738%21Tailoring_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Tailoring crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_leatherworker",
-            "label": "Leatherworking Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/d/db/20171102121221%21Leatherworking_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Leatherworking crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_chef",
-            "label": "Cooking Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/c/c4/20171102113418%21Cooking_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Cooking stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_huntsman",
-            "label": "Huntsman Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/1/1d/20171102113653%21Huntsman%27s_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Huntsman crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_jeweler",
-            "label": "Jeweling Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/b/b2/20151002095122%21Jeweling_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Jeweling crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_artificer",
-            "label": "Artificing Stations",
-            "icon": "https://wiki.guildwars2.com/images/archive/7/73/20171102113406%21Artificing_Station_%28map_icon%29.png",
-            "tooltip": "Show or hide Artificing crafting stations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_reinforce_armor",
-            "label": "Reinforce Armor Anvils",
-            "icon": "https://wiki.guildwars2.com/images/5/50/Reinforce_Armor_%28map_icon%29.png",
-            "tooltip": "Show or hide Reinforce Armor repair anvils.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_npc_mystic_forge",
-            "label": "Mystic Forge",
-            "icon": "https://wiki.guildwars2.com/images/6/6f/Mystic_Forge.png",
-            "tooltip": "Show or hide Mystic Forge attendants and conduits.",
-            "defaultOn": false
-          }
-        ],
+        "items": [],
         "subcategories": [
           {
             "subcategoryId": "vendors",
@@ -731,6 +589,18 @@
                 "icon": "https://wiki.guildwars2.com/images/8/83/Three_dots_%28overhead_icon%29.png",
                 "hasColorPicker": true,
                 "tooltip": "Miscellaneous NPC's"
+              },
+              {
+                "id": "node_npc_faction_provisioner",
+                "label": "Faction Provisioners",
+                "icon": "https://wiki.guildwars2.com/images/3/30/Provisioner_Token.png",
+                "hasColorPicker": false
+              },
+              {
+                "id": "node_npc_mystic_forge",
+                "label": "Mystic Forge",
+                "icon": "https://wiki.guildwars2.com/images/d/df/Mystic_Forge_%28map_icon%29.png",
+                "hasColorPicker": false
               }
             ]
           },
@@ -794,119 +664,19 @@
       {
         "categoryId": "chests_and_achievements",
         "categoryTitle": "Chests & Achievements",
-        "items": [
-          {
-            "id": "node_dry_top_buried_locked_chest_chests",
-            "label": "Dry Top - Buried Locked Chests",
-            "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-            "tooltip": "Show or hide Buried Locked Chest locations in Dry Top.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_silverwastes_chests",
-            "label": "Silverwastes - Lost Bandit Chests",
-            "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-            "tooltip": "Show or hide Lost Bandit Chest locations in The Silverwastes.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_bitterfrost_frontier_icebound_chest_chests",
-            "label": "Bitterfrost Frontier - Icebound Chests",
-            "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-            "tooltip": "Show or hide Icebound Chest locations in Bitterfrost Frontier.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_sirens_landing_waterlogged_chest_chests",
-            "label": "Siren's Landing - Waterlogged Chests",
-            "icon": "https://render.guildwars2.com/file/F3B0E4096379AA58AFC6CE1ED1FBC5B015C40840/1729789.png",
-            "tooltip": "Show or hide Waterlogged Chest locations in Siren's Landing.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_crystal_desert_sand_pile_chests",
-            "label": "Crystal Desert - Sand Piles",
-            "icon": "https://render.guildwars2.com/file/497B6B6311E0B8D900CE59E063E1E296A6FE9E57/1766467.png",
-            "tooltip": "Show or hide Sand Pile treasure locations in the Crystal Desert.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_crystal_desert_trade_cache_chests",
-            "label": "Crystal Desert - Trade Caches",
-            "icon": "https://render.guildwars2.com/file/7CD20D4B072AD23F97202F05E4130CF8A4B069C5/69116.png",
-            "tooltip": "Show or hide Trade Cache locations in the Crystal Desert.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_thunderhead_peak_dwarven_chest_chests",
-            "label": "Thunderhead Peaks - Dwarven Chests",
-            "icon": "https://wiki.guildwars2.com/images/c/c6/Feat_chest_%28map_icon%29.png",
-            "tooltip": "Show or hide Dwarven Chest locations in Thunderhead Peaks.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_lesser_arcane_chest_chests",
-            "label": "Secrets of the Obscure - Lesser Arcane Chests",
-            "icon": "https://wiki.guildwars2.com/images/8/8d/Ancient_Coin.png",
-            "tooltip": "Show or hide Lesser Arcane Chests across Secrets of the Obscure maps.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_greater_arcane_chest_chests",
-            "label": "Secrets of the Obscure - Greater Arcane Chests",
-            "icon": "https://gw2ps.local/Assets/Icons/greater_arcane_chest.png",
-            "tooltip": "Show or hide Greater Arcane Chests across Secrets of the Obscure maps.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_node_small_obscure_chest_chests",
-            "label": "Secrets of the Obscure - Obscure Chests",
-            "icon": "https://gw2ps.local/Assets/Icons/obscure_chest_small.png",
-            "tooltip": "Show or hide Small Obscure Chest locations.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_major_detected_treasure",
-            "label": "Janthir Wilds - Major Detected Treasure",
-            "icon": "https://gw2ps.local/Assets/Icons/major_detected_treasure.png",
-            "tooltip": "Show or hide Major Detected Treasure locations in Janthir.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_minor_detected_treasure",
-            "label": "Janthir Wilds - Detected Treasure",
-            "icon": "https://wiki.guildwars2.com/images/d/d4/Detected_Treasure.png",
-            "tooltip": "Show or hide standard Detected Treasure locations in Janthir.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_aetherlocation_treasure",
-            "label": "Janthir Wilds - Aetherlocation Treasure",
-            "icon": "https://wiki.guildwars2.com/images/d/da/Activate_Aetherlocation.png",
-            "tooltip": "Show or hide Aetherlocation Treasure locations in Janthir.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_magic_mirror",
-            "label": "Janthir Wilds - Magic Mirrors",
-            "icon": "https://wiki.guildwars2.com/images/1/1d/Magic_Mirror.png",
-            "tooltip": "Show or hide Magic Mirror locations in Janthir.",
-            "defaultOn": false
-          },
-          {
-            "id": "node_sunken_chest_chests",
-            "label": "Core Tyria - Master Diver Sunken Chests",
-            "icon": "https://render.guildwars2.com/file/B5C303B0DDD7925DEC9DE039AF50C1570D9A17BF/1983548.png",
-            "tooltip": "Show or hide Sunken Chest locations for the Master Diver achievement.",
-            "defaultOn": false
-          }
-        ],
         "subcategories": [
           {
             "subcategoryId": "core_tyria",
             "subcategoryTitle": "Core Tyria",
             "icon": "https://wiki.guildwars2.com/images/5/56/User_Fey_Zeal_Gw2wlogo.png",
             "items": [
+              {
+                "id": "node_dive_master_achievement",
+                "label": "Dive Master",
+                "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+                "hasColorPicker": true,
+                "tooltip": "Dive Master is an Explorer achievement for using Diving Goggles across locations in Tyria."
+              },
               {
                 "id": "node_sunken_chest_chests",
                 "label": "Sunken Chests",
@@ -1252,6 +1022,27 @@
                 "hasColorPicker": true
               },
               {
+                "id": "node_cleanup_duty_achievement",
+                "label": "New Kaineng City - Cleanup Duty",
+                "icon": "https://wiki.guildwars2.com/images/4/41/Jade_Brotherhood_Grafitti_render.png",
+                "tooltip": "Erase Jade Brotherhood graffiti in New Kaineng City for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_read_the_secret_of_the_vault_achievement",
+                "label": "New Kaineng City - Read 'The Secret of the Vault'",
+                "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+                "tooltip": "Read 'The Secret of the Vault'.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_the_history_of_new_kaineng_achievement",
+                "label": "New Kaineng City - The History of New Kaineng",
+                "icon": "https://wiki.guildwars2.com/images/8/87/Guardian_trainer_%28map_icon%29.png",
+                "tooltip": "Find lore tablets in New Kaineng.",
+                "hasColorPicker": true
+              },
+              {
                 "id": "node_petrified_echovald_sapling",
                 "label": "The Echovald Wilds - Petrified Echovald Sapling",
                 "icon": "https://render.guildwars2.com/file/F006736696D976F6D3B3C71AF811907D05949393/2595188.png",
@@ -1291,6 +1082,13 @@
                 "label": "Dragon's End - Dead Play",
                 "icon": "https://render.guildwars2.com/file/27B0562AEE087B15B32A90EFB8A5A3E6C847197F/2100320.png",
                 "tooltip": "Play with the Shrine Guardian Pup for achievement progression.",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_respects_paid_achievement",
+                "label": "Dragon's End - Respects Paid",
+                "icon": "https://wiki.guildwars2.com/images/4/49/Thanks.png",
+                "tooltip": "Kneel at every shrine in Dragon's End. (use /kneel)",
                 "hasColorPicker": true
               },
               {
@@ -1366,6 +1164,13 @@
                 "hasColorPicker": true
               },
               {
+                "id": "node_astral_ward_research_achievement",
+                "label": "Amnytas - Astral Ward Research",
+                "icon": "https://wiki.guildwars2.com/images/6/65/Elementalist_trainer_%28map_icon%29.png",
+                "hasColorPicker": true,
+                "tooltip": "Read all the books in the Bastion of Knowledge library."
+              },
+              {
                 "id": "node_illuminating_inner_nayos_achievement",
                 "label": "Inner Nayos - Illuminating Inner Nayos",
                 "icon": "https://gw2ps.local/Assets/Icons/starlight_lantern.png",
@@ -1384,6 +1189,13 @@
                 "label": "Inner Nayos - Calcified Gasp",
                 "icon": "https://wiki.guildwars2.com/images/8/8f/Calcified_Gasp.png",
                 "hasColorPicker": true
+              },
+              {
+                "id": "node_sorrows_lost_achievement",
+                "label": "Wizard's Tower - Sorrow's Lost",
+                "icon": "https://wiki.guildwars2.com/images/5/56/Oracle_Card_1.png",
+                "hasColorPicker": true,
+                "tooltip": "Locate each of the Oracle cards."
               }
             ]
           },
@@ -1439,6 +1251,34 @@
                 "label": "Major Detected Treasure",
                 "icon": "https://gw2ps.local/Assets/Icons/major_detected_treasure.png",
                 "tooltip": "Use your Warclaw's 'Sniff' skill to find these",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_life_in_the_lowlands_achievement",
+                "label": "Lowland Shore - Life in the Lowlands",
+                "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+                "tooltip": "Find the books for achievement progression",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_chasing_waterfalls_achievement",
+                "label": "Lowland Shore - Chasing Waterfalls",
+                "icon": "https://wiki.guildwars2.com/images/f/f8/Water_Collected.png",
+                "tooltip": "Check behind waterfalls in Lowland Shore",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_shard_scouter_achievement",
+                "label": "Janthir Syntri",
+                "icon": "https://wiki.guildwars2.com/images/d/d7/Jade_Event_%28User_Interface%29.png",
+                "tooltip": "Discover interesting locations with large Bloodstone Shards",
+                "hasColorPicker": true
+              },
+              {
+                "id": "node_scouring_the_archive_achievement",
+                "label": "Mistburned Barrens - Scouring the Archive",
+                "icon": "https://wiki.guildwars2.com/images/6/6d/Skill_trainer_%28map_icon%29.png",
+                "tooltip": "Find the books for achievement progression",
                 "hasColorPicker": true
               }
             ]

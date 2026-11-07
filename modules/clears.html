@@ -78,7 +78,7 @@
 							<span class="slider"></span>
 						</label>
 					</div>
-					<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='#fff';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-primary, #e2c07d)';" onclick="showWatchlistModal()">Watchlist</button>
+					<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='#fff';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-primary, #e2c07d)';" onclick="showWatchlistModal()" data-i18n="clears.watchlist_btn">Watchlist</button>
 				</div>
 			</div>
 			<div id="clears-container" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
@@ -87,7 +87,7 @@
 		<div id="watchlist-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(10,8,5,0.95); z-index:1000; padding:15px; flex-direction:column; border:1px solid var(--border-color, #4a3b2a);">
 			<div class="header-row">
 				<div class="section-title" data-i18n="clears.overview_title">Watchlist Overview</div>
-				<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='var(--text-primary, #e2c07d)';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-muted, #8a7a5f)';" onclick="closeWatchlistModal()">Close</button>
+				<button style="background: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-muted, #8a7a5f); padding: 4px 8px; font-size: 9px; cursor: pointer; transition: 0.2s; font-family: inherit; text-transform: uppercase;" onmouseover="this.style.borderColor='var(--text-primary, #e2c07d)'; this.style.color='var(--text-primary, #e2c07d)';" onmouseout="this.style.borderColor='var(--border-color, #4a3b2a)'; this.style.color='var(--text-muted, #8a7a5f)';" onclick="closeWatchlistModal()" data-i18n="clears.close">Close</button>
 			</div>
 			<div id="watchlist-modal-content" style="flex: 1 1 auto; overflow-y: auto; padding-right: 5px;"></div>
 		</div>
@@ -159,7 +159,9 @@
                     watched.forEach(id => {
                         const status = clearsStatus[id];
                         if (status) {
-                            let statusText = status.isDone ? 'CLEARED' : 'UNCLEARED';
+                            const tCleared = window.DataLoader ? window.DataLoader.t('clears.cleared', 'CLEARED') : 'CLEARED';
+                            const tUncleared = window.DataLoader ? window.DataLoader.t('clears.uncleared', 'UNCLEARED') : 'UNCLEARED';
+                            let statusText = status.isDone ? tCleared : tUncleared;
                             if (status.progress !== undefined && status.max !== undefined) {
                                 statusText = status.isDone ? 'CLEARED' : `${status.progress}/${status.max}`;
                             }
@@ -256,7 +258,7 @@
                                         <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${e.id}', '${displayName.replace(/'/g, "\\'")}', 'RAIDS')"></span>
                                         <span class="clear-name">${displayName}</span>
                                     </div>
-                                    <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                                    <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? (window.DataLoader ? window.DataLoader.t('clears.cleared', 'CLEARED') : 'CLEARED') : (window.DataLoader ? window.DataLoader.t('clears.uncleared', 'UNCLEARED') : 'UNCLEARED')}</span>
                                 </div>`;
                             });
 
@@ -314,7 +316,7 @@
                                 <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${s}', '${displayName.replace(/'/g, "\\'")}', 'STRIKES')"></span>
                                 <span class="clear-name">${displayName}</span>
                             </div>
-                            <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                            <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? (window.DataLoader ? window.DataLoader.t('clears.cleared', 'CLEARED') : 'CLEARED') : (window.DataLoader ? window.DataLoader.t('clears.uncleared', 'UNCLEARED') : 'UNCLEARED')}</span>
                         </div>`;
                     });
 
@@ -370,7 +372,7 @@
                                     <span class="star-btn ${isWatched ? 'active' : ''}" onclick="toggleWatch(event, '${p.id}', '${pathName.replace(/'/g, "\\'")}', 'DUNGEONS')"></span>
                                     <span class="clear-name">${pathName}</span>
                                 </div>
-                                <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? 'CLEARED' : 'UNCLEARED'}</span>
+                                <span class="clear-status ${isDone ? 'status-done' : 'status-uncleared'}">${isDone ? (window.DataLoader ? window.DataLoader.t('clears.cleared', 'CLEARED') : 'CLEARED') : (window.DataLoader ? window.DataLoader.t('clears.uncleared', 'UNCLEARED') : 'UNCLEARED')}</span>
                             </div>`;
                         });
 

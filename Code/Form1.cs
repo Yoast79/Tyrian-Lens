@@ -635,7 +635,7 @@ namespace GW2PS
                     double avatarZInches = mumble.AvatarPosition.Z * 39.3700787;
                     double fX = contRectX + ((avatarXInches - mapRectX) / mapRectW * contRectW);
                     double fY = contRectY + ((1 - ((avatarZInches - mapRectY) / mapRectH)) * contRectH);
-                    string script = $"var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.updatePlayerLocation) frame.contentWindow.updatePlayerLocation({fX.ToString(CultureInfo.InvariantCulture)}, {fY.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.X.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.Z.ToString(CultureInfo.InvariantCulture)}, {mumble.AvatarPosition.Y.ToString(CultureInfo.InvariantCulture)});";
+                    string script = $"var frame = document.getElementById('map-frame'); if(frame && frame.contentWindow && frame.contentWindow.updatePlayerLocation) frame.contentWindow.updatePlayerLocation({fX.ToString(CultureInfo.InvariantCulture)}, {fY.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.X.ToString(CultureInfo.InvariantCulture)}, {mumble.CameraFront.Z.ToString(CultureInfo.InvariantCulture)}, {mumble.AvatarPosition.Y.ToString(CultureInfo.InvariantCulture)}, {mumble.MapId});";
                     mapView.CoreWebView2.ExecuteScriptAsync(script);
                 }
             }

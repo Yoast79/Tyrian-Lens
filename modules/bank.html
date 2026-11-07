@@ -79,20 +79,20 @@
 	<body>
 		<div class="title-bar">
 			<div class="title-top">
-				<div class="section-title">Account Vaults</div>
+				<div class="section-title" data-i18n="bank.title">Account Vaults</div>
 				<div class="title-controls">
 					<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
-						<option value="default">Sort: Default</option>
-						<option value="instant_high">Instant Sell: High -> Low</option>
-						<option value="instant_low">Instant Sell: Low -> High</option>
-						<option value="list_high">List Price: High -> Low</option>
-						<option value="list_low">List Price: Low -> High</option>
+						<option value="default" data-i18n="bank.sort_default">Sort: Default</option>
+						<option value="instant_high" data-i18n="bank.sort_instant_high">Instant Sell: High -> Low</option>
+						<option value="instant_low" data-i18n="bank.sort_instant_low">Instant Sell: Low -> High</option>
+						<option value="list_high" data-i18n="bank.sort_list_high">List Price: High -> Low</option>
+						<option value="list_low" data-i18n="bank.sort_list_low">List Price: Low -> High</option>
 					</select>
 				</div>
 			</div>
 			<div class="header-tabs">
-				<button id="tab-personal" class="header-tab active" onclick="switchMainTab('personal')">Personal Bank</button>
-				<button id="tab-guild" class="header-tab" onclick="switchMainTab('guild')">Guild Banks</button>
+				<button id="tab-personal" class="header-tab active" onclick="switchMainTab('personal')" data-i18n="bank.personal_bank">Personal Bank</button>
+				<button id="tab-guild" class="header-tab" onclick="switchMainTab('guild')" data-i18n="bank.guild_banks">Guild Banks</button>
 				<select id="guild-switcher" class="guild-switcher" onchange="switchGuild(this.value)"></select>
 			</div>
 		</div>

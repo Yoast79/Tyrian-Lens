@@ -25,7 +25,8 @@
     "Report Bug / Feature": "Fehler / Idee melden",
     "API Keys": "API-Schlüssel",
     "Settings": "Einstellungen",
-    "Update Available!": "Update verfügbar!"
+    "Update Available!": "Update verfügbar!",
+    "Unlock Radar": "Freischaltungs-Radar"
   },
   "help": {
     "title": "TYRIAN LENS",
@@ -156,7 +157,8 @@
       "waypoint_copied": "WEGMARKE KOPIERT",
       "poi_copied": "SEHENSWÜRDIGKEIT KOPIERT",
       "coords_copied": "KOORDINATEN KOPIERT",
-      "marker_removed": "MARKIERUNG ENTFERNT"
+      "marker_removed": "MARKIERUNG ENTFERNT",
+      "chatlink_copied": "CHATLINK KOPIERT"
     }
   },
   "settings": {
@@ -257,6 +259,8 @@
     "cancel": "Abbrechen",
     "submit": "Absenden",
     "save": "Speichern",
+    "remove": "Entfernen",
+    "no_data": "KEINE DATEN",
     "undercut": "UNTERBOTEN",
     "overbid": "ÜBERBOTEN",
     "search_currencies": "ALLE WÄHRUNGEN SUCHEN...",
@@ -354,25 +358,25 @@
         "tooltip": "Sektorgrenzen ein- oder ausblenden und Randfarbe wählen."
       },
       "node_gold_ore": {
-        "label": "Gold"
+        "label": "Golderz"
       },
       "node_silver_ore": {
-        "label": "Silber"
+        "label": "Silbererz"
       },
       "node_iron_ore": {
-        "label": "Eisen"
+        "label": "Eisenerz"
       },
       "node_copper_ore": {
-        "label": "Kupfer"
+        "label": "Kupfererz"
       },
       "node_platinum_ore": {
-        "label": "Platin"
+        "label": "Platinerz"
       },
       "node_mithril_ore": {
-        "label": "Mithril"
+        "label": "Mithrilerz"
       },
       "node_orichalcum_ore": {
-        "label": "Orikalkum"
+        "label": "Orikalkumerz"
       },
       "node_quartz_crystal": {
         "label": "Quarzkristall"
@@ -402,10 +406,10 @@
         "label": "Zwiebeln"
       },
       "node_potato_plants": {
-        "label": "Kartoffel"
+        "label": "Kartoffeln"
       },
       "node_clam_plants": {
-        "label": "Muschel"
+        "label": "Muscheln"
       },
       "node_strawberry_plants": {
         "label": "Erdbeerbeet"
@@ -420,7 +424,7 @@
         "label": "Zuckerkürbis"
       },
       "node_artichoke_plants": {
-        "label": "Artischocke"
+        "label": "Artischocken"
       },
       "node_asparagus_plants": {
         "label": "Spargel"
@@ -519,12 +523,395 @@
       },
       "node_orphan": {
         "label": "Wintertag - Waisen"
+      },
+      "node_pact_supply_network_agent": {
+        "label": "Pakt-Vorratsnetzwerk-Agenten"
+      },
+      "node_historian_elisa": {
+        "label": "Abtei-Historikerin Elisa"
+      },
+      "node_npc_merchant": {
+        "label": "Kaufleute"
+      },
+      "node_npc_dungeon_merchant": {
+        "label": "Verlies-Kaufleute"
+      },
+      "node_npc_event_merchant": {
+        "label": "Event-Kaufleute"
+      },
+      "node_npc_karma_merchant": {
+        "label": "Karma-Kaufleute"
+      },
+      "node_npc_fishmonger": {
+        "label": "Angelbedarf & Fischhändler"
+      },
+      "node_festival_merchant": {
+        "label": "Fest-Kaufleute"
+      },
+      "node_npc_gathering_merchant": {
+        "label": "Sammel-Kaufleute"
+      },
+      "node_npc_laurel_merchant": {
+        "label": "Lorbeer-Kaufleute"
+      },
+      "node_npc_guild_commendation": {
+        "label": "Gilden-Belobigungshändler"
+      },
+      "node_npc_bank": {
+        "label": "Account-Tresor (Bank)"
+      },
+      "node_npc_guild_vault": {
+        "label": "Gildentresor"
+      },
+      "node_npc_trading_post": {
+        "label": "Schwarzlöwen-Handelsgesellschaft"
+      },
+      "node_npc_map_collector": {
+        "label": "Karten-Sammler & Währungshändler"
+      },
+      "node_npc_reinforce_armor": {
+        "label": "Rüstung verstärken (Ambosse)"
+      },
+      "node_npc_makeover_preview": {
+        "label": "Vorschau auf Umstyling"
+      },
+      "node_npc_activity": {
+        "label": "Aktivitäten"
+      },
+      "node_npc_adventure": {
+        "label": "Abenteuer"
+      },
+      "node_npc_speed": {
+        "label": "Geschwindigkeitsschübe"
+      },
+      "node_npc_scout": {
+        "label": "Späher"
+      },
+      "node_npc_race": {
+        "label": "Rennveranstalter"
+      },
+      "node_npc_mount_rental": {
+        "label": "Reittier-Verleih"
+      },
+      "node_npc_misc": {
+        "label": "Sonstige NSCs"
+      },
+      "node_npc_faction_provisioner": {
+        "label": "Fraktions-Versorger"
+      },
+      "node_npc_mystic_forge": {
+        "label": "Mystische Schmiede"
+      },
+      "node_npc_armorsmith": {
+        "label": "Rüstungsschmied"
+      },
+      "node_npc_artificer": {
+        "label": "Konstrukteur"
+      },
+      "node_npc_chef": {
+        "label": "Koch"
+      },
+      "node_npc_huntsman": {
+        "label": "Waidmann"
+      },
+      "node_npc_jeweler": {
+        "label": "Juwelier"
+      },
+      "node_npc_leatherworker": {
+        "label": "Lederer"
+      },
+      "node_npc_tailor": {
+        "label": "Schneider"
+      },
+      "node_npc_weaponsmith": {
+        "label": "Waffenschmied"
+      },
+      "node_dive_master_achievement": {
+        "label": "Meistertaucher (Tauchbrillen)"
+      },
+      "node_sunken_chest_chests": {
+        "label": "Zentraltyria - Versunkene Truhen"
+      },
+      "node_silverwastes_chests": {
+        "label": "Silberwüste - Verlorene Banditentruhen"
+      },
+      "node_silverwastes_lost_badges_achievement": {
+        "label": "Silberwüste - Verlorene Abzeichen"
+      },
+      "node_silverwastes_golden_lost_badges_achievement": {
+        "label": "Silberwüste - Goldene verlorene Abzeichen"
+      },
+      "node_dry_top_buried_locked_chest_chests": {
+        "label": "Trockenkuppe - Vergrabene verschlossene Truhen"
+      },
+      "node_dry_top_coin_collector_achievement": {
+        "label": "Trockenkuppe - Münzsammler"
+      },
+      "node_airship_cargo": {
+        "label": "Grasgrüne Klippen - Luftschiff-Fracht"
+      },
+      "node_exalted_chest": {
+        "label": "Güldener Talkessel - Erhabenen-Truhen"
+      },
+      "node_auric_basin_no_mask_left_behind_achievement": {
+        "label": "Güldener Talkessel - Keine Maske zurücklassen"
+      },
+      "node_crystallized_supply_cache": {
+        "label": "Verschlungene Tiefen - Kristallisierte Vorratslager"
+      },
+      "node_noxious_seed_pod": {
+        "label": "Widerstand des Drachen - Giftige Samenkapseln"
+      },
+      "node_bloodstone_crystal": {
+        "label": "Blutsteinsumpf - Blutsteinkristalle"
+      },
+      "node_petrified_stump": {
+        "label": "Glutbucht - Versteinerter Baumstumpf"
+      },
+      "node_skritt_stash:": {
+        "label": "Glutbucht - Skritt-Verstecke"
+      },
+      "node_skritt_stash": {
+        "label": "Glutbucht - Skritt-Verstecke"
+      },
+      "node_ember_bay_token_collector_achievement": {
+        "label": "Glutbucht - Münzen-Sammler"
+      },
+      "node_winterberry_bush": {
+        "label": "Bitterfrost-Grenzland - Winterbeerenstrauch"
+      },
+      "node_bitterfrost_frontier_icebound_chest_chests": {
+        "label": "Bitterfrost-Grenzland - Eisgebundene Truhen"
+      },
+      "node_jade_fragment": {
+        "label": "Doric-See - Jadefragmente"
+      },
+      "node_primordal_orchid": {
+        "label": "Draconis Mons - Urzeit-Orchidee"
+      },
+      "node_draconis_mons_rock_collector_achievement": {
+        "label": "Draconis Mons - Steinsammler"
+      },
+      "node_lessons_learned_achievement": {
+        "label": "Draconis Mons - Gelernte Lektionen"
+      },
+      "node_orrian_oyster": {
+        "label": "Sirenen-Überfahrt - Orrianische Austern"
+      },
+      "node_sirens_landing_storyteller_achievement": {
+        "label": "Sirenen-Überfahrt - Geschichtenerzähler"
+      },
+      "node_sirens_landing_waterlogged_chest_chests": {
+        "label": "Sirenen-Überfahrt - Durchnässte Truhen"
+      },
+      "node_bleached_bones_achievement": {
+        "label": "Kristalloase - Gebleichte Knochen"
+      },
+      "node_lost_dwarven_chest_achievement": {
+        "label": "Wüsten-Hochland - Zwergen-Überreste"
+      },
+      "node_forgotten_debris_achievement": {
+        "label": "Fluss-Lande des Elon - Vergessene Trümmer"
+      },
+      "node_shadows_provisions_achievement": {
+        "label": "Das Ödland - Vorräte der Schatten"
+      },
+      "node_timeworn_bust_achievement": {
+        "label": "Domäne Vabbi - Geißel-Befreier"
+      },
+      "node_praise_joko_achievement": {
+        "label": "Domäne Vabbi - Preist Joko!"
+      },
+      "node_crystal_desert_trade_cache_chests": {
+        "label": "Handelslager der Kristallwüste"
+      },
+      "node_crystal_desert_sand_pile_chests": {
+        "label": "Sandhaufen der Kristallwüste"
+      },
+      "node_difluorite_crystal": {
+        "label": "Sandeinreißende Inseln - Difluoritkristall"
+      },
+      "node_mistonium": {
+        "label": "Jahai-Klippen - Nebelium"
+      },
+      "node_kournan_supply_cache": {
+        "label": "Domäne Kourna - Kournatischer Vorratskasten"
+      },
+      "node_dragon_crystal_node": {
+        "label": "Donnerkopf-Gipfel - Drachenkristall-Knoten"
+      },
+      "node_thunderhead_peak_dwarven_chest_chests": {
+        "label": "Donnerkopf-Gipfel - Zwergentruhen"
+      },
+      "node_mistborn_mote": {
+        "label": "Drachensturz - Nebelgeborene Partikel"
+      },
+      "node_domain_of_istan_lost_to_time_achievement": {
+        "label": "Domäne Istan - Der Zeit verloren"
+      },
+      "node_eternal_ice": {
+        "label": "Bjora-Sümpfe - Ewiges Eis"
+      },
+      "node_bjora_marches_treasure_hunter_achievement": {
+        "label": "Bjora-Sümpfe - Schatzsucher"
+      },
+      "node_salvage_pile": {
+        "label": "Nieselwald-Küste - Bergungsgut-Haufen"
+      },
+      "node_lost_charr_supply_drop": {
+        "label": "Nieselwald-Küste - Verlorener Charr-Vorratsabwurf"
+      },
+      "node_hatched_chili_pepper_bush": {
+        "label": "Grothmar-Tal - Gezüchteter Chilischoten-Strauch"
+      },
+      "node_illuminating_seitung_province_achievement": {
+        "label": "Provinz Seitung - Erleuchtung der Provinz Seitung"
+      },
+      "node_spiritual_childcare_achievement": {
+        "label": "Provinz Seitung - Geistige Kinderbetreuung"
+      },
+      "node_light_these_streets_achievement": {
+        "label": "Neu-Kaineng - Erleuchtung dieser Straßen"
+      },
+      "node_little_foxes_in_the_big_city_achievement": {
+        "label": "Neu-Kaineng - Kleine Füchse in der großen Stadt"
+      },
+      "node_cleanup_duty_achievement": {
+        "label": "Neu-Kaineng - Reinigungsdienst"
+      },
+      "node_read_the_secret_of_the_vault_achievement": {
+        "label": "Neu-Kaineng - 'Das Geheimnis der Schatzkammer' lesen"
+      },
+      "node_the_history_of_new_kaineng_achievement": {
+        "label": "Neu-Kaineng - Die Geschichte von Neu-Kaineng"
+      },
+      "node_petrified_echovald_sapling": {
+        "label": "Die Echowald-Wildnis - Versteinerter Echowald-Schössling"
+      },
+      "node_lighting_the_echovald_wilds_achievement": {
+        "label": "Die Echowald-Wildnis - Erleuchtung der Echowald-Wildnis"
+      },
+      "node_what_did_the_shrine_guardian_say_achievement": {
+        "label": "Die Echowald-Wildnis - Was sagten die Schreinhüter?"
+      },
+      "node_dragons_end_jadeite_vein": {
+        "label": "Drachen-Ende - Jadeitader"
+      },
+      "node_lighting_dragons_end_achievement": {
+        "label": "Drachen-Ende - Erleuchtung des Drachen-Endes"
+      },
+      "node_dead_play_achievement": {
+        "label": "Drachen-Ende - Totenspiel"
+      },
+      "node_respects_paid_achievement": {
+        "label": "Drachen-Ende - Respekt bekundet"
+      },
+      "node_gyala_delve_jadeite_vein": {
+        "label": "Gyala-Senke - Jadeitader"
+      },
+      "node_playing_with_the_infants_achievement": {
+        "label": "Gyala-Senke - Mit den Jungen spielen"
+      },
+      "node_lesser_arcane_chest_chests": {
+        "label": "Secrets of the Obscure - Niedere Arkane Truhen"
+      },
+      "node_greater_arcane_chest_chests": {
+        "label": "Secrets of the Obscure - Große Arkane Truhen"
+      },
+      "node_illuminating_skywatch_archipelago_achievement": {
+        "label": "Himmelswacht-Archipel - Erleuchtung des Himmelswacht-Archipels"
+      },
+      "node_rise_and_shrine_achievement": {
+        "label": "Himmelswacht-Archipel - Schrein und Schein"
+      },
+      "node_static_charge": {
+        "label": "Himmelswacht-Archipel - Statische Ladung"
+      },
+      "node_illuminating_amnytas_achievement": {
+        "label": "Amnytas - Erleuchtung von Amnytas"
+      },
+      "node_fantastic_flying_foxes_achievement": {
+        "label": "Amnytas - Fantastische fliegende Füchse"
+      },
+      "node_pinch_of_stardust": {
+        "label": "Amnytas - Prise Sternenstaub"
+      },
+      "node_astral_ward_research_achievement": {
+        "label": "Amnytas - Forschung der Astralwache"
+      },
+      "node_illuminating_inner_nayos_achievement": {
+        "label": "Inneres Nayos - Erleuchtung des Inneren Nayos"
+      },
+      "node_shrine_finder_achievement": {
+        "label": "Inneres Nayos - Schreinfinder"
+      },
+      "node_calcified_gasp": {
+        "label": "Inneres Nayos - Verkalkter Atemzug"
+      },
+      "node_sorrows_lost_achievement": {
+        "label": "Turm der Zauberer - Die Verlorenen der Betrübnis"
+      },
+      "node_honey_flower": {
+        "label": "Tiefland-Küste - Honigblume"
+      },
+      "node_lowland_pine_sapling": {
+        "label": "Tiefland-Küste - Tiefland-Kiefern-Schössling"
+      },
+      "node_titan_ore": {
+        "label": "Janthir Syntri - Verrotteter Bernstein / Titanen-Erz"
+      },
+      "node_mursaat_obsidian": {
+        "label": "Nebelverbrannte Einöde - Mursaat-Obsidian"
+      },
+      "node_titan_heatstone": {
+        "label": "Nebelverbrannte Einöde - Titanen-Hitzestein"
+      },
+      "node_minor_detected_treasure": {
+        "label": "Entdeckter Schatz"
+      },
+      "node_major_detected_treasure": {
+        "label": "Bedeutender entdeckter Schatz"
+      },
+      "node_life_in_the_lowlands_achievement": {
+        "label": "Tiefland-Küste - Leben im Tiefland"
+      },
+      "node_chasing_waterfalls_achievement": {
+        "label": "Tiefland-Küste - Wasserfällen hinterherjagen"
+      },
+      "node_shard_scouter_achievement": {
+        "label": "Janthir Syntri - Scherben-Späher"
+      },
+      "node_scouring_the_archive_achievement": {
+        "label": "Nebelverbrannte Einöde - Archiv-Durchsuchung"
+      },
+      "node_aetherlocation_treasure": {
+        "label": "Ätherpeilungsschatz"
+      },
+      "node_magic_mirror": {
+        "label": "Zauberspiegel"
+      },
+      "node_node_small_obscure_chest_chests": {
+        "label": "Obskure Truhen"
       }
     },
     "syncing_rotation": "SYNCHRONISIERE MIT ROTATIONSTABELLE...",
     "copied_waypoints": "6 WEGMARKEN KOPIERT",
     "rotation_error": "ROTATIONS-SYNCHRONISATIONSFEHLER",
-    "copy_waypoints_tip": "Wegmarken kopieren"
+    "copy_waypoints_tip": "Wegmarken kopieren",
+    "subcategories": {
+      "vendors": "Händler & NSCs",
+      "crafting_vendors": "Handwerks-Händler",
+      "core_tyria": "Zentraltyria",
+      "heart_of_thorns": "Heart of Thorns",
+      "living_world_season_3": "Lebendige Welt Staffel 3",
+      "path_of_fire": "Path of Fire",
+      "living_world_season_4": "Lebendige Welt Staffel 4",
+      "the_icebrood_saga": "Die Eisbrut-Saga",
+      "end_of_dragons": "End of Dragons",
+      "secrets_of_the_obscure": "Secrets of the Obscure",
+      "janthir_wilds": "Janthir-Wildnis",
+      "visions_of_eternity": "Visionen der Ewigkeit"
+    }
   },
   "motd": {
     "active": true,
@@ -561,6 +948,8 @@
     "cancel": "Abbrechen",
     "submit": "Absenden",
     "save": "Speichern",
+    "remove": "Entfernen",
+    "no_data": "KEINE DATEN",
     "undercut": "UNTERBOTEN",
     "overbid": "ÜBERBOTEN"
   },
@@ -591,7 +980,18 @@
     "opt_sector": "Sektoren",
     "opt_borders": "Grenzen",
     "opt_overlay": "Sektor-Farbüberlagerung",
-    "opt_scoreboard": "Punkteanzeige"
+    "opt_scoreboard": "Punkteanzeige",
+    "red": "Rot",
+    "green": "Grün",
+    "blue": "Blau",
+    "neutral": "Neutral",
+    "castle": "Schloss",
+    "keep": "Feste",
+    "tower": "Turm",
+    "camp": "Lager",
+    "ruins": "Ruinen der Macht",
+    "mercenary": "Söldnerlager",
+    "remove": "Entfernen"
   },
   "characters": {
     "title": "Charakterübersicht",
@@ -602,7 +1002,17 @@
     "tip_bag_slots": "Taschenplatz-Erweiterungen",
     "tip_crafting_licenses": "Aktive Handwerkslizenzen",
     "tip_build_tabs": "Build-Vorlagen-Registerkarten",
-    "tip_equip_tabs": "Ausrüstungs-Vorlagen-Registerkarten"
+    "tip_equip_tabs": "Ausrüstungs-Vorlagen-Registerkarten",
+    "born": "ERSTELLT:",
+    "playtime": "SPIELZEIT:",
+    "next_birthday": "NÄCHSTER GEBURTSTAG:",
+    "in_days": "IN {0} TAGEN",
+    "deaths": "TODESFÄLLE:",
+    "last_login": "LETZTER LOGIN:",
+    "days_suffix": "TAGE",
+    "hrs_suffix": "STD",
+    "no_api_key": "Kein API-Schlüssel erkannt.",
+    "unauthorized": "Nicht autorisierter API-Schlüssel"
   },
   "wallet": {
     "title": "Account-Geldbörse",
@@ -612,20 +1022,29 @@
   },
   "fishing": {
     "title": "ANGELREGIONEN",
-    "watchlist_overlay": "WATCHLIST-OVERLAY",
+    "watchlist_overlay": "BEOBACHTUNGS-OVERLAY",
     "search_ph": "FISCHE SUCHEN...",
-    "loading": "ANGELDATEN WERDEN GELADEN..."
+    "loading": "LADE ANGELDATEN...",
+    "no_matches": "KEINE FISCHE GEFUNDEN",
+    "all_complete": "ALLE BEOBACHTETEN KARTEN ABGESCHLOSSEN",
+    "api_error": "GW2-API KONNTE NICHT GELADEN WERDEN"
   },
   "clears": {
     "title": "Wöchentliche Abschlüsse",
-    "watchlist_screen": "Watchlist auf dem Bildschirm",
-    "watchlist_btn": "Watchlist",
-    "overview_title": "Watchlist-Übersicht",
-    "syncing": "ABSCHLUSSDATEN WERDEN SYNCHRONISIERT...",
+    "watchlist_screen": "Beobachtungsliste auf Bildschirm",
+    "watchlist_btn": "Beobachtungsliste",
+    "overview_title": "Übersicht Beobachtungsliste",
+    "syncing": "SYNCHRONISIERE ABSCHLUSSDATEN...",
     "cleared": "ABGESCHLOSSEN",
     "uncleared": "OFFEN",
-    "no_items": "Keine Einträge auf Ihrer Watchlist.<br><br>Klicken Sie auf die Röntgen-Symbole neben den Einträgen, um sie zu beobachten.",
-    "wing": "Flügel"
+    "no_items": "Keine Einträge auf Ihrer Beobachtungsliste.<br><br>Klicken Sie auf das Röntgen-Symbol neben Einträgen, um sie zu beobachten.",
+    "wing": "Flügel {0}",
+    "close": "Schließen",
+    "raids": "SCHLACHTZÜGE",
+    "strike_missions": "ANGRIFFSMISSIONEN",
+    "dungeons": "VERLIESE",
+    "fractals": "FRAKTALE",
+    "convergences": "KONVERGENZEN"
   },
   "farming": {
     "title": "FARMING-TRACKER",
@@ -644,13 +1063,30 @@
     "month": "MONAT",
     "year": "JAHR",
     "session_log": "SITZUNGSPROTOKOLL",
-    "delete_entry": "Eintrag löschen"
+    "delete_entry": "EINTRAG LÖSCHEN",
+    "stop_session": "SITZUNG BEENDEN",
+    "wipe_data": "DATEN LÖSCHEN",
+    "session_details": "SITZUNGSDETAILS",
+    "close": "SCHLIEßEN",
+    "tracking_started": "TRACKING GESTARTET...",
+    "session_ended": "SITZUNG BEENDET",
+    "fetching_snapshot": "SCHNAPPSCHUSS WIRD GELADEN...",
+    "api_error": "API-FEHLER",
+    "confirm_wipe": "Möchten Sie wirklich den gesamten Sitzungsverlauf löschen? Dies kann nicht rückgängig gemacht werden.",
+    "confirm_delete_session": "Möchten Sie diesen Sitzungseintrag wirklich löschen?"
   },
   "hero": {
     "attributes": "Attribute",
     "copy_build": "Build kopieren",
     "copy_equip": "Ausrüstung kopieren",
-    "save_to_planner": "Im Planer speichern"
+    "save_to_planner": "Im Planer speichern",
+    "skills": "FERTIGKEITEN",
+    "weapon": "WAFFE",
+    "utility": "HILFSFERTIGKEITEN",
+    "build": "BUILD",
+    "syncing": "HELDENDATEN WERDEN SYNCHRONISIERT...",
+    "equipment_links": "AUSRÜSTUNGS-LINKS",
+    "enter_build_name": "Build-Name eingeben:"
   },
   "crafting": {
     "account_unlocks": "Account-Freischaltungen",
@@ -659,7 +1095,116 @@
     "auto_update_mats": "EIGENE MATERIALIEN JEDE MINUTE AKTUALISIEREN",
     "use_promotions": "GEGENSTANDS-AUFWERTUNGEN NUTZEN",
     "syncing": "REZEPTDATEN WERDEN SYNCHRONISIERT...",
-    "may_take_minute": "DIES KANN EINE MINUTE DAUERN"
+    "may_take_minute": "DIES KANN EINE MINUTE DAUERN",
+    "tab_calculator": "Herstellungsrechner",
+    "tab_unlocks": "Account-Freischaltungen",
+    "search_recipes": "Rezepte durchsuchen...",
+    "filter_disc_all": "Alle Disziplinen",
+    "filter_status_all": "Alle Status",
+    "filter_status_unlocked": "Freigeschaltet",
+    "filter_status_locked": "Gesperrt",
+    "unlocked_count": "Freigeschaltet: {0} / {1}",
+    "search_item": "HERSTELLBAREN GEGENSTAND SUCHEN...",
+    "quantity": "Menge:",
+    "opt_craft_precursors": "PRÄKURSOR HERSTELLEN",
+    "opt_craft_dailies": "TÄGLICHE ABKLINGZEITEN HERSTELLEN",
+    "opt_allow_forge": "MYSTISCHE SCHMIEDE-AUFWERTUNGEN ERLAUBEN",
+    "card_direct_buy": "Direktkauf Handelsposten",
+    "card_direct_buy_sub": "Sofortkauf aus dem HP",
+    "card_direct_sell": "Direktverkauf Handelsposten",
+    "card_direct_sell_sub": "Sofortverkauf im HP",
+    "card_est_cost": "Geschätzte Herstellungskosten",
+    "card_est_cost_sub": "Basierend auf Komponentenpreisen",
+    "card_currency_cost": "Gesamte Währungskosten",
+    "card_currency_cost_sub": "Spezielle Nicht-Gold-Währungen",
+    "card_raw_gold": "Reines Gold / Händler",
+    "card_raw_gold_sub": "Feste Händlerkosten",
+    "card_savings": "Ersparnis ggü. Direktkauf",
+    "card_savings_sub": "Im Vergleich zum Sofortkauf",
+    "card_profit_instant": "Gewinn (Sofortverkaufs-Order)",
+    "card_profit_instant_sub": "Nach 15% HP-Gebühr",
+    "card_profit_offer": "Gewinn (Verkaufsangebot)",
+    "card_profit_offer_sub": "Nach 15% HP-Gebühr",
+    "subtab_wiki": "Vollständige Materialübersicht (Wiki)",
+    "subtab_shopping": "Kategorisierte Einkaufsliste",
+    "section_tp": "Handelbare Gegenstände (Handelsposten)",
+    "section_vendor": "Händlerkäufe & feste Währungen",
+    "section_bound": "Accountgebundene Gegenstände & Währungen",
+    "section_currencies": "Erforderliche Nicht-Gold-Währungen",
+    "col_item": "Gegenstand",
+    "col_req_qty": "Benötigte Menge",
+    "col_owned": "Im Besitz (abgezogen)",
+    "col_to_buy": "Zu kaufende Menge",
+    "col_needed": "Benötigt",
+    "col_unit_price": "Stückpreis",
+    "col_est_cost": "Geschätzte Kosten",
+    "col_source": "Quelle / Händler",
+    "col_acquisition": "Erwerbsquelle",
+    "tot_tp": "Handelsposten Gesamt",
+    "tot_vendor": "Händler / Reingold Gesamt",
+    "tot_bound": "Accountgebundene Gegenstände",
+    "tot_grand": "Gesamtkosten aus eigener Tasche",
+    "tot_grand_sub": "HP-Materialien + Händlergold",
+    "disc_required_prefix": "ERFORDERLICH >",
+    "disc_level": "Stufe {0}",
+    "disc_required_tag": "Erforderlich",
+    "disc_alternative_tag": "Alternative",
+    "disc_ready": "Bereit",
+    "disc_none_forge": "Keine (In der Mystischen Schmiede geschmiedet)",
+    "disc_none_forge_desc": "Keine Handwerksdisziplin erforderlich (Mystische Schmiede).",
+    "disc_no_char": "Kein Charakter erfüllt {0} {1}+",
+    "disc_connect_api": "API-Schlüssel verbinden, um Charakterbereitschaft zu prüfen",
+    "empty_state": "WÄHLT EINEN GEGENSTAND AUS, UM DIE MATERIALÜBERSICHT ZU GENERIEREN",
+    "calculating": "REZEPTDATEN WERDEN BERECHNET...",
+    "calculating_sub": "Preise und Materiallisten werden abgefragt...",
+    "btn_efficiency": "In gw2efficiency öffnen",
+    "modal_title": "In gw2efficiency öffnen?",
+    "modal_desc": "Ihr seid dabei, gw2efficiency in eurem externen Standard-Browser zu öffnen, um {0} anzusehen.",
+    "modal_dont_show": "Nicht erneut fragen",
+    "modal_cancel": "Abbrechen",
+    "modal_open": "gw2efficiency öffnen",
+    "free_owned": "Im Besitz",
+    "free_currency": "Kostenlos / Währung",
+    "disc_armorsmith": "Rüstungsschmied",
+    "disc_artificer": "Konstrukteur",
+    "disc_chef": "Koch",
+    "disc_huntsman": "Waidmann",
+    "disc_jeweler": "Juwelier",
+    "disc_leatherworker": "Lederer",
+    "disc_scribe": "Schreiber",
+    "disc_tailor": "Schneider",
+    "disc_weaponsmith": "Waffenschmied",
+    "disc_handiworker": "Heimwerker",
+    "disc_mystic_forge": "Mystische Schmiede",
+    "cat_refinement": "Veredelung",
+    "cat_armor": "Rüstung",
+    "cat_weapon": "Waffe",
+    "cat_component": "Komponente",
+    "cat_consumable": "Verbrauchsgegenstand",
+    "cat_ingredientcooking": "Kochzutat",
+    "cat_legendarycomponent": "Legendäre Komponente",
+    "cat_refinementectoplasm": "Ektoplasma-Veredelung",
+    "cat_refinementobsidian": "Obsidian-Veredelung",
+    "cat_longbow": "Langbogen",
+    "cat_shortbow": "Kurzbogen",
+    "cat_harpoongun": "Harpunengewehr",
+    "status_ready": "✓ Bereit",
+    "status_need": "⚠️ Benötigt {0}",
+    "api_connected": "✓ Konto-API verbunden",
+    "api_none": "Kein API-Schlüssel verbunden",
+    "evaluated_chars": "({0} Kontocharaktere ausgewertet)",
+    "no_tradable_items": "Keine handelbaren Gegenstände erforderlich.",
+    "no_vendor_items": "Keine Händlerkäufe erforderlich.",
+    "no_bound_items": "Keine accountgebundenen Gegenstände erforderlich.",
+    "no_currency_items": "Keine besonderen Währungen erforderlich.",
+    "items_needed": "{0} Gegenstände benötigt",
+    "owned_on_account": "{0} im Kontobesitz",
+    "units_to_buy": "{0} Gegenstände ({1} Einheiten zu kaufen)",
+    "tot_tp_header": "GESAMT HANDELSGESELLSCHAFT ({0} Gegenstände)",
+    "tot_vendor_header": "GESAMT HÄNDLERKÄUFE ({0} Gegenstände)",
+    "tot_bound_header": "GESAMT ACCOUNTGEBUNDEN ({0} Gegenstände)",
+    "section_disciplines": "Erforderliche Handwerksberufe",
+    "opt_auto_refresh": "Materialien autom. aktualisieren (1m)"
   },
   "pvp": {
     "title": "PvP-Modul",
@@ -685,7 +1230,29 @@
     "clear_prompt": "Möchten Sie den aktuellen Build wirklich zurücksetzen? Dies kann nicht rückgängig gemacht werden.",
     "select_skill": "FERTIGKEIT WÄHLEN",
     "select_option": "Option wählen",
-    "apply_all": "Auf alle kompatiblen anwenden"
+    "apply_all": "Auf alle kompatiblen anwenden",
+    "copy_tooltip": "Spiel-Build-Code kopieren<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Kopiert einen Standard-Chatlink der Guild Wars 2-Build-Vorlage in Ihre Zwischenablage für den direkten Import von Eigenschaften, Spezialisierungen und Fertigkeiten im Spiel. Hinweis: Ausrüstungswerte, Waffen und Siegel werden nicht vom Vorlagensystem des Spiels unterstützt und müssen manuell konfiguriert werden.</span>",
+    "share_tooltip": "Lens-Profil teilen<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Erstellt einen umfassenden Build-Profilcode für andere Tyrian Lens-Benutzer. Hinweis: Lens-Profile sind exklusiv für Tyrian Lens-Anwendungen und können nicht direkt in den Guild Wars 2-Spielclient importiert werden.</span>",
+    "clear_tooltip": "Aktuellen Build leeren",
+    "save_tooltip": "Aktuellen Build speichern",
+    "load_tooltip": "Gespeicherten Build laden",
+    "slots": {
+      "helm": "Kopfrüstung",
+      "shoulders": "Schulterrüstung",
+      "coat": "Brustrüstung",
+      "gloves": "Handrüstung",
+      "leggings": "Beinrüstung",
+      "boots": "Fußrüstung",
+      "backpack": "Rücken-Gegenstand",
+      "accessory": "Accessoire",
+      "relic": "Relikt",
+      "amulet": "Amulett",
+      "ring": "Ring",
+      "jade_bot": "Jade-Bot-Kern",
+      "helm_aquatic": "Atemgerät",
+      "weapon_main": "Haupthand-Waffe",
+      "weapon_off": "Begleithand-Waffe"
+    }
   },
   "timers": {
     "add_custom": "BENUTZERDEFINIERTEN TIMER HINZUFÜGEN",
@@ -693,16 +1260,62 @@
     "ph_mins": "MIN",
     "err_title": "Titel ist erforderlich",
     "err_value": "Ungültiger Wert",
-    "err_time": "Ungültige Zeit"
+    "err_time": "Ungültige Zeit",
+    "title": "EVENT-TIMER"
   },
   "trading": {
-    "market_search": "HANDELSPOSTEN-SUCHE",
-    "search_btn": "SUCHEN",
+    "title": "Handelsposten",
+    "sync_market": "Markt synchronisieren",
+    "timer_manual": "MANUELL",
+    "timer_1m": "1 MINUTE",
+    "timer_5m": "5 MINUTEN",
+    "timer_10m": "10 MINUTEN",
+    "currency_exchange": "WÄHRUNGSTAUSCH",
+    "calculate": "BERECHNEN",
+    "delivery_box": "ABHOLKASTEN",
+    "items": "GEGENSTÄNDE",
+    "funds": "GELD",
+    "my_transactions": "MEINE TRANSAKTIONEN",
+    "sell_orders": "VERKAUFSAUFTRÄGE",
+    "buy_orders": "KAUFAUFTRÄGE",
+    "transaction_history": "TRANSAKTIONSVERLAUF",
+    "sold_items": "VERKAUFTE GEGENSTÄNDE",
+    "bought_items": "GEKAUFTE GEGENSTÄNDE",
+    "watchlist": "BEOBACHTUNGSLISTE",
+    "watchlist_hint": "Klickt auf das Symbol, um Marktpreise und Verfügbarkeit zu verfolgen",
+    "empty_watchlist": "WATCHLIST LEER",
+    "investments": "INVESTITIONEN",
+    "loading_investments": "INVESTITIONEN WERDEN GELADEN...",
+    "no_active_investments": "KEINE AKTIVEN INVESTITIONEN",
+    "cost": "KOSTEN",
+    "profit": "GEWINN",
+    "waiting_price_data": "WARTE AUF PREISDATEN...",
+    "remove": "ENTFERNEN",
+    "smart_crafting": "SMARTES HANDWERK",
+    "time_gated_crafts": "ZEITBEGRENZTES HANDWERK",
+    "timegated_hint": "Materiallager mit Marktpreisen abgleichen",
+    "custom_watchlist": "BENUTZERDEFINIERTE WATCHLIST",
     "add_items_hint": "Gegenstände über Handelsposten-Suche hinzufügen",
     "run_analysis": "ANALYSE STARTEN",
+    "analyzing_market": "MARKTDATEN WERDEN ANALYSIERT...",
+    "no_items_analyze": "KEINE GEGENSTÄNDE ZUR ANALYSE",
+    "analysis_no_data": "ANALYSE ABGESCHLOSSEN - KEINE DATEN",
+    "in_crafting_watchlist": "✔ IN DER HANDWERKS-WATCHLIST",
+    "add_crafting_watchlist": "ZUR HANDWERKS-WATCHLIST HINZUFÜGEN",
+    "market_search": "HANDELSPOSTEN-SUCHE",
+    "search_btn": "SUCHEN",
+    "item_not_found": "GEGENSTAND NICHT GEFUNDEN",
+    "track_investment": "INVESTITION VERFOLGEN",
     "ph_qty": "GEKAUFTE MENGE",
     "ph_cost": "GESAMTKOSTEN (KUPFER)",
-    "empty_watchlist": "WATCHLIST LEER"
+    "remove_investment_title": "INVESTITION ENTFERNEN?",
+    "remove_investment_confirm": "MÖCHTET IHR DIESE INVESTITIONSVERFOLGUNG WIRKLICH ENTFERNEN?",
+    "syncing_market_delta": "MARKT-DELTA WIRD SYNCHRONISIERT...",
+    "syncing_new_items": "NEUE GEGENSTÄNDE WERDEN SYNCHRONISIERT ({0}%)",
+    "per_item": "/ GEGENSTAND",
+    "total": "GESAMT",
+    "buy": "KAUF",
+    "sell": "VERKAUF"
   },
   "index": {
     "switch_map_prompt": "Standort erkannt in {0}.\nAnsicht wechseln?",
@@ -715,5 +1328,379 @@
     "watch_clears": "WÖCHENTLICHE ABSCHLÜSSE",
     "connecting": "Verbindung mit Tyria wird hergestellt...",
     "loading_module": "Modul wird geladen..."
-  }
+  },
+  "radar": {
+    "title": "Freischaltungs-Radar",
+    "search_placeholder": "Freischaltungen, Händler, Erfolge suchen...",
+    "hud_title": "Bildschirm-Radar-HUD",
+    "sound_alert": "Näherungs-Tonsignal",
+    "tts_male": "TTS Männlich",
+    "tts_female": "TTS Weiblich",
+    "sound_muted": "Aus (Stumm)",
+    "proximity_radius": "Alarm-Näherungsradius",
+    "volume": "Alarmlautstärke",
+    "play_sound": "Ton abspielen",
+    "current_map_feed": "Karten-Radar-Feed",
+    "nearby_count": "{0} in der Nähe",
+    "searching": "Suche nach Sammelobjekten in der Nähe...",
+    "no_collectibles": "Keine unvollständigen Sammelobjekte in der Nähe.",
+    "refreshing_account": "Konto-Freischaltungen aktualisieren...",
+    "map_btn": "Karte",
+    "wardrobe_vendors": "Garderoben-Händler & Skins",
+    "bulk_all": "Alle",
+    "bulk_none": "Keine",
+    "wardrobe_categories": "GARDEROBEN-KATEGORIEN",
+    "cat_armor": "RÜSTUNGS-SKINS (KULTURELL, KARMA, VERLIESS)",
+    "cat_weapon": "WAFFEN-SKINS (KULTURELL, KARMA, VERLIESS)",
+    "cat_mini": "MINIATUREN (LORBEEREN, KARTENWÄHRUNGEN)",
+    "cat_novelty": "NEUHEITEN (STÜHLE, INSTRUMENTE, TRÄNKE)",
+    "cat_outfits": "KLEIDUNGSSETS & GLEITSCHIRME",
+    "allowed_currencies": "ERLAUBTE HÄNDLERWÄHRUNGEN",
+    "curr_karma": "KARMA-HÄNDLER & HERZEN",
+    "curr_coin": "MÜNZ- / GOLDKÄUFE",
+    "curr_map": "KARTENWÄHRUNGEN & ENTBUNDENE / FLÜCHTIGE MAGIE",
+    "curr_laurel": "LORBEER-HÄNDLER",
+    "curr_dungeon_raid": "VERLIES-, SCHLACHTZUG- & ANGRIFFS-HÄNDLER",
+    "mapped_achievements": "KARTIERTE ERFOLGE",
+    "expac_core": "KERNTYRIA",
+    "ach_dive_master": "TAUCHMEISTER (TAUCHERBRILLE)",
+    "ach_silverwastes_lost": "SILBERWÜSTE - VERLORENE ABZEICHEN",
+    "ach_silverwastes_golden": "SILBERWÜSTE - GOLDENE VERLORENE ABZEICHEN",
+    "expac_soto": "SECRETS OF THE OBSCURE",
+    "ach_sorrows_lost": "DER TRAUER ENTRISSEN (ORAKELKARTEN)",
+    "ach_astral_ward": "ASTRAL-WACHE & HIMMELSWACHTEL ENTDECKUNGEN",
+    "expac_jw": "JANTHIR-WILDFLUR",
+    "ach_chasing_waterfalls": "TIEFLAND-KÜSTE - WASSERFÄLLEN HINTERHERJAGEN",
+    "ach_life_in_lowlands": "TIEFLAND-KÜSTE - LEBEN IM TIEFLAND",
+    "ach_shard_scouter": "JANTHIR SYNTRI - SCHERBENSUCHER",
+    "ach_scouring_archive": "NEBELBRAND-ÖDLAND - DAS ARCHIV DURCHKÄMMEN",
+    "expac_hot": "HEART OF THORNS & LEBENDIGE WELT 3",
+    "ach_hot_insights": "MAGUUMA-HERZ BEHERRSCHUNGSEINBLICKE",
+    "ach_lws3": "LW3 KARTEN-ENTDECKUNGEN",
+    "expac_pof": "PATH OF FIRE & LEBENDIGE WELT 4",
+    "ach_pof_insights": "KRISTALLWÜSTE BEHERRSCHUNGSEINBLICKE",
+    "ach_lws4": "LW4 FLÜCHTIGE SAMMELOBJEKTE",
+    "expac_eod": "END OF DRAGONS",
+    "ach_eod_insights": "CANTHA BEHERRSCHUNGSEINBLICKE",
+    "ach_shrine_guardians": "SCHREINWÄCHTER-RÄTSEL",
+    "hud_empty": "Keine unvollständigen Sammelobjekte in der Nähe.",
+    "unlocks_plural": "{0} Freischaltungen",
+    "unlocks_singular": "1 Freischaltung",
+    "dir_n": "Norden",
+    "dir_ne": "Nordost",
+    "dir_e": "Osten",
+    "dir_se": "Südost",
+    "dir_s": "Süden",
+    "dir_sw": "Südwest",
+    "dir_w": "Westen",
+    "dir_nw": "Nordwest",
+    "test_sound": "Ton testen",
+    "hide_unlocked": "Bereits freigeschaltete ausblenden",
+    "chests_achievements": "TRUHEN & ERFOLGE",
+    "cultural_armorsmiths": "KULTUR-RÜSTUNGSSCHMIEDE (RANG 1-3)",
+    "cultural_weaponsmiths": "KULTUR-WAFFENSCHMIEDE (RANG 1-3)",
+    "heart_vendors": "HERZEN-HÄNDLER",
+    "karma_merchants": "KARMA-KAUFLEUTE",
+    "dungeon_merchants": "VERLIES-HÄNDLER",
+    "laurel_merchants": "LORBEER-HÄNDLER",
+    "map_collectors": "KARTENWÄHRUNGS-HÄNDLER (LWS / ERWEITERUNGEN)",
+    "faction_provisioners": "FRAKTIONS-VERSORGER",
+    "guild_commendation": "GILDEN-EMPFEHLUNGSHÄNDLER",
+    "festival_merchants": "FESTIVAL- & FEIERTAGE-HÄNDLER",
+    "minis_novelties": "MINIATUREN & NEUHEITEN-HÄNDLER",
+    "general_merchants": "ALLGEMEINE GARDEROBEN-HÄNDLER",
+    "cultural_vendors": "KULTURELLE RÜSTUNG & WAFFEN",
+    "karma_heart_vendors": "KARMA & HERZEN DES RUHMS",
+    "dungeon_faction_vendors": "VERLIESE & FRAKTIONS-VERSORGER",
+    "laurel_commendations": "LORBEEREN & GILDEN-EMPFEHLUNGEN",
+    "expansion_map_vendors": "ERWEITERUNGEN & KARTENWÄHRUNGS-HÄNDLER",
+    "festivals_minis": "FESTIVALS, MINIS & NEUHEITEN",
+    "general_equipment_vendors": "ALLGEMEINE AUSRÜSTUNG & WAFFEN",
+    "locked_unlocks_header": "GESPERRTE FREISCHALTUNGEN ({0})",
+    "click_view_wiki": "KLICKEN FÜR WIKI",
+    "unlock_singular": "1 FREISCHALTUNG",
+    "unlock_plural": "{0} FREISCHALTUNGEN",
+    "units_up": "▲ {0} Einheiten höher",
+    "units_down": "▼ {0} Einheiten tiefer",
+    "level": "• gleiche Höhe"
+  },
+  "professions": {
+    "guardian": "Wächter",
+    "warrior": "Krieger",
+    "engineer": "Ingenieur",
+    "ranger": "Waldläufer",
+    "thief": "Dieb",
+    "elementalist": "Elementarmagier",
+    "mesmer": "Mesmer",
+    "necromancer": "Nekromant",
+    "revenant": "Wiedergänger"
+  },
+  "races": {
+    "asura": "Asura",
+    "charr": "Charr",
+    "human": "Mensch",
+    "norn": "Norn",
+    "sylvari": "Sylvari"
+  },
+  "disciplines": {
+    "armorsmith": "Rüstungsschmied",
+    "artificer": "Konstrukteur",
+    "chef": "Koch",
+    "huntsman": "Waidmann",
+    "jeweler": "Juwelier",
+    "leatherworker": "Lederer",
+    "tailor": "Schneider",
+    "weaponsmith": "Waffenschmied"
+  },
+  "attributes": {
+    "power": "Kraft",
+    "precision": "Präzision",
+    "toughness": "Zähigkeit",
+    "vitality": "Vitalität",
+    "ferocity": "Wildheit",
+    "condition_damage": "Zustandsschaden",
+    "expertise": "Fachkenntnis",
+    "concentration": "Konzentration",
+    "healing_power": "Heilkraft",
+    "agony_resistance": "Qual-Widerstand",
+    "armor": "Rüstung",
+    "health": "Lebenspunkte",
+    "crit_chance": "Kritische Trefferchance",
+    "crit_damage": "Kritischer Schaden",
+    "condi_duration": "Zustandsdauer",
+    "boon_duration": "Segensdauer",
+    "magic_find": "Magisches Gespür"
+  },
+  "item_types": {
+    "skin": "Skin",
+    "armor": "Rüstung",
+    "weapon": "Waffe",
+    "mini": "Mini",
+    "novelty": "Neuheit",
+    "outfit": "Kleidungsset",
+    "glider": "Gleitschirm",
+    "backpack": "Rucksack",
+    "finisher": "Todesstoß",
+    "mailcarrier": "Brieftaube"
+  },
+  "currency": {
+    "gold": "Gold",
+    "silver": "Silber",
+    "copper": "Kupfer",
+    "karma": "Karma",
+    "laurel": "Lorbeere",
+    "spirit_shard": "Geisterscherbe",
+    "gem": "Edelstein",
+    "badge_of_honor": "Ehrenabzeichen",
+    "wvw_ticket": "WvW-Gefecht-Tickets",
+    "magnetite_shard": "Magnetitscherbe",
+    "guild_commendation": "Gilden-Empfehlung",
+    "astral_acclaim": "Astraler Ruhm",
+    "unbound_magic": "Entfesselte Magie",
+    "volatile_magic": "Flüchtige Magie",
+    "geode": "Geode",
+    "bandit_crest": "Banditen-Wappen",
+    "airship_part": "Luftschiff-Teil",
+    "ley_line_crystal": "Ley-Linien-Kristall",
+    "aurillium": "Aurilliumklumpen"
+  },
+  "wardrobe": {
+    "armor": "Rüstung",
+    "weapons": "Waffen",
+    "legendary_armory": "Legendäre Rüstkammer",
+    "appearance": "Erscheinungsbild",
+    "collectibles": "Sammlungen",
+    "home_instance": "Heimatinstanz",
+    "back": "Rücken",
+    "helm": "Helm",
+    "shoulders": "Schultern",
+    "coat": "Wams",
+    "gloves": "Handschuhe",
+    "leggings": "Hosen",
+    "boots": "Stiefel",
+    "aquabreathers": "Atmer",
+    "light": "Leicht",
+    "medium": "Mittel",
+    "heavy": "Schwer",
+    "one_handed": "Einhand",
+    "two_handed": "Zweihand",
+    "off_hand": "Begleithand",
+    "aquatic": "Unterwasser",
+    "axe": "Axt",
+    "dagger": "Dolch",
+    "mace": "Streitkolben",
+    "pistol": "Pistole",
+    "scepter": "Zepter",
+    "sword": "Schwert",
+    "greatsword": "Großschwert",
+    "hammer": "Hammer",
+    "longbow": "Langbogen",
+    "shortbow": "Kurzbogen",
+    "rifle": "Gewehr",
+    "staff": "Stab",
+    "spear": "Speer",
+    "focus": "Fokus",
+    "shield": "Schild",
+    "torch": "Fackel",
+    "warhorn": "Kriegshorn",
+    "speargun": "Harpunenschleuder",
+    "trident": "Dreizack",
+    "equipment": "Ausrüstung",
+    "dyes": "Farben",
+    "common": "Gewöhnlich",
+    "uncommon": "Ungewöhnlich",
+    "rare": "Selten",
+    "exclusive": "Exklusiv",
+    "outfits": "Kleidungssets",
+    "gliders": "Gleitschirme",
+    "mail_carriers": "Brieftauben",
+    "jade_bot_skins": "Jade-Bot-Skins",
+    "conjured_doorway_skins": "Beschworene Portale",
+    "skiff_skins": "Skiff-Skins",
+    "gathering_tools": "Sammelwerkzeuge",
+    "mining_tool_skins": "Bergbauwerkzeug-Skins",
+    "logging_tool_skins": "Holzfällerwerkzeug-Skins",
+    "harvesting_tool_skins": "Erntewerkzeug-Skins",
+    "fishing_rod_skins": "Angelruten-Skins",
+    "novelties": "Neuheiten",
+    "mount_skins": "Reittier-Skins",
+    "emotes": "Emotes",
+    "miniatures": "Miniaturen",
+    "finishers": "Todesstöße",
+    "mount_types": "Reittier-Arten",
+    "titles": "Titel",
+    "account_upgrades": "Account-Aufwertungen",
+    "cats": "Katzen",
+    "nodes": "Knoten",
+    "title": "Garderobe",
+    "unlocked": "Freigeschaltet",
+    "locked": "Gesperrt"
+  },
+  "inventory": {
+    "title": "Inventar",
+    "sort_default": "Sortieren nach: Standard",
+    "sort_instant_high": "Sofortverkauf: Hoch -> Niedrig",
+    "sort_instant_low": "Sofortverkauf: Niedrig -> Hoch",
+    "sort_list_high": "Angebotspreis: Hoch -> Niedrig",
+    "sort_list_low": "Angebotspreis: Niedrig -> Hoch",
+    "show_all_characters": "ALLE CHARAKTERE ANZEIGEN",
+    "show_bags": "TASCHEN ANZEIGEN",
+    "syncing": "INVENTAR WIRD SYNCHRONISIERT..."
+  },
+  "storage": {
+    "title": "Materiallager",
+    "syncing": "LAGER WIRD SYNCHRONISIERT...",
+    "sort_default": "Sortieren: Standard",
+    "sort_instant_high": "Sofortverkauf: Hoch -> Niedrig",
+    "sort_instant_low": "Sofortverkauf: Niedrig -> Hoch",
+    "sort_list_high": "Angebotspreis: Hoch -> Niedrig",
+    "sort_list_low": "Angebotspreis: Niedrig -> Hoch"
+  },
+  "bank": {
+    "title": "Account-Tresor",
+    "syncing": "TRESOR WIRD SYNCHRONISIERT...",
+    "sort_default": "Sortieren: Standard",
+    "sort_instant_high": "Sofortverkauf: Hoch -> Niedrig",
+    "sort_instant_low": "Sofortverkauf: Niedrig -> Hoch",
+    "sort_list_high": "Angebotspreis: Hoch -> Niedrig",
+    "sort_list_low": "Angebotspreis: Niedrig -> Hoch",
+    "personal_bank": "Persönliche Bank",
+    "guild_banks": "Gilden-Banken"
+  },
+  "account_search": {
+    "title": "Alles durchsuchen",
+    "search_ph": "ACCOUNT WEIT SUCHEN..."
+  },
+  "achievements": {
+    "title": "ERFOLGE",
+    "search_ph": "ERFOLGE SUCHEN...",
+    "loading": "SYNCHRONISIERE ERFOLGE...",
+    "view_on_wiki": "IM WIKI ANSEHEN",
+    "open_wiki": "WIKI ÖFFNEN",
+    "ready_to_train": "BEREIT ZUM TRAINIEREN",
+    "secret_objective": "Geheimes Ziel",
+    "next_chest_in": "NÄCHSTE TRUHE IN:",
+    "tier_suffix": "RANG {0}"
+  },
+  "common.mastery_insight": "Beherrschungseinblick",
+  "map_options.hide_completed": "Abgeschlossene ausblenden",
+  "achievements.title": "HELDEN-LOGBUCH",
+  "achievements.subtitle": "Verwalten Sie Ihre Ziele, Beherrschungen und Beobachtungslisten.",
+  "achievements.tab_achievements": "ERFOLGE",
+  "achievements.tab_daily": "TÄGLICH",
+  "achievements.tab_masteries": "BEHERRSCHUNGEN",
+  "achievements.tab_watchlist": "BEOBACHTUNGSLISTE",
+  "achievements.watchlist_overlay": "BEOBACHTUNGSLISTEN-OVERLAY",
+  "achievements.watchlist_empty": "BEOBACHTUNGSLISTE IST LEER",
+  "achievements.open_wiki": "WIKI ÖFFNEN",
+  "achievements.secret_objective": "Geheimes Ziel",
+  "achievements.next_chest_in": "NÄCHSTE TRUHE IN:",
+  "achievements.your_watchlist": "IHRE BEOBACHTUNGSLISTE",
+  "achievements.no_items_tracked": "KEINE ELEMENTE BEOBACHTET",
+  "achievements.daily_objectives": "TÄGLICHE ZIELE",
+  "achievements.overview": "ERFOLGSÜBERSICHT",
+  "achievements.watched": "BEOBACHTET",
+  "achievements.category_progress": "KATEGORIE-FORTSCHRITT",
+  "achievements.completed": "ABGESCHLOSSEN",
+  "achievements.total_ap_potential": "Gesamtes AP-Potenzial:",
+  "achievements.earned": "Verdient:",
+  "masteries.rank": "Beherrschungsrang",
+  "masteries.ready_to_train": "BEREIT ZUM TRAINIEREN",
+  "masteries.view_on_wiki": "IM WIKI ANSEHEN",
+  "masteries.loading": "LÄDT BEHERRSCHUNGSDATEN...",
+  "masteries.not_loaded": "BEHERRSCHUNGSDATEN WERDEN NOCH GELADEN. BITTE WARTEN ODER AKTUALISIEREN.",
+  "masteries.search_results": "BEHERRSCHUNGS-SUCHERGEBNISSE",
+  "masteries.none_found": "KEINE BEHERRSCHUNGEN GEFUNDEN",
+  "masteries.region": "REGION",
+  "masteries.tiers": "STUFEN",
+  "masteries.regions.tyria": "Zentraltyria",
+  "masteries.regions.maguuma": "Heart of Thorns",
+  "masteries.regions.desert": "Path of Fire",
+  "masteries.regions.tundra": "Die Eisbrut-Saga",
+  "masteries.regions.jade": "End of Dragons",
+  "masteries.regions.sky": "Secrets of the Obscure",
+  "masteries.regions.wild": "Janthir Wilds",
+  "masteries.regions.magic": "Visions of Eternity",
+  "nav.Report Bug / Feature": "Fehler / Funktion melden",
+  "bug_report.title": "Fehler / Funktion melden",
+  "bug_report.label_type": "Ich möchte Folgendes melden:",
+  "bug_report.opt_bug": "Fehler / Defekt",
+  "bug_report.opt_feature": "Funktionsvorschlag",
+  "bug_report.label_module": "Welches Modul ist betroffen?",
+  "bug_report.mod_overworld_map": "Oberwelt-Karte",
+  "bug_report.mod_wvw_map": "WvW-Karte",
+  "bug_report.mod_event_timers": "Event-Timer",
+  "bug_report.mod_weekly_clears": "Wöchentliche Abschlüsse",
+  "bug_report.mod_farming_nodes": "Farming-Knoten",
+  "bug_report.mod_fishing_assistant": "Angel-Assistent",
+  "bug_report.mod_hero_panel": "Heldenübersicht / Builds",
+  "bug_report.mod_inventory_bank": "Inventar / Bank",
+  "bug_report.mod_api_settings": "API-Schlüssel / Einstellungen",
+  "bug_report.mod_translations": "Übersetzungen",
+  "bug_report.mod_general_other": "Allgemeines System / Sonstiges",
+  "bug_report.label_misplaced": "Betrifft dies eine falsch platzierte Kartenmarkierung?",
+  "bug_report.label_coords": "Koordinaten der falsch platzierten Markierung",
+  "bug_report.btn_grab": "Aktuelle Position erfassen",
+  "bug_report.note_stand": "Stellen Sie sich im Spiel zuerst auf die Position des Knotens/der Markierung.",
+  "bug_report.label_reproduce": "Wie lässt sich der Fehler reproduzieren?",
+  "bug_report.ph_reproduce": "Beschreiben Sie die Schritte zum Auslösen dieses Fehlers...",
+  "bug_report.label_desc_bug": "Beschreiben Sie den Fehler",
+  "bug_report.ph_desc_bug": "Bitte beschreiben Sie das Problem im Detail...",
+  "bug_report.label_desc_feature": "Beschreiben Sie den Funktionsvorschlag",
+  "bug_report.ph_desc_feature": "Beschreiben Sie die Funktionen, die Sie gerne hinzugefügt sehen würden...",
+  "bug_report.label_screenshot": "Screenshot-Link (Imgur, Discord usw.)",
+  "bug_report.label_add_info": "Zusätzliche Informationen",
+  "bug_report.ph_add_info": "Beliebiger zusätzlicher Systemkontext oder Notizen...",
+  "bug_report.btn_submit": "Bericht absenden",
+  "bug_report.sending": "Bericht wird gesendet...",
+  "bug_report.success_title": "Vielen Dank!",
+  "bug_report.success_body": "Ihr Bericht wurde erfolgreich übermittelt.<br>Wir schätzen es sehr, dass Sie sich die Zeit nehmen, Tyrian Lens zu verbessern!",
+  "bug_report.btn_discord": "Dem Discord-Server beitreten",
+  "bug_report.btn_ok": "OK",
+  "bug_report.toast_coords_grabbed": "Koordinaten erfolgreich erfasst!",
+  "bug_report.toast_no_telemetry": "Keine Telemetrie-Koordinaten verfügbar! Sind Sie im Spiel?",
+  "bug_report.toast_desc_required": "Das Beschreibungsfeld ist erforderlich!",
+  "bug_report.toast_transmission_failed": "Übertragung fehlgeschlagen! Überprüfen Sie Ihre Internetverbindung.",
+  "common.no": "Nein",
+  "common.yes": "Ja"
 }

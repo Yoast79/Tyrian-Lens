@@ -69,15 +69,15 @@
 	</head>
 	<body>
 		<div class="title-bar">
-			<div class="section-title">Material Storage</div>
+			<div class="section-title" data-i18n="storage.title">Material Storage</div>
 			<div class="title-controls">
 
 				<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
-					<option value="default">Sort: Default</option>
-					<option value="instant_high">Instant Sell: High -> Low</option>
-					<option value="instant_low">Instant Sell: Low -> High</option>
-					<option value="list_high">List Price: High -> Low</option>
-					<option value="list_low">List Price: Low -> High</option>
+					<option value="default" data-i18n="storage.sort_default">Sort: Default</option>
+					<option value="instant_high" data-i18n="storage.sort_instant_high">Instant Sell: High -> Low</option>
+					<option value="instant_low" data-i18n="storage.sort_instant_low">Instant Sell: Low -> High</option>
+					<option value="list_high" data-i18n="storage.sort_list_high">List Price: High -> Low</option>
+					<option value="list_low" data-i18n="storage.sort_list_low">List Price: Low -> High</option>
 				</select>
 			</div>
 		</div>
@@ -109,28 +109,11 @@
 				if (!activeKey) return;
 
 				try {
-					const catRes = await fetch('https://api.guildwars2.com/v2/materials?ids=all');
+					const lang = window.DataLoader ? window.DataLoader.getLanguage() : (localStorage.getItem('gw2_lang') || 'en');
+					const catRes = await fetch(`https://api.guildwars2.com/v2/materials?ids=all&lang=${lang}`);
 					const rawCategories = await catRes.json();
 					
-					const sortOrder = [
-						"Basic Crafting Materials",
-						"Intermediate Crafting Materials",
-						"Advanced Crafting Materials",
-						"Ascended Materials",
-						"Gemstones and Jewels",
-						"Cooking Materials",
-						"Cooking Ingredients",
-						"Scribing Materials",
-						"Festive Materials"
-					];
-
-					categories = rawCategories.sort((a, b) => {
-						let indexA = sortOrder.indexOf(a.name);
-						let indexB = sortOrder.indexOf(b.name);
-						if (indexA === -1) indexA = 99;
-						if (indexB === -1) indexB = 99;
-						return indexA - indexB;
-					});
+					categories = rawCategories.sort((a, b) => (a.order || 0) - (b.order || 0));
 
                     // Check cache first
                     const cachedMats = localStorage.getItem('gw2_cache_materials');

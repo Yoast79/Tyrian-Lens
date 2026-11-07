@@ -105,7 +105,7 @@ async function initCore() {
         }
         
         // Memory-heavy index loading
-        const loadIndex = async (file) => (window.DataLoader ? await window.DataLoader.fetchDataJSON(file) : await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/' + file).then(r => r.json()));
+        const loadIndex = async (file) => (window.DataLoader ? await window.DataLoader.fetchDataJSON(file) : await fetch('https://data.tyrianlens.com/' + file).then(r => r.json()));
         indexes.home = await loadIndex('home_index.json');
         indexes.appearance = await loadIndex('appearance_index.json');
         indexes.gear = await loadIndex('gear_index.json');
@@ -136,7 +136,7 @@ function buildMenu() {
     for (const main of sortedKeys) {
         const mainId = 'main_' + main.replace(/\s+/g, '_');
         const isMainOpen = harmonicaState[mainId] === true;
-        const mainEl = createCategoryEl(main, 'main-cat', 'title');
+        const mainEl = createCategoryEl(main, 'main-cat', 'title', main);
         const content = mainEl.querySelector('.content');
         
         if (isMainOpen) mainEl.classList.remove('collapsed');
@@ -158,7 +158,7 @@ function buildMenu() {
             const mode = hierarchy[subKey];
             const subId = mainId + '_' + subKey.replace(/\s+/g, '_');
             const isSubOpen = harmonicaState[subId] === true;
-            const subEl = createCategoryEl(subKey, 'sub-cat', 'sub-title');
+            const subEl = createCategoryEl(subKey, 'sub-cat', 'sub-title', subKey);
             subEl.dataset.sub = subKey;
 
             content.appendChild(subEl);
@@ -195,7 +195,7 @@ function buildMenu() {
                 types.forEach(typeKey => {
                     const typeId = subId + '_' + typeKey.replace(/\s+/g, '_');
                     const isTypeOpen = harmonicaState[typeId] === true;
-                    const leaf = createCategoryEl(typeKey, 'weight-cat', 'weight-title');
+                    const leaf = createCategoryEl(typeKey, 'weight-cat', 'weight-title', typeKey);
                     leaf.dataset.sub = subKey; leaf.dataset.type = typeKey;
                     
                     subEl.querySelector('.content').appendChild(leaf);
@@ -227,15 +227,16 @@ async function loadCategoryData(el) {
     
     content.innerHTML = '<div class="loading-text">LOADING API...</div>';
     const { sub } = el.dataset;
-    const mainTitle = el.closest('.main-cat')?.querySelector('.title').innerText.toUpperCase() || "";
+    const mainCatEl = el.closest('.main-cat');
+    const mainKey = (mainCatEl?.dataset?.key || mainCatEl?.querySelector('.title')?.innerText || '').toUpperCase();
     try {
-        if (mainTitle.includes("LEGENDARY ARMORY")) await loadArmoryData(el);
+        if (mainKey.includes("LEGENDARY ARMORY")) await loadArmoryData(el);
         else if (sub === "Dyes") await loadDyeData(el);
-        else if (mainTitle.includes("ARMOR")) await loadArmorData(el, indexes.gear); 
-        else if (mainTitle.includes("WEAPONS")) await loadWeaponData(el, indexes.gear);
-        else if (mainTitle.includes("APPEARANCE")) await loadAppearanceData(el, indexes.appearance);
-        else if (mainTitle.includes("COLLECTIBLES")) await loadCollectiblesData(el, indexes.appearance);
-        else if (mainTitle.includes("HOME INSTANCE")) await loadHomeData(el, indexes.home);
+        else if (mainKey.includes("ARMOR")) await loadArmorData(el, indexes.gear); 
+        else if (mainKey.includes("WEAPONS")) await loadWeaponData(el, indexes.gear);
+        else if (mainKey.includes("APPEARANCE")) await loadAppearanceData(el, indexes.appearance);
+        else if (mainKey.includes("COLLECTIBLES")) await loadCollectiblesData(el, indexes.appearance);
+        else if (mainKey.includes("HOME INSTANCE")) await loadHomeData(el, indexes.home);
     } catch (err) { 
         console.error("Load Error:", err);
         content.innerHTML = '<div class="loading-text">FETCHING API FAILED</div>'; 
@@ -268,10 +269,14 @@ function createSlot(item, count = null) {
     return slot;
 }
 
-function createCategoryEl(title, className, titleClass) {
+function createCategoryEl(title, className, titleClass, canonicalKey) {
     const div = document.createElement('div');
     div.className = className + ' collapsed';
-    div.innerHTML = `<div class="header"><span class="${titleClass}">${title}</span><span class="arrow">▼</span></div><div class="content"></div>`;
+    const key = canonicalKey || title;
+    div.dataset.key = key;
+    const transKey = 'wardrobe.' + key.toLowerCase().replace(/[^a-z0-9]+/g, '_');
+    const displayTitle = window.DataLoader ? window.DataLoader.t(transKey, title) : title;
+    div.innerHTML = `<div class="header"><span class="${titleClass}">${displayTitle}</span><span class="arrow">▼</span></div><div class="content"></div>`;
     return div;
 }
 

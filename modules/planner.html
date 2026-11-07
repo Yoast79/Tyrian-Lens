@@ -920,6 +920,24 @@
     <script>
         /*<![CDATA[*/
         document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
+        function getPlannerLang() {
+            return window.DataLoader ? window.DataLoader.getLanguage() : (localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en');
+        }
+        function localizeClassSelect() {
+            const sel = document.getElementById('class-select');
+            if (!sel || !window.DataLoader) return;
+            const weights = {
+                Guardian: 'heavy', Revenant: 'heavy', Warrior: 'heavy',
+                Engineer: 'medium', Ranger: 'medium', Thief: 'medium',
+                Elementalist: 'light', Mesmer: 'light', Necromancer: 'light'
+            };
+            Array.from(sel.options).forEach(opt => {
+                const val = opt.value;
+                const pName = window.DataLoader.t('professions.' + val.toLowerCase(), val);
+                const wName = window.DataLoader.t('wardrobe.' + (weights[val] || 'heavy'), weights[val] || 'Heavy');
+                opt.text = `${pName} (${wName})`;
+            });
+        }
         window.PLANNER = {
             state: {
                 name: "New Build",
@@ -1066,7 +1084,18 @@
             },
             weightMap: { Guardian: 'Heavy', Revenant: 'Heavy', Warrior: 'Heavy', Engineer: 'Medium', Ranger: 'Medium', Thief: 'Medium', Elementalist: 'Light', Mesmer: 'Light', Necromancer: 'Light' },
 
-            async init() {
+        async init() {
+            localizeClassSelect();
+        function localizeAttrTooltips() {
+            if (!window.DataLoader) return;
+            document.querySelectorAll('.attr-icon[data-tt]').forEach(el => {
+                const raw = el.getAttribute('data-raw-tt') || el.getAttribute('data-tt');
+                el.setAttribute('data-raw-tt', raw);
+                const trans = window.DataLoader.t('attributes.' + raw.toLowerCase().replace(/\s+/g, '_'), raw);
+                el.setAttribute('data-tt', trans);
+            });
+        }
+        localizeAttrTooltips();
                 this.bindEvents();
                 await this.loadDB();
 
@@ -1078,7 +1107,7 @@
                         document.getElementById('build-name').value = this.state.name;
 
                         try {
-                            const res = await fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`);
+                            const res = await fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z&lang=${getPlannerLang()}`);
                             this.cache.profData = await res.json();
                         } catch (e) { }
 
@@ -1106,7 +1135,7 @@
                 }
                 if (missing.length > 0) {
                     try {
-                        const res = await fetch(`https://api.guildwars2.com/v2/skills?ids=${missing.join(',')}`);
+                        const res = await fetch(`https://api.guildwars2.com/v2/skills?ids=${missing.join(',')}&lang=${getPlannerLang()}`);
                         const data = await res.json();
                         data.forEach(sk => { this.cache.skills[sk.id] = sk; });
                     } catch (e) { }
@@ -1115,7 +1144,7 @@
 
             async loadDB() {
                 try {
-                    const res = await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/planner_db.json');
+                    const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('planner_db.json') : null) || await fetch('https://data.tyrianlens.com/planner_db.json');
                     const db = await res.json();
 
                     const uniqueRunes = []; const seenR = new Set();
@@ -1256,8 +1285,10 @@
                 // Custom tooltips for Copy Build Code and Share Lens Profile buttons
                 const btnCopy = document.getElementById('btn-copy');
                 const btnShare = document.getElementById('btn-share');
-                const copyTooltip = "Copy Game Build Code<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Copies a standard Guild Wars 2 Build Template chat link to your clipboard for direct in-game import of traits, specializations, and slot skills. Note: Equipment stats, weapons, and sigils are not supported by the game's template system and must be configured manually.</span>";
-                const shareTooltip = "Share Lens Profile<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Generates a comprehensive build profile code for other Tyrian Lens users. Note: Lens profiles are exclusive to Tyrian Lens applications and cannot be imported directly into the Guild Wars 2 game client.</span>";
+                const defaultCopyTip = "Copy Game Build Code<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Copies a standard Guild Wars 2 Build Template chat link to your clipboard for direct in-game import of traits, specializations, and slot skills. Note: Equipment stats, weapons, and sigils are not supported by the game's template system and must be configured manually.</span>";
+                const defaultShareTip = "Share Lens Profile<br><span style='color:#aaa; font-size:11px; font-style:italic; font-family:sans-serif;'>Generates a comprehensive build profile code for other Tyrian Lens users. Note: Lens profiles are exclusive to Tyrian Lens applications and cannot be imported directly into the Guild Wars 2 game client.</span>";
+                const copyTooltip = window.DataLoader ? window.DataLoader.t('planner.copy_tooltip', defaultCopyTip) : defaultCopyTip;
+                const shareTooltip = window.DataLoader ? window.DataLoader.t('planner.share_tooltip', defaultShareTip) : defaultShareTip;
                 btnCopy.onmouseover = (e) => this.showTip(copyTooltip, e);
                 btnCopy.onmouseout = () => this.hideTip();
                 btnShare.onmouseover = (e) => this.showTip(shareTooltip, e);
@@ -1327,7 +1358,7 @@
                 this.state.equipment.JadeBot = { id: null, vit: 0 };
                 this.state.skills = { land: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null }, water: { Heal: null, Utility1: null, Utility2: null, Utility3: null, Elite: null } };
                 this.state.traits = [{ spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }, { spec: null, traits: [null, null, null] }];
-                try { const res = await fetch(`https://api.guildwars2.com/v2/professions/${className}?v=2019-12-19T00:00:00Z`); this.cache.profData = await res.json(); } catch (e) { }
+                try { const res = await fetch(`https://api.guildwars2.com/v2/professions/${className}?v=2019-12-19T00:00:00Z&lang=${getPlannerLang()}`); this.cache.profData = await res.json(); } catch (e) { }
                 this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState();
             },
 
@@ -1462,7 +1493,7 @@
                 let missingSkills = skillsToLoad.filter(id => id && !this.cache.skills[id]);
                 if (missingSkills.length > 0) {
                     try {
-                        const data = await (await fetch(`https://api.guildwars2.com/v2/skills?ids=${missingSkills.join(',')}`)).json();
+                        const data = await (await fetch(`https://api.guildwars2.com/v2/skills?ids=${missingSkills.join(',')}&lang=${getPlannerLang()}`)).json();
                         data.forEach(sk => { this.cache.skills[sk.id] = sk; });
                     } catch (e) { }
                 }
@@ -1512,7 +1543,7 @@
 
                     if (!this.cache.specs[tData.spec]) {
                         try {
-                            this.cache.specs[tData.spec] = await (await fetch(`https://api.guildwars2.com/v2/specializations/${tData.spec}`)).json();
+                            this.cache.specs[tData.spec] = await (await fetch(`https://api.guildwars2.com/v2/specializations/${tData.spec}?lang=${getPlannerLang()}`)).json();
                         } catch (e) { }
                     }
 
@@ -1526,7 +1557,7 @@
                         let traitsToFetch = [].concat(spec.minor_traits || [], spec.major_traits || []).filter(id => !this.cache.traits[id]);
                         if (traitsToFetch.length > 0) {
                             try {
-                                const trData = await (await fetch(`https://api.guildwars2.com/v2/traits?ids=${traitsToFetch.join(',')}`)).json();
+                                const trData = await (await fetch(`https://api.guildwars2.com/v2/traits?ids=${traitsToFetch.join(',')}&lang=${getPlannerLang()}`)).json();
                                 trData.forEach(t => { this.cache.traits[t.id] = t; });
                             } catch (e) { }
                         }
@@ -1739,7 +1770,7 @@
                 const content = document.getElementById('skill-content');
                 const specs = this.cache.profData.specializations;
                 let toFetch = specs.filter(id => !this.cache.specs[id]);
-                if (toFetch.length > 0) { try { const data = await (await fetch(`https://api.guildwars2.com/v2/specializations?ids=${toFetch.join(',')}`)).json(); data.forEach(sp => this.cache.specs[sp.id] = sp); } catch (e) { } }
+                if (toFetch.length > 0) { try { const data = await (await fetch(`https://api.guildwars2.com/v2/specializations?ids=${toFetch.join(',')}&lang=${getPlannerLang()}`)).json(); data.forEach(sp => this.cache.specs[sp.id] = sp); } catch (e) { } }
                 const selectedSpecs = this.state.traits.map(t => t.spec).filter(Boolean);
                 content.innerHTML = '<div class="skill-grid-container" style="grid-template-columns: repeat(3, 1fr); row-gap: 15px;"></div>';
                 const newGrid = content.querySelector('.skill-grid-container');
@@ -1768,7 +1799,7 @@
                 const p = this.cache.profData; if (!p) return;
                 const poolRaw = type === 'Heal' ? p.skills.filter(s => s.type === 'Heal') : (type === 'Elite' ? p.skills.filter(s => s.type === 'Elite') : p.skills.filter(s => s.type === 'Utility'));
                 let toFetch = poolRaw.map(s => s.id).filter(id => !this.cache.skills[id]);
-                if (toFetch.length > 0) { try { for (let i = 0; i < toFetch.length; i += 100) { const data = await (await fetch(`https://api.guildwars2.com/v2/skills?ids=${toFetch.slice(i, i + 100).join(',')}`)).json(); data.forEach(sk => this.cache.skills[sk.id] = sk); } } catch (e) { } }
+                if (toFetch.length > 0) { try { for (let i = 0; i < toFetch.length; i += 100) { const data = await (await fetch(`https://api.guildwars2.com/v2/skills?ids=${toFetch.slice(i, i + 100).join(',')}&lang=${getPlannerLang()}`)).json(); data.forEach(sk => this.cache.skills[sk.id] = sk); } } catch (e) { } }
                 const equipped = ['Utility1', 'Utility2', 'Utility3'].filter(slot => slot !== type).map(slot => this.state.skills[this.env][slot]);
                 poolRaw.filter(s => !equipped.includes(s.id)).sort((a, b) => { const skA = this.cache.skills[a.id], skB = this.cache.skills[b.id]; const catA = skA?.categories?.[0] || "Z", catB = skB?.categories?.[0] || "Z"; return catA !== catB ? catA.localeCompare(catB) : (skA?.name || "").localeCompare(skB?.name || ""); })
                     .forEach(sEntry => {
@@ -1780,7 +1811,7 @@
             },
 
             refreshLoadList() { const list = document.getElementById('saved-builds-list'); list.innerHTML = ''; Object.keys(JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}')).sort().forEach(name => { const opt = document.createElement('option'); opt.value = name; opt.innerText = name; list.appendChild(opt); }); },
-            handleModalLoad() { const name = document.getElementById('saved-builds-list').value; if (name) { const builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); if (builds[name]) { this.state = builds[name]; document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`).then(res => res.json()).then(data => { this.cache.profData = data; return this.loadSavedSkills(); }).then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }).catch(e => console.log("Load error", e)); } document.getElementById('load-modal').style.display = 'none'; } },
+            handleModalLoad() { const name = document.getElementById('saved-builds-list').value; if (name) { const builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); if (builds[name]) { this.state = builds[name]; document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z&lang=${getPlannerLang()}`).then(res => res.json()).then(data => { this.cache.profData = data; return this.loadSavedSkills(); }).then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }).catch(e => console.log("Load error", e)); } document.getElementById('load-modal').style.display = 'none'; } },
             deleteSavedBuild() { const name = document.getElementById('saved-builds-list').value; if (!name) return; let builds = JSON.parse(localStorage.getItem('gw2_planner_builds') || '{}'); delete builds[name]; localStorage.setItem('gw2_planner_builds', JSON.stringify(builds)); this.refreshLoadList(); },
 
             copyToClipboard(text) {
@@ -1939,19 +1970,33 @@
                         document.getElementById('class-select').value = prof;
                         for (let i = 0; i < 3; i++) {
                             const sId = bytes[2 + i * 2], tB = bytes[3 + i * 2]; this.state.traits[i].spec = sId || null;
-                            if (sId) fetch(`https://api.guildwars2.com/v2/specializations/${sId}`).then(r => r.json()).then(sD => { this.cache.specs[sId] = sD; let ts = [0, 0, 0]; for (let j = 0; j < 3; j++) { let p = (tB >> (j * 2)) & 0x03; if (p > 0) ts[j] = sD.major_traits[((j * 3) + p - 1)]; } this.state.traits[i].traits = ts; this.renderTraits(); });
+                            if (sId) fetch(`https://api.guildwars2.com/v2/specializations/${sId}?lang=${getPlannerLang()}`).then(r => r.json()).then(sD => { this.cache.specs[sId] = sD; let ts = [0, 0, 0]; for (let j = 0; j < 3; j++) { let p = (tB >> (j * 2)) & 0x03; if (p > 0) ts[j] = sD.major_traits[((j * 3) + p - 1)]; } this.state.traits[i].traits = ts; this.renderTraits(); });
                         }
                         const read = (off) => { const pId = bytes[off] | (bytes[off + 1] << 8); if (pId === 0) return Promise.resolve(null); const pair = this.cache.profData.skills_by_palette.find(p => p[0] === pId); return Promise.resolve(pair ? pair[1] : null); };
                         const ks = ['Heal', 'Utility1', 'Utility2', 'Utility3', 'Elite'], ps = [];
                         for (let i = 0; i < 5; i++) ps.push(read(8 + i * 2).then(id => this.state.skills.land[ks[i]] = id), read(18 + i * 2).then(id => this.state.skills.water[ks[i]] = id));
                         Promise.all(ps).then(() => { this.loadSavedSkills().then(() => { this.renderSkills(); this.saveLastState(); }); });
                     });
-                } else { try { const parsed = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = this.decompressState(parsed); document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
+                } else { try { const parsed = JSON.parse(decodeURIComponent(escape(atob(b64)))); this.state = this.decompressState(parsed); document.getElementById('class-select').value = this.state.profession; document.getElementById('build-name').value = this.state.name; fetch(`https://api.guildwars2.com/v2/professions/${this.state.profession}?v=2019-12-19T00:00:00Z&lang=${getPlannerLang()}`).then(r => r.json()).then(data => { this.cache.profData = data; this.loadSavedSkills().then(() => { this.renderEquipment(); this.renderTraits(); this.updateView(); this.saveLastState(); }); }); } catch (e) { this.showToast("Failed to parse share code."); } }
             }
         };
         window.PLANNER.init();
 
         window.addEventListener('message', (e) => {
+            if (e.data && e.data.action === 'languageChanged') {
+                if (window.DataLoader) {
+                    window.DataLoader.loadTranslations(true).then(() => {
+                        window.DataLoader.applyTranslations();
+                        localizeClassSelect();
+                        if (typeof localizeAttrTooltips === 'function') localizeAttrTooltips();
+                        if (window.PLANNER) {
+                            window.PLANNER.bindEvents();
+                            window.PLANNER.renderEquipment();
+                            window.PLANNER.renderTraits();
+                        }
+                    });
+                }
+            }
             if (e.data && e.data.action === 'updateTheme') {
                 document.body.setAttribute('data-theme', e.data.theme);
             }

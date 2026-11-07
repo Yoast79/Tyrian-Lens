@@ -1400,11 +1400,14 @@
 			}
 		};
 
-		window.updatePlayerLocation = function (x, y, cx, cz, alt) {
+		window.updatePlayerLocation = function (x, y, cx, cz, alt, mapId) {
 			var pos = [parseFloat(y), parseFloat(x)];
 			playerPos = pos;
 			if (alt !== undefined) {
 				playerAltitude = parseFloat(alt);
+			}
+			if (mapId !== undefined && mapId !== null && parseInt(mapId) > 0) {
+				window.currentMapId = parseInt(mapId);
 			}
 			pMarker.setLatLng(pos);
 			document.getElementById("p-x").innerText = Math.round(x);
@@ -1416,6 +1419,10 @@
 
 			if (typeof updateAltitudeMarkersVisibility === 'function') {
 				updateAltitudeMarkersVisibility();
+			}
+
+			if (window.parent && typeof window.parent.updateRadarTelemetry === 'function') {
+				window.parent.updateRadarTelemetry(x, y, alt, cx, cz, window.currentMapId);
 			}
 
 			if (isTracking) {
@@ -1633,7 +1640,7 @@
 		var isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 		var apiBase = isDevMode 
 			? "https://gw2ps.local/Data/" 
-			: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+			: "https://data.tyrianlens.com/";
 
 		// Disable right-click context menu (blocks "Inspect Element" and rummaging in the console)
 		document.addEventListener('contextmenu', event => event.preventDefault());
@@ -1847,7 +1854,7 @@
 					"nodes_map_specific.json", "nodes_ore.json", "nodes_plants.json",
 					"nodes_bounty.json", "nodes_festivals.json", "nodes_fishing.json",
 					"nodes_miscellaneous.json", "nodes_mist_rift.json", "nodes_ranger_pets.json",
-					"nodes_service_npc.json", "nodes_world_events.json"
+					"nodes_service_npc.json", "nodes_world_events.json", "nodes_wardrobe_vendors.json"
 				];
 				async function fetchWithFallback(file) {
 					if (window.DataLoader && window.DataLoader.fetchDataFile) {
@@ -1855,7 +1862,7 @@
 					}
 					if (!isDevMode) {
 						try {
-							const r = await fetch("https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/" + file + "?t=" + Date.now());
+							const r = await fetch("https://data.tyrianlens.com/" + file + "?t=" + Date.now());
 							if (r && r.ok) return r;
 						} catch (e) {}
 					}
@@ -1937,6 +1944,7 @@
 				altitudeMarkersMap.clear();
 				activeAltitudeIndicators.clear();
 
+				const placedNpcMarkers = new Map();
 				const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 				const today = days[new Date().getUTCDay()];
 
@@ -1952,7 +1960,47 @@
 					if (layerKey === 'node_boss' || layerKey === 'node_event') {
 						layerKey = 'node_world_boss';
 					}
-					
+
+					// Dynamic mapping for wardrobe vendors database
+					if (p.sourceFile === 'nodes_wardrobe_vendors.json') {
+						if (!p.node && p.npc_name) p.node = p.npc_name;
+						const vt = (p.vendor_type || '').toLowerCase();
+						if (vt === 'cultural_armorsmith' || vt === 'armorsmith') {
+							layerKey = 'node_npc_armorsmith';
+						} else if (vt === 'cultural_weaponsmith' || vt === 'weaponsmith') {
+							layerKey = 'node_npc_weaponsmith';
+						} else if (vt === 'karma_merchant' || vt === 'heart') {
+							layerKey = 'node_npc_karma_merchant';
+						} else if (vt === 'dungeon_merchant') {
+							layerKey = 'node_npc_dungeon_merchant';
+						} else if (vt === 'laurel_merchant') {
+							layerKey = 'node_npc_laurel_merchant';
+						} else if (vt === 'faction_provisioner') {
+							layerKey = 'node_npc_faction_provisioner';
+						} else if (vt === 'festival_merchant') {
+							layerKey = 'node_festival_merchant';
+						} else if (vt === 'map_collector' || vt === 'magic') {
+							layerKey = 'node_npc_map_collector';
+						} else if (vt === 'fishmonger') {
+							layerKey = 'node_npc_fishmonger';
+						} else if (vt === 'event_merchant') {
+							layerKey = 'node_npc_event_merchant';
+						} else if (vt === 'guild_commendation') {
+							layerKey = 'node_npc_guild_commendation';
+						} else if (vt === 'trading_post') {
+							layerKey = 'node_npc_trading_post';
+						} else if (vt === 'bank') {
+							layerKey = 'node_npc_bank';
+						} else if (vt === 'reinforce_armor') {
+							layerKey = 'node_npc_reinforce_armor';
+						} else if (vt === 'makeover_preview') {
+							layerKey = 'node_npc_makeover_preview';
+						} else if (vt === 'scout') {
+							layerKey = 'node_npc_scout';
+						} else {
+							layerKey = 'node_npc_merchant';
+						}
+					}
 					
 					// Core layer resolutions and mappings
 					if (!layerKey && p.node) {
@@ -1981,6 +2029,22 @@
 
 					// Skip WvW rifts or unconfigured layers
 					if (!layerKey) return;
+
+					// Deduplicate wardrobe vendors against existing service NPC pins at the exact same location
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_festival_merchant') {
+						const npcSpatialKey = `${layerKey}_${Math.round(p.pos[0])}_${Math.round(p.pos[1])}`;
+						if (p.sourceFile === 'nodes_wardrobe_vendors.json' && placedNpcMarkers.has(npcSpatialKey)) {
+							const existingMarker = placedNpcMarkers.get(npcSpatialKey);
+							if (existingMarker && existingMarker.options && existingMarker.options.data) {
+								existingMarker.options.data.items = p.items;
+								if (p.items && p.items.length > 0) {
+									const unlockBadge = `<div style="color:#d4af37;font-size:11px;margin-top:2px;font-weight:bold;">${p.items.length} Wardrobe Unlocks Available</div>`;
+									existingMarker._tooltipHtml = (existingMarker._tooltipHtml || '') + unlockBadge;
+								}
+							}
+							return; // Skip duplicate stacked marker
+						}
+					}
 
 					if (!subLayers[layerKey]) {
 						if (layerKey !== 'node_zone_portal') {
@@ -2034,10 +2098,11 @@
 					// Set up premium custom dual-row tooltips for service NPCs, and standard tooltips for others
 					let mainTitle = p.event || p.node || (window.DataLoader ? window.DataLoader.t('common.event', 'Event') : 'Event');
 					let tooltipText = p.day ? `${mainTitle} (${p.day.toUpperCase()})` : mainTitle;
-					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
-						const service = (p.yields && p.yields[0]) ? p.yields[0] : '';
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent' || layerKey === 'node_festival_merchant') {
+						const service = (p.yields && p.yields[0]) ? p.yields[0] : (p.sourceFile === 'nodes_wardrobe_vendors.json' ? (p.vendor_type || 'Vendor') : '');
 						tooltipText = `<div style="font-weight:bold;color:#e2c07d;font-size:13px;margin-bottom:2px;">${mainTitle}</div>`;
-						if (service) tooltipText += `<div style="color:#8a7a5f;font-size:11px;">${service}</div>`;
+						if (service) tooltipText += `<div style="color:#8a7a5f;font-size:11px;text-transform:capitalize;">${service.replace(/_/g, ' ')}</div>`;
+						if (p.items && p.items.length > 0) tooltipText += `<div style="color:#d4af37;font-size:11px;margin-top:2px;font-weight:bold;">${p.items.length} Wardrobe Unlocks Available</div>`;
 						if (p.desc) tooltipText += `<div style="color:#8a8a8a;font-size:11px;margin-top:2px;text-transform:none;">${p.desc}</div>`;
 					} else {
 						if (p.desc) {
@@ -2056,9 +2121,10 @@
 					m.on('mouseout', () => window.parent.postMessage({ action: 'hideTooltip' }, "*"));
 
 					// Set up actions
-					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent') {
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_pact_supply_network_agent' || layerKey === 'node_festival_merchant') {
 						m.on('click', () => {
-							const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(p.node)}&useskin=vector-2022#Items_offered`;
+							const cleanName = (p.node || '').split('[')[0].trim();
+							const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(cleanName)}&useskin=vector-2022#Items_offered`;
 							window.parent.postMessage({ action: 'openWiki', url: wikiUrl }, '*');
 						});
 					} else if (p.chat_code) {
@@ -2073,8 +2139,12 @@
 						});
 					}
 
-
 					m.addTo(subLayers[layerKey]);
+
+					if (layerKey.startsWith('node_npc_') || layerKey === 'node_festival_merchant') {
+						const npcSpatialKey = `${layerKey}_${Math.round(p.pos[0])}_${Math.round(p.pos[1])}`;
+						placedNpcMarkers.set(npcSpatialKey, m);
+					}
 
 					const key = p.pos[0] + "_" + p.pos[1] + "_" + layerKey;
 					altitudeMarkersMap.set(key, m);
@@ -2265,9 +2335,11 @@
 				window.toggleMapLayer(event.data.name, event.data.isVisible);
 			}
 			if (event.data && event.data.action === 'jumpToLocation') {
-				let x = event.data.x;
-				let y = event.data.y;
+				let x = event.data.x !== undefined ? event.data.x : (event.data.pos ? event.data.pos[0] : undefined);
+				let y = event.data.y !== undefined ? event.data.y : (event.data.pos ? event.data.pos[1] : undefined);
 				let layerKey = event.data.layerKey;
+				let markerIcon = event.data.markerIcon;
+				let markerName = event.data.markerName;
 				if (layerKey === 'node_historian_elisa') {
 					let activeWeek = getElisaActiveWeek();
 					let elisaData = ELISA_ROTATION[activeWeek];
@@ -2278,7 +2350,19 @@
 				}
 				if (x !== undefined && y !== undefined) {
 					window.setTracking(false);
-					map.setView([parseFloat(y), parseFloat(x)], 6);
+					map.setView([parseFloat(y), parseFloat(x)], event.data.zoom || 6);
+
+					// If an icon or name is provided, trigger highlight and show icon for 1 minute
+					if (markerIcon || event.data.highlight) {
+						window.postMessage({
+							action: 'highlightLocation',
+							x: x,
+							y: y,
+							markerIcon: markerIcon,
+							markerName: markerName,
+							layerKey: layerKey
+						}, '*');
+					}
 				}
 			}
 			if (event.data && event.data.action === 'highlightLocation') {

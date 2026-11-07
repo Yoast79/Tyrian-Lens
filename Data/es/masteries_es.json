@@ -1,0 +1,1946 @@
+[
+  {
+    "id": 1,
+    "name": "Conocimientos exaltados",
+    "requirement": "Viaja al Valle Áurico para desbloquear la ruta de dominios de conocimientos exaltados.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Marcas exaltadas",
+        "description": "Aprendes a leer marcas exaltadas. Ahora puedes descifrar sus palabras y acceder a los secretos de su civilización.",
+        "instruction": "Ahora puedes interactuar con los artefactos exaltados que hay en el Valle Áurico y en la gran Selva de Maguuma.",
+        "icon": "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Aceptación exaltada",
+        "description": "Te ganas la confianza de los misteriosos exaltados, lo que te proporciona acceso a sus servicios en la Ciudad de los Olvidados.",
+        "instruction": "Ahora puedes comerciar con los Exaltados y sus representantes. Los comerciantes de dominios se encuentran en la Selva de Maguuma y aparecen marcados en el mapa con iconos de dominio.",
+        "icon": "https://render.guildwars2.com/file/39DBD70271A074DCD6B1EAE1D639BD4D36765EC4/1228651.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Ayuda exaltada",
+        "description": "Aprende a usar los dispositivos de teletransporte exaltados que hay en la Selva de Maguuma para invocar a un guerrero exaltado que luche durante un breve periodo.",
+        "instruction": "Ahora puedes interaccionar con los dispositivos de teletransporte exaltados, con los que podrás invocar a un aliado exaltado o aumentar el poder de un aliado ya invocado.",
+        "icon": "https://render.guildwars2.com/file/B9B7E50E29F554570E63945249002FC6B64C7FFB/1228652.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Purificación exaltada",
+        "description": "Gánate el honor entre los exaltados desafiando a su campeón cada día y desbloquear los tesoros más exquisitos de la Ciudad de los Olvidados.",
+        "instruction": "Ahora puedes luchar contra el traidor desprestigiado que se encuentra bajo la Ciudad de los Olvidados. Derrotarlo te proporciona acceso a un cofre de recompensa al día.",
+        "icon": "https://render.guildwars2.com/file/EE132C76A52AC66D0211CED63E74F64B7F4AFB34/1228655.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Recolección exaltada",
+        "description": "Aprende de los Exaltados cómo reunir materiales excepcionales por la Selva de Maguuma. Aprende a extraer astillas áuricas de los nodos de mineral que hay en el Valle Áurico.",
+        "instruction": "Cuando extraigas minerales en el Valle Áurico, conseguirás astillas áuricas, además de los minerales normales. También tienes la oportunidad de extraer objetos especiales de los nodos de mineral por todo el Corazón de Maguuma.",
+        "icon": "https://render.guildwars2.com/file/324312530AA1A427AB0951D0BFBC92C4B69774D6/1228653.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Conocimientos itzel",
+    "requirement": "Entrena Conceptos básicos para planear en la ruta de dominios de planeo para desbloquear la ruta de dominios de conocimientos itzel.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/F2ED9E6B330AA015B8AD06FF222715284E1BC622/1228723.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Champiñones rebotadores",
+        "description": "Aprende a aterrizar con precisión y utiliza los champiñones rebotadores que hay en el Corazón de Maguuma para llegar a lugares a los que antes no podías acceder.",
+        "instruction": "Los champiñones rebotadores se encuentran por todo el Corazón de Maguuma. Salta sobre ellos para rebotar por los aires.",
+        "icon": "https://render.guildwars2.com/file/C1D5574EF6B9B4CC7AB7EC3600993698D39BF975/1228645.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Lenguaje itzel",
+        "description": "Aprende el complicado dialecto de los itzel para ganarte su simpatía y tener acceso a comerciantes con mercancías exclusivas.",
+        "instruction": "Ahora puedes comerciar con los itzel. Los comerciantes de dominios se encuentran en la Selva de Maguuma y aparecen marcados en el mapa con iconos de dominio.",
+        "icon": "https://render.guildwars2.com/file/68B5A54FEC5F3C7763C5BDD12C0296942ABB0BB2/1228660.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Champiñones ultrarrápidos",
+        "description": "Si entrenas tu estómago, puedes aprender a digerir champiñones del Corazón de Maguuma que aumentan la velocidad. ¡Corre como el viento con la ayuda de la naturaleza!",
+        "instruction": "Los champiñones ultrarrápidos se encuentran por todo el Corazón de Maguuma. Acércate o pasa por encima de ellos para conseguir un impulso de velocidad.",
+        "icon": "https://render.guildwars2.com/file/C2609360DCF254E70C023517E27375AB0FA32236/1228644.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Conocimientos de venenos itzel",
+        "description": "Estudia los venenos itzel para poder atravesar enredaderas venenosas mordrem y soportar las brumas venenosas que hay en Maguuma.",
+        "instruction": "Ahora puedes entrar en zonas de bruma venenosa y atravesar hiedras mordrem sin recibir daño.",
+        "icon": "https://render.guildwars2.com/file/4D2F77BE539B0F065B97C8B007E8D7324DA40D3C/1228662.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Liderazgo itzel",
+        "description": "Estudia con atención el estilo de combate itzel y desafía al campeón de su enemigo para reclamar una valiosa recompensa diaria.",
+        "instruction": "Ahora puedes luchar contra Mayatl el Feroz hablando con el danzador de espadas itzel que hay afuera de la aldea Jaka Itzel. Derrotar a este campeón te da acceso a un cofre de recompensa al día.",
+        "icon": "https://render.guildwars2.com/file/0735EF06110A01EF69C2710EA1390A45EBE57232/1228661.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Champiñones adrenalínicos",
+        "description": "Aprender a comer estos champiñones modifica tus glándulas adrenalínicas de modo que recibes una oleada de adrenalina y reinicias la recarga de todas tus habilidades.",
+        "instruction": "Los champiñones adrenalínicos pueden encontrarse de forma excepcional en el Corazón de Maguuma. Acércate o pasa por encima de ellos para que todas tus habilidades se recarguen automáticamente.",
+        "icon": "https://render.guildwars2.com/file/EB50DAD5409C937CD17A0A216A7B3E04E0C25307/1228643.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Conocimientos nuhoch",
+    "requirement": "Viaja a las Profundidades Enredadas para desbloquear la ruta de dominios de conocimientos nuhoch.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/05AABD5EF4CF91375CE2420575C4B8CE5A084F05/1228724.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Caza nuhoch",
+        "description": "Aprende a obtener trofeos especiales de los enemigos de Maguuma y a recolectar neolentinus para desbloquear colecciones y objetos excepcionales.",
+        "instruction": "Ahora tendrás la oportunidad de obtener objetos especiales como botín al acabar con cualquier criatura en el Corazón de Maguuma. También podrás recolectar neolentinus, que se encuentran por toda la Selva de Maguuma.",
+        "icon": "https://render.guildwars2.com/file/F9EB68F169FB63A5D552471F2692AA73771D06F0/1228664.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Lodazal nuhoch",
+        "description": "Domina el uso de los lodazales nuhoch y aprende a atravesar estos pasadizos secretos para acceder a lugares lejanos y ocultos.",
+        "instruction": "Ahora puedes interactuar con los lodazales nuhoch. Al hacerlo podrás transportarte instantáneamente entre las entradas y salidas de los lodazales de la Selva de Maguuma.",
+        "icon": "https://render.guildwars2.com/file/9B51B95FD0BD6FB80F900101977FFD66224605B1/1228668.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Idioma nuhoch",
+        "description": "Aprende el idioma tradicional de los nuhoch para poder conversar y comerciar con los miembros más desconfiados de la tribu.",
+        "instruction": "Ahora puedes comerciar con los nuhoch. Los comerciantes de dominios se encuentran en la Selva de Maguuma y aparecen marcados en el mapa con iconos de dominio.",
+        "icon": "https://render.guildwars2.com/file/7C9EB6B44A1F9D690D4D9A9856A01805395BD9A1/1228665.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Detección nuhoch",
+        "description": "Aprende a encontrar enemigos que emplean técnicas de sigilo para que queden al descubierto ante tus ojos entrenados.",
+        "instruction": "Ahora puedes ver criaturas que normalmente son invisibles en la Selva de Maguuma. Las criaturas ocultas aparecerán resaltadas y podrás encontrarlas o evitarlas fácilmente.",
+        "icon": "https://render.guildwars2.com/file/1606273520E5106D475C90447904E256E8FE6B98/1228667.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Demostración nuhoch",
+        "description": "Desafía al campeón nuhoch a un combate para ganarte el respeto de este pueblo y desbloquear un gran alijo de recompensas.",
+        "instruction": "Ahora puedes luchar contra Potoni el Inmenso en Teku Nuhoch. Derrotar a Potoni el Inmenso te proporciona acceso a un cofre de recompensa al día.",
+        "icon": "https://render.guildwars2.com/file/EA0D13224CC35B3F591DBD9812E9EA620C0FFE2F/1228666.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Alquimia nuhoch",
+        "description": "Entrena con los nuhoch para aprender a eliminar el correoso ácido de los chak. Sin esta habilidad, el ácido de chak puede ser letal.",
+        "instruction": "Evadir ahora eliminará instantáneamente todas las acumulaciones de materia viscosa chak que tengas encima. También eres inmune a los efectos de la materia viscosa que reducen la velocidad.",
+        "icon": "https://render.guildwars2.com/file/BED24BC7330F366E367FE0C9EA6975739B590A44/1228663.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Comandante del Pacto",
+    "requirement": "",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/65DE3662C705233AC1073EF297B15AADD7A8A644/1228718.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Mentor del Pacto",
+        "description": "Aprende a ser mentor de los héroes de Tyria. Ganas una insignia de mentor especial, título en el chat y celeridad para ti y tu grupo en todas las ciudades.",
+        "instruction": "Ahora puedes usar la insignia de mentor en el menú del grupo y activar el título de mentor en el chat usando el comando \"/mentor\". Tu grupo ahora tiene una bonificación permanente de celeridad en las ciudades del 5 %.",
+        "icon": "https://render.guildwars2.com/file/D32A52F4E1EB3EC57D035531A31BE217E63DC0F8/1228648.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Descanso productivo",
+        "description": "Aprende a ser más eficiente y gana bonificaciones de experiencia al fabricar.",
+        "instruction": "Ahora puedes ganar una bonificación de experiencia del 10 % en toda la artesanía que otorgue experiencia. También tienes una probabilidad un 10 % más alta de ganar una bonificación crítica de experiencia de artesanía.",
+        "icon": "https://render.guildwars2.com/file/0BCD77C3BF1BFD54162C992EDBF04209B653B865/1228649.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Gestión de línea de suministros",
+        "description": "Obtienes acceso a una red de mercaderes regionales de toda Tyria con suministros limitados de mercancía excepcional con la que comerciar. Aumenta la bonificación de celeridad de tu grupo en las ciudades al 15 %.",
+        "instruction": "Ahora puedes comerciar con agentes de la red de suministros del Pacto que han viajado por Tyria Central. Puedes comprar un objeto a cada agente al día a cambio de karma. Tu grupo ahora tiene una bonificación permanente de celeridad en las ciudades del 15 %.",
+        "icon": "https://render.guildwars2.com/file/4E43E92F349620FA060ABF9A3BC052657F7EC35A/1228650.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Nobleza obliga",
+        "description": "Aprende a reanimar a tus aliados más rápido y con menos penalizaciones.",
+        "instruction": "Ahora puedes reanimar a jugadores aliados más rápido y eliminar durabilidad y penalización en abatimiento por reanimar con éxito. La velocidad de tu reanimación aumenta más cuando el nivel del personaje al que reanimas es menor que el tuyo.\n\nNota: Este efecto está desactivado si se activa el modo desafío en incursiones, misiones de ataque o Convergencias.",
+        "icon": "https://render.guildwars2.com/file/EC25C613ED2A35DB4256F0DF4A5F19389765D8E6/1228647.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      },
+      {
+        "name": "Logística avanzada",
+        "description": "Aprende a saquear automáticamente a los enemigos caídos y gana una mayor bonificación de celeridad para tu grupo en las ciudades.",
+        "instruction": "Ahora tienes la opción de que lo que saquees de criaturas que derrotas se deposite automáticamente en tu inventario. Esta habilidad se puede desactivar en el menú de opciones. Tu grupo ahora tiene una bonificación permanente de celeridad en las ciudades del 33 %.",
+        "icon": "https://render.guildwars2.com/file/A41824167F010C0667B3F697DE03E132BD01ED01/1228646.png",
+        "point_cost": 8,
+        "exp_cost": 4127500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sintonía fractal",
+    "requirement": "",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/5A19BB62274C6297773A1A21A94BAB9AB2A0711D/1228721.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Sigue los consejos",
+        "description": "Con la autorización de Dessa, accede a logros diarios adicionales y a comerciantes especiales de objetos únicos en el Observatorio del Bloqueo de la Niebla.",
+        "instruction": "Has desbloqueado logros diarios adicionales para las escalas de fractal 21–49. Ahora también puedes acceder a comerciantes de objetos especiales en el Observatorio del Bloqueo de la Niebla.",
+        "icon": "https://render.guildwars2.com/file/D763657543F51E1FB608D0CBBBF350C1F1CD14C9/1228657.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Canalizador de agonía",
+        "description": "Una exposición prolongada a la agonía puede resultar en recompensas mejoradas en las mazmorras fractales. También accederás a recetas de Forja Mística para añadir casillas adicionales de infusiones de resistencia a la agonía a anillos ascendidos. Las pociones de la Niebla te otorgarán atributos de bonificación.",
+        "instruction": "Ahora recibirás recompensas de bonificación en los cofres de los jefes de las mazmorras fractales. Los comerciantes ahora venden ingredientes para sintonizar anillos en la Forja Mística, que te darán casillas adicionales de resistencia a la agonía para tus anillos ascendidos e infundidos. Las pociones de la Niebla también convierten un porcentaje de tu resistencia a la agonía en atributos específicos, según la poción que hayas usado.",
+        "icon": "https://render.guildwars2.com/file/11B70969E876E8DD00484B42553C3CEF947CE863/1228656.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Recurso recurrente",
+        "description": "Una mayor sintonía con los fractales te otorgará recompensas de bonificación de los cofres de la Niebla y encriptaciones fractales desbloqueadas. La conversión de pociones fractales también mejora.",
+        "instruction": "Ahora ganas recompensas de bonificación de los cofres de la Niebla y encriptaciones fractales. La conversión de pociones de la Niebla ha mejorado.",
+        "icon": "https://render.guildwars2.com/file/9D7273DC6F6211A636A74ED9F6CE3F932A23514C/1228659.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Singularidades de Bloqueo de la Niebla",
+        "description": "Investiga cómo puedes activar las Singularidades de Bloqueo de la Niebla en los Fractales de la Niebla, ya que te pueden salvar la vida. La conversión de pociones fractales mejora.",
+        "instruction": "Ahora puedes activar las Singularidades de Bloqueo de la Niebla en los Fractales de la Niebla para conseguir recarga de habilidades inmediata, resistencia a la agonía adicional y un escudo que puede evitar la muerte dentro de las mazmorras fractales. La conversión de pociones fractales mejora.",
+        "icon": "https://render.guildwars2.com/file/65ACE09437747DD1B84A5B9559DD75269A0EEB24/1228658.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Artesanía legendaria",
+    "requirement": "",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/2E91B0BD09CF08991E079CFB1727412AB12427F4/1228719.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Anticuario venerado",
+        "description": "Aprende cómo se inicia el proceso de creación de un arma legendaria desbloqueando el acceso a las colecciones de armas precursoras de primer rango.",
+        "instruction": "Ahora puedes hablar con el gran maestro de artesanía Hobbs en Arco del León para empezar con la colección de armas precursoras de primer rango de cualquier arma legendaria.",
+        "icon": "https://render.guildwars2.com/file/EB666596D8CA19CBAD0B034FB3DB3F7E0B9D1C0F/1228671.png",
+        "point_cost": 1,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Maestre de leyendas",
+        "description": "Infórmate sobre los componentes necesarios para crear armas precursoras de segundo rango.",
+        "instruction": "Ahora puedes comprar los componentes necesarios para crear armas precursoras de segundo rango al gran maestro de artesanía Hobbs en Arco del León.",
+        "icon": "https://render.guildwars2.com/file/0C5A24F4086C4FFFD105A0C9EAC480F8B95AC7B5/1228670.png",
+        "point_cost": 3,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Historiador de armamento",
+        "description": "Infórmate sobre los componentes necesarios para crear armas precursoras de tercer y último rango.",
+        "instruction": "Ahora puedes comprar los componentes necesarios para crear armas precursoras de tercer rango al gran maestro de artesanía Hobbs en Arco del León.",
+        "icon": "https://render.guildwars2.com/file/4521EF3192316745EC58C4A8FEBA2FB2CE4AE577/1228669.png",
+        "point_cost": 6,
+        "exp_cost": 3810000
+      },
+      {
+        "name": "Erudito de los secretos",
+        "description": "Conoce las colecciones de armas legendarias que se usan para fabricar las armas legendarias de Heart of Thorns. Entrena este dominio para poder comprarles piedras rúnicas místicas a Miyani y los asistentes de la Forja Mística y crear con ellas equipamiento legendario de las expansiones.",
+        "instruction": "Ahora puedes comprar los componentes necesarios para crear armas legendarias de Heart of Thorns al gran maestro de artesanía Hobbs en Arco del León.\nAdemás, puedes comprarles piedras rúnicas místicas a Miyani y los asistentes de la Forja Mística y crear con ellas equipamiento legendario de las expansiones.",
+        "icon": "https://render.guildwars2.com/file/E4A5BBD50AF41EC2EF94C1483740AFEFB609199F/1228672.png",
+        "point_cost": 9,
+        "exp_cost": 5080000
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Planeo",
+    "requirement": "Viaja al Corazón de Maguuma y completa el paso de la historia \"Arrancados del cielo\" para desbloquear la ruta de dominios de planeo.",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/68A54A21C030C5BA742603D3BF0305F344746F95/1228722.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Conceptos básicos para planear",
+        "description": "Gana acceso a un planeador para poder planear por las partes más elevadas del Corazón de Maguuma y por los mapas del mundo abierto de Tyria Central.",
+        "instruction": "Para planear, salta desde un lugar alto y pulsa la tecla de salto una vez más mientras caes.",
+        "icon": "https://render.guildwars2.com/file/A13A40AC0D4F0507780039C24B19D6E9C0D2FE1F/962098.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Uso de corrientes ascendentes",
+        "description": "El diseño mejorado del agarre y las aberturas de las alas de tu planeador te permite usar las corrientes ascendentes de manera segura. Ahora puedes llegar a ubicaciones que antes estaban fuera de tu alcance.",
+        "instruction": "Las corrientes ascendentes son columnas de vientos turbulentos que se encuentran en la Selva de Maguuma. Para usarlas, planea hacia ellas y te impulsarán hacia arriba.",
+        "icon": "https://render.guildwars2.com/file/27C9EDD3F2516E486299ABF50929E759F5BCC4E8/962097.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Técnicas de inclinación",
+        "description": "Aprende a inclinarte hacia adelante para ganar velocidad y a inclinarte hacia atrás para frenar en el aire gastando aguante. A medida que mejores tu técnica, aumentará tu aguante total al planear.",
+        "instruction": "Para inclinarte hacia delante, pulsa hacia delante mientras planeas y consigue un impulso de velocidad. Para inclinarte hacia atrás y frenar, pulsa hacia atrás mientras planeas.",
+        "icon": "https://render.guildwars2.com/file/4D1CAE2F963C7C205BB06C0572040AD33B5BEBD8/962096.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Planeo sigiloso",
+        "description": "Aprende a planear silenciosamente y sin que te detecten durante cortos periodos de tiempo al esquivar mientras planeas.",
+        "instruction": "Para activar el sigilo, esquiva pulsando dos veces en cualquier dirección mientras planeas.",
+        "icon": "https://render.guildwars2.com/file/610A10527F20E26DBF5402FD4131F1EDAAE6D960/962095.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Planeo avanzado",
+        "description": "Aprende a planear con tanta eficiencia que no necesitarás aguante para mantenerte en el aire, sino solo para realizar técnicas de inclinación.",
+        "instruction": "Ahora puedes planear durante un tiempo indefinido sin usar aguante. Seguirás gastando aguante si te inclinas.",
+        "icon": "https://render.guildwars2.com/file/FFD8BC49B85A794B729ABBE8DB1102F7D328D86A/962093.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Uso de energía de líneas ley",
+        "description": "Aprende a adentrarte en flujos de energía de línea ley mientras planeas para moverte por ellos y llegar a lugares que de otra forma serían inaccesibles.",
+        "instruction": "Las líneas ley son corrientes de energía mágica que pueden verse por la Selva de Maguuma. Para usarlas, planea hacia ellas y deja que el flujo de energía te mueva.",
+        "icon": "https://render.guildwars2.com/file/A003F17064F5300F0C0705E8DB76D4B3EF51CFD3/962094.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Incursiones",
+    "requirement": "Entra en la Espesura Abandonada, en el Umbral Verdeante, y derrota a un jefe para desbloquearla.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/64A43D09C00EBC0EF307A7C004EF05A8459F0907/1451827.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Forjador del abismo",
+        "description": "Aprende a reforzar tu armadura manipulando la energía de abismos ley que aparecen al derrotar a un enemigo poderoso.",
+        "instruction": "Refuerza tu armadura usando abismos ley en lugares donde hayas derrotado a un enemigo poderoso.",
+        "icon": "https://render.guildwars2.com/file/FB2D7C981E2E09725139220DCC90E308170AB7FE/1302710.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Lanzamiento explosivo",
+        "description": "Puede que los enanos hayan inventado la pólvora negra, pero tú puedes perfeccionar su uso. Aprende a lanzarte a gran altura de forma segura con una explosión sin chamuscarte los calcetines.",
+        "instruction": "Ahora no recibes daño cuando caes de una plataforma de lanzamiento explosivo por tu propio pie o porque te empuja un aliado.",
+        "icon": "https://render.guildwars2.com/file/2D4C0BF20D2A1C0B041DC3D5357C0D67225E7479/1302709.png",
+        "point_cost": 1,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Aguas de la Espesura Abandonada",
+        "description": "Las propiedades purificadoras de las aguas de la Espesura Abandonada pueden curar diversas dolencias. Quien posea este dominio podrá eliminar sus condiciones y dolencias cuando se le presente la oportunidad.",
+        "instruction": "Ahora puedes bañarte en las aguas curativas de la Espesura Abandonada y eliminar tus dolencias.",
+        "icon": "https://render.guildwars2.com/file/6120204BB9070AD428112705E3C9145EB33203BD/1377784.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Magia abandonada",
+        "description": "Aprende a controlar la poderosa energía que subyace en la Espesura Abandonada para conseguir ventajas en combate.",
+        "instruction": "Ahora comprendes la magia de la Espesura Abandonada.",
+        "icon": "https://render.guildwars2.com/file/61D637CA3D6F5D355CDC3FAD3CB1DB0DDE34DE67/1451810.png",
+        "point_cost": 3,
+        "exp_cost": 3048000
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Magias antiguas",
+    "requirement": "Viaja al Pantano de la Hematites o a la Bahía de las Ascuas para desbloquear.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/929FEABC05B4C9CAA978E0680908E4735CC2C5BC/1477050.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Contrarrestar magia",
+        "description": "Siguiendo una antigua investigación asura realizada por el supergenio Zinn, Taimi ha ideado una forma de contrarrestar ciertas habilidades mágicas potentes. Aprende este dominio para acceder a la habilidad de acción especial Contrarrestar magia y devolver los ataques de tus enemigos.",
+        "instruction": "Usa la habilidad de acción especial Contrarrestar magia para cancelar determinadas habilidades mágicas potentes utilizadas por tus enemigos.",
+        "icon": "https://render.guildwars2.com/file/097B5405639D54EFFD29C600B312ACBDBFDD250D/1477049.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Propulsión térmica",
+        "description": "Cuando los enanos se enfrentaron a Primordus, aprendieron muchas cosas acerca de viajar a través del núcleo caliente de Tyria. Aprende este dominio para recorrer largas distancias, como hicieron los enanos.",
+        "instruction": "Emplea la propulsión térmica para viajar largas distancias.",
+        "icon": "https://render.guildwars2.com/file/14AB963FFAA679D6ADC625E6E538DA47CBF1EF34/1494369.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Llama de Koda",
+        "description": "Otorga la capacidad de emplear la magia de fuego kodan que tiene su origen en un espíritu de fuego domado en tiempos pretéritos. Al aprender este dominio se desbloqueará la primera habilidad mientras se lleva una llama de Koda. Habla con los portadores de la llama kodan para aprender nuevas habilidades.",
+        "instruction": "Toma una antorcha de la llama de Koda de los braseros que hay por toda la Frontera de Escarchamarga y Tyria.",
+        "icon": "https://render.guildwars2.com/file/B809083AAF97000B38A309EB57DB9EED2A9BBB5A/1601946.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Ayuda espectral",
+        "description": "Las magias antiguas perduran en el mundo de Tyria, y aquellos que tienen una especial sintonía con ellas pueden emplearlas en momentos de gran necesidad. Aprende este dominio para desbloquear una nueva habilidad que podrás utilizar mientras estás abatido.",
+        "instruction": "Plantéate usar tu nueva habilidad cuando estés abatido para mantener a raya a los enemigos que queden.",
+        "icon": "https://render.guildwars2.com/file/FCFA76723249B00D35FDED21DFD2CC409F4F26D3/1635191.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Alcance de corarroble",
+        "description": "Los antiguos druidas tenían el poder de manipular la naturaleza. Aprende este dominio para reunir esencia de corarroble, lo que te permitirá alcanzar alturas mayores empleando hiedras mágicas.",
+        "instruction": "Encuentra una de las esencias de corarroble para conseguir la habilidad de lanzarte a un punto objetivo. Esta habilidad puede usarse mientras se planea.",
+        "icon": "https://render.guildwars2.com/file/0BD302C32B7A66659536C9F4F5C4087A1B13E878/1677329.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Sirena de Orr",
+        "description": "En Orr todavía resuenan los vetustos acordes de lamentos olvidados tiempo ha. Quienes han aprendido a escucharlos son capaces de entonar poderosas endechas que abren las puertas a habilidades perdidas entre las páginas de la historia.",
+        "instruction": "Cuando aparezca un Presbiterio del Eco durante el combate, interacciona con él para conseguir una endecha al azar. Interpreta estas endechas para ayudar a tus aliados y hostigar a tus enemigos.",
+        "icon": "https://render.guildwars2.com/file/24360325D7E12F6E5FE5CD4A23055FF8704B4123/1730817.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Montura de raptor",
+    "requirement": "Completa la tarea regional de la Aldea del Buscador en el Oasis de Cristal para desbloquear la ruta de dominios \"Raptor\".",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/23050D7A5B71477A0201FB1EAFC84A0645E7B772/1770237.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Golpe voraz",
+        "description": "Comprende la auténtica naturaleza voraz del raptor, aumentando mucho el daño del Giro de cola.",
+        "instruction": "Ahora Giro de cola inflige un daño significativamente mayor a los enemigos.",
+        "icon": "https://render.guildwars2.com/file/37ECAA1A2B9A60FC63C59C99A6D0E7F418FA3839/1770184.png",
+        "point_cost": 1,
+        "exp_cost": 291846
+      },
+      {
+        "name": "Reunir",
+        "description": "Aprende a rodear a los enemigos al usar Giro de cola y atráelos a tu ubicación.",
+        "instruction": "Ahora Giro de cola atrae a los enemigos a tu ubicación y los agrupa para el combate.",
+        "icon": "https://render.guildwars2.com/file/DD07AF0FEECE67AD112E45EB4E6366454216B966/1770197.png",
+        "point_cost": 2,
+        "exp_cost": 261366
+      },
+      {
+        "name": "Salto de cañón",
+        "description": "Aprende a saltar mucho más lejos con la habilidad de movimiento del raptor, permitiéndote atravesar terrenos todavía más escarpados.",
+        "instruction": "Ahora podrás saltar distancias mayores con la habilidad de movimiento Salto.",
+        "icon": "https://render.guildwars2.com/file/AF269F5D52B2B13A3CF76B800590C64940DA542D/1770198.png",
+        "point_cost": 3,
+        "exp_cost": 368808
+      },
+      {
+        "name": "Disciplina voraz",
+        "description": "Domina la montura raptor y aprende a compartir las bonificaciones del Golpe voraz con todas las habilidades de entrar en combate de montura.",
+        "instruction": "Ahora todas las monturas reciben la bonificación de Golpe voraz, que aumenta el daño de sus habilidades de entrar en combate.",
+        "icon": "https://render.guildwars2.com/file/DAB770DEE1E0BCA673CF2D1DD2F69CAD0CD4469C/1770199.png",
+        "point_cost": 4,
+        "exp_cost": 1697354
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Montura de mantarraya",
+    "requirement": "Completa la tarea regional del Rancho Mantarraya en la Ribera del Elon para desbloquear la ruta de dominios \"Mantarraya\".",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/9E3C519270CEECA95E107DA27B980C7A1AC6AAF9/1770240.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Recuperación ágil",
+        "description": "Aprende a recuperarte ágilmente si te derriban de tu mantarraya y después de atacar a enemigos usando Tonel. Ahora la mantarraya te otorgará protección y celeridad mientras te recuperas.",
+        "instruction": "Ahora recibirás celeridad y protección si te derriban de tu montura o después de atacar a enemigos con Tonel. (Recarga: 10s)",
+        "icon": "https://render.guildwars2.com/file/A53BD8727C2461B0947917A5CCA50F4CB891DD12/1770193.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Reanimación rejuvenecedora",
+        "description": "Aprende a mejorar las propiedades rejuvenecedoras de Tonel para curar también a los aliados abatidos.",
+        "instruction": "Ahora puedes curar a aliados abatidos pasando junto a ellos con Tonel.",
+        "icon": "https://render.guildwars2.com/file/2FEB071CB9E932046495B44BD32A0B3F027EA201/1770194.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Cabalgar sobre el viento",
+        "description": "Aprende a Cabalgar sobre el viento y aumenta la altura de la habilidad de movimiento de levitar para superar nuevos desafíos.",
+        "instruction": "La habilidad de movimiento de levitar lo hace ahora a una altura mayor.",
+        "icon": "https://render.guildwars2.com/file/227FDDF0DB0B4104CCF143D04851130A1063B6A9/1770195.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Benevolencia habilidosa",
+        "description": "Domina la mantarraya y aprende a compartir las bonificaciones de Recuperación ágil con todas las monturas.",
+        "instruction": "Ahora todas las monturas reciben la bonificación de Recuperación ágil. Si te derriban de tu montura o inicias combate contra enemigos obtendrás celeridad y protección. (Recarga: 10s)",
+        "icon": "https://render.guildwars2.com/file/AF5F616037EB6AA8DEDD944BF241460EC43847DF/1770196.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      },
+      {
+        "name": "A fondo con la mantarraya",
+        "description": "Emplea todo lo que has aprendido para enseñar a tu mantarraya a sumergirse en el agua.",
+        "instruction": "Adiestra a tu mantarraya para que se sumerja en el agua.",
+        "icon": "https://render.guildwars2.com/file/551A131E52F7BB353404E15A3EA3020E52A2C5E3/2329549.png",
+        "point_cost": 8,
+        "exp_cost": 2000000
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Montura de grifo",
+    "requirement": "Completa la aventura de entrenamiento de grifos en el Dominio de Vabbi para desbloquear la ruta de dominios \"Grifo\".",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/C1F1C2410F0203BB43EEFD01FE9FC3FB1F785FE6/1824252.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Rescate elevado",
+        "description": "Aprende a subirte al grifo en el aire para salvarte de una caída.",
+        "instruction": "Ahora puedes montar y desmontar el grifo en el aire. Mientras estás en vuelo, usa el atajo de teclado de montar para subirte al grifo o bajar de él.",
+        "icon": "https://render.guildwars2.com/file/3A0E5BAAB3FEFDE7B465703C63B0EC61C22094AE/1824227.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Proeza aérea",
+        "description": "Aprende a ganar proeza aérea con tu grifo. Usa Caída en picado para entrar en combate rápidamente con enemigos que estén por debajo de ti. Usa el impulso para elevarte tras la caída y vuela a grandes velocidades, incluso hacia arriba.",
+        "instruction": "Usa Caída en picado para lanzarte hacia el suelo e iniciar combate con los enemigos que tienes por debajo, o entra en el estado de picado usando la habilidad de movimiento 1. Cuando desciendas en picado a gran velocidad, usa la habilidad de movimiento 2 o la tecla de moverse hacia atrás para redirigir la inercia hacia arriba.",
+        "icon": "https://render.guildwars2.com/file/CECD576710393748E9B500ECE1387E33BFF1CE1D/1824228.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Sutileza aérea",
+        "description": "Acostúmbrate al grifo aprendiendo a usar su habilidad Aleteo, que te permite ganar un estallido de velocidad durante la caída en picado o al elevarte hacia el cielo.",
+        "instruction": "Ahora puedes usar Aleteo mientras haces picados o levantas vuelo para conseguir un estallido de velocidad en la dirección a la que te diriges.",
+        "icon": "https://render.guildwars2.com/file/66591AC7EF0236283C2FB557945C264C3748E57B/1824229.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Montura de saltarín",
+    "requirement": "Completa la tarea regional del Rancho Saltoalto en Tierras Altas del Desierto para desbloquear la ruta de dominios \"Saltarín\".",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/D46208E42E1B53790D485D05473F2A081145806B/1770239.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Descenso fortificado",
+        "description": "Aprende a fortificar tus aterrizajes al caer desde grandes alturas, aumentando mucho tu tolerancia al daño por caída cuando montas sobre un saltarín.",
+        "instruction": "El saltarín tendrá ahora una mayor tolerancia a los daños por caída, lo que te permite caer con seguridad desde lugares más altos.",
+        "icon": "https://render.guildwars2.com/file/E7536A4F22F60F640FCAC3C4B7B84AD909573245/1770189.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Impacto eficaz",
+        "description": "Aprende a crear un impacto eficaz mayor al usar Bala de cañón, derribando a los enemigos.",
+        "instruction": "Bala de ca��ón ahora derriba a los enemigos, dejándolos indispuestos cuando entras en combate con ellos.",
+        "icon": "https://render.guildwars2.com/file/D57F504CD5F3B19D7A25381433160047F512FA9B/1770190.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Salto de altura",
+        "description": "Aprende a saltar mucho más alto con la habilidad de movimiento del saltarín, permitiéndote llegar a zonas nuevas que no podías explorar previamente.",
+        "instruction": "La habilidad de movimiento de salto cargado del saltarín podrá ahora llegar a mucha más altura.",
+        "icon": "https://render.guildwars2.com/file/50EFB2B1309230BCDC4E1FFCF44223BF1E1FE077/1770191.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Descenso magistral",
+        "description": "Domina la montura saltarín y aprende a compartir las bonificaciones de Descenso fortificado con todas las demás monturas.",
+        "instruction": "Ahora todas las monturas recibirán la bonificación de Descenso fortificado, lo que les dará una mayor tolerancia al daño por caída.",
+        "icon": "https://render.guildwars2.com/file/2BE13847756FBBFC06906DF1D7BD68FB961EDE26/1770192.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Montura de chacal",
+    "requirement": "Completa la tarea regional del Camino del Chacal de Arena en la Desolación para desbloquear la ruta de dominios \"Chacal\".",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/0343626BF40452A6466C71EBA1539A0204354C01/1770238.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Evasión mejorada",
+        "description": "Aprende a esquivar ataques usando la habilidad de movimiento del chacal, y úsala en los momentos oportunos para esquivar grandes ataques.",
+        "instruction": "Ahora la habilidad de movimiento del chacal te permite esquivar todos los ataques recibidos. Pulsa saltar o la habilidad de montar 1 para activar la habilidad.",
+        "icon": "https://render.guildwars2.com/file/AF0023D07150070DE849074FB02FC844B3265769/1770185.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Reforzar aliados",
+        "description": "Aprende a usar la arena de chacal para reforzar a los aliados al usar Abalanzarse, lo que proporciona una potente barrera a los aliados cercanos.",
+        "instruction": "Abalanzarse proporcionará una potente barrera a los aliados cercanos.",
+        "icon": "https://render.guildwars2.com/file/47F942D39FF16CCBFEF656CDEF0BC038621E6DD5/1770186.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Arenas movedizas",
+        "description": "Aprende a desplazarte por los portales de arena que se encuentran por el desierto para llegar a nuevos lugares escondidos.",
+        "instruction": "Ahora puedes usar portales de arena para viajar en fase a nuevos lugares montando en chacal.",
+        "icon": "https://render.guildwars2.com/file/45EF9D3F40C16D47E679ACE1FF213ED46D33A0D7/1770187.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Evasión ágil",
+        "description": "Domina el chacal y aprende a compartir las bonificaciones de Evasión mejorada con todas las monturas mediante sus habilidades de movimiento.",
+        "instruction": "Ahora todas las monturas reciben la bonificación de Evasión mejorada, lo que permite que las habilidades de movimiento esquiven ataques.",
+        "icon": "https://render.guildwars2.com/file/1FC128CD155E1405F932F7C7DEFC726AB55A3B06/1770188.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Campeón de cristal",
+    "requirement": "Viaja al Dominio de Istan para desbloquearlo.",
+    "order": 8,
+    "background": "https://render.guildwars2.com/file/020C6454737408ED437D9D7E6D096872F5D66B73/1896046.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Resonancia de magia volátil",
+        "description": "Domina tu vínculo con Aurene para poder conseguir magia volátil de forma segura.",
+        "instruction": "Aurene te ha dado el don de poder recolectar magia volátil, la cual resulta peligrosa de tocar de otro modo.",
+        "icon": "https://render.guildwars2.com/file/FB3B072FAF616538166C5802BCB701313BB8A47B/1896038.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Vínculo de vida",
+        "description": "Domina tu vínculo con Aurene para que te permita compartir tu salud con tu montura.",
+        "instruction": "Aurene te ha concedido la habilidad de compartir temporalmente tu reserva de salud con tu montura activa.",
+        "icon": "https://render.guildwars2.com/file/B36BD2E2A82367F40C280B47787C164A9BF2D9D1/1948147.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Vínculo de vigor",
+        "description": "Domina tu vínculo con Aurene para que te permita devolver el aguante a tu montura.",
+        "instruction": "Aurene te ha concedido la habilidad de devolver el aguante a tu montura activa.",
+        "icon": "https://render.guildwars2.com/file/A02FB23C6FDD08E00FBFAD55BFB912904F04B572/2039796.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Vínculo de fe",
+        "description": "Domina tu vínculo con Aurene para que te otorgue alas mágicas que te permitan alzar el vuelo desde tus monturas.",
+        "instruction": "Tu vínculo con Aurene te ha otorgado la habilidad de alzar el vuelo desde monturas.",
+        "icon": "https://render.guildwars2.com/file/1566A00060ECB0D93DFBADB22542CF6B0C0ED540/2084754.png",
+        "point_cost": 5,
+        "exp_cost": 1016000
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Montura de escarabajo",
+    "requirement": "Completa la colección de la montura de escarabajo para desbloquear la ruta de dominios \"Escarabajo\".",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/BF3A0B31191F79CB1B900F0138EF0EBC069BE1CA/1999773.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Bola de demolición",
+        "description": "Aprende a lanzar a los enemigos a una corta distancia pasando sobre ellos con la habilidad de entrar en combate del escarabajo, Rodar.",
+        "instruction": "Rodar inflige daño a los enemigos cuando pasas sobre ellos y los lanza a una corta distancia.",
+        "icon": "https://render.guildwars2.com/file/FBEE0C6134DC00ED70CE92DD3A9A4FD2304C7CC9/1999766.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Aplastar barreras",
+        "description": "Ábrete paso en las zonas secretas y destruye cristales volátiles con tu escarabajo. Recuperas aguante cuando tu escarabajo impacta con muros.",
+        "instruction": "Usa la habilidad de potenciar el escarabajo o Rodar para aplastar barreras marcadas y destruir cristales volátiles. Recuperas aguante cuando tu escarabajo colisiona con muros a toda velocidad.\n",
+        "icon": "https://render.guildwars2.com/file/32A13C006364EB2EB421D395D634923CF72C416B/1999767.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Por los aires",
+        "description": "Aprende a hacer trucos aéreos con estilo tras potenciarte para recuperar aguante.",
+        "instruction": "Mantén pulsado el botón de salto tras potenciar al escarabajo y elevarte para hacer trucos. Los trucos permanecerán activos y recargarán el aguante mientras mantengas pulsado el botón de salto. Si se finaliza el salto incorrectamente se aplicará una penalización al aguante.",
+        "icon": "https://render.guildwars2.com/file/72966734E0F4E6EBC37C39272A0CF74B5E9DB992/1999768.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Montura de escamaceleste",
+    "requirement": "Completa las colecciones de la montura de escamaceleste para desbloquear la ruta de dominios \"Escamaceleste\".",
+    "order": 7,
+    "background": "https://render.guildwars2.com/file/F25BD14B42D20C985C1E0E0A012C23BA9204542C/2141729.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Rescate aéreo",
+        "description": "Aprende a subirte a la escamaceleste en el aire para salvarte de una caída.",
+        "instruction": "Ahora puedes montar y desmontar la escamaceleste en el aire. Mientras estás en vuelo, usa el atajo de teclado de montar para subirte a la escamaceleste o bajar de ella.",
+        "icon": "https://render.guildwars2.com/file/ED7865C74DFBA540E9AADB3A9BF57D4948ED9603/2141722.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Reparación de fisuras",
+        "description": "Aprende a emplear los recursos mágicos de tu escamaceleste para cerrar fisuras, con lo que se extraerá la magia que contienen y se abrirán nuevas rutas de vuelo.",
+        "instruction": "Planear cerca de las fisuras las cerrará y revelará rutas de vuelo para tu escamaceleste. Síguelas y hazte con los tesoros que hay al final. ¡Pero no te dejes los nodos por el camino! La recompensa será mayor si tocas todos los nodos.",
+        "icon": "https://render.guildwars2.com/file/DAF8441D5F16045919EB5E0FB1DD0D05C8B5409A/2141723.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Vuelo desde paredes",
+        "description": "Aprende a alzar el vuelo desde paredes con tu escamaceleste, lo que os proporcionará un momento de descanso y la posibilidad de volar a mayores alturas.",
+        "instruction": "Cuando tu escamaceleste esté agarrada a una pared, mantén pulsada la tecla de salto para cargar el medidor de vuelo y suéltala para echar a volar. Para esto hace falta al menos una barra de aguante.",
+        "icon": "https://render.guildwars2.com/file/343EAADBB2060248C6791A0C085269A17B43E9EF/2141724.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Manipulación de esencia de la resiliencia",
+    "requirement": "Consigue \"Luz del Cuervo\".",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/020F17C85826799AD14DBFF30B06B1FCC89A3170/2221482.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Esencia de la resiliencia de rango 1",
+        "description": "Conéctate con la esencia de la resiliencia y obtén ventaja sobre el valor.",
+        "instruction": "Tu conexión con la esencia de la resiliencia ha mejorado tus habilidades de combate contra el valor.",
+        "icon": "https://render.guildwars2.com/file/75F91116806A30136A7618924FDE58D82C03D4D6/2221451.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Esencia de la resiliencia de rango 2",
+        "description": "Conéctate con la esencia de la resiliencia y obtén ventaja sobre el valor.",
+        "instruction": "Tu conexión con la esencia de la resiliencia ha mejorado tus habilidades de combate contra el valor.",
+        "icon": "https://render.guildwars2.com/file/DE11A5B3C2D557C84C2EE89138FD6DCBF6140F03/2221452.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Esencia de la resiliencia de rango 3",
+        "description": "Conéctate con la esencia de la resiliencia y obtén ventaja sobre el valor.",
+        "instruction": "Tu conexión con la esencia de la resiliencia ha mejorado tus habilidades de combate contra el valor.",
+        "icon": "https://render.guildwars2.com/file/FD3DD24923DC7F10052CEAD235D8EE54AB431125/2248217.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Esencia de la resiliencia de rango 4",
+        "description": "Conéctate con la esencia de la resiliencia y obtén ventaja sobre el valor.",
+        "instruction": "Tu conexión con la esencia de la resiliencia ha mejorado tus habilidades de combate contra el valor. Ahora puedes usar Nova espiritual contra criaturas de cualquier esencia.",
+        "icon": "https://render.guildwars2.com/file/D2040DA6A634C2D65103C3BE3AC6DFF2382B4AC7/2293640.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Sintonía con el Cuervo",
+    "requirement": "Viaja a la Marca de Bjora para desbloquear este objeto.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/05B8DBF70702F6D598E17199D56B4172C0D836BB/2221483.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Vínculo con el Cuervo",
+        "description": "Domina tu vínculo con el espíritu del Cuervo para abrir cierres del Cuervo.",
+        "instruction": "Ahora puedes abrir cierres del Cuervo.",
+        "icon": "https://render.guildwars2.com/file/0EC978B80A6ED4BAE178C509275F91530158BB06/2221453.png",
+        "point_cost": 1,
+        "exp_cost": 127000
+      },
+      {
+        "name": "Luz del Cuervo",
+        "description": "Domina tu vínculo con el Cuervo para activar barreras del Cuervo y santuarios de luz del Cuervo.",
+        "instruction": "Ahora puedes activar barreras del Cuervo y santuarios de luz del Cuervo.",
+        "icon": "https://render.guildwars2.com/file/1B172CF84525EBB14C1305E4790495E87D104B91/2221454.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Vuelo del Cuervo",
+        "description": "Domina tu vínculo con el Cuervo para cruzar las puertas del Cuervo.",
+        "instruction": "Usa la lente del Cuervo para interaccionar con las puertas del Cuervo.",
+        "icon": "https://render.guildwars2.com/file/544FB2F2767E4F720B44ED02089DFF3058536200/2248219.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Brillo del Cuervo",
+        "description": "Domina tu vínculo con el Cuervo para recibir mejores bonificaciones de las puertas y los santuarios de barrera del Cuervo.",
+        "instruction": "La duración de la barrera se duplica. Atravesar puertas del Cuervo otorga un aumento de velocidad.",
+        "icon": "https://render.guildwars2.com/file/10FD02186A03250406F86F6B4414951AF67D5451/2248218.png",
+        "point_cost": 2,
+        "exp_cost": 1600000
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Manipulación de esencia de la vigilancia",
+    "requirement": "Consigue \"Luz del Cuervo\".",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/F1B3470C44366DE99551F15AB709AE0169E5B4F2/2221481.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Esencia de la vigilancia de rango 1",
+        "description": "Conéctate con la esencia de la vigilancia y obtén ventaja sobre la resiliencia.",
+        "instruction": "Tu conexión con la esencia de la vigilancia ha mejorado tus habilidades de combate contra la resiliencia.",
+        "icon": "https://render.guildwars2.com/file/B89CA8B20BBAE47BDC406BAA95B459FDAB01D776/2221449.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Esencia de la vigilancia de rango 2",
+        "description": "Conéctate con la esencia de la vigilancia y obtén ventaja sobre la resiliencia.",
+        "instruction": "Tu conexión con la esencia de la vigilancia ha mejorado tus habilidades de combate contra la resiliencia.",
+        "icon": "https://render.guildwars2.com/file/EE1510D8975FF744C6DE3BBF7030F105D9440B0B/2221450.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Esencia de la vigilancia de rango 3",
+        "description": "Conéctate con la esencia de la vigilancia y obtén ventaja sobre la resiliencia.",
+        "instruction": "Tu conexión con la esencia de la vigilancia ha mejorado tus habilidades de combate contra la resiliencia.",
+        "icon": "https://render.guildwars2.com/file/BB2408EE3B259BE945C2191514C299BF5EA35601/2248216.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Esencia de la vigilancia de rango 4",
+        "description": "Conéctate con la esencia de la vigilancia y obtén ventaja sobre la resiliencia.",
+        "instruction": "Tu conexión con la esencia de la vigilancia ha mejorado tus habilidades de combate contra la resiliencia. Ahora puedes usar Psique destrozada contra criaturas de cualquier esencia.",
+        "icon": "https://render.guildwars2.com/file/C522A233DE9EB57E42329D9EC8F95F079908EE72/2293639.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Manipulación de esencia del valor",
+    "requirement": "Consigue \"Luz del Cuervo\".",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/C2AF7CD2EBA0277C1E944D19CE19D1BAF7301EDA/2221484.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Esencia del valor de rango 1",
+        "description": "Conéctate con la esencia del valor y obtén ventaja sobre la vigilancia.",
+        "instruction": "Tu conexión con la esencia del valor ha mejorado tus habilidades de combate contra la vigilancia.",
+        "icon": "https://render.guildwars2.com/file/5F68B3E8AA176BACB7A5A73CDC2DBA220A0251AE/2221455.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Esencia del valor de rango 2",
+        "description": "Conéctate con la esencia del valor y obtén ventaja sobre la vigilancia.",
+        "instruction": "Tu conexión con la esencia del valor ha mejorado tus habilidades de combate contra la vigilancia.",
+        "icon": "https://render.guildwars2.com/file/75D1D8EB0F2309E5499522AC54EFCAE6FB756D5F/2221456.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Esencia del valor de rango 3",
+        "description": "Conéctate con la esencia del valor y obtén ventaja sobre la vigilancia.",
+        "instruction": "Tu conexión con la esencia del valor ha mejorado tus habilidades de combate contra la vigilancia.",
+        "icon": "https://render.guildwars2.com/file/034C723ACF29C806D5D4067CBA931F4A9D49CEDD/2248220.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Esencia del valor de rango 4",
+        "description": "Conéctate con la esencia del valor y obtén ventaja sobre la vigilancia.",
+        "instruction": "Tu conexión con la esencia del valor ha mejorado tus habilidades de combate contra la vigilancia. Ahora puedes usar Terror nocturno contra criaturas de cualquier esencia.",
+        "icon": "https://render.guildwars2.com/file/E82BF4A4C8B0EDF2EE05475511EE16980335F8F0/2293641.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Sincronización de estaciones de las Legiones Unidas",
+    "requirement": "Viaja a la Costa de Bosquellovizna para desbloquearlo.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/AB79F9789F16B8F8B99D0D22E16A60630C33FDCC/2293646.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Pulso electromágico",
+        "description": "Interactúa con las estaciones de las Legiones Unidas en la Costa de Bosquellovizna para conseguir la habilidad de acción especial Pulso electromágico de la Legión de Ceniza.",
+        "instruction": "Ahora puedes interactuar con las estaciones de las Legiones Unidas en la Costa de Bosquellovizna para conseguir la habilidad de acción especial Pulso electromágico de la Legión de Ceniza.",
+        "icon": "https://render.guildwars2.com/file/374F08B7AE09540E5DB0D2B057303FC10854BE2B/2293636.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Carga remota",
+        "description": "Añade la habilidad de acción especial Carga remota de la Legión de Hierro a las opciones de las estaciones de las Legiones Unidas.",
+        "instruction": "Ahora puedes seleccionar la habilidad de acción especial Carga remota de la Legión de Hierro en las estaciones de las Legiones Unidas.",
+        "icon": "https://render.guildwars2.com/file/6FFE7134F70F5F080A62689ED47E0A290406C458/2293637.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Estación portátil",
+        "description": "Emplea consumibles de un solo uso para construir estaciones portátiles en cualquier lugar del mundo abierto.",
+        "instruction": "Ahora puedes comprar consumibles de las estaciones de las Legiones Unidas que te permitirán desplegar una estación portátil en tu ubicación.",
+        "icon": "https://render.guildwars2.com/file/B6B02B0102B926ACB69C3B7C4EDE7F59F35736B2/2293638.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Medizuca de la Legión de Hierro",
+        "description": "Añade la habilidad de acción especial Medizuca a las opciones de las estaciones de las Legiones Unidas.",
+        "instruction": "Ahora puedes seleccionar la habilidad de acción especial Medizuca en las estaciones de las Legiones Unidas.",
+        "icon": "https://render.guildwars2.com/file/F6D895430F35309FE07D95B60E0C3534F10E4A51/2314932.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Sigilo con montura de la Legión de Ceniza",
+        "description": "Domina el uso de la tecnología de la Legión de Ceniza para ir con sigilo mientras vas montado.",
+        "instruction": "La Legión de Ceniza te ha entrenado para aplicar sigilo a tu montura, lo que te permite evitar los combates.",
+        "icon": "https://render.guildwars2.com/file/F23627C4AA96FA4E130CE01911D60E045E541B00/2314931.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Dominio de las estaciones de las Legiones Unidas",
+        "description": "Domina el uso de las estaciones de las Legiones Unidas mejorando las habilidades relacionadas.",
+        "instruction": "Las habilidades de las estaciones de las Legiones unidas ahora son más poderosas.",
+        "icon": "https://render.guildwars2.com/file/EFB173D178EE08EECE0C6D5B5DDC66EE28FC2D95/2314933.png",
+        "point_cost": 4,
+        "exp_cost": 1905000
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Matadragones",
+    "requirement": "Recibe una bendición de tu aliada en el Ojo del Norte.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/5778054900A108BB1E1E04CC00CD24A94D2E2F29/2352441.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Bendición dracónica",
+        "description": "Destruye siervos de los dragones en misiones de respuesta dracónica para extraer esencia de dragón y potenciar de forma temporal tus estadísticas.\nDerrotar a un campeón de dragón en una misión de respuesta dracónica te permitirá extraer una bendición dracónica que podrá mantener esta potenciación hasta la siguiente misión de respuesta dracónica.",
+        "instruction": "Destruye siervos de los dragones en misiones de respuesta dracónica para potenciar de forma temporal tus estadísticas.\nDerrotar a un campeón de dragón en una misión de respuesta dracónica te permitirá extraer una bendición dracónica que podrá mantener esta potenciación hasta la siguiente misión de respuesta dracónica.",
+        "icon": "https://render.guildwars2.com/file/FCD6D9E3980E6505F5FEB8090E09E73F64AE650B/2352425.png",
+        "point_cost": 1,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Forjador de cristal",
+        "description": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de una bendición dracónica.\nExtraer esencia de dragón otorgará poder adicional.\nAhora puedes comprar recetas de armas matadragones a los comerciantes del Ojo del Norte.",
+        "instruction": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de una bendición dracónica.\nExtraer esencia de dragón otorgará poder adicional.\nAhora puedes comprar recetas de armas matadragones a los comerciantes del Ojo del Norte.",
+        "icon": "https://render.guildwars2.com/file/577544350659A6F03791014D1973C60442EC6201/2352426.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Gran campeón",
+        "description": "Cuando una facción aliada te ayuda en una misión de respuesta dracónica, obtienes una mejora a tus estadísticas.\nCuando tengas esencia de dragón, tus impactos críticos infligirán una condición que dependerá de la esencia.\nLos comerciantes de facciones aliadas semanales también te ofrecerán objetos adicionales.",
+        "instruction": "Cuando una facción aliada te ayuda en una misión de respuesta dracónica, obtienes una mejora a tus estadísticas.\nCuando tengas esencia de dragón, tus impactos críticos infligirán una condición que dependerá de la esencia.\nLos comerciantes de facciones aliadas semanales también te ofrecerán objetos adicionales.",
+        "icon": "https://render.guildwars2.com/file/0D6B0EA21CF62C3CED033569FD14BC94FF70301A/2352427.png",
+        "point_cost": 2,
+        "exp_cost": 952500
+      },
+      {
+        "name": "Filo de la profecía",
+        "description": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de una bendición de un dragón opuesto.\nCuando tengas esencia de dragón, activar tu habilidad de curación otorgará una bendición que dependerá de la esencia.\nAhora puedes comprar recetas de armas matadragones mejoradas a los comerciantes del Ojo del Norte.",
+        "instruction": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de una bendición de un dragón opuesto.\nCuando tengas esencia de dragón, activar tu habilidad de curación otorgará una bendición que dependerá de la esencia.\nAhora puedes comprar recetas de armas matadragones mejoradas a los comerciantes del Ojo del Norte.",
+        "icon": "https://render.guildwars2.com/file/729CB508E3A64E03F339050C11E4701DBCD0B1ED/2352428.png",
+        "point_cost": 3,
+        "exp_cost": 1143000
+      },
+      {
+        "name": "Campeón resplandeciente",
+        "description": "Cuando una facción aliada te ayude en una misión de respuesta dracónica, dispondrás de habilidades mejoradas al aprovechar su colaboración.\nCuando tengas esencia de dragón, al esquivar se eliminará una condición concreta que dependerá de la esencia.\nLos comerciantes de facciones aliadas semanales también te ofrecerán objetos adicionales.",
+        "instruction": "Cuando una facción aliada te ayude en una misión de respuesta dracónica, dispondrás de habilidades mejoradas al aprovechar su colaboración.\nCuando tengas esencia de dragón, al esquivar se eliminará una condición concreta que dependerá de la esencia.\nLos comerciantes de facciones aliadas semanales también te ofrecerán objetos adicionales.",
+        "icon": "https://render.guildwars2.com/file/C644CDF7676F5D4C7A9596FD04BCD0A63C6C98CE/2352429.png",
+        "point_cost": 3,
+        "exp_cost": 1333500
+      },
+      {
+        "name": "Riendas del poder",
+        "description": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de las bendiciones de dos dragones ancianos.\nCuando tengas varias esencias de dragones, activar tu habilidad de élite otorgará poder, furia y estabilidad.\nAhora puedes comprar recetas de armas matadragones superiores a los comerciantes del Ojo del Norte.",
+        "instruction": "Derrotar a un campeón de dragón en una misión de respuesta dracónica otorga materiales adicionales al estar bajo los efectos de las bendiciones de dos dragones ancianos.\nCuando tengas varias esencias de dragones, activar tu habilidad de élite otorgará poder, furia y estabilidad.\nAhora puedes comprar recetas de armas matadragones superiores a los comerciantes del Ojo del Norte.",
+        "icon": "https://render.guildwars2.com/file/0803019D0E54BF5F950AC61563ACE6F30EE2BBF1/2352430.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Matadragones",
+        "description": "La duración de las bendiciones que otorga la esencia de dragón aumenta.\nEn los momentos culminantes de Sangre y Hielo, puedes extraer esencia de dragón de determinadas fuentes.",
+        "instruction": "La duración de las bendiciones que otorga la esencia de dragón aumenta.\nEn los momentos culminantes de Sangre y Hielo, puedes extraer esencia de dragón de determinadas fuentes.",
+        "icon": "https://render.guildwars2.com/file/9F3747C3800CE224DEF9CF311121BC25376E13DA/2352431.png",
+        "point_cost": 5,
+        "exp_cost": 1714500
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Pilotaje de esquife",
+    "requirement": "Completa el corazón de prestigio de la Costa de Shinota, en la Provincia de Seitung, para desbloquear la ruta de dominio de pilotaje de esquifes.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4601C7AA1E4310C5BBCA1A2096B82D64B845C0B2/2604768.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Navegación rápida",
+        "description": "Aprende a hacer que tu esquife adquiera una nueva velocidad punta.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "instruction": "Aprende a hacer que tu esquife adquiera una nueva velocidad punta.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "icon": "https://render.guildwars2.com/file/360604279F36E67ABA7CEE4A37C80EC15F670C27/2604700.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Cargas de profundidad",
+        "description": "Aprende una nueva habilidad que hunde a los enemigos que nadan cerca de tu esquife.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "instruction": "Aprende una nueva habilidad que hunde a los enemigos que nadan cerca de tu esquife.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "icon": "https://render.guildwars2.com/file/76E56C0943D46DF80878DA9E21FA253468F66879/2604701.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Aumento de velocidad",
+        "description": "Aprende a hacer que tu esquife pegue un breve acelerón.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "instruction": "Aprende a hacer que tu esquife pegue un breve acelerón.<br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "icon": "https://render.guildwars2.com/file/3672C098273F3B5B2E573D38987FA0D5489E0A54/2604702.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Grupo de pesca",
+        "description": "Mientras estáis en el esquife, los miembros de tu grupo o escuadrón y tú recibís una cantidad de capacidad de pesca en función del número total de piezas capturadas en los nodos de pesca. <br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "instruction": "Mientras estáis en el esquife, los miembros de tu grupo o escuadrón y tú recibís una cantidad de capacidad de pesca en función del número total de piezas capturadas en los nodos de pesca. <br><br>Aumenta en 2500 puntos la salud de tu esquife.",
+        "icon": "https://render.guildwars2.com/file/FC175845500FAF00219CEE083840C46F376F7862/2604703.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Montura de tortuga",
+    "requirement": "Completa las colecciones de la montura de tortuga.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/7D17D24C08027FE1066A10B221F60542A422E80B/2604762.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Potenciador de salud de tortuga",
+        "description": "Establece un vínculo con tu tortuga para aumentar su salud un 50 %.",
+        "instruction": "Ahora la salud de tu tortuga ha aumentado un 50 %.",
+        "icon": "https://render.guildwars2.com/file/BE0FAEDE42740A9D5DBD76D13C7AF3C2619E34EE/2604714.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Dominio de Sacudida",
+        "description": "Aprende a generar munición tras golpear con éxito a un objetivo con Sacudida.",
+        "instruction": "Ahora la Sacudida de tu tortuga generará un 25 % de un disparo de artillería por enemigo golpeado.",
+        "icon": "https://render.guildwars2.com/file/0F5B5629C7C67B0C2028C9F8B030EECB9B44657F/2604715.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Propulsores de salto mejorados",
+        "description": "Aprende a hacer que tu tortuga saque el máximo partido a sus propulsores de salto.",
+        "instruction": "Ahora tu tortuga puede saltar más lejos y más alto usando sus propulsores de salto.",
+        "icon": "https://render.guildwars2.com/file/FD07C5500829326BD678126225DC749B3E985EF7/2604716.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Caparazón potente",
+        "description": "Domina tu habilidad como artillero para aprender a convertir el daño recibido en munición.",
+        "instruction": "Has aprendido Caparazón potente, lo cual te permite convertir el daño recibido en munición desde el asiento del pasajero.",
+        "icon": "https://render.guildwars2.com/file/740905B3077716E3E7FC76034FDDDDC87CAF720F/2604717.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Compartir es vivir",
+        "description": "Aprende como enseñarles el potenciador de salud de tortuga a todas tus demás monturas.",
+        "instruction": "El potenciador de salud de tu tortuga se aplicará ahora a todas las demás monturas.",
+        "icon": "https://render.guildwars2.com/file/DB0C68675D94C3DDFC9A58DEDBCCE99BCBAF0554/2604718.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Pesca",
+    "requirement": "Completa el capítulo \"Viejos amigos\" en la historia de End of Dragons.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/D61F984DFA4FC5C757E9B71A0E0B610A56CD3B63/2604769.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Maestro en agujeros de pesca",
+        "description": "Reduce el tiempo para capturar una pieza en los agujeros de pesca y triplica la experiencia obtenida por pescar allí.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "instruction": "Reduce el tiempo para capturar una pieza en los agujeros de pesca y triplica la experiencia obtenida por pescar allí.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "icon": "https://render.guildwars2.com/file/1000BC7569575EE6A631D7D2737FEAD64C0745EC/2604704.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Visión de pescador",
+        "description": "Otorga una habilidad que detecta los mejores sitios para pescar que haya cerca y los señala en el mapa.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "instruction": "Otorga una habilidad que detecta los mejores sitios para pescar que haya cerca y los señala en el mapa.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "icon": "https://render.guildwars2.com/file/4EC1C502589517FE77FF59EEEF47E8C5FEC5CD51/2604705.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Pescando a tope",
+        "description": "Bonificación de +100 a tu capacidad de pesca cuando te has alimentado.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "instruction": "Bonificación de +100 a tu capacidad de pesca cuando te has alimentado.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "icon": "https://render.guildwars2.com/file/72A71A66ED307CBA296EDC6F6080B53C0593BD16/2604706.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Lanzador maestro",
+        "description": "Aumenta tu distancia de lanzamiento máxima un 50 %.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "instruction": "Aumenta tu distancia de lanzamiento máxima un 50 %.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "icon": "https://render.guildwars2.com/file/53B180D8E2F2E5D925E82572FF4827F816D91105/2604707.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Leyenda local",
+        "description": "Ahora los pescaderos y los mercaderes de pesca de Cantha te ofrecen surtidos exclusivos.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "instruction": "Ahora los pescaderos y los mercaderes de pesca de Cantha te ofrecen surtidos exclusivos.<BR><BR>Añade +20 a la capacidad de pesca base.",
+        "icon": "https://render.guildwars2.com/file/A501AB93C81E20429F21C815350F3CB670ACDB3D/2604708.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Revitalización de Piedra Arbórea",
+    "requirement": "Completa el capítulo \"Contratiempo\" en la historia de End of Dragons.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/932033A15445C2B320465C80641E0C3D7D92EA1D/2604767.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Base de operaciones",
+        "description": "Establece una base de operaciones en Piedra Arbórea.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "instruction": "Ahora Piedra Arbórea tiene una base de operaciones totalmente operativa.<br><br>Aumentada la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "icon": "https://render.guildwars2.com/file/0604554394FBEAF89F6A0F0BF3C342606FF8D47B/2604695.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Centro de artesanía",
+        "description": "Establece un centro de artesanía en Piedra Arbórea.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "instruction": "Ahora Piedra Arbórea cuenta con un centro de artesanía.<br><br>Aumentada la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "icon": "https://render.guildwars2.com/file/5EDB7EF5F22F3D8014DC37F53C2E05617427FB24/2604696.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Servicios de entretenimiento",
+        "description": "Establece áreas de entretenimiento en Piedra Arbórea.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "instruction": "Ahora Piedra Arbórea tiene más formas de entretenimiento para ti y tus aliados.<br><br>Aumentada la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "icon": "https://render.guildwars2.com/file/9CE967DB7E20BCE2204215697C006DD9665B7BA5/2604697.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Centro comercial",
+        "description": "Establece operaciones comerciales en Piedra Arbórea.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "instruction": "Ahora Piedra Arbórea tiene un montón de mejoras para operaciones comerciales.<br><br>Aumentada la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "icon": "https://render.guildwars2.com/file/C99CD004C0089E0B076363C796F93A7C0A01CA9A/2604698.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Globalización",
+        "description": "Establece operaciones globales en Piedra Arbórea.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "instruction": "Ahora Piedra Arbórea es un centro globalizado plenamente efectivo con portales que posibilitan el comercio y el viaje más allá de las fronteras de Cantha.<br><br>Aumenta la mejora de la experiencia de descanso en la Posada de Piedra Arbórea un 5 %.",
+        "icon": "https://render.guildwars2.com/file/4C16A31C0C4A4B4E742FC85255C610D73D0E0EBA/2604699.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Robots de jade",
+    "requirement": "Completa el capítulo \"La ruta panorámica\" en la historia de End of Dragons.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/1711033F9546551537B906EE33CF09919B15E6E4/2604770.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Potenciador de planeo",
+        "description": "Mejora el robot de jade para que te impulse hacia arriba al planear.",
+        "instruction": "Ahora, el robot de jade puede impulsarte hacia arriba al planear.\nPuedes fabricar núcleos de potencia de rangos 1 y 2.",
+        "icon": "https://render.guildwars2.com/file/EAA9B1C80148D91A2298FEBE0670FECA18B87131/2604709.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Multicarga",
+        "description": "Mejora el robot de jade para que pueda llevar hasta 4 cargas de energía a la vez.",
+        "instruction": "Ahora, el robot de jade puede llevar hasta 4 cargas de energía a la vez.\nPuedes fabricar núcleos de potencia de rangos 3 y 4.",
+        "icon": "https://render.guildwars2.com/file/B3F0A49676CBC3056D306FB197F019F9CF21F195/2604710.png",
+        "point_cost": 2,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Punto de ruta de tecnología de jade",
+        "description": "Mejora el robot de jade para poder crear un punto de ruta personal para ti.",
+        "instruction": "Ahora, el robot de jade tiene la capacidad de crear un punto de ruta personal para ti.\nPuedes fabricar núcleos de potencia de rangos 5 y 6.",
+        "icon": "https://render.guildwars2.com/file/62CE701D0E24A40B2F2F97B5C6D0C2311C7548F8/2604711.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Eficiencia energética",
+        "description": "Mejora el robot de jade para que aproveche más energía de las baterías de tecnología de jade. Además, ahora el robot de jade puede absorber energía de las tirolinas.",
+        "instruction": "Ahora, el robot de jade consigue 2 cargas de las baterías de jade, hasta un máximo de 4; y también puede conseguir cargas de las tirolinas.\nAhora, puedes fabricar núcleos de potencia de rango 7 y de rango 8.",
+        "icon": "https://render.guildwars2.com/file/07DA5117733AC1692E746CF830ACA6F9942C244C/2604712.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Protocolo de rescate",
+        "description": "Mejora el robot de jade para que te ayude a recuperarte si estás abatido. Esta habilidad no está disponible en PvP, WvW, incursiones, fractales ni misiones de ataque.",
+        "instruction": "Ahora, el robot de jade te ayuda a recuperarte si estás abatido.\nPuedes fabricar núcleos de potencia de rangos 9 y 10.",
+        "icon": "https://render.guildwars2.com/file/7B4B053650AF470DFDB355F5BAB81BC2B01FEFC5/2604713.png",
+        "point_cost": 5,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Aprendiz de vuelo",
+    "requirement": "Completa el capítulo \"El infierno desatado\" de la historia de Guild Wars 2: Secrets of the Obscure para desbloquear la ruta de dominio de entrenamiento de vuelo.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/9434F6805AC5F9B5F5F1310038F60D2EC2A4284E/3124929.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "¿Quién rescata a quién?",
+        "description": "Aprende a subirte a la escamaceleste en el aire para salvarte de una caída.\n\nSi también has entrenado el dominio de montura de escamaceleste de rescate aéreo, tu escamaceleste puede obtener Vínculo de vigor poco después de que montes en el aire.<br><br>Desbloquea el logro \"Una nueva amistad\".",
+        "instruction": "Ahora puedes montar y desmontar la escamaceleste en el aire. Mientras estás en vuelo, usa el atajo de teclado de montar para subirte a la escamaceleste o bajar de ella.<br>Si también has entrenado el dominio de montura de escamaceleste de rescate aéreo, tu escamaceleste puede obtener Vínculo de vigor poco después de que montes en el aire.<br><br>Completa el logro \"Una nueva amistad\" para invocar a tu escamaceleste fuera de los mapas de Secrets of the Obscure.",
+        "icon": "https://render.guildwars2.com/file/4568B0C768A80FBFC49BF663300BE3F3D96AF979/3124889.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Bola de fuego",
+        "description": "Desbloquea la habilidad de que tu escamaceleste escupa una bola de fuego a objetivos aéreos.",
+        "instruction": "Usa la habilidad Bola de fuego para que tu escamaceleste escupa una bola de fuego a objetivos aéreos. Se puede usar la cámara de acción para mejorar tu precisión.",
+        "icon": "https://render.guildwars2.com/file/6292A816339A7CB412ED9B62DC4AAF0301BFB9D6/3124890.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Muros resorte",
+        "description": "Aprende a impulsarte sirviéndote de muros con tu escamaceleste para brindarle así un instante de tregua y la habilidad de volar a mayor altura. Si también has entrenado el dominio de montura de escamaceleste Vuelo desde paredes, esta habilidad se carga más rápido y se lanza más lejos cuando está completamente cargada.",
+        "instruction": "Cuando tu escamaceleste esté agarrada a una pared, mantén pulsada la tecla de salto para cargar el medidor de vuelo y suéltala para echarla a volar. Para esto hace falta al menos una barra de aguante. Si también has entrenado el dominio de montura de escamaceleste Vuelo desde paredes, esta habilidad se carga más rápido y se lanza más lejos.",
+        "icon": "https://render.guildwars2.com/file/4EC9C70C051C7CB4B5B5CE25FC71ECC49655CAC1/3124891.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Corrientes ascendentes mejoradas",
+        "description": "Aprende a reforzar mágicamente la potencia de las corrientes ascendentes para que tus monturas voladoras puedan beneficiarse de ellas.",
+        "instruction": "Las corrientes ascendentes son columnas de vientos turbulentos. Para usarlas, haz volar tu montura hacia ellas y te impulsarán hacia arriba.",
+        "icon": "https://render.guildwars2.com/file/CBAE43192E5BC427FAB0C49F03EDB5BE616BE2FB/3124892.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Lanzamiento de combate",
+        "description": "Aprende a llamar a tu escamaceleste durante las luchas para que te transporte a un lugar seguro y poder atacar desde un nuevo ángulo.",
+        "instruction": "Abre el panel Activar habilidad de dominio y selecciona Escamaceleste para lanzarte a las alturas montando a lomos de tu criatura. Esta función solo se puede usar una vez cada 3 minutos.",
+        "icon": "https://render.guildwars2.com/file/EDD15BE3C406F652377B95733608A90C961A3B4E/3124893.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Aclimatación de línea ley",
+        "description": "Aprende a adentrarte en flujos de energía de línea ley mientras estás en tu montura para planear por ellos, ganando velocidad y llegando a lugares que de otra forma serían inaccesibles.",
+        "instruction": "Las líneas ley son corrientes de energía mágica. Para usarlas, solo tienes que volar con tu montura hacia ellas y dejar que el flujo de energía refuerce el movimiento de tu criatura.",
+        "icon": "https://render.guildwars2.com/file/FC5C0372FE0ED15A0E774ED11BC1179A000CA104/3124894.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Espíritus en alza",
+        "description": "Aprende a usar corrientes ascendentes mejoradas mágicamente para aumentar el aguante de tu montura.",
+        "instruction": "Tus monturas voladoras ahora pueden obtener aguante en vuelo gracias a las corrientes ascendentes y las líneas ley.",
+        "icon": "https://render.guildwars2.com/file/E4AD6608A55657FA36ADBA1A1C0AD14536796D6A/3124895.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Resguardo Astral",
+    "requirement": "Completa el capítulo \"La faceta extraviada\" de la historia de Guild Wars 2: Secrets of the Obscure para desbloquear la ruta de dominio del Resguardo Astral.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/E8423B6B090F0FD7F305C941BF7668D17A6AE243/3124927.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Comodidades astrales",
+        "description": "Aprende a canalizar las energías de la torre del brujo para descansar y relajarte.",
+        "instruction": "Consigue una mejora de experiencia mientras estés en el interior de la torre del brujo.",
+        "icon": "https://render.guildwars2.com/file/596B55FDCA630141C0E24F5DF4C2B948F3A1F30C/3124885.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Fabricación astral",
+        "description": "Accede a comprar armadura del Resguardo Astral y las recetas de fabricación de motivaciones kryptis comunes y atípicas para ir a la caza de fisuras.",
+        "instruction": "Las recetas de motivaciones y armaduras astrales se las puedes comprar a Lyhr en la torre del brujo.\nLas motivaciones kryptis atípicas se pueden usar con el Corazón de lo Oscuro para encontrar fisuras kryptis de rango 2. ¡Ojo! ¡No intentes abordar estas fisuras en solitario!",
+        "icon": "https://render.guildwars2.com/file/9237A5F14C2C70BD262D66A1C6A49119EED27B5C/3124886.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Control de emociones",
+        "description": "Accede a comprar la receta de fabricación de motivaciones kryptis excepcionales para ir a la caza de fisuras.",
+        "instruction": "Las motivaciones kryptis excepcionales se pueden usar con el Corazón de lo Oscuro para encontrar fisuras kryptis de rango 3. ¡Ojo! ¡No intentes abordar estas fisuras en solitario!",
+        "icon": "https://render.guildwars2.com/file/0CF248A0CB6B09CF732E73BBA7E5B8DC54115BC7/3124887.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Dominio de fisuras",
+        "description": "Aprende a extraer más esencia kryptis de las fisuras.",
+        "instruction": "Recibe más esencias kryptis al cerrar fisuras. Las esencias kryptis son poderosos materiales de artesanía empleados en cebos, armas, armaduras y armaduras legendarias.",
+        "icon": "https://render.guildwars2.com/file/08CE0AF0F10C57254AE5C52D5AA0B9F70F4732AA/3124888.png",
+        "point_cost": 5,
+        "exp_cost": 2159000
+      },
+      {
+        "name": "Forja de armaduras de obsidiana",
+        "description": "Consigue acceso a recetas de artesanía finales para armadura legendaria.",
+        "instruction": "Puedes comprarle a Lyhr las recetas de armaduras de obsidiana legendarias en la torre del brujo.",
+        "icon": "https://render.guildwars2.com/file/E9323CB167E63CF50C7D505914C3169555FBE770/3256320.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Dominio de hallacaminos",
+        "description": "Entrena este dominio para obtener efectos adicionales:\n<br>• Añadir nuevos servicios a la torre del brujo para mejorar la armadura de obsidiana o para intercambiar diversos materiales y divisas de mapa.\n<br>• Abrir cofres arcanos con facilidad.\n<br>• Ofrecer ciertas protecciones contra Eparch en la Ciudadela de Zakiros.\n<br>• Saquear un baúl diario del metaevento \"En la guarida de la araña\" que contiene objetos especialmente excepcionales.",
+        "instruction": "El dominio sobre el Cuerno de Maguuma ha reportado múltiples bonificaciones:\n<br>• ¡El ayudante de archivero novicio Conri puede mejorar la armadura de obsidiana con una mejora cosmética! Lo encontrarás junto a la Forja de lo Intemporal.\n<br>• ¡Con Gharr Garraplomo puedes intercambiar divisas, materiales y más! Lo encontrarás en la Plaza del Imperio, junto a una floración de brotespinado.\n<br>• Los cofres arcanos tardan mucho menos en abrirse.\n<br>• Puedes reducir el ritmo de las acumulaciones de emociones que Eparch consume.\n<br>• Completar con éxito el metaevento \"En la guarida de la araña\" otorga una recompensa diaria que contiene objetos especialmente excepcionales.",
+        "icon": "https://render.guildwars2.com/file/E4070C9BB426392824B5603B2C0DAC077227F830/3307103.png",
+        "point_cost": 7,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Investigación del Corazón de lo Oscuro",
+    "requirement": "Completa el capítulo \"El infierno desatado\" de la historia de Guild Wars 2: Secrets of the Obscure para desbloquear la ruta de dominio de investigación del Corazón de lo Oscuro.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/06B8D3B0C5B2F2B8E80579BC9F5DB5B776666BC7/3124925.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Guía de fisuras",
+        "description": "El Corazón de lo Oscuro se puede usar para encontrar pequeñas fisuras kryptis.",
+        "instruction": "Usa el botón Activar habilidad de dominio para permitir que el Corazón de lo Oscuro te guíe a una fisura kryptis, en caso de haber alguna presente.",
+        "icon": "https://render.guildwars2.com/file/D19AD5532F0E9F640244B1E8E30BB750A94B54EA/3124880.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Generador de corrientes ascendentes",
+        "description": "Aprende a canalizar el poder del Corazón a generadores de corrientes ascendentes.",
+        "instruction": "Interacciona con un generador de corrientes ascendentes para formar una corriente ascendente temporal cerca. Las corrientes ascendentes se pueden usar con monturas voladoras y planeadores para llegar a zonas inaccesibles.",
+        "icon": "https://render.guildwars2.com/file/51F9F7DA7AAFA52B0A019FCBF2709AE7DEDE1AC5/3124881.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Tesoros arcanos menores",
+        "description": "Aprende a usar el Corazón para desbloquear tesoros arcanos menores en mapas de Secrets of the Obscure.",
+        "instruction": "Los tesoros arcanos menores son pequeños cofres del tesoro que se pueden encontrar en los mapas de Secrets of the Obscure. Interacciona con ellos y realiza un pequeño desafío de habilidad para abrirlos y obtener recompensas.",
+        "icon": "https://render.guildwars2.com/file/64146B0DD290310FD2F392C66E3F6ED5F057B296/3124882.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Operación Telar Ley",
+        "description": "Aprende a usar el Corazón para tejer energía ley latente usando telares ley para convertirla en líneas ley funcionales.",
+        "instruction": "Interacciona con un telar ley para hacer que se forme una línea ley temporal cerca. Las líneas ley se pueden usar con monturas voladoras y planeadores para llegar a zonas inaccesibles.",
+        "icon": "https://render.guildwars2.com/file/DDFFAD2E640DB84264711DC4750D16C89ACAA10C/3124883.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Tesoros arcanos mayores",
+        "description": "Aprende a usar el Corazón para desbloquear tesoros arcanos mayores en mapas de Secrets of the Obscure.",
+        "instruction": "Los tesoros arcanos mayores son grandes cofres del tesoro que se pueden encontrar en los mapas de Secrets of the Obscure. Interacciona con ellos y realiza un desafío de habilidad para abrirlos y obtener recompensas.",
+        "icon": "https://render.guildwars2.com/file/0DD998C6342DDBBE61271A3878B222FD18BA410D/3124884.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Zona interior de Nayos",
+    "requirement": "Completa el capítulo \"Coacción\" de la historia de Guild Wars 2: Secrets of the Obscure para desbloquear la ruta de dominio de convergencias.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/E4927F361F990E0F360C7C76745CE6EB14234206/3189305.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Bola de fuego de asedio",
+        "description": "Aprende a aumentar la habilidad Bola de fuego de tu escamaceleste para infligir daño de asedio.",
+        "instruction": "Las bolas de fuego de tu escamaceleste pueden infligir daño de asedio a los objetos.",
+        "icon": "https://render.guildwars2.com/file/5517FDAC5DB54808D517C6E1B800ED1ED2552508/3189297.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Bendición de brujo",
+        "description": "Aprende a obtener Bendición de brujo en convergencias al entregar esencias.",
+        "instruction": "Mientras estás en una convergencia, entregar esencias te otorga Bendición de brujo, aumentando tu efectividad en combate.",
+        "icon": "https://render.guildwars2.com/file/3CA3644E1D03DA15FFF125590D4FEAD60A476315/3189298.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Bolsillos de fuego fatuo",
+        "description": "Aprende a recolectar esencias como fuego fatuo en las convergencias.",
+        "instruction": "Ahora puedes recolectar esencias mientras eres un fuego fatuo en una convergencia.",
+        "icon": "https://render.guildwars2.com/file/A0F8C068C1010DC5D0B3EEBF48BF4A32B8C55774/3189299.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Sintonía de esencias",
+        "description": "Aprende a llevar la máxima carga de esencias en convergencias. Al recoger esencias, curas y consigues un efecto.",
+        "instruction": "Puedes llevar aún más esencia y recibir una curación y un efecto al recoger esencias.",
+        "icon": "https://render.guildwars2.com/file/9FAF90CEC4F4554E36C8EE3A54FA589BA2F75132/3189300.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Domino de convergencias",
+        "description": "Aprende a extraer esencia kryptis de bonificación de convergencias exitosas. Completar convergencias te otorga un efecto que te permite obtener más esencia kryptis al usar motivaciones. Aumenta la probabilidad de obtener motivaciones kryptis inestables, que se usan para abrir convergencias.",
+        "instruction": "Las convergencias exitosas ofrecen mejores recompensas, otorgan bonificaciones de esencia kryptis y también brindan una bonificación a la esencia kryptis obtenida usando motivaciones. Además, tienes una mayor probabilidad de conseguir motivaciones kryptis inestables, que se usan para abrir convergencias.",
+        "icon": "https://render.guildwars2.com/file/7D1877CC41AE0D54F8E2C5DFFAFE0D550448B3F7/3189301.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Heredades",
+    "requirement": "Consigue tu propia heredad para conseguir acceder a la línea de dominio de heredades.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/CD720F04AFD15F97AA9CB39B6A94BFD9460D0242/3379035.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Artesanía de obrero novato y expansión de heredad",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de obrero novato. También desbloquea espacio adicional en la heredad y una bonificación de descanso.",
+        "instruction": "Desbloquea la posibilidad de usar recetas de artesanía de obrero. Desbloquea espacio adicional en la heredad y una bonificación de descanso.",
+        "icon": "https://render.guildwars2.com/file/359103213A99A17DF20EE15F6CF2D25F142207C2/3379008.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Artesanía de obrero iniciado y expansión de heredad",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de obrero iniciado. También desbloquea espacio adicional en la heredad y una bonificación de descanso de rango superior.",
+        "instruction": "Desbloquea la posibilidad de usar nuevas recetas de artesanía de obrero. Desbloquea espacio adicional en la heredad y una bonificación de descanso de rango superior.",
+        "icon": "https://render.guildwars2.com/file/366E0B07B91D7A423C807FD7FCD712C2CFCB7E09/3379009.png",
+        "point_cost": 2,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Artesanía de obrero aprendiz y expansión de heredad",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de obrero aprendiz. También desbloquea espacio adicional en la heredad y una bonificación de descanso de rango superior.",
+        "instruction": "Desbloquea la posibilidad de usar nuevas recetas de artesanía de obrero. Desbloquea espacio adicional en la heredad y una bonificación de descanso de rango superior.",
+        "icon": "https://render.guildwars2.com/file/9E2CD53A2009DC352A7AAED671FCD475125FCE64/3379010.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Artesanía de obrero titulado y cajas de recolección",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de obrero titulado y de obtener acceso a las cajas de recolección.",
+        "instruction": "Desbloquea la posibilidad de usar nuevas recetas de artesanía de obrero. Consigue acceder a las cajas de recolección.",
+        "icon": "https://render.guildwars2.com/file/6C50110BFCBDD2796CE367F8472D25FBAEB5DC10/3379011.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Artesanía de obrero avezado",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de obrero avezado y de comprarle componentes legendarios a Lahar Hábil.",
+        "instruction": "Desbloquea la posibilidad de usar recetas de artesanía avezada. Adquiere la capacidad de comprarle componentes legendarios a Lahar Hábil.",
+        "icon": "https://render.guildwars2.com/file/003E982F4A602460EC0E4DC345F8D7B750DDCCC8/3443181.png",
+        "point_cost": 5,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Artesanía de maestro obrero",
+        "description": "Desbloquea la posibilidad de usar recetas de artesanía de maestro obrero.",
+        "instruction": "Desbloquea la posibilidad de usar nuevas recetas de artesanía de obrero.",
+        "icon": "https://render.guildwars2.com/file/35EDA0D609DC3DF602DA007A100ED52172FEE9EE/3594060.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Artesanía de gran maestro obrero",
+        "description": "Desbloquea la habilidad de usar recetas de artesanía de gran maestro obrero. Tu límite de decoración aumentará en 500 y tu bonificación de experiencia por descanso mejorará.",
+        "instruction": "Desbloquea la habilidad de usar nuevas recetas de artesanía de obrero. Tu límite de decoración ha aumentado en 500 y tus bonificaciones de experiencia por descanso han mejorado.",
+        "icon": "https://render.guildwars2.com/file/CD546D3ADBABA6FE9B70241FA318BB389CCE4B00/3630927.png",
+        "point_cost": 7,
+        "exp_cost": 3048000
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Kodan de las tierras bajas",
+    "requirement": "Juega el capítulo de historia \"Diplomacia y descubrimiento\" de Guild Wars 2: Janthir Wilds para desbloquear la ruta de dominio de kodan de las tierras bajas.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/D6342A11B554B6D895675A19CD9B08CDC82DB696/3379057.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Entrenamiento con lanzas de las tierras bajas",
+        "description": "Aprende a blandir la lanza en tierra y gana experiencia adicional mientras estás en Janthir.",
+        "instruction": "Has aprendido a blandir la lanza en tierra y ganas un 5 % de experiencia adicional mientras estás en Janthir.",
+        "icon": "https://render.guildwars2.com/file/E5BB91515F73F83CB9DEFC59ECB517235A01797F/3379012.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Colmenas de las tierras bajas",
+        "description": "Aprende los secretos usando colmenas potenciadas en las Costas Bajas para reiniciar las recargas de habilidades.",
+        "instruction": "Has aprendido a usar colmenas potenciadas en las Costas Bajas para reiniciar las recargas de habilidades.",
+        "icon": "https://render.guildwars2.com/file/1365B37AAB9B05BB091621E66F120CD514360BF4/3379017.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Competencia de explorador de Janhtir",
+        "description": "Descubre los secretos de usar colmenas potenciadas con hematites en Janthir Syntri para reiniciar las recargas de habilidades, así como la posibilidad de comprar llaves de alijo kodan adicionales a coleccionistas de monedas.",
+        "instruction": "Ahora conoces los secretos de usar colmenas potenciadas con hematites en Janthir Syntri para reiniciar las recargas de habilidades, así como la posibilidad de comprar llaves de alijo kodan adicionales a coleccionistas de monedas.",
+        "icon": "https://render.guildwars2.com/file/0E6B2731E8E54DEE51783E729231CDC303DE33D2/3379014.png",
+        "point_cost": 4,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Aceptación kodan",
+        "description": "Ganas prestigio adicional al entregar obsequios de renombre a comerciantes de corazón de prestigio en las Tierras Salvajes de Janthir.",
+        "instruction": "Ganarás prestigio adicional al entregar obsequios de renombre a comerciantes de corazón de prestigio en las Tierras Salvajes de Janthir.",
+        "icon": "https://render.guildwars2.com/file/50E0EFC5E89262BA08C86F34AA6EA7A9DED3FA97/3379013.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Técnicas de cosecha de osuno",
+        "description": "Obtienes cierta probabilidad de conseguir una pequeña cantidad de materiales específicos del mapa al recolectar de cualquier nodo de materiales de Janthir.",
+        "instruction": "Tienes cierta probabilidad de conseguir una pequeña cantidad de materiales específicos del mapa al recolectar de cualquier nodo de materiales de Janthir.",
+        "icon": "https://render.guildwars2.com/file/6E6A5845AC7019E302A933E6E55EF2DB73E43569/3379016.png",
+        "point_cost": 6,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Carroñero de la naturaleza",
+        "description": "Obtienes más experiencia mientras estás en Janthir Wilds y ganas objetos de divisa adicionales completando eventos en las Tierras Salvajes de Janthir.",
+        "instruction": "Has mejorado el aumento de experiencia mientras estés en las Tierras Salvajes de Janthir hasta una bonificación del 10 %. También has conseguido colmenas de las tierras bajas y divisa de mursaat curiosas adicionales al completar eventos.",
+        "icon": "https://render.guildwars2.com/file/051D49314AE801BE970502635BE878349BE10332/3379015.png",
+        "point_cost": 7,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Montura garrabélica",
+    "requirement": "Completa el capítulo de historia \"Territorio desconocido\" de Guild Wars 2: Janthir Wilds para desbloquear la ruta de dominio de garrabélica.",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/487B2B93E3B5F0AC062C68A2FBEC3ED498D4D3FD/3379059.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Nueve vidas",
+        "description": "Aprende a reducir el daño por caída mientras vas a lomos de la garrabélica.",
+        "instruction": "El daño por caída mientras vas a lomos de la garrabélica se reduce a 0.",
+        "icon": "https://render.guildwars2.com/file/187B9B4B263142DA10A86B73AC556996EFBC3B6F/3379018.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Reflejos felinos",
+        "description": "Aprende a saltar en el aire mientras vas a lomos de la garrabélica.",
+        "instruction": "Gana acceso al salto en el aire a costa de vitalidad. La velocidad de descenso aumenta la altura del salto.",
+        "icon": "https://render.guildwars2.com/file/6D093E5A16BEE5554EEE02B4CA99176AFE14FA90/3379019.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Garras salvajes",
+        "description": "Aprende a golpear a tus enemigos cuando arremetes contra ellos con la garrabélica.",
+        "instruction": "Golpea a los enemigos contra los que arremetas. Alcanzar al menos a un enemigo otorga un estallido de aguante cuando la arremetida acaba.",
+        "icon": "https://render.guildwars2.com/file/A8F7072347D9C0A39E7202B207192C29C7391E0A/3379020.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Furia salvaje",
+        "description": "Aprende a infligir daño adicional a lomos de la garrabélica, además de a aturdir y a infligir daño de desafío de bonificación con las habilidades de lanza.",
+        "instruction": "Inflige daño aumentado mientras vas a lomos de la garrabélica. Las habilidades de lanza y de entrar en combate de garrabélica infligen efectos de control aumentados.",
+        "icon": "https://render.guildwars2.com/file/D63F2D4C71E72D65CE0EC10A207371B8E962D602/3379021.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Bien descansado",
+        "description": "Aumenta la regeneración de aguante de todas las monturas un 20 %.",
+        "instruction": "Aumenta la regeneración de aguante de todas las monturas un 20 %.",
+        "icon": "https://render.guildwars2.com/file/0880F8AF39B4205B6A6971C9063B1FD7AB0F33DF/3379022.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Tejesombras de los mursaat",
+    "requirement": "Juega el capítulo de historia \"Hacia el corazón del Valle de las Sombras\" de Guild Wars 2: Janthir Wilds para desbloquear la ruta de dominio de Tejesombras de los mursaat.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/C0682C46000E24D7CD4F42EB0122B06231A277DD/3594069.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Espejo y movimiento mursaat",
+        "description": "Aprende a usar los espejos mursaat para atravesar los Yermos de Pavesas de Niebla, así como la colmena de pavesas de Niebla.",
+        "instruction": "Has aprendido a usar los espejos mursaat para llegar a enclaves ocultos y a usar la colmena de pavesas de Niebla para reiniciar la recarga de habilidades.",
+        "icon": "https://render.guildwars2.com/file/C00307ADDC6248F731700C0E71461C23D4F5FA9D/3594061.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Mejoras de exploración de las ruinas mursaat",
+        "description": "Descubre cómo agenciarte recompensas adicionales completando eventos los Yermos de Pavesas de Niebla.",
+        "instruction": "Obtienes esquirlas curiosas de ruinas de los mursaat adicionales al completar eventos en los Yermos de Pavesas de Niebla.",
+        "icon": "https://render.guildwars2.com/file/E7F159B1BB62AB59DDB4FE547FDCEACBDC9092B3/3594062.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Aumento de resultados de prospección de yermos",
+        "description": "Las mejoras en los métodos de prospección aumentan las recompensas conseguidas de cofres grandiosos al completar cadenas de eventos de prospección de terreno.",
+        "instruction": "Consigue recompensas adicionales de los cofres grandiosos al final de las cadenas de eventos de prospección de terreno en los Yermos de Pavesas de Niebla.",
+        "icon": "https://render.guildwars2.com/file/6F98039C500BF1ED950FFAB2FFD50D01FC0F2EF9/3594063.png",
+        "point_cost": 4,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Dominio de colmena de Janthir",
+        "description": "Entrena este dominio para obtener efectos adicionales de colmenas potenciadas, colmenas potenciadas con hematites y colmenas de Pavesas de Niebla en Janthir.\n<br>• Tu garrabélica recibe un aumento de velocidad al interactuar con una colmena. Si has entrenado el dominio de champiñones ultrarrápidos, los efectos y la duración mejoran.\n<br>• Tus monturas obtienen un breve efecto de Vínculo de vigor. Si has entrenado el dominio de espíritus en alza, la duración aumenta. \n<br>• Gana bendiciones al interactuar con colmenas. Si has entrenado el dominio de eficiencia energética, la duración de bendición aumenta.",
+        "instruction": "El dominio sobre colmenas potenciadas, colmenas potenciadas con hematites y colmenas de Pavesas de Niebla te otorga bonificaciones adicionales.\n<br>• Tu garrabélica recibe un aumento de velocidad al interactuar con una colmena. Si has entrenado el dominio de champiñones ultrarrápidos, los efectos y la duración mejoran.\n<br>• Tus monturas obtienen un breve efecto de Vínculo de vigor. Si has entrenado el dominio de espíritus en alza, la duración aumenta. \n<br>• Gana bendiciones al interactuar con colmenas. Si has entrenado el dominio de eficiencia energética, la duración de bendición aumenta.",
+        "icon": "https://render.guildwars2.com/file/7CA8735A181DB87C2BD2ECD0A17E0C117B07BCBE/3630928.png",
+        "point_cost": 6,
+        "exp_cost": 1905000
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Superviviente en Castora",
+    "requirement": "Completa el capítulo de historia Partidas no programadas por primera vez para desbloquear la ruta de dominio de superviviente de Castora.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/2C7397D1A4F6BAB099F94ED27738E6937A90BA44/3713125.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Supervivencia sigilosa",
+        "description": "Aprende a usar los útiles suministros de los náufragos para desplazarte cuidadosamente entre los habitantes hostiles del lugar.",
+        "instruction": "Mientras no estés combatiendo, interactúa con alijos de provisiones de supervivientes para aplicarte sigilo.",
+        "icon": "https://render.guildwars2.com/file/B5955B6940AA3C0113C5093AD6315A951E373EE5/3713075.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Aprovechamiento de recursos",
+        "description": "Aprende a sobrevivir del hostil territorio e identifica recursos únicos. Los nodos de recolección de Castora ahora tienen cierta probabilidad de otorgar recursos específicos del mapa.",
+        "instruction": "Los nodos de recolección de Castora tienen cierta probabilidad de otorgar recursos específicos del mapa.",
+        "icon": "https://render.guildwars2.com/file/AE6C5F7DCB2530A620C5DC0F49419F340BD1DDDC/3713076.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Escudo de la suerte",
+        "description": "Los náufragos han hecho acopio de magia recolectada para emergencias. Los alijos de provisiones de supervivientes te aplican Escudo de la suerte. Cuando tu nivel de salud es bajo, adquieres barrera máxima y se reduce la recarga actual de tu habilidad de curación.",
+        "instruction": "Crea una barrera cuando tu nivel de salud es bajo y reduce la recarga actual de la habilidad de curación.",
+        "icon": "https://render.guildwars2.com/file/DDD12F03AB0CCB490F5D90BDFB3A5CC1D4FD1A77/3713077.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Abundancia natural",
+        "description": "¡Prestar ayuda a Castora te ha hecho ganarte el beneplácito y el agradecimiento de todos! Consigue un cofre de bonificación al completar eventos en zonas del corazón de prestigio de Castora ya completadas. Los campeones, los metaeventos y los eventos de jefes de mundo de Castora otorgan un cofre de bonificación.\n\n(Límite diario de recompensa adicional: 20)",
+        "instruction": "Consigue recompensas de bonificación al completar eventos en zonas del corazón de prestigio de Castora ya completadas.\n\nLos campeones, los metaeventos y los eventos de jefes de mundo de Castora otorgan un cofre de bonificación.\n\n(Límite diario de recompensa adicional: 20)",
+        "icon": "https://render.guildwars2.com/file/5E145D6FAD1BBE03DC5176BEC6CBA3C3450B47BE/3713078.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Maniobras de combate",
+        "description": "Aprende las sutilezas de sobrevivir en la hostil isla de Castora. Se puede activar Supervivencia sigilosa mientras estás en combate. El efecto de activación Escudo de la suerte también te cura por completo.",
+        "instruction": "Puedes interactuar con alijos de supervivientes mientras estás en combate y tendrán una recarga menor cuando lo hagas.\n\nEscudo de la suerte ahora restablece toda la salud al activarse.",
+        "icon": "https://render.guildwars2.com/file/38990E6BF1CDDD756538D3EEF34ECD9A7FDE1743/3772551.png",
+        "point_cost": 8,
+        "exp_cost": 6600000
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Magia castorense salvaje",
+    "requirement": "Completa el capítulo de historia \"Verdades desveladas\" por primera vez para desbloquear la ruta de dominio de Magia castorense salvaje.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/214E2EA7E7B0D4050CAA56A9EFF2170FB4DA41C3/3713126.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Secretos desvelados",
+        "description": "Los secretos de Castora han empezado a desvelarse ante tus ojos. Ahora puedes ver e interactuar con espejos mágicos por toda Castora.",
+        "instruction": "Se puede ver e interactuar con los espejos mágicos. Participa en sus desafíos para desvelar cofres del tesoro adicionales en un sector.\n\nLos eventos otorgan una carga de llave acumulable que puede abrir cofres del tesoro de espejos mágicos.\n\nLos enemigos derrotados de rango veterano o superior también otorgan una carga de llave acumulable.",
+        "icon": "https://render.guildwars2.com/file/93FE156A55E5F36936DE4E57151B083DDBBCE8E1/3713083.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Magia persistente",
+        "description": "Has aprendido a reconocer con precisión y recoger la magia persistente de Castora.",
+        "instruction": "Consigue cargas de llave al acceder a mapas castorenses por primera vez cada día. Este efecto se renueva al completar un metaevento o un evento de jefe de mundo de Visions of Eternity.",
+        "icon": "https://render.guildwars2.com/file/A6374E0C9D61917709520A5920DA52442A02A9AA/3713084.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Magia eficiente",
+        "description": "Has optimizado la cantidad de magia necesaria para abrir cofres del tesoro y tu prestigio entre los habitantes de Castora ha aumentado.",
+        "instruction": "Abrir cofres requiere menos cargas.\n\nCompletar eventos de prestigio en Castora otorga más prestigio.",
+        "icon": "https://render.guildwars2.com/file/297F03110AD9241A217604AB79F7CDD36873D615/3713085.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Riquezas oscurecidas",
+        "description": "Tu afilada percepción y tu experiencia con el paisaje mágico de Castora te permiten obtener más recompensas de cofres del tesoro de espejos mágicos.",
+        "instruction": "Los cofres del tesoro de espejos mágicos tienen cierta probabilidad de otorgar recompensas adicionales.",
+        "icon": "https://render.guildwars2.com/file/B40765291CCA67C33C3548A707F607DC1C7D4B10/3713086.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Prosperidad interminable",
+        "description": "Has dominado los misterios de la magia salvaje de Castora y has maximizado los recursos que puedes obtener de ella. Los cofres de recompensa de eventos tienen recompensas mejoradas. Completar desafíos de espejos mágicos otorga cargas de llave.",
+        "instruction": "Los cofres de recompensa de eventos tienen recompensas mejoradas.\n\nCompletar desafíos de espejos mágicos otorga cargas de llave.",
+        "icon": "https://render.guildwars2.com/file/D8D2B37700A5017BE1546596AE0F190CA7EE1692/3713087.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Magia de espejo residual",
+        "description": "Completar un espejo mágico proporciona un potenciador de hallazgo mágico mientras estás en Castora.",
+        "instruction": "Consigues un potenciador de hallazgo mágico al completar un espejo mágico. Este potenciador solo funciona mientras estés en Castora.\n\nLos enclaves de cofres oscurecidos quedan visibles tras completar un espejo mágico.",
+        "icon": "https://render.guildwars2.com/file/FE1F99037071E5943C72F462AF2A220B363DBBFE/3772552.png",
+        "point_cost": 7,
+        "exp_cost": 5080000
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Adaptación de mantarrayas",
+    "requirement": "Completa el capítulo de historia \"Tierra firme\" de Guild Wars 2: Visions of Eternity para desbloquear la ruta de dominio \"Adaptación de mantarrayas\".",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/49F62CE6C3212BCABCA205F4766209C474377547/3713127.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Hidrodinámica avanzada",
+        "description": "Aprende a sumergirte bajo el agua con tu mantarraya.\n\nSi has entrenado además el dominio de montura \"A fondo con la mantarraya\", esto también aumenta la velocidad en tierra básica de la mantarraya y te otorga 3 segundos de sigilo al entrar o salir del agua. (30 s de recarga)",
+        "instruction": "Ahora puedes sumergirte bajo el agua con tu mantarraya usando la habilidad Sumergirse, recién desbloqueada en la barra de habilidades de la mantarraya.\n\nSi has entrenado además el dominio de montura \"A fondo con la mantarraya\", esto también aumenta la velocidad en tierra básica de la mantarraya y te otorga 3 segundos de sigilo al entrar o salir del agua. (30 s de recarga)",
+        "icon": "https://render.guildwars2.com/file/CAB4975575CAB107CC162979ED42B56929550DD7/3713079.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Intuición castorense",
+        "description": "Cambia la habilidad Tonel para que ahora permita hacer arremetidas de manera continua mientras tengas aguante. También desbloquea para tu mantarraya la posibilidad de detectar amenazas y tesoros bajo el agua con eterlocalización.",
+        "instruction": "Para la habilidad de entrar en combate, ahora hay que mantener la tecla de habilidad en vez de hacer clic para desmontar. Hacer clic en la habilidad ahora activará una arremetida, en vez de hacerte desmontar.\n\nTambién puedes usar la habilidad de eterlocalización recién desbloqueada para activar un sónar de ráfagas rítmicas que detecta amenazas cercanas y tesoros bajo el agua mientras esté activado.",
+        "icon": "https://render.guildwars2.com/file/76B76A022D40F0FE3732734D43F63CCC0A53ECCF/3713080.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Evolución convergente",
+        "description": "Obtienes acceso a Potenciación de estela y a Chorros de agua. La estela te permite un aumento de velocidad por encima y por debajo del agua, además de incrementar tu potencia de planeo. Chorros de agua otorga a la mantarraya la posibilidad de disparar proyectiles de magia almacenada a aliados y enemigos cercanos, curando a los primeros e infligiendo daño a los segundos. ",
+        "instruction": "Mientras la habilidad Potenciación de estela esté activa, mantén el planeo para ascender más de lo que antes se te permitía mientras dure la habilidad. \n\nPara usar la habilidad Chorros de agua, apunta con tu mantarraya a los enemigos y aliados que quieras y libera los proyectiles.",
+        "icon": "https://render.guildwars2.com/file/C3761A1B313876C9D33BCB681A3AA739D30AEC03/3713081.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Jinete contracorriente",
+        "description": "Adquiere la capacidad de recorrer líneas ley bajo el agua y sobre la superficie, así como corrientes ascendentes, con tu mantarraya.\n\nCuando estés en una corriente ascendente o una línea ley, puedes salir usando la habilidad Tonel de la mantarraya.",
+        "instruction": "Las líneas ley son corrientes de energía mágica. Para usarlas, solo tienes que dirigir tu mantarraya hacia ellas y dejar que el flujo de energía refuerce el movimiento de tu montura. <br>Las corrientes ascendentes son columnas de vientos turbulentos. Para usarlas, haz volar tu montura hacia ellas y te impulsarán hacia arriba.",
+        "icon": "https://render.guildwars2.com/file/0D640356AC77460B6E2DC30890F6B310469DCAE7/3713082.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Amplificación de fisura",
+    "requirement": "Habla con Vanak Caminante de la Fe en el Litoral del Naufragio o las Hondonadas del Manantial de Ley para desbloquear la ruta de dominio de amplificación de fisura.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/CE9CA45178FDD30608C1E37D0A1C1D3C25F0B20A/3807271.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Grietas de fisura",
+        "description": "Activa grietas de fisura en Castora que pueden teletransportarte a una fisura activa del rango actualmente seleccionado.",
+        "instruction": "Tras usar tu habilidad Escanear en busca de fisura del Corazón de lo Oscuro junto al flujo de energía que te dirige a una fisura activa, ahora verás la ubicación de grietas de fisuras en el mapa. Interactuando con una de estas grietas de fisura, puedes aprovecharla para teletransportarte directamente a una fisura activa.\n\nTeletransportarte te provoca mal de las fisuras durante 30 segundos. Mientras sufras mal de las fisuras, no podrás usar grietas de fisuras.",
+        "icon": "https://render.guildwars2.com/file/F3C63BEB53DCBE326B0433063B1144BBF06B3275/3807257.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Fisuras sobrecargadas",
+        "description": "Obtienes la habilidad de sobrecargar fisuras activas, incrementando el desafío y las recompensas del jefe que aparezca.",
+        "instruction": "Tras completar con éxito el evento de fisura inicial, tendrás momentáneamente la opción de contribuir con cebo al rango relevante para sobrecargar al jefe que aparezca en la segunda fase del evento.\n\nSi consigues suficiente cebo y consigues sobrecargar una fisura, aparecerá un enemigo considerable con más daño, salud y velocidad junto con los demás peligros creados por la propia fisura. Imponerte en este gran reto también aporta mayores recompensas y otras adicionales para quienes han aportado cebo.",
+        "icon": "https://render.guildwars2.com/file/4850E00405A734D86C5C37DF792C3AE8373F6439/3807258.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Abriéndote paso por Tyria",
+        "description": "Ahora puedes activar grietas de fisura en mapas fuera de Castora.",
+        "instruction": "",
+        "icon": "https://render.guildwars2.com/file/D7B3EAD7B962C9DB925D9DC8026950BC00CD80EC/3807259.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Sobrecargar Tyria",
+        "description": "Ahora puedes sobrecargar cualquier fisura de dominio de Tyria.",
+        "instruction": "Tras completar con éxito el evento de fisura inicial, tendrás momentáneamente la opción de contribuir con cebo al rango relevante para sobrecargar al jefe que aparezca en la segunda fase del evento.\n\nSi consigues suficiente cebo y consigues sobrecargar una fisura, aparecerá un enemigo considerable con más daño, salud y velocidad junto con los demás peligros creados por la propia fisura. Imponerte en este gran reto también aporta mayores recompensas y otras adicionales para quienes han aportado cebo.",
+        "icon": "https://render.guildwars2.com/file/B611B10391103A565AE20CC8731533BE7409CDC6/3807260.png",
+        "point_cost": 5,
+        "exp_cost": 2032000
+      }
+    ]
+  }
+]

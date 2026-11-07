@@ -1,0 +1,1280 @@
+[
+  {
+    "pos": [
+      59334,
+      31608
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "South of the waypoint on a cliff."
+  },
+  {
+    "pos": [
+      60907,
+      31605
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 95,
+    "map_id": 19,
+    "map_name": "Plains of Ashford",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "West of the waypoint, at the vista."
+  },
+  {
+    "pos": [
+      58317,
+      28253
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 120,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "East of the waypoint."
+  },
+  {
+    "pos": [
+      59564,
+      29500
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 85,
+    "map_id": 32,
+    "map_name": "Diessa Plateau",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Head south from the waypoint, to the cliffs overlooking the bridge west of Burntfur's Pool."
+  },
+  {
+    "pos": [
+      62905,
+      34048
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 135,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Head south from the waypoint, then west when you get to the hill past the pond. Goggles are along that cliff, in a tree."
+  },
+  {
+    "pos": [
+      62080,
+      33007
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 90,
+    "map_id": 21,
+    "map_name": "Fields of Ruin",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Next to the waypoint."
+  },
+  {
+    "pos": [
+      60104,
+      29483
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 105,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "West of the waypoint, as you enter the Chaos Crystal Cavern jumping puzzle."
+  },
+  {
+    "pos": [
+      61146,
+      29179
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 80,
+    "map_id": 25,
+    "map_name": "Iron Marches",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "South of the waypoint, and then southwest of Kennelmaster Warsnout, by a golden tree."
+  },
+  {
+    "pos": [
+      58758,
+      27200
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 140,
+    "map_id": 22,
+    "map_name": "Fireheart Rise",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Head northeast from the waypoint, climb up the scaffolding and continue to the very top of the tower. The goggles are on the south side of the highest point."
+  },
+  {
+    "pos": [
+      45920,
+      32286
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 115,
+    "map_id": 23,
+    "map_name": "Kessex Hills",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Southeast of the waypoint, just before the vista near Isgarren's View."
+  },
+  {
+    "pos": [
+      48637,
+      32104
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 130,
+    "map_id": 50,
+    "map_name": "Lion's Arch",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Diverse Ledges. Climb the diving board to the very top and dive into the harbor."
+  },
+  {
+    "pos": [
+      48454,
+      29426
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 150,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "At the very top of the Not So Secret jumping puzzle, on the end of the long beam pointing down."
+  },
+  {
+    "pos": [
+      49239,
+      28823
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 145,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Run up the ramp to the very top of the bridge. The goggles are on the edge facing south."
+  },
+  {
+    "pos": [
+      48837,
+      28441
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "West of the waypoint, on the wooden scaffolding by the waterfall."
+  },
+  {
+    "pos": [
+      47138,
+      26219
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 125,
+    "map_id": 17,
+    "map_name": "Harathi Hinterlands",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the hill west of the waypoint. Follow the cliff edge north until you find the diving board."
+  },
+  {
+    "pos": [
+      49728,
+      33066
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 95,
+    "map_id": 73,
+    "map_name": "Bloodtide Coast",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb to the top of the ruins south of the waypoint."
+  },
+  {
+    "pos": [
+      47756,
+      30569
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 100,
+    "map_id": 24,
+    "map_name": "Gendarran Fields",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb up the scaffolding to the top of the ship mast in Broadhollow Bluffs."
+  },
+  {
+    "pos": [
+      38647,
+      37948
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 85,
+    "map_id": 139,
+    "map_name": "Rata Sum",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Head to the southeast corner of Idea Incubation Lab. The goggles are on a ledge overlooking the water."
+  },
+  {
+    "pos": [
+      43228,
+      37533
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 90,
+    "map_id": 91,
+    "map_name": "The Grove",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Upper Commons. The diving board is on the top level overlooking the center of the city."
+  },
+  {
+    "pos": [
+      40916,
+      36129
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 75,
+    "map_id": 35,
+    "map_name": "Metrica Province",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Follow the road west from the waypoint and go across the bridge. The goggles are on the south railing."
+  },
+  {
+    "pos": [
+      41507,
+      33740
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 95,
+    "map_id": 35,
+    "map_name": "Metrica Province",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb to the top of Inquest Outer Complex. The goggles are on the highest ledge."
+  },
+  {
+    "pos": [
+      43759,
+      34160
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 80,
+    "map_id": 34,
+    "map_name": "Caledon Forest",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Follow the road southeast from the waypoint. The goggles are on a cliff near Dominion of Winds."
+  },
+  {
+    "pos": [
+      41159,
+      31984
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Inside Skrittsburgh East End, climb the scaffolding to the top level."
+  },
+  {
+    "pos": [
+      40570,
+      32164
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 105,
+    "map_id": 54,
+    "map_name": "Brisban Wildlands",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Head west from the waypoint, past the waterfall, and climb the rocks to the goggles."
+  },
+  {
+    "pos": [
+      54182,
+      38224
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 130,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "At the Cantle of Sun in the Hidden Garden jumping puzzle."
+  },
+  {
+    "pos": [
+      54248,
+      37942
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 115,
+    "map_id": 39,
+    "map_name": "Mount Maelstrom",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "At the Cantle of Sky in the Hidden Garden jumping puzzle."
+  },
+  {
+    "pos": [
+      55658,
+      30037
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 120,
+    "map_id": 28,
+    "map_name": "Wayfarer Foothills",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb to the vista above Taigan Groves. The goggles are on the edge."
+  },
+  {
+    "pos": [
+      55889,
+      31130
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 28,
+    "map_name": "Wayfarer Foothills",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the mountain east of the waypoint overlooking Grawlenfjord."
+  },
+  {
+    "pos": [
+      54847,
+      25489
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 105,
+    "map_id": 30,
+    "map_name": "Frostgorge Sound",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "On top of the highest iceberg in Shattered Ice Floe."
+  },
+  {
+    "pos": [
+      50923,
+      33193
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 125,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "At the very top of the Griffonfall jumping puzzle."
+  },
+  {
+    "pos": [
+      50622,
+      34168
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 115,
+    "map_id": 27,
+    "map_name": "Lornar's Pass",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the high ridge overlooking Demon's Maw."
+  },
+  {
+    "pos": [
+      52590,
+      34768
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 100,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Follow the waterfall north to the top cliff."
+  },
+  {
+    "pos": [
+      53286,
+      37100
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 29,
+    "map_name": "Timberline Falls",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the scaffolding and cliffs north of Nonmoa Lake."
+  },
+  {
+    "pos": [
+      49704,
+      40032
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 95,
+    "map_id": 51,
+    "map_name": "Straits of Devastation",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Follow the boardwalk south from Fort Trinity. The goggles are on the end of the crane."
+  },
+  {
+    "pos": [
+      49169,
+      40822
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 100,
+    "map_id": 51,
+    "map_name": "Straits of Devastation",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb to the top of the pirate ship in Shark's Teeth Archipelago."
+  },
+  {
+    "pos": [
+      44525,
+      40360
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 120,
+    "map_id": 65,
+    "map_name": "Malchor's Leap",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb to the top of the Cathedral of Zephyrs."
+  },
+  {
+    "pos": [
+      43879,
+      45077
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 90,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the cliffs overlooking Mausollus Sea."
+  },
+  {
+    "pos": [
+      44072,
+      43038
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 62,
+    "map_name": "Cursed Shore",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Climb the spire in the Cathedral of Verdance."
+  },
+  {
+    "pos": [
+      45217,
+      35971
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 873,
+    "map_name": "Southsun Cove",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Jump off the diving board into the geyser pool in Bakestone Cavern."
+  },
+  {
+    "pos": [
+      55719,
+      39465
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 145,
+    "map_id": 922,
+    "map_name": "Labyrinthine Cliffs",
+    "expac": "core",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Perform a dive off the deck of Kiel's airship, Phoenix Dawn, into the water below."
+  },
+  {
+    "pos": [
+      38142,
+      32922
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 135,
+    "map_id": 988,
+    "map_name": "Dry Top",
+    "expac": "lws2",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Dive into a hay pile from the highest point in Prospect Valley and survive."
+  },
+  {
+    "pos": [
+      38107,
+      31105
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 160,
+    "map_id": 1015,
+    "map_name": "The Silverwastes",
+    "expac": "lws2",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Find and use a diving location in Drydock Scratch at the end of Retrospective Runaround."
+  },
+  {
+    "pos": [
+      35105,
+      31710
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 690,
+    "map_id": 1052,
+    "map_name": "Verdant Brink",
+    "expac": "hot",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles found in the Pact fleet wreckage in Verdant Brink."
+  },
+  {
+    "pos": [
+      38267,
+      35265
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 282,
+    "map_id": 1045,
+    "map_name": "Tangled Depths",
+    "expac": "hot",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles near the SCAR outpost over SCAR Lane."
+  },
+  {
+    "pos": [
+      35789,
+      30584
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 350,
+    "map_id": 1165,
+    "map_name": "Bloodstone Fen",
+    "expac": "lws3",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles near the highest floating island."
+  },
+  {
+    "pos": [
+      56318,
+      23585
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 120,
+    "map_id": 1178,
+    "map_name": "Bitterfrost Frontier",
+    "expac": "lws3",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Find and use a diving location in the Bitter Cold. (Thaw Elixir required)"
+  },
+  {
+    "pos": [
+      36599,
+      41628
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 140,
+    "map_id": 1195,
+    "map_name": "Draconis Mons",
+    "expac": "lws3",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Acquire diving goggles near the gate of fire, and dive into the bucket floating in the boiling sea."
+  },
+  {
+    "pos": [
+      49546,
+      41859
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 1203,
+    "map_name": "Siren's Landing",
+    "expac": "lws3",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Find and use the diving goggles on the highest shipwreck."
+  },
+  {
+    "pos": [
+      57824,
+      41596
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 175,
+    "map_id": 1211,
+    "map_name": "Desert Highlands",
+    "expac": "pof",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles to jump from the top of the highest waterfall."
+  },
+  {
+    "pos": [
+      59024,
+      46834
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 115,
+    "map_id": 1228,
+    "map_name": "Elon Riverlands",
+    "expac": "pof",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles in Skimshallow Cove."
+  },
+  {
+    "pos": [
+      60588,
+      46740
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 125,
+    "map_id": 1228,
+    "map_name": "Elon Riverlands",
+    "expac": "pof",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles in Arid Gladefields."
+  },
+  {
+    "pos": [
+      59478,
+      47074
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 130,
+    "map_id": 1228,
+    "map_name": "Elon Riverlands",
+    "expac": "pof",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles in Vulture Drifts."
+  },
+  {
+    "pos": [
+      56767,
+      60360
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 95,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "lws4",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Diving goggles in Corsair Flotilla."
+  },
+  {
+    "pos": [
+      57422,
+      60821
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 105,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "lws4",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Diving goggles in Modri Caverns."
+  },
+  {
+    "pos": [
+      56180,
+      62319
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 100,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "lws4",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Diving goggles in Champion's Dawn."
+  },
+  {
+    "pos": [
+      57319,
+      62468
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 1263,
+    "map_name": "Domain of Istan",
+    "expac": "lws4",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Diving goggles in Churrhir Cliffs."
+  },
+  {
+    "pos": [
+      66517,
+      58220
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 110,
+    "map_id": 1301,
+    "map_name": "Jahai Bluffs",
+    "expac": "lws4",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Find and use the diving goggles at the top of a tall waterfall."
+  },
+  {
+    "pos": [
+      50444,
+      19780
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 77,
+    "map_id": 1371,
+    "map_name": "Drizzlewood Coast",
+    "expac": "lws5",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles to dive off a cliff next to the highest waterfall."
+  },
+  {
+    "pos": [
+      28556,
+      98536
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 96,
+    "map_id": 1438,
+    "map_name": "New Kaineng City",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles near a hidden Aetherblade camp."
+  },
+  {
+    "pos": [
+      29637,
+      101267
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 85,
+    "map_id": 1428,
+    "map_name": "Arborstone",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use diving goggles to jump from an ancient archway."
+  },
+  {
+    "pos": [
+      32331,
+      103283
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 106,
+    "map_id": 1452,
+    "map_name": "The Echovald Wilds",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Slap on your diving goggles and take a dive into the lake near Mori Village."
+  },
+  {
+    "pos": [
+      34454,
+      102183
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 156,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Complete a dive near the Green Grotto in Dragon's End."
+  },
+  {
+    "pos": [
+      34397,
+      104349
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 538,
+    "map_id": 1422,
+    "map_name": "Dragon's End",
+    "expac": "eod",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Dive into the mystery location using diving goggles somewhere in Dragon's End."
+  },
+  {
+    "pos": [
+      27103,
+      23376
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 367,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles to jump off the rings at Stargaze Ridge."
+  },
+  {
+    "pos": [
+      25494,
+      23639
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 714,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles to jump off an island overlooking the Jade Mech Habitation Zone 03 dam."
+  },
+  {
+    "pos": [
+      25398,
+      23160
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 433,
+    "map_id": 1510,
+    "map_name": "Skywatch Archipelago",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Use the diving goggles to jump off the fallen pillar in Primal Maguuma."
+  },
+  {
+    "pos": [
+      24084,
+      20559
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 807,
+    "map_id": 1517,
+    "map_name": "Amnytas",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Acquire diving goggles on top of the Spire of the Celestial and dive into the bucket below."
+  },
+  {
+    "pos": [
+      23646,
+      22066
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 403,
+    "map_id": 1509,
+    "map_name": "The Wizard's Tower",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Take a plunge off the high dive in the Wizard's Tower."
+  },
+  {
+    "pos": [
+      22004,
+      22295
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 250,
+    "map_id": 1526,
+    "map_name": "Inner Nayos",
+    "expac": "soto",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Jump off a high rock into the water near the Fortress of the Founding."
+  },
+  {
+    "pos": [
+      42809,
+      22328
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 149,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Acquire diving goggles in Harvest Den and jump into the water below."
+  },
+  {
+    "pos": [
+      40555,
+      22620
+    ],
+    "node": "Dive Master",
+    "yields": [
+      "Diving Goggles"
+    ],
+    "icon": "https://wiki.guildwars2.com/images/c/ca/Explorer.png",
+    "alt": 165,
+    "map_id": 1550,
+    "map_name": "Lowland Shore",
+    "expac": "jw",
+    "category": "achievements",
+    "layer": "node_dive_master_achievement",
+    "desc": "Acquire diving goggles near the hunting village in Coursing Upland and jump into the water below."
+  }
+]

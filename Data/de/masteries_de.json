@@ -1,0 +1,1946 @@
+[
+  {
+    "id": 1,
+    "name": "Lehre der Erhabenen",
+    "requirement": "Reist zum Güldenen Talkessel, um den Beherrschungspfad der Lehre der Erhabenen freizuschalten.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Zeichen der Erhabenen",
+        "description": "Erhaltet die Fähigkeit, die Schriftzeichen der Erhabenen zu lesen. So erhaltet Ihr Zugang zu den Geheimnissen ihrer Zivilisation.",
+        "instruction": "Ihr könnt jetzt mit Erhabenen-Artefakten interagieren, die im Güldenen Talkessel und im Großraum des Maguuma-Dschungels zu finden sind.",
+        "icon": "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Akzeptanz der Erhabenen",
+        "description": "Erhaltet das Vertrauen der mysteriösen wie fremdartigen Erhabenen und erlangt so Zugang zu den Waren und Angeboten der Vergessenen Stadt.",
+        "instruction": "Ihr könnt jetzt mit den Erhabenen und ihren Repräsentanten Handel treiben. Beherrschungshändler findet Ihr im ganzen Maguuma-Dschungel: Sie werden Euch durch Beherrschungssymbole auf der Karte angezeigt.",
+        "icon": "https://render.guildwars2.com/file/39DBD70271A074DCD6B1EAE1D639BD4D36765EC4/1228651.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Erhabenen-Unterstützung",
+        "description": "Lernt, die Erhabenen-Rückrufgeräte im Maguuma-Dschungel zu benutzen, mit denen Ihr für kurze Zeit Krieger der Erhabenen zum Kämpfen herbeirufen könnt.",
+        "instruction": "Ihr könnt mit den Rückrufgeräten der Erhabenen interagieren, um einen Erhabenen-Verbündeten zu Hilfe zu rufen oder einem bereits herbeigerufenen Verbündeten mehr Kraft zu verleihen.",
+        "icon": "https://render.guildwars2.com/file/B9B7E50E29F554570E63945249002FC6B64C7FFB/1228652.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Reinwaschung der Erhabenen",
+        "description": "Sichert Euch die Verehrung der Erhabenen: Fordert einmal am Tag ihren Champion heraus und schaltet so die größten Schätze der Vergessenen Stadt frei.",
+        "instruction": "Ihr könnt jetzt gegen den Mattierten Verräter unter der Vergessenen Stadt kämpfen. Wenn Ihr den Mattierten Verräter besiegt, erhaltet Ihr einmal pro Tag Zugang zu einer Belohnungstruhe.",
+        "icon": "https://render.guildwars2.com/file/EE132C76A52AC66D0211CED63E74F64B7F4AFB34/1228655.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Erhabenes Sammeln",
+        "description": "Lernt von den Erhabenen, wie man im Maguuma-Dschungel seltene Materialien sammelt. Lernt, aus Erzknoten im Güldenen Talkessel Güldene Späne zu gewinnen.",
+        "instruction": "Beim Erzabbau im Güldenen Talkessel erhaltet Ihr jetzt zusätzlich zu normalen Materialien auch noch Güldene Späne. Außerdem erhaltet Ihr eine Chance, in Erzknoten überall im Herz von Maguuma auf besondere Gegenstände zu stoßen.",
+        "icon": "https://render.guildwars2.com/file/324312530AA1A427AB0951D0BFBC92C4B69774D6/1228653.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Lehre der Itzel",
+    "requirement": "Trainiert Grundlagen des Gleitens im Beherrschungspfad des Gleitens, um den Beherrschungspfad der Lehre der Itzel freizuschalten.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/F2ED9E6B330AA015B8AD06FF222715284E1BC622/1228723.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Hüpfpilze",
+        "description": "Erlernt, wie man präzise Landungen vollführt und nutzt die Hüpfpilze, die im Herzen von Maguuma zu finden sind, um zu Orten zu gelangen, die vorher unerreichbar waren.",
+        "instruction": "Hüpfpilze findet man überall im Herz von Maguuma. Springt auf die Kappe eines Hüpfpilzes, um in die Luft geschleudert zu werden.",
+        "icon": "https://render.guildwars2.com/file/C1D5574EF6B9B4CC7AB7EC3600993698D39BF975/1228645.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Itzel-Sprache",
+        "description": "Lernt den schwierigen Dialekt der Itzel, freundet Euch mit den ortsansässigen Itzel an und erhaltet so Zugang zu Händlern mit exklusiven Warenangeboten.",
+        "instruction": "Ihr könnt jetzt mit den Itzel Handel treiben. Beherrschungshändler findet Ihr im ganzen Maguuma-Dschungel: Sie werden Euch durch Beherrschungssymbole auf der Karte angezeigt.",
+        "icon": "https://render.guildwars2.com/file/68B5A54FEC5F3C7763C5BDD12C0296942ABB0BB2/1228660.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Blitzgeschwindigkeits-Pilze",
+        "description": "Nach zahllosen Stunden auf dem Donnerbalken könnt Ihr die geschwindigkeitssteigernden Pilze, die man im Herzen von Maguuma findet, verdauen. Rennt wie der Blitz, mit freundlicher Unterstützung der Natur!",
+        "instruction": "Blitzgeschwindigkeits-Pilze findet man überall im Herz von Maguuma. Begebt Euch einfach in die Nähe eines Blitzgeschwindigkeits-Pilzes oder geht durch einen hindurch, um eine Geschwindigkeitsverstärkung zu erhalten.",
+        "icon": "https://render.guildwars2.com/file/C2609360DCF254E70C023517E27375AB0FA32236/1228644.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Giftlehre der Itzel",
+        "description": "Lernt alles über die Gifte der Itzel und erhaltet die Fähigkeit, giftige Mordrem-Ranken zu passieren und den giftigen Dünsten Maguumas zu widerstehen.",
+        "instruction": "Ihr könnt Euch jetzt in Gebiete mit giftigen Dünsten begeben und giftige Mordrem-Ranken durchqueren, ohne Schaden zu nehmen.",
+        "icon": "https://render.guildwars2.com/file/4D2F77BE539B0F065B97C8B007E8D7324DA40D3C/1228662.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Itzel-Führung",
+        "description": "Schaut Euch den Kampfstil der Itzel genau an und fordert dann den Champion des Gegners heraus, um einen wertvollen Tagespreis zu erhalten.",
+        "instruction": "Ihr könnt jetzt gegen Mayatl den Grimmigen antreten, indem Ihr mit dem Itzel-Klingentänzer vor dem Dorf der Jaka Itzel sprecht. Besiegt Ihr diesen Champion, könnt Ihr einmal am Tag auf eine Belohnungstruhe zugreifen.",
+        "icon": "https://render.guildwars2.com/file/0735EF06110A01EF69C2710EA1390A45EBE57232/1228661.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Adrenalpilze",
+        "description": "Wenn Ihr lernt Pilze zu essen, kommt es zu einer Mutation Eurer Adrenalindrüsen. Ihr erhaltet eine Welle Adrenalin und könnt Eure Fertigkeiten sofort auffrischen.",
+        "instruction": "Adrenalpilze findet man selten im Herz von Maguuma. Begebt Euch einfach in die Nähe eines Adrenalpilzes oder geht durch einen hindurch, um all Eure Fertigkeiten sofort auffrischen zu lassen.",
+        "icon": "https://render.guildwars2.com/file/EB50DAD5409C937CD17A0A216A7B3E04E0C25307/1228643.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Lehre der Nuhoch",
+    "requirement": "Reist nach Verschlungene Tiefen, um den Beherrschungspfad der Lehre der Nuhoch freizuschalten.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/05AABD5EF4CF91375CE2420575C4B8CE5A084F05/1228724.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Nuhoch-Jagd",
+        "description": "Lernt, wie Ihr von Feinden in Maguuma spezielle Trophäen erhalten und Sägeblattpilze ernten und so seltene Sammlungen und Gegenstände freischalten könnt.",
+        "instruction": "Ihr habt jetzt die Chance, bei allen im Herz von Maguuma erlegten Kreaturen besondere Gegenstände zu erbeuten. Außerdem könnt Ihr Sägeblattpilze ernten, die überall im Maguuma-Dschungel zu finden sind.",
+        "icon": "https://render.guildwars2.com/file/F9EB68F169FB63A5D552471F2692AA73771D06F0/1228664.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Nuhoch-Suhlen",
+        "description": "Meistert die Nuhoch-Suhlen und lernt, diese versteckten Gänge zu nutzen, um an weit entlegene und verborgene Orte zu gelangen.",
+        "instruction": "Ihr könnt jetzt mit Nuhoch-Suhlen interagieren. Wenn Ihr das tut, werdet Ihr sofort zwischen Suhlen-Eingängen und -Ausgängen im Maguuma-Dschungel hin und her transportiert.",
+        "icon": "https://render.guildwars2.com/file/9B51B95FD0BD6FB80F900101977FFD66224605B1/1228668.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Sprache der Nuhoch",
+        "description": "Lernt die traditionelle Sprache der Nuhoch, was Euch in die Lage versetzt, Handel zu treiben und mit den argwöhnischeren Mitgliedern der Gruppe zu sprechen.",
+        "instruction": "Ihr könnt jetzt mit den Nuhoch Handel treiben. Beherrschungshändler findet Ihr im ganzen Maguuma-Dschungel: Sie werden Euch durch Beherrschungssymbole auf der Karte angezeigt.",
+        "icon": "https://render.guildwars2.com/file/7C9EB6B44A1F9D690D4D9A9856A01805395BD9A1/1228665.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Nuhoch-Enttarnung",
+        "description": "Lernt, getarnte Feinde zu entdecken und sie für Euer geschultes Auge sichtbar zu machen.",
+        "instruction": "Ihr könnt jetzt Kreaturen sehen, die im Maguuma-Dschungel normalerweise unsichtbar sind. Verborgene Kreaturen erscheinen Euch hervorgehoben, und Ihr könnt sie leicht finden oder sie meiden.",
+        "icon": "https://render.guildwars2.com/file/1606273520E5106D475C90447904E256E8FE6B98/1228667.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Prüfungen der Nuhoch",
+        "description": "Fordert den Nuhoch-Champion im Kampf heraus, um Euch den Respekt der Nuhoch zu verdienen und ein Lager mit mächtigen Belohnungen freizuschalten.",
+        "instruction": "Ihr könnt jetzt gegen Potoni den Gewaltigen in Teku Nuhoch kämpfen. Wenn Ihr Potoni den Gewaltigen besiegt, erhaltet Ihr einmal pro Tag Zugang zu einer Belohnungstruhe.",
+        "icon": "https://render.guildwars2.com/file/EA0D13224CC35B3F591DBD9812E9EA620C0FFE2F/1228666.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Alchemie der Nuhoch",
+        "description": "Trainiert mit den Nuhoch, um zu lernen, wie man die starke Säure der Chak neutralisiert. Ohne diese Fähigkeit kann die Chak-Säure Gegner vernichten.",
+        "instruction": "Weicht Ihr aus, werden ab sofort sämtliche Stapel von Chak-Globber entfernt, die auf Euch wirken. Außerdem seid Ihr immun gegen die verlangsamenden Effekte von Globber.",
+        "icon": "https://render.guildwars2.com/file/BED24BC7330F366E367FE0C9EA6975739B590A44/1228663.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pakt-Kommandeur",
+    "requirement": "",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/65DE3662C705233AC1073EF297B15AADD7A8A644/1228718.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Pakt-Mentor",
+        "description": "Lernt, ein Mentor für die Helden von Tyria zu sein. Ihr erhaltet das spezielle Mentoren-Abzeichen, einen Chat-Titel und einen Eile-Bonus in Städten für Euch und Eure Gruppe.",
+        "instruction": "Ihr könnt nun das Mentoren-Abzeichen nutzen, das im Gruppenmenü verfügbar ist, und den Mentoren-Chat-Titel über den Mentoren-Schrägstrich-Befehl aktivieren. Eure Gruppe hat außerdem einen permanenten Eile-Bonus von 5 % in Städten.",
+        "icon": "https://render.guildwars2.com/file/D32A52F4E1EB3EC57D035531A31BE217E63DC0F8/1228648.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Produktive Auszeit",
+        "description": "Lernt, effizienter zu sein, und erhaltet Bonuserfahrungspunkte durch die Herstellung von Gegenständen.",
+        "instruction": "Ihr erhaltet jetzt 10 % Bonuserfahrungspunkte bei allen Herstellungsprozessen, die Erfahrungspunkte verleihen. Ihr habt außerdem eine um 10 % erhöhte Chance auf kritische Bonuserfahrungspunkte bei der Herstellung von Gegenständen.",
+        "icon": "https://render.guildwars2.com/file/0BCD77C3BF1BFD54162C992EDBF04209B653B865/1228649.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Nachschubsicherung",
+        "description": "Ihr erhaltet Zugriff auf ein Netzwerk von regionalen Händlern in Tyria, die einen begrenzten Vorrat an seltenen Waren zum Handel anbieten. Außerdem erhält Eure Gruppe in Städten einen Eile-Bonus von 15 %.",
+        "instruction": "Ihr könnt jetzt mit Pakt-Vorratsnetz-Agenten handeln, die durch Zentraltyria reisen. Ihr könnt bei jedem Agenten pro Tag für Karma einen Gegenstand kaufen. Außerdem erhält Eure Gruppe einen permanenten Eile-Bonus von 15 % in Städten.",
+        "icon": "https://render.guildwars2.com/file/4E43E92F349620FA060ABF9A3BC052657F7EC35A/1228650.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Adel verpflichtet",
+        "description": "Lernt, wie Ihr Eure Verbündeten schneller und mit weniger Nachteilen wiederbelebt.",
+        "instruction": "Ihr könnt verbündete Spieler nun schneller wiederbeleben und bei erfolgreicher Wiederbelebung die Haltbarkeits- und Angeschlagen-Mali verhindern. Die Geschwindigkeit der Wiederbelebung wird noch einmal erhöht, wenn der Charakter, der wiederbelebt wird, eine niedrigere Stufe hat als Ihr.\n\nHinweis: Dieser Effekt ist deaktiviert, wenn Ihr Schlachtzüge, Schlachtzugbegegnungen oder Konvergenzen im Herausforderungsmodus ausführt.",
+        "icon": "https://render.guildwars2.com/file/EC25C613ED2A35DB4256F0DF4A5F19389765D8E6/1228647.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      },
+      {
+        "name": "Fortschrittliche Logistik",
+        "description": "Lernt, Beute von gefallenen Gegnern automatisch einzusammeln, außerdem erhält Eure Gruppe in Städten einen größeren Eile-Bonus.",
+        "instruction": "Ihr habt jetzt die Möglichkeit, Beute von besiegten Kreaturen sofort in Euer Inventar platzieren zu lassen. Diese Fähigkeit kann im Optionsmenü deaktiviert werden. Außerdem erhält Eure Gruppe einen permanenten Eile-Bonus von 33 % in Städten.",
+        "icon": "https://render.guildwars2.com/file/A41824167F010C0667B3F697DE03E132BD01ED01/1228646.png",
+        "point_cost": 8,
+        "exp_cost": 4127500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Fraktal-Einstimmung",
+    "requirement": "",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/5A19BB62274C6297773A1A21A94BAB9AB2A0711D/1228721.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Rat befolgen",
+        "description": "Erhaltet mit Dessas Erlaubnis Zugriff auf zusätzliche tägliche Erfolge und spezielle Händler mit einzigartigen Gegenständen im Observatorium Nebelsperre.",
+        "instruction": "Ihr habt zusätzliche tägliche Erfolge für die Fraktal-Schwierigkeitsgrade 21–49 freigeschaltet. Außerdem erhaltet Ihr im Observatorium Nebelsperre Zugriff auf spezielle Händler mit einzigartigen Gegenständen.",
+        "icon": "https://render.guildwars2.com/file/D763657543F51E1FB608D0CBBBF350C1F1CD14C9/1228657.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Qual-Kanalisierer",
+        "description": "Längeres Erleiden von Qual bringt verbesserte Belohnungen in den Fraktal-Verliesen ein. Außerdem erhaltet Ihr Zugriff auf Rezepte der Mystischen Schmiede, mit denen Ihr aufgestiegenen Ringen weitere Plätze für Qual-Infusionen hinzufügen könnt. Nebeltränke gewähren Bonusattribute.",
+        "instruction": "Ihr erhaltet jetzt Bonusbelohnungen aus den Bosstruhen in Fraktal-Verliesen. Händler verkaufen jetzt Zutaten zur Einstimmung von Ringen in der Mystischen Schmiede, die Euren aufgestiegenen oder infundierten Ringen zusätzliche Plätze für Qual-Widerstand verleiht. Nebeltränke verwandeln auch einen Prozentsatz Eures Qual-Widerstands in spezifische Attribute, je nach verwendetem Trank.",
+        "icon": "https://render.guildwars2.com/file/11B70969E876E8DD00484B42553C3CEF947CE863/1228656.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Rekursive Bereitstellung",
+        "description": "Größere Einstimmung mit den Fraktalen verleiht Bonusbelohnungen aus Truhen der Nebel und freigeschalteten Fraktal-Chiffrierungen. Auch die Fraktal-Trank-Konvertierung verbessert sich.",
+        "instruction": "Ihr erhaltet jetzt Bonusbelohnungen aus Truhen der Nebel sowie Fraktal-Chiffrierungen. Auch die Nebeltrank-Konvertierung hat sich verbessert.",
+        "icon": "https://render.guildwars2.com/file/9D7273DC6F6211A636A74ED9F6CE3F932A23514C/1228659.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Nebelsperre-Singularitäten",
+        "description": "Erforscht, wie Ihr die lebensrettenden Nebelsperre-Singularitäten in den Fraktalen der Nebel aktiviert. Fraktal-Trank-Konvertierung verbessert sich.",
+        "instruction": "Ihr könnt nun Nebelsperre-Singularitäten in den Fraktalen der Nebel aktivieren, um sofortige Fertigkeiten-Wiederaufladung, zusätzlichen Qual-Widerstand und einen Schild zu erhalten, der Euren Tod in Fraktal-Verliesen verhindern kann. Fraktal-Trank-Konvertierung wurde verbessert.",
+        "icon": "https://render.guildwars2.com/file/65ACE09437747DD1B84A5B9559DD75269A0EEB24/1228658.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Legendäre Handwerkskunst",
+    "requirement": "",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/2E91B0BD09CF08991E079CFB1727412AB12427F4/1228719.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Verehrter Antiquar",
+        "description": "Lernt, wie Ihr mit der Herstellung einer legendären Waffe beginnt, indem Ihr den ersten Rang der Präkursor-Waffensammlungen freischaltet.",
+        "instruction": "Ihr könnt jetzt mit Großmeisterhandwerker Hobbs in Löwenstein sprechen, um mit der Präkursor-Waffensammlung ersten Ranges für eine beliebige legendäre Waffe zu beginnen.",
+        "icon": "https://render.guildwars2.com/file/EB666596D8CA19CBAD0B034FB3DB3F7E0B9D1C0F/1228671.png",
+        "point_cost": 1,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Magister der Legenden",
+        "description": "Erfahrt mehr über Komponenten, die für die Herstellung von Präkursor-Waffen zweiten Ranges benötigt werden.",
+        "instruction": "Ihr könnt jetzt Komponenten für die Herstellung von Präkursor-Waffen zweiten Ranges bei Großmeisterhandwerker Hobbs in Löwenstein kaufen.",
+        "icon": "https://render.guildwars2.com/file/0C5A24F4086C4FFFD105A0C9EAC480F8B95AC7B5/1228670.png",
+        "point_cost": 3,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Historiker der Ausrüstung",
+        "description": "Erfahrt mehr über Komponenten, die für die Herstellung von Präkursor-Waffen des dritten und letzten Ranges benötigt werden.",
+        "instruction": "Ihr könnt jetzt Komponenten für die Herstellung von Präkursor-Waffen dritten Ranges bei Großmeisterhandwerker Hobbs in Löwenstein kaufen.",
+        "icon": "https://render.guildwars2.com/file/4521EF3192316745EC58C4A8FEBA2FB2CE4AE577/1228669.png",
+        "point_cost": 6,
+        "exp_cost": 3810000
+      },
+      {
+        "name": "Gelehrter der Geheimnisse",
+        "description": "Erfahrt etwas über die Sammlungen legendärer Waffen, die zur Herstellung der legendären Waffen von Heart of Thorns verwendet werden. Trainiert diese Beherrschung, damit Ihr bei Miyani und Aufsehern der Mystischen Schmiede Mystische Runensteine kaufen und diese zur Herstellung von legendärer Ausrüstung aus Erweiterungen verwenden könnt.",
+        "instruction": "Ihr könnt jetzt Komponenten für die Herstellung der legendären Waffen aus Heart of Thorns bei Großmeisterhandwerker Hobbs in Löwenstein erwerben.\nAußerdem könnt Ihr bei Miyani und Aufsehern der Mystischen Schmiede Mystische Runensteine kaufen und diese zur Herstellung von legendärer Ausrüstung aus Erweiterungen verwenden.",
+        "icon": "https://render.guildwars2.com/file/E4A5BBD50AF41EC2EF94C1483740AFEFB609199F/1228672.png",
+        "point_cost": 9,
+        "exp_cost": 5080000
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Gleiten",
+    "requirement": "Reist in das Herz von Maguuma und schließt den Geschichtsabschnitt \"Dem Himmel entrissen\" ab, um den Beherrschungspfad des Gleitens freizuschalten.",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/68A54A21C030C5BA742603D3BF0305F344746F95/1228722.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Grundlagen des Gleitschirms",
+        "description": "Verschafft Euch Zugriff auf einen Gleiter, damit Ihr zwischen den höchsten Punkten im Herz von Maguuma und auf Karten der offenen Welt Zentraltyrias hin- und hergleiten könnt.",
+        "instruction": "Zum Gleiten springt Ihr von einem hohen Punkt ab und drückt dann während des Fallens nochmals die Sprung-Taste.",
+        "icon": "https://render.guildwars2.com/file/A13A40AC0D4F0507780039C24B19D6E9C0D2FE1F/962098.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Aufwind-Verwendung",
+        "description": "Durch verbessertes Design Eurer Gleitschirm-Griffe und Flügelschlitze könnt Ihr jetzt voller Selbstvertrauen in die Aufwinde fliegen. Ihr gewinnt so an Höhe und könnt zu vorher unerreichbaren Orten fliegen.",
+        "instruction": "Aufwinde sind wirbelnde Windsäulen, die man im ganzen Maguuma-Dschungel findet. Um sie zu nutzen, gleitet einfach in sie hinein, um einen Höhenschub zu erhalten.",
+        "icon": "https://render.guildwars2.com/file/27C9EDD3F2516E486299ABF50929E759F5BCC4E8/962097.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Techniken des Lehnens",
+        "description": "Lernt, Euch beim Gleiten nach vorn zu lehnen, um schneller zu gleiten, und nach hinten, um in der Luft zu bremsen. Diese Techniken kosten Ausdauer. Je besser Ihr die Techniken beherrscht, desto mehr Ausdauer steht Euch beim Gleiten zur Verfügung.",
+        "instruction": "Nach vorne lehnen: Drückt beim Gleiten die Richtungstaste nach vorn, um einen Geschwindigkeitsschub zu erhalten. Nach hinten lehnen: Um zu bremsen, drückt Ihr beim Gleiten die Richtungstaste nach hinten.",
+        "icon": "https://render.guildwars2.com/file/4D1CAE2F963C7C205BB06C0572040AD33B5BEBD8/962096.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Getarntes Gleiten",
+        "description": "Lernt, für kurze Zeit lautlos und unbemerkt durch die Luft zu gleiten, indem Ihr beim Gleiten ausweicht.",
+        "instruction": "Um Tarnung zu aktivieren, weicht aus, indem Ihr während des Gleitens eine der Bewegungstasten zweimal drückt.",
+        "icon": "https://render.guildwars2.com/file/610A10527F20E26DBF5402FD4131F1EDAAE6D960/962095.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Erweitertes Gleiten",
+        "description": "Lernt, den Gleitschirm so gut zu beherrschen, dass Ihr Ausdauer nur noch zur Ausübung verschiedener Techniken des Lehnens braucht, aber nicht länger um Euch in der Luft zu halten.",
+        "instruction": "Ihr könnt jetzt ohne Ausdauerkosten unbegrenzt weit gleiten. Lehnen kostet jedoch weiterhin Ausdauer.",
+        "icon": "https://render.guildwars2.com/file/FFD8BC49B85A794B729ABBE8DB1102F7D328D86A/962093.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Ley-Linien-Gleiten",
+        "description": "Lernt, in Ley-Linien-Energieströme hinein zu gleiten und Euch vom Strom tragen zu lassen, wodurch Ihr an Orte gelangt, die sonst unzugänglich sind.",
+        "instruction": "Ley-Linien sind Flüsse magischer Energie, die im ganzen Maguuma-Dschungel zu beobachten sind. Zur Nutzung der Ley-Linien gleitet Ihr einfach in sie hinein und lasst Euch vom Energiefluss tragen.",
+        "icon": "https://render.guildwars2.com/file/A003F17064F5300F0C0705E8DB76D4B3EF51CFD3/962094.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Schlachtzüge",
+    "requirement": "Betretet zum Freischalten das Verlassene Dickicht in der Grasgrünen Schwelle und besiegt einen Boss.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/64A43D09C00EBC0EF307A7C004EF05A8459F0907/1451827.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Riss-Schmied",
+        "description": "Lernt, Eure Rüstung zu verstärken, indem Ihr Energie aus Ley-Rissen manipuliert, die entstehen, wenn Ihr einen mächtigen Gegner bezwungen habt.",
+        "instruction": "Verstärkt Eure Rüstung, indem Ihr an Orten, wo Ihr einen mächtigen Gegner bezwungen habt, Ley-Risse nutzt.",
+        "icon": "https://render.guildwars2.com/file/FB2D7C981E2E09725139220DCC90E308170AB7FE/1302710.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Explosiver Start",
+        "description": "Erfunden wurde das Schwarzpulver von den Zwergen, doch Ihr könnt seine Verwendung perfektionieren: Lernt, Euch mithilfe einer Explosion sicher in große Höhen zu begeben, ohne Euch dabei die Socken anzukokeln.",
+        "instruction": "Ihr erleidet ab sofort keinen Schaden mehr, wenn Ihr Euch selbst von einer Plattform abfeuern lässt oder Verbündete Euch abfeuern.",
+        "icon": "https://render.guildwars2.com/file/2D4C0BF20D2A1C0B041DC3D5357C0D67225E7479/1302709.png",
+        "point_cost": 1,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Wasser des Verlassenen Dickichts",
+        "description": "Das Wasser des Verlassenen Dickichts soll verschiedenen Befall heilen. Wer diese Beherrschung besitzt, kann seine Leiden und seinen Befall wegwaschen, wenn sich die Gelegenheit bietet.",
+        "instruction": "Ihr könnt ab sofort im heilenden Wasser des Verlassenen Dickichts baden und Euren Befall abwaschen.",
+        "icon": "https://render.guildwars2.com/file/6120204BB9070AD428112705E3C9145EB33203BD/1377784.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Verlassene Magie",
+        "description": "Lernt, Euch die mächtige Energie zunutze zu machen, die das Verlassene Dickicht durchzieht, und erhaltet dadurch Vorteile im Kampf.",
+        "instruction": "Ihr versteht die Magie des Verlassenen Dickichts jetzt.",
+        "icon": "https://render.guildwars2.com/file/61D637CA3D6F5D355CDC3FAD3CB1DB0DDE34DE67/1451810.png",
+        "point_cost": 3,
+        "exp_cost": 3048000
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Uralte Magien",
+    "requirement": "Reist zum Freischalten in den Blutsteinsumpf oder in die Glutbucht.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/929FEABC05B4C9CAA978E0680908E4735CC2C5BC/1477050.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Magie kontern",
+        "description": "Aufbauend auf uralter asurischer Forschung des Supergenies Zinn hat Taimi einen Weg gefunden, bestimmte kraftvolle magische Fähigkeiten zu kontern. Erlernt diese Beherrschung, um Zugriff auf die besondere Aktionsfertigkeit \"Magie kontern\" zu erhalten, die es Euch ermöglicht, die Angriffe Eures Feindes gegen ihn selbst zu wenden.",
+        "instruction": "Setzt die besondere Aktionsfertigkeit \"Magie kontern\" ein, um bestimmte kraftvolle magische Fähigkeiten von Gegnern zu kontern.",
+        "icon": "https://render.guildwars2.com/file/097B5405639D54EFFD29C600B312ACBDBFDD250D/1477049.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Thermoantrieb",
+        "description": "Als die Zwerge es mit Primordus aufnahmen, eigneten sie sich viele Techniken an, um durch Tyrias heißen Kern reisen zu können. Erlernt diese Beherrschung, damit Ihr wie die Zwerge lange Distanzen zurücklegen könnt.",
+        "instruction": "Nutzt Thermoantrieb, um über lange Distanzen zu reisen.",
+        "icon": "https://render.guildwars2.com/file/14AB963FFAA679D6ADC625E6E538DA47CBF1EF34/1494369.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Flamme Kodas",
+        "description": "Gewährt die Fähigkeit, mit der Feuermagie der Kodan umzugehen, die auf einem von alters her gezähmten Flammengeist basiert. Das Erlernen dieser Beherrschung schaltet die erste Fertigkeit frei, während Ihr die Flamme des Koda tragt. Sucht Flammenträger der Kodan auf, um zusätzliche Fertigkeiten zu lernen.",
+        "instruction": "Nehmt Euch eine Flamme des Koda, eine der Fackeln aus den Flammenschalen, die überall im Bitterfrost-Grenzland und in Tyria zu finden sind.",
+        "icon": "https://render.guildwars2.com/file/B809083AAF97000B38A309EB57DB9EED2A9BBB5A/1601946.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Spektraler Beistand",
+        "description": "Uralte Magien klingen noch immer in Tyria nach, und wer besonders auf sie eingestimmt ist, kann sich manchmal in Zeiten großer Not an sie wenden. Lernt diese Beherrschung, um eine zusätzliche Fertigkeit freizuschalten, die Ihr nutzen könnt, wenn Ihr angeschlagen seid.",
+        "instruction": "Wenn Ihr angeschlagen seid, solltet Ihr Eure neue Fertigkeit einsetzen, um verbliebene Gegner abzuwehren.",
+        "icon": "https://render.guildwars2.com/file/FCFA76723249B00D35FDED21DFD2CC409F4F26D3/1635191.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Zugriff des Eichenherzens",
+        "description": "Druiden aus alten Zeiten hatten die Kraft, die Natur zu manipulieren. Lernt diese Beherrschung, um die Essenz des Eichenherzens zu sammeln, die es Euch erlaubt, Euch mithilfe von magischen Ranken zu neuen Höhen aufzuschwingen.",
+        "instruction": "Findet eine Essenz des Eichenherzens, um die Fähigkeit zu erhalten, Euch an anvisierte Stellen zu katapultieren. Diese Fertigkeit kann auch während des Gleitens genutzt werden.",
+        "icon": "https://render.guildwars2.com/file/0BD302C32B7A66659536C9F4F5C4087A1B13E878/1677329.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Zaubersänger von Orr",
+        "description": "Durch Orr weht heute noch das Echo uralter Akkorde längst vergessener Klagen. Wer gelernt hat, ihnen Gehör zu schenken, kann kraftvolle Klagegesänge anstimmen und sich Fähigkeiten zunutze machen, die längst der Vergessenheit anheimgefallen waren.",
+        "instruction": "Interagiert mit einem Chor der Echos, wann immer er im Kampf erscheint, um ein beliebiges Klagelied zu erwerben. Tragt diese Klagelieder vor, um Verbündeten zu helfen und Gegner zu behindern.",
+        "icon": "https://render.guildwars2.com/file/24360325D7E12F6E5FE5CD4A23055FF8704B4123/1730817.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Raptor-Reittier",
+    "requirement": "Schließt in der Oase die Aufgaben-Region \"Dorf des Suchers\" ab, um den Raptoren-Beherrschungspfad freizuschalten.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/23050D7A5B71477A0201FB1EAFC84A0645E7B772/1770237.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Raffgieriger Schlag",
+        "description": "Begreift die wahre raffgierige Natur des Raptors, was den Schaden durch Schwanzwirbel deutlich erhöht.",
+        "instruction": "\"Schwanzwirbel\" verursacht jetzt deutlich erhöhten Schaden bei Gegnern.",
+        "icon": "https://render.guildwars2.com/file/37ECAA1A2B9A60FC63C59C99A6D0E7F418FA3839/1770184.png",
+        "point_cost": 1,
+        "exp_cost": 291846
+      },
+      {
+        "name": "Zusammentreiben",
+        "description": "Lernt, beim Einsatz von Schwanzwirbel Gegner zusammenzutreiben und zu Euch heranzuziehen.",
+        "instruction": "Schwanzwirbel zieht Gegner jetzt zu Euch heran und gruppiert sie für den Kampf.",
+        "icon": "https://render.guildwars2.com/file/DD07AF0FEECE67AD112E45EB4E6366454216B966/1770197.png",
+        "point_cost": 2,
+        "exp_cost": 261366
+      },
+      {
+        "name": "Schluchtspringen",
+        "description": "Lernt, mit der Bewegungsfähigkeit des Raptors viel weiter zu springen, was Euch sogar noch unwegsameres Gelände bewältigen lässt.",
+        "instruction": "Ihr könnt mit der Sprung-Bewegungsfähigkeit jetzt wesentlich größere Entfernungen zurücklegen.",
+        "icon": "https://render.guildwars2.com/file/AF269F5D52B2B13A3CF76B800590C64940DA542D/1770198.png",
+        "point_cost": 3,
+        "exp_cost": 368808
+      },
+      {
+        "name": "Raffgierige Disziplin",
+        "description": "Beherrscht das Raptor-Reittier und lernt, den Bonus von Raffgieriger Schlag mit allen anderen Reittier-Angriffsauftakt-Fertigkeiten zu teilen.",
+        "instruction": "Alle Reittiere erhalten jetzt den Bonus von Raffgieriger Schlag, was den Schaden ihrer Angriffsauftakt-Fertigkeiten erhöht.",
+        "icon": "https://render.guildwars2.com/file/DAB770DEE1E0BCA673CF2D1DD2F69CAD0CD4469C/1770199.png",
+        "point_cost": 4,
+        "exp_cost": 1697354
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Schweberochen-Reittier",
+    "requirement": "Schließt in den Elon-Flusslanden die Aufgaben-Region \"Schweberochen-Hof\" ab, um den Schweberochen-Beherrschungspfad freizuschalten.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/9E3C519270CEECA95E107DA27B980C7A1AC6AAF9/1770240.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Flinke Erholung",
+        "description": "Lernt, Euch flink zu erholen, nachdem Ihr vom Schweberochen heruntergeschleudert worden seid und nachdem Ihr Gegner per Fassrolle angegriffen habt. Der Schweberochen gewährt Euch jetzt Schutz und Eile, wenn Ihr Euch erholt.",
+        "instruction": "Ihr erhaltet jetzt Eile und Schutz, nachdem Ihr von Eurem Reittier heruntergeschleudert worden seid oder nachdem Ihr Gegner per Fassrolle angegriffen habt. (Erholzeit: 10 Sek.)",
+        "icon": "https://render.guildwars2.com/file/A53BD8727C2461B0947917A5CCA50F4CB891DD12/1770193.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Verjüngende Wiederbelebung",
+        "description": "Lernt, die verjüngenden Eigenschaften von Fassrolle so zu verbessern, dass sie auch angeschlagene Verbündete heilen.",
+        "instruction": "Ihr könnt jetzt angeschlagene Verbündete heilen, wenn Ihr sie mit \"Fassrolle\" berührt.",
+        "icon": "https://render.guildwars2.com/file/2FEB071CB9E932046495B44BD32A0B3F027EA201/1770194.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Den Wind reiten",
+        "description": "Lernt, den Wind zu reiten und die Höhe der Schweben-Bewegungsfähigkeit zu steigern, um neue Herausforderungen bestehen zu können.",
+        "instruction": "Die Schweben-Bewegungsfähigkeit lässt Euch jetzt in viel größerer Höhe schweben.",
+        "icon": "https://render.guildwars2.com/file/227FDDF0DB0B4104CCF143D04851130A1063B6A9/1770195.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Flinkes Wohlwollen",
+        "description": "Beherrscht den Schweberochen und lernt, den Bonus von \"Flinke Erholung\" mit allen Reittieren zu teilen.",
+        "instruction": "Alle Reittiere erhalten jetzt den Bonus von \"Flinke Erholung\". Wenn Ihr von Eurem Reittier heruntergeschleudert werdet oder Gegner angreift, erhaltet Ihr Eile und Schutz. (Erholzeit: 10 Sek.)",
+        "icon": "https://render.guildwars2.com/file/AF5F616037EB6AA8DEDD944BF241460EC43847DF/1770196.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      },
+      {
+        "name": "Über die Tiefen hinweg",
+        "description": "Nutzt alles, was Ihr gelernt habt, um Euren Schweberochen tauchen zu lassen.",
+        "instruction": "Trainiert Euren Schweberochen, unter die Oberfläche des Wassers zu tauchen.",
+        "icon": "https://render.guildwars2.com/file/551A131E52F7BB353404E15A3EA3020E52A2C5E3/2329549.png",
+        "point_cost": 8,
+        "exp_cost": 2000000
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Greif-Reittier",
+    "requirement": "Schließt das Abenteuer \"Greifen-Training\" in der Domäne Vaabi ab, um den Greifen-Beherrschungspfad freizuschalten.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/C1F1C2410F0203BB43EEFD01FE9FC3FB1F785FE6/1824252.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Erhebende Rettung",
+        "description": "Lernt, in der Luft auf den Greif aufzusteigen, um Euch bei Stürzen zu retten.",
+        "instruction": "Ihr könnt jetzt in der Luft auf den Greif auf- und von ihm absteigen. Benutzt in der Luft den Reittier-Hotkey, um Euch auf den Greif oder von ihm herunter zu schwingen.",
+        "icon": "https://render.guildwars2.com/file/3A0E5BAAB3FEFDE7B465703C63B0EC61C22094AE/1824227.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Höhenflüge",
+        "description": "Erlernt mit Eurem Greif Höhenflüge. Mit Sturzangriff könnt Ihr schnell herabstürzen und Gegner unter Euch angreifen. Nutzt diesen Schwung zum Hochziehen aus dem Sturzflug, um mit großer Geschwindigkeit vorwärts zu fliegen oder sogar direkt nach oben.",
+        "instruction": "Setzt \"Sturzangriff\" ein, um auf den Boden zuzustürzen und Gegner unter Euch anzugreifen, oder geht mit Bewegungsfähigkeit 1 in den Sturzflug über. Wenn Ihr eine hohe Sturzfluggeschwindigkeit erreicht habt, setzt Bewegungsfähigkeit 2 ein oder drückt die Taste, die mit der Rückwärtsbewegung belegt ist, um Euren Schwung aufwärts zu lenken.",
+        "icon": "https://render.guildwars2.com/file/CECD576710393748E9B500ECE1387E33BFF1CE1D/1824228.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Höhenraffinesse",
+        "description": "Erlernt den Einsatz der Fähigkeit \"Flügelschlag\", um den Greifen zu beherrschen, dann könnt Ihr mit einem Geschwindigkeitsschub in den Himmel steigen oder von oben hinabtauchen.",
+        "instruction": "\"Flügelschlag\" kann jetzt verwendet werden, um einen Geschwindigkeitsschub in Eure Bewegungsrichtung zu erhalten, wenn Ihr während des Sturzflugs hochzieht.",
+        "icon": "https://render.guildwars2.com/file/66591AC7EF0236283C2FB557945C264C3748E57B/1824229.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Springer-Reittier",
+    "requirement": "Schließt im Wüsten-Hochland die Aufgaben-Region \"Hochsprunghof\" ab, um den Springer-Beherrschungspfad freizuschalten.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/D46208E42E1B53790D485D05473F2A081145806B/1770239.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Verstärkter Abstieg",
+        "description": "Lernt, bei Stürzen aus großer Höhe Eure Landung zu verstärken, was Euch auf dem Springer viel höhere Toleranz gegenüber Sturzschaden verleiht.",
+        "instruction": "Der Springer hat jetzt eine höhere Toleranz gegenüber Sturzschaden, wenn Ihr von höhergelegenen Orten fallt, seid Ihr also sicher.",
+        "icon": "https://render.guildwars2.com/file/E7536A4F22F60F640FCAC3C4B7B84AD909573245/1770189.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Heftiger Einschlag",
+        "description": "Lernt, beim Einsatz von Kanonenkugel einen heftigeren Einschlag zu erzeugen, der Gegner zu Boden wirft.",
+        "instruction": "Kanonenkugel wirft Gegner jetzt zu Boden und macht sie kampfunfähig, wenn Ihr sie angreift.",
+        "icon": "https://render.guildwars2.com/file/D57F504CD5F3B19D7A25381433160047F512FA9B/1770190.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Hoher Sprung",
+        "description": "Lernt, mit der Bewegungsfähigkeit des Springers viel höher hinaufzuspringen, was Euch neue Gebiete erreichen lässt, die Ihr vorher nicht erkunden konntet.",
+        "instruction": "Mit der aufgeladenen Sprung-Bewegungsfähigkeit kann der Springer jetzt viel höhere Sprünge bewältigen.",
+        "icon": "https://render.guildwars2.com/file/50EFB2B1309230BCDC4E1FFCF44223BF1E1FE077/1770191.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Meisterhafter Abstieg",
+        "description": "Beherrscht das Springer-Reittier und lernt, den Bonus von Verstärkter Abstieg mit allen anderen Reittier-Angriffsauftakt-Fertigkeiten zu teilen.",
+        "instruction": "Alle Reittiere erhalten jetzt den Bonus von Verstärkter Abstieg, was ihnen höhere Toleranz gegenüber Sturzschaden verleiht.",
+        "icon": "https://render.guildwars2.com/file/2BE13847756FBBFC06906DF1D7BD68FB961EDE26/1770192.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Schakal-Reittier",
+    "requirement": "Schließt im Ödland die Aufgaben-Region \"Sandschakal-Lauf\" ab, um den Schakal-Beherrschungspfad freizuschalten.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/0343626BF40452A6466C71EBA1539A0204354C01/1770238.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Verbessertes Ausweichen",
+        "description": "Lernt, Angriffen auszuweichen, während Ihr die Bewegungsfähigkeit des Schakals einsetzt, und nutzt sie zu passenden Zeitpunkten, um großen Angriffen zu entgehen.",
+        "instruction": "Mit der Bewegungsfähigkeit des Schakals könnt Ihr jetzt allen gegnerischen Angriffen ausweichen. Drückt Springen oder Reit-Fähigkeit 1, um diese Fähigkeit zu aktivieren.",
+        "icon": "https://render.guildwars2.com/file/AF0023D07150070DE849074FB02FC844B3265769/1770185.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Verbündete unterstützen",
+        "description": "Lernt, den Sand des Schakals zur Unterstützung Verbündeter beim Einsatz von Anspringen zu nutzen, was Verbündeten in der Nähe eine starke Barriere gewährt.",
+        "instruction": "Anspringen gewährt Verbündeten in der Nähe jetzt eine starke Barriere.",
+        "icon": "https://render.guildwars2.com/file/47F942D39FF16CCBFEF656CDEF0BC038621E6DD5/1770186.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Treibsand",
+        "description": "Lernt, die Sandportale zu nutzen, die es überall in der Wüste gibt, um neue und versteckte Orte zu erreichen.",
+        "instruction": "Ihr könnt jetzt Sandportale nutzen, um an neue Orte zu gelangen, während Ihr den Schakal reitet.",
+        "icon": "https://render.guildwars2.com/file/45EF9D3F40C16D47E679ACE1FF213ED46D33A0D7/1770187.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Geschicktes Ausweichen",
+        "description": "Beherrscht den Schakal und lernt, den Bonus von \"Verbessertes Ausweichen\" mit allen Reittieren über ihre Bewegungsfähigkeiten zu teilen.",
+        "instruction": "Alle Reittiere erhalten jetzt den Bonus von \"Verbessertes Ausweichen\", sodass sie mit ihren Bewegungsfähigkeiten gegnerischen Angriffen ausweichen können.",
+        "icon": "https://render.guildwars2.com/file/1FC128CD155E1405F932F7C7DEFC726AB55A3B06/1770188.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Kristall-Champion",
+    "requirement": "Reist zum Freischalten in die Domäne Istan.",
+    "order": 8,
+    "background": "https://render.guildwars2.com/file/020C6454737408ED437D9D7E6D096872F5D66B73/1896046.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Resonanz Flüchtiger Magie",
+        "description": "Festigt Euren Bund mit Aurene, um gefahrlos Flüchtige Magie sammeln zu können.",
+        "instruction": "Aurene hat Euch die Fähigkeit verliehen, Flüchtige Magie zu ernten, die normalerweise nicht gefahrlos berührt werden kann.",
+        "icon": "https://render.guildwars2.com/file/FB3B072FAF616538166C5802BCB701313BB8A47B/1896038.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Band des Lebens",
+        "description": "Festigt Euren Bund mit Aurene, um eure Lebenspunkte mit eurem Reittier zu teilen.",
+        "instruction": "Aurene hat Euch die Fähigkeit verliehen, vorübergehend Lebenspunkte mit eurem verwendeten Reittier zu teilen.",
+        "icon": "https://render.guildwars2.com/file/B36BD2E2A82367F40C280B47787C164A9BF2D9D1/1948147.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Band des Elans",
+        "description": "Beherrscht Euer Band mit Aurene, damit sie Euch helfen kann, die Ausdauer Eures Reittiers wiederherzustellen.",
+        "instruction": "Aurene hat Euch die Fähigkeit verliehen, die Ausdauer Eures verwendeten Reittiers wiederherzustellen.",
+        "icon": "https://render.guildwars2.com/file/A02FB23C6FDD08E00FBFAD55BFB912904F04B572/2039796.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Band des Glaubens",
+        "description": "Beherrscht Euer Band mit Aurene, damit sie Euch magische Schwingen verleihen kann, die es Euch erlauben, Euch von Reittieren hochzuschleudern.",
+        "instruction": "Euer Band mit Aurene hat Euch die Fähigkeit verliehen, durch Hochschleudern von Reittieren abzusteigen.",
+        "icon": "https://render.guildwars2.com/file/1566A00060ECB0D93DFBADB22542CF6B0C0ED540/2084754.png",
+        "point_cost": 5,
+        "exp_cost": 1016000
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Rollkäfer-Reittier",
+    "requirement": "Schließt die Sammlung \"Rollkäfer-Reittier\" ab, um den Rollkäfer-Beherrschungspfad freizuschalten.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/BF3A0B31191F79CB1B900F0138EF0EBC069BE1CA/1999773.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Abrissbirne",
+        "description": "Lernt, Gegner ein kurzes Stück hochzuschleudern, indem Ihr mit der Angriffsauftakt-Fertigkeit des Rollkäfers \"Aufbruch\" über sie hinwegrollt.",
+        "instruction": "\"Aufbruch\" fügt Gegnern Schaden zu, wenn Ihr über sie hinwegrollt, und schleudert sie ein kurzes Stück hoch.",
+        "icon": "https://render.guildwars2.com/file/FBEE0C6134DC00ED70CE92DD3A9A4FD2304C7CC9/1999766.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Barriere zerschmettern",
+        "description": "Schmettert Euch den Weg in geheime Gebiete frei und zerstört flüchtige Kristalle mit Eurem Rollkäfer. Erhaltet Ausdauer zurück, wenn Euer Rollkäfer auf Wände trifft.",
+        "instruction": "Nutzt die Schub-Fähigkeit Eures Rollkäfers oder die Aufbruch-Fertigkeit, um markierte Hindernisse zu zerschmettern und flüchtige Kristalle zu zerstören. Erhaltet Ausdauer zurück, wenn Euer Käfer mit hoher Geschwindigkeit auf Mauern trifft.",
+        "icon": "https://render.guildwars2.com/file/32A13C006364EB2EB421D395D634923CF72C416B/1999767.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Luftkunststücke",
+        "description": "Lernt, nach einem Schub elegante Tricks in der Luft zu vollführen, um Ausdauer zurückzugewinnen.",
+        "instruction": "Wenn Ihr nach einem Schub in die Luft abhebt, haltet die Springen-Taste gedrückt, um elegante Tricks zu vollführen. Tricks bleiben aktiv und füllen Ausdauer auf, solange die Springen-Taste gedrückt wird. Unsaubere Landungen haben einen Ausdauer-Abzug zur Folge.",
+        "icon": "https://render.guildwars2.com/file/72966734E0F4E6EBC37C39272A0CF74B5E9DB992/1999768.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Himmelsschuppen-Reittier",
+    "requirement": "Schließt die Sammlung \"Himmelsschuppen-Reittier\" ab, um den Himmelsschuppen-Beherrschungspfad freizuschalten.",
+    "order": 7,
+    "background": "https://render.guildwars2.com/file/F25BD14B42D20C985C1E0E0A012C23BA9204542C/2141729.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Luftrettung",
+        "description": "Lernt, in der Luft auf die Himmelsschuppe aufzusteigen, um Euch bei Stürzen zu retten.",
+        "instruction": "Ihr könnt jetzt in der Luft auf die Himmelsschuppe auf- und von ihr absteigen. Benutzt in der Luft den Reittier-Hotkey, um Euch auf die Himmelsschuppe oder von ihr herunter zu schwingen.",
+        "icon": "https://render.guildwars2.com/file/ED7865C74DFBA540E9AADB3A9BF57D4948ED9603/2141722.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Riss-Reparatur",
+        "description": "Lernt, die magischen Ressourcen Eurer Himmelsschuppe zu nutzen, um Risse zu schließen. Das setzt die darin gefangene Magie frei und enthüllt neue Flugwege.",
+        "instruction": "Wenn Ihr neben Rissen schwebt, schließen sie sich und es werden neue Flugwege für Eure Himmelsschuppe enthüllt. Folgt ihnen und holt Euch den Schatz am Ende. Aber verpasst unterwegs keinen Knoten! Eure letzte Belohnung ist am größten, wenn Ihr jeden Knoten berührt.",
+        "icon": "https://render.guildwars2.com/file/DAF8441D5F16045919EB5E0FB1DD0D05C8B5409A/2141723.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Mauerschleuder",
+        "description": "Lernt, Euch mit Eurer Himmelsschuppe von Mauern hochzuschleudern, was Euch einen Moment der Ruhe und die Fähigkeit bietet, in größere Höhen zu fliegen.",
+        "instruction": "Haltet die Sprung-Taste gedrückt, während Ihr Euch mit Eurer Himmelsschuppe an eine Mauer klammert, um Eure Fluganzeige aufzuladen und lasst sie los, um Euch in die Luft zu schleudern. Damit das funktioniert, muss mindestens ein Balken Ausdauer gefüllt sein.",
+        "icon": "https://render.guildwars2.com/file/343EAADBB2060248C6791A0C085269A17B43E9EF/2141724.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Unverwüstlichkeits-Essenz-Manipulation",
+    "requirement": "Verdient Euch das Licht des Raben.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/020F17C85826799AD14DBFF30B06B1FCC89A3170/2221482.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Essenz der Unverwüstlichkeit, Rang 1",
+        "description": "Verbindet Euch mit der Essenz der Unverwüstlichkeit und erhaltet einen Vorteil gegenüber der Tapferkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Unverwüstlichkeit hat Euch größere Kampffähigkeiten gegen die Tapferkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/75F91116806A30136A7618924FDE58D82C03D4D6/2221451.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Essenz der Unverwüstlichkeit, Rang 2",
+        "description": "Verbindet Euch mit der Essenz der Unverwüstlichkeit und erhaltet einen Vorteil gegenüber der Tapferkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Unverwüstlichkeit hat Euch größere Kampffähigkeiten gegen die Tapferkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/DE11A5B3C2D557C84C2EE89138FD6DCBF6140F03/2221452.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Essenz der Unverwüstlichkeit, Rang 3",
+        "description": "Verbindet Euch mit der Essenz der Unverwüstlichkeit und erhaltet einen Vorteil gegenüber der Tapferkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Unverwüstlichkeit hat Euch größere Kampffähigkeiten gegen die Tapferkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/FD3DD24923DC7F10052CEAD235D8EE54AB431125/2248217.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Essenz der Unverwüstlichkeit, Rang 4",
+        "description": "Verbindet Euch mit der Essenz der Unverwüstlichkeit und erhaltet einen Vorteil gegenüber der Tapferkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Unverwüstlichkeit hat Euch größere Kampffähigkeiten gegen die Tapferkeit verliehen. \"Geister-Nova\" kann jetzt gegen Kreaturen aller Essenzen eingesetzt werden.",
+        "icon": "https://render.guildwars2.com/file/D2040DA6A634C2D65103C3BE3AC6DFF2382B4AC7/2293640.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Raben-Einstimmung",
+    "requirement": "Reist zum Freischalten in die Bjora-Sümpfe.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/05B8DBF70702F6D598E17199D56B4172C0D836BB/2221483.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Raben-Bund",
+        "description": "Meistert Euren Bund mit dem Rabengeist, um Raben-Schlösser zu öffnen.",
+        "instruction": "Ihr könnt jetzt Raben-Schlösser öffnen.",
+        "icon": "https://render.guildwars2.com/file/0EC978B80A6ED4BAE178C509275F91530158BB06/2221453.png",
+        "point_cost": 1,
+        "exp_cost": 127000
+      },
+      {
+        "name": "Licht des Raben",
+        "description": "Meistert Euren Bund mit dem Raben, um Raben-Barrieren und Raben-Lichtschreine zu aktivieren.",
+        "instruction": "Ihr könnt jetzt Raben-Barrieren und Raben-Lichtschreine aktivieren.",
+        "icon": "https://render.guildwars2.com/file/1B172CF84525EBB14C1305E4790495E87D104B91/2221454.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Rabenflug",
+        "description": "Meistert Euren Bund mit dem Raben, um Raben-Tore zu passieren.",
+        "instruction": "Benutzt die Raben-Linse zur Interaktion mit Raben-Toren.",
+        "icon": "https://render.guildwars2.com/file/544FB2F2767E4F720B44ED02089DFF3058536200/2248219.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Rabenschlau",
+        "description": "Meistert Euren Bund mit dem Raben und erhaltet größere Boni durch Raben-Tore und Barrierenschreine.",
+        "instruction": "Dauer der Barriere ist verdoppelt. Benutzung von Raben-Toren gewährt einen Geschwindigkeitsverstärker.",
+        "icon": "https://render.guildwars2.com/file/10FD02186A03250406F86F6B4414951AF67D5451/2248218.png",
+        "point_cost": 2,
+        "exp_cost": 1600000
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Wachsamkeits-Essenz-Manipulation",
+    "requirement": "Verdient Euch das Licht des Raben.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/F1B3470C44366DE99551F15AB709AE0169E5B4F2/2221481.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Essenz der Wachsamkeit, Rang 1",
+        "description": "Verbindet Euch mit der Essenz der Wachsamkeit und erhaltet einen Vorteil gegenüber der Unverwüstlichkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Wachsamkeit hat Euch größere Kampffähigkeiten gegen die Unverwüstlichkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/B89CA8B20BBAE47BDC406BAA95B459FDAB01D776/2221449.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Essenz der Wachsamkeit, Rang 2",
+        "description": "Verbindet Euch mit der Essenz der Wachsamkeit und erhaltet einen Vorteil gegenüber der Unverwüstlichkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Wachsamkeit hat Euch größere Kampffähigkeiten gegen die Unverwüstlichkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/EE1510D8975FF744C6DE3BBF7030F105D9440B0B/2221450.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Essenz der Wachsamkeit, Rang 3",
+        "description": "Verbindet Euch mit der Essenz der Wachsamkeit und erhaltet einen Vorteil gegenüber der Unverwüstlichkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Wachsamkeit hat Euch größere Kampffähigkeiten gegen die Unverwüstlichkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/BB2408EE3B259BE945C2191514C299BF5EA35601/2248216.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Essenz der Wachsamkeit, Rang 4",
+        "description": "Verbindet Euch mit der Essenz der Wachsamkeit und erhaltet einen Vorteil gegenüber der Unverwüstlichkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Wachsamkeit hat Euch größere Kampffähigkeiten gegen die Unverwüstlichkeit verliehen. \"Zerschmetterte Psyche\" kann jetzt gegen Kreaturen aller Essenzen eingesetzt werden.",
+        "icon": "https://render.guildwars2.com/file/C522A233DE9EB57E42329D9EC8F95F079908EE72/2293639.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Tapferkeits-Essenz-Manipulation",
+    "requirement": "Verdient Euch das Licht des Raben.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/C2AF7CD2EBA0277C1E944D19CE19D1BAF7301EDA/2221484.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Essenz der Tapferkeit, Rang 1",
+        "description": "Verbindet Euch mit der Essenz der Tapferkeit und erhaltet einen Vorteil gegenüber der Wachsamkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Tapferkeit hat Euch größere Kampffähigkeiten gegen die Wachsamkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/5F68B3E8AA176BACB7A5A73CDC2DBA220A0251AE/2221455.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Essenz der Tapferkeit, Rang 2",
+        "description": "Verbindet Euch mit der Essenz der Tapferkeit und erhaltet einen Vorteil gegenüber der Wachsamkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Tapferkeit hat Euch größere Kampffähigkeiten gegen die Wachsamkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/75D1D8EB0F2309E5499522AC54EFCAE6FB756D5F/2221456.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Essenz der Tapferkeit, Rang 3",
+        "description": "Verbindet Euch mit der Essenz der Tapferkeit und erhaltet einen Vorteil gegenüber der Wachsamkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Tapferkeit hat Euch größere Kampffähigkeiten gegen die Wachsamkeit verliehen.",
+        "icon": "https://render.guildwars2.com/file/034C723ACF29C806D5D4067CBA931F4A9D49CEDD/2248220.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Essenz der Tapferkeit, Rang 4",
+        "description": "Verbindet Euch mit der Essenz der Tapferkeit und erhaltet einen Vorteil gegenüber der Wachsamkeit.",
+        "instruction": "Eure Verbindung mit der Essenz der Tapferkeit hat Euch größere Kampffähigkeiten gegen die Wachsamkeit verliehen. \"Nächtlicher Schrecken\" kann jetzt gegen Kreaturen aller Essenzen eingesetzt werden.",
+        "icon": "https://render.guildwars2.com/file/E82BF4A4C8B0EDF2EE05475511EE16980335F8F0/2293641.png",
+        "point_cost": 3,
+        "exp_cost": 1349000
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Synchronisation Wegstation der Vereinten Legionen",
+    "requirement": "Reist zum Freischalten an die Nieselwald-Küste.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/AB79F9789F16B8F8B99D0D22E16A60630C33FDCC/2293646.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Elektromagischer Puls",
+        "description": "Interagiert mit Wegstationen der Vereinten Legionen an der Nieselwald-Küste und erhaltet die besondere Aktionsfertigkeit \"Elektromagischer Puls\" der Asche-Legion.",
+        "instruction": "Interagiert mit Wegstationen der Vereinten Legionen an der Nieselwald-Küste und erhaltet die besondere EMP-Aktionsfertigkeit der Asche-Legion.",
+        "icon": "https://render.guildwars2.com/file/374F08B7AE09540E5DB0D2B057303FC10854BE2B/2293636.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Ferngezündete Sprengladung",
+        "description": "Fügt den Optionen der Wegstation der Vereinten Legionen die besondere Aktionsfertigkeit \"Ferngezündete Sprengladung\" der Eisen-Legion hinzu.",
+        "instruction": "Ihr könnt in Wegstationen der Vereinten Legionen jetzt die besondere Aktionsfertigkeit \"Ferngezündete Sprengladung\" der Eisen-Legion wählen.",
+        "icon": "https://render.guildwars2.com/file/6FFE7134F70F5F080A62689ED47E0A290406C458/2293637.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Tragbare Wegstation",
+        "description": "Benutzt einmalige Verbrauchsgegenstände, um überall in der offenen Welt tragbare Wegstationen zu errichten.",
+        "instruction": "Ihr könnt jetzt Verbrauchsgegenstände an Wegstationen der Vereinten Legionen kaufen, die an Eurer Position eine tragbare Wegstation einrichten.",
+        "icon": "https://render.guildwars2.com/file/B6B02B0102B926ACB69C3B7C4EDE7F59F35736B2/2293638.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Eisen-Legion-Medizooka",
+        "description": "Fügt den Optionen von Wegstationen der Vereinten Legionen die besondere Aktionsfertigkeit \"Medizooka\" hinzu.",
+        "instruction": "Ihr könnt in den Wegstationen der Vereinten Legionen jetzt die besondere Aktionsfertigkeit \"Medizooka\" wählen.",
+        "icon": "https://render.guildwars2.com/file/F6D895430F35309FE07D95B60E0C3534F10E4A51/2314932.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Asche-Legion-Reittier-Tarnung",
+        "description": "Meisterliche Nutzung von Technologien der Asche-Legion, die einem die Nutzung von Tarnung erlaubt, wenn man sich auf dem Rücken eines Reittiers befindet.",
+        "instruction": "Die Asche-Legion hat Euch gelehrt, Tarnung auf Euer Reittier anzuwenden, damit Ihr Kämpfe vermeiden könnt.",
+        "icon": "https://render.guildwars2.com/file/F23627C4AA96FA4E130CE01911D60E045E541B00/2314931.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "\"Wegstation der Vereinten Legionen\"-Beherrschung",
+        "description": "Meisterlicher Umgang mit den Wegstationen der Vereinten Legionen durch Aufwertung zugehöriger Fähigkeiten.",
+        "instruction": "Fähigkeiten der Wegstation der Vereinten Legionen sind jetzt kraftvoller.",
+        "icon": "https://render.guildwars2.com/file/EFB173D178EE08EECE0C6D5B5DDC66EE28FC2D95/2314933.png",
+        "point_cost": 4,
+        "exp_cost": 1905000
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Drachentöter",
+    "requirement": "Erhaltet einen Segen von Eurem Verbündeten im Auge des Nordens.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/5778054900A108BB1E1E04CC00CD24A94D2E2F29/2352441.png",
+    "region": "Tundra",
+    "levels": [
+      {
+        "name": "Segen des Drachen",
+        "description": "Vernichtet Drachendiener in Drachenhilfe-Missionen, um Drachenessenz zu ziehen und eine vorübergehende Verbesserung Eurer Werte zu erhalten.\nBezwingt Ihr einen Drachen-Champion in einer Drachenhilfe-Mission, erlaubt Euch dies, Euch einen Segen des Drachen zu sichern, der diese Verbesserung in eine andere Drachenhilfe-Mission trägt.",
+        "instruction": "Vernichtet Drachendiener in Drachenhilfe-Missionen, um Drachenessenz zu ziehen und eine vorübergehende Verbesserung Eurer Werte zu erhalten.\nBezwingt Ihr einen Drachen-Champion in einer Drachenhilfe-Mission, erlaubt Euch dies, Euch einen Segen des Drachen zu sichern, der diese Verbesserung in eine andere Drachenhilfe-Mission trägt.",
+        "icon": "https://render.guildwars2.com/file/FCD6D9E3980E6505F5FEB8090E09E73F64AE650B/2352425.png",
+        "point_cost": 1,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Kristallschmied",
+        "description": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Segens eines Drachen steht, garantiert Euch dies zusätzliche Materialien.\nDas Sichern von Drachenessenz gewährt nun zusätzliche Macht.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für Drachentöter-Waffen erwerben.",
+        "instruction": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Segens eines Drachen steht, garantiert Euch dies zusätzliche Materialien.\nDas Sichern von Drachenessenz gewährt nun zusätzliche Macht.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für Drachentöter-Waffen erwerben.",
+        "icon": "https://render.guildwars2.com/file/577544350659A6F03791014D1973C60442EC6201/2352426.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Großer Champion",
+        "description": "Hilft Euch eine verbündete Fraktion in einer Drachenhilfe-Mission, werden Eure Werte etwas verbessert.\nWährend Ihr Drachenessenz führt, erzeugen Eure kritischen Treffer nun einen Zustand basierend auf der Essenz.\nBei wöchentlichen Händlern der verbündeten Fraktion gibt es jetzt zusätzliche Gegenstände.",
+        "instruction": "Hilft Euch eine verbündete Fraktion in einer Drachenhilfe-Mission, werden Eure Werte etwas verbessert.\nWährend Ihr Drachenessenz führt, erzeugen Eure kritischen Treffer nun einen Zustand basierend auf der Essenz.\nBei wöchentlichen Händlern der verbündeten Fraktion gibt es jetzt zusätzliche Gegenstände.",
+        "icon": "https://render.guildwars2.com/file/0D6B0EA21CF62C3CED033569FD14BC94FF70301A/2352427.png",
+        "point_cost": 2,
+        "exp_cost": 952500
+      },
+      {
+        "name": "Klinge der Prophezeiung",
+        "description": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Segens eines gegnerischen Drachen steht, garantiert Euch dies zusätzliche Materialien.\nWährend Ihr Drachenessenz führt, erzeugt die Aktivierung Eurer Heilfertigkeit nun einen Zustand basierend auf der Essenz.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für verbesserte Drachentöter-Waffen erwerben.",
+        "instruction": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Segens eines gegnerischen Drachen steht, garantiert Euch dies zusätzliche Materialien.\nWährend Ihr Drachenessenz führt, erzeugt die Aktivierung Eurer Heilfertigkeit nun einen Zustand basierend auf der Essenz.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für verbesserte Drachentöter-Waffen erwerben.",
+        "icon": "https://render.guildwars2.com/file/729CB508E3A64E03F339050C11E4701DBCD0B1ED/2352428.png",
+        "point_cost": 3,
+        "exp_cost": 1143000
+      },
+      {
+        "name": "Glänzender Champion",
+        "description": "Hilft Euch eine verbündete Fraktion bei einer Drachenhilfe-Mission, verfügt Ihr über verbessertes Können bei der Nutzung ihrer Hilfe.\nWährend Ihr Drachenessenz führt, entfernt Ausweichen nun einen Zustand basierend auf der Essenz.\nBei wöchentlichen Händlern der verbündeten Fraktion gibt es jetzt zusätzliche Gegenstände.",
+        "instruction": "Hilft Euch eine verbündete Fraktion bei einer Drachenhilfe-Mission, verfügt Ihr über verbessertes Können bei der Nutzung ihrer Hilfe.\nWährend Ihr Drachenessenz führt, entfernt Ausweichen nun einen Zustand basierend auf der Essenz.\nBei wöchentlichen Händlern der verbündeten Fraktion gibt es jetzt zusätzliche Gegenstände.",
+        "icon": "https://render.guildwars2.com/file/C644CDF7676F5D4C7A9596FD04BCD0A63C6C98CE/2352429.png",
+        "point_cost": 3,
+        "exp_cost": 1333500
+      },
+      {
+        "name": "Zügel der Kraft",
+        "description": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Drachensegens zweier Alt-Drachen steht, garantiert Euch dies zusätzliche Materialien.\nWährend Ihr mehrere Drachenessenzen führt, gewährt die Aktivierung Eurer Elite-Fertigkeit nun Macht, Wut und Stabilität.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für überlegene Drachentöter-Waffen erwerben.",
+        "instruction": "Wenn Ihr in einer Drachenhilfe-Mission einen Drachen-Champion bezwingt, während Ihr unter den Wirkungen des Drachensegens zweier Alt-Drachen steht, garantiert Euch dies zusätzliche Materialien.\nWährend Ihr mehrere Drachenessenzen führt, gewährt die Aktivierung Eurer Elite-Fertigkeit nun Macht, Wut und Stabilität.\nIhr könnt jetzt bei Händlern im Auge des Nordens Rezepte für überlegene Drachentöter-Waffen erwerben.",
+        "icon": "https://render.guildwars2.com/file/0803019D0E54BF5F950AC61563ACE6F30EE2BBF1/2352430.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Drachentöter",
+        "description": "Die Dauer durch Drachenessenz gewährter Segen wird erhöht.\nWährend des Höhepunkts der Eisbrut-Saga könnt Ihr aus bestimmten Quellen Drachenessenz ziehen.",
+        "instruction": "Die Dauer durch Drachenessenz gewährter Segen wird erhöht.\nWährend des Höhepunkts der Eisbrut-Saga könnt Ihr aus bestimmten Quellen Drachenessenz ziehen.",
+        "icon": "https://render.guildwars2.com/file/9F3747C3800CE224DEF9CF311121BC25376E13DA/2352431.png",
+        "point_cost": 5,
+        "exp_cost": 1714500
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Skiff-Steuerung",
+    "requirement": "Schließt das Ansehen-Herz der Shinota-Küste in der Provinz Seitung ab, um den Skiffsteuerung-Beherrschungspfad freizuschalten.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4601C7AA1E4310C5BBCA1A2096B82D64B845C0B2/2604768.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Volle Fahrt voraus",
+        "description": "Erfahrt, wie Ihr die Höchstgeschwindigkeit Eures Skiffs steigert.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "instruction": "Erfahrt, wie Ihr die Höchstgeschwindigkeit Eures Skiffs steigert.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "icon": "https://render.guildwars2.com/file/360604279F36E67ABA7CEE4A37C80EC15F670C27/2604700.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Wasserbomben",
+        "description": "Erlernt eine neue Fertigkeit, mit der Ihr Gegner versenken könnt, die in der Nähe Eures Skiffs im Wasser schwimmen.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "instruction": "Erlernt eine neue Fertigkeit, mit der Ihr Gegner versenken könnt, die in der Nähe Eures Skiffs im Wasser schwimmen.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "icon": "https://render.guildwars2.com/file/76E56C0943D46DF80878DA9E21FA253468F66879/2604701.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Geschwindigkeitsverstärker",
+        "description": "Erfahrt, wie Ihr Eurem Skiff einen kurzen Temposchub verpasst.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "instruction": "Erfahrt, wie Ihr Eurem Skiff einen kurzen Temposchub verpasst.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "icon": "https://render.guildwars2.com/file/3672C098273F3B5B2E573D38987FA0D5489E0A54/2604702.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Angelgruppe",
+        "description": "Auf Eurem Skiff erhaltet Ihr und die Mitglieder der Gruppe oder des Einsatztrupps eine gewisse Menge an Angelleistung, abhängig davon, wie viele Fische Ihr an Angelpunkten gefangen habt.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "instruction": "Auf Eurem Skiff erhaltet Ihr und die Mitglieder der Gruppe oder des Einsatztrupps eine gewisse Menge an Angelleistung, abhängig davon, wie viele Fische Ihr an Angelpunkten gefangen habt.<br><br>Erhöht die Trefferpunkte Eures Skiffs um 2.500.",
+        "icon": "https://render.guildwars2.com/file/FC175845500FAF00219CEE083840C46F376F7862/2604703.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Schildkröten-Reittier",
+    "requirement": "Vervollständigt die Schildkröten-Reittier-Sammlungen.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/7D17D24C08027FE1066A10B221F60542A422E80B/2604762.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Schildkröten-Lebensverstärkung",
+        "description": "Stellt eine Verbindung zu Eurer Schildkröte her, um ihre Gesundheit um 50% zu steigern.",
+        "instruction": "Die Lebenspunkte Eurer Schildkröte sind jetzt um 50 % erhöht.",
+        "icon": "https://render.guildwars2.com/file/BE0FAEDE42740A9D5DBD76D13C7AF3C2619E34EE/2604714.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Kracher-Beherrschung",
+        "description": "Lernt, wie Ihr Munition erzeugen könnt, nachdem Ihr mit dem Kracher erfolgreich ein Ziel getroffen habt.",
+        "instruction": "Von jetzt an erzeugt der Kracher Eurer Schildkröte 25% eines Artillerie-Schusses pro getroffenem Gegner.",
+        "icon": "https://render.guildwars2.com/file/0F5B5629C7C67B0C2028C9F8B030EECB9B44657F/2604715.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Verbesserte Sprungdüsen",
+        "description": "Lernt, wie Eure Schildkröte das Beste aus ihren Sprungdüsen herausholen kann.",
+        "instruction": "Eure Schildkröte kann jetzt mithilfe ihrer Sprungdüsen weiter und höher springen.",
+        "icon": "https://render.guildwars2.com/file/FD07C5500829326BD678126225DC749B3E985EF7/2604716.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Kraftpanzer",
+        "description": "Meistert Eure Schützen-Fertigkeit und lernt, wie man erlittenen Schaden in Munition verwandelt.",
+        "instruction": "Ihr habt \"Kraftpanzer\" erlernt, was Euch gestattet, als Sozius erlittenen Schaden in Munition zu verwandeln.",
+        "icon": "https://render.guildwars2.com/file/740905B3077716E3E7FC76034FDDDDC87CAF720F/2604717.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Teilen macht Freude",
+        "description": "Lernt, wie Ihr all Euren anderen Reittieren die Schildkröten-Lebensverstärkung beibringen könnt.",
+        "instruction": "Die Lebensverstärkung Eurer Schildkröte gilt nun auch für all Eure anderen Reittiere.",
+        "icon": "https://render.guildwars2.com/file/DB0C68675D94C3DDFC9A58DEDBCCE99BCBAF0554/2604718.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Angeln",
+    "requirement": "Schließt das Kapitel \"Alte Freunde\" ab, das zur Geschichte von \"End of Dragons\" gehört.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/D61F984DFA4FC5C757E9B71A0E0B610A56CD3B63/2604769.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Angelstellen-Meister",
+        "description": "Beschleunigt das Angeln an Angelstellen, außerdem erhaltet Ihr dreifache EP beim Angeln dort.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "instruction": "Beschleunigt das Angeln an Angelstellen, außerdem erhaltet Ihr dreifache EP beim Angeln dort.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "icon": "https://render.guildwars2.com/file/1000BC7569575EE6A631D7D2737FEAD64C0745EC/2604704.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Angler-Gespür",
+        "description": "Ihr erhaltet eine Fertigkeit, mit der Ihr günstige Angelstellen in der Nähe erkennt. Diese werden auf der Karte markiert.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "instruction": "Ihr erhaltet eine Fertigkeit, mit der Ihr günstige Angelstellen in der Nähe erkennt. Diese werden auf der Karte markiert.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "icon": "https://render.guildwars2.com/file/4EC1C502589517FE77FF59EEEF47E8C5FEC5CD51/2604705.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Angeln mit vollem Tank",
+        "description": "Wenn Ihr wohlgenährt seid, erhaltet Ihr +100 Angelleistung.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "instruction": "Wenn Ihr wohlgenährt seid, erhaltet Ihr +100 Angelleistung.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "icon": "https://render.guildwars2.com/file/72A71A66ED307CBA296EDC6F6080B53C0593BD16/2604706.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Meister des Auswerfens",
+        "description": "Erhöht die maximale Reichweite beim Auswerfen der Angel um <BR>50 %.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "instruction": "Erhöht die maximale Reichweite beim Auswerfen der Angel um <BR>50 %.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "icon": "https://render.guildwars2.com/file/53B180D8E2F2E5D925E82572FF4827F816D91105/2604707.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Lokale Legende",
+        "description": "Fischverkäufer und Fischhändler in Cantha bieten Euch eine exklusive Auswahl an.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "instruction": "Fischverkäufer und Fischhändler in Cantha bieten Euch eine exklusive Auswahl an.<BR><BR>Erhöht die Grund-Angelleistung um +20.",
+        "icon": "https://render.guildwars2.com/file/A501AB93C81E20429F21C815350F3CB670ACDB3D/2604708.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Arborstein-Wiederbelebung",
+    "requirement": "Schließt das Kapitel \"Auswirkungen\" ab, das zur Geschichte von End of Dragons gehört.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/932033A15445C2B320465C80641E0C3D7D92EA1D/2604767.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Operationsbasis",
+        "description": "Baut eine Operationsbasis in Arborstein auf.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "instruction": "Arborstein hat jetzt eine voll funktionstüchtige Operationsbasis.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "icon": "https://render.guildwars2.com/file/0604554394FBEAF89F6A0F0BF3C342606FF8D47B/2604695.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Handwerkszentrum",
+        "description": "Baut ein Handwerkszentrum in Arborstein auf.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "instruction": "Arborstein hat nun ein Handwerkszentrum.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "icon": "https://render.guildwars2.com/file/5EDB7EF5F22F3D8014DC37F53C2E05617427FB24/2604696.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Unterhaltungseinrichtungen",
+        "description": "Baut Unterhaltungseinrichtungen in Arborstein auf.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "instruction": "In Arborstein gibt es nun für Euch und Eure Verbündeten neue Unterhaltungsangebote.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "icon": "https://render.guildwars2.com/file/9CE967DB7E20BCE2204215697C006DD9665B7BA5/2604697.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Handelszentrum",
+        "description": "Baut den Handel Arborstein aus.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "instruction": "In Arborstein gibt es nun zahlreiche Handelsverbesserungen.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "icon": "https://render.guildwars2.com/file/C99CD004C0089E0B076363C796F93A7C0A01CA9A/2604698.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Globalisierung",
+        "description": "Baut die globalen Beziehungen von Arborstein aus.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "instruction": "Arborstein ist jetzt ein voll ausgebautes, globales Zentrum, das Handel und Reisen über die Grenzen Canthas hinaus ermöglicht.<br><br>Erhöht den EP-Bonus durch das Ausruhen im Gasthaus von Arborstein um 5 %.",
+        "icon": "https://render.guildwars2.com/file/4C16A31C0C4A4B4E742FC85255C610D73D0E0EBA/2604699.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Jade-Bots",
+    "requirement": "Schließt das Kapitel \"Kleine Umwege\" ab, das zur Geschichte von End of Dragons gehört.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/1711033F9546551537B906EE33CF09919B15E6E4/2604770.png",
+    "region": "Jade",
+    "levels": [
+      {
+        "name": "Gleitschub",
+        "description": "Wertet Euren Jade-Bot auf, so dass er Euch beim Gleiten Schub nach oben gibt.",
+        "instruction": "Euer Jade-Bot kann Euch jetzt beim Gleiten einen Schub nach oben geben.\nIhr könnt nun Energiekerne der Stufen 1 und 2 herstellen.",
+        "icon": "https://render.guildwars2.com/file/EAA9B1C80148D91A2298FEBE0670FECA18B87131/2604709.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Mehrfach-Ladung",
+        "description": "Wertet Euren Jade-Bot auf, sodass er bis zu 4 Jade-Energieladungen zugleich mitführen kann.",
+        "instruction": "Euer Jade-Bot kann nun bis zu 4 Jade-Energieladungen zugleich mitführen.\nIhr könnt jetzt Energiekerne der Ränge 3 und 4 herstellen.",
+        "icon": "https://render.guildwars2.com/file/B3F0A49676CBC3056D306FB197F019F9CF21F195/2604710.png",
+        "point_cost": 2,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Jade-Tech-Wegmarke",
+        "description": "Wertet Euren Jade-Bot auf, so dass er eine persönliche Wegmarke für Euch setzen kann.",
+        "instruction": "Euer Jade-Bot besitzt jetzt die Fähigkeit, eine persönliche Wegmarke für Euch zu setzen.\nIhr könnt nun Energiekerne der Stufen 5 und 6 herstellen.",
+        "icon": "https://render.guildwars2.com/file/62CE701D0E24A40B2F2F97B5C6D0C2311C7548F8/2604711.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Energieeffizienz",
+        "description": "Wertet Euren Jade-Bot auf, um mehr Energie aus Jade-Technologie-Batterien zu gewinnen. Zudem kann Euer Jade-Bot nun Energie aus Seilrutschen absorbieren.",
+        "instruction": "Euer Jade-Bot erhält nun 2 Ladungen aus Jade-Batterien, bis zu einem Maximum von 4. Euer Jade-Bot kann nun Ladungen aus Seilrutschen sammeln.\nIhr könnt nun Energiekerne der Ränge 7 und 8 herstellen.",
+        "icon": "https://render.guildwars2.com/file/07DA5117733AC1692E746CF830ACA6F9942C244C/2604712.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Rettungsprotokoll",
+        "description": "Wertet Euren Jade-Bot auf, so dass er Euch beim Aufrappeln hilft, wenn Ihr angeschlagen seid. Diese Fertigkeit steht nicht im PvP, im WvW, bei Schlachtzügen, Fraktalen oder Angriffen zur Verfügung.",
+        "instruction": "Euer Jade-Bot hilft Euch jetzt dabei, Euch aufzurappeln, wenn Ihr angeschlagen seid.\nIhr könnt nun Energiekerne der Stufen 9 und 10 herstellen.",
+        "icon": "https://render.guildwars2.com/file/7B4B053650AF470DFDB355F5BAB81BC2B01FEFC5/2604713.png",
+        "point_cost": 5,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Flugtraining",
+    "requirement": "Schließt das Story-Kapitel \"Die Hölle bricht los\" von \"Secrets of the Obscure\" ab, um den Flugtrainings-Beherrschungspfad freizuschalten.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/9434F6805AC5F9B5F5F1310038F60D2EC2A4284E/3124929.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Wer rettet wen?",
+        "description": "Lernt, mitten in der Luft auf die Himmelsschuppe zu steigen, um Euch vor dem Fallen zu retten.\n\nWenn Ihr auch die Himmelsschuppen-Reittier-Beherrschung \"Luftrettung\" trainiert habt, kann es sein, dass Eure Himmelsschuppe kurz nach dem Aufsitzen in der Luft den Effekt \"Band des Elans\" erhält.<br><br>Schaltet den Erfolg \"Ein neuer Freund\" frei.",
+        "instruction": "Ihr könnt jetzt in der Luft auf die Himmelsschuppe auf- und von ihr absteigen. Benutzt in der Luft den Reittier-Hotkey, um Euch auf die Himmelsschuppe oder von ihr herunterzuschwingen.<br>Wenn Ihr auch die Himmelsschuppen-Reittier-Beherrschung \"Luftrettung\" trainiert habt, kann es sein, dass Eure Himmelsschuppe kurz nach dem Aufsitzen in der Luft den Effekt \"Band des Elans\" erhält.<br><br>Schließt den Erfolg \"Ein neuer Freund\" ab, um Eure Himmelsschuppe auch außerhalb der Karten von \"Secrets of the Obscure\" herbeizurufen.",
+        "icon": "https://render.guildwars2.com/file/4568B0C768A80FBFC49BF663300BE3F3D96AF979/3124889.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Feuerball",
+        "description": "Schaltet für Eure Himmelsschuppe die Fähigkeit frei, einen Feuerball auf Ziele in der Luft zu speien.",
+        "instruction": "Verwendet beim Ritt auf Eurer Himmelsschuppe die Fähigkeit, einen Feuerball auf Ziele in der Luft zu speien. Die Action-Cam kann eingesetzt werden, um Eure Treffsicherheit zu verbessern.",
+        "icon": "https://render.guildwars2.com/file/6292A816339A7CB412ED9B62DC4AAF0301BFB9D6/3124890.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Wandsprung",
+        "description": "Lernt, Euch mit Eurer Himmelsschuppe im Sprung von Mauern abzustoßen, was Euch einen Moment der Rast sowie die Fähigkeit bietet, in größere Höhen zu fliegen. Wenn Ihr außerdem die Himmelsschuppe-Reittier-Beherrschung \"Mauerschleuder\" trainiert habt, wird diese Fähigkeit schneller aufgeladen und trägt Euch bei voller Aufladung weiter.",
+        "instruction": "Haltet die Sprung-Taste gedrückt, während Ihr Euch mit Eurer Himmelsschuppe an eine Mauer klammert, um Eure Fluganzeige aufzuladen und lasst sie los, um Euch in die Luft zu schleudern. Damit das funktioniert, muss mindestens ein Balken Ausdauer gefüllt sein. Wenn Ihr außerdem die Himmelsschuppe-Reittier-Beherrschung \"Mauerschleuder\" trainiert habt, wird diese Fähigkeit schneller aufgeladen und trägt Euch weiter.",
+        "icon": "https://render.guildwars2.com/file/4EC9C70C051C7CB4B5B5CE25FC71ECC49655CAC1/3124891.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Verbesserte Aufwinde",
+        "description": "Lernt die Kraft von Aufwinden magisch zu verstärken, damit sie Eure fliegenden Reittiere unterstützen.",
+        "instruction": "Aufwinde sind wirbelnde Windsäulen. Um sie zu nutzen, fliegt einfach mit Eurem Reittier in sie hinein, um einen Höhenschub zu erhalten.",
+        "icon": "https://render.guildwars2.com/file/CBAE43192E5BC427FAB0C49F03EDB5BE616BE2FB/3124892.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Kampfabflug",
+        "description": "Lernt, wie Ihr im Kampf Eure Himmelsschuppe rufen könnt, um Euch in Sicherheit zu tragen oder aus einem neuen Winkel angreifen zu lassen.",
+        "instruction": "Öffnet die Übersicht \"Beherrschungsfertigkeit aktivieren\" und wählt \"Himmelsschuppe\", um Euch hoch in die Luft zu katapultieren und auf Eure Himmelsschuppe zu steigen. Kann nur einmal alle 3 Minuten benutzt werden.",
+        "icon": "https://render.guildwars2.com/file/EDD15BE3C406F652377B95733608A90C961A3B4E/3124893.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Ley-Linien-Akklimatisierung",
+        "description": "Lernt, in Ley-Linien-Energieströme zu fliegen und Euch vom Strom tragen zu lassen, wodurch Ihr Tempo gewinnt und an Orte gelangt, die sonst unzugänglich sind.",
+        "instruction": "Ley-Linien sind Flüsse magischer Energie. Zur Nutzung der Ley-Linien fliegt Ihr einfach mit Eurem Reittier in sie hinein, damit es einen Schub erhält.",
+        "icon": "https://render.guildwars2.com/file/FC5C0372FE0ED15A0E774ED11BC1179A000CA104/3124894.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Geistiger Höhenflug",
+        "description": "Lernt die Nutzung von magisch verbesserten Aufwinden, um die Ausdauer Eures Reittiers wieder aufzufüllen.",
+        "instruction": "Eure fliegenden Reittiere erhalten jetzt Flug-Ausdauer von Aufwinden und Ley-Linien",
+        "icon": "https://render.guildwars2.com/file/E4AD6608A55657FA36ADBA1A1C0AD14536796D6A/3124895.png",
+        "point_cost": 6,
+        "exp_cost": 2159000
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Astralwache",
+    "requirement": "Schließt das Story-Kapitel \"Der fehlende Aspekt\" von \"Secrets of the Obscure\" ab, um den Astralwachen-Beherrschungspfad freizuschalten.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/E8423B6B090F0FD7F305C941BF7668D17A6AE243/3124927.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Astrale Einrichtungen",
+        "description": "Lernt, die Energien des Turms des Zauberers zu kanalisieren, um Euch auszuruhen und zu entspannen.",
+        "instruction": "Erhaltet zusätzliche Erfahrungspunkte, wenn Ihr Euch im Turm des Zauberers befindet.",
+        "icon": "https://render.guildwars2.com/file/596B55FDCA630141C0E24F5DF4C2B948F3A1F30C/3124885.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Astrale Herstellung",
+        "description": "Erhaltet Zugang zum Kauf von Rüstungen der Astralwache und zu Rezepten für die Herstellung von gewöhnlichen und ungewöhnlichen Kryptis-Motivationen zur Verwendung beim Rissjagen.",
+        "instruction": "Astrale Rüstungen und Motivationsrezepte gibt es bei Lyhr im Turm des Zauberers zu kaufen.\nUngewöhnliche Kryptis-Motivationen können mit dem Herz des Obskuren verwendet werden, um Kryptis-Risse von Rang 2 zu finden. Die Verwendung einer Motivation bei einem Kryptis-Riss gewährt bei seiner Versiegelung zusätzliche Essenzen.",
+        "icon": "https://render.guildwars2.com/file/9237A5F14C2C70BD262D66A1C6A49119EED27B5C/3124886.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Emotionskontrolle",
+        "description": "Erhaltet Zugang zum Kauf von Rezepten für die Herstellung von seltenen Kryptis-Motivationen zur Verwendung beim Rissjagen.",
+        "instruction": "Seltene Kryptis-Motivationen können mit dem Herz des Obskuren verwendet werden, um Kryptis-Risse von Rang 3 zu finden. Aber Vorsicht! Versucht nicht, diese Risse allein anzugehen!",
+        "icon": "https://render.guildwars2.com/file/0CF248A0CB6B09CF732E73BBA7E5B8DC54115BC7/3124887.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Riss-Beherrschung",
+        "description": "Lernt, größere Mengen von Kryptis-Essenz aus Rissen zu gewinnen.",
+        "instruction": "Erhaltet mehr Kryptis-Essenzen, wenn Ihr Risse schließt. Kryptis-Essenzen sind mächtige Materialien zur Herstellung von Ködern, Waffen, Rüstungen und legendären Rüstungen.",
+        "icon": "https://render.guildwars2.com/file/08CE0AF0F10C57254AE5C52D5AA0B9F70F4732AA/3124888.png",
+        "point_cost": 5,
+        "exp_cost": 2159000
+      },
+      {
+        "name": "Herstellung von Obsidian-Rüstung",
+        "description": "Erhaltet Zugriff auf finale Handwerksrezepte für legendäre Rüstung.",
+        "instruction": "Die legendären Rezepte für Obsidian-Rüstung gibt es bei Lyhr im Turm des Zauberers zu kaufen.",
+        "icon": "https://render.guildwars2.com/file/E9323CB167E63CF50C7D505914C3169555FBE770/3256320.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Wegfinder-Beherrschung",
+        "description": "Trainiert diese Beherrschung, um zusätzliche Effekte zu erhalten:\n<br>• Fügt neue Dienstleistungen im Turm des Zauberers hinzu, um Obsidian-Rüstung aufzuwerten oder verschiedene Karten-Währungen und Materialien zu tauschen.\n<br>• Öffnet arkane Truhen mit Leichtigkeit.\n<br>• Beschafft Euch einigen Schutz gegen Eparch in der Zitadelle von Zakiros.\n<br>• Plündert täglich eine Kiste aus dem Meta-Event \"Unterschlupf der Spinne\", die besonders seltene Gegenstände enthält.",
+        "instruction": "Die Beherrschung des Horns von Maguuma hat Euch verschiedene Boni gewährt:\n<br>• Nachwuchsarchivar-Assistent Conri kann Obsidian-Rüstung optisch aufwerten! Ihr findet ihn neben der Schmiede der Zeitlosigkeit.\n<br>• Gharr Bleiklaue kann Währungen, Material und noch mehr umtauschen! Er befindet sich westlich vom Lichthimmel-Platz neben einer blühenden Dornensprosse.\n<br>• Arkane Truhen lassen sich jetzt viel schneller öffnen.\n<br>• Ihr könnt die Rate der von Eparch verschlungenen Emotionen-Stapel verringern.\n<br>• Erfolgreiche Abschlüsse des Meta-Events \"Unterschlupf der Spinne\" gewähren Euch eine tägliche Belohnung, die besonders seltene Gegenstände enthält.",
+        "icon": "https://render.guildwars2.com/file/E4070C9BB426392824B5603B2C0DAC077227F830/3307103.png",
+        "point_cost": 7,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "\"Herz des Obskuren\"-Forschung",
+    "requirement": "Schließt das Story-Kapitel \"Die Hölle bricht los\" von \"Secrets of the Obscure\" ab, um den \"Herz der Obskuren\"-Forschungs-Beherrschungspfad freizuschalten.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/06B8D3B0C5B2F2B8E80579BC9F5DB5B776666BC7/3124925.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Riss-Unterweisung",
+        "description": "Das Herz des Obskuren lässt sich verwenden, um kleine Kryptis-Risse zu finden.",
+        "instruction": "Benutzt die Schaltfläche \"Beherrschungsfertigkeit aktivieren\", damit das Herz des Obskuren Euch zu einem Kryptis-Riss führt, falls es einen in der Nähe gibt.",
+        "icon": "https://render.guildwars2.com/file/D19AD5532F0E9F640244B1E8E30BB750A94B54EA/3124880.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Aufwind-Generator",
+        "description": "Lernt, die Kraft des Herz in Aufwind-Generatoren zu kanalisieren.",
+        "instruction": "Interagiert mit einem Aufwind-Generator, um in der Nähe einen temporären Aufwind zu erzeugen. Aufwinde können mit fliegenden Reittieren und Gleitschirmen genutzt werden, um sonst nicht zugängliche Orte zu erreichen.",
+        "icon": "https://render.guildwars2.com/file/51F9F7DA7AAFA52B0A019FCBF2709AE7DEDE1AC5/3124881.png",
+        "point_cost": 3,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Geringere arkane Schätze",
+        "description": "Lernt, das Herz zu benutzen, um Geringere arkane Schätze in Karten von Secrets of the Obscure freizuschalten.",
+        "instruction": "Geringere arkane Schätze sind kleine Schatztruhen, die man in Karten von Secrets of the Obscure findet. Interagiert mit ihnen und schließt eine kleine Fertigkeits-Herausforderung ab. Dann könnt Ihr sie öffnen und erhaltet Belohnungen.",
+        "icon": "https://render.guildwars2.com/file/64146B0DD290310FD2F392C66E3F6ED5F057B296/3124882.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Ley-Webstuhl-Bedienung",
+        "description": "Lernt, das Herz zu benutzen, um mit Ley-Webstühlen latente Ley-Energie zu funktionierenden Ley-Linien zu verweben.",
+        "instruction": "Interagiert mit einem Ley-Webstuhl, um in der Nähe eine temporäre Ley-Linie zu erzeugen. Ley-Linien können mit fliegenden Reittieren und Gleitschirmen genutzt werden, um sonst nicht zugängliche Orte zu erreichen.",
+        "icon": "https://render.guildwars2.com/file/DDFFAD2E640DB84264711DC4750D16C89ACAA10C/3124883.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Größere arkane Schätze",
+        "description": "Lernt, das Herz zu benutzen, um größere arkane Schätze in Karten von Secrets of the Obscure freizuschalten.",
+        "instruction": "Größere arkane Schätze sind große Schatztruhen, die man in Karten von Secrets of the Obscure findet. Interagiert mit ihnen und schließt eine Fertigkeits-Herausforderung ab. Dann könnt Ihr sie öffnen und erhaltet Belohnungen.",
+        "icon": "https://render.guildwars2.com/file/0DD998C6342DDBBE61271A3878B222FD18BA410D/3124884.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Inneres Nayos",
+    "requirement": "Schließt das Story-Kapitel \"Zwangsweise\" der Geschichte \"Guild Wars 2: Secrets of the Obscure\" ab, um den Konvergenzen-Beherrschungspfad freizuschalten.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/E4927F361F990E0F360C7C76745CE6EB14234206/3189305.png",
+    "region": "Sky",
+    "levels": [
+      {
+        "name": "Belagerungs-Feuerball",
+        "description": "Lernt die Feuerball-Fertigkeit Eurer Himmelsschuppe zu verbessern, um Belagerungsschaden zu verursachen.",
+        "instruction": "Eure Himmelsschuppe kann nun Objekten Belagerungsschaden zufügen.",
+        "icon": "https://render.guildwars2.com/file/5517FDAC5DB54808D517C6E1B800ED1ED2552508/3189297.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Segen des Zauberers",
+        "description": "Lernt, wie man in Konvergenzen bei Abgabe von Essenzen den Segen des Zauberers erhält.",
+        "instruction": "Wenn Ihr in einer Konvergenz Essenzen abliefert, erhaltet Ihr den Segen des Zauberers, der Eure Kampffähigkeit erhöht.",
+        "icon": "https://render.guildwars2.com/file/3CA3644E1D03DA15FFF125590D4FEAD60A476315/3189298.png",
+        "point_cost": 2,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Irrlichttaschen",
+        "description": "Lernt, wie man in Konvergenzen als Irrlicht Essenzen sammelt.",
+        "instruction": "Ihr könnt jetzt in einer Konvergenz Essenzen sammeln, während Ihr ein Irrlicht seid.",
+        "icon": "https://render.guildwars2.com/file/A0F8C068C1010DC5D0B3EEBF48BF4A32B8C55774/3189299.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Essenz-Einstimmung",
+        "description": "Lernt, in Konvergenzen das Maximum von Essenzen zu tragen. Wenn Ihr Essenzen einsammelt, werdet Ihr geheilt und erhaltet einen Effekt.",
+        "instruction": "Ihr könnt noch mehr Essenzen tragen und erhaltet Heilung und einen Effekt, wenn Ihr sie einsammelt.",
+        "icon": "https://render.guildwars2.com/file/9FAF90CEC4F4554E36C8EE3A54FA589BA2F75132/3189300.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Konvergenz-Beherrschung",
+        "description": "Lernt, aus erfolgreichen Konvergenzen zusätzliche Kryptis-Essenzen zu extrahieren. Der Abschluss von Konvergenzen gewährt Euch einen Effekt, der es gestattet, bei Verwendung von Motivationen noch mehr Kryptis-Essenzen zu erhalten. Erhöht die Chance, instabile Kryptis-Motivationen zu erhalten, die gebraucht werden, um Konvergenzen zu öffnen.",
+        "instruction": "Erfolgreiche Konvergenzen bieten bessere Belohnungen und zusätzliche Kryptis-Essenz, und gewähren außerdem einen Bonus auf Kryptis-Essenz, die durch den Einsatz von Motivationen gewonnen wurde. Außerdem ist Eure Chance erhöht, instabile Kryptis-Motivationen zu erhalten, die gebraucht werden, um Konvergenzen zu öffnen.",
+        "icon": "https://render.guildwars2.com/file/7D1877CC41AE0D54F8E2C5DFFAFE0D550448B3F7/3189301.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Heimstatt einrichten",
+    "requirement": "Richtet Euch eine eigene Heimstatt ein, um Zugriff auf den Heimstätten-Beherrschungspfad zu erhalten.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/CD720F04AFD15F97AA9CB39B6A94BFD9460D0242/3379035.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Handwerks- und Heimstatt-Erweiterung für Kunsthandwerker-Anfänger",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für Kunsthandwerker-Anfänger zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen Ruhebonus frei.",
+        "instruction": "Schaltet die Fähigkeit frei, Handwerksrezepte für Kunsthandwerker zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen Ruhebonus frei.",
+        "icon": "https://render.guildwars2.com/file/359103213A99A17DF20EE15F6CF2D25F142207C2/3379008.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Handwerks- und Heimstatt-Erweiterung für fortgeschrittene Kunsthandwerker",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für fortgeschrittene Kunsthandwerker zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen höherrangigen Ruhebonus frei.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Handwerksrezepte für Kunsthandwerker zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen höherrangigen Ruhebonus frei.",
+        "icon": "https://render.guildwars2.com/file/366E0B07B91D7A423C807FD7FCD712C2CFCB7E09/3379009.png",
+        "point_cost": 2,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Handwerks- und Heimstatt-Erweiterung für Kunsthandwerker-Lehrlinge",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für Kunsthandwerker-Lehrlinge zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen höherrangigen Ruhebonus frei.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Handwerksrezepte für Kunsthandwerker zu nutzen. Schaltet außerdem zusätzlichen Platz in der Heimstatt und einen höherrangigen Ruhebonus frei.",
+        "icon": "https://render.guildwars2.com/file/9E2CD53A2009DC352A7AAED671FCD475125FCE64/3379010.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Handwerks- und Sammelkisten für Kunsthandwerker-Gesellen",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für Kunsthandwerker-Gesellen zu nutzen und erhaltet Zugriff auf Sammelkisten.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Handwerksrezepte für Kunsthandwerker zu nutzen und erhaltet Zugriff auf Sammelkisten.",
+        "icon": "https://render.guildwars2.com/file/6C50110BFCBDD2796CE367F8472D25FBAEB5DC10/3379011.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Handwerken für Kunsthandwerker-Adepten",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für Kunsthandwerker-Adepten zu nutzen und legendäre Komponenten von Hurtiger Lahar zu erwerben.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Handwerksrezepte für Kunsthandwerker-Adepten zu nutzen. Erhaltet die Berechtigung, legendäre Komponenten von Hurtiger Lahar zu erwerben.",
+        "icon": "https://render.guildwars2.com/file/003E982F4A602460EC0E4DC345F8D7B750DDCCC8/3443181.png",
+        "point_cost": 5,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Meister-Kunsthandwerker-Herstellung",
+        "description": "Schaltet die Fähigkeit frei, Handwerksrezepte für Meister-Kunsthandwerker zu nutzen.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Handwerksrezepte für Kunsthandwerker zu nutzen.",
+        "icon": "https://render.guildwars2.com/file/35EDA0D609DC3DF602DA007A100ED52172FEE9EE/3594060.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Großmeister-Kunsthandwerker-Herstellung",
+        "description": "Schaltet die Fähigkeit frei, Großmeister-Kunsthandwerker-Herstellungsrezepte zu verwenden. Dabei wird Euer Dekorationslimit um 500 heraufgesetzt, und Euer Erfahrungsbonus im ausgeruhten Zustand wird verbessert.",
+        "instruction": "Schaltet die Fähigkeit frei, neue Kunsthandwerker-Herstellungsrezepte zu verwenden. Euer Dekorationslimit wurde um 500 heraufgesetzt, und Euer Erfahrungsbonus fürs Ausruhen in der Heimstatt wurde verbessert.",
+        "icon": "https://render.guildwars2.com/file/CD546D3ADBABA6FE9B70241FA318BB389CCE4B00/3630927.png",
+        "point_cost": 7,
+        "exp_cost": 3048000
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Tiefland-Kodan",
+    "requirement": "Spielt das Story-Kapitel \"Diplomatie und Entdeckung\" von \"Guild Wars 2: Janthir Wilds\" durch, um den Tiefland-Kodan-Beherrschungspfad freizuschalten.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/D6342A11B554B6D895675A19CD9B08CDC82DB696/3379057.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Tiefland-Speerausbildung",
+        "description": "Lernt, den Speer an Land zu führen, und erlangt in Janthir zusätzliche Erfahrung.",
+        "instruction": "Ihr habt gelernt, den Speer an Land zu führen, und erhaltet 5 % zusätzliche Erfahrung, solange Ihr in Janthir seid.",
+        "icon": "https://render.guildwars2.com/file/E5BB91515F73F83CB9DEFC59ECB517235A01797F/3379012.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Tiefland-Bienennester",
+        "description": "Lernt die Geheimnisse des Einsatzes von gestärkten Bienennestern an der Tiefland-Küste, um Fertigkeiten-Erholzeiten aufzufrischen.",
+        "instruction": "Ihr habt gelernt, gestärkte Bienennester an der Tiefland-Küste einzusetzen, um Fertigkeiten-Erholzeiten aufzufrischen.",
+        "icon": "https://render.guildwars2.com/file/1365B37AAB9B05BB091621E66F120CD514360BF4/3379017.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Janthir-Erkundungsleistung",
+        "description": "Entdeckt die Geheimnisse der Verwendung von mit Blutstein gestärkten Bienennestern in Janthir Syntri zur Auffrischung von Fertigkeiten-Erholzeit und die Tatsache, dass Ihr zusätzliche Kodan-Lagerschlüssel von Münzsammlern kaufen könnt.",
+        "instruction": "Ihr habt die Geheimnisse der Verwendung von mit Blutstein gestärkten Bienennestern in Janthir Syntri zur Auffrischung von Fertigkeiten-Erholzeit entdeckt und wisst auch, dass Ihr zusätzliche Kodan-Lagerschlüssel von Münzsammlern kaufen könnt.",
+        "icon": "https://render.guildwars2.com/file/0E6B2731E8E54DEE51783E729231CDC303DE33D2/3379014.png",
+        "point_cost": 4,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Akzeptiert von den Kodan",
+        "description": "Erhaltet zusätzliches Ansehen, wenn Ihr bei Händlern für Ansehen-Herzen in der Janthir-Wildnis Ansehen-Marken abgebt.",
+        "instruction": "Ihr erhaltet zusätzliches Ansehen, wenn Ihr bei Händlern für Ansehen-Herzen in der Janthir-Wildnis Ansehen-Marken abgebt.",
+        "icon": "https://render.guildwars2.com/file/50E0EFC5E89262BA08C86F34AA6EA7A9DED3FA97/3379013.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Bärling-Erntetechniken",
+        "description": "Erhaltet die Chance, eine kleine Menge eines kartenspezifischen Materials zu bekommen, wenn Ihr etwas von einem beliebigen Materialknoten in Janthir sammelt.",
+        "instruction": "Ihr habt eine Chance, eine kleine Menge eines kartenspezifischen Materials zu bekommen, wenn Ihr etwas von einem beliebigen Materialknoten in Janthir sammelt.",
+        "icon": "https://render.guildwars2.com/file/6E6A5845AC7019E302A933E6E55EF2DB73E43569/3379016.png",
+        "point_cost": 6,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Plünderer der Wildnis",
+        "description": "Erhaltet mehr Erfahrung in Janthir und gewinnt zusätzliche Währungsgegenstände, indem Ihr Events in der Janthir-Wildnis abschließt.",
+        "instruction": "Ihr habt die Erfahrungsverstärkung in der Janthir-Wildnis zu einem Bonus von 10 % aufgewertet. Außerdem erhaltet Ihr zusätzliche sonderbare Tiefland-Honigwaben und seltsame Mursaat-Währung, wenn Ihr Events abschließt.",
+        "icon": "https://render.guildwars2.com/file/051D49314AE801BE970502635BE878349BE10332/3379015.png",
+        "point_cost": 7,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Kriegsklauen-Reittier",
+    "requirement": "Schließt das Story-Kapitel \"Unbekanntes Territorium\" von \"Guild Wars 2: Janthir Wilds\" ab, um den Kriegsklaue-Beherrschungspfad freizuschalten.",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/487B2B93E3B5F0AC062C68A2FBEC3ED498D4D3FD/3379059.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Sieben Leben",
+        "description": "Lernt den Sturzschaden zu reduzieren, während Ihr die Kriegsklaue reitet.",
+        "instruction": "Während Ihr die Kriegsklaue reitet, ist der Sturzschaden auf 0 reduziert.",
+        "icon": "https://render.guildwars2.com/file/187B9B4B263142DA10A86B73AC556996EFBC3B6F/3379018.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Katzenhafte Reflexe",
+        "description": "Lernt mitten im Flug zu springen, während Ihr die Kriegsklaue reitet.",
+        "instruction": "Erhaltet mitten in der Luft Zugriff auf Springen, auf Kosten Eurer Ausdauer. Die Abwärtsgeschwindigkeit vergrößert die Sprunghöhe.",
+        "icon": "https://render.guildwars2.com/file/6D093E5A16BEE5554EEE02B4CA99176AFE14FA90/3379019.png",
+        "point_cost": 3,
+        "exp_cost": 762000
+      },
+      {
+        "name": "Wilde Klauen",
+        "description": "Lernt Eure Gegner zu schlagen, wenn Ihr mit der Kriegsklaue durch sie hindurchprescht.",
+        "instruction": "Schlagt Gegner, wenn Ihr durch sie hindurchprescht. Wenn Ihr mindestens einen Gegner trefft, gewährt Euch das einen Ausdauerschub, wenn das Preschen vorüber ist.",
+        "icon": "https://render.guildwars2.com/file/A8F7072347D9C0A39E7202B207192C29C7391E0A/3379020.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Wilde Wut",
+        "description": "Lernt zusätzlichen Schaden zu verursachen, wenn Ihr die Kriegsklaue reitet und auch, wie Ihr mit Speer-Fertigkeiten betäuben und Bonus-Trotz-Schaden zufügen könnt.",
+        "instruction": "Teilt erhöhten Schaden aus, während Ihr die Kriegsklaue reitet. Die Lanzen- und Angriffsauftakt-Fertigkeiten der Kriegsklaue verursachen erhöhte Kontrolleffekte.",
+        "icon": "https://render.guildwars2.com/file/D63F2D4C71E72D65CE0EC10A207371B8E962D602/3379021.png",
+        "point_cost": 5,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Gut ausgeruht",
+        "description": "Erhöht die Ausdauerregeneration für alle Reittiere um 20 %.",
+        "instruction": "Erhöht die Ausdauerregeneration für alle Reittiere um 20 %.",
+        "icon": "https://render.guildwars2.com/file/0880F8AF39B4205B6A6971C9063B1FD7AB0F33DF/3379022.png",
+        "point_cost": 6,
+        "exp_cost": 2540000
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Mursaat-Schattenkunst",
+    "requirement": "Spielt das Story-Kapitel \"Ins Tal der Schatten\" von \"Guild Wars 2: Janthir Wilds\" durch, um den Mursaat-Schattenkunst-Beherrschungspfad freizuschalten.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/C0682C46000E24D7CD4F42EB0122B06231A277DD/3594069.png",
+    "region": "Wild",
+    "levels": [
+      {
+        "name": "Mursaat-Spiegel und Bewegung",
+        "description": "Lernt die Mursaat-Spiegel zu benutzen, um das Nebelbrand-Ödland sowie das Nebelbrand-Bienennest zu durchqueren.",
+        "instruction": "Ihr habt gelernt, wie man die Mursaat-Spiegel benutzt, um verborgene Orte zu finden, und wie man das Nebelbrand-Bienennest verwendet, um Fertigkeiten-Erholzeiten aufzufrischen.",
+        "icon": "https://render.guildwars2.com/file/C00307ADDC6248F731700C0E71461C23D4F5FA9D/3594061.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Verbesserte Erkundung der Mursaat-Ruinen",
+        "description": "Lernt, wie Ihr zusätzliche Belohnungen für den Abschluss von Events im Nebelbrand-Ödland einheimsen könnt.",
+        "instruction": "Ihr erhaltet zusätzliche merkwürdige Mursaatruinen-Scherben, wenn Ihr im Nebelbrand-Ödland Events abschließt.",
+        "icon": "https://render.guildwars2.com/file/E7F159B1BB62AB59DDB4FE547FDCEACBDC9092B3/3594062.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Verstärkung der Ödland-Vermessungsergebnisse",
+        "description": "Verbesserungen der Vermessungsmethoden erhöhen die in gewaltigen Truhen gefundenen Belohnungen, wenn Feldvermessungs-Eventketten abgeschlossen werden.",
+        "instruction": "Erhaltet zusätzliche Belohnungen aus den gewaltigen Truhen am Ende der Feldvermessungs-Eventketten im Nebelbrand-Ödland.",
+        "icon": "https://render.guildwars2.com/file/6F98039C500BF1ED950FFAB2FFD50D01FC0F2EF9/3594063.png",
+        "point_cost": 4,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Janthir-Bienennest-Beherrschung",
+        "description": "Trainiert diese Beherrschung, um zusätzliche Effekte von Gestärkten Bienennestern, mit Blutstein gestärkten Bienennestern und Nebelbrand-Bienennestern in Janthir zu erhalten.\n<br>• Eure Kriegsklaue erhält einen Geschwindigkeitsverstärker, wenn sie mit einem Bienennest interagiert. Wenn Ihr die Blitzgeschwindigkeits-Pilze-Beherrschung trainiert habt, sind Effekte und Dauer noch verbessert.\n<br>• Eure Reittiere erhalten für kurze Zeit einen \"Band des Elans\"-Effekt. Wenn Ihr die \"Geistiger Höhenflug\"-Beherrschung trainiert habt, ist die Dauer erhöht. \n<br>• Erhaltet Segen, wenn Ihr mit Bienennestern interagiert. Habt Ihr die Energieeffizienz-Beherrschung trainiert, so halten diese Segen länger an.",
+        "instruction": "Die Beherrschung von Gestärkten Bienennestern, mit Blutstein gestärkten Bienennestern und Nebelbrand-Bienennestern gewährt Euch zusätzliche Boni.\n<br>• Eure Kriegsklaue erhält einen Geschwindigkeitsverstärker, wenn sie mit einem Bienennest interagiert. Wenn Ihr die Blitzgeschwindigkeits-Pilze-Beherrschung trainiert habt, sind Effekte und Dauer noch verbessert.\n<br>• Eure Reittiere erhalten für kurze Zeit einen \"Band des Elans\"-Effekt. Wenn Ihr die \"Geistiger Höhenflug\"-Beherrschung trainiert habt, ist die Dauer erhöht. \n<br>• Erhaltet Segen, wenn Ihr mit Bienennestern interagiert. Habt Ihr die Energieeffizienz-Beherrschung trainiert, so halten diese Segen länger an.",
+        "icon": "https://render.guildwars2.com/file/7CA8735A181DB87C2BD2ECD0A17E0C117B07BCBE/3630928.png",
+        "point_cost": 6,
+        "exp_cost": 1905000
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Castoranischer Überlebenskünstler",
+    "requirement": "Schließt das Kapitel \"Außerplanmäßige Abreise\" zum ersten Mal ab, um den \"Castoranischer Überlebenskünstler\"-Beherrschungspfad freizuschalten.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/2C7397D1A4F6BAB099F94ED27738E6937A90BA44/3713125.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Getarnter Überlebender",
+        "description": "Lernt, wie sich die Vorräte des hilfsbereiten Schiffbrüchigen nutzen lassen, um sich vorsichtig unter den feindlich gesinnten Bewohnern des Landes zu bewegen.",
+        "instruction": "Interagiert außerhalb des Kampfes mit Vorratsverstecken des Überlebenskünstlers, um Euch selbst Tarnung zu gewähren.",
+        "icon": "https://render.guildwars2.com/file/B5955B6940AA3C0113C5093AD6315A951E373EE5/3713075.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Listenreichtum",
+        "description": "Lernt, wie man in diesem feindseligen Land überleben kann, und identifiziert einzigartige Ressourcen. Castoras Sammlungsknoten beinhalten jetzt die Chance, kartenspezifische Ressourcen zu gewähren.",
+        "instruction": "Castoras Sammlungsknoten beinhalten die Chance, kartenspezifische Ressourcen zu gewähren.",
+        "icon": "https://render.guildwars2.com/file/AE6C5F7DCB2530A620C5DC0F49419F340BD1DDDC/3713076.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Glücksschild",
+        "description": "Die Schiffbrüchigen haben gesammelte Magie für Notfälle gebunkert. Vorratsverstecke des Überlebenskünstlers gewähren Euch einen Glücksschild. Wenn Eure Lebenspunkte zur Neige gehen, dann erhaltet Ihr maximale Barriere und die aktuelle Erholzeit Eurer Heilfertigkeit verringert sich.",
+        "instruction": "Erzeugt eine Barriere, wenn Eure Lebenspunkte zur Neige gehen, und die aktuelle Erholzeit Eurer Heilfertigkeit verringert sich.",
+        "icon": "https://render.guildwars2.com/file/DDD12F03AB0CCB490F5D90BDFB3A5CC1D4FD1A77/3713077.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Natürlicher Überfluss",
+        "description": "Eure Hilfsbereitschaft auf Castora hat Euch Wohlwollen und Dankbarkeit eingebracht! Ihr erhaltet eine Bonustruhe, wenn Ihr Events in beendeten Bereichen für Ansehen-Herzen auf Castora abschließt. Castora-Champions, Meta-Events und Weltboss-Events bringen Euch Bonustruhen ein.\n\n(Tägliches Limit für Bonusbelohnungen: 20)",
+        "instruction": "Ihr erhaltet Belohnungen, wenn Ihr Events in beendeten Bereichen für Ansehen-Herzen auf Castora abschließt. \n\nCastora-Champions, Meta-Events und Weltboss-Events bringen Euch Bonustruhen ein.\n\n(Tägliches Limit für Bonusbelohnungen: 20)",
+        "icon": "https://render.guildwars2.com/file/5E145D6FAD1BBE03DC5176BEC6CBA3C3450B47BE/3713078.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Kampfmanöver",
+        "description": "Lernt die Feinheiten des Überlebens auf der feindseligen Insel Castora. \"Getarnter Überlebender\" kann im Kampf aktiviert werden. Der Aktivierungseffekt von Glücksschild heilt Euch außerdem komplett.",
+        "instruction": "Mit Überlebenskünstler-Verstecken könnt Ihr im Kampf interagieren. Im Anschluss ist ihre Erholzeit verkürzt.\n\nGlücksschild stellt jetzt bei Aktivierung alle Lebenspunkte wieder her.",
+        "icon": "https://render.guildwars2.com/file/38990E6BF1CDDD756538D3EEF34ECD9A7FDE1743/3772551.png",
+        "point_cost": 8,
+        "exp_cost": 6600000
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Wilde castoranische Magie",
+    "requirement": "Schließt das Story-Kapitel \"Aufgedeckte Wahrheiten\" zum ersten Mal ab, um den \"Wilde castoranische Magie\"-Beherrschungspfad freizuschalten.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/214E2EA7E7B0D4050CAA56A9EFF2170FB4DA41C3/3713126.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Aufgedeckte Geheimnisse",
+        "description": "Langsam erschließen sich Euch die Geheimnisse von Castora. Ihr könnt nun überall in Castora Zauberspiegel sehen und mit ihnen interagieren.",
+        "instruction": "Ihr könnt Zauberspiegel sehen und mit ihnen interagieren. Geht auf ihre Herausforderungen ein, um in einem Sektor zusätzliche Schatztruhen anzuzeigen.\n\nEvents gewähren Euch eine stapelbare Schlüssel-Ladung, die Zauberspiegel-Schatzkisten öffnen kann.\n\nAußerdem werfen besiegte Gegner eine Magiekugel ab, die Euch eine stapelbare Schlüssel-Ladung einbringt.",
+        "icon": "https://render.guildwars2.com/file/93FE156A55E5F36936DE4E57151B083DDBBCE8E1/3713083.png",
+        "point_cost": 1,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Bleibende Magie",
+        "description": "Ihr habt gelernt, die bleibende Magie von Castora akkurat zu erkennen und zu ernten.",
+        "instruction": "Erhaltet Schlüssel-Ladungen, wenn Ihr Karten von Castora am jeweiligen Tag zum ersten Mal betretet. Dieser Effekt wird zurückgesetzt, wenn Ihr ein \"Visions of Eternity\"-Meta-Event oder -Weltboss-Event abschließt.",
+        "icon": "https://render.guildwars2.com/file/A6374E0C9D61917709520A5920DA52442A02A9AA/3713084.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Effiziente Magie",
+        "description": "Ihr habt die Menge der zum Öffnen von Schatztruhen benötigten Magie optimiert, und Euer Ansehen unter den Bewohnern von Castora ist gestiegen.",
+        "instruction": "Hiermit erfordern Truhen weniger Schlüssel-Ladungen zum Öffnen.\n\nDer Abschluss von Ansehen-Events auf Castora verschafft Euch mehr Ansehen.",
+        "icon": "https://render.guildwars2.com/file/297F03110AD9241A217604AB79F7CDD36873D615/3713085.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Verborgene Reichtümer",
+        "description": "Eure geschärfte Wahrnehmung und Erfahrung mit Castoras magischer Landschaft gestatten es Euch, Zauberspiegel-Schatzkisten mehr Belohnungen zu entnehmen.",
+        "instruction": "Zauberspiegel-Schatzkisten haben die Chance, zusätzliche Belohnungen zu gewähren.",
+        "icon": "https://render.guildwars2.com/file/B40765291CCA67C33C3548A707F607DC1C7D4B10/3713086.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      },
+      {
+        "name": "Unendlicher Wohlstand",
+        "description": "Ihr beherrscht nun die wilde Magie von Castora und habt die Ressourcen maximiert, die Ihr daraus beziehen könnt. Event-Belohnungstruhen enthalten jetzt verbesserte Belohnungen. Der Abschluss von Zauberspiegel-Herausforderungen verschafft Euch Schlüssel-Ladungen.",
+        "instruction": "Event-Belohnungstruhen enthalten jetzt verbesserte Belohnungen.\n\nDer Abschluss von Zauberspiegel-Herausforderungen verschafft Euch Schlüssel-Ladungen.",
+        "icon": "https://render.guildwars2.com/file/D8D2B37700A5017BE1546596AE0F190CA7EE1692/3713087.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Rest-Spiegelmagie",
+        "description": "Der Abschluss eines Zauberspiegels gewährt Euch einen \"Magisches Gespür\"-Segen, während Ihr Euch auf Castora befindet.",
+        "instruction": "Erhaltet einen \"Magisches Gespür\"-Segen, wenn Ihr einen Zauberspiegel abschließt. Dieser Segen funktioniert nur auf Castora.\n\nNach Abschluss eines Zauberspiegels werden die Standorte verborgener Truhen sichtbar.",
+        "icon": "https://render.guildwars2.com/file/FE1F99037071E5943C72F462AF2A220B363DBBFE/3772552.png",
+        "point_cost": 7,
+        "exp_cost": 5080000
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Schweberochen-Anpassung",
+    "requirement": "Schließt das Story-Kapitel \"Fester Boden\" von \"Guild Wars 2: Visions of Eternity\" ab, um den Schweberochen-Anpassungs-Beherrschungspfad freizuschalten.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/49F62CE6C3212BCABCA205F4766209C474377547/3713127.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Fortgeschrittene Hydrodynamik",
+        "description": "Lernt, mit dem Schweberochen ins Wasser zu tauchen.\n\nWenn Ihr auch die Schweberochen-Reittier-Beherrschung \"Über die Tiefen hinweg\" trainiert habt, erhöht dies außerdem die Boden-Grundgeschwindigkeit des Schweberochens und gewährt Euch 3 Sekunden lang Tarnung, wenn Ihr ein- oder auftaucht. (30 Sek. Erholzeit)",
+        "instruction": "Ihr könnt nun mit dem Schweberochen tauchen. Verwendet dazu die gerade freigeschaltete Tauchen-Fertigkeit auf der Fertigkeiten-Leiste des Schweberochens.\n\nWenn Ihr auch die Schweberochen-Reittier-Beherrschung \"Über die Tiefen hinweg\" trainiert habt, erhöht dies außerdem die Boden-Grundgeschwindigkeit des Schweberochens und gewährt Euch 3 Sekunden lang Tarnung, wenn Ihr ein- oder auftaucht. (30 Sek. Erholzeit)",
+        "icon": "https://render.guildwars2.com/file/CAB4975575CAB107CC162979ED42B56929550DD7/3713079.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Castoranische Intuition",
+        "description": "Ändert die Fassrolle-Fertigkeit, die nun fortgesetztes Preschen gestattet, solange Ihr Ausdauer habt. Schaltet außerdem die Fähigkeit Eures Schweberochens frei, mit Äthersuche Bedrohungen und Schätze unter Wasser zu entdecken.",
+        "instruction": "Bei der Angriffsauftakt-Fertigkeit müsst Ihr nun zum Absitzen die Fertigkeiten-Taste gedrückt halten, anstatt zu klicken. Wenn Ihr die Fertigkeit anklickt, wird nun stattdessen das Preschen aktiviert und nicht das Absitzen.\n\nIhr könnt auch die neu freigeschaltete Äthersuche-Fertigkeit Eures Schweberochens nutzen, um einen pulsierenden Sonar ein- und auszuschalten, der im aktivierten Zustand Bedrohungen in der Nähe und verborgene Unterwasserschätze entdeckt.",
+        "icon": "https://render.guildwars2.com/file/76B76A022D40F0FE3732734D43F63CCC0A53ECCF/3713080.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Konvergente Evolution",
+        "description": "Erhaltet Zugriff auf den Sog-Schub und Wasser-Schubdüsen. Der Sog gewährt Euch einen Geschwindigkeitsverstärker über und unter Wasser, sowie erhöhte Schwebekraft. Wasser-Schubdüsen geben dem Schweberochen die Macht, gespeicherte magische Projektile auf Verbündete und Gegner in der Nähe zu feuern. Verbündete werden dadurch geheilt, Gegner erleiden Schaden. ",
+        "instruction": "Haltet, während der Sog-Schub aktiv ist, die Schweben-Fertigkeit gedrückt, sodass Ihr für die Dauer der Fertigkeit höher aufsteigen könnt, als das zuvor möglich war. \n\nFür die Wasser-Schubdüsen-Fertigkeit richtet Euren Schweberochen auf Gegner und Verbündete, die Ihr anvisieren möchtet, und schießt dann die Projektile ab.",
+        "icon": "https://render.guildwars2.com/file/C3761A1B313876C9D33BCB681A3AA739D30AEC03/3713081.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Reiter der reißenden Flut",
+        "description": "Erlangt die Fähigkeit, mit dem Schweberochen auf Ley-Linien über und unter Wasser und auf Aufwinden zu reiten.\n\nIhr könnt den Aufwind oder die Ley-Linie verlassen, indem Ihr die Angriffsauftakt-Fertigkeit \"Fassrolle\" des Schweberochens einsetzt.",
+        "instruction": "Ley-Linien sind Flüsse magischer Energie. Zur Nutzung der Ley-Linien lenkt Ihr einfach Euren Schweberochen in sie hinein, damit er durch den Energiefluss einen Schub erhält. <br>Aufwinde sind Säulen aus wirbelndem Wind. Um sie zu nutzen, fliegt Ihr einfach mit Eurem Reittier hinein, sodass es einen Aufwärtsschub erhält.",
+        "icon": "https://render.guildwars2.com/file/0D640356AC77460B6E2DC30890F6B310469DCAE7/3713082.png",
+        "point_cost": 4,
+        "exp_cost": 2032000
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Riss-Verstärkung",
+    "requirement": "Sprecht mit Vanak Glaubensläufer am Strand der Wracks oder in der Leyquellen-Senke, um den Beherrschungspfad \"Riss-Verstärkung\" freizuschalten.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/CE9CA45178FDD30608C1E37D0A1C1D3C25F0B20A/3807271.png",
+    "region": "Magic",
+    "levels": [
+      {
+        "name": "Riss-Spalte",
+        "description": "Aktiviert Riss-Spalte in Castora, die Euch zu einem aktiven Riss im derzeit von Euch gewählten Rang teleportieren können.",
+        "instruction": "Nach Verwendung der \"Nach Riss suchen\"-Fertigkeit des Herz des Obskuren neben der fließenden Energie, die Euch zu einem aktiven Riss-Event führt, werden die Standorte von Riss-Spalten auf Eurer Karte angezeigt. Wenn Ihr mit einem dieser Riss-Spalte interagiert, könnt Ihr direkt zu einem aktiven Riss teleportieren.\n\nDas Teleportieren macht Euch 30 Sekunden lang risskrank. Während dieser Zeit könnt Ihr keine Riss-Spalte verwenden.",
+        "icon": "https://render.guildwars2.com/file/F3C63BEB53DCBE326B0433063B1144BBF06B3275/3807257.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Überladene Risse",
+        "description": "Erhaltet die Fähigkeit, aktive Risse zu überladen. Das erhöht Herausforderung und Belohnungen für den Boss, der daraus erscheint.",
+        "instruction": "Nachdem das erste Riss-Event gelungen ist, habt Ihr für kurze Zeit die Möglichkeit, Köder vom entsprechenden Rang beizutragen, um den Boss zu überladen, der sich in der zweiten Phase des Events präsentiert.\n\nWenn genug Köder sichergestellt und ein Riss erfolgreich überladen wurde, erscheint nebst anderen Gefahren, die dem Riss selbst entstammen, ein beachtlicher Gegner mit erhöhtem Schaden, mehr Lebenspunkten und größerer Geschwindigkeit. Das Überwinden dieser größeren Herausforderung bringt auch größere Belohnungen ein, und zusätzliche Belohnungen für alle, die Köder beigetragen haben.",
+        "icon": "https://render.guildwars2.com/file/4850E00405A734D86C5C37DF792C3AE8373F6439/3807258.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Riss-Tour durch Tyria",
+        "description": "Ihr könnt nun Riss-Spalten auf Karten außerhalb von Castora aktivieren.",
+        "instruction": "",
+        "icon": "https://render.guildwars2.com/file/D7B3EAD7B962C9DB925D9DC8026950BC00CD80EC/3807259.png",
+        "point_cost": 4,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Tyria überladen",
+        "description": "Ihr könnt nun alle Beherrschungs-Risse in Tyria freischalten.",
+        "instruction": "Nachdem das erste Riss-Event gelungen ist, habt Ihr für kurze Zeit die Möglichkeit, Köder vom entsprechenden Rang beizutragen, um den Boss zu überladen, der sich in der zweiten Phase des Events präsentiert.\n\nWenn genug Köder sichergestellt und ein Riss erfolgreich überladen wurde, erscheint nebst anderen Gefahren, die dem Riss selbst entstammen, ein beachtlicher Gegner mit erhöhtem Schaden, mehr Lebenspunkten und größerer Geschwindigkeit. Das Überwinden dieser größeren Herausforderung bringt auch größere Belohnungen ein, und zusätzliche Belohnungen für alle, die Köder beigetragen haben.",
+        "icon": "https://render.guildwars2.com/file/B611B10391103A565AE20CC8731533BE7409CDC6/3807260.png",
+        "point_cost": 5,
+        "exp_cost": 2032000
+      }
+    ]
+  }
+]

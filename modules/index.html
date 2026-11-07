@@ -75,7 +75,137 @@
 			#global-tooltip { position: fixed; display: none; background: rgba(15, 12, 10, 0.98); border: 1px solid var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); padding: 12px; font-size: 13px; z-index: 100000; pointer-events: none; white-space: normal; max-width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.8); line-height: 1.4; }
 			#toast-message { position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%); background: rgba(10, 8, 5, 0.95); border: 1px solid var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); padding: 10px 20px; font-size: 14px; z-index: 100001; pointer-events: none; white-space: nowrap; box-shadow: 0 0 15px rgba(0,0,0,0.9); text-transform: uppercase; letter-spacing: 1px; opacity: 0; transition: opacity 0.3s ease; display: none; }
 
-			#notification-stack { position: fixed; top: 60px; left: 50%; transform: translateX(-50%); z-index: 100002; display: flex; flex-direction: column; gap: 10px; pointer-events: none; width: 400px; }
+			#notification-stack { position: fixed; top: calc(var(--menu-height, 45px) + 145px); left: 50%; transform: translateX(-50%); z-index: 100002; display: flex; flex-direction: column; gap: 10px; pointer-events: none; width: 400px; }
+			/* Unlock Radar HUD */
+			#radar-hud {
+				position: fixed;
+				top: calc(var(--menu-height, 45px) + 18px);
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(10, 8, 5, 0.94);
+				border: 1px solid var(--border-color, #4a3b2a);
+				box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 0 5px rgba(226, 192, 125, 0.1);
+				border-radius: 4px;
+				padding: 6px 12px;
+				z-index: 99990;
+				color: var(--text-primary, #e2c07d);
+				font-family: "Crimson Text", serif;
+				display: none;
+				pointer-events: auto;
+				min-width: 420px;
+				max-width: 680px;
+				transition: opacity 0.3s ease;
+			}
+			#radar-hud-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid rgba(74, 59, 42, 0.6);
+				padding-bottom: 3px;
+				margin-bottom: 5px;
+			}
+			.radar-hud-title {
+				font-size: 11px;
+				font-weight: bold;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				color: #e2c07d;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+			}
+			.radar-hud-controls {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+			.radar-hud-icon {
+				cursor: pointer;
+				color: #8a7a5f;
+				font-size: 13px;
+				transition: color 0.2s;
+			}
+			.radar-hud-icon:hover { color: #e2c07d; }
+			.radar-hud-icon.close:hover { color: #ff4444; }
+			#radar-hud-list {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+			.radar-hud-row {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+				padding: 4px 8px;
+				border-radius: 2px;
+				background: rgba(25, 20, 15, 0.6);
+				border: 1px solid rgba(74, 59, 42, 0.35);
+				cursor: pointer;
+				font-size: 12px;
+			}
+			.radar-hud-row:hover {
+				background: rgba(45, 35, 25, 0.85);
+				border-color: rgba(226, 192, 125, 0.5);
+			}
+			.radar-row-left {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				flex: 1;
+			}
+			.radar-row-icon {
+				width: 16px;
+				height: 16px;
+				border-radius: 2px;
+				flex-shrink: 0;
+				object-fit: contain;
+			}
+			.radar-row-name {
+				font-weight: bold;
+				color: #fff;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.radar-row-desc {
+				color: #dcb36b;
+				font-size: 11px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.radar-row-right {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				flex-shrink: 0;
+				font-family: monospace;
+				font-size: 11px;
+				font-weight: bold;
+				color: #e2c07d;
+				font-variant-numeric: tabular-nums;
+			}
+			.radar-badge-dir {
+				background: #1a1510;
+				border: 1px solid #4a3b2a;
+				padding: 1px 4px;
+				border-radius: 2px;
+				color: #ffffff;
+			}
+			.radar-alt-up { color: #44ff44; font-weight: bold; }
+			.radar-alt-down { color: #ffaa44; font-weight: bold; }
+			.radar-hud-empty {
+				font-size: 11px;
+				font-style: italic;
+				color: #8a7a5f;
+				text-align: center;
+				padding: 6px 0;
+			}
+
 			.event-toast { background: rgba(10, 8, 5, 0.98); border: 1px solid var(--text-primary, #e2c07d); color: var(--text-primary, #e2c07d); padding: 12px 25px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 0 20px rgba(0,0,0,0.9); text-align: center; animation: fadeIn 0.3s ease; border-radius: 2px; }
 			@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -186,6 +316,24 @@
 
 		<div id="global-tooltip"></div>
 		<div id="toast-message"></div>
+		
+		<!-- On-Screen Unlock Radar HUD -->
+		<div id="radar-hud">
+			<div id="radar-hud-header">
+				<span class="radar-hud-title">
+					<img src="https://gw2ps.local/Assets/MenuIcons/nav_map.png" style="width:14px; height:14px; object-fit:contain;" />
+					UNLOCK RADAR
+				</span>
+				<div class="radar-hud-controls">
+					<span class="radar-hud-icon" onclick="window.toggleSidePanel('unlock_radar', false)" title="Configure Radar">&#9881;</span>
+					<span class="radar-hud-icon close" onclick="window.toggleRadarHud(false)" title="Hide Radar">&#10006;</span>
+				</div>
+			</div>
+			<div id="radar-hud-list">
+				<div class="radar-hud-empty">Scanning current map for untracked collectibles...</div>
+			</div>
+		</div>
+
 		<div id="notification-stack"></div>
 
 		<div id="map-switch-popup">
@@ -270,7 +418,7 @@
 
 		<script>
 			/*<![CDATA[*/
-			const APP_VERSION = "1.5.1";
+			const APP_VERSION = "1.5.2";
 			window.APP_VERSION = APP_VERSION;
 			window.activeMap = 'map';
 			window.pendingMapSwitch = null;
@@ -335,6 +483,10 @@
 					rightPanel.classList.add('wiki-mode', 'open');
 					document.getElementById('right-panel-close-btn').style.display = 'none';
 					document.getElementById('wiki-close-btn').style.display = 'flex';
+					window.isWikiOpen = true;
+					if (typeof window.updateRadarHudVisibility === 'function') {
+						window.updateRadarHudVisibility();
+					}
 				}
 			};
 
@@ -501,6 +653,10 @@
 				rightPanel.classList.remove('open', 'wiki-mode');
 				document.getElementById('wiki-close-btn').style.display = 'none';
 				document.getElementById('right-panel-close-btn').style.display = 'none';
+				window.isWikiOpen = false;
+				if (typeof window.updateRadarHudVisibility === 'function') {
+					window.updateRadarHudVisibility();
+				}
 			};
 
             window.closeTimerWatchlist = function() {
@@ -654,6 +810,10 @@
 				rightPanel.classList.remove('open', 'wide', 'wiki-mode');
 				document.getElementById('wiki-close-btn').style.display = 'none';
 				document.getElementById('right-panel-close-btn').style.display = 'none';
+				window.isWikiOpen = false;
+				if (typeof window.updateRadarHudVisibility === 'function') {
+					window.updateRadarHudVisibility();
+				}
 
 				const leftPanel = document.getElementById('side-panel');
 				const mapFrame = document.getElementById('map-frame');
@@ -715,11 +875,13 @@
 							frame.style.display = 'block'; 
 							frame.src = newSrc; 
 						}
-						if (['bank', 'map_options', 'material_storage', 'wide', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(module)) { panel.classList.add('wide'); } else { panel.classList.remove('wide'); }
+						if (['bank', 'map_options', 'material_storage', 'wide', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit', 'unlock_radar'].includes(module)) { panel.classList.add('wide'); } else { panel.classList.remove('wide'); }
 						panel.classList.add('open');
 						document.getElementById('left-panel-close-btn').style.display = 'flex';
 						if (mapFrame && mapFrame.contentWindow) { let isWide = panel.classList.contains('wide'); mapFrame.contentWindow.postMessage({ action: 'toggleMenuState', isOpen: true, isWide: isWide }, '*'); }
 					} else {
+						window.isWikiOpen = false;
+						if (typeof window.updateRadarHudVisibility === 'function') window.updateRadarHudVisibility();
 						window.showLoader('panel-loading-right');
 						frame.src = newSrc; panel.classList.remove('wide', 'wiki-mode'); document.getElementById('wiki-close-btn').style.display = 'none';
 						panel.classList.add('open');
@@ -879,23 +1041,8 @@
 					}
 					else if (data.action === 'setWikiLang' || data.action === 'languageChanged') {
 						localStorage.setItem('gw2_lang', data.lang);
-						const mapFrame = document.getElementById('map-frame');
-						if (mapFrame && mapFrame.contentWindow) {
-							mapFrame.contentWindow.location.reload();
-						}
-						const panelFrame = document.getElementById('panel-frame');
-						if (panelFrame && panelFrame.contentWindow) {
-							try {
-								panelFrame.contentWindow.postMessage({ action: 'languageChanged', lang: data.lang }, '*');
-							} catch (e) {}
-						}
-						const menuFrame = document.getElementById('menu-frame');
-						if (menuFrame && menuFrame.contentWindow) {
-							try {
-								menuFrame.contentWindow.postMessage({ action: 'languageChanged', lang: data.lang }, '*');
-							} catch (e) {}
-						}
 						localStorage.setItem('gw2_wiki_lang', data.lang);
+						window.postToFrames({ action: 'languageChanged', lang: data.lang });
 					}
 					else if (data.action === 'showTooltip') window.showTooltip(data.text, data.x, data.y, data.offsetTop, data.isRight);
 					else if (data.action === 'refreshClearsWatchlist') window.pollClearsWatchlist();
@@ -903,7 +1050,7 @@
 					else if (data.action === 'toast') window.showToast(data.msg, data.persistent);
 					else if (data.action === 'eventPop') window.showEventPop(data.msg);
 					else if (data.action === 'updateTPIndicator' || data.action === 'updateFarmingIndicator') { const menu = document.getElementById('menu-frame'); if (menu && menu.contentWindow) menu.contentWindow.postMessage(data, '*'); }
-					else if (data.action === 'switchAccount') { localStorage.setItem('gw2_active_key', data.apiKey); const leftFrame = document.getElementById('panel-frame'); const farmingFrame = document.getElementById('farming-frame'); const timersFrame = document.getElementById('timers-frame'); const fishingFrame = document.getElementById('fishing-frame'); if (leftFrame && leftFrame.contentWindow) leftFrame.contentWindow.postMessage(data, '*'); if (farmingFrame && farmingFrame.contentWindow) farmingFrame.contentWindow.postMessage(data, '*'); if (timersFrame && timersFrame.contentWindow) timersFrame.contentWindow.postMessage(data, '*'); if (fishingFrame && fishingFrame.contentWindow) fishingFrame.contentWindow.postMessage(data, '*'); pollTrackerProgress(); checkDeliveries(); }
+					else if (data.action === 'switchAccount') { localStorage.setItem('gw2_active_key', data.apiKey); window.postToFrames(data); pollTrackerProgress(); checkDeliveries(); }
 					else if (data.action === 'trackAchievement') { trackedAchievements[data.id] = data.payload; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'untrackAchievement') { delete trackedAchievements[data.id]; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'toggleTracker') window.toggleTrackerOverlay();
@@ -1012,7 +1159,7 @@
 						window.showLoader('panel-loading');
 						frame.src = newSrc;
 						panel.classList.add('open');
-						if (['bank', 'map_options', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit'].includes(moduleName)) { 
+						if (['bank', 'map_options', 'material_storage', 'wardrobe', 'characters', 'hero', 'planner', 'inventory', 'recipes', 'trading', 'achievements', 'timers', 'currencies', 'farming', 'account_search', 'clears', 'fishing', 'pvp', 'audit', 'account_audit', 'unlock_radar'].includes(moduleName)) { 
 							panel.classList.add('wide'); 
 						} else { 
 							panel.classList.remove('wide'); 
@@ -1097,7 +1244,7 @@
                     const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
                     const apiBase = isDevMode 
                         ? "https://gw2ps.local/Data/" 
-                        : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+                        : "https://data.tyrianlens.com/";
 
                     const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('motd.json') : null) || await fetch(apiBase + 'motd.json', { cache: "no-store" });
                     if (!res.ok) return;
@@ -1143,5 +1290,6 @@
 			document.addEventListener('contextmenu', e => e.preventDefault());
 			/*]]>*/
 		</script>
+		<script src="radar_engine.js"></script>
 	</body>
 </html>

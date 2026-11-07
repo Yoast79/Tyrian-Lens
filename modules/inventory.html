@@ -89,15 +89,15 @@
 	<body>
 		<div id="main-ui" style="display:none; height: 100%; flex-direction: column;">
 			<div class="title-bar">
-				<div class="section-title">Inventory</div>
+				<div class="section-title" data-i18n="inventory.title">Inventory</div>
 				<div class="title-controls">
 
 					<select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
-						<option value="default">Sort by: Default</option>
-						<option value="instant_high">Instant Sell: High -> Low</option>
-						<option value="instant_low">Instant Sell: Low -> High</option>
-						<option value="list_high">Listing Price: High -> Low</option>
-						<option value="list_low">Listing Price: Low -> High</option>
+						<option value="default" data-i18n="inventory.sort_default">Sort by: Default</option>
+						<option value="instant_high" data-i18n="inventory.sort_instant_high">Instant Sell: High -> Low</option>
+						<option value="instant_low" data-i18n="inventory.sort_instant_low">Instant Sell: Low -> High</option>
+						<option value="list_high" data-i18n="inventory.sort_list_high">Listing Price: High -> Low</option>
+						<option value="list_low" data-i18n="inventory.sort_list_low">Listing Price: Low -> High</option>
 					</select>
 				</div>
 			</div>
@@ -106,11 +106,11 @@
 					<div style="display: flex; flex-direction: column; gap: 8px;">
 						<div class="toggle-container" id="all-char-toggle" onclick="toggleAllChars()">
 							<div class="toggle-switch"></div>
-							<span>SHOW ALL CHARACTERS</span>
+							<span data-i18n="inventory.show_all_characters">SHOW ALL CHARACTERS</span>
 						</div>
 						<div class="toggle-container" id="bag-toggle" onclick="toggleBags()">
 							<div class="toggle-switch"></div>
-							<span>SHOW BAGS</span>
+							<span data-i18n="inventory.show_bags">SHOW BAGS</span>
 						</div>
 					</div>
 				</div>
@@ -128,7 +128,7 @@
 
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" />
-			<div>SYNCING INVENTORY...</div>
+			<div data-i18n="inventory.syncing">SYNCING INVENTORY...</div>
 		</div>
 
 		<script>

@@ -43,3 +43,9 @@ setup_script.iss
 # Backups and local builds
 *.bak
 [Oo]utput/
+
+# Cloudflare & Secrets
+r2_config.json
+.env
+.env.*
+r2_credentials.json

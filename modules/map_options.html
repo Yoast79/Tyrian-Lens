@@ -196,7 +196,7 @@
 					const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
 					const apiBase = isDevMode 
 						? "https://gw2ps.local/Data/" 
-						: "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+						: "https://data.tyrianlens.com/";
 
 					const response = (window.DataLoader ? await window.DataLoader.fetchDataFile("map_options_structure.json") : null) || await fetch(apiBase + "map_options_structure.json?t=" + Date.now());
 					if (!response.ok) throw new Error("Failed to load map options structure");
@@ -308,6 +308,7 @@
 				// For Mastery Insights, render with "hide completed" checkbox
 				if (item.id === 'mastery') {
 					const iconHtml = item.icon ? `<img class="node-icon" src="${item.icon}">` : '';
+					const hideCompletedText = window.DataLoader ? window.DataLoader.t('map_options.hide_completed', 'hide completed') : 'hide completed';
 					return `
 					<div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 10px;">
 						<label class="filter-option"${tooltipAttr} style="margin: 0; padding: 6px 0; flex-grow: 1; display: flex; align-items: center;">
@@ -318,7 +319,7 @@
 						</label>
 						<label style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--text-muted, #8a7a5f); cursor: pointer; text-transform: uppercase; flex-shrink: 0; user-select: none;">
 							<input type="checkbox" id="hide-completed-mastery" onchange="toggleHideCompletedMastery(this.checked)" style="display: inline-block; cursor: pointer; width: 12px; height: 12px; accent-color: var(--border-highlight, #e2c07d); margin: 0;">
-							<span>hide completed</span>
+							<span data-i18n="map_options.hide_completed">${hideCompletedText}</span>
 						</label>
 					</div>`;
 				}

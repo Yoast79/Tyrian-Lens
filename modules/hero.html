@@ -143,7 +143,7 @@
 
 					<div class="skills-panel">
 						<div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px; margin-bottom: 10px;">
-							<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff);">SKILLS</div>
+							<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff);" data-i18n="hero.skills">SKILLS</div>
 							<div style="display:flex; gap:10px; align-items:center;">
 								<div id="btn-env-land" style="width:22px; height:22px; cursor:pointer;" onclick="setEnv('land')">
 									<img src="https://wiki.guildwars2.com/images/3/34/Mine_resource_%28map_icon%29.png" style="width:100%; height:100%;" />
@@ -153,14 +153,14 @@
 								</div>
 							</div>
 						</div>
-						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;">WEAPON</div>
+						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;" data-i18n="hero.weapon">WEAPON</div>
 						<div class="skill-row" id="weapon-skills" style="margin-bottom: 12px; gap:6px;"></div>
-						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;">UTILITY</div>
+						<div style="font-size: 10px; color: var(--text-muted, #8a7a5f); letter-spacing: 1px; margin-bottom:4px;" data-i18n="hero.utility">UTILITY</div>
 						<div class="skill-row" id="utility-skills" style="gap:6px;"></div>
 					</div>
 
 					<div class="build-panel">
-						<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px;">BUILD</div>
+						<div style="font-size: 14px; font-weight:bold; color: var(--text-primary, #fff); margin-bottom: 10px; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 5px;" data-i18n="hero.build">BUILD</div>
 						<div class="template-row" id="build-tabs" style="margin-bottom: 10px; justify-content: flex-start;"></div>
 						<div id="build-display" style="display:flex; flex-direction:column; gap:6px;"></div>
 					</div>
@@ -190,7 +190,7 @@
 
 		<div id="loader" class="loading">
 			<img src="https://gw2ps.local/Assets/Icons/Tyrian_Lens_transparent.png" style="width: 400px; height: 400px; margin-bottom: 30px; object-fit: contain;" />
-			<div>SYNCING HERO DATA...</div>
+			<div data-i18n="hero.syncing">SYNCING HERO DATA...</div>
 		</div>
 
 		<script>
@@ -668,7 +668,7 @@
             if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
             // Pre-load planner db for translation
-            window.PLANNER_DB = await UTILS.fetchSafe('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/planner_db.json');
+            window.PLANNER_DB = (window.DataLoader ? await window.DataLoader.fetchDataJSON('planner_db.json') : null) || await UTILS.fetchSafe('https://data.tyrianlens.com/planner_db.json');
 
             const activeKey = localStorage.getItem('gw2_active_key'); if (!activeKey) return;
             const res = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters?access_token=${activeKey}`);
@@ -703,7 +703,7 @@
             const [tabs, buildTabs, prof] = await Promise.all([
                 UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/equipmenttabs?tabs=all&access_token=${activeKey}`),
                 UTILS.fetchSafe(`https://api.guildwars2.com/v2/characters/${encodeURIComponent(name)}/buildtabs?tabs=all&access_token=${activeKey}`),
-                UTILS.fetchSafe(`https://api.guildwars2.com/v2/professions/${fullData.profession}?v=2019-12-19T00:00:00Z`)
+                UTILS.fetchSafe(`https://api.guildwars2.com/v2/professions/${fullData.profession}?v=2019-12-19T00:00:00Z&lang=${(window.DataLoader ? window.DataLoader.getLanguage() : (localStorage.getItem("gw2_lang") || "en"))}`)
             ]);
             fullData.full_tabs = Array.isArray(tabs) ? tabs : [];
             fullData.build_tabs = Array.isArray(buildTabs) ? buildTabs : [];
@@ -723,37 +723,39 @@
                 }
             });
             
+            const lang = window.DataLoader ? window.DataLoader.getLanguage() : (localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en');
             if (prof?.weapons) Object.values(prof.weapons).forEach(w => w.skills?.forEach(s => skills.push(s.id)));
             const uniqueStats = [...new Set(stats)].filter(id => id);
-            if (uniqueStats.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStats.join(',')}`); sData?.forEach(s => UTILS.statCache[s.id] = s.name); }
+            if (uniqueStats.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/item_stats?ids=${uniqueStats.join(',')}&lang=${lang}`); sData?.forEach(s => UTILS.statCache[s.id] = s.name); }
             const uniqueItems = [...new Set(items)].filter(id => id && !UTILS.itemCache[id]);
-            for (let i = 0; i < uniqueItems.length; i += 100) { const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
-            const iData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${uniqueItems.slice(i, i + 100).join(',')}&lang=${lang}`); iData?.forEach(it => UTILS.itemCache[it.id] = it); }
+            for (let i = 0; i < uniqueItems.length; i += 100) { 
+                const iData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/items?ids=${uniqueItems.slice(i, i + 100).join(',')}&lang=${lang}`); iData?.forEach(it => UTILS.itemCache[it.id] = it); 
+            }
             
             const uniqueSpecs = [...new Set(specIds)];
             if (uniqueSpecs.length) {
-                const spData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/specializations?ids=${uniqueSpecs.join(',')}`);
+                const spData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/specializations?ids=${uniqueSpecs.join(',')}&lang=${lang}`);
                 spData?.forEach(sp => { UTILS.itemCache['spec_' + sp.id] = sp; if (sp.minor_traits) traitIds.push(...sp.minor_traits); });
             }
             const uniqueTraits = [...new Set(traitIds)].filter(id => id);
             if (uniqueTraits.length) {
                 for (let i = 0; i < uniqueTraits.length; i += 100) {
-                    const trData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/traits?ids=${uniqueTraits.slice(i, i + 100).join(',')}`);
+                    const trData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/traits?ids=${uniqueTraits.slice(i, i + 100).join(',')}&lang=${lang}`);
                     trData?.forEach(tr => UTILS.itemCache['trait_' + tr.id] = tr);
                 }
             }
             const uniqueSkills = [...new Set(skills)].filter(id => id);
             let fq = [];
             for (let i = 0; i < uniqueSkills.length; i += 100) { 
-                const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${uniqueSkills.slice(i, i + 100).join(',')}`); 
+                const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${uniqueSkills.slice(i, i + 100).join(',')}&lang=${lang}`); 
                 sData?.forEach(sk => { UTILS.itemCache['skill_' + sk.id] = sk; if (sk.flip_skill) fq.push(sk.flip_skill); if (sk.next_chain) fq.push(sk.next_chain); }); 
             }
             const extra = [...new Set(fq)].filter(id => id && !UTILS.itemCache['skill_' + id]);
-            if (extra.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${extra.join(',')}`); sData?.forEach(sk => UTILS.itemCache['skill_' + sk.id] = sk); }
+            if (extra.length) { const sData = await UTILS.fetchSafe(`https://api.guildwars2.com/v2/skills?ids=${extra.join(',')}&lang=${lang}`); sData?.forEach(sk => UTILS.itemCache['skill_' + sk.id] = sk); }
             
             document.getElementById('display-name').innerText = name; 
             document.getElementById('display-level').innerText = ` [LVL ${fullData.level || '??'}] `;
-            document.getElementById('display-class').innerText = fullData.profession;
+            const pKey = (fullData.profession || '').toLowerCase(); document.getElementById('display-class').innerText = window.DataLoader ? window.DataLoader.t('professions.' + pKey, fullData.profession) : fullData.profession;
             CURRENT_ENV = 'land'; CURRENT_TERRA_WSET = 1; CURRENT_AQUA_WSET = 1;
             renderTemplates();
             window.renderBuildTabs();
@@ -906,7 +908,8 @@
                 d.upgrades?.forEach(uId => { if (UTILS.itemCache[uId]?.details?.type === "Rune") UTILS.activeRunes[uId] = (UTILS.activeRunes[uId] || 0) + 1; });
             });
             const finalHealth = (s.Vitality * 10) + ({ "Warrior":9212, "Necromancer":9212, "Revenant":5922, "Engineer":5922, "Ranger":5922, "Mesmer":5922, "Guardian":1645, "Thief":1645, "Elementalist":1645 }[fullData.profession] || 5922);
-            const attrs = [ {n:'Power',i:'att_power.png',v:s.Power},{n:'',i:'',v:''},{n:'Toughness',i:'att_toughness.png',v:s.Toughness},{n:'Armor',i:'att_armor.png',v:s.Armor+s.Toughness},{n:'Vitality',i:'att_vitality.png',v:s.Vitality},{n:'Health',i:'att_health.png',v:finalHealth.toLocaleString()},{n:'Precision',i:'att_precision.png',v:s.Precision},{n:'Crit Chance',i:'att_critical_chance.png',v:(5+(s.Precision-1000)/21).toFixed(2)+'%'},{n:'Ferocity',i:'att_ferocity.png',v:s.Ferocity},{n:'Crit Damage',i:'att_critical_damage.png',v:(150+s.Ferocity/15).toFixed(1)+'%'},{n:'Condition Damage',i:'att_condition_damage.png',v:s.ConditionDamage},{n:'Healing Power',i:'att_healing_power.png',v:s.HealingPower},{n:'Expertise',i:'att_expertise.png',v:s.Expertise},{n:'Condi Duration',i:'condition_duration.png',v:(s.Expertise/15).toFixed(2)+'%'},{n:'Concentration',i:'att_concentration.png',v:s.Concentration},{n:'Boon Duration',i:'att_boon_duration.png',v:(s.Concentration / 15).toFixed(2)+'%'},{n:'Agony Resistance',i:'att_agony_resistance.png',v:s.AgonyResistance},{n:'Magic Find',i:'att_magic_find.png',v:'---'} ];
+            const aTip = (k, def) => window.DataLoader ? window.DataLoader.t('attributes.' + k, def) : def;
+            const attrs = [ {n:aTip('power','Power'),i:'att_power.png',v:s.Power},{n:'',i:'',v:''},{n:aTip('toughness','Toughness'),i:'att_toughness.png',v:s.Toughness},{n:aTip('armor','Armor'),i:'att_armor.png',v:s.Armor+s.Toughness},{n:aTip('vitality','Vitality'),i:'att_vitality.png',v:s.Vitality},{n:aTip('health','Health'),i:'att_health.png',v:finalHealth.toLocaleString()},{n:aTip('precision','Precision'),i:'att_precision.png',v:s.Precision},{n:aTip('crit_chance','Crit Chance'),i:'att_critical_chance.png',v:(5+(s.Precision-1000)/21).toFixed(2)+'%'},{n:aTip('ferocity','Ferocity'),i:'att_ferocity.png',v:s.Ferocity},{n:aTip('crit_damage','Crit Damage'),i:'att_critical_damage.png',v:(150+s.Ferocity/15).toFixed(1)+'%'},{n:aTip('condition_damage','Condition Damage'),i:'att_condition_damage.png',v:s.ConditionDamage},{n:aTip('healing_power','Healing Power'),i:'att_healing_power.png',v:s.HealingPower},{n:aTip('expertise','Expertise'),i:'att_expertise.png',v:s.Expertise},{n:aTip('condi_duration','Condi Duration'),i:'condition_duration.png',v:(s.Expertise/15).toFixed(2)+'%'},{n:aTip('concentration','Concentration'),i:'att_concentration.png',v:s.Concentration},{n:aTip('boon_duration','Boon Duration'),i:'att_boon_duration.png',v:(s.Concentration / 15).toFixed(2)+'%'},{n:aTip('agony_resistance','Agony Resistance'),i:'att_agony_resistance.png',v:s.AgonyResistance},{n:aTip('magic_find','Magic Find'),i:'att_magic_find.png',v:'---'} ];
             document.getElementById('attr-display').innerHTML = attrs.map(a => `<div class="attr-item">${a.i ? `<img src="https://gw2ps.local/Assets/Icons/${a.i}" class="attr-icon" onmouseover="window.parent.postMessage({action:'showTooltip', text: '${a.n}', x: event.clientX, y: event.clientY}, '*')" onmouseout="window.parent.postMessage({action:'hideTooltip'}, '*')"/><span class="attr-val">${a.v}</span>` : ''}</div>`).join('');
             window.drawSkills(activeItems);
         };

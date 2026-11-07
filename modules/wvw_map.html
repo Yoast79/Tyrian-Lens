@@ -81,8 +81,9 @@
 
 			#scoreboard {
 			position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10000;
-			background: var(--bg-panel, rgba(10, 8, 5, 0.8)); border: 1px solid var(--border-color, #4a3b2a); padding: 10px 20px;
+			background: var(--bg-panel, rgba(10, 8, 5, 0.8)); border: 1px solid var(--border-color, #4a3b2a); padding: 8px 20px;
 			display: flex; gap: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; pointer-events: none;
+			transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 			}
 			.team-red { color: #ff4444; text-align: center; }
 			.team-blue { color: #44aaff; text-align: center; }
@@ -142,7 +143,7 @@
 
 		<div id="marker-remove-prompt" class="prompt-overlay">
 			<div style="color: #e2c07d; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;" data-i18n="wvw.remove_marker">Remove Marker?</div>
-			<button class="prompt-btn danger" onclick="confirmRemoveMarker()" data-i18n="common.delete">Remove</button>
+			<button class="prompt-btn danger" onclick="confirmRemoveMarker()" data-i18n="wvw.remove">Remove</button>
 			<button class="prompt-btn" onclick="cancelRemoveMarker()" data-i18n="common.cancel">Cancel</button>
 		</div>
 		<div id="coord-hud">
@@ -159,17 +160,17 @@
 
 		<div id="scoreboard">
 			<div class="team-red">
-				<span id="name-red">RED</span>
+				<span id="name-red" data-i18n="wvw.red">RED</span>
 				<span id="score-red" class="score-val">0</span>
 				<div id="skirmish-red" style="font-size: 10px; color: #ff4a4a; margin-top: -2px;">+ 0</div>
 			</div>
 			<div class="team-green">
-				<span id="name-green">GREEN</span>
+				<span id="name-green" data-i18n="wvw.green">GREEN</span>
 				<span id="score-green" class="score-val">0</span>
 				<div id="skirmish-green" style="font-size: 10px; color: #4ae25b; margin-top: -2px;">+ 0</div>
 			</div>
 			<div class="team-blue">
-				<span id="name-blue">BLUE</span>
+				<span id="name-blue" data-i18n="wvw.blue">BLUE</span>
 				<span id="score-blue" class="score-val">0</span>
 				<div id="skirmish-blue" style="font-size: 10px; color: #4a90e2; margin-top: -2px;">+ 0</div>
 			</div>
@@ -248,10 +249,28 @@
 
 			var pMarker = L.marker([0, 0], { interactive: false, pane: 'playerPane', icon: L.divIcon({ className: 'player-icon-container', html: '<img id="pImg" src="https://gw2ps.local/Assets/Icons/player_icon.png" style="width:32px;height:32px;" />', iconSize: [32, 32], iconAnchor: [16, 16] }) }).addTo(map);
 
+			const COMPASS_TIPS = {
+				'Track Player': 'wvw.compass_track',
+				'Edge of the Mists': 'wvw.compass_eotm',
+				'Green Alpine Borderlands': 'wvw.compass_green_alpine',
+				'Blue Alpine Borderlands': 'wvw.compass_blue_alpine',
+				'Red Desert Borderlands': 'wvw.compass_red_desert',
+				'Alpine Borderlands': 'wvw.compass_alpine',
+				'Desert Borderlands': 'wvw.compass_desert',
+				'Eternal Battlegrounds': 'wvw.compass_eb',
+				'Heart of the Mists': 'wvw.compass_hotm'
+			};
+
 			function showTip(txt, e) {
 				let text = txt;
-				if (window.DataLoader) {
-					text = window.DataLoader.t(txt, window.DataLoader.t('wvw.compass_' + txt.toLowerCase().replace(/ /g, '_'), window.DataLoader.t('wvw.' + txt, window.DataLoader.t('map.' + txt, txt))));
+				if (window.DataLoader && window.DataLoader.t) {
+					if (COMPASS_TIPS[txt]) {
+						text = window.DataLoader.t(COMPASS_TIPS[txt], txt);
+					} else if (typeof txt === 'string' && (txt.startsWith('wvw.') || txt.startsWith('common.') || txt.startsWith('map.'))) {
+						text = window.DataLoader.t(txt, txt);
+					} else {
+						text = window.DataLoader.t(txt, txt);
+					}
 				}
 				window.parent.postMessage({action:'showTooltip', text:text, x:e.clientX, y:e.clientY, offsetTop:45}, '*');
 			}
@@ -373,6 +392,8 @@
 					let markers = JSON.parse(localStorage.getItem(mapStorageKey) || '[]');
 					markers = markers.filter(m => m.id !== window.markerToRemoveId);
 					localStorage.setItem(mapStorageKey, JSON.stringify(markers));
+					let toastMsg = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.marker_removed', 'MARKER REMOVED') : 'MARKER REMOVED';
+					window.parent.postMessage({action:'toast', msg: toastMsg}, '*');
 				}
 				document.getElementById('marker-remove-prompt').style.display = 'none';
 				hideTip();
@@ -417,7 +438,9 @@
 
 			window.setTracking = function(v) {
 				isTracking = v; document.body.classList.toggle("tracking-active", v);
-				document.getElementById("track-status").innerText = v ? "ON" : "OFF";
+				let onText = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.hud.on', 'ON') : 'ON';
+				let offText = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.hud.off', 'OFF') : 'OFF';
+				document.getElementById("track-status").innerText = v ? onText : offText;
 				document.getElementById("track-status").style.color = v ? "#00ff00" : "#ff0000";
 				if(v) {
 					let pos = pMarker.getLatLng();
@@ -487,22 +510,74 @@
 					document.getElementById('skirmish-green').innerText = "+ " + currentSkirmish.scores.green;
 				}
 
-				document.getElementById('name-red').innerText = "RED";
-				document.getElementById('name-blue').innerText = "BLUE";
-				document.getElementById('name-green').innerText = "GREEN";
+				let tRed = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('wvw.red', 'RED') : 'RED';
+				let tBlue = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('wvw.blue', 'BLUE') : 'BLUE';
+				let tGreen = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('wvw.green', 'GREEN') : 'GREEN';
+
+				document.getElementById('name-red').innerText = tRed.toUpperCase();
+				document.getElementById('name-blue').innerText = tBlue.toUpperCase();
+				document.getElementById('name-green').innerText = tGreen.toUpperCase();
 				
 				document.getElementById('nav-red').dataset.name = "Desert Borderlands";
 				document.getElementById('nav-blue').dataset.name = "Alpine Borderlands";
 				document.getElementById('nav-green').dataset.name = "Alpine Borderlands";
 			}
 
+			function updateScoreboardPosition(radarInfo) {
+				const sb = document.getElementById('scoreboard');
+				if (!sb) return;
+
+				let isRadarOnScreen = false;
+				let targetTop = 20;
+
+				if (radarInfo && typeof radarInfo.visible === 'boolean') {
+					isRadarOnScreen = radarInfo.visible;
+					targetTop = isRadarOnScreen ? (radarInfo.bottom || 185) : 20;
+				} else {
+					try {
+						if (window.parent && window.parent.document) {
+							const hud = window.parent.document.getElementById('radar-hud');
+							if (hud) {
+								const style = window.parent.getComputedStyle(hud);
+								const isWiki = window.parent.isWikiOpen === true;
+								if (style.display !== 'none' && style.visibility !== 'hidden' && !isWiki) {
+									isRadarOnScreen = true;
+									const rect = hud.getBoundingClientRect();
+									const menuEl = window.parent.document.getElementById('menu-container');
+									const menuHeight = menuEl ? menuEl.offsetHeight : 45;
+									const calcBottom = (rect.bottom > 0) ? (rect.bottom - menuHeight + 12) : 185;
+									targetTop = Math.max(140, Math.round(calcBottom));
+								}
+							}
+						}
+					} catch (e) {}
+
+					if (!isRadarOnScreen) {
+						try {
+							const settings = JSON.parse(localStorage.getItem('gw2_radar_settings') || '{}');
+							if (settings.enabled !== false && window.parent && !window.parent.isWikiOpen) {
+								const hud = window.parent?.document?.getElementById('radar-hud');
+								if (hud && window.parent.getComputedStyle(hud).display !== 'none') {
+									isRadarOnScreen = true;
+									targetTop = 185;
+								}
+							}
+						} catch (e) {}
+					}
+				}
+
+				sb.style.top = isRadarOnScreen ? (targetTop + 'px') : '20px';
+			}
+
 			async function loadDynamicObjectives(matchData) {
-				if(!window.objDetails) {
-					const objRes = await fetch("https://api.guildwars2.com/v2/wvw/objectives?ids=all");
+				const lang = (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+				if(!window.objDetails || window.objDetailsLang !== lang) {
+					const objRes = await fetch(`https://api.guildwars2.com/v2/wvw/objectives?ids=all&lang=${lang}`);
 					if(objRes.ok) {
 						const allObjs = await objRes.json();
 						window.objDetails = {};
 						allObjs.forEach(o => { window.objDetails[o.id] = o; });
+						window.objDetailsLang = lang;
 					} else return;
 				}
 				['camps', 'towers', 'keeps', 'castles', 'ruins'].forEach(k => subLayers[k].clearLayers());
@@ -536,9 +611,15 @@
 						let finalMarker = details.marker || defaultIcon;
 						let iconHtml = `<div style="background-color: ${colorHex}; border-radius: 50%; width: ${size}px; height: ${size}px; border: 2px solid #000; box-shadow: 0 0 5px rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center;"><img src="${finalMarker}" style="width: 80%; height: 80%;" /></div>`;
 						let mkr = L.marker(pos, { pane: 'iconPane', icon: L.divIcon({ className: 'wvw-objective-icon', html: iconHtml, iconSize: [size, size], iconAnchor: [size/2, size/2] }) });
-						mkr.on('mouseover', e => showTip(details.name + " (" + obj.owner + ")", e.originalEvent));
+						let typeFallback = details.type ? (window.DataLoader ? window.DataLoader.t('wvw.' + details.type.toLowerCase(), details.type) : details.type) : 'Objective';
+						let objName = details.name || typeFallback;
+						let ownerName = window.DataLoader ? window.DataLoader.t('wvw.' + owner, obj.owner || 'Neutral') : (obj.owner || 'Neutral');
+						mkr.on('mouseover', e => showTip(objName + " (" + ownerName + ")", e.originalEvent));
 						mkr.on('mouseout', hideTip);
-						if (details.chat_link) mkr.on('click', () => { navigator.clipboard.writeText(details.chat_link); window.parent.postMessage({action:'toast', msg:'CHATLINK COPIED'}, '*'); });
+						if (details.chat_link) {
+							const toastMsg = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.chatlink_copied', 'CHAT LINK COPIED') : 'CHAT LINK COPIED';
+							mkr.on('click', () => { navigator.clipboard.writeText(details.chat_link); window.parent.postMessage({action:'toast', msg: toastMsg}, '*'); });
+						}
 						mkr.addTo(subLayers[layerKey]);
 					});
 				});
@@ -546,26 +627,28 @@
 			}
 
 			async function loadStaticMapData() {
+				const lang = (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
 				const wvwMaps = [38, 95, 96, 1099, 968, 350];
 				window.sectorPolygons = {}; window.sectorBorders = {};
 				const mapLabels = [
-					{ name: "Alpine Borderlands", coords: [12516, 6918] }, 
-					{ name: "Desert Borderlands", coords: [10119, 10774] }, 
-					{ name: "Alpine Borderlands", coords: [11884, 14086] }, 
-					{ name: "Eternal Battlegrounds", coords: [14580, 10605] },
-					{ name: "Edge of the Mists", coords: [10000, 7545] },
-					{ name: "Heart of the Mists", coords: [7032, 5472] }
+					{ key: "wvw.compass_alpine", fallback: "Alpine Borderlands", coords: [12516, 6918] }, 
+					{ key: "wvw.compass_desert", fallback: "Desert Borderlands", coords: [10119, 10774] }, 
+					{ key: "wvw.compass_alpine", fallback: "Alpine Borderlands", coords: [11884, 14086] }, 
+					{ key: "wvw.compass_eb", fallback: "Eternal Battlegrounds", coords: [14580, 10605] },
+					{ key: "wvw.compass_eotm", fallback: "Edge of the Mists", coords: [10000, 7545] },
+					{ key: "wvw.compass_hotm", fallback: "Heart of the Mists", coords: [7032, 5472] }
 				];
 				mapLabels.forEach(ml => {
-					let m = L.marker(ml.coords, { pane: 'textPane', interactive: false, icon: L.divIcon({ className: 'map-label region-label', html: ml.name, iconSize: [400, 40] }) });
+					let name = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t(ml.key, ml.fallback) : ml.fallback;
+					let m = L.marker(ml.coords, { pane: 'textPane', interactive: false, icon: L.divIcon({ className: 'map-label region-label', html: name, iconSize: [400, 40] }) });
 					m.addTo(subLayers['map_text']);
 				});
 				for (let mapId of wvwMaps) {
 					try {
-						const mapRes = await fetch(`https://api.guildwars2.com/v2/maps/${mapId}`);
+						const mapRes = await fetch(`https://api.guildwars2.com/v2/maps/${mapId}?lang=${lang}`);
 						if(!mapRes.ok) continue;
 						const mapDef = await mapRes.json();
-						const res = await fetch(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapId}`);
+						const res = await fetch(`https://api.guildwars2.com/v2/continents/${mapDef.continent_id}/floors/${mapDef.default_floor}/regions/${mapDef.region_id}/maps/${mapId}?lang=${lang}`);
 						if(!res.ok) continue;
 						const data = await res.json();
 						
@@ -586,17 +669,29 @@
 								layerTarget = 'vista';
 							}
 							
+							let defaultName = (type === 'heropoint' || type === 'skill' || type === 'unlock') ? (window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point')
+								: (type === 'waypoint') ? (window.DataLoader ? window.DataLoader.t('common.waypoint', 'Waypoint') : 'Waypoint')
+								: (type === 'vista') ? (window.DataLoader ? window.DataLoader.t('common.vista', 'Vista') : 'Vista')
+								: (window.DataLoader ? window.DataLoader.t('common.point_of_interest', 'Point of Interest') : 'Point of Interest');
+							let mName = p.name || defaultName;
+
 							let m = L.marker([p.coord[1], p.coord[0]], { pane: 'staticPane', icon: L.icon({ iconUrl: iconUrl, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
-							m.on('mouseover', e => showTip(p.name || type, e.originalEvent));
+							m.on('mouseover', e => showTip(mName, e.originalEvent));
 							m.on('mouseout', hideTip);
-							if (p.chat_link) m.on('click', () => { navigator.clipboard.writeText(p.chat_link); window.parent.postMessage({action:'toast', msg:'CHATLINK COPIED'}, '*'); });
+							if (p.chat_link) {
+								const poiToast = (type === 'waypoint')
+									? ((window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.waypoint_copied', 'WAYPOINT COPIED') : 'WAYPOINT COPIED')
+									: ((window.DataLoader && window.DataLoader.t) ? window.DataLoader.t('map.toasts.poi_copied', 'POI COPIED') : 'POI COPIED');
+								m.on('click', () => { navigator.clipboard.writeText(p.chat_link); window.parent.postMessage({action:'toast', msg: poiToast}, '*'); });
+							}
 							subLayers[layerTarget].addLayer(m);
 						});
 
 						(data.skill_challenges || []).forEach(p => {
 							let iconUrl = "https://gw2ps.local/Assets/Icons/heropoint_discovered.png";
 							let m = L.marker([p.coord[1], p.coord[0]], { pane: 'staticPane', icon: L.icon({ iconUrl: iconUrl, iconSize: [mSize, mSize], iconAnchor: [mAnchor, mAnchor] }) });
-							m.on('mouseover', e => showTip(window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point', e.originalEvent));
+							let hpName = window.DataLoader ? window.DataLoader.t('common.heropoint', 'Hero Point') : 'Hero Point';
+							m.on('mouseover', e => showTip(hpName, e.originalEvent));
 							m.on('mouseout', hideTip);
 							subLayers['heropoint'].addLayer(m);
 						});
@@ -624,6 +719,10 @@
 				updateZoomVisibility();
 			}
 			window.addEventListener("message", function(event) { 
+				if (event.data && event.data.action === 'languageChanged') {
+					window.location.reload();
+					return;
+				}
 				if (event.data && event.data.action === 'toggleMapLayer') window.toggleMapLayer(event.data.name, event.data.isVisible); 
 				if (event.data && event.data.action === 'toggleMenuState') {
 					let isOpen = event.data.isOpen;
@@ -730,11 +829,30 @@
 						}, 60000);
 					}
 				}
+				if (event.data && event.data.action === 'radarHudState') {
+					updateScoreboardPosition(event.data);
+				}
+				if (event.data && event.data.action === 'radarSettingsChanged') {
+					updateScoreboardPosition();
+				}
 				if (event.data && event.data.action === 'updateTheme') {
 					document.body.setAttribute('data-theme', event.data.theme);
 				}
 			});
-			initWvW();
+			async function startWvW() {
+				if (window.DataLoader && window.DataLoader.loadTranslations) {
+					await window.DataLoader.loadTranslations();
+					if (window.DataLoader.applyTranslations) {
+						window.DataLoader.applyTranslations();
+					}
+				}
+				updateScoreboardPosition();
+				try { if (window.parent) window.parent.postMessage({ action: 'requestRadarHudState' }, '*'); } catch(e) {}
+				setInterval(updateScoreboardPosition, 1000);
+				setTracking(true);
+				await initWvW();
+			}
+			startWvW();
 			// --- TIMEZONE-AWARE MAP COMPASS CLOCK ENGINE ---
 			function tickCompassClock() {
 				const now = new Date();

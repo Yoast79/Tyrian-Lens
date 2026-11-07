@@ -296,6 +296,11 @@
 			}
 
 			window.addEventListener('message', function(event) {
+                if (event.data && event.data.action === 'languageChanged') {
+                    if (window.DataLoader && window.DataLoader.loadTranslations) {
+                        window.DataLoader.loadTranslations(true).then(() => applySettingsI18n());
+                    }
+                }
 				if (event.data && event.data.action === 'updateAvailable') {
 					checkUpdateBtn();
 				}
@@ -423,11 +428,11 @@
             }
 
             function updateWikiLanguage(val) {
+                localStorage.setItem('gw2_lang', val);
+                localStorage.setItem('gw2_wiki_lang', val);
                 if (window.DataLoader && window.DataLoader.loadTranslations) {
                     window.DataLoader.loadTranslations(true).then(() => applySettingsI18n());
                 }
-                localStorage.setItem('gw2_lang', val);
-                localStorage.setItem('gw2_wiki_lang', val);
                 window.parent.postMessage({action: 'setWikiLang', lang: val}, '*');
                 window.parent.postMessage({action: 'languageChanged', lang: val}, '*');
             }

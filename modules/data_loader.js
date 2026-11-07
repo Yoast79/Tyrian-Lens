@@ -17,7 +17,7 @@
                 return window.parent.isDevMode === true;
             }
         } catch (e) {}
-        return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === 'gw2ps.local';
     }
 
     function getCandidateUrls(file) {
@@ -30,6 +30,7 @@
 
         const lang = getLanguage();
         const isDev = isDevEnvironment();
+        const cloudflareBase = 'https://data.tyrianlens.com/';
         const githubBase = 'https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/';
         const localBase = 'https://gw2ps.local/Data/';
 
@@ -45,30 +46,36 @@
             const locAlt = `${lang}/${clean}`;
 
             if (isDev) {
-                // Dev mode (Visual Studio debug): Local first, then GitHub
+                // Local dev: local first, then Cloudflare, then GitHub fallback
                 candidates.push(localBase + locFile);
                 candidates.push(localBase + locAlt);
-                candidates.push(localBase + clean);
+                candidates.push(cloudflareBase + locFile);
+                candidates.push(cloudflareBase + locAlt);
                 candidates.push(githubBase + locFile);
                 candidates.push(githubBase + locAlt);
+                candidates.push(localBase + clean);
+                candidates.push(cloudflareBase + clean);
                 candidates.push(githubBase + clean);
             } else {
-                // Release mode: GitHub first for quick online updates, then Local fallback
-                candidates.push(githubBase + locFile);
-                candidates.push(githubBase + locAlt);
-                candidates.push(githubBase + clean);
+                // Production: Cloudflare remote first, then local fallback, then GitHub fallback
+                candidates.push(cloudflareBase + locFile);
+                candidates.push(cloudflareBase + locAlt);
                 candidates.push(localBase + locFile);
                 candidates.push(localBase + locAlt);
+                candidates.push(cloudflareBase + clean);
                 candidates.push(localBase + clean);
+                candidates.push(githubBase + locFile);
+                candidates.push(githubBase + clean);
             }
         } else {
-            // English or base file
             if (isDev) {
                 candidates.push(localBase + clean);
+                candidates.push(cloudflareBase + clean);
                 candidates.push(githubBase + clean);
             } else {
-                candidates.push(githubBase + clean);
+                candidates.push(cloudflareBase + clean);
                 candidates.push(localBase + clean);
+                candidates.push(githubBase + clean);
             }
         }
 

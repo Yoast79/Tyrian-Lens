@@ -113,6 +113,11 @@
 			}
 
 			window.onload = () => {
+				if (window.DataLoader && window.DataLoader.loadTranslations) {
+					window.DataLoader.loadTranslations().then(() => {
+						if (window.DataLoader.applyTranslations) window.DataLoader.applyTranslations();
+					});
+				}
 				let settings = JSON.parse(localStorage.getItem('gw2_wvw_settings') || '{}');
 				Object.keys(settings).forEach(key => {
 					let el = document.getElementById(key);

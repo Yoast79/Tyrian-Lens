@@ -1,429 +1,976 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
-		<script src="data_loader.js"></script>
-		<style>
-			::-webkit-scrollbar { width: 6px; }
-			::-webkit-scrollbar-track { background: var(--bg-panel, rgba(10,8,5,0.5)); }
-			::-webkit-scrollbar-thumb { background: var(--border-color, #4a3b2a); border-radius: 3px; }
-			* { cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important; margin: 0; padding: 0; box-sizing: border-box; }
-			body { background: transparent; color: var(--text-primary, #e2c07d); font-family: "Crimson Text", serif; padding: 15px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; text-transform: uppercase; }
-			.header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border-color, #4a3b2a); padding-bottom: 10px; margin-bottom: 15px; }
-			.section-title { font-size: 16px; letter-spacing: 2px; color: var(--text-muted, #8a7a5f); flex-shrink: 0; font-weight: bold; }
-			.ap-stats { text-align: right; font-size: 10px; color: var(--text-muted, #8a7a5f); }
-			.ap-stats .total { font-size: 18px; color: var(--text-primary, #e2c07d); font-weight: bold; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
-			.main-layout { display: flex; flex: 1; min-height: 0; gap: 15px; }
-			.nav-panel { width: 240px; flex-shrink: 0; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color, #2a2015); padding: 5px; display: flex; flex-direction: column; gap: 5px; overflow: hidden; }
-			.group-btn { width: 100%; background: var(--bg-button, #1a1510); border: none; color: var(--text-primary, #e2c07d); padding: 10px; text-align: left; font-size: 11px; font-weight: bold; cursor: pointer; border-bottom: 1px solid var(--border-color, #2a2015); display: flex; justify-content: space-between; }
-			.group-btn:hover { box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
-			.group-btn::after { content: '▼'; font-size: 8px; transition: 0.3s; color: var(--border-color, #4a3b2a); }
-			.group-btn.active::after { transform: rotate(180deg); color: var(--text-primary, #e2c07d); }
-			.cats-container { display: none; background: rgba(20,15,10,0.4); }
-			.cat-btn { width: 100%; background: transparent; border: none; color: var(--text-muted, #8a7a5f); padding: 8px 10px 8px 25px; text-align: left; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border-color, rgba(42, 32, 21, 0.5)); transition: 0.2s; }
-			.cat-btn:hover { color: var(--text-primary, #e2c07d); box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
-			.cat-btn.active { color: var(--text-primary, #e2c07d); background: color-mix(in srgb, var(--border-highlight, #e2c07d) 5%, transparent); }
-			.sub-btn { cursor: pointer; transition: 0.2s; }
-			.sub-btn:hover { color: var(--text-primary, #e2c07d); box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d); }
-			.content-panel { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 5px; }
-			.ach-card { background: var(--bg-panel, rgba(20,15,10,0.8)); border: 1px solid var(--border-color, #332a1e); display: flex; padding: 10px; padding-right: 40px; gap: 12px; position: relative; cursor: pointer; transition: 0.2s; }
-			.ach-card:hover { border-color: var(--border-highlight, #e2c07d); }
-			.ach-card.done { border-color: var(--success-color, #1A9306); background: rgba(26, 147, 6, 0.05); }
-			.ach-icon-wrap { width: 44px; height: 44px; flex-shrink: 0; pointer-events: none; }
-			.ach-icon { width: 100%; height: 100%; border: 1px solid var(--border-color, #4a3b2a); background: #000; }
-			.ach-info { flex: 1; display: flex; flex-direction: column; justify-content: center; pointer-events: none; }
-			.ach-title { font-size: 11px; font-weight: bold; color: var(--text-primary, #e2c07d); margin-bottom: 2px; }
-			.ach-req { font-size: 9px; color: var(--text-muted, #8a7a5f); text-transform: none; margin-bottom: 6px; line-height: 1.2; }
-			.prog-container { display: flex; align-items: center; gap: 10px; }
-			.prog-bg { flex: 1; height: 6px; background: #111; border: 1px solid var(--border-color, #4a3b2a); position: relative; }
-			.prog-fill { height: 100%; background: linear-gradient(90deg, var(--border-color, #4a3b2a), var(--text-primary, #e2c07d)); width: 0%; transition: width 0.5s ease; }
-			.prog-text { font-size: 9px; font-weight: bold; width: 60px; text-align: right; color: var(--text-primary, #e2c07d); }
-			.star-btn { cursor: pointer; width: 20px; height: 20px; opacity: 0.3; transition: 0.2s; position: absolute; top: 10px; right: 10px; background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat; z-index: 10; }
-			.star-btn:hover, .star-btn.active { opacity: 1; filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d)); }
-			.top-actions { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; gap: 10px; }
-			button.main-action { background: var(--bg-panel, rgba(20,15,10,0.9)); border: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 6px 12px; cursor: pointer; font-family: "Crimson Text", serif; text-transform: uppercase; font-size: 10px; font-weight: bold; transition: 0.2s; }
-			button.main-action:hover { background: var(--bg-button-hover, #e2c07d); color: var(--text-button-hover, #1a1510); border-color: var(--border-highlight, #e2c07d); }
-			button.main-action.active { background: var(--border-highlight, #e2c07d); color: var(--bg-dark, #000000); border-color: var(--border-highlight, #e2c07d); }
-			.fancy-toggle { position: relative; display: inline-block; width: 44px; height: 22px; vertical-align: middle; margin-left: 8px; }
-			.fancy-toggle input { opacity: 0; width: 0; height: 0; }
-			.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--bg-button, #1a1510); border: 1px solid var(--border-color, #4a3b2a); transition: .3s; border-radius: 22px; }
-			.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: var(--border-color, #4a3b2a); transition: .3s; border-radius: 50%; }
-			input:checked + .slider { background-color: var(--text-primary, #e2c07d); border-color: var(--text-primary, #e2c07d); }
-			input:checked + .slider:before { transform: translateX(22px); background-color: #000; }
-			#ach-modal { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.85); z-index:100; align-items:center; justify-content:center; padding:20px; }
-			.modal-content { background:var(--bg-panel, rgba(20,15,10,0.98)); border: 1px solid var(--text-primary, #e2c07d); width:100%; max-width:450px; max-height:100%; overflow-y:auto; padding:25px; position:relative; box-shadow: 0 0 20px #000; }
-			.close-modal { position:absolute; top:10px; right:15px; cursor:pointer; color:var(--text-muted, #8a7a5f); font-size:18px; transition:0.2s; }
 
-			/* Large UI Scaling Overrides */
-			body.ui-large .section-title { font-size: 20px; }
-			body.ui-large .group-btn { font-size: 13px; }
-			body.ui-large .cat-btn { font-size: 12px; padding: 10px 10px 10px 25px; }
-			body.ui-large .ach-card { padding: 12px; padding-right: 50px; }
-			body.ui-large .ach-icon-wrap { width: 52px; height: 52px; }
-			body.ui-large .ach-title { font-size: 13px; }
-			body.ui-large .ach-req { font-size: 11px; }
-			body.ui-large .prog-text { font-size: 11px; width: 70px; }
-			body.ui-large .main-action { font-size: 12px; padding: 8px 16px; }
-			body.ui-large .nav-panel { width: 280px; }
-			body.ui-large .ap-stats .total { font-size: 22px; }
-			body.ui-large .ap-stats { font-size: 12px; }
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://gw2ps.local/Assets/core.css" />
+    <script src="data_loader.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
 
-			/* Super Adventure Box Easter Egg */
-			.sab-glitch { image-rendering: pixelated; box-shadow: inset 0 0 0 2px #39ff14 !important; background: repeating-linear-gradient(0deg, rgba(57,255,20,0.05), rgba(57,255,20,0.05) 1px, transparent 1px, transparent 3px), rgba(20,15,10,0.8) !important; animation: sabGlitchAnim 4s infinite; }
-			.sab-glitch:hover { box-shadow: inset 0 0 0 2px #ff00ff !important; background: repeating-linear-gradient(0deg, rgba(255,0,255,0.05), rgba(255,0,255,0.05) 1px, transparent 1px, transparent 3px), rgba(30,22,15,0.9) !important; }
-			.sab-glitch .ach-title { color: #39ff14 !important; text-shadow: 1px 1px 0px #ff00ff; }
-			.sab-glitch .ach-icon { image-rendering: pixelated; }
-			@keyframes sabGlitchAnim {
-			0% { transform: translate(0) }
-			10% { transform: translate(-2px, 1px) }
-			11% { transform: translate(0) }
-			50% { transform: translate(2px, -1px); filter: hue-rotate(90deg); }
-			51% { transform: translate(0); filter: hue-rotate(0deg); }
-			90% { transform: translate(-1px, 2px) }
-			91% { transform: translate(0) }
-			100% { transform: translate(0) }
-			}
-		</style>
-	</head>
-	<body>
-		<div id="ui-root" style="display:flex; height:100%; flex-direction: column;">
-			<div class="header">
-				<div style="display:flex; align-items:center;">
-					<div class="section-title">Account Achievements</div>
-				</div>
-				<div id="ap-stats" class="ap-stats"></div>
-			</div>
-			<div class="top-actions">
-				<div style="display:flex; gap:10px; align-items:center;">
-					<button class="main-action" onclick="loadAchievementsMain()">ACHIEVEMENTS</button>
-					<button class="main-action" onclick="loadDailies()">DAILY</button>
-					<button class="main-action" onclick="loadMasteries()">MASTERIES</button>
-					<button class="main-action" onclick="loadWatchlistView()">WATCHLIST</button>
-				</div>
-				<div style="display:flex; align-items:center;">
-					<span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);">WATCHLIST OVERLAY</span>
-					<label class="fancy-toggle">
-						<input type="checkbox" id="overlay-toggle" onchange="if(Object.keys(tracked).length === 0) { this.checked = false; window.parent.postMessage({action:'toast', msg:'WATCHLIST IS EMPTY'}, '*'); return; } window.parent.postMessage({action:'toggleTracker'}, '*')" />
-						<span class="slider"></span>
-					</label>
-				</div>
-			</div>
-			<div class="main-layout">
-				<div class="nav-panel" id="nav-panel-container">
-					<div style="position: relative;">
-						<input type="text" id="ach-search" data-i18n-ph="common.search_general" placeholder="SEARCH..." style="width: 100%; background: var(--bg-button, #1a1510); border: none; border-bottom: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;" onkeyup="handleSearch(this.value)">
-							<span style="position: absolute; right: 8px; top: 10px; color: var(--text-muted, #8a7a5f); font-size: 12px; font-weight: bold; cursor: pointer;" onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
-						</div>
-					<div id="nav-panel" style="display: flex; flex-direction: column; overflow-y: auto; flex: 1; min-height: 0;"></div>
-				</div>
-				<div class="content-panel" id="content-panel"></div>
-			</div>
-		</div>
-		<div id="ach-modal">
-			<div class="modal-content">
-				<div class="close-modal" onclick="document.getElementById('ach-modal').style.display='none'">&#10006;</div>
-				<div id="modal-title" style="font-size:14px; font-weight:bold; color:var(--text-primary, #e2c07d); margin-bottom:10px; border-bottom:1px solid var(--border-color, #4a3b2a); padding-bottom:5px;"></div>
-				<div id="modal-desc" style="font-size:11px; color:var(--text-muted, #8a7a5f); text-transform:none; line-height:1.4; margin-bottom:15px;"></div>
-				<div id="modal-bits"></div>
-				<button id="modal-wiki-btn" class="main-action" style="margin-top:20px; width:100%;">OPEN WIKI</button>
-			</div>
-		</div>
+        ::-webkit-scrollbar-track {
+            background: var(--bg-panel, rgba(10, 8, 5, 0.5));
+        }
 
-		<script>
-			/*<![CDATA[*/
-			const activeKey = localStorage.getItem('gw2_active_key');
-            let indexData = null, accountProg = [], tracked = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
-            let accountMasteries = [], globalMasteries = [];
-            let currentView = 'dailies';
-            let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_achievements') || '{}');
-            let searchQuery = '';
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color, #4a3b2a);
+            border-radius: 3px;
+        }
 
-			async function fetchJSON(url) { 
-                try { const r = await fetch(url); return r.ok ? await r.json() : null; } 
-                catch(e) { return null; } 
+        * {
+            cursor: url("https://gw2ps.local/Assets/Icons/mouse_cursor.png"), auto !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: transparent;
+            color: var(--text-primary, #e2c07d);
+            font-family: "Crimson Text", serif;
+            padding: 15px;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--border-color, #4a3b2a);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: var(--text-muted, #8a7a5f);
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .ap-stats {
+            text-align: right;
+            font-size: 10px;
+            color: var(--text-muted, #8a7a5f);
+        }
+
+        .ap-stats .total {
+            font-size: 18px;
+            color: var(--text-primary, #e2c07d);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .main-layout {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+            gap: 15px;
+        }
+
+        .nav-panel {
+            width: 240px;
+            flex-shrink: 0;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color, #2a2015);
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            overflow: hidden;
+        }
+
+        .group-btn {
+            width: 100%;
+            background: var(--bg-button, #1a1510);
+            border: none;
+            color: var(--text-primary, #e2c07d);
+            padding: 10px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color, #2a2015);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .group-btn:hover {
+            box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d);
+        }
+
+        .group-btn::after {
+            content: '▼';
+            font-size: 8px;
+            transition: 0.3s;
+            color: var(--border-color, #4a3b2a);
+        }
+
+        .group-btn.active::after {
+            transform: rotate(180deg);
+            color: var(--text-primary, #e2c07d);
+        }
+
+        .cats-container {
+            display: none;
+            background: rgba(20, 15, 10, 0.4);
+        }
+
+        .cat-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--text-muted, #8a7a5f);
+            padding: 8px 10px 8px 25px;
+            text-align: left;
+            font-size: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color, rgba(42, 32, 21, 0.5));
+            transition: 0.2s;
+        }
+
+        .cat-btn:hover {
+            color: var(--text-primary, #e2c07d);
+            box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d);
+        }
+
+        .cat-btn.active {
+            color: var(--text-primary, #e2c07d);
+            background: color-mix(in srgb, var(--border-highlight, #e2c07d) 5%, transparent);
+        }
+
+        .sub-btn {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .sub-btn:hover {
+            color: var(--text-primary, #e2c07d);
+            box-shadow: inset 0 0 0 1px var(--border-highlight, #e2c07d);
+        }
+
+        .content-panel {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-right: 5px;
+        }
+
+        .ach-card {
+            background: var(--bg-panel, rgba(20, 15, 10, 0.8));
+            border: 1px solid var(--border-color, #332a1e);
+            display: flex;
+            padding: 10px;
+            padding-right: 40px;
+            gap: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .ach-card:hover {
+            border-color: var(--border-highlight, #e2c07d);
+        }
+
+        .ach-card.done {
+            border-color: var(--success-color, #1A9306);
+            background: rgba(26, 147, 6, 0.05);
+        }
+
+        .ach-icon-wrap {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+
+        .ach-icon {
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--border-color, #4a3b2a);
+            background: #000;
+        }
+
+        .ach-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .ach-title {
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--text-primary, #e2c07d);
+            margin-bottom: 2px;
+        }
+
+        .ach-req {
+            font-size: 9px;
+            color: var(--text-muted, #8a7a5f);
+            text-transform: none;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .prog-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .prog-bg {
+            flex: 1;
+            height: 6px;
+            background: #111;
+            border: 1px solid var(--border-color, #4a3b2a);
+            position: relative;
+        }
+
+        .prog-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--border-color, #4a3b2a), var(--text-primary, #e2c07d));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .prog-text {
+            font-size: 9px;
+            font-weight: bold;
+            width: 60px;
+            text-align: right;
+            color: var(--text-primary, #e2c07d);
+        }
+
+        .star-btn {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            opacity: 0.3;
+            transition: 0.2s;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: url("https://wiki.guildwars2.com/images/4/40/X-Ray_Vision_toggle_on.png") center/contain no-repeat;
+            z-index: 10;
+        }
+
+        .star-btn:hover,
+        .star-btn.active {
+            opacity: 1;
+            filter: drop-shadow(0 0 5px var(--text-primary, #e2c07d));
+        }
+
+        .top-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button.main-action {
+            background: var(--bg-panel, rgba(20, 15, 10, 0.9));
+            border: 1px solid var(--border-color, #4a3b2a);
+            color: var(--text-primary, #e2c07d);
+            padding: 6px 12px;
+            cursor: pointer;
+            font-family: "Crimson Text", serif;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        button.main-action:hover {
+            background: var(--bg-button-hover, #e2c07d);
+            color: var(--text-button-hover, #1a1510);
+            border-color: var(--border-highlight, #e2c07d);
+        }
+
+        button.main-action.active {
+            background: var(--border-highlight, #e2c07d);
+            color: var(--bg-dark, #000000);
+            border-color: var(--border-highlight, #e2c07d);
+        }
+
+        .fancy-toggle {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .fancy-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-button, #1a1510);
+            border: 1px solid var(--border-color, #4a3b2a);
+            transition: .3s;
+            border-radius: 22px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--border-color, #4a3b2a);
+            transition: .3s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--text-primary, #e2c07d);
+            border-color: var(--text-primary, #e2c07d);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(22px);
+            background-color: #000;
+        }
+
+        #ach-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--bg-panel, rgba(20, 15, 10, 0.98));
+            border: 1px solid var(--text-primary, #e2c07d);
+            width: 100%;
+            max-width: 450px;
+            max-height: 100%;
+            overflow-y: auto;
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 0 20px #000;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            color: var(--text-muted, #8a7a5f);
+            font-size: 18px;
+            transition: 0.2s;
+        }
+
+        /* Large UI Scaling Overrides */
+        body.ui-large .section-title {
+            font-size: 20px;
+        }
+
+        body.ui-large .group-btn {
+            font-size: 13px;
+        }
+
+        body.ui-large .cat-btn {
+            font-size: 12px;
+            padding: 10px 10px 10px 25px;
+        }
+
+        body.ui-large .ach-card {
+            padding: 12px;
+            padding-right: 50px;
+        }
+
+        body.ui-large .ach-icon-wrap {
+            width: 52px;
+            height: 52px;
+        }
+
+        body.ui-large .ach-title {
+            font-size: 13px;
+        }
+
+        body.ui-large .ach-req {
+            font-size: 11px;
+        }
+
+        body.ui-large .prog-text {
+            font-size: 11px;
+            width: 70px;
+        }
+
+        body.ui-large .main-action {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+
+        body.ui-large .nav-panel {
+            width: 280px;
+        }
+
+        body.ui-large .ap-stats .total {
+            font-size: 22px;
+        }
+
+        body.ui-large .ap-stats {
+            font-size: 12px;
+        }
+
+        /* Super Adventure Box Easter Egg */
+        .sab-glitch {
+            image-rendering: pixelated;
+            box-shadow: inset 0 0 0 2px #39ff14 !important;
+            background: repeating-linear-gradient(0deg, rgba(57, 255, 20, 0.05), rgba(57, 255, 20, 0.05) 1px, transparent 1px, transparent 3px), rgba(20, 15, 10, 0.8) !important;
+            animation: sabGlitchAnim 4s infinite;
+        }
+
+        .sab-glitch:hover {
+            box-shadow: inset 0 0 0 2px #ff00ff !important;
+            background: repeating-linear-gradient(0deg, rgba(255, 0, 255, 0.05), rgba(255, 0, 255, 0.05) 1px, transparent 1px, transparent 3px), rgba(30, 22, 15, 0.9) !important;
+        }
+
+        .sab-glitch .ach-title {
+            color: #39ff14 !important;
+            text-shadow: 1px 1px 0px #ff00ff;
+        }
+
+        .sab-glitch .ach-icon {
+            image-rendering: pixelated;
+        }
+
+        @keyframes sabGlitchAnim {
+            0% {
+                transform: translate(0)
             }
 
-			async function init() {
-				const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
-				if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+            10% {
+                transform: translate(-2px, 1px)
+            }
 
-                if (!activeKey) return;
-                document.getElementById('overlay-toggle').checked = localStorage.getItem('gw2_tracker_visible') === 'true';
+            11% {
+                transform: translate(0)
+            }
 
-                // Check cache first
-                const cachedAchs = localStorage.getItem('gw2_cache_achievements');
-                const cachedMasteries = localStorage.getItem('gw2_cache_masteries_global');
-                const cachedAccMasteries = localStorage.getItem('gw2_cache_masteries_account');
-                
-                if (cachedAchs) {
-                    accountProg = JSON.parse(cachedAchs);
-                    if (cachedMasteries) globalMasteries = JSON.parse(cachedMasteries);
-                    if (cachedAccMasteries) accountMasteries = JSON.parse(cachedAccMasteries);
+            50% {
+                transform: translate(2px, -1px);
+                filter: hue-rotate(90deg);
+            }
+
+            51% {
+                transform: translate(0);
+                filter: hue-rotate(0deg);
+            }
+
+            90% {
+                transform: translate(-1px, 2px)
+            }
+
+            91% {
+                transform: translate(0)
+            }
+
+            100% {
+                transform: translate(0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ui-root" style="display:flex; height:100%; flex-direction: column;">
+        <div class="header">
+            <div style="display:flex; align-items:center;">
+                <div class="section-title">Account Achievements</div>
+            </div>
+            <div id="ap-stats" class="ap-stats"></div>
+        </div>
+        <div class="top-actions">
+            <div style="display:flex; gap:10px; align-items:center;">
+                <button class="main-action" id="tab-btn-achievements" data-tab="achievements"
+                    data-i18n="achievements.tab_achievements" onclick="loadAchievementsMain()">ACHIEVEMENTS</button>
+                <button class="main-action" id="tab-btn-daily" data-tab="daily" data-i18n="achievements.tab_daily"
+                    onclick="loadDailies()">DAILY</button>
+                <button class="main-action" id="tab-btn-masteries" data-tab="masteries"
+                    data-i18n="achievements.tab_masteries" onclick="loadMasteries()">MASTERIES</button>
+                <button class="main-action" id="tab-btn-watchlist" data-tab="watchlist"
+                    data-i18n="achievements.tab_watchlist" onclick="loadWatchlistView()">WATCHLIST</button>
+            </div>
+            <div style="display:flex; align-items:center;">
+                <span style="font-size:10px; font-weight:bold; color:var(--text-muted, #8a7a5f);"
+                    data-i18n="achievements.watchlist_overlay">WATCHLIST OVERLAY</span>
+                <label class="fancy-toggle">
+                    <input type="checkbox" id="overlay-toggle"
+                        onchange="if(Object.keys(tracked).length === 0) { this.checked = false; window.parent.postMessage({action:'toast', msg:(window.DataLoader ? window.DataLoader.t('achievements.watchlist_empty', 'WATCHLIST IS EMPTY') : 'WATCHLIST IS EMPTY')}, '*'); return; } window.parent.postMessage({action:'toggleTracker'}, '*')" />
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="main-layout">
+            <div class="nav-panel" id="nav-panel-container">
+                <div style="position: relative;">
+                    <input type="text" id="ach-search" data-i18n-ph="common.search_general" placeholder="SEARCH..."
+                        style="width: 100%; background: var(--bg-button, #1a1510); border: none; border-bottom: 1px solid var(--border-color, #4a3b2a); color: var(--text-primary, #e2c07d); padding: 10px; padding-right: 25px; font-family: 'Crimson Text', serif; font-size: 10px; font-weight: bold; text-transform: uppercase; outline: none;"
+                        onkeyup="handleSearch(this.value)">
+                    <span
+                        style="position: absolute; right: 8px; top: 10px; color: var(--text-muted, #8a7a5f); font-size: 12px; font-weight: bold; cursor: pointer;"
+                        onclick="document.getElementById('ach-search').value=''; handleSearch('');">X</span>
+                </div>
+                <div id="nav-panel"
+                    style="display: flex; flex-direction: column; overflow-y: auto; flex: 1; min-height: 0;"></div>
+            </div>
+            <div class="content-panel" id="content-panel"></div>
+        </div>
+    </div>
+    <div id="ach-modal">
+        <div class="modal-content">
+            <div class="close-modal" onclick="document.getElementById('ach-modal').style.display='none'">&#10006;</div>
+            <div id="modal-title"
+                style="font-size:14px; font-weight:bold; color:var(--text-primary, #e2c07d); margin-bottom:10px; border-bottom:1px solid var(--border-color, #4a3b2a); padding-bottom:5px;">
+            </div>
+            <div id="modal-desc"
+                style="font-size:11px; color:var(--text-muted, #8a7a5f); text-transform:none; line-height:1.4; margin-bottom:15px;">
+            </div>
+            <div id="modal-bits"></div>
+            <button id="modal-wiki-btn" class="main-action" style="margin-top:20px; width:100%;"
+                data-i18n="achievements.open_wiki">OPEN WIKI</button>
+        </div>
+    </div>
+
+    <script>
+        /*<![CDATA[*/
+        let activeKey = localStorage.getItem('gw2_active_key');
+        let indexData = null, accountProg = [], tracked = JSON.parse(localStorage.getItem('gw2_tracked_achievements') || '{}');
+        let accountMasteries = [], globalMasteries = [];
+        let currentView = 'dailies';
+        let harmonicaState = JSON.parse(localStorage.getItem('gw2_harmonica_achievements') || '{}');
+        let searchQuery = '';
+
+        async function fetchJSON(url) {
+            try { const r = await fetch(url); return r.ok ? await r.json() : null; }
+            catch (e) { return null; }
+        }
+
+        async function fetchMasteriesData(lang) {
+            const targetLang = (lang || (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || 'en').toLowerCase().trim();
+            const cacheKey = 'gw2_cache_masteries_global_' + targetLang;
+
+            // 1. Direct local file (gw2ps.local)
+            try {
+                const locUrl = (targetLang !== 'en')
+                    ? `https://gw2ps.local/Data/${targetLang}/masteries_${targetLang}.json`
+                    : 'https://gw2ps.local/Data/masteries.json';
+                const r = await fetch(locUrl);
+                if (r && r.ok) {
+                    const data = await r.json();
+                    if (Array.isArray(data) && data.length > 0) {
+                        data._lang = targetLang;
+                        try { localStorage.setItem(cacheKey, JSON.stringify(data)); } catch (e) { }
+                        return data;
+                    }
                 }
-                
-                // Always try to refresh masteries if global data is missing
-                if (!globalMasteries || globalMasteries.length === 0) {
-                    const [prog, mGlob, mAcc] = await Promise.all([
-                        fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey),
-                        fetchJSON("https://api.guildwars2.com/v2/masteries?ids=all"),
-                        fetchJSON("https://api.guildwars2.com/v2/account/masteries?access_token=" + activeKey)
-                    ]);
-                    if (prog) {
-                        accountProg = prog;
-                        localStorage.setItem('gw2_cache_achievements', JSON.stringify(prog));
-                    }
-                    if (mGlob) {
-                        globalMasteries = mGlob;
-                        localStorage.setItem('gw2_cache_masteries_global', JSON.stringify(mGlob));
-                    }
-                    if (mAcc) {
-                        accountMasteries = mAcc;
-                        localStorage.setItem('gw2_cache_masteries_account', JSON.stringify(mAcc));
-                    }
-                }
+            } catch (e) { }
 
-                const acc = await fetchJSON("https://api.guildwars2.com/v2/account?access_token=" + activeKey);
-                try {
-                    const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('achievement_index.json') : null) || await fetch('https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/achievement_index.json', { cache: "no-store" });
-                    if (res.ok) { 
-                        indexData = await res.json(); 
-						indexData.categories = indexData.categories.filter(c => !c.n.includes("Character Adventure Guide"));
-						indexData.groups.forEach(g => {
-							g.cats = g.cats.filter(cid => indexData.categories.some(c => c.id === cid));
-						});
-
-                        if (acc) {
-                            let earnedAP = 0;
-                            accountProg.forEach(p => {
-                                const ach = indexData.achievements[p.id];
-                                if (ach && ach.t) {
-                                    let totalForThisAch = 0;
-                                    ach.t.forEach(tier => { if (p.done || p.current >= tier.count) totalForThisAch += (tier.points || 0); });
-                                    if (p.repeated && p.repeated > 0) {
-                                        let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
-                                        totalForThisAch += (p.repeated * ptsPerRep);
-                                    }
-                                    if (ach.p > 0 && totalForThisAch > ach.p) totalForThisAch = ach.p;
-                                    earnedAP += totalForThisAch;
-                                }
-                            });
-                            const legacyAP = Math.min(15000, (acc.daily_ap || 0) + (acc.monthly_ap || 0));
-                            const totalAP = legacyAP + earnedAP; 
-                            const nextChest = 500 - (totalAP % 500); 
-                            document.getElementById('ap-stats').innerHTML = 
-                                "<div style='font-size:18px; color:var(--text-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; gap:8px;'>" +
-                                totalAP.toLocaleString() + " <img src='https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png' style='width:16px;' alt='AP' />" +
-                                "</div>" +
-                                "<div style='font-size:10px; color:var(--text-muted); margin-top:4px;'>NEXT CHEST IN: <span style='color:var(--text-primary); font-weight:bold;'>" + nextChest + " AP</span></div>";
+            // 2. Try DataLoader fetch
+            try {
+                if (window.DataLoader && window.DataLoader.fetchDataFile) {
+                    const relPath = (targetLang !== 'en') ? `${targetLang}/masteries_${targetLang}.json` : 'masteries.json';
+                    const res = await window.DataLoader.fetchDataFile(relPath);
+                    if (res && res.ok) {
+                        const data = await res.json();
+                        if (Array.isArray(data) && data.length > 0) {
+                            data._lang = targetLang;
+                            try { localStorage.setItem(cacheKey, JSON.stringify(data)); } catch (e) { }
+                            return data;
                         }
-                        filterFestivals(); buildNav(); loadAchievementsMain(); 
                     }
-                } catch(e) { console.error("Index load fail"); }
-			}
+                }
+            } catch (e) { }
 
-            function filterFestivals() {
-                const festivalKeywords = ['Halloween', 'Wintersday', 'Super Adventure', 'Dragon Bash', 'Lunar', 'Four Winds', 'Festival'];
-                let festGrp = indexData.groups.find(g => g.n === 'Festivals');
-                if (!festGrp) { festGrp = { id: 'festivals', n: 'Festivals', order: 1.5, cats: [] }; indexData.groups.push(festGrp); }
-                indexData.groups.forEach(g => {
-                    if (g.n === 'Festivals') return;
-                    let remainingCats = [];
-                    g.cats.forEach(cid => {
-                        const c = indexData.categories.find(cat => cat.id === cid);
-                        if (c && festivalKeywords.some(kw => c.n.includes(kw))) { if (!festGrp.cats.includes(cid)) festGrp.cats.push(cid); } 
-                        else remainingCats.push(cid);
+            // 3. Fall back to live GW2 API with lang query param
+            try {
+                const mGlob = await fetchJSON(`https://api.guildwars2.com/v2/masteries?ids=all&lang=${targetLang}`);
+                if (mGlob && Array.isArray(mGlob) && mGlob.length > 0) {
+                    mGlob._lang = targetLang;
+                    try { localStorage.setItem(cacheKey, JSON.stringify(mGlob)); } catch (e) { }
+                    return mGlob;
+                }
+            } catch (e) { }
+
+            return null;
+        }
+
+        async function init() {
+            const settings = JSON.parse(localStorage.getItem('gw2_settings') || '{}');
+            if (settings.uiScaleLarge) document.body.classList.add('ui-large');
+
+            const currentLang = (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+            if (window.DataLoader && window.DataLoader.applyTranslations) window.DataLoader.applyTranslations(document);
+
+            if (!activeKey) return;
+            document.getElementById('overlay-toggle').checked = localStorage.getItem('gw2_tracker_visible') === 'true';
+
+            // Check cache first for current language
+            const cachedAchs = localStorage.getItem('gw2_cache_achievements');
+            const cachedMasteries = (currentLang === 'en')
+                ? (localStorage.getItem('gw2_cache_masteries_global_en') || localStorage.getItem('gw2_cache_masteries_global'))
+                : localStorage.getItem('gw2_cache_masteries_global_' + currentLang);
+            const cachedAccMasteries = localStorage.getItem('gw2_cache_masteries_account');
+
+            if (cachedAchs) {
+                try { accountProg = JSON.parse(cachedAchs); } catch (e) { }
+            }
+            if (cachedMasteries) {
+                try {
+                    const parsed = JSON.parse(cachedMasteries);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        globalMasteries = parsed;
+                        globalMasteries._lang = currentLang;
+                    }
+                } catch (e) { }
+            }
+            if (cachedAccMasteries) {
+                try { accountMasteries = JSON.parse(cachedAccMasteries); } catch (e) { }
+            }
+
+            // Refresh masteries if missing or wrong language
+            if (!globalMasteries || globalMasteries.length === 0 || globalMasteries._lang !== currentLang) {
+                globalMasteries = await fetchMasteriesData(currentLang);
+            }
+
+            // Account data fetch if missing
+            if (!accountProg || accountProg.length === 0 || !accountMasteries || accountMasteries.length === 0) {
+                const [prog, mAcc] = await Promise.all([
+                    (accountProg && accountProg.length) ? Promise.resolve(accountProg) : fetchJSON("https://api.guildwars2.com/v2/account/achievements?access_token=" + activeKey),
+                    (accountMasteries && accountMasteries.length) ? Promise.resolve(accountMasteries) : fetchJSON("https://api.guildwars2.com/v2/account/masteries?access_token=" + activeKey)
+                ]);
+                if (prog) {
+                    accountProg = prog;
+                    localStorage.setItem('gw2_cache_achievements', JSON.stringify(prog));
+                }
+                if (mAcc) {
+                    accountMasteries = mAcc;
+                    localStorage.setItem('gw2_cache_masteries_account', JSON.stringify(mAcc));
+                }
+            }
+
+            const acc = await fetchJSON("https://api.guildwars2.com/v2/account?access_token=" + activeKey);
+            try {
+                const res = (window.DataLoader ? await window.DataLoader.fetchDataFile('achievement_index.json') : null) || await fetch('https://data.tyrianlens.com/achievement_index.json', { cache: "no-store" });
+                if (res.ok) {
+                    indexData = await res.json();
+                    indexData.categories = indexData.categories.filter(c => !c.n.includes("Character Adventure Guide"));
+                    indexData.groups.forEach(g => {
+                        g.cats = g.cats.filter(cid => indexData.categories.some(c => c.id === cid));
                     });
-                    g.cats = remainingCats;
-                });
-            }
 
-            function getProg(id) {
-                return accountProg.find(p => p.id === parseInt(id)) || { current: 0, done: false };
-            }
-
-            function sortAchs(ids) {
-                return ids.sort((a, b) => {
-                    const pA = getProg(a).done || false;
-                    const pB = getProg(b).done || false;
-                    return pA === pB ? 0 : pA ? 1 : -1;
-                });
-            }
-
-            function setActiveTab(tabName) {
-                document.querySelectorAll('.main-action').forEach(btn => {
-                    if (btn.innerText.trim() === tabName) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
+                    if (acc) {
+                        let earnedAP = 0;
+                        accountProg.forEach(p => {
+                            const ach = indexData.achievements[p.id];
+                            if (ach && ach.t) {
+                                let totalForThisAch = 0;
+                                ach.t.forEach(tier => { if (p.done || p.current >= tier.count) totalForThisAch += (tier.points || 0); });
+                                if (p.repeated && p.repeated > 0) {
+                                    let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
+                                    totalForThisAch += (p.repeated * ptsPerRep);
+                                }
+                                if (ach.p > 0 && totalForThisAch > ach.p) totalForThisAch = ach.p;
+                                earnedAP += totalForThisAch;
+                            }
+                        });
+                        const legacyAP = Math.min(15000, (acc.daily_ap || 0) + (acc.monthly_ap || 0));
+                        const totalAP = legacyAP + earnedAP;
+                        const nextChest = 500 - (totalAP % 500);
+                        document.getElementById('ap-stats').innerHTML =
+                            "<div style='font-size:18px; color:var(--text-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; gap:8px;'>" +
+                            totalAP.toLocaleString() + " <img src='https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png' style='width:16px;' alt='AP' />" +
+                            "</div>" +
+                            "<div style='font-size:10px; color:var(--text-muted); margin-top:4px;'>NEXT CHEST IN: <span style='color:var(--text-primary); font-weight:bold;'>" + nextChest + " AP</span></div>";
                     }
-                });
-                // Clear search input and search query when changing main tabs
-                const searchInput = document.getElementById('ach-search');
-                if (searchInput) searchInput.value = '';
-                searchQuery = '';
-            }
-
-            window.handleSearch = function(val) {
-                searchQuery = val.toLowerCase();
-                if (searchQuery) {
-                    const isMasteryView = currentView === 'masteries' || currentView === 'mastery_search';
-                    if (isMasteryView) {
-                        currentView = 'mastery_search';
-                        renderMasterySearchResults();
-                    } else {
-                        currentView = 'search';
-                        renderSearchResults();
-                    }
-                } else {
-                    const mBtn = Array.from(document.querySelectorAll('.main-action')).find(b => b.innerText.includes('MASTERIES'));
-                    if (mBtn && mBtn.classList.contains('active')) {
+                    filterFestivals(); buildNav();
+                    if (currentView === 'masteries' || currentView === 'mastery_search') {
                         loadMasteries();
+                    } else if (currentView === 'dailies') {
+                        loadDailies();
+                    } else if (currentView === 'watchlist') {
+                        loadWatchlistView();
                     } else {
                         loadAchievementsMain();
                     }
                 }
-            };
+            } catch (e) { console.error("Index load fail"); }
+        }
 
-            function renderMasterySearchResults() {
-                const content = document.getElementById('content-panel');
-                let results = [];
-                
-                if (!globalMasteries) return;
+        function filterFestivals() {
+            if (!indexData || !indexData.groups || !indexData.categories) return;
+            const festivalKeywords = ['Halloween', 'Wintersday', 'Super Adventure', 'Dragon Bash', 'Lunar', 'Four Winds', 'Festival'];
+            let festGrp = indexData.groups.find(g => g.id === 'festivals' || g.n === 'Festivals');
+            if (!festGrp) {
+                const tFest = window.DataLoader ? window.DataLoader.t('achievements.festivals', 'Festivals') : 'Festivals';
+                festGrp = { id: 'festivals', n: tFest, order: 1.5, cats: [] };
+                indexData.groups.push(festGrp);
+            }
+            indexData.groups.forEach(g => {
+                if (g.id === 'festivals' || g.n === 'Festivals') return;
+                let remainingCats = [];
+                if (g.cats && Array.isArray(g.cats)) {
+                    g.cats.forEach(cid => {
+                        const c = indexData.categories.find(cat => cat.id === cid);
+                        if (c && festivalKeywords.some(kw => c.n && c.n.includes(kw))) {
+                            if (!festGrp.cats.includes(cid)) festGrp.cats.push(cid);
+                        } else {
+                            remainingCats.push(cid);
+                        }
+                    });
+                }
+                g.cats = remainingCats;
+            });
+        }
 
-                globalMasteries.forEach(m => {
-                    let match = m.name.toLowerCase().includes(searchQuery);
-                    if (!match && m.levels) {
-                        match = m.levels.some(l => l.name.toLowerCase().includes(searchQuery) || l.description.toLowerCase().includes(searchQuery));
-                    }
-                    if (match) results.push(m);
-                });
+        function getProg(id) {
+            return accountProg.find(p => p.id === parseInt(id)) || { current: 0, done: false };
+        }
 
-                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>MASTERY SEARCH RESULTS</div>";
-                if (results.length === 0) {
-                    html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO MASTERIES FOUND</div>";
+        function sortAchs(ids) {
+            return ids.sort((a, b) => {
+                const pA = getProg(a).done || false;
+                const pB = getProg(b).done || false;
+                return pA === pB ? 0 : pA ? 1 : -1;
+            });
+        }
+
+        function setActiveTab(tabKey) {
+            const key = (tabKey || '').toLowerCase();
+            document.querySelectorAll('.main-action').forEach(btn => {
+                const btnTab = (btn.dataset.tab || '').toLowerCase();
+                const btnId = (btn.id || '').toLowerCase();
+                const btnText = (btn.innerText || '').trim().toLowerCase();
+                const match = (btnTab === key) ||
+                    (btnId === ('tab-btn-' + key)) ||
+                    (btnText === key) ||
+                    (key === 'masteries' && (btnText.includes('master') || btnText.includes('beherrsch') || btnText.includes('maîtrise') || btnText.includes('maestría'))) ||
+                    (key === 'daily' && (btnText.includes('dail') || btnText.includes('täglich') || btnText.includes('quotidien') || btnText.includes('diario'))) ||
+                    (key === 'achievements' && (btnText.includes('achieve') || btnText.includes('erfolg') || btnText.includes('succès') || btnText.includes('logro'))) ||
+                    (key === 'watchlist' && (btnText.includes('watch') || btnText.includes('beobacht') || btnText.includes('suivi') || btnText.includes('seguimiento')));
+                btn.classList.toggle('active', !!match);
+            });
+            // Clear search input and search query when changing main tabs
+            const searchInput = document.getElementById('ach-search');
+            if (searchInput) searchInput.value = '';
+            searchQuery = '';
+        }
+
+        function handleSearch(val) {
+            window.handleSearch = handleSearch;
+            searchQuery = val.toLowerCase();
+            if (searchQuery) {
+                const isMasteryView = currentView === 'masteries' || currentView === 'mastery_search';
+                if (isMasteryView) {
+                    currentView = 'mastery_search';
+                    renderMasterySearchResults();
                 } else {
-                    results.forEach(m => {
-                        html += `
-                            <div class="ach-card" style="padding-right:15px;" onclick="window.selectMasteryTrack(${m.id})">
+                    currentView = 'search';
+                    renderSearchResults();
+                }
+            } else {
+                const mBtn = Array.from(document.querySelectorAll('.main-action')).find(b => (b.dataset.tab === 'masteries' || b.id === 'tab-btn-masteries' || b.innerText.includes('MASTERIES')));
+                if (mBtn && mBtn.classList.contains('active')) {
+                    loadMasteries();
+                } else {
+                    loadAchievementsMain();
+                }
+            }
+        };
+
+        function renderMasterySearchResults() {
+            const content = document.getElementById('content-panel');
+            if (!globalMasteries) return;
+            let results = [];
+            globalMasteries.forEach(m => {
+                let match = m.name.toLowerCase().includes(searchQuery);
+                if (!match && m.levels) {
+                    match = m.levels.some(l => l.name.toLowerCase().includes(searchQuery) || l.description.toLowerCase().includes(searchQuery));
+                }
+                if (match) results.push(m);
+            });
+
+            const tResults = window.DataLoader ? window.DataLoader.t('masteries.search_results', 'MASTERY SEARCH RESULTS') : 'MASTERY SEARCH RESULTS';
+            const tNone = window.DataLoader ? window.DataLoader.t('masteries.none_found', 'NO MASTERIES FOUND') : 'NO MASTERIES FOUND';
+            const tRegion = window.DataLoader ? window.DataLoader.t('masteries.region', 'REGION') : 'REGION';
+            const tTiers = window.DataLoader ? window.DataLoader.t('masteries.tiers', 'TIERS') : 'TIERS';
+
+            let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>" + tResults + "</div>";
+            if (results.length === 0) {
+                html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>" + tNone + "</div>";
+            } else {
+                results.forEach(m => {
+                    const regDisp = getRegionDisplayName(m.region, m.region);
+                    html += `
+                            <div class="ach-card" style="padding-right:15px;" onclick="selectMasteryTrack(${m.id})">
                                 <div class="ach-icon-wrap" style="background:rgba(0,0,0,0.4); border:1px solid var(--border-color); border-radius:4px; padding:4px;">
                                     <img src="${m.levels[0].icon}" class="ach-icon" style="border:none;">
                                 </div>
                                 <div class="ach-info">
                                     <div class="ach-title">${m.name.toUpperCase()}</div>
-                                    <div class="ach-req" style="color:var(--text-muted);">${m.region.toUpperCase()} REGION • ${m.levels.length} TIERS</div>
+                                    <div class="ach-req" style="color:var(--text-muted);">${regDisp.toUpperCase()} ${tRegion} • ${m.levels.length} ${tTiers}</div>
                                 </div>
                             </div>
                         `;
-                    });
-                }
-                content.innerHTML = html;
-            }
-
-            function renderSearchResults() {
-                const content = document.getElementById('content-panel');
-                let results = [];
-                Object.keys(indexData.achievements).forEach(id => {
-                    const ach = indexData.achievements[id];
-                    if (ach.n.toLowerCase().includes(searchQuery) || (ach.d && ach.d.toLowerCase().includes(searchQuery))) {
-                        results.push(id);
-                    }
                 });
-                
-                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>SEARCH RESULTS</div>";
-                if (results.length === 0) {
-                    html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO RESULTS FOUND</div>";
-                } else {
-                    let sortedIds = sortAchs(results);
-                    sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); });
-                }
-                content.innerHTML = html;
-                document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
             }
+            content.innerHTML = html;
+        }
 
-            function buildNav() {
-                const nav = document.getElementById('nav-panel'); nav.innerHTML = '';
-                indexData.groups.sort((a,b) => a.order - b.order).forEach(g => {
-                    const isOpen = harmonicaState[g.id] === true;
-                    const gBtn = document.createElement('button'); 
-                    gBtn.className = 'group-btn master-btn' + (isOpen ? ' active' : ''); 
-                    gBtn.innerText = g.n;
-                    gBtn.onclick = function() {
-                        this.classList.toggle('active');
-                        const nowOpen = this.classList.contains('active');
-                        this.nextElementSibling.style.display = nowOpen ? 'block' : 'none';
-                        harmonicaState[g.id] = nowOpen;
-                        localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
-                    };
-                    const catContainer = document.createElement('div'); 
-                    catContainer.className = 'cats-container';
-                    catContainer.style.display = isOpen ? 'block' : 'none';
+        function renderSearchResults() {
+            const content = document.getElementById('content-panel');
+            let results = [];
+            Object.keys(indexData.achievements).forEach(id => {
+                const ach = indexData.achievements[id];
+                if (ach.n.toLowerCase().includes(searchQuery) || (ach.d && ach.d.toLowerCase().includes(searchQuery))) {
+                    results.push(id);
+                }
+            });
+
+            let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>SEARCH RESULTS</div>";
+            if (results.length === 0) {
+                html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO RESULTS FOUND</div>";
+            } else {
+                let sortedIds = sortAchs(results);
+                sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); });
+            }
+            content.innerHTML = html;
+            document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
+        }
+
+        function buildNav() {
+            const nav = document.getElementById('nav-panel');
+            if (!nav) return;
+            nav.innerHTML = '';
+            if (!indexData || !indexData.groups) return;
+            indexData.groups.sort((a, b) => a.order - b.order).forEach(g => {
+                const isOpen = harmonicaState[g.id] === true;
+                const gBtn = document.createElement('button');
+                gBtn.className = 'group-btn master-btn' + (isOpen ? ' active' : '');
+                gBtn.innerText = g.n;
+                gBtn.onclick = function () {
+                    this.classList.toggle('active');
+                    const nowOpen = this.classList.contains('active');
+                    this.nextElementSibling.style.display = nowOpen ? 'block' : 'none';
+                    harmonicaState[g.id] = nowOpen;
+                    localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
+                };
+                const catContainer = document.createElement('div');
+                catContainer.className = 'cats-container';
+                catContainer.style.display = isOpen ? 'block' : 'none';
+                if (g.cats && Array.isArray(g.cats)) {
                     g.cats.forEach(cid => {
                         const c = indexData.categories.find(cat => cat.id === cid);
                         if (c) {
                             const cBtn = document.createElement('button'); cBtn.className = 'cat-btn sub-btn';
                             cBtn.innerHTML = "<img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:14px;' alt='icon' /> " + c.n;
-                            cBtn.onclick = function() { document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); renderCategory(c); };
+                            cBtn.onclick = function () { document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); renderCategory(c); };
                             catContainer.appendChild(cBtn);
                         }
                     });
-                    nav.appendChild(gBtn); nav.appendChild(catContainer);
-                });
-            }
+                }
+                nav.appendChild(gBtn); nav.appendChild(catContainer);
+            });
+        }
 
-            window.loadAchievementsMain = function() {
-                currentView = 'main';
-                setActiveTab('ACHIEVEMENTS');
-                buildNav();
-
+        function loadAchievementsMain() {
+            window.loadAchievementsMain = loadAchievementsMain;
+            currentView = 'main';
+            setActiveTab('achievements');
+            if (!indexData || !indexData.groups) {
                 const content = document.getElementById('content-panel');
-                const totalWatchlist = Object.keys(tracked).length;
-                
-                let groupStatsHtml = '';
-                indexData.groups.sort((a,b) => a.order - b.order).forEach(g => {
-                    let totalAchs = 0;
-                    let completedAchs = 0;
-                    let totalAP = 0;
-                    let earnedAP = 0;
-                    
-                    g.cats.forEach(cid => {
-                        const c = indexData.categories.find(cat => cat.id === cid);
-                        if (c) {
-                            c.achs.forEach(aid => {
-                                totalAchs++;
-                                const ach = indexData.achievements[aid];
-                                const prog = getProg(aid);
+                if (content) content.innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted);">' +
+                    (window.DataLoader ? window.DataLoader.t('common.loading', 'LOADING...') : 'LOADING...') + '</div>';
+                return;
+            }
+            buildNav();
+
+            const content = document.getElementById('content-panel');
+            const totalWatchlist = Object.keys(tracked).length;
+
+            let groupStatsHtml = '';
+            indexData.groups.sort((a, b) => a.order - b.order).forEach(g => {
+                let totalAchs = 0;
+                let completedAchs = 0;
+                let totalAP = 0;
+                let earnedAP = 0;
+
+                g.cats.forEach(cid => {
+                    const c = indexData.categories.find(cat => cat.id === cid);
+                    if (c) {
+                        c.achs.forEach(aid => {
+                            totalAchs++;
+                            const ach = indexData.achievements[aid];
+                            const prog = getProg(aid);
+                            if (prog.done) {
+                                completedAchs++;
+                            }
+                            if (ach) {
+                                totalAP += (ach.p || 0);
                                 if (prog.done) {
-                                    completedAchs++;
-                                }
-                                if (ach) {
-                                    totalAP += (ach.p || 0);
-                                    if (prog.done) {
-                                        earnedAP += (ach.p || 0);
-                                    } else if (ach.t && ach.t.length > 0) {
-                                        ach.t.forEach(tier => {
-                                            if (prog.current >= tier.count) earnedAP += (tier.points || 0);
-                                        });
-                                        if (prog.repeated && prog.repeated > 0) {
-                                            let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
-                                            earnedAP += (prog.repeated * ptsPerRep);
-                                        }
-                                        if (ach.p > 0 && earnedAP > ach.p) earnedAP = ach.p;
+                                    earnedAP += (ach.p || 0);
+                                } else if (ach.t && ach.t.length > 0) {
+                                    ach.t.forEach(tier => {
+                                        if (prog.current >= tier.count) earnedAP += (tier.points || 0);
+                                    });
+                                    if (prog.repeated && prog.repeated > 0) {
+                                        let ptsPerRep = ach.t.reduce((s, t) => s + (t.points || 0), 0);
+                                        earnedAP += (prog.repeated * ptsPerRep);
                                     }
+                                    if (ach.p > 0 && earnedAP > ach.p) earnedAP = ach.p;
                                 }
-                            });
-                        }
-                    });
-                    
-                    if (totalAchs === 0) return;
-                    
-                    const pct = Math.round((completedAchs / totalAchs) * 100);
-                    
-                    groupStatsHtml += `
+                            }
+                        });
+                    }
+                });
+
+                if (totalAchs === 0) return;
+
+                const pct = Math.round((completedAchs / totalAchs) * 100);
+
+                groupStatsHtml += `
                         <div class="ach-card" style="padding: 12px; display: flex; flex-direction: column; gap: 8px; cursor: pointer;" onclick="openGroupInSidebar('${g.id}')">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div class="ach-title" style="font-size: 12px; font-weight: bold; color: var(--text-primary);">${g.n.toUpperCase()}</div>
-                                <div style="font-size: 10px; color: var(--text-muted);">${completedAchs} / ${totalAchs} COMPLETED</div>
+                                <div style="font-size: 10px; color: var(--text-muted);">${completedAchs} / ${totalAchs} ${window.DataLoader ? window.DataLoader.t('achievements.completed', 'COMPLETED') : 'COMPLETED'}</div>
                             </div>
                             <div class="prog-container" style="margin-top: 4px;">
                                 <div class="prog-bg" style="height: 8px;">
@@ -432,177 +979,202 @@
                                 <div class="prog-text" style="font-size: 10px; width: 45px; text-align: right; color: var(--text-primary);">${pct}%</div>
                             </div>
                             <div style="font-size: 9px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; margin-top: 2px; text-transform: none;">
-                                <span>Total AP Potential: ${totalAP} AP</span>
-                                <span style="color: var(--text-primary); font-weight: bold;">Earned: ${earnedAP} AP</span>
+                                <span>${window.DataLoader ? window.DataLoader.t('achievements.total_ap_potential', 'Total AP Potential:') : 'Total AP Potential:'} ${totalAP} AP</span>
+                                <span style="color: var(--text-primary); font-weight: bold;">${window.DataLoader ? window.DataLoader.t('achievements.earned', 'Earned:') : 'Earned:'} ${earnedAP} AP</span>
                             </div>
                         </div>
                     `;
-                });
+            });
 
-                content.innerHTML = `
+            content.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 15px; padding-bottom: 20px;">
                         <div style="background: var(--bg-panel); border: 1px solid var(--border-color); padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
                             <div>
-                                <div style="font-size: 14px; font-weight: bold; color: var(--text-primary); letter-spacing: 1px;">ACHIEVEMENT OVERVIEW</div>
-                                <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase;">Manage your goals, masteries, and watchlists.</div>
+                                <div style="font-size: 14px; font-weight: bold; color: var(--text-primary); letter-spacing: 1px;">${window.DataLoader ? window.DataLoader.t('achievements.overview', 'ACHIEVEMENT OVERVIEW') : 'ACHIEVEMENT OVERVIEW'}</div>
+                                <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase;">${window.DataLoader ? window.DataLoader.t('achievements.subtitle', 'Manage your goals, masteries, and watchlists.') : 'Manage your goals, masteries, and watchlists.'}</div>
                             </div>
                             <div style="display: flex; gap: 20px;">
                                 <div style="text-align: right;">
                                     <div style="font-size: 18px; color: var(--text-primary); font-weight: bold;">${totalWatchlist}</div>
-                                    <div style="font-size: 9px; color: var(--text-muted);">WATCHED</div>
+                                    <div style="font-size: 9px; color: var(--text-muted);">${window.DataLoader ? window.DataLoader.t('achievements.watched', 'WATCHED') : 'WATCHED'}</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div style="font-size: 12px; font-weight: bold; color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 5px; letter-spacing: 1px;">CATEGORY PROGRESS</div>
+                        <div style="font-size: 12px; font-weight: bold; color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 5px; letter-spacing: 1px;">${window.DataLoader ? window.DataLoader.t('achievements.category_progress', 'CATEGORY PROGRESS') : 'CATEGORY PROGRESS'}</div>
                         
                         <div style="display: flex; flex-direction: column; gap: 10px;">
                             ${groupStatsHtml}
                         </div>
                     </div>
                 `;
-            };
+        };
 
-            window.openGroupInSidebar = function(groupId) {
-                harmonicaState[groupId] = true;
-                localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
-                buildNav();
-                const group = indexData.groups.find(g => g.id === groupId);
-                if (group && group.cats.length > 0) {
-                    const firstCatId = group.cats[0];
-                    const firstCat = indexData.categories.find(c => c.id === firstCatId);
-                    if (firstCat) {
-                        renderCategory(firstCat);
-                        setTimeout(() => {
-                            const btns = Array.from(document.querySelectorAll('.cat-btn'));
-                            const firstBtn = btns.find(b => b.innerText.includes(firstCat.n));
-                            if (firstBtn) {
-                                document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
-                                firstBtn.classList.add('active');
-                            }
-                        }, 50);
-                    }
+        function openGroupInSidebar(groupId) {
+            window.openGroupInSidebar = openGroupInSidebar;
+            harmonicaState[groupId] = true;
+            localStorage.setItem('gw2_harmonica_achievements', JSON.stringify(harmonicaState));
+            buildNav();
+            const group = indexData.groups.find(g => g.id === groupId);
+            if (group && group.cats.length > 0) {
+                const firstCatId = group.cats[0];
+                const firstCat = indexData.categories.find(c => c.id === firstCatId);
+                if (firstCat) {
+                    renderCategory(firstCat);
+                    setTimeout(() => {
+                        const btns = Array.from(document.querySelectorAll('.cat-btn'));
+                        const firstBtn = btns.find(b => b.innerText.includes(firstCat.n));
+                        if (firstBtn) {
+                            document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+                            firstBtn.classList.add('active');
+                        }
+                    }, 50);
                 }
-            };
+            }
+        };
 
-            function loadDailies() {
-                currentView = 'dailies';
-                setActiveTab('DAILY');
-                buildNav();
-                document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
+        function loadDailies() {
+            window.loadDailies = loadDailies;
+            currentView = 'dailies';
+            setActiveTab('daily');
+            if (!indexData || !indexData.groups) {
                 const content = document.getElementById('content-panel');
-                let dailyGrp = indexData.groups.find(g => g.n === 'Daily');
-                if (!dailyGrp) return;
-                let html = '<div style="font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;">DAILY OBJECTIVES</div>';
-                dailyGrp.cats.forEach((cid) => {
-                    const c = indexData.categories.find(cat => cat.id === cid);
-                    if (c && c.achs.length > 0) {
-                        const isOpen = harmonicaState['daily_' + cid] === true;
-                        html += `<button class='group-btn ${isOpen ? 'active' : ''}' style='background:var(--bg-panel); margin-top:8px; border:1px solid var(--border-color);' onclick='this.classList.toggle("active"); const open = this.classList.contains("active"); this.nextElementSibling.style.display = open ? "flex" : "none"; harmonicaState["daily_${cid}"] = open; localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));'>` +
-                            "<div style='display:flex; align-items:center; gap:8px;'><img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:16px;' alt='icon' />" + c.n + "</div>" +
+                if (content) content.innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted);">' +
+                    (window.DataLoader ? window.DataLoader.t('common.loading', 'LOADING...') : 'LOADING...') + '</div>';
+                return;
+            }
+            buildNav();
+            document.querySelectorAll('.sub-btn, .master-btn').forEach(b => b.classList.remove('active'));
+            const content = document.getElementById('content-panel');
+            const dailyGrp = indexData.groups.find(g => g.id === '18DB115A-8637-4290-A636-821362A3C4A8' || g.order === 1 || g.n === 'Daily');
+            if (!dailyGrp) return;
+            const tDaily = window.DataLoader ? window.DataLoader.t('achievements.daily_objectives', 'DAILY OBJECTIVES') : 'DAILY OBJECTIVES';
+            let html = '<div style="font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;">' + tDaily + '</div>';
+            dailyGrp.cats.forEach((cid) => {
+                const c = indexData.categories.find(cat => cat.id === cid);
+                if (c && c.achs.length > 0) {
+                    const isOpen = harmonicaState['daily_' + cid] === true;
+                    html += `<button class='group-btn ${isOpen ? 'active' : ''}' style='background:var(--bg-panel); margin-top:8px; border:1px solid var(--border-color);' onclick='this.classList.toggle("active"); const open = this.classList.contains("active"); this.nextElementSibling.style.display = open ? "flex" : "none"; harmonicaState["daily_${cid}"] = open; localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));'>` +
+                        "<div style='display:flex; align-items:center; gap:8px;'><img src='" + (c.icon || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' style='width:16px;' alt='icon' />" + c.n + "</div>" +
                         "</button>" +
                         `<div style='display:${isOpen ? 'flex' : 'none'}; flex-direction:column; gap:8px; padding: 10px 5px; background:rgba(0,0,0,0.2); border: 1px solid var(--border-color); border-top:none;'>`;
-                        let sortedIds = sortAchs(c.achs);
-                        sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (ach) html += generateCard(aid, ach); });
-                        html += "</div>";
-                    }
-                });
-                content.innerHTML = html;
-            }
-
-            function loadWatchlistView() {
-                currentView = 'watchlist';
-                setActiveTab('WATCHLIST');
-                buildNav();
-                const content = document.getElementById('content-panel');
-                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>YOUR WATCHLIST</div>";
-                const ids = Object.keys(tracked);
-                if (ids.length === 0) html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>NO ITEMS TRACKED</div>";
-                else { let sortedIds = sortAchs(ids); sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); }); }
-                content.innerHTML = html;
-            }
-
-            function renderCategory(c) {
-                currentView = 'category';
-                const content = document.getElementById('content-panel');
-                let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>" + c.n + "</div>";
-                let sortedIds = sortAchs(c.achs);
-                sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (aid) html += generateCard(aid, ach); });
-                content.innerHTML = html;
-            }
-
-            async function loadMasteries() {
-                currentView = 'masteries';
-                setActiveTab('MASTERIES');
-                
-                if (!globalMasteries || globalMasteries.length === 0) {
-                    document.getElementById('content-panel').innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted);">MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.</div>';
-                    return;
+                    let sortedIds = sortAchs(c.achs);
+                    sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (ach) html += generateCard(aid, ach); });
+                    html += "</div>";
                 }
+            });
+            content.innerHTML = html;
+        }
 
-                // Fetch Available Points
-                let pointsData = { totals: [] };
-                try {
-                    const activeKey = localStorage.getItem('gw2_active_key');
-                    const pRes = await fetch(`https://api.guildwars2.com/v2/account/mastery/points?access_token=${activeKey}`);
-                    pointsData = await pRes.json();
-                } catch(e) { console.error("Failed to fetch mastery points", e); }
+        function loadWatchlistView() {
+            currentView = 'watchlist';
+            setActiveTab('watchlist');
+            buildNav();
+            const content = document.getElementById('content-panel');
+            const tYourWatch = window.DataLoader ? window.DataLoader.t('achievements.your_watchlist', 'YOUR WATCHLIST') : 'YOUR WATCHLIST';
+            const tNoItems = window.DataLoader ? window.DataLoader.t('achievements.no_items_tracked', 'NO ITEMS TRACKED') : 'NO ITEMS TRACKED';
+            let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>" + tYourWatch + "</div>";
+            const ids = Object.keys(tracked);
+            if (ids.length === 0) html += "<div style='padding:20px; text-align:center; color:var(--text-muted);'>" + tNoItems + "</div>";
+            else { let sortedIds = sortAchs(ids); sortedIds.forEach(id => { const ach = indexData.achievements[id]; if (ach) html += generateCard(id, ach); }); }
+            content.innerHTML = html;
+        }
 
-                // Calculate total Mastery Rank (Sum of all spent points = Rank)
-                let totalRank = 0;
-                if (pointsData && pointsData.totals) {
-                    pointsData.totals.forEach(t => totalRank += t.spent);
-                }
-                
-                // USER DEFINED ORDER & MAPPING
-                const regionOrder = [
-                    { id: 'Tyria', disp: 'Central Tyria', localIcon: 'mi_tyria.png' },
-                    { id: 'Maguuma', disp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
-                    { id: 'Desert', disp: 'Path of Fire', localIcon: 'mi_pof.png' },
-                    { id: 'Tundra', disp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
-                    { id: 'Jade', disp: 'End of Dragons', localIcon: 'mi_eod.png' },
-                    { id: 'Sky', disp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
-                    { id: 'Wild', disp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
-                    { id: 'Magic', disp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
-                ];
+        function renderCategory(c) {
+            currentView = 'category';
+            const content = document.getElementById('content-panel');
+            let html = "<div style='font-size:14px; font-weight:bold; color:var(--text-primary); border-bottom:1px solid var(--border-color); padding-bottom:5px; margin-bottom:10px;'>" + c.n + "</div>";
+            let sortedIds = sortAchs(c.achs);
+            sortedIds.forEach(aid => { const ach = indexData.achievements[aid]; if (aid) html += generateCard(aid, ach); });
+            content.innerHTML = html;
+        }
 
-                const regions = {};
-                globalMasteries.forEach(m => {
-                    if (!regions[m.region]) regions[m.region] = [];
-                    regions[m.region].push(m);
-                });
+        function getRegionDisplayName(regionId, fallback) {
+            const key = 'masteries.regions.' + (regionId || '').toLowerCase();
+            return (window.DataLoader ? window.DataLoader.t(key, fallback) : fallback) || fallback;
+        }
 
-                // Overwrite Sidebar with Mastery Navigation
-                const sidebar = document.getElementById('nav-panel');
-                sidebar.innerHTML = `
+        async function loadMasteries() {
+            currentView = 'masteries';
+            setActiveTab('masteries');
+
+            const currentLang = (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+
+            if (!globalMasteries || globalMasteries.length === 0 || globalMasteries._lang !== currentLang) {
+                globalMasteries = await fetchMasteriesData(currentLang);
+            }
+
+            if (!globalMasteries || globalMasteries.length === 0) {
+                const msg = window.DataLoader ? window.DataLoader.t('masteries.not_loaded', 'MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.') : 'MASTERY DATA NOT YET LOADED. PLEASE WAIT OR REFRESH.';
+                document.getElementById('content-panel').innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted);">' + msg + '</div>';
+                return;
+            }
+
+            // Fetch Available Points
+            let pointsData = { totals: [] };
+            try {
+                const activeKey = localStorage.getItem('gw2_active_key');
+                const pRes = await fetch(`https://api.guildwars2.com/v2/account/mastery/points?access_token=${activeKey}`);
+                pointsData = await pRes.json();
+            } catch (e) { console.error("Failed to fetch mastery points", e); }
+
+            // Calculate total Mastery Rank (Sum of all spent points = Rank)
+            let totalRank = 0;
+            if (pointsData && pointsData.totals) {
+                pointsData.totals.forEach(t => totalRank += t.spent);
+            }
+
+            // USER DEFINED ORDER & MAPPING
+            const regionOrder = [
+                { id: 'Tyria', disp: getRegionDisplayName('tyria', 'Central Tyria'), enDisp: 'Central Tyria', localIcon: 'mi_tyria.png' },
+                { id: 'Maguuma', disp: getRegionDisplayName('maguuma', 'Heart of Thorns'), enDisp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
+                { id: 'Desert', disp: getRegionDisplayName('desert', 'Path of Fire'), enDisp: 'Path of Fire', localIcon: 'mi_pof.png' },
+                { id: 'Tundra', disp: getRegionDisplayName('tundra', 'Icebrood Saga'), enDisp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
+                { id: 'Jade', disp: getRegionDisplayName('jade', 'End of Dragons'), enDisp: 'End of Dragons', localIcon: 'mi_eod.png' },
+                { id: 'Sky', disp: getRegionDisplayName('sky', 'Secrets of the Obscure'), enDisp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
+                { id: 'Wild', disp: getRegionDisplayName('wild', 'Janthir Wilds'), enDisp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
+                { id: 'Magic', disp: getRegionDisplayName('magic', 'Visions of Eternity'), enDisp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
+            ];
+
+            const regions = {};
+            globalMasteries.forEach(m => {
+                if (!regions[m.region]) regions[m.region] = [];
+                regions[m.region].push(m);
+            });
+
+            const tMasteryRank = window.DataLoader ? window.DataLoader.t('masteries.rank', 'Mastery Rank') : 'Mastery Rank';
+
+            // Overwrite Sidebar with Mastery Navigation
+            const sidebar = document.getElementById('nav-panel');
+            sidebar.innerHTML = `
                     <div style="padding:15px 5px; border-bottom:1px solid var(--border-color); margin-bottom:10px; text-align:center; background: rgba(0,0,0,0.2);">
                         <img src="https://gw2ps.local/Assets/Icons/mi_tyria.png" style="width:40px; filter: drop-shadow(0 0 5px var(--border-highlight, #e5c100));">
-                        <div style="font-size:9px; color:var(--text-muted); text-transform:uppercase; margin-top:6px; letter-spacing:1px;">Mastery Rank</div>
+                        <div style="font-size:9px; color:var(--text-muted); text-transform:uppercase; margin-top:6px; letter-spacing:1px;">${tMasteryRank}</div>
                         <div style="font-size:28px; color:var(--text-primary); font-weight:bold; font-family: 'Crimson Text', serif;">${totalRank}</div>
                     </div>
                 `;
 
-                regionOrder.forEach(reg => {
-                    const tracks = regions[reg.id];
-                    if (!tracks) return;
+            regionOrder.forEach(reg => {
+                const tracks = regions[reg.id];
+                if (!tracks) return;
 
-                    const isOpen = harmonicaState['mastery_nav_' + reg.id] === true;
-                    // Ultra-Fuzzy matching for points
-                    const points = (pointsData && pointsData.totals) ? (pointsData.totals.find(t => 
-                        t.region === reg.id || 
-                        t.region.toLowerCase().includes(reg.id.toLowerCase()) || 
-                        reg.disp.toLowerCase().includes(t.region.toLowerCase())
-                    ) || { spent: 0, earned: 0 }) : { spent: 0, earned: 0 };
-                    const available = Math.max(0, points.earned - points.spent);
+                const isOpen = harmonicaState['mastery_nav_' + reg.id] === true;
+                // Fuzzy matching for points
+                const points = (pointsData && pointsData.totals) ? (pointsData.totals.find(t =>
+                    t.region === reg.id ||
+                    t.region.toLowerCase().includes(reg.id.toLowerCase()) ||
+                    reg.enDisp.toLowerCase().includes(t.region.toLowerCase())
+                ) || { spent: 0, earned: 0 }) : { spent: 0, earned: 0 };
+                const available = Math.max(0, points.earned - points.spent);
 
-                    const regionBtn = document.createElement('div');
-                    regionBtn.className = `cat-btn ${isOpen ? 'active' : ''}`;
-                    regionBtn.style.display = 'flex';
-                    regionBtn.style.justifyContent = 'space-between';
-                    regionBtn.style.alignItems = 'center';
-                    regionBtn.style.padding = '10px 12px';
-                    regionBtn.style.background = isOpen ? 'rgba(var(--text-primary-rgb, 226, 192, 125), 0.05)' : 'transparent';
-                    regionBtn.innerHTML = `
+                const regionBtn = document.createElement('div');
+                regionBtn.className = `cat-btn ${isOpen ? 'active' : ''}`;
+                regionBtn.style.display = 'flex';
+                regionBtn.style.justifyContent = 'space-between';
+                regionBtn.style.alignItems = 'center';
+                regionBtn.style.padding = '10px 12px';
+                regionBtn.style.background = isOpen ? 'rgba(var(--text-primary-rgb, 226, 192, 125), 0.05)' : 'transparent';
+                regionBtn.innerHTML = `
                         <div style="display:flex; align-items:center; gap:8px;">
                             <span style="font-size:8px; width:10px; text-align:center; opacity:0.5;">${isOpen ? '▼' : '▶'}</span>
                             <span style="font-size:11px; letter-spacing:0.5px;">${reg.disp.toUpperCase()}</span>
@@ -611,106 +1183,110 @@
                             ${available} <img src="https://gw2ps.local/Assets/Icons/${reg.localIcon}" style="width:16px; height:16px;">
                         </div>
                     `;
-                    regionBtn.onclick = () => {
-                        harmonicaState['mastery_nav_' + reg.id] = !isOpen;
-                        localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
-                        loadMasteries();
-                    };
-                    sidebar.appendChild(regionBtn);
+                regionBtn.onclick = () => {
+                    harmonicaState['mastery_nav_' + reg.id] = !isOpen;
+                    localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
+                    loadMasteries();
+                };
+                sidebar.appendChild(regionBtn);
 
-                    if (isOpen) {
-                        tracks.sort((a,b) => a.id - b.id).forEach(t => {
-                            const prog = accountMasteries.find(p => p.id === t.id);
-                            const current = (prog !== undefined) ? (prog.level + 1) : 0;
-                            const total = t.levels.length;
-                            const isSelected = harmonicaState.selectedTrackId === t.id;
+                if (isOpen) {
+                    tracks.sort((a, b) => a.id - b.id).forEach(t => {
+                        const prog = accountMasteries.find(p => p.id === t.id);
+                        const current = (prog !== undefined) ? (prog.level + 1) : 0;
+                        const total = t.levels.length;
+                        const isSelected = harmonicaState.selectedTrackId === t.id;
 
-                            const trackBtn = document.createElement('div');
-                            trackBtn.className = `sub-btn ${isSelected ? 'active' : ''}`;
-                            trackBtn.dataset.trackId = t.id;
-                            trackBtn.style.marginLeft = '20px';
-                            trackBtn.style.fontSize = '10px';
-                            trackBtn.style.padding = '8px 12px';
-                            trackBtn.style.color = isSelected ? 'var(--text-primary)' : 'var(--text-muted)';
-                            trackBtn.style.borderLeft = isSelected ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
-                            trackBtn.innerHTML = `
+                        const trackBtn = document.createElement('div');
+                        trackBtn.className = `sub-btn ${isSelected ? 'active' : ''}`;
+                        trackBtn.dataset.trackId = t.id;
+                        trackBtn.style.marginLeft = '20px';
+                        trackBtn.style.fontSize = '10px';
+                        trackBtn.style.padding = '8px 12px';
+                        trackBtn.style.color = isSelected ? 'var(--text-primary)' : 'var(--text-muted)';
+                        trackBtn.style.borderLeft = isSelected ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
+                        trackBtn.innerHTML = `
                                 <span>${t.name.toUpperCase()}</span>
                                 <span style="float:right; opacity:0.6; font-family: Arial, sans-serif;">${current}/${total}</span>
                             `;
-                            trackBtn.onclick = (e) => {
-                                e.stopPropagation();
-                                window.selectMasteryTrack(t.id);
-                            };
-                            sidebar.appendChild(trackBtn);
-                        });
-                    }
-                });
+                        trackBtn.onclick = (e) => {
+                            e.stopPropagation();
+                            selectMasteryTrack(t.id);
+                        };
+                        sidebar.appendChild(trackBtn);
+                    });
+                }
+            });
 
-                const initialTrackId = harmonicaState.selectedTrackId || (regions[regionOrder[0].id] ? regions[regionOrder[0].id][0].id : null);
-                if (initialTrackId) window.selectMasteryTrack(initialTrackId);
-            }
+            const initialTrackId = harmonicaState.selectedTrackId || (regions[regionOrder[0].id] ? regions[regionOrder[0].id][0].id : null);
+            if (initialTrackId) selectMasteryTrack(initialTrackId);
+        }
 
-            window.selectMasteryTrack = function(trackId) {
-                harmonicaState.selectedTrackId = trackId;
-                localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
-                
-                document.querySelectorAll('#nav-panel .sub-btn').forEach(b => {
-                    const active = b.dataset.trackId == trackId;
-                    b.classList.toggle('active', active);
-                    b.style.color = active ? 'var(--text-primary)' : 'var(--text-muted)';
-                    b.style.borderLeft = active ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
-                });
+        function selectMasteryTrack(trackId) {
+            window.selectMasteryTrack = selectMasteryTrack;
+            harmonicaState.selectedTrackId = trackId;
+            localStorage.setItem("gw2_harmonica_achievements", JSON.stringify(harmonicaState));
 
-                const track = globalMasteries.find(t => t.id === trackId);
-                const content = document.getElementById('content-panel');
-                if (!track) return;
+            document.querySelectorAll('#nav-panel .sub-btn').forEach(b => {
+                const active = b.dataset.trackId == trackId;
+                b.classList.toggle('active', active);
+                b.style.color = active ? 'var(--text-primary)' : 'var(--text-muted)';
+                b.style.borderLeft = active ? '2px solid var(--text-primary)' : '1px solid var(--border-color)';
+            });
 
-                const prog = accountMasteries.find(p => p.id === trackId);
-                const unlockedLevel = (prog !== undefined) ? (prog.level + 1) : 0;
-                
-                const regionOrder = [
-                    { id: 'Tyria', disp: 'Central Tyria', localIcon: 'mi_tyria.png' },
-                    { id: 'Maguuma', disp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
-                    { id: 'Desert', disp: 'Path of Fire', localIcon: 'mi_pof.png' },
-                    { id: 'Tundra', disp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
-                    { id: 'Jade', disp: 'End of Dragons', localIcon: 'mi_eod.png' },
-                    { id: 'Sky', disp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
-                    { id: 'Wild', disp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
-                    { id: 'Magic', disp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
-                ];
-                const regInfo = regionOrder.find(r => r.id === track.region) || { disp: track.region, localIcon: 'mi_locked.png' };
-                const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(regInfo.disp.replace(/ /g, '_') + '_mastery_tracks')}&useskin=vector-2022#${track.name.replace(/ /g, '_')}`;
+            const track = globalMasteries.find(t => t.id === trackId);
+            const content = document.getElementById('content-panel');
+            if (!track) return;
 
-                content.innerHTML = `
+            const prog = accountMasteries.find(p => p.id === trackId);
+            const unlockedLevel = (prog !== undefined) ? (prog.level + 1) : 0;
+
+            const regionOrder = [
+                { id: 'Tyria', disp: getRegionDisplayName('tyria', 'Central Tyria'), enDisp: 'Central Tyria', localIcon: 'mi_tyria.png' },
+                { id: 'Maguuma', disp: getRegionDisplayName('maguuma', 'Heart of Thorns'), enDisp: 'Heart of Thorns', localIcon: 'mi_hot.png' },
+                { id: 'Desert', disp: getRegionDisplayName('desert', 'Path of Fire'), enDisp: 'Path of Fire', localIcon: 'mi_pof.png' },
+                { id: 'Tundra', disp: getRegionDisplayName('tundra', 'Icebrood Saga'), enDisp: 'Icebrood Saga', localIcon: 'mi_ibs.png' },
+                { id: 'Jade', disp: getRegionDisplayName('jade', 'End of Dragons'), enDisp: 'End of Dragons', localIcon: 'mi_eod.png' },
+                { id: 'Sky', disp: getRegionDisplayName('sky', 'Secrets of the Obscure'), enDisp: 'Secrets of the Obscure', localIcon: 'mi_soto.png' },
+                { id: 'Wild', disp: getRegionDisplayName('wild', 'Janthir Wilds'), enDisp: 'Janthir Wilds', localIcon: 'mi_jw.png' },
+                { id: 'Magic', disp: getRegionDisplayName('magic', 'Visions of Eternity'), enDisp: 'Visions of Eternity', localIcon: 'mi_jw.png' }
+            ];
+            const regInfo = regionOrder.find(r => r.id === track.region) || { disp: track.region, enDisp: track.region, localIcon: 'mi_locked.png' };
+            const wikiUrl = `https://wiki.guildwars2.com/index.php?title=${encodeURIComponent(regInfo.enDisp.replace(/ /g, '_') + '_mastery_tracks')}&useskin=vector-2022#${track.name.replace(/ /g, '_')}`;
+
+            const tViewWiki = window.DataLoader ? window.DataLoader.t('masteries.view_on_wiki', 'VIEW ON WIKI') : 'VIEW ON WIKI';
+            const tReady = window.DataLoader ? window.DataLoader.t('masteries.ready_to_train', 'READY TO TRAIN') : 'READY TO TRAIN';
+
+            content.innerHTML = `
                     <div style="padding: 15px; display:flex; flex-direction:column; gap:20px; height:100%; background: rgba(0,0,0,0.1);">
                         <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:15px;">
                             <div>
                                 <div style="font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">${regInfo.disp}</div>
                                 <div style="font-size:28px; color:var(--text-primary); font-weight:bold; font-family: 'Crimson Text', serif; letter-spacing:0.5px;">${track.name}</div>
                             </div>
-                            <button class="main-action" onclick="window.parent.postMessage({ action: 'openWiki', url: '${wikiUrl}' }, '*')" style="background:var(--bg-button); border:1px solid var(--border-color); color:var(--text-primary); padding:8px 16px; font-size:11px;">VIEW ON WIKI</button>
+                            <button class="main-action" onclick="window.parent.postMessage({ action: 'openWiki', url: '${wikiUrl}' }, '*')" style="background:var(--bg-button); border:1px solid var(--border-color); color:var(--text-primary); padding:8px 16px; font-size:11px;">${tViewWiki}</button>
                         </div>
                         
                         <div style="flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:12px; padding-right:8px;">
                             ${track.levels.map((level, idx) => {
-                                const isUnlocked = idx < unlockedLevel;
-                                const isReady = !isUnlocked && (idx === unlockedLevel);
-                                const points = level.point_cost;
-                                
-                                // Specific logic for staggered rows as per user request
-                                let rowCounts = [];
-                                if (points <= 5) {
-                                    rowCounts = [points];
-                                } else if (points <= 10) {
-                                    const r1 = Math.ceil(points / 2);
-                                    rowCounts = [r1, points - r1];
-                                } else {
-                                    const r1 = Math.ceil(points / 3);
-                                    const r2 = Math.ceil((points - r1) / 2);
-                                    rowCounts = [r1, r2, points - r1 - r2];
-                                }
+                const isUnlocked = idx < unlockedLevel;
+                const isReady = !isUnlocked && (idx === unlockedLevel);
+                const points = level.point_cost;
 
-                                return `
+                // Specific logic for staggered rows as per user request
+                let rowCounts = [];
+                if (points <= 5) {
+                    rowCounts = [points];
+                } else if (points <= 10) {
+                    const r1 = Math.ceil(points / 2);
+                    rowCounts = [r1, points - r1];
+                } else {
+                    const r1 = Math.ceil(points / 3);
+                    const r2 = Math.ceil((points - r1) / 2);
+                    rowCounts = [r1, r2, points - r1 - r2];
+                }
+
+                return `
                                     <div style="background:var(--bg-panel); border:1px solid ${isUnlocked ? 'var(--border-color)' : 'rgba(255,255,255,0.05)'}; border-left:4px solid ${isUnlocked ? 'var(--border-highlight)' : (isReady ? 'var(--text-muted)' : 'var(--bg-button)')}; padding:18px; display:flex; align-items:center; opacity: ${isUnlocked || isReady ? '1' : '0.4'}; transition: 0.2s; position: relative;">
                                         <div style="width:44px; height:44px; background:rgba(0,0,0,0.6); border:1px solid ${isUnlocked ? 'var(--border-highlight)' : 'var(--border-color)'}; border-radius:4px; margin-right:25px; position:relative; flex-shrink:0; overflow:hidden;">
                                             <img src="${level.icon}" style="width:100%; height:100%; object-fit:contain; ${isUnlocked ? '' : 'filter:grayscale(1) opacity(0.2);'}">
@@ -719,7 +1295,7 @@
                                         <div style="flex:1; margin-right:20px;">
                                             <div style="color:${isUnlocked ? 'var(--border-highlight)' : 'var(--text-muted)'}; font-size:16px; font-weight:bold; letter-spacing:1px; margin-bottom:6px;">${level.name.toUpperCase()}</div>
                                             <div style="color:color-mix(in srgb, var(--text-primary) 70%, transparent); font-size:12px; font-family: Arial, sans-serif; text-transform:none; line-height:1.5;">${level.description}</div>
-                                            ${isReady ? '<div style="margin-top:10px; display:inline-block; padding:3px 10px; background:var(--border-color); color:var(--text-primary); font-size:10px; font-weight:bold; border-radius:2px; letter-spacing:0.5px;">READY TO TRAIN</div>' : ''}
+                                            ${isReady ? '<div style="margin-top:10px; display:inline-block; padding:3px 10px; background:var(--border-color); color:var(--text-primary); font-size:10px; font-weight:bold; border-radius:2px; letter-spacing:0.5px;">' + tReady + '</div>' : ''}
                                         </div>
                                         <div style="display:flex; flex-direction:column; align-items:center; gap:3px; margin-left:auto; width: 100px; flex-shrink:0; padding-right:15px; justify-content: center;">
                                             ${rowCounts.map((count, rowIdx) => `
@@ -730,93 +1306,115 @@
                                         </div>
                                     </div>
                                 `;
-                            }).join('')}
+            }).join('')}
                         </div>
                     </div>
                 `;
-            };
+        };
 
-            function generateCard(id, ach) {
-                const prog = getProg(id);
-                let currentMax = 1;
-                if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
-                const percent = prog.done ? 100 : Math.min(100, (prog.current / currentMax) * 100);
-                const isTracked = !!tracked[id];
+        function generateCard(id, ach) {
+            const prog = getProg(id);
+            let currentMax = 1;
+            if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
+            const percent = prog.done ? 100 : Math.min(100, (prog.current / currentMax) * 100);
+            const isTracked = !!tracked[id];
 
-				let isSAB = false;
-				const sabCatNames = ["Daily Super Adventure Festival", "Super Adventure Box: World 1", "Super Adventure Box: World 2", "Super Adventure Box: Tribulation Mode", "Super Adventure Box: Nostalgia", "Super Adventure Box: Quality Testing"];
-				if (indexData && indexData.categories) {
-					isSAB = indexData.categories.some(c => sabCatNames.includes(c.n) && c.achs && c.achs.includes(parseInt(id)));
-				}
-
-                return "<div class='ach-card " + (prog.done ? "done" : "") + (isSAB ? " sab-glitch" : "") + "' onclick='openModal(" + id + ")'>" +
-                    "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
-                    "<div class='ach-icon-wrap'><img src='" + (ach.i || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' class='ach-icon' alt='icon' /></div>" +
-                    "<div class='ach-info'><div class='ach-title'>" + ach.n + "</div><div class='ach-req'>" + (ach.r || ach.d || "") + "</div>" +
-                    "<div class='prog-container'><div class='prog-bg'><div class='prog-fill' style='width:" + percent + "%'></div></div>" +
-                    "<div class='prog-text'>" + prog.current + " / " + currentMax + "</div></div></div></div>";
+            let isSAB = false;
+            const sabCatNames = ["Daily Super Adventure Festival", "Super Adventure Box: World 1", "Super Adventure Box: World 2", "Super Adventure Box: Tribulation Mode", "Super Adventure Box: Nostalgia", "Super Adventure Box: Quality Testing"];
+            if (indexData && indexData.categories) {
+                isSAB = indexData.categories.some(c => sabCatNames.includes(c.n) && c.achs && c.achs.includes(parseInt(id)));
             }
 
-            window.openModal = function(id) {
-                const ach = indexData.achievements[id]; if (!ach) return;
-                const prog = getProg(id);
-                let currentMax = 1; if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
-                const absoluteMax = ach.t && ach.t.length > 0 ? ach.t[ach.t.length-1].count : 1;
-                const isFullyDone = prog.done || prog.current >= absoluteMax;
-                let bitsHtml = '';
-                if (ach.b && ach.b.length > 0) {
-                    bitsHtml = "<div style='margin-top:15px; font-size:11px; border-top:1px solid var(--border-color, #4a3b2a); padding-top:10px;'>";
-                    const progBits = prog.bits || [];
-                    ach.b.forEach((bit, i) => {
-                        const isDone = isFullyDone || progBits.includes(i);
-                        const color = isDone ? 'var(--success-color, #1A9306)' : 'var(--text-muted, #8a7a5f)';
-                        const deco = isDone ? 'line-through' : 'none';
-                        bitsHtml += "<div style='color:" + color + "; text-decoration:" + deco + "; margin-bottom:6px; text-transform:none;'>• " + (bit.text || 'Secret Objective') + "</div>";
-                    });
-                    bitsHtml += "</div>";
-                }
-                document.getElementById('modal-title').innerText = ach.n;
-                document.getElementById('modal-desc').innerHTML = (ach.r || '') + '<br><br>' + (ach.d || '');
-                document.getElementById('modal-bits').innerHTML = bitsHtml;
-                document.getElementById('modal-wiki-btn').onclick = () => window.parent.postMessage({ action: 'openWiki', title: ach.n }, '*');
-                document.getElementById('ach-modal').style.display = 'flex';
-            };
+            return "<div class='ach-card " + (prog.done ? "done" : "") + (isSAB ? " sab-glitch" : "") + "' onclick='openModal(" + id + ")'>" +
+                "<div class='star-btn " + (isTracked ? "active" : "") + "' onclick='toggleTrack(" + id + ", \"" + ach.n.replace(/'/g, "\\'") + "\", this, event)'></div>" +
+                "<div class='ach-icon-wrap'><img src='" + (ach.i || 'https://wiki.guildwars2.com/images/6/6b/Arenanet_Points.png') + "' class='ach-icon' alt='icon' /></div>" +
+                "<div class='ach-info'><div class='ach-title'>" + ach.n + "</div><div class='ach-req'>" + (ach.r || ach.d || "") + "</div>" +
+                "<div class='prog-container'><div class='prog-bg'><div class='prog-fill' style='width:" + percent + "%'></div></div>" +
+                "<div class='prog-text'>" + prog.current + " / " + currentMax + "</div></div></div></div>";
+        }
 
-            window.toggleTrack = function(id, name, el, event) {
-                event.stopPropagation();
-                if (el.classList.contains('active')) {
-                    el.classList.remove('active'); delete tracked[id];
-                    window.parent.postMessage({ action: 'untrackAchievement', id: id }, '*');
-                    if (Object.keys(tracked).length === 0) {
-                        document.getElementById('overlay-toggle').checked = false;
-                    }
-                    if (currentView === 'watchlist') loadWatchlistView();
+        function openModal(id) {
+            window.openModal = openModal;
+            const ach = indexData.achievements[id]; if (!ach) return;
+            const prog = getProg(id);
+            let currentMax = 1; if (ach.t && ach.t.length > 0) { const nextTier = ach.t.find(tier => prog.current < tier.count) || ach.t[ach.t.length - 1]; currentMax = nextTier.count; }
+            const absoluteMax = ach.t && ach.t.length > 0 ? ach.t[ach.t.length - 1].count : 1;
+            const isFullyDone = prog.done || prog.current >= absoluteMax;
+            let bitsHtml = '';
+            if (ach.b && ach.b.length > 0) {
+                bitsHtml = "<div style='margin-top:15px; font-size:11px; border-top:1px solid var(--border-color, #4a3b2a); padding-top:10px;'>";
+                const progBits = prog.bits || [];
+                ach.b.forEach((bit, i) => {
+                    const isDone = isFullyDone || progBits.includes(i);
+                    const color = isDone ? 'var(--success-color, #1A9306)' : 'var(--text-muted, #8a7a5f)';
+                    const deco = isDone ? 'line-through' : 'none';
+                    bitsHtml += "<div style='color:" + color + "; text-decoration:" + deco + "; margin-bottom:6px; text-transform:none;'>• " + (bit.text || (window.DataLoader ? window.DataLoader.t('achievements.secret_objective', 'Secret Objective') : 'Secret Objective')) + "</div>";
+                });
+                bitsHtml += "</div>";
+            }
+            document.getElementById('modal-title').innerText = ach.n;
+            document.getElementById('modal-desc').innerHTML = (ach.r || '') + '<br><br>' + (ach.d || '');
+            document.getElementById('modal-bits').innerHTML = bitsHtml;
+            document.getElementById('modal-wiki-btn').onclick = () => window.parent.postMessage({ action: 'openWiki', title: ach.n }, '*');
+            document.getElementById('ach-modal').style.display = 'flex';
+        };
+
+        function toggleTrack(id, name, el, event) {
+            window.toggleTrack = toggleTrack;
+            event.stopPropagation();
+            if (el.classList.contains('active')) {
+                el.classList.remove('active'); delete tracked[id];
+                window.parent.postMessage({ action: 'untrackAchievement', id: id }, '*');
+                if (Object.keys(tracked).length === 0) {
+                    document.getElementById('overlay-toggle').checked = false;
+                }
+                if (currentView === 'watchlist') loadWatchlistView();
+            } else {
+                el.classList.add('active'); const ach = indexData.achievements[id];
+                const max = ach.t && ach.t.length > 0 ? ach.t[ach.t.length - 1].count : 1;
+                const payload = { n: name, id: id, max: max, bits: ach.b };
+                tracked[id] = payload;
+                window.parent.postMessage({ action: 'trackAchievement', id: id, payload: payload }, '*');
+            }
+            localStorage.setItem('gw2_tracked_achievements', JSON.stringify(tracked));
+        };
+
+        window.addEventListener('message', async (e) => {
+            if (e.data.action === 'languageChanged') {
+                const newLang = (e.data.lang || (window.DataLoader && window.DataLoader.getLanguage ? window.DataLoader.getLanguage() : null) || localStorage.getItem('gw2_lang') || 'en').toLowerCase().trim();
+                globalMasteries = null;
+                if (currentView === 'masteries' || currentView === 'mastery_search') {
+                    globalMasteries = await fetchMasteriesData(newLang);
+                    loadMasteries();
                 } else {
-                    el.classList.add('active'); const ach = indexData.achievements[id];
-                    const max = ach.t && ach.t.length > 0 ? ach.t[ach.t.length-1].count : 1;
-                    const payload = { n: name, id: id, max: max, bits: ach.b };
-                    tracked[id] = payload;
-                    window.parent.postMessage({ action: 'trackAchievement', id: id, payload: payload }, '*');
+                    init();
                 }
-                localStorage.setItem('gw2_tracked_achievements', JSON.stringify(tracked));
-            };
+            }
+            if (e.data.action === 'accountDataRefreshed') init();
+            if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; globalMasteries = null; init(); }
+            if (e.data.action === 'uiScaleChanged') {
+                if (e.data.value === 'large') document.body.classList.add('ui-large');
+                else document.body.classList.remove('ui-large');
+            }
+            if (e.data.action === 'updateTheme') {
+                document.body.setAttribute('data-theme', e.data.theme);
+            }
+        });
 
-			window.addEventListener('message', (e) => { 
-                if (e.data.action === 'languageChanged') init(); 
-                if (e.data.action === 'accountDataRefreshed') init();
-                if (e.data.action === 'switchAccount') { activeKey = e.data.apiKey; init(); } 
-                if (e.data.action === 'uiScaleChanged') {
-                    if (e.data.value === 'large') document.body.classList.add('ui-large');
-                    else document.body.classList.remove('ui-large');
-                }
-                if (e.data.action === 'updateTheme') {
-                    document.body.setAttribute('data-theme', e.data.theme);
-                }
-            });
+        window.loadAchievementsMain = loadAchievementsMain;
+        window.loadDailies = loadDailies;
+        window.loadMasteries = loadMasteries;
+        window.loadWatchlistView = loadWatchlistView;
+        window.selectMasteryTrack = selectMasteryTrack;
+        window.openGroupInSidebar = openGroupInSidebar;
+        window.openModal = openModal;
+        window.toggleTrack = toggleTrack;
+        window.handleSearch = handleSearch;
 
-			init();
-            document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
-			/*]]>*/
-		</script>
-	</body>
+        init();
+        document.body.setAttribute('data-theme', localStorage.getItem('gw2_theme') || 'human');
+        /*]]>*/
+    </script>
+</body>
+
 </html>

@@ -173,7 +173,7 @@
 	<body>
 		<canvas id="confetti-canvas"></canvas>
 		<div id="ui-root" style="display:flex; height:100%; flex-direction: column; position: relative;" onclick="resumeAudioContext()">
-			<div class="section-title">EVENT TIMERS</div>
+			<div class="section-title" data-i18n="timers.title">EVENT TIMERS</div>
 			<div class="divider"></div>
 
 			<div class="time-row">
@@ -468,7 +468,7 @@
                 const isDevMode = window.isDevMode === true || window.location.hostname === "localhost";
                 const apiBase = isDevMode 
                     ? "https://gw2ps.local/Data/" 
-                    : "https://raw.githubusercontent.com/Yoast79/Tyrian-Lens/main/Data/";
+                    : "https://data.tyrianlens.com/";
 
                 try {
                     const response = (window.DataLoader ? await window.DataLoader.fetchDataFile("timers_config.json") : null) || await fetch(apiBase + "timers_config.json?t=" + Date.now(), { cache: "no-store" });

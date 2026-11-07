@@ -261,51 +261,52 @@
     <!-- Thank-you popup -->
     <div id="success-overlay">
         <div id="success-card">
-            <div class="success-title">Thank You!</div>
-            <div class="success-body">
+            <div class="success-title" data-i18n="bug_report.success_title">Thank You!</div>
+            <div class="success-body" data-i18n="bug_report.success_body">
                 Your report has been submitted successfully.<br>
                 We appreciate you taking the time to help improve Tyrian Lens!
             </div>
             <div class="success-btns">
                 <button class="btn-discord" onclick="openDiscord()">
                     <img src="https://gw2ps.local/Assets/Icons/discord-icon.png" alt="Discord" />
-                    Join the Discord Server
+                    <span data-i18n="bug_report.btn_discord">Join the Discord Server</span>
                 </button>
-                <button class="btn-ok" onclick="closeSuccessPopup()">OK</button>
+                <button class="btn-ok" data-i18n="bug_report.btn_ok" onclick="closeSuccessPopup()">OK</button>
             </div>
         </div>
     </div>
 
     <!-- Header/Title -->
     <div class="section-title">
-        <span>Report Bug / Feature</span>
+        <span data-i18n="bug_report.title">Report Bug / Feature</span>
     </div>
 
     <div id="toast-msg" class="toast-banner"></div>
 
     <!-- Report Type -->
     <div class="form-group">
-        <span class="label">I want to report a:</span>
+        <span class="label" data-i18n="bug_report.label_type">I want to report a:</span>
         <select id="report-type" class="input-field" onchange="toggleReportType(this.value)">
-            <option value="bug">Bug / Defect</option>
-            <option value="feature">Feature Request</option>
+            <option value="bug" data-i18n="bug_report.opt_bug">Bug / Defect</option>
+            <option value="feature" data-i18n="bug_report.opt_feature">Feature Request</option>
         </select>
     </div>
 
     <!-- Affected Module -->
     <div class="form-group">
-        <span class="label">What module is affected?</span>
+        <span class="label" data-i18n="bug_report.label_module">What module is affected?</span>
         <select id="affected-module" class="input-field">
-            <option value="Overworld Map">Overworld Map</option>
-            <option value="WvW Map">WvW Map</option>
-            <option value="Event Timers">Event Timers</option>
-            <option value="Weekly Clears">Weekly Clears</option>
-            <option value="Farming Nodes">Farming Nodes</option>
-            <option value="Fishing Assistant">Fishing Assistant</option>
-            <option value="Hero Panel / Builds">Hero Panel / Builds</option>
-            <option value="Inventory / Bank">Inventory / Bank</option>
-            <option value="API Keys / Settings">API Keys / Settings</option>
-            <option value="General System / Other">General System / Other</option>
+            <option value="Overworld Map" data-i18n="bug_report.mod_overworld_map">Overworld Map</option>
+            <option value="WvW Map" data-i18n="bug_report.mod_wvw_map">WvW Map</option>
+            <option value="Event Timers" data-i18n="bug_report.mod_event_timers">Event Timers</option>
+            <option value="Weekly Clears" data-i18n="bug_report.mod_weekly_clears">Weekly Clears</option>
+            <option value="Farming Nodes" data-i18n="bug_report.mod_farming_nodes">Farming Nodes</option>
+            <option value="Fishing Assistant" data-i18n="bug_report.mod_fishing_assistant">Fishing Assistant</option>
+            <option value="Hero Panel / Builds" data-i18n="bug_report.mod_hero_panel">Hero Panel / Builds</option>
+            <option value="Inventory / Bank" data-i18n="bug_report.mod_inventory_bank">Inventory / Bank</option>
+            <option value="API Keys / Settings" data-i18n="bug_report.mod_api_settings">API Keys / Settings</option>
+            <option value="Translations" data-i18n="bug_report.mod_translations">Translations</option>
+            <option value="General System / Other" data-i18n="bug_report.mod_general_other">General System / Other</option>
         </select>
     </div>
 
@@ -313,48 +314,48 @@
     <div id="bug-flow-container" class="conditional-container" style="display: block;">
         <!-- Misplaced Marker Question -->
         <div class="form-group">
-            <span class="label">Is this regarding a misplaced map marker?</span>
+            <span class="label" data-i18n="bug_report.label_misplaced">Is this regarding a misplaced map marker?</span>
             <select id="misplaced-marker" class="input-field" onchange="toggleMarkerCoords(this.value)">
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
+                <option value="no" data-i18n="common.no">No</option>
+                <option value="yes" data-i18n="common.yes">Yes</option>
             </select>
         </div>
 
         <!-- Coordinates of Misplaced Marker -->
         <div id="coords-container" class="conditional-container form-group">
-            <span class="label">Coordinates of misplaced marker</span>
+            <span class="label" data-i18n="bug_report.label_coords">Coordinates of misplaced marker</span>
             <input type="text" id="marker-coords" class="input-field" placeholder="e.g. 12345.6, 7890.1, 12" />
-            <button class="btn btn-grab" onclick="grabCoordinates()">Grab Current Position</button>
-            <span class="info-note">Stand on the node/marker location in-game first.</span>
+            <button class="btn btn-grab" data-i18n="bug_report.btn_grab" onclick="grabCoordinates()">Grab Current Position</button>
+            <span class="info-note" data-i18n="bug_report.note_stand">Stand on the node/marker location in-game first.</span>
         </div>
 
         <!-- How can you reproduce the bug -->
         <div class="form-group">
-            <span class="label">How can you reproduce the bug?</span>
-            <textarea id="reproduce-steps" class="input-field" placeholder="Describe the steps to trigger this bug..."></textarea>
+            <span class="label" data-i18n="bug_report.label_reproduce">How can you reproduce the bug?</span>
+            <textarea id="reproduce-steps" class="input-field" data-i18n-ph="bug_report.ph_reproduce" placeholder="Describe the steps to trigger this bug..."></textarea>
         </div>
     </div>
 
     <!-- Description of Bug/Feature -->
     <div class="form-group">
-        <span id="desc-label" class="label">Describe the bug</span>
-        <textarea id="description" class="input-field" required placeholder="Please describe the issue in detail..."></textarea>
+        <span id="desc-label" class="label" data-i18n="bug_report.label_desc_bug">Describe the bug</span>
+        <textarea id="description" class="input-field" required data-i18n-ph="bug_report.ph_desc_bug" placeholder="Please describe the issue in detail..."></textarea>
     </div>
 
     <!-- Upload/Link Screenshot -->
     <div class="form-group">
-        <span class="label">Screenshot Link (Imgur, Discord, etc.)</span>
+        <span class="label" data-i18n="bug_report.label_screenshot">Screenshot Link (Imgur, Discord, etc.)</span>
         <input type="text" id="screenshot-url" class="input-field" placeholder="https://imgur.com/..." />
     </div>
 
     <!-- Additional Information -->
     <div class="form-group">
-        <span class="label">Additional information</span>
-        <textarea id="additional-info" class="input-field" placeholder="Any extra system context or notes..."></textarea>
+        <span class="label" data-i18n="bug_report.label_add_info">Additional information</span>
+        <textarea id="additional-info" class="input-field" data-i18n-ph="bug_report.ph_add_info" placeholder="Any extra system context or notes..."></textarea>
     </div>
 
     <!-- Submit Button -->
-    <button id="btn-submit" class="btn btn-submit" onclick="submitReport()">Submit Report</button>
+    <button id="btn-submit" class="btn btn-submit" data-i18n="bug_report.btn_submit" onclick="submitReport()">Submit Report</button>
 
     <script>
         const scriptUrl = "https://script.google.com/macros/s/AKfycbzhEJ2SOzEMCIKdQVZvHhCuwkAwPdwrWc1INZgDxh2tZVERVkuz1mCkMbyDtjoLzNk6LA/exec";
@@ -394,15 +395,16 @@
             const bugFlow = document.getElementById('bug-flow-container');
             const descLabel = document.getElementById('desc-label');
             const descInput = document.getElementById('description');
+            const t = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t : (k, d) => d;
 
             if (type === 'bug') {
                 bugFlow.style.display = 'block';
-                descLabel.innerText = "Describe the bug";
-                descInput.placeholder = "Please describe the issue in detail...";
+                descLabel.innerText = t('bug_report.label_desc_bug', 'Describe the bug');
+                descInput.placeholder = t('bug_report.ph_desc_bug', 'Please describe the issue in detail...');
             } else {
                 bugFlow.style.display = 'none';
-                descLabel.innerText = "Describe the feature request";
-                descInput.placeholder = "Describe the features you would like to see added...";
+                descLabel.innerText = t('bug_report.label_desc_feature', 'Describe the feature request');
+                descInput.placeholder = t('bug_report.ph_desc_feature', 'Describe the features you would like to see added...');
             }
         }
 
@@ -412,13 +414,14 @@
         }
 
         function grabCoordinates() {
+            const t = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t : (k, d) => d;
             const tel = grabTelemetry();
             if (tel.x !== null && tel.y !== null) {
                 const zVal = tel.z !== null ? tel.z : 0;
                 document.getElementById('marker-coords').value = `${tel.x}, ${tel.y}, ${zVal}`;
-                showToast("Coordinates grabbed successfully!");
+                showToast(t('bug_report.toast_coords_grabbed', 'Coordinates grabbed successfully!'));
             } else {
-                showToast("No telemetry coordinates available! Are you in-game?", true);
+                showToast(t('bug_report.toast_no_telemetry', 'No telemetry coordinates available! Are you in-game?'), true);
             }
         }
 
@@ -453,6 +456,7 @@
         }
 
         function submitReport() {
+            const t = (window.DataLoader && window.DataLoader.t) ? window.DataLoader.t : (k, d) => d;
             const type = document.getElementById('report-type').value;
             const affectedModule = document.getElementById('affected-module').value;
             const desc = document.getElementById('description').value.trim();
@@ -460,7 +464,7 @@
             const addInfo = document.getElementById('additional-info').value.trim();
 
             if (!desc) {
-                showToast("Description field is required!", true);
+                showToast(t('bug_report.toast_desc_required', 'Description field is required!'), true);
                 return;
             }
 
@@ -471,7 +475,7 @@
 
             const submitBtn = document.getElementById('btn-submit');
             submitBtn.classList.add('disabled');
-            submitBtn.innerText = "Sending Report...";
+            submitBtn.innerText = t('bug_report.sending', 'Sending Report...');
 
             const color = isBug ? 16730182 : 38655; // Red vs Cyan
             const title = isBug ? "🚨 New Bug / Defect Report" : "💡 New Feature Request";
@@ -537,47 +541,20 @@
                 showSuccessPopup();
             }).catch(err => {
                 console.error("Bug report transmission failed:", err);
-                showToast("Transmission failed! Check your internet.", true);
+                showToast(t('bug_report.toast_transmission_failed', 'Transmission failed! Check your internet.'), true);
             }).finally(() => {
                 submitBtn.classList.remove('disabled');
-                submitBtn.innerText = "Submit Report";
+                submitBtn.innerText = t('bug_report.btn_submit', 'Submit Report');
             });
         }
 
         async function applyBugReportI18n() {
-            if (!window.DataLoader || !window.DataLoader.loadTranslations) return;
-            await window.DataLoader.loadTranslations();
-            const t = window.DataLoader.t;
-
-            const secTitle = document.querySelector('.section-title span');
-            if (secTitle) secTitle.innerText = t('bug_report.title', 'Report Bug / Feature');
-
-            const labels = document.querySelectorAll('.form-group .label');
-            if (labels.length >= 2) {
-                labels[0].innerText = t('bug_report.label_type', 'I want to report a:');
-                labels[1].innerText = t('bug_report.label_module', 'What module is affected?');
-            }
-
+            if (!window.DataLoader) return;
+            if (window.DataLoader.loadTranslations) await window.DataLoader.loadTranslations();
+            if (window.DataLoader.applyTranslations) window.DataLoader.applyTranslations(document);
+            
             const repType = document.getElementById('report-type');
-            if (repType && repType.options.length >= 2) {
-                repType.options[0].text = t('bug_report.opt_bug', 'Bug / Defect');
-                repType.options[1].text = t('bug_report.opt_feature', 'Feature Request');
-            }
-
-            const succTitle = document.querySelector('.success-title');
-            if (succTitle) succTitle.innerText = t('bug_report.success_title', 'Thank You!');
-
-            const succBody = document.querySelector('.success-body');
-            if (succBody) succBody.innerHTML = t('bug_report.success_body', 'Your report has been submitted successfully.<br>We appreciate you taking the time to help improve Tyrian Lens!');
-
-            const btnDiscord = document.querySelector('.btn-discord');
-            if (btnDiscord) btnDiscord.innerHTML = `<img src="https://gw2ps.local/Assets/Icons/discord-icon.png" alt="Discord" /> ${t('bug_report.btn_discord', 'Join the Discord Server')}`;
-
-            const btnOk = document.querySelector('.btn-ok');
-            if (btnOk) btnOk.innerText = t('bug_report.btn_ok', 'OK');
-
-            const submitBtn = document.getElementById('submit-btn');
-            if (submitBtn) submitBtn.innerText = t('common.submit', 'Submit Report');
+            if (repType) toggleReportType(repType.value);
         }
         applyBugReportI18n();
 
@@ -587,9 +564,7 @@
                 document.body.setAttribute('data-theme', event.data.theme);
             }
             if (event.data && event.data.action === 'languageChanged') {
-                if (window.DataLoader && window.DataLoader.loadTranslations) {
-                    window.DataLoader.loadTranslations(true).then(() => applyBugReportI18n());
-                }
+                applyBugReportI18n();
             }
         });
     </script>

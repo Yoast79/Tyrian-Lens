@@ -142,10 +142,10 @@
 				<div class="panel-box">
 					<div class="box-title" data-i18n="farming.currency_gains_over_time">CURRENCY GAINS OVER TIME</div>
 					<div class="graph-controls">
-						<button class="graph-btn active" onclick="renderGraph('day')">DAY</button>
-						<button class="graph-btn" onclick="renderGraph('week')">WEEK</button>
-						<button class="graph-btn" onclick="renderGraph('month')">MONTH</button>
-						<button class="graph-btn" onclick="renderGraph('year')">YEAR</button>
+						<button class="graph-btn active" onclick="renderGraph('day')" data-i18n="farming.day">DAY</button>
+						<button class="graph-btn" onclick="renderGraph('week')" data-i18n="farming.week">WEEK</button>
+						<button class="graph-btn" onclick="renderGraph('month')" data-i18n="farming.month">MONTH</button>
+						<button class="graph-btn" onclick="renderGraph('year')" data-i18n="farming.year">YEAR</button>
 					</div>
 					<div class="slider-container" id="slider-container" style="display:none; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 11px; color: #8a7a5f;">
 						<span id="slider-label-min" style="color:#e2c07d; font-weight:bold; min-width: 25px; text-align:right;"></span>
@@ -159,7 +159,7 @@
 				<div class="panel-box" style="flex:1; position: relative;">
 					<div class="box-title" style="display:flex; justify-content:space-between; align-items:center;">
 						<span data-i18n="farming.session_log">SESSION LOG</span>
-						<button onclick="confirmWipeHistory()" style="background: transparent; border: 1px solid #721c24; color: #ff6b6b; padding: 2px 8px; font-size: 9px; margin-top:-4px;">WIPE DATA</button>
+						<button onclick="confirmWipeHistory()" style="background: transparent; border: 1px solid #721c24; color: #ff6b6b; padding: 2px 8px; font-size: 9px; margin-top:-4px;" data-i18n="farming.wipe_data">WIPE DATA</button>
 					</div>
 					<div id="history-container" class="history-list"></div>
 				</div>
@@ -167,8 +167,8 @@
 
 			<div id="session-details-modal" style="display:none; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(10,8,5,0.98); z-index:100; flex-direction:column; padding:15px; overflow-y:auto;">
 				<div class="header-row" style="margin-bottom:15px; border-bottom:1px solid #4a3b2a; padding-bottom:10px;">
-					<div class="section-title" style="margin:0; border:none; padding:0;">SESSION DETAILS</div>
-					<button onclick="closeSessionDetails()">CLOSE</button>
+					<div class="section-title" style="margin:0; border:none; padding:0;" data-i18n="farming.session_details">SESSION DETAILS</div>
+					<button onclick="closeSessionDetails()" data-i18n="farming.close">CLOSE</button>
 				</div>
 				<div class="panel-box" style="margin-bottom:15px;">
 					<div class="box-title">CURRENCIES GAINED</div>
@@ -224,6 +224,20 @@
             if (settings.uiScaleLarge) document.body.classList.add('ui-large');
 
             window.addEventListener('message', async (e) => {
+                if (e.data && e.data.action === 'languageChanged') {
+                    if (window.DataLoader) {
+                        await window.DataLoader.loadTranslations(true);
+                        window.DataLoader.applyTranslations();
+                    }
+                    currencyIndex = {};
+                    itemIndex = {};
+                    priceIndex = {};
+                    if (sessionActive) renderCurrentSession();
+                    else {
+                        const startBtn = document.getElementById('btn-start');
+                        if (startBtn) startBtn.innerText = window.DataLoader ? window.DataLoader.t('farming.start_session', 'START SESSION') : 'START SESSION';
+                    }
+                }
                 if (e.data.action === 'uiScaleChanged') {
                     if (e.data.value === 'large') document.body.classList.add('ui-large');
                     else document.body.classList.remove('ui-large');
@@ -325,7 +339,8 @@
 
             async function ensureCurrencyCache() {
                 if (Object.keys(currencyIndex).length === 0) {
-                    const cData = await fetchJSON("https://api.guildwars2.com/v2/currencies?ids=all");
+                    const lang = localStorage.getItem('gw2_lang') || localStorage.getItem('gw2_wiki_lang') || 'en';
+                    const cData = await fetchJSON("https://api.guildwars2.com/v2/currencies?ids=all&lang=" + lang);
                     if (cData) cData.forEach(c => currencyIndex[c.id] = c);
                 }
             }
@@ -362,7 +377,7 @@
                     sessionActive = true;
                     sessionStartTime = Date.now();
                     
-                    btn.innerText = "STOP SESSION";
+                    btn.innerText = window.DataLoader ? window.DataLoader.t('farming.stop_session', 'STOP SESSION') : 'STOP SESSION';
                     btn.className = "stop";
                     saveBtn.style.display = 'block';
                     
@@ -399,7 +414,7 @@
                     await saveSession(false);
                     
                     sessionActive = false;
-                    btn.innerText = "START SESSION";
+                    btn.innerText = window.DataLoader ? window.DataLoader.t('farming.start_session', 'START SESSION') : 'START SESSION';
                     btn.className = "active";
                     saveBtn.style.display = 'none';
                     
