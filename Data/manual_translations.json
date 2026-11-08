@@ -671,7 +671,12 @@
     "syncing_rotation": "SYNCING WITH ROTATION TABLE...",
     "copied_waypoints": "COPIED 6 WAYPOINTS",
     "rotation_error": "ROTATION SYNC ERROR",
-    "copy_waypoints_tip": "Copy Waypoints"
+    "copy_waypoints_tip": "Copy Waypoints",
+    "items": {
+      "node_shard_scouter_achievement": {
+        "label": "Janthir Syntri - Shard Scouter"
+      }
+    }
   },
   "radar": {
     "title": "Unlock Radar",
