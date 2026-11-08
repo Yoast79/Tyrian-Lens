@@ -139,9 +139,10 @@
                 }
 
                 // 1. Load Personal Bank
+                const cachedBankKey = localStorage.getItem('gw2_cache_bank_key');
                 const cachedBank = localStorage.getItem('gw2_cache_bank');
                 let loadedFromCache = false;
-                if (cachedBank && !forceRefresh) {
+                if (cachedBankKey === activeKey && cachedBank && !forceRefresh) {
                     try { 
                         bankDataGlobal = JSON.parse(cachedBank); 
                         loadedFromCache = true;
@@ -151,6 +152,7 @@
                         const res = await fetch(`https://api.guildwars2.com/v2/account/bank?access_token=${activeKey}`);
                         if (res.ok) {
                             bankDataGlobal = await res.json();
+                            localStorage.setItem('gw2_cache_bank_key', activeKey);
                             localStorage.setItem('gw2_cache_bank', JSON.stringify(bankDataGlobal));
                         } else { console.error("Bank fetch failed", res.status); bankDataGlobal = []; }
                     } catch(e) { console.error("Bank fetch error", e); bankDataGlobal = []; }
@@ -540,6 +542,11 @@
 
 			window.addEventListener('message', (e) => {
 				if (e.data && e.data.action === 'accountDataRefreshed') initBank(true);
+				if (e.data && e.data.action === 'switchAccount') {
+					localStorage.removeItem('gw2_cache_bank');
+					localStorage.removeItem('gw2_cache_guild_storage');
+					initBank(true);
+				}
 				if (e.data && e.data.action === 'updateTheme') {
 					document.body.setAttribute('data-theme', e.data.theme);
 				}

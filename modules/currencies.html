@@ -79,11 +79,17 @@
 
 				const activeKey = localStorage.getItem('gw2_active_key');
 				
-                // Check cache first
+                // Check cache first - must match active API key
+                const cachedWalletKey = localStorage.getItem('gw2_cache_wallet_key');
                 const cachedWallet = localStorage.getItem('gw2_cache_wallet');
-                if (cachedWallet) {
-                    const wallet = JSON.parse(cachedWallet);
-                    wallet.forEach(item => accountBalances[item.id] = item.value);
+                let validCache = false;
+                if (cachedWalletKey === activeKey && cachedWallet) {
+                    try {
+                        const wallet = JSON.parse(cachedWallet);
+                        accountBalances = {};
+                        wallet.forEach(item => accountBalances[item.id] = item.value);
+                        validCache = true;
+                    } catch(e) { validCache = false; }
                 }
 
 				try {
@@ -91,11 +97,13 @@
 					const allRes = await fetch('https://api.guildwars2.com/v2/currencies?ids=all&lang=' + lang);
 					masterCurrencyList = (await allRes.json()).filter(curr => curr.name && curr.name.trim() !== "");
 
-					if (activeKey && !cachedWallet) {
+					if (activeKey && !validCache) {
 						const accRes = await fetch(`https://api.guildwars2.com/v2/account/wallet?access_token=${activeKey}`);
 						if (accRes.ok) {
 							const wallet = await accRes.json();
+							accountBalances = {};
 							wallet.forEach(item => accountBalances[item.id] = item.value);
+                            localStorage.setItem('gw2_cache_wallet_key', activeKey);
                             localStorage.setItem('gw2_cache_wallet', JSON.stringify(wallet));
 						}
 					}
@@ -167,6 +175,11 @@
 
 			window.addEventListener('message', (e) => {
 				if (e.data && e.data.action === 'accountDataRefreshed') {
+					initWallet();
+				}
+				if (e.data && e.data.action === 'switchAccount') {
+					localStorage.removeItem('gw2_cache_wallet');
+					localStorage.removeItem('gw2_cache_wallet_key');
 					initWallet();
 				}
 				if (e.data && e.data.action === 'uiScaleChanged') {

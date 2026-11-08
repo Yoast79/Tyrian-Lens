@@ -1050,7 +1050,24 @@
 					else if (data.action === 'toast') window.showToast(data.msg, data.persistent);
 					else if (data.action === 'eventPop') window.showEventPop(data.msg);
 					else if (data.action === 'updateTPIndicator' || data.action === 'updateFarmingIndicator') { const menu = document.getElementById('menu-frame'); if (menu && menu.contentWindow) menu.contentWindow.postMessage(data, '*'); }
-					else if (data.action === 'switchAccount') { localStorage.setItem('gw2_active_key', data.apiKey); window.postToFrames(data); pollTrackerProgress(); checkDeliveries(); }
+					else if (data.action === 'switchAccount') {
+						localStorage.setItem('gw2_active_key', data.apiKey);
+						localStorage.removeItem('gw2_cache_inventory');
+						localStorage.removeItem('gw2_cache_shared_inventory');
+						localStorage.removeItem('gw2_cache_inventory_key');
+						localStorage.removeItem('gw2_cache_bank');
+						localStorage.removeItem('gw2_cache_guild_storage');
+						localStorage.removeItem('gw2_cache_materials');
+						localStorage.removeItem('gw2_cache_materials_key');
+						localStorage.removeItem('gw2_cache_wallet');
+						localStorage.removeItem('gw2_cache_wallet_key');
+						localStorage.removeItem('gw2_cache_achievements');
+						localStorage.removeItem('gw2_cache_legendary');
+						window.postToFrames(data);
+						pollTrackerProgress();
+						checkDeliveries();
+						if (typeof syncAccountData === 'function') syncAccountData();
+					}
 					else if (data.action === 'trackAchievement') { trackedAchievements[data.id] = data.payload; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'untrackAchievement') { delete trackedAchievements[data.id]; localStorage.setItem('gw2_tracked_achievements', JSON.stringify(trackedAchievements)); pollTrackerProgress(); }
 					else if (data.action === 'toggleTracker') window.toggleTrackerOverlay();

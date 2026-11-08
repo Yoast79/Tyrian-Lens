@@ -115,16 +115,22 @@
 					
 					categories = rawCategories.sort((a, b) => (a.order || 0) - (b.order || 0));
 
-                    // Check cache first
+                    // Check cache first - must match current active API key
+                    const cachedMatsKey = localStorage.getItem('gw2_cache_materials_key');
                     const cachedMats = localStorage.getItem('gw2_cache_materials');
-                    if (cachedMats) {
+                    if (cachedMatsKey === activeKey && cachedMats) {
                         const accData = JSON.parse(cachedMats);
+                        accountMaterials = {};
                         accData.forEach(m => accountMaterials[m.id] = m.count);
                     } else {
                         const accRes = await fetch(`https://api.guildwars2.com/v2/account/materials?access_token=${activeKey}`);
-                        const accData = await accRes.json();
-                        accData.forEach(m => accountMaterials[m.id] = m.count);
-                        localStorage.setItem('gw2_cache_materials', JSON.stringify(accData));
+                        if (accRes.ok) {
+                            const accData = await accRes.json();
+                            accountMaterials = {};
+                            accData.forEach(m => accountMaterials[m.id] = m.count);
+                            localStorage.setItem('gw2_cache_materials_key', activeKey);
+                            localStorage.setItem('gw2_cache_materials', JSON.stringify(accData));
+                        }
                     }
 
 					const allItemIds = categories.flatMap(c => c.items);
@@ -314,6 +320,11 @@
 						document.body.setAttribute('data-theme', e.data.theme);
 					}
 					else if (e.data.action === 'accountDataRefreshed') initStorage();
+					else if (e.data.action === 'switchAccount') {
+						localStorage.removeItem('gw2_cache_materials');
+						localStorage.removeItem('gw2_cache_materials_key');
+						initStorage();
+					}
 				});
 				initStorage();
 				/*]]>*/
